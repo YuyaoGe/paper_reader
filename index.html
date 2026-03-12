@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Reader // Research Tracker</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #161616;
+    --bg-card-hover: #1a1a1a;
+    --border-color: #2a2a2a;
+    --border-accent: #3a3a3a;
+    --text-primary: #e8e8e8;
+    --text-secondary: #999999;
+    --text-muted: #666666;
+    --accent-yellow: #f0c000;
+    --accent-orange: #e8832a;
+    --accent-blue: #4a9eff;
+    --accent-green: #3dd68c;
+    --accent-red: #ff6b6b;
+    --accent-purple: #b47aff;
+    --tag-rl: #e8832a;
+    --tag-vlm: #4a9eff;
+    --tag-finetune: #3dd68c;
+    --tag-nontrain: #b47aff;
+    --tag-longctx: #ff6b6b;
+    --tag-default: #888888;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-mark {
+    width: 4px;
+    height: 36px;
+    background: var(--accent-yellow);
+  }
+
+  .header h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+  }
+
+  .header h1 span {
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .header-stats .stat-value {
+    color: var(--accent-yellow);
+    font-weight: 700;
+  }
+
+  /* Caution stripe */
+  .caution-stripe {
+    height: 3px;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--accent-yellow),
+      var(--accent-yellow) 8px,
+      var(--bg-primary) 8px,
+      var(--bg-primary) 16px
+    );
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+  }
+
+  .filter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 8px;
+  }
+
+  .filter-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+  }
+
+  .filter-btn.active {
+    background: var(--accent-yellow);
+    border-color: var(--accent-yellow);
+    color: var(--bg-primary);
+    font-weight: 700;
+  }
+
+  /* Main content */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  /* Date section */
+  .date-section {
+    margin-bottom: 40px;
+  }
+
+  .date-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .date-marker {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-yellow);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .date-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  .date-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 2px 8px;
+  }
+
+  .date-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+  }
+
+  /* Paper cards */
+  .paper-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .paper-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 20px 24px;
+    transition: all 0.15s ease;
+    position: relative;
+  }
+
+  .paper-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--border-color);
+    transition: background 0.15s ease;
+  }
+
+  .paper-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+  }
+
+  .paper-card:hover::before {
+    background: var(--accent-yellow);
+  }
+
+  .paper-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .paper-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .paper-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .paper-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+
+  .paper-tag[data-tag="RL"] {
+    color: var(--tag-rl);
+    border-color: var(--tag-rl);
+    background: rgba(232, 131, 42, 0.08);
+  }
+  .paper-tag[data-tag="VLM"] {
+    color: var(--tag-vlm);
+    border-color: var(--tag-vlm);
+    background: rgba(74, 158, 255, 0.08);
+  }
+  .paper-tag[data-tag="微调"] {
+    color: var(--tag-finetune);
+    border-color: var(--tag-finetune);
+    background: rgba(61, 214, 140, 0.08);
+  }
+  .paper-tag[data-tag="无需训练"] {
+    color: var(--tag-nontrain);
+    border-color: var(--tag-nontrain);
+    background: rgba(180, 122, 255, 0.08);
+  }
+  .paper-tag[data-tag="长文本"] {
+    color: var(--tag-longctx);
+    border-color: var(--tag-longctx);
+    background: rgba(255, 107, 107, 0.08);
+  }
+  .paper-tag[data-tag="default"] {
+    color: var(--tag-default);
+    border-color: var(--tag-default);
+    background: rgba(136, 136, 136, 0.08);
+  }
+
+  .paper-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .paper-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.15s ease;
+  }
+
+  .paper-link:hover {
+    color: var(--accent-yellow);
+  }
+
+  .paper-link::before {
+    content: '>';
+    color: var(--text-muted);
+    font-size: 10px;
+  }
+
+  .paper-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    padding-left: 12px;
+    border-left: 2px solid var(--border-color);
+  }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 80px 0;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .loading::after {
+    content: '';
+    animation: dots 1.5s steps(4, end) infinite;
+  }
+
+  @keyframes dots {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid var(--border-color);
+    padding: 24px 0;
+    margin-top: 60px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .footer a {
+    color: var(--accent-blue);
+    text-decoration: none;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-accent);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header-inner { padding: 16px 20px; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .header-stats { gap: 16px; }
+    .filter-inner { padding: 0 20px; }
+    .main { padding: 20px; }
+    .paper-card { padding: 16px; }
+    .paper-title-row { flex-direction: column; }
+    .paper-tags { margin-top: 4px; }
+    .footer-inner { padding: 0 20px; flex-direction: column; gap: 8px; }
+  }
+
+  /* Search */
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .search-input {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 6px 12px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 200px;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+
+  .search-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .search-input:focus {
+    border-color: var(--accent-yellow);
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+
+  /* No results */
+  .no-results {
+    text-align: center;
+    padding: 60px 0;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  /* Sort control */
+  .sort-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 16px;
+  }
+
+  .sort-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .sort-btn.active {
+    border-color: var(--accent-yellow);
+    color: var(--accent-yellow);
+  }
+
+  .sort-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="logo-mark"></div>
+      <h1>PAPER_READER <span>// research tracker</span></h1>
+    </div>
+    <div class="header-stats">
+      <span>PAPERS: <span class="stat-value" id="totalPapers">--</span></span>
+      <span>DATES: <span class="stat-value" id="totalDates">--</span></span>
+      <span>LATEST: <span class="stat-value" id="latestDate">--</span></span>
+    </div>
+  </div>
+</header>
+<div class="caution-stripe"></div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Filter //</span>
+    <button class="filter-btn active" data-filter="all">ALL</button>
+    <button class="filter-btn" data-filter="RL">RL</button>
+    <button class="filter-btn" data-filter="VLM">VLM</button>
+    <button class="filter-btn" data-filter="微调">FINETUNE</button>
+    <button class="filter-btn" data-filter="无需训练">NO-TRAIN</button>
+    <button class="filter-btn" data-filter="长文本">LONG-CTX</button>
+    <div class="sort-control">
+      <span class="filter-label">Sort //</span>
+      <button class="sort-btn active" data-sort="desc">NEW FIRST</button>
+      <button class="sort-btn" data-sort="asc">OLD FIRST</button>
+    </div>
+    <div class="search-box">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search papers...">
+    </div>
+  </div>
+</div>
+
+<main class="main" id="content">
+  <div class="loading" id="loading">LOADING PAPER DATABASE</div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>PAPER_READER // Built for research tracking</span>
+    <a href="https://github.com/YuyaoGe/paper_reader" target="_blank">github.com/YuyaoGe/paper_reader</a>
+  </div>
+</footer>
+
+<script>
+(function() {
+  // --- Parser ---
+  function parsePaperList(md) {
+    const sections = [];
+    const lines = md.split('\n');
+    let currentDate = null;
+    let currentPapers = [];
+    let i = 0;
+
+    while (i < lines.length) {
+      const line = lines[i];
+
+      // Date header: ## 2026年2月11日
+      const dateMatch = line.match(/^##\s+(.+)$/);
+      if (dateMatch) {
+        if (currentDate) {
+          sections.push({ date: currentDate, papers: currentPapers });
+        }
+        currentDate = dateMatch[1].trim();
+        currentPapers = [];
+        i++;
+        continue;
+      }
+
+      // Paper entry: - **Title** `[Tag]` — [id](url) | [GitHub](url)
+      const paperMatch = line.match(/^-\s+\*\*(.+?)\*\*\s*(.*)$/);
+      if (paperMatch) {
+        const title = paperMatch[1];
+        const rest = paperMatch[2];
+
+        // Extract tags
+        const tags = [];
+        const tagRegex = /`\[(.+?)\]`/g;
+        let tagMatch;
+        while ((tagMatch = tagRegex.exec(rest)) !== null) {
+          tags.push(tagMatch[1]);
+        }
+
+        // Extract links
+        const links = [];
+        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        let linkMatch;
+        while ((linkMatch = linkRegex.exec(rest)) !== null) {
+          links.push({ text: linkMatch[1], url: linkMatch[2] });
+        }
+
+        // Look for description in next lines (blockquote)
+        let desc = '';
+        i++;
+        while (i < lines.length && lines[i].match(/^\s*>/)) {
+          desc += (desc ? ' ' : '') + lines[i].replace(/^\s*>\s*/, '');
+          i++;
+        }
+
+        currentPapers.push({ title, tags, links, desc });
+        continue;
+      }
+
+      i++;
+    }
+
+    if (currentDate) {
+      sections.push({ date: currentDate, papers: currentPapers });
+    }
+
+    return sections;
+  }
+
+  // --- Renderer ---
+  function renderSections(sections, container) {
+    container.innerHTML = '';
+
+    if (sections.length === 0 || sections.every(s => s.papers.length === 0)) {
+      container.innerHTML = '<div class="no-results">NO MATCHING PAPERS FOUND</div>';
+      return;
+    }
+
+    sections.forEach(section => {
+      if (section.papers.length === 0) return;
+
+      const sectionEl = document.createElement('div');
+      sectionEl.className = 'date-section';
+
+      sectionEl.innerHTML = `
+        <div class="date-header">
+          <div class="date-marker"></div>
+          <span class="date-text">${section.date}</span>
+          <span class="date-count">${section.papers.length} paper${section.papers.length > 1 ? 's' : ''}</span>
+          <div class="date-line"></div>
+        </div>
+        <div class="paper-list">
+          ${section.papers.map(paper => renderPaper(paper)).join('')}
+        </div>
+      `;
+
+      container.appendChild(sectionEl);
+    });
+  }
+
+  function getTagDataAttr(tag) {
+    const knownTags = ['RL', 'VLM', '微调', '无需训练', '长文本'];
+    return knownTags.includes(tag) ? tag : 'default';
+  }
+
+  function renderPaper(paper) {
+    const tagsHtml = paper.tags.map(tag =>
+      `<span class="paper-tag" data-tag="${getTagDataAttr(tag)}">${tag}</span>`
+    ).join('');
+
+    const linksHtml = paper.links.map(link =>
+      `<a class="paper-link" href="${link.url}" target="_blank" rel="noopener">${link.text}</a>`
+    ).join('');
+
+    return `
+      <div class="paper-card" data-tags="${paper.tags.join(',')}" data-title="${paper.title}" data-desc="${paper.desc}">
+        <div class="paper-title-row">
+          <span class="paper-title">${paper.title}</span>
+          <div class="paper-tags">${tagsHtml}</div>
+        </div>
+        <div class="paper-links">${linksHtml}</div>
+        ${paper.desc ? `<div class="paper-desc">${paper.desc}</div>` : ''}
+      </div>
+    `;
+  }
+
+  // --- State ---
+  let allSections = [];
+  let currentFilter = 'all';
+  let currentSort = 'desc';
+  let currentSearch = '';
+
+  function getFilteredSections() {
+    let sections = allSections.map(s => ({
+      date: s.date,
+      papers: s.papers.filter(p => {
+        const matchFilter = currentFilter === 'all' || p.tags.includes(currentFilter);
+        const matchSearch = !currentSearch ||
+          p.title.toLowerCase().includes(currentSearch) ||
+          p.desc.toLowerCase().includes(currentSearch) ||
+          p.tags.some(t => t.toLowerCase().includes(currentSearch));
+        return matchFilter && matchSearch;
+      })
+    }));
+
+    if (currentSort === 'asc') {
+      sections = sections.slice().reverse();
+    }
+
+    return sections;
+  }
+
+  function updateDisplay() {
+    const container = document.getElementById('content');
+    renderSections(getFilteredSections(), container);
+  }
+
+  function updateStats() {
+    const totalPapers = allSections.reduce((sum, s) => sum + s.papers.length, 0);
+    document.getElementById('totalPapers').textContent = totalPapers;
+    document.getElementById('totalDates').textContent = allSections.length;
+    document.getElementById('latestDate').textContent = allSections.length > 0 ? allSections[0].date : '--';
+  }
+
+  // --- Init ---
+  async function init() {
+    try {
+      const resp = await fetch('paper_list.md');
+      if (!resp.ok) throw new Error('Failed to fetch paper_list.md');
+      const md = await resp.text();
+      allSections = parsePaperList(md);
+      // Default: newest first (sections are already in chronological order in the file, reverse for newest first)
+      allSections.reverse();
+      updateStats();
+      updateDisplay();
+    } catch (err) {
+      document.getElementById('content').innerHTML =
+        `<div class="no-results">ERROR: ${err.message}</div>`;
+    }
+  }
+
+  // --- Events ---
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.filter;
+      updateDisplay();
+    });
+  });
+
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSort = btn.dataset.sort;
+      updateDisplay();
+    });
+  });
+
+  document.getElementById('searchInput').addEventListener('input', function() {
+    currentSearch = this.value.toLowerCase().trim();
+    updateDisplay();
+  });
+
+  init();
+})();
+</script>
+
+</body>
+</html>
