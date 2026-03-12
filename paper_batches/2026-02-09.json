@@ -1,0 +1,138 @@
+[
+  {
+    "date": "2026-02-09",
+    "title": "Baichuan-M3: Modeling Clinical Inquiry for Reliable Medical Decision-Making",
+    "arxiv_id": "2602.06570",
+    "github": "https://github.com/baichuan-inc/Baichuan-M3-235B",
+    "abstract": "本文提出 Baichuan-M3，一个医疗增强型大语言模型，旨在将临床决策支持从被动问答转变为主动式、临床级别的诊断辅助。核心能力包括：(1) 主动信息获取以消除歧义；(2) 长程推理将零散证据整合为连贯诊断；(3) 自适应幻觉抑制确保事实可靠性。模型通过专门的训练流程模拟医生系统化工作流程。在 HealthBench、HealthBench-Hallu 和 ScanBench 上均取得最优结果，在临床问询、咨询与安全方面显著超越 GPT-5.2。模型权重已公开。",
+    "tags": ["微调", "长文本"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "On the Entropy Dynamics in Reinforcement Fine-Tuning of Large Language Models",
+    "arxiv_id": "2602.03392",
+    "github": "https://github.com/agentscope-ai/Trinity-RFT",
+    "abstract": "本文对大语言模型强化微调（RFT）过程中的熵动态建立了理论框架。以单次 logit 更新下熵变化的判别表达式为起点，推导出熵变一阶表达式，并将其推广至 GRPO 的更新公式。理论分析揭示了各类基于熵的方法的统一视角，并启发了熵判别器裁剪方法的设计。实验验证了主要结论，并展示了熵控制方法在优化 LLM 微调中探索与利用平衡方面的有效性。结果表明，该方法在 RFT 训练中显著改善了熵崩塌问题。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Self-Improving Multilingual Long Reasoning via Translation-Reasoning Integrated Training",
+    "arxiv_id": "2602.05940",
+    "github": "https://github.com/NJUNLP/TRIT",
+    "abstract": "长推理模型在多语言场景中常出现「英语推理偏向」问题，即面对非英语问题时倾向于用英语推理，而强制使用问题语言推理则准确率大幅下降。本文提出 TRIT（Translation-Reasoning Integrated Training），一个无需外部反馈或额外多语言数据的自改进框架，将翻译训练整合进多语言推理训练中，同步提升多语言问题理解与回答生成能力。在 MMATH 上，该方法平均超越多个基线 7 个百分点，跨语言问题对齐提升超 10 个百分点，翻译质量在 FLORES-200 上提升最高 8.4 COMET 分。",
+    "tags": ["RL", "微调", "长文本"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "POINTS-GUI-G: GUI-Grounding Journey",
+    "arxiv_id": "2602.06391",
+    "github": "https://github.com/Tencent/POINTS-GUI",
+    "abstract": "本文研究从基础能力弱的 VLM 出发，构建高性能 GUI 定位模型的完整技术路径。提出 POINTS-GUI-G-8B，在 ScreenSpot-Pro（59.9）、OSWorld-G（66.0）、ScreenSpot-v2（95.7）和 UI-Vision（49.9）上达到最优。成功的三大关键因素为：(1) 精细数据工程，包括多源数据格式统一、增广过滤与难度分级；(2) 改进训练策略，含视觉编码器持续微调与训练推理分辨率一致性；(3) 基于可验证奖励的强化学习——RL 不仅提升推理能力，在感知密集型 GUI 定位任务中同样显著改善精度。",
+    "tags": ["RL", "微调", "VLM"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Outcome Accuracy is Not Enough: Aligning the Reasoning Process of Reward Models",
+    "arxiv_id": "2602.04649",
+    "github": "https://github.com/QwenLM/RationaleRM",
+    "abstract": "生成式奖励模型（GenRM）和 LLM-as-a-Judge 存在「欺骗性对齐」问题：模型以错误理由给出正确判断，过度依赖结果准确性导致 RLHF 泛化失效。本文提出「理由一致性」指标，量化模型推理过程与人类判断的对齐程度。在此基础上设计混合训练信号，将理由一致性与结果准确性结合。方法在 RM-Bench（87.1%）和 JudgeBench（82%）上达到最优，超越仅结果训练基线平均 5%；在 RLHF 阶段，创意写作任务上提升 7%；理由一致性分析确认该方法成功规避了欺骗性对齐陷阱。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+    "arxiv_id": "2602.05711",
+    "github": "https://github.com/flash-algo/omni-moe",
+    "abstract": "本文提出 OmniMoE，一个系统-算法协同设计的 MoE 框架，将专家粒度推向极致——引入向量级「原子专家」并结合共享密集 MLP 分支。针对路由复杂度和内存访问挑战，设计了笛卡尔积路由器（将复杂度从 O(N) 降至 O(√N)）和专家中心调度（将分散内存访问转为高效矩阵运算）。在七个基准上，OmniMoE（1.7B 激活参数）零样本准确率 50.9%，超越 DeepSeekMoE 和 PEER 等基线；推理延迟从 73ms 降至 6.7ms（10.9倍加速）。证明了大规模细粒度 MoE 可以同时快速且准确。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "compar:IA: The French Government's LLM arena to collect French-language human prompts and preference data",
+    "arxiv_id": "2602.06669",
+    "github": "https://github.com/betagouv/ComparIA",
+    "abstract": "非英语语言的 LLM 人类偏好数据严重匮乏。本文介绍 compar:IA，法国政府开发的开源平台，通过盲式成对比较界面大规模收集以法语为主的真实用户提示和偏好投票。截至 2026-02-07，已收集超 60 万条自由形式提示和 25 万条偏好投票，约 89% 为法语数据。发布对话、投票和反应三个互补数据集，并提供法语模型排行榜和用户交互分析。该平台正向国际化数字公共品演进，提供可复用的多语言偏好数据收集基础设施。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Uncovering Cross-Objective Interference in Multi-Objective Alignment",
+    "arxiv_id": "2602.06869",
+    "github": "https://github.com/yining610/ctwa",
+    "abstract": "本文研究大语言模型多目标对齐中的「跨目标干扰」现象：训练提升部分目标性能的同时导致其他目标退化。通过对经典标量化算法的系统性研究，证明干扰现象普遍且具有强烈的模型依赖性。理论推导了局部协方差定律，并将其推广至带裁剪的代理目标。基于此提出 CTWA（协方差目标权重自适应），一种即插即用方法，通过维持目标奖励与训练信号的正协方差来缓解跨目标干扰。同时提供 PL 条件下的全局收敛分析，揭示跨目标干扰对模型几何特性的依赖。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "SEMA: Simple yet Effective Learning for Multi-Turn Jailbreak Attacks",
+    "arxiv_id": "2602.06854",
+    "github": "https://github.com/fmmarkmq/SEMA",
+    "abstract": "多轮越狱攻击是安全对齐聊天机器人的真实威胁模型。本文提出 SEMA，一个无需依赖现有策略或外部数据的多轮攻击者训练框架。SEMA 分两阶段：(1) 预填充自调优，通过在自生成的结构化非拒绝对话上微调来稳定后续学习；(2) 意图漂移感知奖励的强化学习，结合意图对齐、合规风险和细节程度三维度奖励训练攻击者。该框架统一了单轮和多轮场景，降低探索复杂度。在 AdvBench 上平均 ASR@1 达 80.1%，超过最优基线 33.9%，为 LLM 安全红队测试提供更强现实压力测试。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "PlanViz: Evaluating Planning-Oriented Image Generation and Editing for Computer-Use Tasks",
+    "arxiv_id": "2602.06663",
+    "github": "https://github.com/lijunxian111/PlanViz",
+    "abstract": "本文提出 PlanViz，一个专门评估计算机使用任务中规划导向图像生成与编辑能力的基准。统一多模态模型（UMM）虽在自然图像生成和多模态推理上表现出色，但其在计算机使用规划任务中的潜力尚未被充分探索。PlanViz 聚焦三个日常子任务：路线规划、工作流程图和网页/UI 展示，采用人工标注问题和参考图像，并提出任务自适应评分指标 PlanScore，综合评估生成正确性、视觉质量和效率。实验揭示了当前模型的关键局限性，为未来研究指明方向。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Vision Transformer Finetuning Benefits from Non-Smooth Components",
+    "arxiv_id": "2602.06883",
+    "github": "https://github.com/ambroiseodt/vit-plasticity",
+    "abstract": "本文分析视觉 Transformer 组件在迁移学习中的「可塑性」（plasticity），定义为输出对输入变化的平均变化率，高可塑性意味着低平滑性。通过理论分析和全面实验，证明注意力模块和前馈层的高可塑性持续带来更好的微调性能。关键发现挑战了平滑性有益的主流假设：在微调场景中，非平滑组件反而更具优势。本研究为迁移学习中 Transformer 组件优先级选择提供了原则性指导，揭示了 Transformer 函数特性的新视角。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "AtlasPatch: An Efficient and Scalable Tool for Whole Slide Image Preprocessing in Computational Pathology",
+    "arxiv_id": "2602.03998",
+    "github": "https://github.com/AtlasAnalyticsLab/AtlasPatch",
+    "abstract": "全切片图像（WSI）预处理是计算病理学 AI 工作流的基础，包括组织检测和补丁提取，但现有工具存在精度低或计算复杂度高的问题。本文提出 AtlasPatch，一个高效可扩展的幻灯片预处理框架。组织检测模块在约 3 万张 WSI 缩略图上通过高效微调 Segment-Anything 模型训练而成，从缩略图推断全分辨率切片的组织掩码，支持多种放大倍数下的补丁坐标提取，可直接流式传输到图像编码器或存储补丁图像，且 CPU/GPU 并行化。在分割精度、计算复杂度和下游多实例学习上均匹配最优性能，同时计算开销仅为其几分之一。",
+    "tags": ["微调", "无需训练"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue",
+    "arxiv_id": "2602.03548",
+    "github": "https://github.com/Da1yuqin/SEAD",
+    "abstract": "当前服务对话系统依赖嘈杂低质量的人工对话数据，性能受限。本文提出 SEAD（自进化服务对话智能体），无需大规模人工标注即可学习有效策略。SEAD 将用户建模解耦为两个组件：Profile Controller（生成多样化用户状态管理训练课程）和 User Role-play Model（专注真实角色扮演），确保训练环境提供自适应场景而非不公平对手。实验表明，SEAD 显著超越开源基础模型和闭源商业模型，任务完成率提升 17.6%，对话效率提升 11.1%。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Learning a Generative Meta-Model of LLM Activations",
+    "arxiv_id": "2602.06964",
+    "github": "https://github.com/g-luo/generative_latent_prior",
+    "abstract": "现有神经网络激活分析方法（如 PCA、稀疏自编码器）依赖强结构假设。本文探索生成模型作为替代方案：在十亿个残差流激活上训练扩散模型，构建「元模型」学习网络内部状态分布。发现扩散损失随计算量平滑下降，并可靠预测下游效用：将元模型学习到的先验应用于引导干预可提升文本流畅性，随损失降低增益增大；元模型神经元在概念隔离方面表现提升，稀疏探测分数随损失降低而增加。结果表明，生成元模型为无强结构假设的可解释性研究提供了可扩展路径。",
+    "tags": ["无需训练", "MeM"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Table-as-Search: Formulate Long-Horizon Agentic Information Seeking as Table Completion",
+    "arxiv_id": "2602.06724",
+    "github": "https://github.com/AIDC-AI/Marco-DeepResearch",
+    "abstract": "当前信息检索智能体在长程探索中难以维持焦点和连贯性。本文提出 TaS（Table-as-Search），将信息检索任务重新表述为表格补全任务：将每个查询映射到外部数据库中的结构化表格模式，行表示搜索候选，列表示约束或所需信息，已填格严格记录历史和搜索结果，空白格作为明确搜索计划。TaS 统一了深度搜索、广度搜索和深度广度搜索三类任务。大量实验表明，TaS 在三类基准上显著超越多个最优基线，展现出优越的长程鲁棒性、效率、可扩展性和灵活性。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Seg-ReSearch: Segmentation with Interleaved Reasoning and External Search",
+    "arxiv_id": "2602.04454",
+    "github": "https://github.com/iSEE-Laboratory/Seg-ReSearch",
+    "abstract": "现有基于语言的分割系统受限于 MLLM 的冻结内部知识，难以处理需要最新信息或领域特定概念的真实场景。本文提出 Seg-ReSearch，通过交替推理与外部检索打破知识瓶颈，使分割系统能够处理超出模型冻结知识的动态开放世界查询。为有效训练此能力，设计了层次化奖励，平衡稀疏结果信号与刚性逐步监督之间的困境。同时构建 OK-VOS 基准，专门评估需要外部知识的视频目标分割。在 OK-VOS 及两个现有推理分割基准上显著超越最优方法。",
+    "tags": ["RL", "微调", "VLM"]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Uncertainty Drives Social Bias Changes in Quantized Large Language Models",
+    "arxiv_id": "2602.06181",
+    "github": "https://github.com/stan-hua/PostTrainingBiasBenchmark",
+    "abstract": "训练后量化降低 LLM 计算成本，但会以聚合指标难以捕获的方式改变社会偏见。本文在统一基准 PostTrainingBiasBench（13 个偏见数据集）上对 50 个量化模型进行首次大规模研究。发现「量化诱导的掩蔽偏见翻转」现象：量化后高达 21% 的回答在偏见与无偏间翻转，但聚合分数无变化。翻转由模型不确定性驱动，高不确定性回答翻转概率比低不确定性高 3-11 倍；4 位量化模型行为变化是 8 位模型的 4-6 倍，且偏见变化对不同人口群体产生非对称影响。",
+    "tags": []
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-02-11",
+    "title": "Chain of Mindset: Reasoning with Adaptive Cognitive Modes",
+    "arxiv_id": "2602.10063",
+    "github": "https://github.com/QuantaAlpha/chain-of-mindset",
+    "abstract": "提出 Chain of Mindset（CoM），一个无需训练的智能体框架，实现步骤级别的自适应思维编排。CoM 将推理分解为四种异质思维模式：空间、收敛、发散和算法。Meta-Agent 根据推理状态动态选择最优思维，双向 Context Gate 过滤模块间信息流以保持效率。在数学、代码生成、科学问答、空间推理等六个基准上，使用 Qwen3-VL-32B-Instruct 和 Gemini-2.0-Flash 分别超越最强基线 4.96% 和 4.72%，同时平衡推理效率。",
+    "tags": ["无需训练", "VLM"]
+  },
+  {
+    "date": "2026-02-11",
+    "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+    "arxiv_id": "2602.08234",
+    "github": "https://github.com/aiming-lab/SkillRL",
+    "abstract": "提出 SkillRL，通过自动技能发现和递归演化桥接原始经验与策略改进。引入基于经验的蒸馏机制构建层级技能库 SkillBank，自适应检索策略支持通用和任务特定启发式，递归演化机制使技能库与智能体策略在强化学习过程中协同演化。显著减少 token 占用同时提升推理效能。在 ALFWorld、WebShop 及七项搜索增强任务上超越基线 15.3%，一个 7B 模型实现对 GPT-4o 的超越。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-02-11",
+    "title": "Large-Scale Terminal Agentic Trajectory Generation from Dockerized Environments",
+    "arxiv_id": "2602.01244",
+    "github": "https://github.com/Wusiwei0410/TerminalTraj",
+    "abstract": "提出 TerminalTraj，一个可扩展流水线，解决终端智能体训练数据构建中的可执行性和可验证性挑战。该流水线过滤高质量代码库以构建 Docker 化执行环境，生成 Docker 对齐的任务实例，并合成具有可执行验证代码的智能体轨迹。使用 TerminalTraj 构建了 3.2 万 Docker 镜像，生成跨八个领域的 50,733 条验证轨迹。基于 Qwen2.5-Coder 的模型在 TerminalBench 上提升高达 20%，TerminalTraj-32B 达到 100B 参数以下最强性能。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-11",
+    "title": "Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling",
+    "arxiv_id": "2602.09084",
+    "github": "https://github.com/taco-group/agent-banana",
+    "abstract": "提出 Agent Banana，一个用于高保真、对象感知图像编辑的层级智能体规划-执行框架，解决专业工作流中过度编辑、单轮限制和超高清分辨率评测三大挑战。引入两项核心机制：Context Folding（将长交互历史压缩为结构化记忆以实现稳定长程控制）和 Image Layer Decomposition（执行局部层级编辑以保留非目标区域并支持原生分辨率输出）。构建 HDD-Bench 高清对话评测集，含 4K 分辨率图像。Agent Banana 在多轮一致性和背景保真度上达到最优（IC 0.871，SSIM-OM 0.84）。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-02-11",
+    "title": "Secure Code Generation via Online Reinforcement Learning with Vulnerability Reward Model",
+    "arxiv_id": "2602.07422",
+    "github": "https://github.com/AndrewWTY/SecCoderX",
+    "abstract": "提出 SecCoderX，一个在线强化学习框架，用于保留功能性的安全代码生成。通过重新利用漏洞检测资源两种方式：（1）合成多样化的漏洞诱发编码任务用于在线 RL 推出，（2）训练基于推理的漏洞奖励模型提供可扩展安全监督。两者统一到在线 RL 循环中对齐代码 LLM。实验表明 SecCoderX 达到最优性能，Effective Safety Rate（ESR）相比未对齐模型提升约 10%，而先前方法常导致 ESR 下降 14-54%。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-11",
+    "title": "DLLM-Searcher: Adapting Diffusion Large Language Model for Search Agents",
+    "arxiv_id": "2602.07035",
+    "github": "https://github.com/bubble65/DLLM-Searcher",
+    "abstract": "提出 DLLM-Searcher，将扩散大语言模型（dLLM）适配为高效搜索智能体。核心贡献包括：并行推理与行动（P-ReAct），利用扩散模型的非自回归生成特性实现并行推理和工具执行，显著降低推理延迟；以及两阶段智能体后训练流水线（Agentic SFT + Agentic VRPO），改善推理结构、工具调用和搜索可靠性。在多跳检索任务上与强自回归搜索智能体相当，端到端推理速度提升约 15%，验证了 dLLM 作为实用搜索智能体的可行性。",
+    "tags": ["微调"]
+  }
+]

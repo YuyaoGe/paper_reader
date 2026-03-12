@@ -1,0 +1,146 @@
+[
+  {
+    "date": "2026-02-12",
+    "title": "GENIUS: Generative Fluid Intelligence Evaluation Suite",
+    "arxiv_id": "2602.11144",
+    "github": "https://github.com/arctanxarc/GENIUS",
+    "abstract": "现有多模态生成模型基准主要评估「晶体智能」（依赖已学习的模式和知识），而忽视了「流体生成智能」（GFI）——即在新情境下进行模式归纳、约束推理和动态适应的能力。本文提出 GENIUS 评估套件，涵盖三类任务：隐式模式归纳、临时约束执行和情境知识适应，采用混合度量（规则符合度、视觉约束符合度、美学质量）和 LMM-as-a-Judge 框架进行评测。实验表明，即便是最先进的专有模型（如 Nano Banana Pro）整体得分也仅约 57 分，远未达到及格线；模型普遍表现出「认知惯性」，无法抑制预训练先验以适应新情境；且「视觉美观」与「逻辑合规」之间存在严重鸿沟，指出当前 UMM 架构在注意力分布和上下文传播上的结构性缺陷。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "How Do Decoder-Only LLMs Perceive Users? Rethinking Attention Masking for User Representation Learning",
+    "arxiv_id": "2602.10622",
+    "github": "https://github.com/JhCircle/Deepfind-GGSM",
+    "abstract": "解码器架构的大语言模型在用户行为建模中的注意力掩码设计尚未得到系统研究。本文在统一对比学习框架下，基于支付宝大规模真实用户行为数据，系统比较了因果注意力、混合注意力和双向注意力掩码对用户表示质量的影响。为改善向双向注意力过渡时的训练动态，提出「渐进式掩码转换」策略，并通过门控自注意力稀疏化（GGSM）优化 KV Cache 效率。实验表明，所提方法在工业级用户理解任务上显著优于因果掩码基线，验证了注意力掩码设计对 LLM 用户表示学习的根本重要性。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "G-LNS: Generative Large Neighborhood Search for LLM-Based Automatic Heuristic Design",
+    "arxiv_id": "2602.08253",
+    "github": "https://github.com/ZBoyn/G-LNS",
+    "abstract": "现有基于 LLM 的自动启发式设计（AHD）方法通常局限于优先规则或参数化局部搜索的固定形式，难以突破深层局部最优。本文提出 G-LNS，一种生成式进化框架，利用 LLM 协同进化「销毁算子」和「修复算子」对，通过协同评估矩阵（Synergy Matrix）显式建模两类算子的交互关系，并维护双种群结构实现自适应选择与联合交叉。在 TSP 和 CVRP 等组合优化挑战上，G-LNS 显著超越先前的 LLM-AHD 方法及经典求解器，且在跨分布实例上展现出强泛化能力。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "DataChef: Cooking Up Optimal Data Recipes for LLM Adaptation via Reinforcement Learning",
+    "arxiv_id": "2602.11089",
+    "github": "https://github.com/yichengchen24/DataChef",
+    "abstract": "大语言模型的适配性能在很大程度上取决于数据配方（Data Recipe）的质量，但现有设计方式高度依赖人工经验。本文提出 DataChef，一个用于自动生成最优数据配方的 LLM 系统，输入目标任务和原始数据源，输出包含可执行处理流水线和训练数据集的完整方案。DataChef 通过强化学习训练，将下游任务性能作为奖励信号，迭代优化数据规划（Planner）和代码生成（Coder）模块。实验表明，DataChef 在多个下游 LLM 适配任务上优于人工设计的数据配方，且模型权重和在线演示已公开发布。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "ROCKET: Rapid Optimization via Calibration-guided Knapsack Enhanced Truncation for Efficient Model Compression",
+    "arxiv_id": "2602.11008",
+    "github": "https://github.com/mts-ai/ROCKET",
+    "abstract": "本文提出 ROCKET，一种无需训练的模型压缩方法，在分解、结构化稀疏化和动态压缩基线上达到最新最优水平。ROCKET 的核心创新有二：（1）将逐层压缩分配形式化为多选背包问题（Multi-Choice Knapsack），在全局压缩预算约束下最小化总重建误差；（2）引入基于校准的快速敏感度评估，避免逐层 SVD 搜索开销。在主流语言模型上，ROCKET 以更低的精度损失实现与当前最佳方法相当甚至更好的压缩率，且无需任何微调。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Online Causal Kalman Filtering for Stable and Effective Policy Optimization",
+    "arxiv_id": "2602.10609",
+    "github": "https://github.com/shuohe1995/verl-kpo",
+    "abstract": "LLM 强化学习中基于重要性采样（IS）的策略优化因 token 级 IS 比例高方差而面临训练不稳定问题。现有方法要么使用序列级固定比例，要么独立调整每个 token，均忽略了序列内跨 token 的时序离策略偏差。本文提出 KPO（Kalman Policy Optimization），利用一维因果卡尔曼滤波器平滑 token 级对数比率，获得更稳定的重要性权重估计。KPO 作为即插即用模块集成到 verl 框架（PPO/GRPO 流水线），在数学推理等 RLHF 工作负载上实现更稳定、更高效的策略优化。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "LoopFormer: Elastic-Depth Looped Transformers for Latent Reasoning via Shortcut Modulation",
+    "arxiv_id": "2602.11451",
+    "github": "https://github.com/armenjeddi/loopformer",
+    "abstract": "循环 Transformer 在语言推理任务上表现出色，但现有方法在训练和推理阶段固定循环次数，限制了计算深度的灵活性。本文提出 LoopFormer，通过弹性深度循环架构与快捷调制（Shortcut Modulation）目标，使模型在可变长度轨迹上训练，支持时间步长和步长大小条件化，从而实现无需重新训练的预算条件式语言建模与潜在推理。LoopFormer 基于 NanoGPT 实现，在多个语言推理任务上以更少参数达到与固定深度模型相当的性能，并支持测试时动态调整计算量。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Data Repetition Beats Data Scaling in Long-CoT Supervised Fine-Tuning",
+    "arxiv_id": "2602.11149",
+    "github": "https://github.com/dkopi/data-repetition",
+    "abstract": "在固定更新预算下，长链思维（Long-CoT）监督微调中数据重复（即在小数据集上多轮训练）优于单轮大数据集训练——这一发现反直觉地挑战了「更多独特样本带来更好泛化」的传统认知。本文在 AIME'24/25 和 GPQA 等推理基准上验证：Olmo3-7B 在 128 轮训练少量数据的条件下，优于单轮训练 128 倍更多数据的设置。作者还发布了 45 个 checkpoint 及全套训练/评估脚本，为长推理链 SFT 的数据效率研究提供了系统性基础设施。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "The Pensieve Paradigm: Stateful Language Models Mastering Their Own Context",
+    "arxiv_id": "2602.12108",
+    "github": "https://github.com/xyliu-cs/StateLM",
+    "abstract": "现有语言模型缺乏对自身上下文的主动管理能力，被动接受人工工程化的上下文输入。本文提出 StateLM，一类新型基础模型，具备内生的有状态推理能力，可自主控制上下文：构建索引、迭代检索、记录笔记、剪枝冗余信息。StateLM 在长文本问答（如 HELMET、LongBench）和深度研究任务上超越现有长上下文方法，且无需外部工具编排。其 RL 训练基于 verl v0.6.0，模型（StateLM-8B）和完整代码已开源。",
+    "tags": ["RL", "长文本", "MeM"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Latent Thoughts Tuning: Bridging Context and Reasoning with Fused Information in Latent Tokens",
+    "arxiv_id": "2602.10229",
+    "github": "https://github.com/NeosKnight233/Latent-Thoughts-Tuning",
+    "abstract": "显式链式推理（CoT）将中间步骤局限于离散词汇空间，而现有连续潜在推理方案常受特征坍缩之苦。本文提出 LT-Tuning，一种无需外部辅助模型的后训练框架，通过「置信度驱动动态切换」自适应决定何时插入潜在 <thinking> token，并通过「上下文预测融合」将上下文隐状态与词表嵌入空间的预测语义融合，缓解特征坍缩。三阶段课程学习从显式 CoT 渐进过渡到潜在推理。在 GSM8K-NL、ASDiv、MultiArith、SVAMP 等数学推理基准上，LT-Tuning 优于现有潜在推理方法。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+    "arxiv_id": "2602.08030",
+    "github": "https://github.com/TemporaryLoRA/FreeLM",
+    "abstract": "推理模型通过扩展测试时计算提升问题求解能力，但过多思考 token 反而会导致性能下降。本文将其归因于标准 LLM「只申请不释放」（malloc-only）的架构缺陷，提出 Free()LM：通过即插即用的 Free-Module（LoRA 适配器）引入内生自遗忘能力，在推理和清理模式间迭代切换，动态识别并剪除无用上下文块。在 8B 至 685B 多个模型规模上，Free()LM 平均提升 3.3%；在 Qwen3-235B 完全崩溃（0% 准确率）的长 horizon 任务上，Free()LM 将性能恢复至约 50%，并在 IMOanswerBench 上创造新 SOTA。",
+    "tags": ["微调", "长文本"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions",
+    "arxiv_id": "2602.06008",
+    "github": "https://github.com/SafeRL-Lab/AgenticPay",
+    "abstract": "现有基准缺乏评估多智能体语言经济交互的规范化设置。本文提出 AgenticPay，一个基于 LLM 的多智能体买卖双方谈判仿真框架与基准，建模买方和卖方持有私有约束和商品估值并用自然语言进行多轮谈判的市场场景。框架支持单品/多品谈判、并行/顺序谈判模式及用户画像系统，采用类 Gym 接口设计，兼容 OpenAI/vLLM/SGLang 多种 LLM 后端。实验揭示了主流 LLM 在复杂经济谈判中的策略局限性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "When Actions Go Off-Task: Detecting and Correcting Misaligned Actions in Computer-Use Agents",
+    "arxiv_id": "2602.08995",
+    "github": "https://github.com/OSU-NLP-Group/Misaligned-Action-Detection",
+    "abstract": "计算机使用智能体（CUA）频繁产生偏离用户原始意图的「失准动作」，可能来自外部攻击（如间接提示注入）或内部推理错误，严重影响安全性和可靠性。本文首次系统定义并研究 CUA 的失准动作检测问题，构建了 MisActBench 基准数据集，并提出 DeAction 检测框架：通过「叙事摘要 + 系统分析 + 快速检查」三级流水线识别失准动作并给出纠错建议。实验表明，DeAction 在 MisActBench 上大幅超越单纯依赖 LLM 判断的基线方法。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Large Language Lobotomy: Jailbreaking Mixture-of-Experts via Expert Silencing",
+    "arxiv_id": "2602.08741",
+    "github": "https://github.com/jonatelintelo/LargeLanguageLobotomy",
+    "abstract": "混合专家（MoE）架构的大语言模型通过路由结构引入了新的安全攻击面。本文发现 MoE LLM 中的安全关键行为（如拒绝有害请求）集中于少数专家，而非均匀分布。基于此，本文提出 Large Language Lobotomy（LLL）：通过识别并静默负责安全行为的专家组合，绕过模型的安全拒绝机制。实验在 Mixtral 和其他 MoE 模型上验证了该攻击的有效性，揭示了现有 MoE 安全对齐机制的根本脆弱性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "FedPS: Federated data Preprocessing via aggregated Statistics",
+    "arxiv_id": "2602.10870",
+    "github": "https://github.com/xuefeng-xu/fedps",
+    "abstract": "联邦学习中，数据预处理（缺失值填补、格式统一、特征缩放）对模型性能至关重要，但在隐私约束下无法集中原始数据。本文提出 FedPS，一个用于联邦数据预处理的统一框架，通过聚合统计量（而非原始数据）实现隐私保护的分布式预处理。FedPS 兼容水平和垂直联邦场景，支持离散化、编码、缩放等多类预处理算子，提供类 sklearn 的 API 接口，在模拟通信场景下验证了与集中式预处理相当的效果且通信开销可接受。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Graph-Enhanced Deep Reinforcement Learning for Multi-Objective Unrelated Parallel Machine Scheduling",
+    "arxiv_id": "2602.08052",
+    "github": "https://github.com/bulentsoykan/GNN-DRL4UPMSP",
+    "abstract": "异构并行机器调度问题（UPMSP）在同时最小化加权总延迟（TWT）和总换机时间（TST）时面临显著挑战。本文提出结合近端策略优化（PPO）与异构图神经网络（GNN）的深度强化学习框架：GNN 将作业、机器和换机类型构建为异构图，捕获复杂约束关系；PPO 通过动作掩码保证可行调度。实验表明，该框架在真实约束场景（释放日期、机器适用性、序列相关换机时间）下显著优于传统启发式和元启发式方法，推理速度也满足动态环境需求。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "From Features to Actions: Explainability in Traditional and Agentic AI Systems",
+    "arxiv_id": "2602.06841",
+    "github": "https://github.com/VectorInstitute/unified-xai-evaluation-framework",
+    "abstract": "传统可解释 AI（XAI）聚焦于单次预测的特征归因，而智能体 AI 系统的行为展开于多步轨迹之上。本文在统一框架下系统比较静态预测与智能体系统的可解释性需求，实验横跨传统 ML 文本分类（SHAP、LIME、显著性方法）和基于 LLM 的工具调用智能体（TAU-bench、AssistantBench）两类范式。研究表明，针对静态模型的归因方法无法可靠诊断智能体故障，提出面向智能体的轨迹级诊断方案（基于执行日志和行为评估 Rubric），并发布可复现的端到端实验流水线。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-12",
+    "title": "StealthRL: Reinforcement Learning Paraphrase Attacks for Multi-Detector Evasion of AI-Text Detectors",
+    "arxiv_id": "2602.08934",
+    "github": "https://github.com/suraj-ranganath/StealthRL",
+    "abstract": "AI 文本检测器面临对抗性改写攻击的鲁棒性挑战。本文提出 StealthRL，一个基于强化学习的框架，训练改写策略以在保持语义忠实度的同时逃避多检测器集成的检测。StealthRL 使用 GRPO（带 LoRA 适配器）在 Qwen3-4B 上微调改写模型，奖励函数综合考量检测逃避率、语义相似度和流畅性。在 MAGE 基准上，StealthRL 在严格低误报操作点下显著降低检测率，同时保持高语义相似度，超越简单改写和检测器引导基线，为 AI 文本检测系统的红队测试提供了系统性工具。",
+    "tags": ["RL", "微调"]
+  }
+]
