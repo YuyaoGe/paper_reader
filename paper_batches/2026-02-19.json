@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-02-19",
+    "title": "CADEvolve: Creating Realistic CAD via Program Evolution",
+    "arxiv_id": "2602.16317",
+    "github": "https://github.com/zhemdi/CADEvolve",
+    "abstract": "CADEvolve 提出了一种基于演化的流水线，用于生成工业级复杂 CAD 程序。现有公开 CAD 数据集以简单草图拉伸序列为主，缺乏复杂操作与设计意图，严重限制了模型微调效果。本文从简单基元出发，借助 VLM 引导的编辑与几何验证，迭代演化出约 8000 个复杂 CadQuery 参数化生成器；经过多阶段后处理与增强，最终构建出含 130 万条脚本的统一数据集，并配以多视角渲染图像。在此数据集上微调的 VLM 在 Image2CAD 任务上的 DeepCAD、Fusion 360 和 MCB 三个评测集上均取得最优结果。代码、数据集与模型检查点均已开源。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-02-19",
+    "title": "Reinforced Fast Weights with Next-Sequence Prediction",
+    "arxiv_id": "2602.16704",
+    "github": "https://github.com/princetonvisualai/ReFINE",
+    "abstract": "快速权重架构（如 LaCT、DeltaNet）在长上下文建模中具有恒定内存优势，但受限于下一词预测（NTP）训练范式——NTP 仅优化单词预测，忽视多词语义连贯性，导致快速权重模型难以捕获长程依赖。本文提出 ReFINE，通过强化学习在下一序列预测（NSP）目标下训练快速权重模型：基于预测熵选取信息量大的 token 位置，生成多 token 展开，分配自监督序列级奖励，并用 GRPO 进行优化。ReFINE 适用于预训练模型的中期训练、后训练和测试时训练三个阶段。在 LaCT-760M 和 DeltaNet-1.3B 上的实验表明，ReFINE 在 NIAH 检索、长上下文问答及 LongBench 多项任务上均持续超过监督微调基线。",
+    "tags": ["RL", "长文本"]
+  },
+  {
+    "date": "2026-02-19",
+    "title": "MMA: Multimodal Memory Agent",
+    "arxiv_id": "2602.16493",
+    "github": "https://github.com/AIGeeksGroup/MMA",
+    "abstract": "长时多模态智能体依赖外部记忆，但基于相似度的检索常召回过时、低可信度或冲突条目，导致过度自信错误。本文提出 MMA（多模态记忆智能体），为每条检索到的记忆动态计算可信度分数，综合来源可信度、时间衰减与冲突感知网络共识，据此重新加权证据并在支持不足时主动弃权。同时引入 MMA-Bench，通过可编程方式生成含受控可信度与视觉-文本矛盾的信念动态评测集，并揭示了「视觉安慰剂效应」。实验表明，在 FEVER 上 MMA 保持准确率同时降低方差 35.2%；在 MMA-Bench 视觉模式下达到 41.18% Type-B 准确率，而基线崩溃至 0%。",
+    "tags": ["VLM", "MeM", "无需训练"]
+  },
+  {
+    "date": "2026-02-19",
+    "title": "Visual Memory Injection Attacks for Multi-Turn Conversations",
+    "arxiv_id": "2602.15927",
+    "github": "https://github.com/chs20/visual-memory-injection",
+    "abstract": "本文研究大视觉语言模型（LVLM）在长上下文多轮对话中的安全漏洞。攻击者将篡改图像上传至网络，用户下载后输入 LVLM。所提出的视觉记忆注入（VMI）攻击具有隐蔽性：在普通 prompt 下模型正常作答，但一旦用户给出触发性 prompt，模型将输出预设目标消息（如广告植入或政治诱导）。与以往单轮攻击不同，VMI 在经过漫长多轮对话后仍然有效。实验在多个开源权重 LVLM 上验证了攻击的高成功率，并提供了不同上下文长度下的定量分析，表明基于扰动图像的大规模用户操纵是可行的，呼吁提升 LVLM 对此类攻击的鲁棒性。",
+    "tags": ["VLM", "长文本"]
+  },
+  {
+    "date": "2026-02-19",
+    "title": "Efficient Text-Guided Convolutional Adapter for the Diffusion Model",
+    "arxiv_id": "2602.14514",
+    "github": "https://github.com/arya-domain/Nexus-Adapters",
+    "abstract": "本文提出 Nexus Adapters，用于扩散模型框架的文本引导高效适配器，旨在解决结构保持条件生成（SPCG）中现有方法参数量大、对输入 prompt 不感知的问题。Nexus 包含两种变体：Nexus Prime 和 Nexus Slim。每个 Nexus Block 引入交叉注意力机制实现丰富的多模态条件融合，使适配器同时理解文本 prompt 与结构输入（如草图、深度图）。Nexus Prime 仅增加 800 万参数即显著提升生成质量，Nexus Slim 参数比 T2I-Adapter 少 1800 万却仍达到最优水平。论文在 WACV 2026 上发表，代码已开源。",
+    "tags": ["微调", "无需训练"]
+  },
+  {
+    "date": "2026-02-19",
+    "title": "Uncertainty-Aware Vision-Language Segmentation for Medical Imaging",
+    "arxiv_id": "2602.14498",
+    "github": "https://github.com/arya-domain/UA-VLS",
+    "abstract": "本文提出了一种不确定性感知的多模态分割框架，融合放射影像与临床文本进行精准医学诊断。核心贡献包括：（1）模态解码注意力块（MoDAB）结合轻量级状态空间混合器（SSMix），实现高效跨模态融合与长程依赖建模；（2）谱熵不确定性损失（SEU Loss），在统一目标中同时捕获空间重叠、频谱一致性和预测不确定性。在 QATA-COVID19、MosMed++ 和 Kvasir-SEG 三个公开医学数据集上的大量实验表明，该方法在实现优越分割性能的同时计算效率显著高于现有最优方案，论文发表于 WACV 2026。",
+    "tags": ["VLM", "微调"]
+  }
+]

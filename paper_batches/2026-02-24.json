@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-02-24",
+    "title": "Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction",
+    "arxiv_id": "2602.18996",
+    "github": "https://github.com/shannany0606/CCMP",
+    "abstract": "研究跨视角目标级视觉对应任务，专注于以自我为中心（egocentric）与以外部为中心（exocentric）视角间的相互转换场景。提出基于条件二值分割的简洁框架：将目标查询掩膜编码为隐变量表示，引导在目标视频中定位对应目标。为学习鲁棒的视角无关表示，引入循环一致性训练目标——将目标视角预测掩膜投影回源视角以重建原始查询掩膜，无需真值标注即可提供强自监督信号，并支持推理阶段的测试时训练（TTT）。在Ego-Exo4D和HANDAL-X基准上达到SOTA性能，CVPR 2026高分接收（评分554）。方法简洁高效，展示了简单设计在困难任务上的强大泛化能力。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-24",
+    "title": "Mobile-O: Unified Multimodal Understanding and Generation on Mobile Device",
+    "arxiv_id": "2602.20161",
+    "github": "https://github.com/Amshaker/Mobile-O",
+    "abstract": "提出Mobile-O，一个紧凑高效的视觉-语言-扩散统一模型，可完全在移动设备本地运行，同时支持多模态理解（VQA、OCR、推理）和图像生成与编辑。核心架构包含三部分：基于FastVLM的轻量视觉语言模型骨干、基于SANA的轻量DiT扩散解码器，以及创新性的Mobile Conditioning Projector（MCP，仅约2.4M参数）将两者桥接。通过预训练（9M图文对）、SFT（105K对）和统一后训练（105K四元组）三阶段训练优化至移动端实用水平。在iPhone 15/16/17 Pro上实测：图像生成约3-4秒、视觉理解约0.4秒、内存占用小于2GB。已完整开源训练评测代码、推理脚本及iOS应用。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-24",
+    "title": "Large Causal Models for Temporal Causal Discovery",
+    "arxiv_id": "2602.18662",
+    "github": "https://github.com/kougioulis/LCM-paper",
+    "abstract": "提出大型因果模型（LCMs）框架用于时序因果发现，颠覆传统「每数据集单独拟合一个模型」范式。核心贡献在于将多样合成生成器与真实时序数据集结合进行大规模多域预训练，使单一模型具备强跨域迁移能力。在合成、半合成及真实基准上的广泛实验表明，LCMs可有效扩展至更多变量数和更深架构，在分布外（OOD）场景相比经典和神经基线取得有竞争力或更优准确率，并支持单次前向推理（无需为新数据集重新训练）。提供2.5M至24M参数规模的预训练模型，代码、Jupyter实验笔记本及预训练检查点完整开源。",
+    "tags": ["无需训练"]
+  }
+]

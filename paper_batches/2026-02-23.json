@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-02-23",
+    "title": "VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training",
+    "arxiv_id": "2602.10693",
+    "github": "https://github.com/FloyedShen/VESPO",
+    "abstract": "VESPO 针对 LLM 强化学习训练中普遍存在的 off-policy 问题——策略滞后（staleness）、异步训练以及训练/推理引擎不匹配——提出了基于变分公式的方差缩减方案。核心贡献是推导出一个作用于序列级重要性权重的闭合式重塑核（reshaping kernel），无需 token 级截断或长度归一化。实验表明，VESPO 在滞后倍率高达 64× 及完全异步训练下仍保持稳定，在数学推理基准上对稠密模型和 MoE 模型均取得一致性提升，支持在 Qwen3-30B-A3B-Base 上进行 fully async 训练而不发散。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "Spanning the Visual Analogy Space with a Weight Basis of LoRAs",
+    "arxiv_id": "2602.15727",
+    "github": "https://github.com/NVlabs/LoRWeB",
+    "abstract": "LoRWeB（LoRA Weight Basis）解决视觉类比学习问题：给定图像三元组 {a, a', b}，生成 b' 使得 a:a'::b:b'。现有方法用单个 LoRA 模块捕捉视觉变换空间，泛化能力有限。本文提出由一组可学习 LoRA 模块构成的「变换基」，以及一个轻量编码器，在推理时根据类比输入动态组合这些基，即在「LoRA 空间」中选择一个点。方法在推理时特化、无需对每个新任务重新训练，在未见变换上的泛化能力显著优于现有 SOTA，代码和数据均已开源。",
+    "tags": ["微调", "无需训练"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "DeepVision-103K: A Visually Diverse, Broad-Coverage, and Verifiable Mathematical Dataset for Multimodal Reasoning",
+    "arxiv_id": "2602.16742",
+    "github": "https://github.com/SKYLENAGE-AI/DeepVision-103K",
+    "abstract": "DeepVision-103K 是一个面向多模态推理 RLVR（强化学习可验证奖励）训练的大规模数学数据集，涵盖平面几何、立体几何、解析图、数据图表、示意图等丰富视觉元素，以及代数、概率统计等 K12 数学主题。每条样本含可验证唯一答案，支持规则奖励。经三阶段流水线（有效性过滤、难度过滤、Gemini-3-Flash 正确性验证）构建。在 DeepVision 上训练的 Qwen3-VL-8B 在多模态数学及通用推理基准上超越基线，平均准确率从 66.50% 提升至 70.15%，且推理 token 消耗更高效。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "Sink-Aware Pruning for Diffusion Language Models",
+    "arxiv_id": "2602.17664",
+    "github": "https://github.com/VILA-Lab/Sink-Aware-Pruning",
+    "abstract": "扩散语言模型（DLMs）的注意力 sink 与自回归模型不同：位置不固定、跨去噪时间步高度不稳定，因此直接沿用「保留 sink」的 AR 剪枝启发式会导致次优结果。本文提出 Sink-Aware Pruning，通过测量 sink token 在完整去噪轨迹上的位置方差来识别不稳定 sink，并将其剪掉以减少冗余全局注意力。在 LLaDA、Dream 7B 等模型上，于 50% 稀疏度下一致超越 Wanda 和 SparseGPT 基线，在 8 个基准上平均准确率提升明显，压缩比越高收益越显著。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "Adam Improves Muon: Adaptive Moment Estimation with Orthogonalized Momentum",
+    "arxiv_id": "2602.17080",
+    "github": "https://github.com/minxin-zhg/namo",
+    "abstract": "NAMO（NAMO/NAMO-D）将 Muon 优化器的正交化动量机制与 Adam 的自适应学习率结合：对一阶动量进行 Nesterov 正交化处理后，再应用逐元素自适应二阶矩缩放。这在理论上弥合了 Muon 缺乏自适应性的局限。实验在 nanoGPT 及多种语言模型预训练任务上验证，NAMO 收敛速度和最终困惑度均优于 Muon 和 Adam，尤其在大批量和高学习率场景下稳定性更优。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "Avey-B",
+    "arxiv_id": "2602.15814",
+    "github": "https://github.com/rimads/avey-b",
+    "abstract": "Avey-B 将 Avey（一种无注意力自回归架构）重构为 encoder-only 双向编码器，面向工业级紧凑 NLP 应用。核心创新包括：解耦静态与动态参数化、面向稳定性的归一化设计、以及神经压缩技术。与四种主流 Transformer 编码器（BERT 系列）对比，在 token 分类和信息检索基准上持续胜出，同时对长上下文的扩展效率更高。论文完整提供了 MLM 预训练代码、评测框架及检查点，已在 ICLR 2026 发表。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "Rubrics as an Attack Surface: Stealthy Preference Drift in LLM Judges",
+    "arxiv_id": "2602.13576",
+    "github": "https://github.com/ZDCSlab/Rubrics-as-an-Attack-Surface",
+    "abstract": "本文研究 LLM-as-Judge 评估流程中的「评分标准诱导偏好漂移」（RIPD）：攻击者通过微小修改评分 rubric，在基准域上保持验证通过，同时在目标部署域上引发系统性方向偏差，且难以用标准指标检测。实验利用基于种群的进化搜索寻找满足约束的 rubric 变体，并证明该偏差可通过下游后训练传播，导致持久性策略错对齐。涵盖 UltraFeedback、ChatbotArena、PKU-SafeRLHF 等五个人类偏好数据集，代码和数据集已开源。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-23",
+    "title": "Whom to Query for What: Adaptive Group Elicitation via Multi-Turn LLM Interactions",
+    "arxiv_id": "2602.14279",
+    "github": "https://github.com/ZDCSlab/Group-Adaptive-Elicitation",
+    "abstract": "自适应群体意见收集框架 GAE，在有限查询和参与预算下，同时自适应选择「问哪个问题」和「问哪个被试」。方法结合：①基于 LLM 期望信息增益（EIG）的问题评分；②异构图神经网络（HGNN）聚合已有回答与被试属性，对缺失回答进行插补并指导被试选择。在 CES、OpinionQA、Twin-2k 三个真实调查数据集上，相比固定被试池方法显著提升群体级响应预测，在 10% 预算下 CES 相对增益超 12%。",
+    "tags": []
+  }
+]

@@ -1,3 +1,89 @@
+## 2026年2月19日
+
+- **CADEvolve: Creating Realistic CAD via Program Evolution** `[微调]` `[VLM]` — [2602.16317](https://arxiv.org/abs/2602.16317) | [GitHub](https://github.com/zhemdi/CADEvolve)
+  > CADEvolve 提出了一种基于演化的流水线，用于生成工业级复杂 CAD 程序。现有公开 CAD 数据集以简单草图拉伸序列为主，缺乏复杂操作与设计意图，严重限制了模型微调效果。本文从简单基元出发，借助 VLM 引导的编辑与几何验证，迭代演化出约 8000 个复杂 CadQuery 参数化生成器；经过多阶段后处理与增强，最终构建出含 130 万条脚本的统一数据集，并配以多视角渲染图像。在此数据集上微调的 VLM 在 Image2CAD 任务上的 DeepCAD、Fusion 360 和 MCB 三个评测集上均取得最优结果。代码、数据集与模型检查点均已开源。
+
+- **Reinforced Fast Weights with Next-Sequence Prediction** `[RL]` `[长文本]` — [2602.16704](https://arxiv.org/abs/2602.16704) | [GitHub](https://github.com/princetonvisualai/ReFINE)
+  > 快速权重架构（如 LaCT、DeltaNet）在长上下文建模中具有恒定内存优势，但受限于下一词预测（NTP）训练范式——NTP 仅优化单词预测，忽视多词语义连贯性，导致快速权重模型难以捕获长程依赖。本文提出 ReFINE，通过强化学习在下一序列预测（NSP）目标下训练快速权重模型：基于预测熵选取信息量大的 token 位置，生成多 token 展开，分配自监督序列级奖励，并用 GRPO 进行优化。ReFINE 适用于预训练模型的中期训练、后训练和测试时训练三个阶段。在 LaCT-760M 和 DeltaNet-1.3B 上的实验表明，ReFINE 在 NIAH 检索、长上下文问答及 LongBench 多项任务上均持续超过监督微调基线。
+
+- **MMA: Multimodal Memory Agent** `[VLM]` `[MeM]` `[无需训练]` — [2602.16493](https://arxiv.org/abs/2602.16493) | [GitHub](https://github.com/AIGeeksGroup/MMA)
+  > 长时多模态智能体依赖外部记忆，但基于相似度的检索常召回过时、低可信度或冲突条目，导致过度自信错误。本文提出 MMA（多模态记忆智能体），为每条检索到的记忆动态计算可信度分数，综合来源可信度、时间衰减与冲突感知网络共识，据此重新加权证据并在支持不足时主动弃权。同时引入 MMA-Bench，通过可编程方式生成含受控可信度与视觉-文本矛盾的信念动态评测集，并揭示了「视觉安慰剂效应」。实验表明，在 FEVER 上 MMA 保持准确率同时降低方差 35.2%；在 MMA-Bench 视觉模式下达到 41.18% Type-B 准确率，而基线崩溃至 0%。
+
+- **Visual Memory Injection Attacks for Multi-Turn Conversations** `[VLM]` `[长文本]` — [2602.15927](https://arxiv.org/abs/2602.15927) | [GitHub](https://github.com/chs20/visual-memory-injection)
+  > 本文研究大视觉语言模型（LVLM）在长上下文多轮对话中的安全漏洞。攻击者将篡改图像上传至网络，用户下载后输入 LVLM。所提出的视觉记忆注入（VMI）攻击具有隐蔽性：在普通 prompt 下模型正常作答，但一旦用户给出触发性 prompt，模型将输出预设目标消息（如广告植入或政治诱导）。与以往单轮攻击不同，VMI 在经过漫长多轮对话后仍然有效。实验在多个开源权重 LVLM 上验证了攻击的高成功率，并提供了不同上下文长度下的定量分析，表明基于扰动图像的大规模用户操纵是可行的，呼吁提升 LVLM 对此类攻击的鲁棒性。
+
+- **Efficient Text-Guided Convolutional Adapter for the Diffusion Model** `[微调]` `[无需训练]` — [2602.14514](https://arxiv.org/abs/2602.14514) | [GitHub](https://github.com/arya-domain/Nexus-Adapters)
+  > 本文提出 Nexus Adapters，用于扩散模型框架的文本引导高效适配器，旨在解决结构保持条件生成（SPCG）中现有方法参数量大、对输入 prompt 不感知的问题。Nexus 包含两种变体：Nexus Prime 和 Nexus Slim。每个 Nexus Block 引入交叉注意力机制实现丰富的多模态条件融合，使适配器同时理解文本 prompt 与结构输入（如草图、深度图）。Nexus Prime 仅增加 800 万参数即显著提升生成质量，Nexus Slim 参数比 T2I-Adapter 少 1800 万却仍达到最优水平。论文在 WACV 2026 上发表，代码已开源。
+
+- **Uncertainty-Aware Vision-Language Segmentation for Medical Imaging** `[VLM]` `[微调]` — [2602.14498](https://arxiv.org/abs/2602.14498) | [GitHub](https://github.com/arya-domain/UA-VLS)
+  > 本文提出了一种不确定性感知的多模态分割框架，融合放射影像与临床文本进行精准医学诊断。核心贡献包括：（1）模态解码注意力块（MoDAB）结合轻量级状态空间混合器（SSMix），实现高效跨模态融合与长程依赖建模；（2）谱熵不确定性损失（SEU Loss），在统一目标中同时捕获空间重叠、频谱一致性和预测不确定性。在 QATA-COVID19、MosMed++ 和 Kvasir-SEG 三个公开医学数据集上的大量实验表明，该方法在实现优越分割性能的同时计算效率显著高于现有最优方案，论文发表于 WACV 2026。
+
+
+## 2026年2月20日
+
+- **2Mamba2Furious: Linear in Complexity, Competitive in Accuracy** `[长文本]` — [2602.17363](https://arxiv.org/abs/2602.17363) | [GitHub](https://github.com/gmongaras/2Mamba2Furious)
+  > 本文针对线性注意力与 softmax 注意力之间的精度差距问题，对 Mamba-2 进行深入分析与改造。作者首先将 Mamba-2 简化至最核心组件，得到 Mamba-2S，随后通过改进 A-mask 并提升隐状态阶数，提出 2Mamba 方法。实验表明，2Mamba 在精度上接近 softmax 注意力，同时在长上下文场景下保持显著更低的显存占用。此外，作者还探索了可使线性注意力超越 softmax 精度的额外设计要素，并在 NIAH 等长文本记忆任务上取得了与 softmax 相当的表现。
+
+- **Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents** `[VLM]` `[微调]` — [2602.16855](https://arxiv.org/abs/2602.16855) | [GitHub](https://github.com/X-PLUG/MobileAgent)
+  > 本文介绍 GUI-Owl-1.5，一套覆盖桌面、移动、浏览器等多平台的原生 GUI 智能体模型系列，提供 2B/4B/8B/32B/235B 多尺寸的 instruct 与 thinking 变体，支持云边协同与实时交互。GUI-Owl-1.5 在 20+ GUI 基准测试中达到开源模型最优：OSWorld 56.5、AndroidWorld 71.6、WebArena 48.4；在 grounding 任务上同样领先。通过 Mobile-Agent-v3.5 框架与 GUI-Owl-1.5 模型的结合，系统实现了跨平台基础 GUI 自动化能力。
+
+- **Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents** `[RL]` — [2602.16699](https://arxiv.org/abs/2602.16699) | [GitHub](https://github.com/Wenwen-D/env-explorer)
+  > 本文研究 LLM 智能体在序列决策场景中如何平衡探索代价与不确定性。作者将信息检索和编程等任务形式化为带先验的不确定性下序列决策问题，提出 Calibrate-Then-Act（CTA）框架，通过显式地向 LLM 传递代价-不确定性上下文，引导其做出更优的探索决策。实验在信息寻求 QA 和简化编程任务上验证了 CTA 的有效性，且该改进在 RL 训练后仍然保持。结果表明，显式的代价收益权衡能帮助智能体发现更优的决策策略。
+
+- **On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking** — [2602.16849](https://arxiv.org/abs/2602.16849) | [GitHub](https://github.com/Y-Agent/modular-addition-feature-learning)
+  > 本文对两层神经网络学习模块化加法任务的机制和训练动态进行全面分析，提供完整的机制解释与理论推导。研究发现：每个神经元独立学习单频余弦 Fourier 特征（Fourier Feature Learning）；初始化中相位对齐最优的频率通过赢者通吃竞争获胜（Lottery Ticket Dynamics）；在部分数据加权衰减训练下，网络经历「记忆→稀疏化→清理」三阶段后突然泛化（Grokking）。作者还给出了多样化条件的形式化证明，解释了单频特征如何组合为全局解。
+
+- **ArXiv-to-Model: A Practical Study of Scientific LM Training** `[微调]` — [2602.17288](https://arxiv.org/abs/2602.17288) | [GitHub](https://github.com/kitefishai/KiteFish-A1-1.5B-Math)
+  > 本文详细记录了从原始 arXiv LaTeX 源码从零训练 1.36B 参数科学语言模型（Minnow-Math-1.5B）的完整流程，覆盖元数据过滤、.tar.gz 压缩包解析、多文件 LaTeX 解析、去重、领域自适应分词器训练（102k 词表）及模型训练全链路。训练使用 2×A100 80GB GPU，处理 200GB 语料，总计 52.18B 预训练 token。模型在持留科学语料上验证困惑度约 4.2，展现出对科学写作风格与 LaTeX 结构的强烈建模能力，为受限算力下领域专用语言模型训练提供了实践参考。
+
+- **Modeling Distinct Human Interaction in Web Agents** — [2602.17588](https://arxiv.org/abs/2602.17588) | [GitHub](https://github.com/oaishi/PlowPilot)
+  > 本文研究自主 Web 智能体执行任务过程中人类干预行为的建模问题。作者收集了 CowCorpus 数据集，记录真实用户在 Web 任务执行中的干预时机与类型，并将干预建模为独立任务——预测何时以及为何需要人类介入。基于此，提出 PlowPilot 浏览器扩展系统，结合决策模型与动作执行模型协作完成 Web 任务。实验表明，融入人类干预建模后，智能体在关键决策节点的行为更准确，不必要的确认请求大幅减少，协作效率显著提升。
+
+- **References Improve LLM Alignment in Non-Verifiable Domains** `[RL]` `[微调]` — [2602.16802](https://arxiv.org/abs/2602.16802) | [GitHub](https://github.com/yale-nlp/RLRR)
+  > 本文针对 RLVR 无法直接应用于无法验证的领域（如 LLM 对齐）这一问题，探究参考输出引导的 LLM 评估器是否能充当「软验证器」。研究表明，使用前沿模型参考输出可大幅提升弱模型评估器的准确性；高质量人类参考输出也能增强强模型评估器。基于改进后的评估器，作者提出参考引导自我改进方法，通过 DPO 训练实现对齐。在 AlpacaEval/Arena-Hard 上，Llama-3-8B 达到 73.1%/58.7%，Qwen2.5-7B 达到 70.0%/74.1%，分别比 SFT 蒸馏平均提升 +20.2/+17.1 分，比无参考自我改进提升 +5.3/+3.6 分。
+
+- **CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing** `[无需训练]` — [2602.15823](https://arxiv.org/abs/2602.15823) | [GitHub](https://github.com/zarifikram/CrispEdit)
+  > 本文提出 CrispEdit，一种可扩展的二阶 LLM 知识编辑算法，将能力保留明确建模为约束条件。核心思想是将编辑方向投影至能力损失曲率最低的子空间，从而在更新目标知识的同时避免对通用能力的破坏。CrispEdit 统一并推广了多种现有编辑方法，支持千级别的连续知识编辑。实验表明，在 WILD 自回归评估中，CrispEdit 在目标编辑精度上表现突出，同时保持原有能力，相比 AlphaEdit 和 MEMIT 实现超过 100 倍的速度提升。
+
+
+## 2026年2月23日
+
+- **VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training** `[RL]` — [2602.10693](https://arxiv.org/abs/2602.10693) | [GitHub](https://github.com/FloyedShen/VESPO)
+  > VESPO 针对 LLM 强化学习训练中普遍存在的 off-policy 问题——策略滞后（staleness）、异步训练以及训练/推理引擎不匹配——提出了基于变分公式的方差缩减方案。核心贡献是推导出一个作用于序列级重要性权重的闭合式重塑核（reshaping kernel），无需 token 级截断或长度归一化。实验表明，VESPO 在滞后倍率高达 64× 及完全异步训练下仍保持稳定，在数学推理基准上对稠密模型和 MoE 模型均取得一致性提升，支持在 Qwen3-30B-A3B-Base 上进行 fully async 训练而不发散。
+
+- **Spanning the Visual Analogy Space with a Weight Basis of LoRAs** `[微调]` `[无需训练]` — [2602.15727](https://arxiv.org/abs/2602.15727) | [GitHub](https://github.com/NVlabs/LoRWeB)
+  > LoRWeB（LoRA Weight Basis）解决视觉类比学习问题：给定图像三元组 {a, a', b}，生成 b' 使得 a:a'::b:b'。现有方法用单个 LoRA 模块捕捉视觉变换空间，泛化能力有限。本文提出由一组可学习 LoRA 模块构成的「变换基」，以及一个轻量编码器，在推理时根据类比输入动态组合这些基，即在「LoRA 空间」中选择一个点。方法在推理时特化、无需对每个新任务重新训练，在未见变换上的泛化能力显著优于现有 SOTA，代码和数据均已开源。
+
+- **DeepVision-103K: A Visually Diverse, Broad-Coverage, and Verifiable Mathematical Dataset for Multimodal Reasoning** `[RL]` `[VLM]` — [2602.16742](https://arxiv.org/abs/2602.16742) | [GitHub](https://github.com/SKYLENAGE-AI/DeepVision-103K)
+  > DeepVision-103K 是一个面向多模态推理 RLVR（强化学习可验证奖励）训练的大规模数学数据集，涵盖平面几何、立体几何、解析图、数据图表、示意图等丰富视觉元素，以及代数、概率统计等 K12 数学主题。每条样本含可验证唯一答案，支持规则奖励。经三阶段流水线（有效性过滤、难度过滤、Gemini-3-Flash 正确性验证）构建。在 DeepVision 上训练的 Qwen3-VL-8B 在多模态数学及通用推理基准上超越基线，平均准确率从 66.50% 提升至 70.15%，且推理 token 消耗更高效。
+
+- **Sink-Aware Pruning for Diffusion Language Models** `[无需训练]` — [2602.17664](https://arxiv.org/abs/2602.17664) | [GitHub](https://github.com/VILA-Lab/Sink-Aware-Pruning)
+  > 扩散语言模型（DLMs）的注意力 sink 与自回归模型不同：位置不固定、跨去噪时间步高度不稳定，因此直接沿用「保留 sink」的 AR 剪枝启发式会导致次优结果。本文提出 Sink-Aware Pruning，通过测量 sink token 在完整去噪轨迹上的位置方差来识别不稳定 sink，并将其剪掉以减少冗余全局注意力。在 LLaDA、Dream 7B 等模型上，于 50% 稀疏度下一致超越 Wanda 和 SparseGPT 基线，在 8 个基准上平均准确率提升明显，压缩比越高收益越显著。
+
+- **Adam Improves Muon: Adaptive Moment Estimation with Orthogonalized Momentum** `[微调]` — [2602.17080](https://arxiv.org/abs/2602.17080) | [GitHub](https://github.com/minxin-zhg/namo)
+  > NAMO（NAMO/NAMO-D）将 Muon 优化器的正交化动量机制与 Adam 的自适应学习率结合：对一阶动量进行 Nesterov 正交化处理后，再应用逐元素自适应二阶矩缩放。这在理论上弥合了 Muon 缺乏自适应性的局限。实验在 nanoGPT 及多种语言模型预训练任务上验证，NAMO 收敛速度和最终困惑度均优于 Muon 和 Adam，尤其在大批量和高学习率场景下稳定性更优。
+
+- **Avey-B** `[长文本]` — [2602.15814](https://arxiv.org/abs/2602.15814) | [GitHub](https://github.com/rimads/avey-b)
+  > Avey-B 将 Avey（一种无注意力自回归架构）重构为 encoder-only 双向编码器，面向工业级紧凑 NLP 应用。核心创新包括：解耦静态与动态参数化、面向稳定性的归一化设计、以及神经压缩技术。与四种主流 Transformer 编码器（BERT 系列）对比，在 token 分类和信息检索基准上持续胜出，同时对长上下文的扩展效率更高。论文完整提供了 MLM 预训练代码、评测框架及检查点，已在 ICLR 2026 发表。
+
+- **Rubrics as an Attack Surface: Stealthy Preference Drift in LLM Judges** `[RL]` — [2602.13576](https://arxiv.org/abs/2602.13576) | [GitHub](https://github.com/ZDCSlab/Rubrics-as-an-Attack-Surface)
+  > 本文研究 LLM-as-Judge 评估流程中的「评分标准诱导偏好漂移」（RIPD）：攻击者通过微小修改评分 rubric，在基准域上保持验证通过，同时在目标部署域上引发系统性方向偏差，且难以用标准指标检测。实验利用基于种群的进化搜索寻找满足约束的 rubric 变体，并证明该偏差可通过下游后训练传播，导致持久性策略错对齐。涵盖 UltraFeedback、ChatbotArena、PKU-SafeRLHF 等五个人类偏好数据集，代码和数据集已开源。
+
+- **Whom to Query for What: Adaptive Group Elicitation via Multi-Turn LLM Interactions** — [2602.14279](https://arxiv.org/abs/2602.14279) | [GitHub](https://github.com/ZDCSlab/Group-Adaptive-Elicitation)
+  > 自适应群体意见收集框架 GAE，在有限查询和参与预算下，同时自适应选择「问哪个问题」和「问哪个被试」。方法结合：①基于 LLM 期望信息增益（EIG）的问题评分；②异构图神经网络（HGNN）聚合已有回答与被试属性，对缺失回答进行插补并指导被试选择。在 CES、OpinionQA、Twin-2k 三个真实调查数据集上，相比固定被试池方法显著提升群体级响应预测，在 10% 预算下 CES 相对增益超 12%。
+
+
+## 2026年2月24日
+
+- **Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction** `[无需训练]` — [2602.18996](https://arxiv.org/abs/2602.18996) | [GitHub](https://github.com/shannany0606/CCMP)
+  > 研究跨视角目标级视觉对应任务，专注于以自我为中心（egocentric）与以外部为中心（exocentric）视角间的相互转换场景。提出基于条件二值分割的简洁框架：将目标查询掩膜编码为隐变量表示，引导在目标视频中定位对应目标。为学习鲁棒的视角无关表示，引入循环一致性训练目标——将目标视角预测掩膜投影回源视角以重建原始查询掩膜，无需真值标注即可提供强自监督信号，并支持推理阶段的测试时训练（TTT）。在Ego-Exo4D和HANDAL-X基准上达到SOTA性能，CVPR 2026高分接收（评分554）。方法简洁高效，展示了简单设计在困难任务上的强大泛化能力。
+
+- **Mobile-O: Unified Multimodal Understanding and Generation on Mobile Device** `[VLM]` `[微调]` — [2602.20161](https://arxiv.org/abs/2602.20161) | [GitHub](https://github.com/Amshaker/Mobile-O)
+  > 提出Mobile-O，一个紧凑高效的视觉-语言-扩散统一模型，可完全在移动设备本地运行，同时支持多模态理解（VQA、OCR、推理）和图像生成与编辑。核心架构包含三部分：基于FastVLM的轻量视觉语言模型骨干、基于SANA的轻量DiT扩散解码器，以及创新性的Mobile Conditioning Projector（MCP，仅约2.4M参数）将两者桥接。通过预训练（9M图文对）、SFT（105K对）和统一后训练（105K四元组）三阶段训练优化至移动端实用水平。在iPhone 15/16/17 Pro上实测：图像生成约3-4秒、视觉理解约0.4秒、内存占用小于2GB。已完整开源训练评测代码、推理脚本及iOS应用。
+
+- **Large Causal Models for Temporal Causal Discovery** `[无需训练]` — [2602.18662](https://arxiv.org/abs/2602.18662) | [GitHub](https://github.com/kougioulis/LCM-paper)
+  > 提出大型因果模型（LCMs）框架用于时序因果发现，颠覆传统「每数据集单独拟合一个模型」范式。核心贡献在于将多样合成生成器与真实时序数据集结合进行大规模多域预训练，使单一模型具备强跨域迁移能力。在合成、半合成及真实基准上的广泛实验表明，LCMs可有效扩展至更多变量数和更深架构，在分布外（OOD）场景相比经典和神经基线取得有竞争力或更优准确率，并支持单次前向推理（无需为新数据集重新训练）。提供2.5M至24M参数规模的预训练模型，代码、Jupyter实验笔记本及预训练检查点完整开源。
+
 ## 2026年2月25日
 
 - **PyVision-RL: Forging Open Agentic Vision Models via RL** `[RL]` `[VLM]` — [2602.20739](https://arxiv.org/abs/2602.20739) | [GitHub](https://github.com/agents-x-project/PyVision-RL)

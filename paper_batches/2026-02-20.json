@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-02-20",
+    "title": "2Mamba2Furious: Linear in Complexity, Competitive in Accuracy",
+    "arxiv_id": "2602.17363",
+    "github": "https://github.com/gmongaras/2Mamba2Furious",
+    "abstract": "本文针对线性注意力与 softmax 注意力之间的精度差距问题，对 Mamba-2 进行深入分析与改造。作者首先将 Mamba-2 简化至最核心组件，得到 Mamba-2S，随后通过改进 A-mask 并提升隐状态阶数，提出 2Mamba 方法。实验表明，2Mamba 在精度上接近 softmax 注意力，同时在长上下文场景下保持显著更低的显存占用。此外，作者还探索了可使线性注意力超越 softmax 精度的额外设计要素，并在 NIAH 等长文本记忆任务上取得了与 softmax 相当的表现。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-02-20",
+    "title": "Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents",
+    "arxiv_id": "2602.16855",
+    "github": "https://github.com/X-PLUG/MobileAgent",
+    "abstract": "本文介绍 GUI-Owl-1.5，一套覆盖桌面、移动、浏览器等多平台的原生 GUI 智能体模型系列，提供 2B/4B/8B/32B/235B 多尺寸的 instruct 与 thinking 变体，支持云边协同与实时交互。GUI-Owl-1.5 在 20+ GUI 基准测试中达到开源模型最优：OSWorld 56.5、AndroidWorld 71.6、WebArena 48.4；在 grounding 任务上同样领先。通过 Mobile-Agent-v3.5 框架与 GUI-Owl-1.5 模型的结合，系统实现了跨平台基础 GUI 自动化能力。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-20",
+    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+    "arxiv_id": "2602.16699",
+    "github": "https://github.com/Wenwen-D/env-explorer",
+    "abstract": "本文研究 LLM 智能体在序列决策场景中如何平衡探索代价与不确定性。作者将信息检索和编程等任务形式化为带先验的不确定性下序列决策问题，提出 Calibrate-Then-Act（CTA）框架，通过显式地向 LLM 传递代价-不确定性上下文，引导其做出更优的探索决策。实验在信息寻求 QA 和简化编程任务上验证了 CTA 的有效性，且该改进在 RL 训练后仍然保持。结果表明，显式的代价收益权衡能帮助智能体发现更优的决策策略。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-20",
+    "title": "On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking",
+    "arxiv_id": "2602.16849",
+    "github": "https://github.com/Y-Agent/modular-addition-feature-learning",
+    "abstract": "本文对两层神经网络学习模块化加法任务的机制和训练动态进行全面分析，提供完整的机制解释与理论推导。研究发现：每个神经元独立学习单频余弦 Fourier 特征（Fourier Feature Learning）；初始化中相位对齐最优的频率通过赢者通吃竞争获胜（Lottery Ticket Dynamics）；在部分数据加权衰减训练下，网络经历「记忆→稀疏化→清理」三阶段后突然泛化（Grokking）。作者还给出了多样化条件的形式化证明，解释了单频特征如何组合为全局解。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-20",
+    "title": "ArXiv-to-Model: A Practical Study of Scientific LM Training",
+    "arxiv_id": "2602.17288",
+    "github": "https://github.com/kitefishai/KiteFish-A1-1.5B-Math",
+    "abstract": "本文详细记录了从原始 arXiv LaTeX 源码从零训练 1.36B 参数科学语言模型（Minnow-Math-1.5B）的完整流程，覆盖元数据过滤、.tar.gz 压缩包解析、多文件 LaTeX 解析、去重、领域自适应分词器训练（102k 词表）及模型训练全链路。训练使用 2×A100 80GB GPU，处理 200GB 语料，总计 52.18B 预训练 token。模型在持留科学语料上验证困惑度约 4.2，展现出对科学写作风格与 LaTeX 结构的强烈建模能力，为受限算力下领域专用语言模型训练提供了实践参考。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-20",
+    "title": "Modeling Distinct Human Interaction in Web Agents",
+    "arxiv_id": "2602.17588",
+    "github": "https://github.com/oaishi/PlowPilot",
+    "abstract": "本文研究自主 Web 智能体执行任务过程中人类干预行为的建模问题。作者收集了 CowCorpus 数据集，记录真实用户在 Web 任务执行中的干预时机与类型，并将干预建模为独立任务——预测何时以及为何需要人类介入。基于此，提出 PlowPilot 浏览器扩展系统，结合决策模型与动作执行模型协作完成 Web 任务。实验表明，融入人类干预建模后，智能体在关键决策节点的行为更准确，不必要的确认请求大幅减少，协作效率显著提升。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-20",
+    "title": "References Improve LLM Alignment in Non-Verifiable Domains",
+    "arxiv_id": "2602.16802",
+    "github": "https://github.com/yale-nlp/RLRR",
+    "abstract": "本文针对 RLVR 无法直接应用于无法验证的领域（如 LLM 对齐）这一问题，探究参考输出引导的 LLM 评估器是否能充当「软验证器」。研究表明，使用前沿模型参考输出可大幅提升弱模型评估器的准确性；高质量人类参考输出也能增强强模型评估器。基于改进后的评估器，作者提出参考引导自我改进方法，通过 DPO 训练实现对齐。在 AlpacaEval/Arena-Hard 上，Llama-3-8B 达到 73.1%/58.7%，Qwen2.5-7B 达到 70.0%/74.1%，分别比 SFT 蒸馏平均提升 +20.2/+17.1 分，比无参考自我改进提升 +5.3/+3.6 分。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-20",
+    "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+    "arxiv_id": "2602.15823",
+    "github": "https://github.com/zarifikram/CrispEdit",
+    "abstract": "本文提出 CrispEdit，一种可扩展的二阶 LLM 知识编辑算法，将能力保留明确建模为约束条件。核心思想是将编辑方向投影至能力损失曲率最低的子空间，从而在更新目标知识的同时避免对通用能力的破坏。CrispEdit 统一并推广了多种现有编辑方法，支持千级别的连续知识编辑。实验表明，在 WILD 自回归评估中，CrispEdit 在目标编辑精度上表现突出，同时保持原有能力，相比 AlphaEdit 和 MEMIT 实现超过 100 倍的速度提升。",
+    "tags": ["无需训练"]
+  }
+]
