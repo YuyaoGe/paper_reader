@@ -1,0 +1,106 @@
+[
+  {
+    "date": "2026-02-06",
+    "title": "Spider-Sense: Intrinsic Risk Sensing for Efficient Agent Defense with Hierarchical Adaptive Screening",
+    "arxiv_id": "2602.05386",
+    "github": "https://github.com/aifinlab/Spider-Sense",
+    "abstract": "现有 Agent 安全机制依赖强制检查范式，在固定阶段触发安全验证，导致开销大且不灵活。本文提出 Spider-Sense 框架，基于「内生风险感知」(IRS) 的事件驱动防御机制，使 Agent 保持潜在警觉，仅在感知到风险时触发防御。框架分层自适应筛查，兼顾效率与安全性，在多类攻击场景下显著降低 Token 消耗，同时维持强防御性能。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+    "arxiv_id": "2602.02474",
+    "github": "https://github.com/ViktorAxelsen/MemSkill",
+    "abstract": "现有 LLM Agent 记忆系统依赖静态手工设计的操作，难以适应多样交互模式。MemSkill 将记忆操作重构为可学习、可进化的「记忆技能」，结构化地提取、整合和剪枝交互历史。通过 Controller 动态选择相关技能，配合 Learner 在线更新技能，MemSkill 在长轨迹任务上超越现有记忆基线，记忆质量与效率显著提升。",
+    "tags": ["微调", "MeM"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "Length-Unbiased Sequence Policy Optimization: Revealing and Controlling Response Length Variation in RLVR",
+    "arxiv_id": "2602.05261",
+    "github": "https://github.com/murphy4122/LUSPO",
+    "abstract": "RLVR 训练中，响应长度变化被视为推理能力增长的关键因素，但不同算法的长度变化规律差异显著。本文深入分析主流 RLVR 算法组件，从理论上揭示长度偏差的根源，提出「长度无偏序列策略优化」(LUSPO)，通过对序列级奖励进行长度归一化消除偏差，在保持推理准确率的同时有效控制响应长度，实验验证了理论分析的有效性。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+    "arxiv_id": "2602.06036",
+    "github": "https://github.com/z-lab/dflash",
+    "abstract": "自回归 LLM 解码本质上是串行的，导致高推理延迟和低 GPU 利用率。投机解码依赖草稿模型并行验证，但现有方法草稿阶段仍是自回归的。DFlash 提出用轻量级块扩散模型作为草稿模型，实现真正并行草稿生成。DFlash 在多个主流模型（Qwen3、LLaMA 等）上相比标准解码实现 2-3× 加速，同时保持输出质量不变。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "Multi-Task GRPO: Reliable LLM Reasoning Across Tasks",
+    "arxiv_id": "2602.05547",
+    "github": "https://github.com/rsshyam/MT-GRPO",
+    "abstract": "基于 GRPO 的 RL 后训练广泛用于提升 LLM 单任务推理，但多任务场景下直接扩展会导致部分任务优化主导、其他任务停滞。本文提出 MT-GRPO，动态调整任务权重以明确优化最差任务性能，并引入零优势感知的梯度校正处理任务贡献不均问题。在数学、代码、逻辑等多任务评测中，MT-GRPO 显著提升最差任务指标，整体推理可靠性更强。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "DASH: Faster Shampoo via Batched Block Preconditioning and Efficient Inverse-Root Solvers",
+    "arxiv_id": "2602.02016",
+    "github": "https://github.com/IST-DASLab/DASH",
+    "abstract": "Shampoo 是领先的近似二阶优化器，但内部运算（特别是矩阵逆根计算）代价高昂，导致训练速度大幅降低。DASH（分布式加速 Shampoo）通过两项核心技术解决此问题：一是将预条件块堆叠为 3D 张量批量处理以提升 GPU 利用率，二是提出高效逆根求解器。在 LLM 预训练实验中，DASH 相比标准 Shampoo 达到接近 AdamW 的计算开销，同时保留二阶优化的收敛优势。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "SwimBird: Eliciting Switchable Reasoning Mode in Hybrid Autoregressive MLLMs",
+    "arxiv_id": "2602.06040",
+    "github": "https://github.com/Accio-Lab/SwimBird",
+    "abstract": "现有多模态 LLM 主要依赖文本 CoT 推理，对视觉密集型任务效果有限；注入固定数量连续隐状态作为「视觉思维」会损害文本逻辑推理。本文提出 SwimBird，通过可切换推理模式的混合自回归 MLLM，使模型能根据不同查询自适应选择文本或视觉推理路径。在视觉问答、多步推理等任务上，SwimBird 相比纯文本推理基线取得显著提升，同时维持文本推理能力。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "V-Retrver: Evidence-Driven Agentic Reasoning for Universal Multimodal Retrieval",
+    "arxiv_id": "2602.06034",
+    "github": "https://github.com/chendy25/V-Retrver",
+    "abstract": "现有多模态检索方法依赖静态视觉编码和语言驱动推理，在视觉模糊案例中易产生推测性错误。V-Retrver 将多模态检索重构为基于视觉检查的 Agent 推理过程，通过外部视觉工具主动获取细粒度视觉证据。V-Retrver 在多个通用多模态检索基准上达到最优性能，相比依赖 CoT 重排序的方法大幅提升在模糊图像检索场景下的准确率。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "CoPE: Clipped RoPE as A Scalable Free Lunch for Long Context LLMs",
+    "arxiv_id": "2602.05258",
+    "github": "https://github.com/hrlics/CoPE",
+    "abstract": "RoPE 是 LLM 上下文扩展的关键组件，现有扩展方法分为 OOD 缓解（缩放频率）和语义建模（优先关注语义相似 Token）两类。本文提出 CoPE，通过对 RoPE 低频分量进行软裁剪，统一上述两个看似矛盾的目标：消除 OOD 异常值的同时优化语义建模。CoPE 是免训练的「即插即用」方案，在多个长文本任务上持续提升性能，几乎零额外计算开销。",
+    "tags": ["长文本", "无需训练"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "Approximation of Log-Partition Function in Policy Mirror Descent Induces Implicit Regularization for LLM Post-Training",
+    "arxiv_id": "2602.05933",
+    "github": "https://github.com/horizon-rl/OpenKimi",
+    "abstract": "策略镜像下降（PMD）为 RL 后训练提供了原则性框架，Kimi K1.5/K2 等先进 LLM 均采用此方法。然而理想的 PMD 闭合解依赖配分函数的精确估计，在 LLM 庞大动作空间中极具挑战。本文研究实用算法 PMD-mean，用采样策略下的均值奖励近似对数配分项，并在对数策略空间进行回归。理论分析表明此近似带来隐式正则化效果，有助于防止过拟合，实验结果验证了算法有效性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "Breaking the Static Graph: Context-Aware Traversal for Robust Retrieval-Augmented Generation",
+    "arxiv_id": "2602.01965",
+    "github": "https://github.com/kwunhang/CatRAG",
+    "abstract": "现有基于知识图谱的 RAG 方法（如 HippoRAG）依赖索引时固定的转移概率，导致随机游走易被「枢纽」高度节点偏转，丢失关键证据链。本文提出「打破静态图」框架 CatRAG，通过上下文感知遍历动态调整边的相关性权重，使随机游走更关注与查询语义相关的路径。在多跳 QA 基准上，CatRAG 显著提升完整证据链召回率，减少幻觉。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-06",
+    "title": "Failing to Explore: Language Models on Interactive Tasks",
+    "arxiv_id": "2601.22345",
+    "github": "https://github.com/mahdi-jfri/explore-exploit-bench",
+    "abstract": "本文评估语言模型在有限交互预算下探索交互环境的能力，提出三类难度可控的参数化任务，覆盖连续和离散环境。实验发现当前 SOTA 模型系统性地探索不足，性能常显著劣于简单探索-利用启发式基线，且随预算增加扩展性弱。研究了两种轻量级干预：将固定预算拆分为并行执行（意外地提升了性能）以及周期性总结交互历史，为改进 LLM 探索能力提供实证依据。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-06",
+    "title": "Assessing Domain-Level Susceptibility to Emergent Misalignment from Narrow Finetuning",
+    "arxiv_id": "2602.00298",
+    "github": "https://github.com/abhishek9909/assessing-domain-emergent-misalignment",
+    "abstract": "涌现性错误对齐（Emergent Misalignment）对 AI 安全构成风险。本文对 11 个不同领域的不安全数据集微调的 LLM 群体（基于 Qwen2.5-Coder-7B 和 GPT-4o-mini）进行系统评测，发现：(i) 后门触发器在 77.8% 的领域中加剧错误对齐；(ii) 域级漏洞差异显著，成员推断指标可作为预测广泛错误对齐程度的先验。本文首次提供了按领域分级的涌现错误对齐分类排名，为 AI 安全和后训练研究提供参考。",
+    "tags": ["微调"]
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "date": "2026-02-03",
+    "title": "Closing the Loop: Universal Repository Representation with RPG-Encoder",
+    "arxiv_id": "2602.02084",
+    "github": "https://github.com/microsoft/RPG-ZeroRepo",
+    "abstract": "RPG-Encoder 是一个代码仓库理解框架，将仓库「生成」与「理解」视为统一循环中的互逆过程。框架通过三个机制闭合推理环路：(1) 将原始代码编码为融合语义特征与依赖关系的 Repository Planning Graph（RPG）；(2) 增量拓扑更新，将维护成本降低 95.7%；(3) 提供结构感知的统一导航接口。评估表明，RPG-Encoder 在 SWE-bench Verified 上以 93.7% Acc@5 达到最优仓库理解性能，在 SWE-bench Live Lite 上超越最优基线 10% 以上，并在 RepoCraft 上实现 98.5% 重建覆盖率，验证了 RPG 对代码库的高保真镜像能力。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "FS-Researcher: Test-Time Scaling for Long-Horizon Research Tasks with File-System-Based Agents",
+    "arxiv_id": "2602.01566",
+    "github": "https://github.com/Ignoramus0817/FS-Researcher",
+    "abstract": "FS-Researcher 是一个基于文件系统的双智能体框架，用于突破上下文窗口限制的深度研究任务。Context Builder 智能体充当「图书馆员」，浏览互联网、写结构化笔记、将原始资料归档至层次化知识库；Report Writer 智能体逐节撰写报告，将知识库作为事实来源。文件系统作为持久外部记忆和跨智能体协调媒介，支持超越上下文窗口的迭代精炼。在 DeepResearch Bench 和 DeepConsult 两个基准上，FS-Researcher 在不同骨干模型下均达到最优报告质量，且最终质量与 Context Builder 计算量正相关，验证了文件系统范式下的有效测试时扩展。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "PixelGen: Pixel Diffusion Beats Latent Diffusion with Perceptual Loss",
+    "arxiv_id": "2602.02493",
+    "github": "https://github.com/Zehong-Ma/PixelGen",
+    "abstract": "PixelGen 提出了一个带感知监督的像素扩散框架，直接在像素空间端到端生成图像，避免了两阶段潜在扩散中 VAE 引入的伪影和瓶颈。框架引入两种互补感知损失：LPIPS 损失促进更好的局部模式学习，DINO 感知损失强化全局语义。实验表明，PixelGen 仅训练 80 个 epoch 即在 ImageNet-256 上取得 FID 5.11（无 CFG），在大规模文本到图像生成上 GenEval 评分为 0.79，超越强潜在扩散基线。无需 VAE、无潜在表示、无辅助阶段，提供更简洁且更强的生成范式。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Thinking with Comics: Enhancing Multimodal Reasoning through Structured Visual Storytelling",
+    "arxiv_id": "2602.02453",
+    "github": "https://github.com/andongBlue/Think-with-Comics",
+    "abstract": "本文提出「Thinking with Comics」视觉推理范式，将漫画作为介于图像与视频之间的高信息密度媒介。漫画保留时序结构、嵌入文本和叙事连贯性，同时推理成本远低于视频。研究系统探讨了两种基于漫画的推理路径，并在多种推理任务和长上下文理解任务上进行评估。实验结果表明，Thinking with Comics 在多步时序与因果推理任务上优于 Thinking with Images，且效率大幅高于 Thinking with Video。进一步分析揭示不同漫画叙事结构和风格对各任务性能有一致性影响，证明漫画是提升多模态推理的有效中间视觉表示。",
+    "tags": ["VLM", "长文本"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "RLAnything: Forge Environment, Policy, and Reward Model in Completely Dynamic RL System",
+    "arxiv_id": "2602.02488",
+    "github": "https://github.com/Gen-Verse/Open-AgentRL",
+    "abstract": "RLAnything 是一个动态强化学习框架，通过闭环优化同时锻造环境、策略和奖励模型，适用于任意 LLM 或 Agent 场景。策略通过步骤级和结果级反馈联合训练；奖励模型通过一致性反馈联合优化，进而改善策略训练；理论驱动的自动环境适应则利用来自奖励和策略两侧的评论反馈改进训练。实验表明，各组件逐步提升整体系统性能，Qwen3-VL-8B-Thinking 在 OSWorld 上提升 9.1%，Qwen2.5-7B-Instruct 在 AlfWorld 和 LiveBench 上分别提升 18.7% 和 11.9%。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Wiki Live Challenge: Challenging Deep Research Agents with Expert-Level Wikipedia Articles",
+    "arxiv_id": "2602.01590",
+    "github": "https://github.com/WangShao2000/Wiki_Live_Challenge",
+    "abstract": "Wiki Live Challenge（WLC）是一个以最新维基百科「优质文章」（Good Articles）为专家级参考的实时基准，用于评估深度研究智能体。现有评估框架依赖 LLM 生成的参考内容，缺乏可靠性和细粒度评估。WLC 整合了 100 篇近期优质文章数据集，并提出 Wiki Eval 评估框架，包含 39 项写作质量标准和严格的事实可核查性指标。在多个深度研究智能体系统上的广泛实验表明，当前系统与人类专家水平的维基百科文章之间仍存在显著差距。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-03",
+    "title": "SLIME: Stabilized Likelihood Implicit Margin Enforcement for Preference Optimization",
+    "arxiv_id": "2602.02383",
+    "github": "https://github.com/fpsigma/trl-slime",
+    "abstract": "SLIME 是一种无参考对齐目标，旨在解耦偏好学习与生成质量。现有直接偏好优化方法存在「目标错配」问题：优化相对边际并不保证保留偏好响应的绝对概率，导致「遗忘」高质量输出和「格式崩溃」。SLIME 采用三重目标：(1) 锚定项最大化偏好响应概率；(2) 稳定惩罚防止被拒绝 token 概率塌零；(3) 软硬双边际机制实现精确边界整形。实验结果表明，SLIME 在保持更高生成稳定性的同时，性能优于最先进基线。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Mind-Brush: Integrating Agentic Cognitive Search and Reasoning into Image Generation",
+    "arxiv_id": "2602.01756",
+    "github": "https://github.com/PicoTrex/Mind-Brush",
+    "abstract": "Mind-Brush 是一个将「思考-检索-创作」范式融入图像生成的统一 Agent 框架，弥补现有模型在分布外概念和复杂知识推理上的不足。框架通过主动检索多模态证据锚定陌生概念，并使用推理工具解决隐式视觉约束。为严格评估相关能力，提出 Mind-Bench 基准，含 500 个涉及实时新闻、新兴概念、数学与地理推理的样本。实验表明，Mind-Brush 显著提升统一模型能力，在 Mind-Bench 上将 Qwen-Image 基线从零分大幅提升，并在 WISE 和 RISE 等基准上取得领先结果。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents",
+    "arxiv_id": "2602.02486",
+    "github": "https://github.com/microsoft/InfoAgent",
+    "abstract": "RE-TRAC 是一个通过跨轨迹探索改进深度研究 Agent 的框架，针对 ReAct 线性设计在长上下文下的局部最优、冗余探索和低效搜索问题。框架在每条轨迹结束后生成结构化状态表示，总结证据、不确定性、失败原因和未来规划，并以此引导后续轨迹，将研究重构为渐进式过程。实验表明，Re-TRAC 在 BrowseComp 上以前沿 LLM 持续超越 ReAct 15-20%；针对小模型引入 Re-TRAC 感知监督微调，在同等规模下达到最先进性能，且工具调用和 token 用量随轮次单调递减。",
+    "tags": ["长文本", "微调"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "CUA-Skill: Develop Skills for Computer Using Agent",
+    "arxiv_id": "2601.21123",
+    "github": "https://github.com/microsoft/cua_skill",
+    "abstract": "CUA-Skill 是一个面向计算机操作 Agent 的大规模技能库，将人类计算机操作知识编码为带参数化执行和组合图的技能，覆盖常见 Windows 应用。基于此技能库构建的 CUA-Skill Agent 支持动态技能检索、参数实例化和记忆感知故障恢复。实验表明，CUA-Skill 显著提升端到端 Agent 基准上的执行成功率与鲁棒性；在 WindowsAgentArena 上，CUA-Skill Agent 以 57.5%（best of three）成功率达到最先进水平，同时效率显著优于现有方案。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "LoopViT: Scaling Visual ARC with Looped Transformers",
+    "arxiv_id": "2602.02156",
+    "github": "https://github.com/WenjieShu/LoopViT",
+    "abstract": "LoopViT 提出了一种递归架构，通过权重共享循环将推理深度与模型参数量解耦，以实现视觉归纳推理。模型迭代执行一个结合局部卷积和全局注意力的权重共享混合块，形成隐式「思维链」。关键创新是基于预测熵的无参数 Dynamic Exit 机制：当内部状态「结晶」为低不确定性吸引子时停止推理。在 ARC-AGI-1 基准上，仅 18M 参数的 LoopViT 达到 65.8% 准确率，超越 73M 参数集成模型，表明自适应迭代计算是视觉推理更高效的扩展轴。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Training LLMs for Divide-and-Conquer Reasoning Elevates Test-Time Scalability",
+    "arxiv_id": "2602.02477",
+    "github": "https://github.com/MasterVito/DAC-RL",
+    "abstract": "本文提出一个端到端强化学习框架，训练 LLM 进行分治（DAC）式推理，弥补通用后训练与 DAC 推理之间的根本性错位。框架在每步中将问题分解为子问题并顺序求解，分解和求解均纳入 RL 训练。相比 CoT，DAC 风格框架赋予模型更高性能上限和更强测试时扩展性，在竞赛级基准上 Pass@1 提升 8.6%、Pass@32 提升 6.3%。分析揭示了通用后训练与 DAC 推理之间的根本性错位，并证明 RL 训练是解锁 DAC 潜力的有效途径。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Show, Don't Tell: Morphing Latent Reasoning into Image Generation",
+    "arxiv_id": "2602.02227",
+    "github": "https://github.com/EnVision-Research/LatentMorph",
+    "abstract": "LatentMorph 将隐式潜在推理无缝整合到文本到图像生成过程中，避免了显式推理范式中文本解码与图像反复编解码的低效和信息损失。核心组件包括：将中间生成状态压缩为紧凑视觉记忆的 condenser、将潜在思维转为可操作引导的 translator、动态引导下一 token 预测的 shaper，以及 RL 训练的 invoker 自适应决定何时触发推理。实验表明，LatentMorph 在 GenEval 上提升基础模型 Janus-Pro 16%，在抽象推理任务上超越显式范式 11-15%，同时推理时间减少 44%、token 消耗减少 51%。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "PromptRL: Prompt Matters in RL for Flow-Based Image Generation",
+    "arxiv_id": "2602.01382",
+    "github": "https://github.com/G-U-N/UniRL",
+    "abstract": "PromptRL 发现当前流匹配模型 RL 后训练管线存在两个被忽视的问题：生成多样性不足导致的样本低效，以及提示过拟合（prompt overfitting）。框架将语言模型作为可训练提示精炼 Agent 直接嵌入 RL 优化循环，在开发复杂提示改写能力的同时形成协同训练机制，重塑优化动态。PromptRL 在 GenEval 上评分 0.97，OCR 准确率 0.98，PickScore 24.05，达到最先进水平；在图像编辑模型上验证有效性，以仅 0.06M rollout 将 FLUX.1-Kontext 的 EditReward 从 1.19 提升至 1.43，超越 Gemini 2.5 Flash Image。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "CoDiQ: Test-Time Scaling for Controllable Difficult Question Generation",
+    "arxiv_id": "2602.01660",
+    "github": "https://github.com/ALEX-nlp/CoDiQ",
+    "abstract": "CoDiQ 是一个通过测试时扩展实现可控难题生成的框架，解决现有自动化题目合成方法缺乏精确难度控制、计算成本高、难以规模化生成竞赛级题目的问题。框架识别测试时扩展规律（更多推理 token 提升难度但降低可解性）和模型生成有效高难度题目的内在上限，并开发 CoDiQ-Generator（基于 Qwen3-8B）。基于此构建 CoDiQ-Corpus（44K 竞赛级题目序列），人工评估显示题目难度显著超越 LiveCodeBench/AIME，可解性超 82%。在 CoDiQ-Corpus 上训练 LRM 显著提升推理性能。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Hunt Instead of Wait: Evaluating Deep Data Research on Large Language Models",
+    "arxiv_id": "2602.02039",
+    "github": "https://github.com/thinkwee/DDR_Bench",
+    "abstract": "本文提出「深度数据研究」（DDR）任务，要求 LLM 从原始数据库中自主提取关键洞察，区分「调查型智能」（主动设目标、决定探索方向）与「执行型智能」（完成指定任务）。DDR-Bench 是一个基于核查清单的大规模可验证评估基准。实验结果显示，前沿模型表现出初步的自主性，但长视野探索仍具挑战。分析表明，有效的调查型智能不仅取决于 Agent 脚手架或规模扩展，还依赖于 Agent 模型的内在策略。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-03",
+    "title": "Rethinking LLM-as-a-Judge: Representation-as-a-Judge with Small Language Models via Semantic Capacity Asymmetry",
+    "arxiv_id": "2601.22588",
+    "github": "https://github.com/zhuochunli/Representation-as-a-judge",
+    "abstract": "本文提出「Representation-as-a-Judge」范式，探索用小语言模型的内部表示替代大模型作为评估器。研究发现一致性经验规律：小 LM 尽管生成能力弱，但其隐藏状态编码了丰富的评估信号。由此提出「语义容量不对称假说」：评估所需语义容量远小于生成，可基于中间表示完成。基于此范式实例化 INSPECTOR，一个从小模型表示预测方面级评分的探针框架。在 GSM8K、MATH、GPQA 推理基准上，INSPECTOR 大幅优于基于提示的小 LM，接近完整 LLM 评判，同时更高效、可靠、可解释。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-03",
+    "title": "On the Limits of Layer Pruning for Generative Reasoning in LLMs",
+    "arxiv_id": "2602.01997",
+    "github": "https://github.com/safal312/on-the-limits-of-layer-pruning",
+    "abstract": "本文系统研究层剪枝对 LLM 生成推理任务的影响。研究发现，尽管层剪枝在分类基准上表现良好，但多步推理任务对深度缩减极为敏感，导致算术计算和代码合成等关键算法能力退化。在现实后训练约束下，评估了基于自生成响应监督微调的缓解策略：该方案在分类任务上恢复高达 90% 基线性能，在生成基准上提升 20-30 个百分点，但生成推理恢复仍根本受限于分类任务，且仅在较低剪枝比例下可行，为实际应用提供了重要边界指导。",
+    "tags": ["微调"]
+  }
+]

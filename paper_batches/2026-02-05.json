@@ -1,0 +1,186 @@
+[
+  {
+    "date": "2026-02-05",
+    "title": "FASA: Frequency-aware Sparse Attention",
+    "arxiv_id": "2602.03152",
+    "github": "https://github.com/AMAP-ML/FASA-ICLR2026",
+    "abstract": "FASA 提出了一种频率感知稀疏注意力框架，解决大语言模型处理长文本时 KV 缓存显存开销过大的问题。现有方法要么静态剪枝导致信息不可恢复丢失，要么动态启发式策略无法充分捕捉查询相关的 token 重要性。FASA 通过频率域分析实现查询感知的 token 驱逐，在保持模型性能的同时大幅降低显存占用。实验在多个长文本任务上验证了方法的有效性，该工作已被 ICLR 2026 接收。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning",
+    "arxiv_id": "2602.04634",
+    "github": "https://github.com/RLinf/RLinf",
+    "abstract": "WideSeek-R1 探索了多智能体系统的「宽度扩展」维度，与现有以单智能体深度推理为主的路线互补。针对广泛信息检索任务，提出通过多智能体强化学习协调并行工作流，取代人工设计的工作流和轮流交互模式。实验表明，在宽广信息检索场景下，宽度扩展比单智能体深度扩展更能有效提升整体性能，为多智能体 RL 系统设计提供了新范式。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Training Data Efficiency in Multimodal Process Reward Models",
+    "arxiv_id": "2602.04145",
+    "github": "https://github.com/JinYuanLi0012/Balanced-Info-MPRM",
+    "abstract": "本文研究多模态过程奖励模型（MPRM）的训练数据效率问题。实验发现现有蒙特卡洛标注语料存在大量冗余，随机下采样快速饱和。作者提出「平衡信息分数（BIS）」，从标签混合度和标签可靠性两个维度对训练样本评分排序，仅用 10% 数据即可匹配全量训练效果，大幅降低 MPRM 训练成本。在多个视觉推理基准上验证了方法的有效性。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Rethinking the Trust Region in LLM Reinforcement Learning",
+    "arxiv_id": "2602.04879",
+    "github": "https://github.com/sail-sg/Stable-RL",
+    "abstract": "本文指出 PPO 中的概率比值裁剪机制对大词表 LLM 存在结构性缺陷：低概率 token 的更新被过度惩罚，高概率 token 则惩罚不足，导致学习动态次优。作者提出 DPPO（Direct Policy Optimization with direct divergence），用全变差或 KL 散度直接近似策略分布变化，构建更有原则性的信任域。在 AIME24 等推理任务上，DPPO 显著优于 GRPO 基线，训练稳定性更强。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "TIDE: Trajectory-based Diagnostic Evaluation of Test-Time Improvement in LLM Agents",
+    "arxiv_id": "2602.02196",
+    "github": "https://github.com/yayayacc/TIDE",
+    "abstract": "TIDE 针对 LLM 智能体的「测试时自我改进（TTI）」能力提出轨迹级诊断评估框架。现有评估指标无法捕捉任务优化效率、错误后行为适应及工作记忆利用率。TIDE 通过分析智能体与环境交互轨迹，提供与智能体架构和环境无关的细粒度诊断。在 ALFWorld、WebShop 等多个环境上的实验揭示了不同 TTI 策略的内在工作机制与失败模式。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Residual Context Diffusion Language Models",
+    "arxiv_id": "2601.22954",
+    "github": "https://github.com/yuezhouhu/residual-context-diffusion",
+    "abstract": "扩散大语言模型（dLLM）可并行解码多个 token，但现有重掩码机制只保留高置信度 token，丢弃的 token 中仍包含有用的上下文信息。本文提出残差上下文扩散（RCD），将被丢弃 token 的分布转化为上下文残差注入下一去噪步骤，通过两阶段训练避免反向传播的内存开销。在 AIME24/25 等难题基准上，RCD 相比序列去噪（SeqD）一致提升推理准确率，并行度提升 4 倍同时维持峰值精度。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Self-Hinting Language Models Enhance Reinforcement Learning",
+    "arxiv_id": "2602.03143",
+    "github": "https://github.com/BaohaoLiao/SAGE",
+    "abstract": "SAGE（自提示 GRPO 优化框架）解决 GRPO 在稀疏奖励下因组内优势坍塌导致更新消失的问题。对于模型无法采样到正确轨迹的困难 prompt，SAGE 让模型从参考答案中自生成提示（hint），将该 hint 与原始 prompt 共同作为输入，确保困难样本的正确轨迹被采样用于策略更新。实验表明 SAGE 将困难 prompt 利用率提高约 10%，在多数学推理基准上持续优于 GRPO 基线，且维持相似熵量级。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Semantic Routing: Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers",
+    "arxiv_id": "2602.03510",
+    "github": "https://github.com/zooblastlbz/SemanticRouting",
+    "abstract": "语义路由研究如何将 LLM 多层隐状态动态融合用于 DiT 文本到图像模型的文本条件，解决传统单层静态文本条件无法适应 LLM 的语义层次结构与扩散模型非平稳去噪动态的问题。本文提出统一归一化凸融合框架，配备轻量门控机制，系统探索时间维度、深度维度和联合融合策略。实验发现「深度维度语义路由」效果最优，显著提升文本-图像对齐和组合生成能力。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "AutoFigure: Generating and Refining Publication-Ready Scientific Illustrations",
+    "arxiv_id": "2602.03828",
+    "github": "https://github.com/ResearAI/AutoFigure",
+    "abstract": "AutoFigure 是首个从科学文本自动生成出版级别科学插图的智能体框架，配套提出 FigureBench——首个大规模科学插图生成基准，包含 3300 个高质量文本-图像对，覆盖论文、综述、博客和教材等多种来源。AutoFigure 通过迭代精炼机制将 LLM 的长文本理解与代码生成能力结合，输出结构化、可编辑的矢量科学图表。实验表明 AutoFigure 在自动评估和人工评估上均显著超越现有基线。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-05",
+    "title": "A-RAG: Scaling Agentic Retrieval-Augmented Generation via Hierarchical Retrieval Interfaces",
+    "arxiv_id": "2602.03442",
+    "github": "https://github.com/Ayanami0730/arag",
+    "abstract": "A-RAG 提出了一种智能体式 RAG 框架，通过分层检索接口（关键词检索、语义检索、片段阅读）让模型参与检索决策，而非依赖单次检索或预定义工作流。前沿语言模型的强推理和长程工具调用能力在现有 RAG 范式中被严重低估。A-RAG 允许模型根据任务需求自主选择检索粒度，在多跳问答任务上达到最优性能，并随模型能力提升实现高效扩展。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "PaperSearchQA: Learning to Search and Reason over Scientific Papers with RLVR",
+    "arxiv_id": "2601.18207",
+    "github": "https://github.com/jmhb0/PaperSearchQA",
+    "abstract": "PaperSearchQA 提出了用于训练科学文献搜索智能体的强化学习环境，专注于生物医学领域的技术问答。系统包含从科学摘要自动生成 QA 数据的流水线（约 60K 样本）和检索语料库，用 RLVR 仅监督最终答案准确率来训练搜索智能体。实验表明训练后的智能体能泛化到未见过的 BioASQ 基准，展现了 RLVR 在专业领域文献搜索推理上的潜力。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Horizon-LM: A RAM-Centric Architecture for LLM Training",
+    "arxiv_id": "2602.04816",
+    "github": "https://github.com/DLYuanGod/Horizon-LM",
+    "abstract": "Horizon-LM 提出了以 RAM 为核心的 LLM 训练架构，打破训练规模与多 GPU 集群的强耦合。核心思路是将 FP32 主权重存于 CPU 内存，GPU 仅保留 BF16 工作副本，通过 CPU-GPU 协同执行实现单卡训练 120B+ 参数模型。相比 GPU 中心式范式，显著降低了显存需求和分布式运行时复杂度，同时支持 YAML 配置和自动 CUDA 扩展构建，已验证 Qwen2/2.5 全系列模型的训练。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "MEnvAgent: Scalable Polyglot Environment Construction for Verifiable Software Engineering",
+    "arxiv_id": "2601.22859",
+    "github": "https://github.com/ernie-research/MEnvAgent",
+    "abstract": "MEnvAgent 提出了跨编程语言的可执行环境自动构建框架，解决可验证软件工程数据集稀缺的瓶颈。采用多智能体规划-执行-验证架构，自主解决环境构建失败并通过环境复用机制提升效率，支持 Python、Java、TypeScript 等 10 种主流编程语言。已发布 MEnvData-SWE（3005 个任务实例，942 个代码仓库）和 MEnvBench（1000 个评估任务），是目前最大的开源多语言可验证软件工程数据集。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Agent-Omit: Training Efficient LLM Agents for Adaptive Thought and Observation Omission via Agentic Reinforcement Learning",
+    "arxiv_id": "2602.04284",
+    "github": "https://github.com/usail-hkust/Agent-Omit",
+    "abstract": "Agent-Omit 提出了通过智能体强化学习训练 LLM 智能体自适应省略冗余思维和观察的统一框架。现有方法对交互轨迹中所有步骤一视同仁，忽略了不同轮次中思维必要性和观察有效性的差异。Agent-Omit 量化分析思维和观察对智能体效率的影响，训练模型自主判断何时省略，在保持任务性能的同时大幅降低 token 消耗，在多个智能体基准上取得显著效率提升。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "D-CORE: Incentivizing Task Decomposition in Large Reasoning Models for Complex Tool Use",
+    "arxiv_id": "2602.02160",
+    "github": "https://github.com/alibaba/EfficientAI",
+    "abstract": "D-CORE 提出两阶段训练框架解决大型推理模型（LRM）在复杂工具调用场景下的「惰性推理」问题：首先通过自蒸馏激励子任务分解推理能力，再用多样性感知强化学习恢复模型的反思推理能力。在 BFCLv3 基准上，D-CORE-8B 达到 77.7% 准确率（超越最优 8B 模型 5.7%），D-CORE-14B 以 79.3% 超越所有 70B 以下模型，建立了新的最优性能。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "MeKi: Memory-based Expert Knowledge Injection for Efficient LLM Scaling",
+    "arxiv_id": "2602.03359",
+    "github": "https://github.com/ningding-o/MeKi",
+    "abstract": "MeKi（基于内存的专家知识注入）提出通过存储空间而非算力来扩展边缘设备 LLM 性能的新范式。针对手机等边缘设备 RAM 和 NPU 资源受限、无法通过增加参数或测试时计算扩展的挑战，MeKi 为每个 Transformer 层配备 token 级内存专家，利用快闪存储存储大量知识块并在推理时按需调取。实验表明 MeKi 在保持实时推理速度的同时，以更小的参数规模达到更强模型的性能。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent",
+    "arxiv_id": "2602.03955",
+    "github": "https://github.com/AIFrontierLab/AgentArk",
+    "abstract": "AgentArk 提出将多智能体系统的集体动态内化为单个模型权重的蒸馏框架，将显式测试时交互转化为隐式模型能力。研究三种层次化蒸馏策略：推理增强微调、轨迹增强和群体迭代推理蒸馏。单智能体系统在保持多智能体级别推理性能的同时，大幅降低计算成本和错误传播风险。在数学推理、代码生成等多任务场景下验证了方法的通用性和扩展性。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Proxy Compression for Language Modeling",
+    "arxiv_id": "2602.04289",
+    "github": "https://github.com/LZhengisme/proxy-compression",
+    "abstract": "代理压缩提出一种新型语言模型训练方案，在保留压缩输入效率优势的同时提供端到端的原始字节推理接口，解除模型对固定分词器的依赖。训练时语言模型同时在原始字节序列和外部压缩器生成的压缩视图上联合训练（支持 gzip、神经压缩等），推理时模型可直接处理原始字节。实验在代码生成和语言建模任务上验证了代理压缩的效果，为构建通用字节级语言模型提供新思路。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Self-Rewarding Sequential Monte Carlo for Masked Diffusion Language Models",
+    "arxiv_id": "2602.01849",
+    "github": "https://github.com/Algolzw/self-rewarding-smc",
+    "abstract": "本文提出自奖励序列蒙特卡洛（SR-SMC），一种针对掩码扩散语言模型（MDLM）的推理时扩展算法。现有 MDLM 依赖基于置信度的贪婪解码，导致生成多样性坍塌。SR-SMC 通过并行运行多个相互作用的扩散过程，以扩散模型自身的轨迹级置信度作为重要性权重引导采样，无需任何奖励模型即可提升生成质量。在 MDLM、BD3-LMs、LLaDA-1.5 和 Dream-7B 上均实现一致的性能提升。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Context Learning for Multi-Agent Discussion",
+    "arxiv_id": "2602.02350",
+    "github": "https://github.com/HansenHua/M2CL-ICLR26",
+    "abstract": "M2CL 针对多智能体讨论（MAD）中因各智能体上下文对齐不足导致的「讨论不一致」问题，提出多 LLM 上下文学习方法。为每个智能体学习独立的上下文生成器，能够在每轮讨论中动态生成个性化上下文指令，通过自动信息组织和精炼来维护一致的协作推理过程。在数学推理、常识推理等多任务上验证了 M2CL 显著改善讨论一致性并提升整体问题解决性能，已被 ICLR 2026 接收。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "EntRGi: Entropy Aware Reward Guidance for Diffusion Language Models",
+    "arxiv_id": "2602.05000",
+    "github": "https://github.com/atutej/entrgi",
+    "abstract": "EntRGi 研究离散扩散语言模型的推理时奖励引导问题。由于离散 token 无法直接对奖励模型求梯度，现有方法要么用连续松弛替代（损害梯度质量），要么用直通估计器（梯度信号失真）。EntRGi 提出根据模型预测熵动态在软嵌入和硬 token 之间插值：高熵（低置信度）时偏向软嵌入保证梯度质量，低熵时偏向硬 token 保证奖励模型可靠性。无需微调即可应用于任意预训练扩散 LLM。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "SAFE: Stable Alignment Finetuning with Entropy-Aware Predictive Control for RLHF",
+    "arxiv_id": "2602.04651",
+    "github": "https://github.com/ryyzn9/SAFE",
+    "abstract": "SAFE 提出了针对 LM-RLHF 场景的纯在线策略 Actor-Critic 强化学习方法，解决 PPO 在对齐微调中存在的奖励震荡、熵坍塌、价值函数漂移和策略突然发散等问题。核心创新是熵感知预测控制器，通过自适应 KL 阈值动态调整 KL 惩罚，配合双软最小评论家网络和层归一化设计，在无需频繁重启和大量超参数调整的情况下保持训练稳定性。实验在多个 LLM 家族（Qwen3、Llama3、Gemma3）上验证了效果。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "OmniRad: A Radiological Foundation Model for Multi-Task Medical Image Analysis",
+    "arxiv_id": "2602.04547",
+    "github": "https://github.com/unica-visual-intelligence-lab/OmniRad",
+    "abstract": "OmniRad 是基于 120 万张医学影像自监督预训练的放射学基础模型，强调表示复用和跨任务迁移能力。模型在分类、分割和放射学报告生成三类任务上统一评估，支持轻量 LoRA 适配器（冻结主干）和全量端到端微调两种下游适配模式。通过 STA（空间 token 聚合）从多 ViT 层提取多尺度特征，结合 DEIMv2 风格的 HybridEncoder 实现密集预测。在多个放射学下游任务上取得领先性能。",
+    "tags": ["VLM", "微调"]
+  }
+]
