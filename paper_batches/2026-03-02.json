@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-03-02",
+    "title": "dLLM: Simple Diffusion Language Modeling",
+    "arxiv_id": "2602.22661",
+    "github": "https://github.com/ZHZisZZ/dllm",
+    "abstract": "dLLM 是一个开源统一框架，旨在标准化扩散语言模型（DLM）的核心组件，包括训练、推理与评估流程。现有扩散语言模型（如 LLaDA、Dream）的实现分散于各自代码库，缺乏统一规范，导致复现和扩展困难。dLLM 通过标准化流水线使用户能够复现、微调、部署和评估开源大型扩散语言模型，同时提供从 BERT 编码器或自回归语言模型转化为 DLM 的最小可复现配方，并公开了多个小型 DLM 的检查点，降低了扩散语言模型研究的门槛，加速未来相关工作的开展。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models",
+    "arxiv_id": "2602.24264",
+    "github": "https://github.com/oshapio/necessary-compositionality",
+    "abstract": "本文从理论上形式化了组合泛化所需的表示几何结构，证明若要在标准训练下实现对新组合的泛化，模型的表示必须满足三个条件：可分性、可迁移性和稳定性，由此推导出必要几何约束——表示须线性分解为各概念的正交分量。这为广泛观察到的「线性表示假说」提供了理论支撑：神经网络表示中的线性结构是组合泛化的必然结果。作者在 CLIP、SigLIP、DINO 等现代视觉模型上验证了这一预测，发现这些模型的表示确实呈现出部分线性因子化与低秩正交结构，且该结构程度与组合泛化性能正相关。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "How to Take a Memorable Picture? Empowering Users with Actionable Feedback",
+    "arxiv_id": "2602.21877",
+    "github": "https://github.com/laitifranz/MemCoach",
+    "abstract": "本文提出 MemFeed 任务与 MemCoach 方法，旨在为用户拍摄时提供可操作的图像记忆性改善建议（如「强调面部表情」「将主体推至前景」）。MemCoach 基于多模态大语言模型（MLLM），无需训练，采用教师-学生引导策略，通过将模型内部激活对齐至教师模型从低记忆性到高记忆性样本学到的更具记忆性的模式来实现引导。论文还构建了 MemBench 数据集，包含序列对齐的连拍照片及记忆性评分标注。实验表明，MemCoach 相比多个零样本基线均有持续提升，证明记忆性不仅可以被预测，还可以被教导与指令化。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Accelerating Masked Image Generation by Learning Latent Controlled Dynamics",
+    "arxiv_id": "2602.23996",
+    "github": "https://github.com/Kaiwen-Zhu/MIGM-Shortcut",
+    "abstract": "掩码图像生成模型（MIGM）因双向注意力的多步推理而效率受限。现有特征缓存方法在高加速比下存在较大近似误差。本文提出 MIGM-Shortcut，学习一个轻量化模型，综合利用历史特征与采样 token 来回归特征演化的平均速度场，从而更准确地预测未来特征。该方法被应用于两种代表性 MIGM 架构；在最先进的 Lumina-DiMOO 上，MIGM-Shortcut 实现了超过 4 倍的文本到图像生成加速，同时保持生成质量，显著推进了掩码图像生成的帕累托前沿。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Ref-Adv: Exploring MLLM Visual Reasoning in Referring Expression Tasks",
+    "arxiv_id": "2602.23898",
+    "github": "https://github.com/dddraxxx/Ref-Adv",
+    "abstract": "本文介绍 Ref-Adv，一个旨在抑制快捷路径的指代表达理解（REC）数据集，通过将语言上非平凡的表达与仅包含唯一标识目标所需信息的难干扰项配对构建而成，并标注了包含否定在内的推理类型。实验通过词序扰动和描述词删除充分性消融验证了求解 Ref-Adv 需要真正的推理能力。对大量多模态 LLM 的评估表明，尽管模型在 RefCOCO 系列上表现强劲，在 Ref-Adv 上却显著下降，揭示了当前 MLLM 在视觉推理与定位方面依赖快捷路径的局限。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+    "arxiv_id": "2602.18846",
+    "github": "https://github.com/AMD-AGI/DUET-VLM",
+    "abstract": "DUET-VLM 是一个即插即用的双阶段视觉 token 压缩框架，用于提升视觉语言模型（VLM）的训练和推理效率。第一阶段在视觉编码器输出上进行冗余感知压缩，生成信息保留的 token；第二阶段在语言主干中逐层进行文本引导的显著性 token 丢弃，渐进剪除信息量低的 token。在 LLaVA-1.5-7B 上，DUET-VLM 以减少 67% token 的代价保持超过 99% 的基线精度，在极端 89% 减少设置下仍保留 97% 精度，在多个评测任务上超越已有 SoTA token 压缩方法；集成到 Video-LLaVA-7B 后更以 53.1% token 减少超越原始基线。",
+    "tags": ["VLM", "微调"]
+  }
+]

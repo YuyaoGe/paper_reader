@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-02-25",
+    "title": "PyVision-RL: Forging Open Agentic Vision Models via RL",
+    "arxiv_id": "2602.20739",
+    "github": "https://github.com/agents-x-project/PyVision-RL",
+    "abstract": "PyVision-RL 提出了一个开放权重多模态模型的强化学习训练框架，解决了代理型多模态模型中的「交互坍塌」问题——模型在 RL 微调后倾向于减少工具调用和多轮推理。核心方法包括过采样-过滤-排序（oversampling-filtering-ranking）rollout 策略与累积工具奖励机制，从而防止崩塌并激励多轮工具使用。基于统一训练管线，分别开发了 PyVision-Image（图像理解）和 PyVision-Video（视频推理），后者采用按需上下文构建，在推理时选择性采样任务相关帧，大幅降低视觉 token 消耗。实验表明，在多模态推理、视觉搜索和代理推理任务上均取得领先性能，验证了持续交互和按需视觉处理对可扩展多模态代理的关键作用。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "Multi-Vector Index Compression in Any Modality",
+    "arxiv_id": "2602.21202",
+    "github": "https://github.com/hanxiangqin/omni-col-press",
+    "abstract": "本文研究跨模态的多向量检索效率问题。Late interaction（延迟交互）在文本、图像、视觉文档和视频检索中已成主流范式，但其计算和存储开销随文档长度线性增长，在富媒体语料库中代价高昂。本文提出四种 query-agnostic 的多向量文档表示压缩方法：序列缩放、记忆 token、层次池化以及新颖的注意力引导聚类（AGC）。AGC 通过注意力机制识别文档中语义最突出的区域作为聚类中心，加权聚合 token 表示。在 BEIR（文本）、ViDoRe（视觉文档）和 MSR-VTT/MultiVENT 2.0（视频）等检索任务上，AGC 始终优于其他参数化压缩方法，并在不同 index 大小配置下超越或持平未压缩全量索引。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents",
+    "arxiv_id": "2602.19633",
+    "github": "https://github.com/UW-Madison-Lee-Lab/TAPE",
+    "abstract": "TAPE（工具引导自适应规划与约束执行）旨在解决 LM 智能体在严格可行性约束下单次错误导致不可恢复失败的问题。系统性分析发现，不完善规划与随机执行是主要失败原因。TAPE 通过将多个规划方案聚合为图并利用外部求解器寻找可行路径来增强规划能力；执行阶段采用约束解码降低采样噪声，当环境反馈偏离预期时自适应重新规划。在 Sokoban、ALFWorld、MuSiQue 和 GSM8K-Hard 上的实验表明，TAPE 一致优于现有框架：在困难设置下平均提升成功率 21.0 个百分点，对弱基础模型平均提升 20.0 个百分点，充分验证了图规划与约束执行的有效组合。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "PETS: A Principled Framework Towards Optimal Trajectory Allocation for Efficient Test-Time Self-Consistency",
+    "arxiv_id": "2602.16745",
+    "github": "https://github.com/ZDCSlab/PETS",
+    "abstract": "PETS（原则化高效测试时自一致性）针对有限预算下的样本高效测试时推理问题，通过优化框架系统研究轨迹分配策略。核心贡献是引入「自一致率」——与无限预算多数投票的一致程度——作为新衡量指标，使样本高效分配具有理论依据。离线设置中将轨迹分配类比为众包问题，借助成熟众包理论推导理论保证和高效多数投票分配算法；在线流式设置中设计自适应算法，根据问题难度动态调整预算。在 GPQA 上，PETS 在离线设置下将采样预算降低高达 75%、在线设置下降低 55%，同时维持完美自一致率，验证了框架的实用性与理论严谨性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "One-step Language Modeling via Continuous Denoising",
+    "arxiv_id": "2602.16813",
+    "github": "https://github.com/david3684/flm",
+    "abstract": "本文挑战「离散扩散是离散模态生成建模必要条件」这一广泛假设，提出基于流匹配连续去噪的语言模型 FLM。FLM 在 one-hot token 编码上执行欧几里得去噪，通过交叉熵目标预测干净数据进行训练，并引入简单的时间重参数化大幅提升训练稳定性和生成质量。通过将 FLM 蒸馏为关联流图，得到 FMLM，实现高质量少步生成。在 LM1B 和 OWT 语料上，FLM 达到与最先进离散扩散模型相当的生成质量；FMLM 单步生成质量超越同类模型 8 步的表现，全面优于近期少步语言模型，为加速流式语言建模铺平道路。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "Communication-Inspired Tokenization for Structured Image Representations",
+    "arxiv_id": "2602.20731",
+    "github": "https://github.com/Araachie/comit",
+    "abstract": "COMiT（通信启发式 Tokenization）受人类交流渐进式组合性质启发，提出学习结构化离散视觉 token 序列的框架。在固定 token 预算内，模型迭代观察局部图像块并循环更新离散表示，每步整合新视觉信息并精炼重组现有 token 序列，最终利用流匹配解码器重建完整图像，编解码均在单一 Transformer 中端到端训练。实验证明，语义对齐提供基础锚定，而注意力驱动的序列 Tokenization 是实现可解释对象中心 token 结构的关键，相较先前方法在组合泛化和关系推理上有显著提升。",
+    "tags": ["无需训练", "VLM"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "TextPecker: Rewarding Structural Anomaly Quantification for Enhancing Visual Text Rendering",
+    "arxiv_id": "2602.20903",
+    "github": "https://github.com/CIawevy/TextPecker",
+    "abstract": "视觉文本渲染（VTR）是文本到图像生成的核心挑战，现有先进模型仍频繁出现扭曲、模糊、错位等结构性异常。本文发现主流 MLLM 和专业 OCR 模型对这些结构异常的感知能力严重不足，成为 VTR 评估和 RL 优化的关键瓶颈。TextPecker 提出即插即用的结构异常感知 RL 策略，构建了字符级结构异常标注识别数据集并开发笔划编辑合成引擎扩展结构错误覆盖范围，可与任意文本到图像生成器配合使用。CVPR 2026 录用；实验表明在充分优化的 Qwen-Image 上，中文文本渲染结构保真度平均提升 4%，语义对齐提升 8.7%，达到新 SOTA。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "arxiv_id": "2602.16603",
+    "github": "https://github.com/HSIEHCHIACHI/FlowPrefill",
+    "abstract": "FlowPrefill 针对 LLM 推理服务中预填充（prefill）阶段的队头阻塞（HoL blocking）问题，提出将抢占粒度与调度频率解耦的 TTFT 吞吐量优化系统。核心创新包括：①算子级抢占（Operator-Level Preemption），利用算子边界实现细粒度执行中断，避免固定小分块带来的效率损失；②事件驱动调度（Event-Driven Scheduling），仅在请求到达或完成事件时触发调度决策，最小化控制平面开销。在真实生产负载（QwenTrace）上的评估表明，相比现有最先进系统，在满足异构 SLO 约束的同时，FlowPrefill 将最大有效吞吐量（goodput）提升高达 5.6 倍。",
+    "tags": ["无需训练"]
+  }
+]

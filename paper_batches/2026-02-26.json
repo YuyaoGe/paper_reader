@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2026-02-26",
+    "title": "ARLArena: A Unified Framework for Stable Agentic Reinforcement Learning",
+    "arxiv_id": "2602.21534",
+    "github": "https://github.com/WillDreamer/ARL-Arena",
+    "abstract": "智能体强化学习（ARL）在训练多步骤交互任务方面展现出潜力，但训练不稳定导致的崩溃问题制约了其扩展性。本文提出ARLArena，一个稳定的训练方案与系统性分析框架，在可控可复现的环境中研究训练稳定性。ARLArena构建了标准化测试平台，将策略梯度分解为四个核心设计维度并逐一评估。基于细粒度分析，论文提炼出统一视角并提出SAMPO——一种稳定的智能体策略优化方法，旨在消除ARL中的主要不稳定来源。在多样化智能体任务上，SAMPO实现了持续稳定的训练和强劲性能，为构建可扩展的智能体RL系统提供了重要基础。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
+    "arxiv_id": "2602.22190",
+    "github": "https://github.com/GUI-Libra/GUI-Libra",
+    "abstract": "本文针对原生GUI智能体后训练的两大瓶颈：高质量动作对齐推理数据匮乏，以及忽视GUI交互独特约束的通用后训练流程。GUI-Libra提出GUI专属配方：81K精选推理数据集、通过token重加权平衡推理与直接动作监督的动作感知SFT，以及结合KL正则化与成功自适应负梯度缩放的保守RL。在AndroidWorld、Online-Mind2Web和WebArena-Lite-v2等线上离线基准上，GUI-Libra-4B和GUI-Libra-8B持续超越强基线原生GUI智能体，在多个设置下甚至超过专有系统，验证了专门化后训练流程的有效性。",
+    "tags": ["RL", "VLM", "微调"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "From Statics to Dynamics: Physics-Aware Image Editing with Latent Transition Priors",
+    "arxiv_id": "2602.21778",
+    "github": "https://github.com/liangbingzhao/PhysicEdit",
+    "abstract": "基于指令的图像编辑在语义对齐上取得显著成功，但涉及折射、材料形变等复杂因果动力学时，现有模型难以生成物理合理的结果。作者将物理感知编辑重新表述为预测性物理状态转换，构建了大规模视频数据集PhysicTran38K（五大物理领域38K转换轨迹），并提出端到端框架PhysicEdit。该框架配备文本-视觉双重思考机制，将冻结的Qwen2.5-VL用于物理推理，结合可学习的转换查询为扩散主干提供时步自适应视觉引导。实验表明，PhysicEdit在物理真实性上比Qwen-Image-Edit提升5.9%，知识引导编辑提升10.1%，达到开源方法最优，且与领先闭源模型竞争。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "VecGlypher: Unified Vector Glyph Generation with Language Models",
+    "arxiv_id": "2602.21461",
+    "github": "https://github.com/xk-huang/VecGlypher",
+    "abstract": "矢量字形是数字排版的基本单元，但现有学习方法依赖精心策划的样例集和光栅转矢量后处理，限制了可访问性与可编辑性。VecGlypher提出单一多模态语言模型，可直接从文本描述或图像样例生成高保真矢量字形。给定风格提示、可选参考字形图像和目标字符，模型自回归地输出SVG路径token，无需光栅中间件，一次生成可编辑轮廓。训练方案包含：在39K Envato字体上的大规模续训以掌握SVG语法，以及在2.5K Google Fonts上的专家标注后训练以对齐语言与几何。实验显示VecGlypher在字形保真度和风格对齐上显著优于现有基线。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "Revisiting Text Ranking in Deep Research",
+    "arxiv_id": "2602.21456",
+    "github": "https://github.com/ChuanMeng/text-ranking-in-deep-research",
+    "abstract": "深度研究是通过大规模开放网络探索回答复杂查询的重要任务。现有工作使用黑箱搜索API，使得对搜索组件的系统分析受限。本文系统复现了IR文本排序方法在深度研究场景的表现，从检索单元（文档vs.段落）、流水线配置（检索器、重排序器及深度）和查询特征（智能体查询与训练查询的不匹配）三个维度评估。在固定语料库的BrowseComp-Plus数据集上，对2个开源智能体、5个检索器和3个重排序器进行实验。发现智能体查询倾向于网页搜索风格，偏好词汇、稀疏和多向量检索器；段落级检索更高效；重排序效果显著；将智能体查询转换为自然语言问题能有效弥合查询不匹配。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "SeaCache: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models",
+    "arxiv_id": "2602.18993",
+    "github": "https://github.com/jiwoogit/SeaCache",
+    "abstract": "扩散模型的序列去噪过程导致推理速度缓慢。现有缓存加速方法基于相邻时间步的特征距离决定是否复用，但忽视了低频结构先出现、高频细节后精化的频谱演化规律。本文提出SeaCache，一种无需训练的基于频谱对齐表示的缓存调度方法。通过理论与实证分析，推导出频谱演化感知（SEA）滤波器，保留内容相关成分并抑制噪声。使用SEA滤波特征估计冗余，动态调度兼顾内容自适应与扩散模型内在频谱先验。在多种视觉生成模型上，SeaCache达到最先进的延迟-质量权衡，已被CVPR 2026接受。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "NoLan: Mitigating Object Hallucinations in Large Vision-Language Models via Dynamic Suppression of Language Priors",
+    "arxiv_id": "2602.22144",
+    "github": "https://github.com/lingfengren/NoLan",
+    "abstract": "大型视觉语言模型（LVLM）的目标幻觉问题（输出图像中不存在的对象）是关键挑战。作者通过系统实验分析视觉编码器与语言解码器在幻觉生成中的作用，发现目标幻觉主要源于语言解码器的强先验。基于此，提出无需训练的框架NoLan（No-Language-Hallucination Decoding），通过对比多模态输入与纯文本输入的输出分布差异，动态抑制语言先验来精化输出分布。实验表明，NoLan在多种LVLM的不同任务上有效减少目标幻觉，例如在POPE上将LLaVA-1.5 7B和Qwen-VL 7B的准确率分别提升6.45和7.21。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "Small Language Models for Privacy-Preserving Clinical Information Extraction in Low-Resource Languages",
+    "arxiv_id": "2602.21374",
+    "github": "https://github.com/mohammad-gh009/Small-language-models-on-clinical-data-extraction",
+    "abstract": "本文在低资源语言（波斯语）临床信息提取任务上，对五款开源小语言模型（SLM，1B-8B参数）进行评测。采用两阶段流水线从1221份匿名波斯语姑息治疗转录本中提取13个二元临床特征，无需微调。Qwen2.5-7B-Instruct取得最佳综合表现（宏F1: 0.899，MCC: 0.797）。实验还发现，使用Aya-expanse-8B将波斯语翻译为英语后再提取，可提升召回率与完整性，但略微降低特异性。研究为资源匮乏语言中的隐私保护临床NLP提供了实用方案。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-26",
+    "title": "The Truthfulness Spectrum Hypothesis",
+    "arxiv_id": "2602.20273",
+    "github": "https://github.com/zfying/truth_spec",
+    "abstract": "本文提出「真实性谱系假说」：不同泛化程度的真实方向在语言模型中共存，探针几何结构预测泛化性，后训练会重塑探针空间。研究构建了FLEED数据集（定义性、经验性、逻辑性、虚构性、伦理性真实）及奉承性说谎等新数据集；发现现有探针与奉承性说谎正交，甚至与反预期说谎负相关；提出Mahalanobis余弦相似度（R²=0.98）完美预测OOD泛化；后训练将奉承性说谎方向与其他说谎方向分离，解释了为何聊天模型比基础模型更容易奉承；提出Stratified INLP方法迭代提取高度领域通用与特异方向，域特异方向比通用方向更适合因果干预。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-26",
+    "title": "Functional Continuous Decomposition",
+    "arxiv_id": "2602.20857",
+    "github": "https://github.com/Tima-a/fcd",
+    "abstract": "非平稳时序数据的分析需要对局部和全局模式的物理可解释洞察。传统平滑算法（B样条、Savitzky-Golay滤波、经验模式分解EMD）缺乏带连续性保证的参数优化能力。本文提出FCD（Functional Continuous Decomposition），一个基于JAX加速的参数化连续优化框架，支持对多种数学函数族进行优化，利用Levenberg-Marquardt优化实现C¹连续拟合，将原始时序分解为M个模式，捕获从短期到长期的不同时间尺度规律。FCD可应用于物理、医学、金融和机器学习领域，全分解1000点速度0.47秒，SRMSE均值0.735。以FCD特征增强CNN可使收敛速度提升16.8%，准确率提升2.5%。",
+    "tags": []
+  }
+]

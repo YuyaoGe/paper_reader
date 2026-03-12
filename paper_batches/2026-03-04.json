@@ -1,0 +1,178 @@
+[
+  {
+    "date": "2026-03-04",
+    "title": "Utonia: Toward One Encoder for All Point Clouds",
+    "arxiv_id": "2603.03283",
+    "github": "https://github.com/Pointcept/Utonia",
+    "abstract": "Utonia 提出了一个统一的自监督点云 Transformer 编码器，能够跨越遥感、户外 LiDAR、室内 RGB-D 序列、物体级 CAD 模型和从 RGB 视频提取的点云等多个领域进行联合预训练。尽管各域的传感器几何、密度和先验差异显著，Utonia 仍能学习到一致的表征空间并跨域迁移。联合训练不仅提升了感知能力，还产生了单域训练中未出现的涌现行为。此外，Utonia 表征可以用于视觉-语言-动作策略和视觉-语言模型，分别在空间推理任务上取得了增益，迈向稀疏三维数据的基础模型。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "BeyondSWE: Can Current Code Agent Survive Beyond Single-Repo Bug Fixing?",
+    "arxiv_id": "2603.03194",
+    "github": "https://github.com/AweAI-Team/BeyondSWE",
+    "abstract": "BeyondSWE 扩展了代码智能体的评估维度，沿「解决范围」和「知识范围」两个轴设计了包含 500 个真实实例的综合评估框架，涵盖跨仓库推理、领域专业化问题修复、依赖驱动迁移和完整仓库生成四类任务。实验表明，即使是前沿模型在整体成功率上也低于 45%，且没有单一模型能在所有任务类型上保持一致优势。论文还提出 SearchSWE 框架，将深度搜索与编码能力结合，探索外部知识对代码智能体的影响，发现搜索增强的收益并不稳定，有时甚至降低性能。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "PRISM: Pushing the Frontier of Deep Think via Process Reward Model-Guided Inference",
+    "arxiv_id": "2603.02479",
+    "github": "https://github.com/Rituraj003/PRISM",
+    "abstract": "PRISM 针对「深度思考」方法中缺乏可靠正确性信号的瓶颈问题，引入了一个以过程奖励模型（PRM）为核心的功能性推理框架。通过在推理过程中利用 PRM 对中间步骤进行评估，PRISM 有效避免了群体增强时错误被放大、正确少数解被抑制的问题，从而实现更深层次的思考并提升计算效率。在复杂数学和科学推理任务上，PRISM 相比现有深度思考方法取得了显著提升，展示了过程监督信号在推理时扩展中的关键作用。",
+    "tags": ["RL", "无需训练"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Code2Math: Can Your Code Agent Effectively Evolve Math Problems Through Exploration?",
+    "arxiv_id": "2603.03202",
+    "github": "https://github.com/TarferSoul/Code2Math",
+    "abstract": "Code2Math 研究代码智能体能否自主将已有数学问题演化为更复杂的变体，以缓解高质量难题稀缺的瓶颈。论文提出一个多智能体框架，在演化问题的同时验证可解性和难度提升。实验表明，给予足够的测试时探索，代码智能体能够合成结构上有别于原题且更具挑战性的可解新题，为高难度数学推理数据的自动化生成提供了可行路径。所有演化数据、示例和提示模板已开源。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Humans and LLMs Diverge on Probabilistic Inferences",
+    "arxiv_id": "2602.23546",
+    "github": "https://github.com/McGill-NLP/probabilistic-reasoning",
+    "abstract": "本文提出 ProbCOPA，一个包含 210 道手工构造的概率推理题的数据集，评估模型在开放式、非确定性推断任务上的表现。研究发现，推理型 LLM 在这类任务上与人类判断存在系统性分歧：模型倾向于将非必然推断处理为确定性结论，而人类则更倾向于概率化推断。实验涵盖多个推理模型，通过与人类基准的比对揭示了当前 LLM 在概率推理上的本质局限，并分析了不同提示策略和思维链推理对结果的影响。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Surgical Post-Training: Cutting Errors, Keeping Knowledge",
+    "arxiv_id": "2603.01683",
+    "github": "https://github.com/Visual-AI/SPoT",
+    "abstract": "Surgical Post-Training（SPoT）旨在解决 LLM 后训练中效率与灾难性遗忘之间的权衡难题。论文从理论和实验两方面揭示了 DPO 奖励估计中的隐式正则化机制，并基于此设计了手术式后训练方法：通过精准识别并仅微调导致错误的参数子集，在显著减少计算开销的同时保留已有知识。在多个推理基准上，SPoT 相比全量后训练方法在遗忘和效率方面均取得了更优的平衡，验证了局部参数更新策略的有效性。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Spilled Energy in Large Language Models",
+    "arxiv_id": "2602.18671",
+    "github": "https://github.com/OmnAI-Lab/spilled-energy",
+    "abstract": "本文将 LLM 最终层的 softmax 分类器重新解释为基于能量的模型（EBM），将序列到序列的概率链分解为多个相互作用的 EBM。通过在解码过程中追踪「能量溢出」现象，实证研究表明能量溢出与事实性错误、偏差和推理失败之间存在高度相关性。该方法能精准定位答案 token 并进行幻觉检测，无需额外训练，优于依赖语义不一致性检测的方法。实验在多个 LLM 和事实性问答任务上验证了能量溢出作为可靠幻觉预测器的有效性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "InfoPO: Information-Driven Policy Optimization for User-Centric Agents",
+    "arxiv_id": "2603.00656",
+    "github": "https://github.com/kfq20/InfoPO",
+    "abstract": "InfoPO 针对 LLM 智能体处理欠规格用户请求时的多轮交互优化问题，解决了基于轨迹级奖励的 GRPO 方法存在的信用分配问题和组内优势信号不足的缺陷。通过在细粒度层面识别高价值交互轮次，InfoPO 引入信息驱动的策略优化框架，能够针对性地学习何时主动获取信息、何时直接执行任务。在多个以用户为中心的智能体任务上，InfoPO 显著优于基线方法，在减少不必要澄清的同时提升了下游任务成功率。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
+    "arxiv_id": "2603.03281",
+    "github": "https://github.com/hanyang-21/CFG-Ctrl",
+    "abstract": "CFG-Ctrl 将分类器自由引导（CFG）统一重新诠释为施加在一阶连续时间生成流上的控制，以条件-无条件差异作为误差信号调整速度场。从这一视角出发，标准 CFG 等价于增益固定的比例控制器（P-控制），而 CFG-Ctrl 进一步引入积分和微分项（PI/PD/PID 控制），动态调节引导强度。在 text-to-image 生成任务中，该方法在不改变模型结构的前提下提升了语义对齐质量和生成多样性，展示了控制论视角对扩散模型引导机制的统一解释力。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "SciDER: Scientific Data-centric End-to-end Researcher",
+    "arxiv_id": "2603.01421",
+    "github": "https://github.com/leonardodalinky/SciDER",
+    "abstract": "SciDER 是一个以数据为中心的端到端自动化科研系统，旨在解决现有 LLM 科研智能体无法自主处理真实实验原始数据的瓶颈。系统通过多个专业化智能体协作解析和分析原始科学数据，结合具体数据生成假说和实验设计，并迭代执行实验以验证假说。与传统框架相比，SciDER 将数据处理、假说生成和实验执行整合进统一闭环，在多个科学发现任务上展示了更高的自动化程度和研究质量，推动了 LLM 辅助科学发现的前沿。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Towards Simulating Social Media Users with LLMs: Evaluating the Operational Validity of Conditioned Comment Prediction",
+    "arxiv_id": "2602.22752",
+    "github": "https://github.com/nsschw/Conditioned-Comment-Prediction",
+    "abstract": "本文提出条件评论预测（CCP）任务，通过将模型生成输出与真实数字轨迹对比，严格评估 LLM 作为社交媒体用户模拟器的操作有效性。研究引入多维框架，系统分析当前 LLM 在模拟用户评论行为方面的能力与局限，揭示了模型输出与真实用户行为之间的显著差距。实验覆盖多个主流 LLM，结果表明现有模型仍难以可靠地捕捉真实用户的多样性和个体特征，为社会科学中的「硅基受试者」研究提供了基础验证框架。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "DREAM: Where Visual Understanding Meets Text-to-Image Generation",
+    "arxiv_id": "2603.02667",
+    "github": "https://github.com/chaoli-charlie/dream",
+    "abstract": "DREAM 在单一模型中统一优化判别式视觉表征学习和生成式 text-to-image 目标。其核心技术包括：训练阶段的「掩码预热」（从低掩码率渐进提升以建立对比对齐基础），以及「双流注意力」（将图像 token 路由至独立的理解和生成流）。这种设计使模型同时在表征质量和生成质量上达到强基线水平，打破了判别目标和生成目标之间的传统冲突，为多模态统一模型提供了新的技术路径。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "ParEVO: Synthesizing Code for Irregular Data: High-Performance Parallelism through Agentic Evolution",
+    "arxiv_id": "2603.02510",
+    "github": "https://github.com/WildAlg/ParEVO",
+    "abstract": "ParEVO 针对不规则数据结构（稀疏图、非平衡树、非均匀网格）的高性能并行代码生成难题，提出了一种智能体进化框架。当前 LLM 在此类任务上往往生成存在竞争条件和死锁的错误代码，ParEVO 通过多智能体协作演化和验证机制迭代改进代码正确性与并行效率。实验表明，在充分探索后，ParEVO 能合成结构正确、高性能的并行代码，相比直接生成方法显著降低了错误率并提升了加速比，为不规则计算场景提供了可扩展的自动并行化路径。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "LFPO: Likelihood-Free Policy Optimization for Masked Diffusion Models",
+    "arxiv_id": "2603.01563",
+    "github": "https://github.com/kithib/LFPO",
+    "abstract": "LFPO 解决了将强化学习与可验证奖励（RLVR）范式应用于扩散大语言模型（dLLM）时精确似然难以计算的根本性障碍。现有方法不得不依赖高方差近似，LFPO 提出无需似然计算的策略优化方法，直接基于可验证奖励信号优化掩码扩散模型。在数学推理和代码生成任务上，LFPO 相比现有 dLLM 强化学习方法取得了显著提升，验证了无似然策略优化在离散扩散模型后训练中的可行性，为将 RLVR 的成功从自回归模型扩展到扩散模型提供了桥梁。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Conditioned Activation Transport for T2I Safety Steering",
+    "arxiv_id": "2603.03163",
+    "github": "https://github.com/NASK-AISafety/conditional-activation-transport",
+    "abstract": "针对 text-to-image 模型生成不安全内容的问题，本文首先构建了 SafeSteerDataset——包含 2300 对高余弦相似度安全/不安全提示对的对比数据集，发现线性激活引导在良性提示下会显著降低图像质量。为此，提出条件激活传输（CAT）方法，通过最优传输将不安全激活条件映射到安全激活空间，实现精准的推理时安全干预。实验表明 CAT 在有效阻止不安全生成的同时，对良性提示的图像质量损伤极小，在安全性和生成质量的权衡上优于现有激活引导方法。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "HateMirage: An Explainable Multi-Dimensional Dataset for Decoding Faux Hate and Subtle Online Abuse",
+    "arxiv_id": "2603.02684",
+    "github": "https://github.com/Sai-Kartheek-Reddy/HateMirage",
+    "abstract": "HateMirage 是一个新颖的「伪仇恨」评论数据集，专注于从虚假信息中涌现的隐性仇恨言论，填补了现有数据集主要覆盖显性毒性内容的空白。数据集提供多维度标注，包括仇恨类型、推理链和可解释性标签，旨在推进针对微妙在线虐待和伪装式仇恨的推理与可解释性研究。实验评估了多种 LLM 在检测此类细微仇恨言论上的能力，揭示了当前模型在理解隐性有害意图方面的局限，为更鲁棒的在线安全系统提供了数据基础。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Fast Matrix Multiplication in Small Formats: Discovering New Schemes with an Open-Source Flip Graph Framework",
+    "arxiv_id": "2603.02398",
+    "github": "https://github.com/dronperminov/ternary_flip_graph",
+    "abstract": "本文开源了一个用于发现快速矩阵乘法方案的 C++ 框架，基于翻转图（flip graph）方法，支持二进制（Z₂）、模三元（Z₃）和整数三元（Z_T = {-1,0,1}）多种系数环，并实现了固定维度和元维度搜索算子。通过位级编码和 OpenMP 并行化，框架可在普通硬件上进行大规模探索，覆盖 680 种小格式矩阵乘法方案。实验发现了多个具有改进乘法复杂度的新方案，证明了翻转图方法结合高效工程实现在矩阵乘法算法发现中的实用价值。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Words & Weights: Streamlining Multi-Turn Interactions via Co-Adaptation",
+    "arxiv_id": "2603.01375",
+    "github": "https://github.com/kithib/ROSA2",
+    "abstract": "ROSA2 提出「测试时策略适应」（T2PAM）框架，同时优化提示（文字）和权重两个维度来适配多轮交互中的动态用户需求。现有方法要么仅优化提示工程，要么仅进行测试时训练，而 ROSA2 指出交互失败源于歧义和能力不足的耦合，需要双轴协同优化。通过在推理时动态协调指令精化和权重调整，ROSA2 在多轮对话适应任务上显著优于单轴基线，验证了提示-权重协同适应在处理多轮动态用户需求中的有效性。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "GroupGPT: A Token-efficient and Privacy-preserving Agentic Framework for Multi-User Chat Assistant",
+    "arxiv_id": "2603.01059",
+    "github": "https://github.com/Eliot-Shen/GroupGPT",
+    "abstract": "GroupGPT 针对多用户群聊场景，提出一个兼顾 token 效率和隐私保护的智能体框架。现有系统通常将 LLM 同时用于推理和生成，导致 token 消耗高、可扩展性差且存在隐私风险。GroupGPT 设计了专用的轻量推理模块判断何时介入，配合隐私保护机制避免泄露用户个人信息，并通过训练任务使模型能主动、准确地在复杂演化的多用户语境中插话。实验表明，GroupGPT 相比现有多用户对话系统在介入准确性和 token 效率上均取得了显著提升。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "SGDC: Structurally-Guided Dynamic Convolution for Medical Image Segmentation",
+    "arxiv_id": "2602.23496",
+    "github": "https://github.com/solstice0621/SGDC",
+    "abstract": "SGDC 针对医学图像分割中主流动态卷积通过平均池化生成核权重导致高频空间细节丢失、预测过平滑的问题，提出结构引导的动态卷积方法。通过引入结构敏感的核生成机制，保留局部高频细节，在生成动态卷积核时保持对细粒度临床结构的感知能力。在多个医学图像分割数据集上，SGDC 相比标准动态卷积基线显著提升了精细结构的分割保真度，验证了结构引导机制在空间自适应卷积中的重要性。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Transform-Invariant Generative Ray Path Sampling for Efficient Radio Propagation Modeling",
+    "arxiv_id": "2603.01655",
+    "github": "https://github.com/jeertmans/sampling-paths",
+    "abstract": "本文针对射线追踪在无线传播建模中指数级计算复杂度的瓶颈，提出变换不变生成式射线路径采样方法。传统方法候选路径数随物体数量指数增长，而本方法通过生成模型直接采样高概率传播路径，并利用变换不变性降低所需路径候选数量。实验表明，相比传统射线追踪工具，该方法在保持精度的同时大幅降低计算开销，为大规模或实时无线传播仿真提供了可行的深度学习路径。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Multi-Domain Riemannian Graph Gluing for Building Graph Foundation Models",
+    "arxiv_id": "2603.00618",
+    "github": "https://github.com/RiemannGraph/GraphGlue",
+    "abstract": "本文提出黎曼图粘合（Graph Gluing）框架，解决多域图预训练中知识跨域整合与迁移的理论问题。现有图基础模型预训练方法缺乏对跨域知识如何整合的清晰解释，本文通过重新审视预训练与域适应之间的一致性和可迁移性，在黎曼几何空间中构建统一的理论框架，实现多域图知识的「粘合」。在多个图学习任务和域上，GraphGlue 相比现有多域图预训练方法取得了更优的迁移学习性能，为构建通用图基础模型提供了有理论保证的技术路径。",
+    "tags": []
+  }
+]

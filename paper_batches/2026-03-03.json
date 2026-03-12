@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-03-03",
+    "title": "OmniLottie: Generating Vector Animations via Parameterized Lottie Tokens",
+    "arxiv_id": "2603.02138",
+    "github": "https://github.com/OpenVGLab/OmniLottie",
+    "abstract": "OmniLottie 是一个通用向量动画生成框架，支持从多模态指令生成高质量矢量动画。核心贡献在于设计了 Lottie Tokenizer，将 JSON 格式的 Lottie 动画文件转换为形状、动画函数和控制参数的结构化命令序列，消除了原始 JSON 中大量不变结构元数据的冗余，使预训练视觉语言模型能够高效处理向量动画生成任务。框架在预训练 VLM 基础上构建，支持多模态交互式指令输入，能够生成语义对齐的矢量动画。为推动该领域研究，作者同步发布了 MMLottie-2M 大规模数据集，包含专业设计的矢量动画及其文本和视觉标注。实验验证 OmniLottie 可生成符合多模态人类指令、视觉生动且语义准确的向量动画。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "OpenAutoNLU: Open Source AutoML Library for NLU",
+    "arxiv_id": "2603.01824",
+    "github": "https://github.com/mts-ai/OpenAutoNLU",
+    "abstract": "OpenAutoNLU 是一个面向自然语言理解（NLU）任务的开源自动化机器学习库，覆盖文本分类和命名实体识别（NER）。其核心创新是「数据感知训练模式选择」机制，无需用户手动配置即可根据数据特性自动选择最优训练方案，有别于现有 AutoML 解决方案。库内还集成了数据质量诊断模块、可配置的分布外（OOD）检测功能，以及基于 LLM 的特性支持，整体通过极简低代码 API 提供。该库提供了完整的 Docker 部署方案，并有在线 Demo 可直接访问。作者在多个 NLU 任务上验证了其自动化流程的有效性，展示了无需专业配置也能获得竞争力结果的实用价值。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "MMR-Life: Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning",
+    "arxiv_id": "2603.02024",
+    "github": "https://github.com/BugMakerzzz/MMR-Life",
+    "abstract": "MMR-Life 是一个面向真实场景的多模态多图推理评测集，旨在全面评估多模态大语言模型（MLLM）在真实生活场景中的推理能力。数据集包含 2,646 道多选题，基于 19,108 张真实场景图像构建，覆盖 7 种推理类型：溯因、类比、因果、演绎、归纳、空间和时间推理。与现有推理评测集不同，MMR-Life 不依赖特定领域专业知识，而是要求模型跨多图整合信息并运用多元推理能力。对 37 个先进模型的评测表明，该数据集极具挑战性，即使是 GPT-5 也仅达到 58% 准确率，且在不同推理类型间表现差异显著。研究还分析了思维长度、推理方法和推理类型等因素对 MLLM 性能的影响，为下一代多模态推理系统的评估与改进提供了基础。",
+    "tags": ["VLM"]
+  }
+]

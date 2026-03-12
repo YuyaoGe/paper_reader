@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-02-27",
+    "title": "From Blind Spots to Gains: Diagnostic-Driven Iterative Training for Large Multimodal Models",
+    "arxiv_id": "2602.22859",
+    "github": "https://github.com/hongruijia/DPE",
+    "abstract": "本文提出 DPE（诊断驱动渐进式进化），一种针对大型多模态模型（LMM）的螺旋式迭代训练范式。现有训练依赖静态数据和固定流程，难以诊断能力盲区或进行动态针对性强化。DPE 包含两个核心组件：（1）多智能体协同标注和质量控制大量未标注多模态数据，利用网络搜索和图像编辑工具生成多样化样本；（2）将失败归因于特定弱点，动态调整数据混合比例，并引导智能体生成针对弱点的训练数据。每轮迭代完成后重新诊断更新后的模型，驱动下一轮针对性改进。在 Qwen3-VL-8B 和 Qwen2.5-VL-7B 上的实验显示，DPE 在 11 个基准上取得持续稳定提升，验证了其作为开放任务分布下 LMM 持续训练可扩展范式的有效性。",
+    "tags": ["VLM", "微调", "RL"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "OmniGAIA: Towards Native Omni-Modal AI Agents",
+    "arxiv_id": "2602.22897",
+    "github": "https://github.com/RUC-NLPIR/OmniGAIA",
+    "abstract": "本文提出 OmniGAIA——一个面向全模态智能体的综合评测框架，以及 OmniAtlas——一个原生全模态基础智能体。OmniGAIA 通过新颖的「全模态事件图」方法构建跨视觉、音频和语言的复杂多跳推理任务。OmniAtlas 在工具集成推理范式下，结合基于后见之明的树搜索策略和 OmniDPO 细粒度误差校正进行训练，有效提升了现有开源模型的工具使用能力。实验证明 OmniAtlas 在跨模态推理和多轮工具执行任务上达到先进水平，是迈向下一代原生全模态 AI 助手的重要一步。",
+    "tags": ["VLM", "微调", "RL"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "Exploratory Memory-Augmented LLM Agent via Hybrid On- and Off-Policy Optimization",
+    "arxiv_id": "2602.23008",
+    "github": "https://github.com/microsoft/agent-lightning",
+    "abstract": "本文提出 EMPO²（探索性记忆增强混合策略优化），一种用于大语言模型智能体的混合强化学习框架。现有方法依赖预训练知识，在需要发现新状态的环境中表现不足。EMPO² 利用记忆机制支持探索，并将在线策略与离线策略更新相结合，使 LLM 在配备记忆时性能优越、同时在无记忆时保持鲁棒性。在 ScienceWorld 和 WebShop 上，相比 GRPO 分别取得 128.6% 和 11.3% 的提升。在分布外测试中，EMPO² 仅需少量带记忆的试验即可适应新任务，无需参数更新。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "AgentDropoutV2: Optimizing Information Flow in Multi-Agent Systems via Test-Time Rectify-or-Reject Pruning",
+    "arxiv_id": "2602.23258",
+    "github": "https://github.com/TonySY2/AgentDropoutV2",
+    "abstract": "本文提出 AgentDropoutV2，一种面向多智能体系统（MAS）的测试时「修正或拒绝」剪枝框架，无需重新训练即可动态优化信息流。该框架充当主动防火墙，拦截智能体输出并使用基于检索增强的修正器，通过失败驱动的指标池迭代纠错。无法修复的输出将被剪枝以阻止错误传播，同时通过回退策略维持系统完整性。在大量数学基准测试上，AgentDropoutV2 平均准确率提升 6.3 个百分点，并展现出强大的泛化能力，可根据任务难度动态调整修正力度。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+    "arxiv_id": "2602.23363",
+    "github": "https://github.com/mbzuai-oryx/MediX-R1",
+    "abstract": "本文提出 MediX-R1，一个面向医疗多模态大语言模型的开放式强化学习框架，支持自由文本形式的临床答案生成，突破了传统多选题格式限制。MediX-R1 采用基于组的强化学习（Group-Based RL）和复合奖励信号：基于 LLM 的语义准确性奖励、医疗嵌入语义奖励，以及格式和模态奖励。仅使用约 51K 条指令样本，MediX-R1 在文本和图文医疗基准上均优于强开源基线，在开放式临床任务上取得特别显著的提升，验证了开放式 RL 结合 LLM 评估在医疗推理中的实用价值。",
+    "tags": ["RL", "VLM", "微调"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "General Agent Evaluation",
+    "arxiv_id": "2602.22953",
+    "github": "https://github.com/Exgentic/exgentic",
+    "abstract": "本文将通用智能体评估确立为首要研究目标。现有智能体多为领域专用，且现有基准将任务信息以妨碍公平评估的方式编码，无法对通用智能体进行系统评测。本文提出通用智能体评估的概念原则、统一协议（Unified Protocol）以及实用框架 Exgentic。在六个环境中对五种主流智能体实现进行测评，建立了首个「开放通用智能体排行榜」。实验显示，通用智能体无需任何环境特定调整即可实现与专用智能体相当的性能，证明通用智能体跨环境泛化能力的可行性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "Accelerating Diffusion via Hybrid Data-Pipeline Parallelism Based on Conditional Guidance Scheduling",
+    "arxiv_id": "2602.21760",
+    "github": "https://github.com/kaist-dmlab/Hybridiff",
+    "abstract": "本文提出一种混合并行框架，结合新颖的数据并行策略（条件分区）与最优流水线调度方法（自适应并行切换），以加速条件扩散模型推理。核心思路是将条件与无条件去噪路径作为新的数据分区视角，并根据两路径去噪差异自适应启用最优流水线并行。使用两块 NVIDIA RTX 3090 GPU，在 SDXL 和 SD3 上分别实现 2.31× 和 2.07× 的延迟降低，同时保持图像质量，验证了方法对 U-Net 和 DiT 架构的通用性，在高分辨率合成场景下优于现有方法。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "MedCLIPSeg: Probabilistic Vision-Language Adaptation for Data-Efficient and Generalizable Medical Image Segmentation",
+    "arxiv_id": "2602.20423",
+    "github": "https://github.com/HealthX-Lab/MedCLIPSeg",
+    "abstract": "本文提出 MedCLIPSeg，一个将 CLIP 适配至医学图像分割的新框架，解决标注稀缺、解剖特征模糊和域偏移等挑战。该方法通过概率性跨模态注意力利用 patch 级 CLIP 嵌入，实现图像与文本 token 的双向交互并显式建模预测不确定性，配合软 patch 级对比损失提升语义学习。在跨 5 种成像模态、6 个器官的 16 个数据集上的实验表明，MedCLIPSeg 在准确性、效率和鲁棒性方面均优于先前方法，并提供可解释的不确定性图。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "DLT-Corpus: A Large-Scale Text Collection for the Distributed Ledger Technology Domain",
+    "arxiv_id": "2602.22045",
+    "github": "https://github.com/dlt-science/DLT-Corpus",
+    "abstract": "本文介绍 DLT-Corpus，迄今最大的分布式账本技术（DLT）领域专用文本集合，包含来自科学文献（37,440 篇论文）、美国专利（49,023 份）和社交媒体（2200 万条帖子）共 29.8 亿 token。通过分析技术涌现模式和市场-创新相关性，发现技术通常先出现于科学文献，再扩散至专利和社交媒体，印证了传统技术转移规律。此外，论文还发布了领域适配模型 LedgerBERT，在 DLT 专属命名实体识别任务上比 BERT-base 提升 23%。",
+    "tags": ["微调"]
+  }
+]
