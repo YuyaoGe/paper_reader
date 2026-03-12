@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-01-08",
+    "title": "Entropy-Adaptive Fine-Tuning: Resolving Confident Conflicts to Mitigate Forgetting",
+    "arxiv_id": "2601.02151",
+    "github": "https://github.com/PRIS-CV/EAFT",
+    "abstract": "本文针对监督微调（SFT）导致灾难性遗忘的问题，提出熵自适应微调方法（EAFT）。研究发现SFT与RL的核心差异在于：RL对齐模型内部信念，而SFT强制拟合外部监督，两者分歧体现为「自信冲突」——模型对某些token高度自信却被迫学习偏离答案，触发破坏性梯度更新。EAFT利用token级熵作为门控机制，区分认知不确定性与知识冲突，对高熵（不确定）样本正常学习，同时抑制低熵冲突样本的梯度。在Qwen和GLM系列模型（4B至32B）的数学、医疗和智能体任务实验中，EAFT在保持与标准SFT相当下游性能的同时，显著减轻了通用能力退化，已集成至LLaMA-Factory等主流框架。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-01-08",
+    "title": "High Entropy Steps Drive Effective Reinforcement Learning for Flow Models",
+    "arxiv_id": "2601.00423",
+    "github": "https://github.com/shengjun-zhang/VisualGRPO",
+    "abstract": "本文提出E-GRPO（熵感知群体相对策略优化），用于流匹配扩散模型的人类偏好强化学习对齐。核心观察是：SDE采样中高熵去噪步骤能实现更高效探索，而低熵步骤生成的轨迹难以区分，导致奖励信号稀疏模糊。E-GRPO通过将连续低熵步骤合并为单个高熵步骤，集中在这些关键节点进行策略优化，其余步骤则使用ODE采样。同时引入多步组归一化优势函数，在共享同一合并SDE步骤的样本内计算组相对优势。实验表明E-GRPO在多种奖励设置（HPS v2、CLIP Score、ImageReward等）下均展现出优于现有方法的性能。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-08",
+    "title": "Enhancing Linguistic Competence of Language Models through Pre-training with Language Learning Tasks",
+    "arxiv_id": "2601.03448",
+    "github": "https://github.com/gucci-j/l2t",
+    "abstract": "本文提出L2T（Language Learning Tasks），一种将语言学习任务整合进语言模型预训练的框架，以弥补模型在语言能力（linguistic competence）上的不足。标准的下一词预测预训练虽然能习得世界知识和推理能力，却未对语言能力进行显式优化。受人类语言习得启发，L2T将原始文本转化为结构化输入输出对，提供显式的语言刺激信号。在原始文本与L2T数据混合预训练后，模型不仅在语言能力基准测试上整体性能提升，还加速了语言能力的习得速度，同时在通用推理任务上保持有竞争力的表现。实验在多规模模型和多种语言学习任务类型上均得到验证。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-08",
+    "title": "MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents",
+    "arxiv_id": "2601.03236",
+    "github": "https://github.com/FredJiang0324/MAMGA",
+    "abstract": "本文提出MAGMA，一种面向AI智能体的多图记忆架构，旨在解决现有记忆增强生成（MAG）系统依赖单体语义相似度检索、无法区分时序/因果/实体关系的根本局限。MAGMA将每条记忆跨四个正交关系图（语义、时序、因果、实体图）表示，通过意图感知的查询路由机制选择相关图视图，独立遍历后融合为紧凑的类型对齐上下文。其双流记忆演化机制将低延迟事件摄入与异步结构整合解耦，兼顾响应速度与关系结构的精细化。在LoCoMo和LongMemEval两个长程推理基准上，MAGMA持续优于现有SOTA智能体记忆系统，同时降低检索延迟与token消耗。",
+    "tags": ["MeM", "长文本"]
+  },
+  {
+    "date": "2026-01-08",
+    "title": "ResTok: Learning Hierarchical Residuals in 1D Visual Tokenizers for Autoregressive Image Generation",
+    "arxiv_id": "2601.03955",
+    "github": "https://github.com/Kwai-Kolors/ResTok",
+    "abstract": "本文提出ResTok（残差分词器），一种将层次残差结构引入1D视觉分词器的自回归图像生成方法。现有1D视觉分词器遵循语言建模范式，忽视了视觉领域层次化和残差网络设计的关键性质。ResTok通过逐步合并图像token为粗粒度特征并插入token序列首部，实现跨层的特征融合，显著提升表示容量；同时通过语义残差减少层间信息重叠，形成更集中的隐空间分布，降低自回归建模难度。进一步提出层次化自回归生成器（HAR），通过一次预测整级token而非逐token生成，大幅减少采样步骤。实验在ImageNet-256上以仅9步采样实现gFID 2.34的SOTA表现。",
+    "tags": []
+  }
+]

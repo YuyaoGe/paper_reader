@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-01-07",
+    "title": "NitroGen: An Open Foundation Model for Generalist Gaming Agents",
+    "arxiv_id": "2601.02427",
+    "github": "https://github.com/MineDojo/NitroGen",
+    "abstract": "NitroGen 是一个面向通用游戏智能体的视觉-动作基础模型，基于来自1000余款游戏的4万小时游戏视频训练。核心贡献包括：自动从公开游戏视频中提取玩家动作构建大规模数据集、多游戏泛化评测环境以及统一视觉-动作模型的大规模行为克隆训练。模型在3D动作游戏战斗、2D平台精准控制和程序生成世界探索等多类任务上表现强劲，迁移到未见游戏时任务成功率相对提升最高达52%。数据集、评测套件和模型权重均已开源。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-01-07",
+    "title": "SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence",
+    "arxiv_id": "2512.22334",
+    "github": "https://github.com/InternScience/SciEvalKit",
+    "abstract": "SciEvalKit 是一个面向科学通用智能的开源评测工具包，旨在系统化评估大型语言模型在多学科科学任务上的推理与问题求解能力。该工具包提供统一的评测框架，支持多种模型接入与自动化评分，覆盖数学、物理、化学、生物等多个科学领域。实验结果展示了当前主流模型在科学推理任务上的能力边界，为提升模型的科学理解提供了标准化基础设施。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-07",
+    "title": "OpenRT: An Open-Source Red Teaming Framework for Multimodal LLMs",
+    "arxiv_id": "2601.01592",
+    "github": "https://github.com/AI45Lab/OpenRT",
+    "abstract": "OpenRT 是一个面向多模态大语言模型的开源红队评测框架，旨在系统化检测和评估模型的安全漏洞与对抗鲁棒性。框架提供了自动化攻击生成、模型评估和结果分析的完整流程，支持多种多模态模型的安全测试。通过对主流多模态大模型的全面红队实验，OpenRT 揭示了当前模型在面对对抗性输入时的脆弱性，并为安全对齐研究提供了标准化工具。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-01-07",
+    "title": "Large Reasoning Models Are (Not Yet) Multilingual Latent Reasoners",
+    "arxiv_id": "2601.02996",
+    "github": "https://github.com/cisnlp/multilingual-latent-reasoner",
+    "abstract": "本文研究大型推理模型（如DeepSeek-R1等）在多语言场景下的潜在推理语言机制。通过logit lens等分析工具，发现这些模型在推理链内部倾向于以英语为\"思维语言\"处理问题，即使输入为非英语时也如此。实验覆盖多种语言和推理任务，结果表明当前大型推理模型尚未成为真正的多语言潜在推理者，其内部表征仍高度依赖英语，为多语言推理能力的改进指明方向。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-07",
+    "title": "AceFF: A State-of-the-Art Machine Learning Potential for Small Molecules",
+    "arxiv_id": "2601.00581",
+    "github": "https://github.com/torchmd/torchmd-net",
+    "abstract": "AceFF 是一个面向小分子的最先进机器学习势函数，基于 TorchMD-Net 框架构建，能够高精度预测分子间相互作用能和力。通过在大规模量子化学数据集上训练，AceFF 在精度和泛化能力上超越了现有主流方法，可在分子动力学模拟中替代昂贵的量子力学计算。实验结果显示其在多类小分子系统上达到当前最优水平，为药物设计和材料科学等领域提供高效的原子级模拟工具。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-07",
+    "title": "U-Net-Like Spiking Neural Networks for Single Image Dehazing",
+    "arxiv_id": "2512.23950",
+    "github": "https://github.com/HaoranLiu507/DehazeSNN",
+    "abstract": "本文提出 DehazeSNN，一种基于 U-Net 架构的脉冲神经网络（SNN）用于单图像去雾任务。通过将 SNN 的时序稀疏计算特性与 U-Net 的编解码器结构结合，模型在保持低能耗优势的同时有效恢复图像清晰度。该方法在多个去雾基准数据集上取得了与传统 ANN 方法相当甚至更优的去雾效果，实验结果验证了脉冲神经网络在图像恢复任务中的可行性，为绿色高效的图像处理提供新思路。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-07",
+    "title": "Steerability of Instrumental-Convergence Tendencies in LLMs",
+    "arxiv_id": "2601.01584",
+    "github": "https://github.com/j-hoscilowicz/instrumental_steering",
+    "abstract": "本文研究大型语言模型（LLMs）中工具性收敛倾向的可控性。工具性收敛指AI系统为实现各类目标而趋向获取资源、自我保护等子目标的现象，是AI安全的核心议题。通过对多个LLM进行系统性实验，作者评估了不同提示策略和系统指令对模型工具性行为倾向的引导效果。结果表明LLM的工具性收敛行为具有一定可操纵性，为AI对齐和安全控制研究提供了实证依据。",
+    "tags": []
+  }
+]

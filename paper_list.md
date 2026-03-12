@@ -1,3 +1,77 @@
+## 2026年1月7日
+
+- **NitroGen: An Open Foundation Model for Generalist Gaming Agents** `[VLM]` — [2601.02427](https://arxiv.org/abs/2601.02427) | [GitHub](https://github.com/MineDojo/NitroGen)
+  > NitroGen 是一个面向通用游戏智能体的视觉-动作基础模型，基于来自1000余款游戏的4万小时游戏视频训练。核心贡献包括：自动从公开游戏视频中提取玩家动作构建大规模数据集、多游戏泛化评测环境以及统一视觉-动作模型的大规模行为克隆训练。模型在3D动作游戏战斗、2D平台精准控制和程序生成世界探索等多类任务上表现强劲，迁移到未见游戏时任务成功率相对提升最高达52%。数据集、评测套件和模型权重均已开源。
+
+- **SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence** — [2512.22334](https://arxiv.org/abs/2512.22334) | [GitHub](https://github.com/InternScience/SciEvalKit)
+  > SciEvalKit 是一个面向科学通用智能的开源评测工具包，旨在系统化评估大型语言模型在多学科科学任务上的推理与问题求解能力。该工具包提供统一的评测框架，支持多种模型接入与自动化评分，覆盖数学、物理、化学、生物等多个科学领域。实验结果展示了当前主流模型在科学推理任务上的能力边界，为提升模型的科学理解提供了标准化基础设施。
+
+- **OpenRT: An Open-Source Red Teaming Framework for Multimodal LLMs** `[VLM]` — [2601.01592](https://arxiv.org/abs/2601.01592) | [GitHub](https://github.com/AI45Lab/OpenRT)
+  > OpenRT 是一个面向多模态大语言模型的开源红队评测框架，旨在系统化检测和评估模型的安全漏洞与对抗鲁棒性。框架提供了自动化攻击生成、模型评估和结果分析的完整流程，支持多种多模态模型的安全测试。通过对主流多模态大模型的全面红队实验，OpenRT 揭示了当前模型在面对对抗性输入时的脆弱性，并为安全对齐研究提供了标准化工具。
+
+- **Large Reasoning Models Are (Not Yet) Multilingual Latent Reasoners** — [2601.02996](https://arxiv.org/abs/2601.02996) | [GitHub](https://github.com/cisnlp/multilingual-latent-reasoner)
+  > 本文研究大型推理模型（如DeepSeek-R1等）在多语言场景下的潜在推理语言机制。通过logit lens等分析工具，发现这些模型在推理链内部倾向于以英语为"思维语言"处理问题，即使输入为非英语时也如此。实验覆盖多种语言和推理任务，结果表明当前大型推理模型尚未成为真正的多语言潜在推理者，其内部表征仍高度依赖英语，为多语言推理能力的改进指明方向。
+
+- **AceFF: A State-of-the-Art Machine Learning Potential for Small Molecules** — [2601.00581](https://arxiv.org/abs/2601.00581) | [GitHub](https://github.com/torchmd/torchmd-net)
+  > AceFF 是一个面向小分子的最先进机器学习势函数，基于 TorchMD-Net 框架构建，能够高精度预测分子间相互作用能和力。通过在大规模量子化学数据集上训练，AceFF 在精度和泛化能力上超越了现有主流方法，可在分子动力学模拟中替代昂贵的量子力学计算。实验结果显示其在多类小分子系统上达到当前最优水平，为药物设计和材料科学等领域提供高效的原子级模拟工具。
+
+- **U-Net-Like Spiking Neural Networks for Single Image Dehazing** — [2512.23950](https://arxiv.org/abs/2512.23950) | [GitHub](https://github.com/HaoranLiu507/DehazeSNN)
+  > 本文提出 DehazeSNN，一种基于 U-Net 架构的脉冲神经网络（SNN）用于单图像去雾任务。通过将 SNN 的时序稀疏计算特性与 U-Net 的编解码器结构结合，模型在保持低能耗优势的同时有效恢复图像清晰度。该方法在多个去雾基准数据集上取得了与传统 ANN 方法相当甚至更优的去雾效果，实验结果验证了脉冲神经网络在图像恢复任务中的可行性，为绿色高效的图像处理提供新思路。
+
+- **Steerability of Instrumental-Convergence Tendencies in LLMs** — [2601.01584](https://arxiv.org/abs/2601.01584) | [GitHub](https://github.com/j-hoscilowicz/instrumental_steering)
+  > 本文研究大型语言模型（LLMs）中工具性收敛倾向的可控性。工具性收敛指AI系统为实现各类目标而趋向获取资源、自我保护等子目标的现象，是AI安全的核心议题。通过对多个LLM进行系统性实验，作者评估了不同提示策略和系统指令对模型工具性行为倾向的引导效果。结果表明LLM的工具性收敛行为具有一定可操纵性，为AI对齐和安全控制研究提供了实证依据。
+
+
+## 2026年1月8日
+
+- **Entropy-Adaptive Fine-Tuning: Resolving Confident Conflicts to Mitigate Forgetting** `[微调]` `[RL]` — [2601.02151](https://arxiv.org/abs/2601.02151) | [GitHub](https://github.com/PRIS-CV/EAFT)
+  > 本文针对监督微调（SFT）导致灾难性遗忘的问题，提出熵自适应微调方法（EAFT）。研究发现SFT与RL的核心差异在于：RL对齐模型内部信念，而SFT强制拟合外部监督，两者分歧体现为「自信冲突」——模型对某些token高度自信却被迫学习偏离答案，触发破坏性梯度更新。EAFT利用token级熵作为门控机制，区分认知不确定性与知识冲突，对高熵（不确定）样本正常学习，同时抑制低熵冲突样本的梯度。在Qwen和GLM系列模型（4B至32B）的数学、医疗和智能体任务实验中，EAFT在保持与标准SFT相当下游性能的同时，显著减轻了通用能力退化，已集成至LLaMA-Factory等主流框架。
+
+- **High Entropy Steps Drive Effective Reinforcement Learning for Flow Models** `[RL]` — [2601.00423](https://arxiv.org/abs/2601.00423) | [GitHub](https://github.com/shengjun-zhang/VisualGRPO)
+  > 本文提出E-GRPO（熵感知群体相对策略优化），用于流匹配扩散模型的人类偏好强化学习对齐。核心观察是：SDE采样中高熵去噪步骤能实现更高效探索，而低熵步骤生成的轨迹难以区分，导致奖励信号稀疏模糊。E-GRPO通过将连续低熵步骤合并为单个高熵步骤，集中在这些关键节点进行策略优化，其余步骤则使用ODE采样。同时引入多步组归一化优势函数，在共享同一合并SDE步骤的样本内计算组相对优势。实验表明E-GRPO在多种奖励设置（HPS v2、CLIP Score、ImageReward等）下均展现出优于现有方法的性能。
+
+- **Enhancing Linguistic Competence of Language Models through Pre-training with Language Learning Tasks** `[微调]` — [2601.03448](https://arxiv.org/abs/2601.03448) | [GitHub](https://github.com/gucci-j/l2t)
+  > 本文提出L2T（Language Learning Tasks），一种将语言学习任务整合进语言模型预训练的框架，以弥补模型在语言能力（linguistic competence）上的不足。标准的下一词预测预训练虽然能习得世界知识和推理能力，却未对语言能力进行显式优化。受人类语言习得启发，L2T将原始文本转化为结构化输入输出对，提供显式的语言刺激信号。在原始文本与L2T数据混合预训练后，模型不仅在语言能力基准测试上整体性能提升，还加速了语言能力的习得速度，同时在通用推理任务上保持有竞争力的表现。实验在多规模模型和多种语言学习任务类型上均得到验证。
+
+- **MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents** `[MeM]` `[长文本]` — [2601.03236](https://arxiv.org/abs/2601.03236) | [GitHub](https://github.com/FredJiang0324/MAMGA)
+  > 本文提出MAGMA，一种面向AI智能体的多图记忆架构，旨在解决现有记忆增强生成（MAG）系统依赖单体语义相似度检索、无法区分时序/因果/实体关系的根本局限。MAGMA将每条记忆跨四个正交关系图（语义、时序、因果、实体图）表示，通过意图感知的查询路由机制选择相关图视图，独立遍历后融合为紧凑的类型对齐上下文。其双流记忆演化机制将低延迟事件摄入与异步结构整合解耦，兼顾响应速度与关系结构的精细化。在LoCoMo和LongMemEval两个长程推理基准上，MAGMA持续优于现有SOTA智能体记忆系统，同时降低检索延迟与token消耗。
+
+- **ResTok: Learning Hierarchical Residuals in 1D Visual Tokenizers for Autoregressive Image Generation** — [2601.03955](https://arxiv.org/abs/2601.03955) | [GitHub](https://github.com/Kwai-Kolors/ResTok)
+  > 本文提出ResTok（残差分词器），一种将层次残差结构引入1D视觉分词器的自回归图像生成方法。现有1D视觉分词器遵循语言建模范式，忽视了视觉领域层次化和残差网络设计的关键性质。ResTok通过逐步合并图像token为粗粒度特征并插入token序列首部，实现跨层的特征融合，显著提升表示容量；同时通过语义残差减少层间信息重叠，形成更集中的隐空间分布，降低自回归建模难度。进一步提出层次化自回归生成器（HAR），通过一次预测整级token而非逐token生成，大幅减少采样步骤。实验在ImageNet-256上以仅9步采样实现gFID 2.34的SOTA表现。
+
+
+## 2026年1月9日
+
+- **GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization** `[RL]` — [2601.05242](https://arxiv.org/abs/2601.05242) | [GitHub](https://github.com/NVlabs/GDPO)
+  > 本文针对多奖励强化学习（RL）训练中的问题展开研究。现有方法直接将GRPO应用于多奖励场景，导致不同奖励组合归一化后优势值趋同（advantage collapse），损失训练信号分辨率，造成次优收敛甚至训练失败。作者提出GDPO（Group reward-Decoupled Normalization Policy Optimization），对各奖励独立解耦归一化，忠实保留相对差异，从而实现更准确的多奖励优化和显著更稳定的训练过程。在工具调用、数学推理和代码生成三类任务上，GDPO均持续优于GRPO，覆盖正确性指标（准确率、bug率）和约束遵循指标（格式、长度）。
+
+- **RL-AWB: Deep Reinforcement Learning for Auto White Balance Correction in Low-Light Night-time Scenes** `[RL]` — [2601.05249](https://arxiv.org/abs/2601.05249) | [GitHub](https://github.com/BrianChen1120/RL-AWB)
+  > 夜间色彩恒常性因低光噪声和复杂光照条件而极具挑战性。本文提出RL-AWB，首个将深度强化学习（SAC算法）融入夜间自动白平衡的框架。方法以专为夜间场景设计的统计算法（融合显著灰像素检测与新型光源估计）为核心，通过RL Agent动态为每张图像优化参数，模拟专业AWB调优专家的决策过程，并采用两阶段课程学习提高数据效率。同时发布首个多传感器夜间数据集LEVI。实验表明，RL-AWB在低光与正常光照图像上均实现优越的跨传感器泛化能力。
+
+- **AT^2PO: Agentic Turn-based Policy Optimization via Tree Search** `[RL]` — [2601.04767](https://arxiv.org/abs/2601.04767) | [GitHub](https://github.com/zzfoutofspace/ATPO)
+  > 针对多轮LLM Agent强化学习的三大核心挑战——有限的探索多样性、稀疏信用分配和错位的策略优化——本文提出AT²PO（基于树搜索的Agent轮级策略优化）统一框架。AT²PO引入轮级树结构，结合熵引导树扩展（促进战略性探索）和轮级信用分配（细粒度奖励传播）。进一步提出的ATPO轮级学习目标与Agent交互的自然决策粒度对齐，可正交地集成到任意多轮RL流水线中。在七个基准测试上的实验表明，AT²PO相比最强基线平均提升达1.84个百分点。
+
+- **One Sample to Rule Them All: Extreme Data Efficiency in RL Scaling** `[RL]` — [2601.03111](https://arxiv.org/abs/2601.03111) | [GitHub](https://github.com/GAIR-NLP/polymath-learning)
+  > 本文挑战RL训练LLM推理能力所需大量数据的基本假设，证明单样本学习的显著有效性。作者提出「多面手学习」（polymath learning）框架，通过精心设计单一训练样本来激发跨学科影响。三项关键发现：(1) 单个精选数学推理样本经RL训练后可在物理、化学、生物等多领域产生显著性能提升；(2) 对推理有贡献的数学技能揭示了最优样本的特征；(3) 融合多学科元素的合成样本胜过单一自然样本训练。该方法在多个推理基准上超越使用更大数据集的训练，提示样本质量与设计（「样本工程」）可能是释放推理能力的关键。
+
+- **RelayLLM: Efficient Reasoning via Collaborative Decoding** `[RL]` — [2601.05167](https://arxiv.org/abs/2601.05167) | [GitHub](https://github.com/Chengsong-Huang/RelayLLM)
+  > 大型语言模型推理成本高昂，而小型模型推理能力有限。现有级联或路由方法以整个请求为粒度切换模型，浪费严重。本文提出RelayLLM，一种基于Token级协作解码的高效推理框架。SLM作为主动控制器，仅在关键Token时通过特殊命令调用LLM，实现生成过程的「接力」。采用包含预热和GRPO的两阶段训练框架，教导模型在独立推理与寻求帮助间权衡。在六个基准上，RelayLLM将平均准确率从42.5%提升至49.52%，同时仅调用1.07%的Token生成LLM，相比性能匹配的随机路由器实现98.2%的成本削减。
+
+- **CoV: Chain-of-View Prompting for Spatial Reasoning** `[VLM]` `[无需训练]` — [2601.05172](https://arxiv.org/abs/2601.05172) | [GitHub](https://github.com/ziplab/CoV)
+  > 3D环境中的具身问答（EQA）需要从多视角收集分散且被遮挡的上下文，而现有VLM受限于固定输入视图，推理时难以获取问题相关上下文。本文提出CoV（Chain-of-View）提示，一种无需训练的测试时推理框架，将VLM转化为主动视点推理器，通过由粗到细的探索过程运作：先由视图选择Agent过滤冗余帧并定位锚视图，再通过迭代推理与离散相机动作交替执行细粒度视图调整。在OpenEQA上跨四款主流VLM平均提升LLM-Match得分+11.56%，最高+13.62%；ScanQA达到116 CIDEr，SQA3D达到51.1 EM@1。
+
+- **Re-Align: Structured Reasoning-guided Alignment for In-Context Image Generation and Editing** `[RL]` `[VLM]` — [2601.05124](https://arxiv.org/abs/2601.05124) | [GitHub](https://github.com/hrz2000/realign)
+  > 上下文图像生成与编辑（ICGE）通过交错的图文提示指定视觉概念，要求模型精确理解并忠实执行用户意图。现有统一多模态模型的理解能力往往无法有效迁移至图像生成。本文提出Re-Align统一框架，通过结构化推理引导对齐弥合理解与生成之间的鸿沟。核心是In-Context思维链（IC-CoT），将语义引导与参考关联解耦，提供清晰的文本目标并减少参考图像间的混淆。此外，Re-Align引入有效的RL训练方案，利用代理奖励衡量结构化推理文本与生成图像间的对齐程度。大量实验验证了Re-Align在ICGE任务上的有效性。
+
+- **VERSE: Visual Embedding Reduction and Space Exploration. Clustering-Guided Insights for Training Data Enhancement in Visually-Rich Document Understanding** `[VLM]` `[微调]` — [2601.05125](https://arxiv.org/abs/2601.05125) | [GitHub](https://github.com/nachoDRT/VrDU-Doctor)
+  > 本文提出VERSE方法论，通过探索视觉嵌入空间来分析和改进应用于富视觉文档理解（VrDU）的视觉语言模型。VERSE能可视化潜在表示，支持模型可行性评估，并通过识别问题区域来引导合成数据生成以增强相应性能。在MERIT数据集上验证：VERSE能揭示与易错聚类相关的视觉特征，使用包含这些特征的样本重新训练后可大幅提升F1性能而不损害泛化能力。此外，经VERSE优化的本地模型（Donut、Idefics2）可达到甚至超越GPT-4等SaaS方案的性能表现。
+
+- **Learning User Preferences with Memory to Improve Long-Term Collaboration** `[MeM]` — [2601.02702](https://arxiv.org/abs/2601.02702) | [GitHub](https://github.com/Shuhaibm/multisessioncollab)
+  > 随着对话Agent积累协作经验，适应用户偏好对于建立长期关系至关重要。本文提出MultiSessionCollab基准，评估Agent在多会话协作中学习用户偏好并加以利用的能力。为此，作者开发了配备持久记忆的长期协作Agent，随交互积累不断精炼用户偏好。同时证明可从MultiSessionCollab中的用户模拟器行为派生学习信号，训练Agent生成更全面的反思并更有效地更新记忆。大量实验表明，配备记忆的Agent显著改善长期协作效果，提升任务成功率、减少用户努力。人类用户研究验证了记忆在真实世界中改善用户体验的有效性。
+
+- **Enhancing Object Detection with Privileged Information: A Model-Agnostic Teacher-Student Approach** `[微调]` — [2601.02016](https://arxiv.org/abs/2601.02016) | [GitHub](https://github.com/mbar0075/lupi-for-object-detection)
+  > 本文研究将特权信息学习（LUPI）范式融入目标检测，利用训练时可获取但推理时不可用的细粒度信息。提出通用的模型无关方法，通过师生架构向深度学习目标检测器注入特权信息（如边界框掩码、显著性图、深度线索）。在五种目标检测模型和多个公开基准（包括无人机垃圾检测数据集和Pascal VOC 2012）上的实验表明，LUPI训练的学生模型一致优于基线，在不增加推理复杂度或模型大小的前提下显著提升检测精度，对中大型目标的提升尤为突出。消融研究表明，中等权重的教师指导能最优地平衡特权输入与标准输入的学习。
+
 ## 2026年1月12日
 
 - **Thinking with Map: Reinforced Parallel Map-Augmented Agent for Geolocalization** `[RL]` `[VLM]` — [2601.05432](https://arxiv.org/abs/2601.05432) | [GitHub](https://github.com/AMAP-ML/Thinking-with-Map)
