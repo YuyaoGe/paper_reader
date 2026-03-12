@@ -1,0 +1,130 @@
+[
+  {
+    "date": "2026-02-02",
+    "title": "PaperBanana: Automating Academic Illustration for AI Scientists",
+    "arxiv_id": "2601.23265",
+    "github": "https://github.com/dwzhu-pku/PaperBanana",
+    "abstract": "PaperBanana 是一个用于自动生成学术论文配图的智能体框架，旨在解放科研人员在制作出版级示意图时的人工负担。系统以最先进的 VLM 和图像生成模型为驱动，协调多个专职智能体完成参考检索、内容与风格规划、图像渲染以及自我批判的迭代精炼。为系统评估框架能力，作者构建了 PaperBananaBench 基准，包含 292 个从 NeurIPS 2025 论文中采集的方法论示意图测试案例，覆盖多样研究领域与配图风格。实验表明 PaperBanana 在忠实度、简洁性、可读性和美观性四个维度上均优于主流基线，并进一步验证了对统计图表生成的迁移能力。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "ASTRA: Automated Synthesis of agentic Trajectories and Reinforcement Arenas",
+    "arxiv_id": "2601.21558",
+    "github": "https://github.com/LianjiaTech/astra",
+    "abstract": "ASTRA 是一个全自动端到端框架，用于通过可扩展数据合成与可验证强化学习来训练工具增强型语言模型智能体。框架包含两个互补模块：一是利用工具调用图静态拓扑合成多样且结构化的高质量轨迹，赋予模型广泛可迁移的工具使用能力；二是将分解后的问答追踪转化为独立可执行、规则可验证的环境，支持确定性多轮 RL 训练。作者将 SFT 与在线 RL 结合为统一训练方法，使用轨迹级奖励平衡任务完成与交互效率。在多个工具使用基准上，ASTRA 训练的模型以同等规模达到最优性能，接近闭源系统水平，同时保留核心推理能力。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation",
+    "arxiv_id": "2601.22813",
+    "github": "https://github.com/IST-DASLab/Quartet-II",
+    "abstract": "Quartet II 针对 NVIDIA Blackwell GPU 支持的 NVFP4 低精度格式，提出了一种更准确的无偏量化方案，旨在实现大规模 LLM 的全精度端到端预训练。核心贡献是新型微尺度格式无偏量化例程 MS-EDEN，其量化误差比随机舍入（SR）降低 2 倍以上。将 MS-EDEN 集成为完整的全 NVFP4 线性层量化方案 Quartet II 后，前向和反向传播中所有关键矩阵乘法的梯度估计质量均得到提升。作者在 1.9B 参数、38B token 的端到端 LLM 训练中验证了方案效果，并提供了在 Blackwell GPU 上相比 BF16 快 4.2× 的内核实现。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "THINKSAFE: Self-Generated Safety Alignment for Reasoning Models",
+    "arxiv_id": "2601.23143",
+    "github": "https://github.com/seanie12/ThinkSafe",
+    "abstract": "大型推理模型（LRM）通过强化学习驱动的长链思维获得强大推理能力，但过度优化合规性会使模型对有害提示产生漏洞。现有安全对齐方法依赖外部教师蒸馏，会引入分布偏差并损害原生推理能力。ThinkSafe 提出了一种无需外部教师的自生成对齐框架：关键洞察是模型虽然顺从性增强，但仍保留识别有害内容的潜在知识。框架通过轻量级拒绝引导让模型自行生成分布内的安全推理链，再在这些自生成响应上微调，实现安全对齐的同时最小化分布偏移。在 DeepSeek-R1-Distill 和 Qwen3 上的实验表明，ThinkSafe 显著提升安全性并保留推理水平，计算成本远低于 GRPO。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "ReGuLaR: Variational Latent Reasoning Guided by Rendered Chain-of-Thought",
+    "arxiv_id": "2601.23184",
+    "github": "https://github.com/FanmengWang/ReGuLaR",
+    "abstract": "链式思维（CoT）大幅提升 LLM 推理性能，但显式推理链引入大量计算冗余；现有潜在推理方法又因缺乏合适的压缩引导而性能严重下降。ReGuLaR 在变分自编码（VAE）框架下形式化潜在推理：当前潜在推理状态从以历史状态为条件的后验分布中采样。训练时将显式推理链渲染为图像，提取稠密视觉语义表示来正则化后验分布，实现信息损失最小的高效压缩。大量实验表明，ReGuLaR 在计算效率和推理效果上均大幅超越现有潜在推理方法，甚至通过多模态推理超越了标准 CoT，为潜在推理提供了新颖且有洞察力的解决方案。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "TTCS: Test-Time Curriculum Synthesis for Self-Evolving",
+    "arxiv_id": "2601.22628",
+    "github": "https://github.com/XMUDeepLIT/TTCS",
+    "abstract": "测试时训练（TTT）可通过仅利用测试问题来提升 LLM 推理能力，但测试问题往往过难、测试集规模有限，导致伪标签质量不稳定。TTCS 提出了一种协同进化测试时训练框架，由同一预训练模型初始化问题合成器和推理求解器两个策略，通过迭代优化共同进化：合成器根据测试问题生成渐进困难的课程变体，求解器则利用多样本自一致性奖励进行在线自进化，两者形成闭环反馈。实验证明 TTCS 在挑战性数学基准上持续提升不同 LLM 骨干的推理能力，并可迁移至通用任务，是一条通过动态测试时课程实现自进化的可扩展路径。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "Do Reasoning Models Enhance Embedding Models?",
+    "arxiv_id": "2601.21192",
+    "github": "https://github.com/HKUST-KnowComp/Reasoning-Embedding",
+    "abstract": "当前最先进的嵌入模型越来越多地从仅解码器 LLM 主干通过对比学习适配而来。随着 RLVR 推理模型的兴起，一个自然问题是：以推理模型为嵌入初始化是否能产生更优的语义表示？出乎预料，作者在 MTEB 和 BRIGHT 上的评估揭示了「零效果」：以 RLVR 调优主干初始化的嵌入模型，在相同训练配方下相比基础模型无一致性能提升。为解析这一悖论，作者引入层级表示相似性分析框架（HRSA），分析发现 RLVR 导致局部几何重组（不可逆）和坐标基漂移（可逆），但保留全局流形几何与线性读出，随后对比学习驱动两者强对齐，形成「流形重对齐」现象。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "MemOCR: Layout-Aware Visual Memory for Efficient Long-Horizon Reasoning",
+    "arxiv_id": "2601.21468",
+    "github": "https://github.com/meituan/MemOCR",
+    "abstract": "长时域智能体推理需要将不断增长的交互历史有效压缩到有限上下文窗口内，而现有记忆系统将历史序列化为文本导致 token 成本线性增长。MemOCR 是一个多模态记忆智能体，通过视觉布局实现自适应信息密度的记忆空间分配：维护结构化富文本记忆（含标题、高亮等），将其渲染为图像供智能体检索，以视觉方式突出关键证据同时激进压缩辅助细节。为确保在不同记忆预算下的鲁棒性，使用强化学习在预算感知目标下训练 MemOCR，使智能体适应多样压缩级别。在长上下文多跳和单跳问答基准上，MemOCR 超越强大的文本基线，在极端预算下实现更有效的上下文利用。",
+    "tags": ["RL", "VLM", "长文本"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "FourierSampler: Unlocking Non-Autoregressive Potential in Diffusion Language Models via Frequency-Guided Generation",
+    "arxiv_id": "2601.23182",
+    "github": "https://github.com/ShirleYoung/FourierSampler",
+    "abstract": "扩散语言模型（dLLMs）具有非自回归生成潜力，但现有解码策略存在位置偏差，未能充分发挥任意顺序生成的优势。本文首次对 dLLMs 进行频域分析，发现隐状态中低频分量主要编码全局结构信息和长程依赖，高频分量负责局部细节。基于此，提出 FourierSampler：利用频域滑动窗口机制动态引导模型实现「结构→细节」的渐进式生成。在 LLaDA 和 SDAR 上，FourierSampler 超越其他推理增强策略，在 LLaDA1.5-8B 上实现 20.4% 的相对提升，在 LLaDA-8B-Instruct 上提升 16.0%，明显超过同规模自回归模型 Llama3.1-8B-Instruct。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "NativeTok: Native Visual Tokenization for Improved Image Generation",
+    "arxiv_id": "2601.22837",
+    "github": "https://github.com/wangbei1/Nativetok",
+    "abstract": "VQ 图像生成通常采用两阶段流程：分词器编码离散 token，生成模型学习其依赖关系。然而现有方法不约束 token 依赖关系，导致生成模型面临无序分布，产生偏差与弱一致性。本文提出「原生视觉分词化」，在分词阶段即强制因果依赖关系。NativeTok 框架包含：元图像 Transformer（MIT）用于潜变量图像建模；混合因果专家 Transformer（MoCET），每个轻量级专家块基于历史 token 和潜变量特征生成单个 token；层级原生训练策略仅更新新专家块，确保训练效率。大量实验验证了 NativeTok 的有效性。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "Scaling Multiagent Systems with Process Rewards",
+    "arxiv_id": "2601.23228",
+    "github": "https://github.com/ltjed/multiagent-coaching",
+    "abstract": "多智能体系统虽在复杂任务上展现出分工协作的潜力，但同时微调多个智能体面临信用分配和昂贵多智能体 rollout 样本效率两大挑战。本文提出 MAPPA（来自 AI 反馈的每动作过程奖励微调多智能体系统），通过对每个智能体动作单独分配信用而非仅在任务完成时给予奖励，在无需真实标签的前提下实现细粒度监督并最大化每次 rollout 的训练信号。在竞赛数学题上，MAPPA 在 AIME 和 AMC 分别提升 5.0-17.5pp 和 7.8-17.2pp；在数据分析任务上成功率提升 12.5pp，质量指标改善高达 30%。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "TAM-Eval: Evaluating LLMs for Automated Unit Test Maintenance",
+    "arxiv_id": "2601.18241",
+    "github": "https://github.com/trndcenter/TAM-Eval",
+    "abstract": "现有 LLM 在软件测试领域的应用主要局限于孤立的测试生成或预言预测，忽视了测试套件维护这一更广泛挑战。TAM-Eval 提出一个评估框架与基准，涵盖测试套件的创建、修复和更新三个核心维护场景，在测试文件级别（而非函数级别）运作，同时支持访问完整仓库上下文以贴近真实工作流。基准包含从 Python、Java 和 Go 项目中自动抽取并验证的 1,539 个场景，采用基于测试套件通过率、代码覆盖率和变异测试的无参考评估协议。实验表明当前最先进 LLM 在现实测试维护流程中能力有限，测试有效性提升边际。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "LMK > CLS: Landmark Pooling for Dense Embeddings",
+    "arxiv_id": "2601.21525",
+    "github": "https://github.com/meetdoshi90/LMK-Pooling",
+    "abstract": "表示学习对搜索、聚类、分类和重排序等下游任务至关重要。现有序列编码器通常使用 [CLS] token 或均值池化将变长序列压缩为单向量：[CLS] 倾向于向序列头部集中信息导致证据表示不均衡，均值池化会稀释显著的局部信号。本文提出 Landmark（LMK）池化：将序列分割为若干块，在块间插入 landmark token，最后对 landmark token 嵌入取均值作为最终表示。该简单机制在不牺牲局部显著特征的前提下改善了长上下文外推，仅增加少量特殊 token。实验表明 LMK 池化在短上下文检索任务上持平现有方法，并在长上下文任务上取得大幅提升。",
+    "tags": ["微调", "长文本"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis",
+    "arxiv_id": "2601.21709",
+    "github": "https://github.com/MIRALab-USTC/LLM-TAPPA",
+    "abstract": "注意力模式（检索头、sink 头、对角迹等）对 LLM 训练与推理至关重要，但现有观察零散且缺乏统一解释。本文提出时序注意力模式可预测性分析（TAPPA）框架，从时域连续视角分析各注意力模式的数学形式，将其分为具有清晰规律的「可预测模式」和近似随机的「不可预测模式」，并证明此区别可用 query 在时序维度的自相似度（q-similarity）来量化。对可预测模式的详细数学分析揭示了 query、key 及旋转位置编码（RoPE）的联合作用机制。将 TAPPA 的洞察应用于 KV 缓存压缩和 LLM 剪枝，以 q-similarity 为信号的简单指标一致超越基线方法，在 Qwen2.5 KV 压缩上相比 EA 提升最高 11.34 分。",
+    "tags": ["无需训练", "MeM"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "KAPSO: A Knowledge-grounded framework for Autonomous Program Synthesis and Optimization",
+    "arxiv_id": "2601.21526",
+    "github": "https://github.com/Leeroo-AI/kapso",
+    "abstract": "KAPSO 是一个用于自主程序合成与优化的模块化框架：给定自然语言目标和评估方法，在长时域优化循环中迭代执行构思、代码合成与编辑、执行、评估和学习。框架以合成为算子、以评估者结果定义进展，通过三个紧耦合组件攻克编码智能体的常见长时域失败：git 原生实验引擎将每次尝试隔离为分支以保证可复现性；知识系统将仓库、内部手册和外部资源组织为支持工作流与实现检索的结构化表示；认知记忆层维护从实验追踪中提炼的可复用经验，降低重复错误并加速收敛。在 MLE-Bench 和 ALE-Bench 上评估均取得最先进性能。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-02",
+    "title": "Machine Learning for Energy-Performance-aware Scheduling",
+    "arxiv_id": "2601.23134",
+    "github": "https://github.com/PeterHUistyping/ml-cpu-sched",
+    "abstract": "后 Dennard 时代嵌入式系统优化需要在能效和延迟之间权衡，传统启发式调优在高维非平滑搜索空间中效率低下。本文提出基于高斯过程的贝叶斯优化框架，自动化搜索异构多核架构的最优调度配置，并通过帕累托前沿显式建模能耗与时间的多目标权衡。通过引入灵敏度分析（fANOVA）并比较不同协方差核（Matérn vs. RBF），为黑盒模型提供物理可解释性，揭示驱动系统性能的主导硬件参数。",
+    "tags": []
+  }
+]

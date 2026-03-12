@@ -1,0 +1,130 @@
+[
+  {
+    "date": "2026-01-30",
+    "title": "Idea2Story: An Automated Pipeline for Transforming Research Concepts into Complete Scientific Narratives",
+    "arxiv_id": "2601.20833",
+    "github": "https://github.com/AgentAlphaAGI/Idea2Paper",
+    "abstract": "Idea2Story 提出了一种预计算驱动的自主科学发现框架，将文献理解从在线推理转移到离线知识构建。系统持续收集同行评审论文及其评审反馈，提取核心方法单元，构建可复用的研究模式，并组织为结构化方法论知识图谱。运行时，将模糊的用户研究意图对齐到已有研究范式，实现高质量研究模式的高效检索与复用，避免开放性生成和试错。该方法缓解了大模型的上下文窗口瓶颈，显著减少了运行时的文献重复推理。实验表明，Idea2Story 能生成连贯、方法扎实且具有新颖性的研究方案，证明离线知识构建可作为可靠自主科研的实用可扩展基础。",
+    "tags": ["无需训练", "MeM"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "MMFineReason: Closing the Multimodal Reasoning Gap via Open Data-Centric Methods",
+    "arxiv_id": "2601.21821",
+    "github": "https://github.com/LHL3341/MMFineReason",
+    "abstract": "MMFineReason 构建了一个大规模多模态推理数据集，包含 180 万样本和 51 亿解题 token，通过系统化三阶段流程（数据收集与标准化、CoT 推理生成、质量与难度感知筛选）生成高质量推理标注（从 Qwen3-VL-235B-A22B-Thinking 蒸馏）。数据集涵盖 STEM 问题、视觉谜题和复杂图表，每个样本均附有视觉扎根的推理链。基于此微调的 MMFineReason-4B 超越了 Qwen3-VL-8B-Thinking，MMFineReason-8B 甚至媲美 Qwen3-VL-32B-Thinking，展现了卓越的参数效率。研究还发现「少即是多」现象：仅 7% 的子集（12.3 万样本）即可达到与完整数据集相当的性能。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation",
+    "arxiv_id": "2601.21420",
+    "github": "https://github.com/ZihaoHuang-notabot/ConceptMoE",
+    "abstract": "ConceptMoE 针对大语言模型对所有 token 分配均匀计算这一低效问题，提出了动态 token 到概念压缩方法，实现隐式 token 级计算分配。可学习的分块模块通过测量 token 间相似度识别最优边界，按目标压缩比 R 压缩序列，再输入计算密集的概念块转换器。不同于离散专家路由，ConceptMoE 通过连续语义聚合隐式分配计算。实验在语言建模和下游任务上验证了方法有效性，实现了灵活的精度-效率权衡，可即插即用于标准 Transformer 架构。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Shaping capabilities with token-level data filtering",
+    "arxiv_id": "2601.21571",
+    "github": "https://github.com/neilrathi/token-filtering",
+    "abstract": "当前去除语言模型不良能力的方法大多是事后干预，容易被绕过。本文提出在预训练阶段直接通过数据过滤来塑造模型能力。以去除医学能力为代理任务，研究表明对预训练数据进行 token 级过滤（而非文档级过滤）简单有效、鲁棒且在规模上廉价。受数据归因研究启发，token 级过滤比文档级过滤效果更好。该方法可精确控制模型在特定领域的能力，为预训练阶段的能力塑造提供了一种实用的新范式，无需事后对齐即可减少潜在的有害知识。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Exploring Reasoning Reward Model for Agents",
+    "arxiv_id": "2601.22154",
+    "github": "https://github.com/kxfan2002/Reagent",
+    "abstract": "Agentic RL 在复杂推理和工具调用方面取得了显著成功，但大多数方法仍依赖稀疏的结果奖励，无法区分中间推理质量。本文提出 Agent Reasoning Reward Model（Agent-RRM），一种多维度奖励模型，为智能体轨迹提供结构化反馈，包括：步骤级推理质量评估、工具调用合理性判断和整体轨迹一致性评分。Agent-RRM 通过强化学习训练智能体追求更高质量的推理过程，实验结果表明在多个 agentic 基准上显著优于仅使用结果奖励的基线方法。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Language-based Trial and Error Falls Behind in the Era of Experience",
+    "arxiv_id": "2601.21754",
+    "github": "https://github.com/Harry-mic/SCOUT",
+    "abstract": "尽管大语言模型在基于语言的任务中表现出色，但在符号或空间等非语言环境中的适应能力仍然有限。本文证明主要瓶颈不是预训练分布不匹配，而是探索的高昂代价：掌握这类任务需要大量试错，计算上不可持续。为此提出 SCOUT 框架，将强化学习引入智能体的经验学习中，通过直接环境交互积累经验而非依赖语言试错。实验表明，SCOUT 在多种非语言任务上显著超越基于语言的 ReAct 等方法，体现了「经验时代」中基于 RL 的智能体学习范式的优越性。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Latent Adversarial Regularization for Offline Preference Optimization",
+    "arxiv_id": "2601.22083",
+    "github": "https://github.com/enyijiang/GANPO",
+    "abstract": "偏好优化中传统 token 级正则化存在局限性，因为 token 空间的相似性不等价于语义或行为相似性。本文提出 GANPO，通过潜在空间正则化解决这一挑战：引入对抗性惩罚机制，约束策略在连续潜在空间中与参考模型的分布偏差，从而保留语义一致性。GANPO 无需显式训练判别器，通过最小化潜在空间中的对抗损失实现隐式正则化。在多个偏好优化基准上，GANPO 相比 DPO、IPO 等基线方法显著提升了对齐质量，尤其在分布外泛化方面表现突出。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Typhoon-S: Minimal Open Post-Training for Sovereign Large Language Models",
+    "arxiv_id": "2601.18129",
+    "github": "https://github.com/scb-10x/typhoon-s",
+    "abstract": "Typhoon-S 探索了在主权/区域场景下以最小代价进行 LLM 后训练的方法，使区域机构能够在可控预算内掌控模型权重、训练数据和部署决策。研究在资源有限的东南亚语言（泰语等）上，系统评估了监督微调（SFT）和强化学习后训练（RLHF/GRPO）的最优组合策略，包括数据配比、训练顺序和超参数选择。实验表明，通过精心设计的最小后训练流程，可以在保持英语能力的同时大幅提升低资源语言性能，为主权 LLM 建设提供了开源参考基线。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "MAD: Modality-Adaptive Decoding for Mitigating Cross-Modal Hallucinations in Multimodal Large Language Models",
+    "arxiv_id": "2601.21181",
+    "github": "https://github.com/top-yun/MAD",
+    "abstract": "多模态大语言模型存在跨模态幻觉问题，即一种模态不当影响另一种模态的生成，导致虚构输出。本文提出 MAD（Modality-Adaptive Decoding），一种无需训练的方法，根据任务需求自适应地加权模态特定解码分支。MAD 利用模型内在的自评估能力来判断各模态的相关性，在推理时动态调整视觉和语言分支的权重。在多个 VLM 幻觉基准上的实验证明，MAD 能有效减少跨模态幻觉，且无需额外训练或参数，可即插即用于现有多模态模型。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+    "arxiv_id": "2601.22069",
+    "github": "https://github.com/w-yibo/VTC-R1",
+    "abstract": "长上下文推理赋予 LLM 处理复杂任务的能力，但引入了严重的计算效率瓶颈。现有高效方法通常需要复杂的额外训练或外部模型，限制了可扩展性。VTC-R1 提出一种新的高效推理范式，将视觉-文本压缩集成到推理过程中：通过识别并压缩推理步骤中的冗余视觉 token 和文本 token，在保持推理质量的同时大幅降低计算开销。在视觉语言推理任务上的实验表明，VTC-R1 相比基线方法在显著压缩上下文长度的同时，维持了具有竞争力的推理准确率。",
+    "tags": ["VLM", "长文本", "无需训练"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "KromHC: Manifold-Constrained Hyper-Connections with Kronecker-Product Residual Matrices",
+    "arxiv_id": "2601.21579",
+    "github": "https://github.com/wz1119/KromHC",
+    "abstract": "Hyper-Connections（HC）在神经网络中取得了成功，但存在训练不稳定和扩展性受限的问题。流形约束 Hyper-Connections（mHC）通过将残差连接空间投影到 Birkhoff 多面体来缓解这些挑战，但面临两个问题：Sinkhorn-Knopp 算法无法总是产生精确双随机矩阵；以及 O(n³C) 的参数复杂度过高。本文提出 KromHC，利用 Kronecker 积分解残差矩阵，将参数复杂度降至 O(nC)，同时保证严格的流形约束。实验表明 KromHC 在多个语言模型任务上实现了更好的训练稳定性和参数效率。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "MetricAnything: Scaling Metric Depth Pretraining with Noisy Heterogeneous Sources",
+    "arxiv_id": "2601.22054",
+    "github": "https://github.com/metric-anything/metric-anything",
+    "abstract": "将缩放范式扩展到度量深度估计面临异构传感器噪声、相机依赖偏差和跨源 3D 数据中的度量歧义等挑战。MetricAnything 提出了一种简单可扩展的预训练框架，无需手工设计提示、相机特定建模或任务特定架构，即可从噪声多样 3D 来源中学习度量深度。核心方法通过自适应噪声建模和跨源对齐将异构数据统一处理。大规模实验表明，该框架在多个度量深度估计基准上取得了领先性能，证明了噪声异构数据扩展预训练的可行性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "BMAM: Brain-inspired Multi-Agent Memory Framework",
+    "arxiv_id": "2601.20465",
+    "github": "https://github.com/innovation64/BMAM",
+    "abstract": "基于语言模型的智能体在长时交互中面临时序信息保留和跨会话行为一致性的挑战（即「灵魂侵蚀」问题）。BMAM（脑启发多智能体记忆）提出了一种通用记忆架构，将智能体记忆建模为功能专化子系统集合而非单一非结构化存储。受认知记忆系统启发，BMAM 将记忆分解为感知记忆、情景记忆、语义记忆和程序记忆等模块，并通过多智能体协作管理和检索。实验表明 BMAM 显著改善了长期交互中的记忆保留和行为一致性，减少了信息遗忘和「灵魂侵蚀」现象。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning",
+    "arxiv_id": "2601.19001",
+    "github": "https://github.com/robinzixuan/FROST",
+    "abstract": "FROST 提出了一种基于注意力的高效推理方法，利用注意力权重剪除非关键推理路径，生成更短且更可靠的推理轨迹。方法引入推理离群点的概念，设计了注意力驱动机制在句子级别识别并去除这些低质量推理步骤。理论分析证明 FROST 在消除离群点的同时保留并增强了模型的推理能力。在多个推理基准上的实验验证表明，FROST 在显著压缩推理长度的同时维持了准确率，适用于需要实时响应的推理场景。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Flow-based Extremal Mathematical Structure Discovery",
+    "arxiv_id": "2601.18005",
+    "github": "https://github.com/berczig/FlowBoost",
+    "abstract": "数学中极值结构的发现需要在分析方法几乎无指引、暴力搜索又不可行的广阔非凸空间中导航。FlowBoost 提出了一种闭环生成框架，结合三个组件：（i）几何感知的条件 flow-matching 模型，学习采样高质量配置；（ii）奖励引导的策略优化，配合动作空间约束；（iii）课程化难度递进学习。框架在图论和组合优化中的极值结构发现任务上进行了验证，展示了基于生成模型的数学结构探索能力，为数学自动化发现提供了新思路。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-30",
+    "title": "Beyond Imitation: Reinforcement Learning for Active Latent Planning",
+    "arxiv_id": "2601.21598",
+    "github": "https://github.com/zz1358m/ATP-Latent-master",
+    "abstract": "潜在推理方法通过让 LLM 用连续潜在 token 替代离散语言 token 来实现高效密集的思维链推理，但现有方法对语言标签的被动模仿导致次优的潜在 token 表示和推理策略。ATP-Latent（主动潜在规划）将潜在 token 的监督过程建模为条件变分自编码器（VAE），获得更平滑的潜在空间，并通过 RL 和辅助一致性奖励（基于 VAE 解码内容的一致性）引导最优潜在推理策略。在 LLaMA-1B 上的实验显示，与先进基线相比准确率提升 +4.1%，token 消耗降低 -3.3%。",
+    "tags": ["RL", "微调"]
+  }
+]

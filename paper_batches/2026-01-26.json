@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-01-26",
+    "title": "SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents",
+    "arxiv_id": "2601.16746",
+    "github": "https://github.com/Ayanami1314/swe-pruner",
+    "abstract": "SWE-Pruner 是一个专为代码 Agent 设计的自适应上下文剪枝框架。现有的上下文压缩方法（如 LongLLMLingua）依赖固定指标（如 PPL），忽略代码理解的任务特异性，容易破坏语法与逻辑结构。本文受人类程序员「选择性浏览」代码的启发，提出任务感知自适应剪枝：给定当前任务，Agent 先明确目标（如「关注错误处理」），再用轻量神经 Skimmer（0.6B 参数）动态筛选上下文中的相关行。在四个 benchmark 和多个模型上的评估表明，SWE-Pruner 在 SWE-Bench Verified 等代理任务上实现 23-54% 的 Token 压缩，在 LongCodeQA 单轮任务上实现最高 14.84x 压缩，且性能几乎不受影响。",
+    "tags": ["微调", "长文本"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification",
+    "arxiv_id": "2601.15808",
+    "github": "https://github.com/yxwan123/DeepVerifier",
+    "abstract": "本文提出一种新范式：通过推理时验证的自我迭代来提升 Deep Research Agent（DRA）的能力，而非依赖昂贵的后训练。作者基于自动构建的 DRA 失败分类体系（5 大类、13 子类），提出 DeepVerifier——一个基于评分细则的结果奖励验证器，在 meta-evaluation F1 上比 agent-as-judge 和 LLM judge 基线高出 12%-48%。DeepVerifier 以即插即用模块形式嵌入推理流程，产生细粒度反馈供 Agent 迭代改进，无需额外训练。在强大闭源 LLM 驱动下，GAIA 和 XBench-DeepResearch 难题子集上准确率提升 8%-11%。此外还发布 DeepVerifier-4K，包含 4646 条高质量 SFT 数据，专注 DRA 验证能力训练。",
+    "tags": ["无需训练", "微调"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "Endless Terminals: Scaling RL Environments for Terminal Agents",
+    "arxiv_id": "2601.16443",
+    "github": "https://github.com/kanishkg/endless-terminals",
+    "abstract": "现有 terminal 任务集为评估而非训练而设计，无法满足 RL 所需的可扩展流程。本文提出 Endless Terminals，一个全自动的终端任务生成 pipeline，包括任务描述生成、容器化环境构建与验证、完成测试生成、可解性过滤四个阶段，共产生 3255 个涵盖文件操作、日志管理、数据处理、脚本编写和数据库操作的任务。使用 vanilla PPO 训练（二元 episode 奖励，无检索/多 Agent/专用工具），多个模型取得显著提升：Qwen2.5-7B 从 10.7% 提升至 53.3%，在 TerminalBench 2.0 上优于更复杂的 Agent 架构，验证了「简单 RL + 可扩展环境」的可行性。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "Dancing in Chains: Strategic Persuasion in Academic Rebuttal via Theory of Mind",
+    "arxiv_id": "2601.15715",
+    "github": "https://github.com/Zhitao-He/RebuttalAgent",
+    "abstract": "本文提出 RebuttalAgent，首个将心智理论（Theory of Mind）应用于学术 rebuttal 的框架。现有方法仅模仿表面语言，缺乏视角采纳能力。本文通过 ToM-Strategy-Response（TSR）流程建模审稿人心理状态、制定说服策略并生成有证据支撑的回复。训练分两阶段：第一阶段 SFT 赋予模型 ToM 分析与策略规划能力；第二阶段 RL 利用自奖励机制实现可扩展自我提升。还开发了 Rebuttal-RM 评估器（100K+ 样本训练），一致性超越 GPT-4.1。实验显示 RebuttalAgent 在自动化指标上平均超越基础模型 18.3%，且在人类评估中优于前沿专有模型。已被 ICLR 2026 接收。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "DSGym: A Holistic Framework for Evaluating and Training Data Science Agents",
+    "arxiv_id": "2601.16344",
+    "github": "https://github.com/fannie1208/DSGym",
+    "abstract": "现有数据科学 benchmark 存在评估接口碎片化、任务覆盖窄以及大量任务无需使用实际数据即可作答等问题。本文提出 DSGym，一个在隔离执行环境中评估和训练数据科学 Agent 的标准化框架，提供模块化架构，便于扩展任务、Agent 脚手架和工具。DSGym-Tasks 通过质量过滤和可快捷性筛选标准化现有 benchmark，并新增 DSBio（生物信息学任务）和 DSPredict（跨域预测任务）。在训练侧，通过执行验证数据合成 pipeline 生成 2000 条训练数据，训练的 4B 模型在标准化分析 benchmark 上超越 GPT-4o。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "ChartVerse: Scaling Chart Reasoning via Reliable Programmatic Synthesis from Scratch",
+    "arxiv_id": "2601.13606",
+    "github": "https://github.com/starriver030515/ChartVerse",
+    "abstract": "图表推理是 VLM 的关键能力，但高质量训练数据匮乏制约了开源模型发展。本文提出 ChartVerse，一个从零合成复杂图表与可靠推理数据的可扩展框架。（1）引入 Rollout Posterior Entropy（RPE）量化图表复杂度，并据此开发复杂度感知图表生成器；（2）采用「答案优先」的真值锚定逆向 QA 合成，保证推理严谨性。基于此构建 SFT-1.8M 和 RL-40K 数据集，ChartVerse-8B 在 6 个 benchmark 上平均得分 64.1%，超越教师模型 Qwen3-VL-30B-Thinking（62.9%），在 HuggingFace 数据集趋势榜排名第一。",
+    "tags": ["VLM", "微调", "RL"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
+    "arxiv_id": "2601.07251",
+    "github": "https://github.com/leroy9472/MeepleLM",
+    "abstract": "桌游中缺乏能基于涌现用户体验提供建设性批评的 AI 系统。本文整理包含 1727 份结构校正规则书和 150K 条评论的数据集，通过质量评分和面向感知的采样进行筛选，并引入 MDA（机制-动态-美学）推理来弥合规则与玩家体验之间的因果鸿沟。进一步提炼玩家角色并训练 MeepleLM——一个专为不同玩家原型内化角色特定推理模式的模型，能精准模拟多样化主观反馈。实验表明 MeepleLM 在社区认可度和评论质量上显著优于 GPT-5.1、Gemini3-Pro 等商业模型，在用户研究中偏好率达 70%。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "VisGym: Diverse, Customizable, Scalable Environments for Multimodal Agents",
+    "arxiv_id": "2601.16973",
+    "github": "https://github.com/visgym/VIsGym",
+    "abstract": "现有 VLM 在多步视觉交互设置中的能力刻画不足，尤其是长时序感知、记忆与行动整合。本文提出 VisGym，包含 17 个可视化交互环境的综合训练和评估套件，跨越符号谜题、真实图像理解、导航和操作，提供难度、输入表示、规划时域和反馈的灵活控制，并配备生成结构化 demonstration 的多步求解器以支持 SFT。评估表明所有前沿模型在交互环境中表现不佳（简单配置成功率 46.6%，困难配置 26.0%），并揭示了上下文利用、视觉渲染等关键失败模式及改进路径。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-26",
+    "title": "VISTA-PATH: An interactive foundation model for pathology image segmentation and quantitative analysis in computational pathology",
+    "arxiv_id": "2601.16451",
+    "github": "https://github.com/zhihuanglab/VISTA-PATH",
+    "abstract": "VISTA-PATH 是一个面向病理图像分割的交互式基础模型，联合以视觉上下文、语义组织描述和可选专家空间提示为条件，实现跨异质病理图像的精确多类别分割。构建了包含 160 万图像-掩码-文本三元组（覆盖 9 个器官、93 种组织类别）的 VISTA-PATH Data 语料库进行预训练。模型支持动态人在环路细化，将稀疏块级边界框反馈传播为全切片像素级分割。在多个 held-out 和外部 benchmark 上持续优于现有分割基础模型，并通过提出肿瘤相互作用评分（TIS）展示了与患者生存预后的强相关性。",
+    "tags": ["VLM", "微调"]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-01-29",
+    "title": "Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation",
+    "arxiv_id": "2601.20614",
+    "github": "https://github.com/AMAP-ML/MathForge",
+    "abstract": "本文提出 MathForge 框架，针对现有 RLVR 方法在算法和数据层面对难题关注不足的问题进行改进。算法层面，作者提出难度感知 GRPO（DGPO），通过难度平衡的组优势估计修正 GRPO 的隐式不平衡，并引入问题级别的难度加权。数据层面，提出多角度问题重构（MQR）策略，从多维度改写题目以提升固有难度，同时保持原有标准答案不变。MathForge 形成协同循环：MQR 扩展数据边界，DGPO 从增强数据中高效学习。实验表明，MathForge 在多个数学推理任务上显著超越现有方法。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "Innovator-VL: A Multimodal Large Language Model for Scientific Discovery",
+    "arxiv_id": "2601.19325",
+    "github": "https://github.com/InnovatorLM/Innovator-VL",
+    "abstract": "Innovator-VL 是一个面向科学发现的多模态大语言模型，展示了在大幅减少数据量的前提下实现强科学推理能力的可能性。核心贡献包括：（1）完全透明的端到端可复现训练流程，涵盖数据采集、清洗、SFT、RL 和评估；（2）仅使用不足 500 万精选样本、无需大规模预训练即可在多种科学任务上达到有竞争力的性能，体现出极高数据效率；（3）在通用视觉、多模态推理和科学基准测试上均表现出强泛化能力。实验结果表明，基于原则性数据选择而非无差别扩展，即可实现高效的科学对齐。",
+    "tags": ["VLM", "微调", "RL"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "DeepSeek-OCR 2: Visual Causal Flow",
+    "arxiv_id": "2601.20552",
+    "github": "https://github.com/deepseek-ai/DeepSeek-OCR-2",
+    "abstract": "DeepSeek-OCR 2 提出了全新编码器 DeepEncoder V2，能够根据图像语义动态重排视觉 token 顺序。传统视觉语言模型对视觉 token 采用固定的光栅扫描顺序，这与人类视觉感知的灵活语义扫描模式相悖。DeepEncoder V2 受人类因果信息处理机制启发，在输入 LLM 前通过因果推理能力智能重排 token。本文探索了一种新范式：2D 图像理解是否可通过两级级联的 1D 因果推理结构有效实现，为真正的 2D 推理提供新的架构思路。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "SERA: Soft-Verified Efficient Repository Agents",
+    "arxiv_id": "2601.20789",
+    "github": "https://github.com/allenai/SERA",
+    "abstract": "SERA（Soft-Verified Efficient Repository Agents）提出了一种高效训练方法，使开源代码智能体能够以极低成本快速专化到私有代码库。仅使用监督微调（SFT），SERA 在全开源模型中达到最先进水平，并与 Devstral-Small-2 等前沿开权重模型性能相当。相较于强化学习训练方法，SERA 成本降低 26 倍，相较于其他高质量 SFT 管道降低 57 倍。核心创新在于「软验证」机制，通过轻量级语义等价检查而非昂贵的执行验证来筛选训练数据质量，使专化代码智能体的快速创建变得实用可行。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "Training Reasoning Models on Saturated Problems via Failure-Prefix Conditioning",
+    "arxiv_id": "2601.20829",
+    "github": "https://github.com/minwukim/training-on-saturated-problems",
+    "abstract": "本文针对 RLVR 训练中问题饱和导致学习停滞的问题，提出「失败前缀条件化」（Failure-Prefix Conditioning）方法。核心思路是：不从原始问题开始 rollout，而是从少见的错误推理轨迹中提取前缀作为条件，将探索重定向到容易失败的状态，从而暴露更多有效学习信号。实验表明，该方法在饱和问题上取得的性能提升与在更大规模数据集上训练相当，同时不影响模型在未饱和问题上的泛化能力，为 RLVR 训练突破饱和瓶颈提供了简单有效的解决方案。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "UPLiFT: Efficient Pixel-Dense Feature Upsampling with Local Attenders",
+    "arxiv_id": "2601.17950",
+    "github": "https://github.com/mwalmer-umd/UPLiFT",
+    "abstract": "UPLiFT 研究任务无关的特征上采样问题，旨在以极低成本从预训练视觉骨干网络生成更密集特征。现有基于交叉注意力的上采样方法面临与骨干网络相同的效率扩展问题，而本文证明迭代上采样方法仍具有竞争力。UPLiFT 架构（Universal Pixel-Level Feature Transformer）采用局部注意力机制，在保持低推理开销的同时达到最先进性能。实验涵盖分割、深度估计等多个密集预测任务，UPLiFT 以更低计算成本超越或匹配基于交叉注意力的方法，为高效密集特征提取提供了新的技术路线。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "Persona Prompting as a Lens on LLM Social Reasoning",
+    "arxiv_id": "2601.20757",
+    "github": "https://github.com/jingyng/PP-social-reasoning",
+    "abstract": "本文研究角色提示（Persona Prompting）对大语言模型社会推理能力的影响，聚焦于仇恨检测等社会敏感任务中模型解释质量的变化。通过在带有词级标注的数据集上测量 LLM 生成理由与不同人口群体人工标注的一致性，评估角色提示对模型偏差和人类对齐的影响。在三个 LLM 上的实验揭示三个关键发现：（1）角色提示在最主观任务（仇恨检测）上提升分类性能，但在更客观任务上会降低性能；（2）角色提示能改变模型理由以更好对齐特定群体视角；（3）不同模型对角色提示的响应存在显著差异。研究为角色提示作为社会推理「透镜」提供了系统性评估框架。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-29",
+    "title": "SE-DiCoW: Self-Enrolled Diarization-Conditioned Whisper",
+    "arxiv_id": "2601.19194",
+    "github": "https://github.com/BUTSpeechFIT/TS-ASR-Whisper",
+    "abstract": "SE-DiCoW 针对多说话人环境下目标说话人 ASR 的关键局限——说话人完全重叠时 STNO 掩码的歧义性问题——提出改进方案。通过自注册机制，利用对话中目标说话人最活跃的片段作为固定条件，经由每个编码器层的交叉注意力注入。同时改进了数据分割、模型初始化和数据增强策略。综合改进使 SE-DiCoW 在 EMMA MT-ASR 基准测试上相较原始 DiCoW 将宏平均 tcpWER 降低 52.4%（相对值），在领域外数据集上展现出优异的泛化性能。",
+    "tags": ["微调"]
+  }
+]

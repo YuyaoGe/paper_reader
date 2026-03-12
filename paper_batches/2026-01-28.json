@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-01-28",
+    "title": "AgentDoG: A Diagnostic Guardrail Framework for AI Agent Safety and Security",
+    "arxiv_id": "2601.18491",
+    "github": "https://github.com/AI45Lab/AgentDoG",
+    "abstract": "随着AI智能体的兴起，自主工具调用和环境交互带来复杂安全挑战，现有护栏模型缺乏智能体风险感知和诊断透明度。本文提出统一三维分类体系，从来源（where）、失效模式（how）、后果（what）三个正交维度对智能体风险建模，并据此构建细粒度安全基准ATBench和诊断护栏框架AgentDoG。AgentDoG可跨轨迹进行上下文感知监控，并能诊断不安全行为及「看似安全但不合理」行为的根因，超越二元标签提供溯源和透明度。框架提供4B/7B/8B三种规格，覆盖Qwen和Llama模型家族，在多种复杂交互场景下达到最优安全审核性能，所有模型和数据集均开源。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-28",
+    "title": "AdaReasoner: Dynamic Tool Orchestration for Iterative Visual Reasoning",
+    "arxiv_id": "2601.18631",
+    "github": "https://github.com/ssmisya/AdaReasoner",
+    "abstract": "本文提出AdaReasoner，使多模态大模型将工具使用作为通用推理技能而非特定任务行为来学习。核心贡献包括三点：（1）可扩展数据整理流程，构建长程多步骤工具交互训练数据；（2）Tool-GRPO强化学习算法，基于最终任务成功优化工具选择与排序；（3）自适应学习机制，动态调节工具使用频率。实验表明AdaReasoner能自主采纳有益工具、抑制无关工具，7B基模型在多个基准上平均提升24.9%，在VSP和Jigsaw等任务上超越GPT-5等强大闭源系统。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-01-28",
+    "title": "Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision",
+    "arxiv_id": "2601.19798",
+    "github": "https://github.com/TencentCloudADP/youtu-vl",
+    "abstract": "现有视觉语言模型（VLM）存在文本主导优化偏差，将视觉信号仅视为被动条件输入，导致细粒度视觉信息丢失。本文提出Youtu-VL，引入视觉语言统一自回归监督（VLUAS）范式，将优化目标从「视觉为输入」转变为「视觉为目标」——将视觉token直接纳入预测流，对视觉细节和语言内容施加统一自回归监督。进一步将该范式扩展至视觉中心任务，使标准VLM无需任务特定添加即可完成视觉中心任务。大量实验表明Youtu-VL在通用多模态任务和视觉中心任务上均取得有竞争力的性能。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-28",
+    "title": "World Craft: Agentic Framework to Create Visualizable Worlds via Text",
+    "arxiv_id": "2601.09150",
+    "github": "https://github.com/HerzogFL/World-Craft",
+    "abstract": "本文提出World Craft，一个通过用户文本描述创建可执行可视化AI Town的智能体框架，面向无编程能力的非专家用户。框架由两个核心模块构成：World Scaffold是基于Godot引擎的结构化简洁标准化方案，为LLM高效定制交互式游戏场景提供脚手架；World Guild是多智能体框架，通过渐进式分析用户意图自动生成游戏资产和角色。该框架支持大型语言模型自动理解用户需求、生成场景代码，并最终创建可直观运行的虚拟世界环境。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-28",
+    "title": "Revisiting Parameter Server in LLM Post-Training",
+    "arxiv_id": "2601.19362",
+    "github": "https://github.com/sail-sg/odc",
+    "abstract": "现代数据并行训练偏好集合通信方式，但LLM后训练中序列长度高度不均衡，导致集合通信产生同步屏障，短序列设备大量空闲。本文重新审视参数服务器（PS）范式，提出按需通信（ODC），将PS融入全分片数据并行（FSDP），以点对点通信替代all-gather和reduce-scatter集合操作。ODC可在不平衡工作负载下减少同步开销，理论上支持异步更新。实验表明在序列长度高度不均衡的RLHF等场景中，ODC相比FSDP显著提升训练效率和设备利用率。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-28",
+    "title": "Selective Steering: Norm-Preserving Control Through Discriminative Layer Selection",
+    "arxiv_id": "2601.19375",
+    "github": "https://github.com/knoveleng/steering",
+    "abstract": "激活引导（activation steering）是一种推理时对齐干预方法，但现有方法存在系数调优敏感或违反范数保持的问题。本文提出Selective Steering，通过两个核心创新解决上述局限：（1）判别性层选择机制，识别对目标行为最具影响力的层并仅在这些层进行干预；（2）范数保持旋转操作，在2D子空间内实现连续控制同时保持激活分布不变，避免分布偏移和生成崩塌问题。该方法在小参数量（7B以下）模型上尤为有效，在多个对齐和安全控制任务上超越现有激活引导基线。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-28",
+    "title": "EvolVE: Evolutionary Search for LLM-based Verilog Generation and Optimization",
+    "arxiv_id": "2601.18067",
+    "github": "https://github.com/weiber2002/ICRTL",
+    "abstract": "Verilog设计周期劳动密集且需要大量领域专业知识，LLM虽提供自动化途径但受限于训练数据不足和顺序推理。本文提出EvolVE，首个系统分析多种进化策略在芯片设计任务上效果的框架：蒙特卡洛树搜索（MCTS）在功能正确性上最优，思路引导精化（IGR）在优化任务上更优，并利用结构化测试台生成（STG）加速进化过程。同时引入工业级基准IC-RTL，源自全国集成电路设计大赛。实验表明EvolVE在VerilogEval v2上达98.1%、RTLLM v2上达92%，并在IC-RTL上超越参赛者参考实现，Huffman编码任务PPA乘积降低66%。",
+    "tags": []
+  }
+]

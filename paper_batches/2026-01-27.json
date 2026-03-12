@@ -1,0 +1,90 @@
+[
+  {
+    "date": "2026-01-27",
+    "title": "Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers",
+    "arxiv_id": "2601.17367",
+    "github": "https://github.com/LCM-Lab/Elastic-Attention",
+    "abstract": "标准注意力机制的平方复杂度是大语言模型长上下文推理的性能瓶颈。现有混合稀疏-全注意力策略通常采用静态比例，无法根据输入动态调整。本文提出 Elastic Attention，通过在预训练模型中加入轻量级 Attention Router，在推理时动态地为每个注意力头分配全注意力或稀疏注意力模式，实现自适应稀疏率。训练仅需 8 张 A800 GPU 运行 12 小时，在三个长上下文基准测试上验证了其相对于现有方法的优越性，同时兼顾了强大的性能和高效的推理能力。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "iFSQ: Improving FSQ for Image Generation with 1 Line of Code",
+    "arxiv_id": "2601.17124",
+    "github": "https://github.com/Tencent-Hunyuan/iFSQ",
+    "abstract": "图像生成领域长期被自回归模型（离散 token）和扩散模型（连续隐变量）两条技术路线割裂。有限标量量化（FSQ）理论上可作为两者的桥梁，但原始 FSQ 的等间隔量化会导致激活崩塌。本文提出 iFSQ，仅需将激活函数替换为分布匹配映射以实施均匀先验，即可解决该问题。研究发现：(1) 自回归在效率上领先，扩散有更高质量上限；(2) 表示的最优比特约为 4 bits；(3) REPA 对齐的最优深度始终为总层数的 1/3。iFSQ 为统一 AR 与 Diffusion 建模提供了简洁有效的 tokenizer 基础。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "Masked Depth Modeling for Spatial Perception",
+    "arxiv_id": "2601.17895",
+    "github": "https://github.com/Robbyant/lingbot-depth",
+    "abstract": "空间视觉感知对自动驾驶、具身交互等物理世界应用至关重要，而 RGB-D 摄像头在镜面或无纹理表面等条件下深度获取不稳定。本文将深度传感器的不准确性建模为「带掩码」的信号，提出 LingBot-Depth 深度补全模型，通过视觉上下文结合掩码深度建模对深度图进行精化，并引入自动数据策略管道以扩展训练规模。该方法能在真实场景挑战条件下可靠地恢复准确的空间深度信息。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "AR-Omni: A Unified Autoregressive Model for Any-to-Any Generation",
+    "arxiv_id": "2601.17761",
+    "github": "https://github.com/ModalityDance/AR-Omni",
+    "abstract": "现有全模态大语言模型（Omni MLLM）通常依赖额外专家组件实现多模态生成，破坏了统一训练与推理的简洁性。本文提出 AR-Omni，基于自回归范式构建统一的任意到任意生成模型，在单一 Transformer 解码器下同时支持文本、图像和流式语音生成，无需专家解码器。针对模态不平衡问题引入任务感知损失重加权，采用轻量级 token 级感知对齐损失提升视觉质量，并通过有限状态解码机制平衡稳定性与创造性。实验表明 AR-Omni 在三种模态下均达到较强质量，语音生成实时因子达 0.88。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "CGPT: Cluster-Guided Partial Tables with LLM-Generated Supervision for Table Retrieval",
+    "arxiv_id": "2601.15849",
+    "github": "https://github.com/yumeow0122/CGPT",
+    "abstract": "通用嵌入模型在表格检索中表现欠佳，原因在于高度结构化内容导致语义压缩与查询-表格不匹配。本文提出 CGPT 训练框架，利用 K-means 对表格实例聚类并跨簇采样，构建语义多样的部分表格，再由 LLM 为这些部分表格生成合成查询，通过难负样本对比微调嵌入模型。在 MimoTable、OTTQA、FetaQA 和 E2E-WTQ 四个公开基准上，CGPT 相比 QGpT 平均 R@1 提升 16.54%，在统一多领域语料库设置中展示了强跨域泛化能力。已被 WWW 2026 收录。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "DRPG (Decompose, Retrieve, Plan, Generate): An Agentic Framework for Academic Rebuttal",
+    "arxiv_id": "2601.18081",
+    "github": "https://github.com/ulab-uiuc/DRPG-RebuttalAgent",
+    "abstract": "学术审稿回复是学术交流的关键环节，但现有方法多依赖现成 LLM 或简单流程，在长上下文理解和生成针对性回复方面表现不足。本文提出 DRPG 智能体框架，分四步自动生成学术回复：将审稿意见分解为原子级关切、从论文中检索相关证据、规划回复策略、生成对应回复。DRPG 的规划器识别最优回复方向的准确率超 98%，使用 8B 模型即超越人类平均水平，在顶级会议数据上显著优于现有方法，并支持多轮回复场景。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "One Adapts to Any: Meta Reward Modeling for Personalized LLM Alignment",
+    "arxiv_id": "2601.18731",
+    "github": "https://github.com/ModalityDance/MRM",
+    "abstract": "个性化 LLM 对齐依赖能捕获用户特定偏好的个性化奖励模型，面临两大挑战：个人反馈数据匮乏和对未见用户的高效适应。本文提出元奖励建模（MRM），将个性化奖励建模重构为元学习问题：将每位用户的奖励模型表示为基础奖励函数的加权组合，采用 MAML 风格框架优化权重初始化，支持少量反馈下的快速适应；引入鲁棒个性化目标（RPO）在元优化时重点关注难以学习的用户。在个性化偏好数据集上的实验表明 MRM 显著提升了少样本个性化能力并改善了用户鲁棒性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction",
+    "arxiv_id": "2601.17668",
+    "github": "https://github.com/Janghyun1230/FastKVzip",
+    "abstract": "KV 缓存管理对大语言模型的实际部署至关重要，但现有压缩方法往往在性能损失和计算开销之间存在权衡。本文提出基于门控的 KV 缓存淘汰方法，为冻结权重的 LLM 引入轻量级 sink-attention 门控模块以识别并保留关键 KV 对，无缝集成到 prefill 和 decoding 阶段，训练仅依赖前向传播，规避了昂贵的反向传播。在 Qwen2.5-1M、Qwen3 和 Gemma3 等模型上，淘汰 70% KV 缓存后仍保持近无损性能，涵盖长上下文理解、代码理解和数学推理等任务。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "The Side Effects of Being Smart: Safety Risks in MLLMs' Multi-Image Reasoning",
+    "arxiv_id": "2601.14127",
+    "github": "https://github.com/thu-coai/MIR-SafetyBench",
+    "abstract": "随着多模态大语言模型（MLLM）处理复杂多图像指令的推理能力增强，新的安全风险随之出现。本文提出 MIR-SafetyBench，首个聚焦多图像推理安全的基准，涵盖 9 种多图像关系共 2676 个实例。对 19 个 MLLM 的评测揭示了一个令人警惕的趋势：多图像推理能力越强的模型在 MIR-SafetyBench 上往往越脆弱。研究还发现不安全生成在注意力熵上低于安全生成，暗示模型可能过度聚焦于任务求解而忽视安全约束。代码和数据均已开源。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "TensorLens: End-to-End Transformer Analysis via High-Order Attention Tensors",
+    "arxiv_id": "2601.17958",
+    "github": "https://github.com/idoatad/TensorLens",
+    "abstract": "注意力矩阵分析是 Transformer 可解释性研究的基础，但现有方法多聚焦单个注意力头或层，难以反映模型全局行为。本文提出 TensorLens，将整个 Transformer 建模为单一输入相关线性算子，通过高阶注意力交互张量统一编码注意力、FFN、激活函数、归一化层和残差连接。该张量提供了理论一致且表达丰富的模型计算线性表示，实验验证其产生的表示比已有注意力聚合方法更丰富，可作为可解释性和模型理解工具开发的有力基础。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-27",
+    "title": "HalluGuard: Demystifying Data-Driven and Reasoning-Driven Hallucinations in LLMs",
+    "arxiv_id": "2601.18753",
+    "github": "https://github.com/Susan571/HalluGuard-ICLR2026",
+    "abstract": "LLM 的幻觉问题严重影响其在医疗、法律、科学发现等高风险领域的可靠性，通常源于数据驱动幻觉和推理驱动幻觉两类。现有方法通常只针对一类且依赖特定任务的启发式，泛化能力有限。本文提出幻觉风险界（Hallucination Risk Bound）统一理论框架，将幻觉风险正式分解为训练时不匹配（数据驱动）和推理时不稳定（推理驱动）两个分量；在此基础上提出基于 NTK 的评分方法 HalluGuard，利用 NTK 诱导的几何结构和捕获表示联合识别两类幻觉。在 10 个数据集、11 个基线、9 个主流 LLM 上持续实现最优性能，已被 ICLR 2026 收录。",
+    "tags": ["无需训练"]
+  }
+]
