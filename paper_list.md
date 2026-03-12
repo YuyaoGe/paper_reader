@@ -1,3 +1,53 @@
+## 2026年1月1日
+
+- **Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem** `[RL]` `[微调]` — [2512.24873](https://arxiv.org/abs/2512.24873) | [GitHub](https://github.com/alibaba/ROLL)
+  > 本文介绍 Agentic Learning Ecosystem（ALE），一个为 agent LLM 提供端到端训练基础设施的开源生态系统。ALE 由三部分组成：ROLL（后训练权重优化框架）、ROCK（轨迹生成沙盒管理器）和 iFlow CLI（agent 上下文工程框架）。基于 ALE，作者训练并发布了 ROME（Reasoning Open-source Morphable Engine），该模型在超过一百万条轨迹上训练，采用新颖的交互级策略对齐算法 IPA（Interaction-based Policy Alignment），在 SWE-bench Verified 和 Terminal Bench 等 agent 基准上表现优异，显著优于已有开源 agent 方案。
+
+- **Figure It Out: Improving the Frontier of Reasoning with Active Visual Thinking** `[RL]` `[VLM]` — [2512.24297](https://arxiv.org/abs/2512.24297) | [GitHub](https://github.com/chenmeiqii/FIGR)
+  > 本文提出 FIGR（Figure It out via Active Visual Thinking），通过主动视觉思维来提升大型视觉语言模型（VLM）的推理能力。FIGR 允许模型在推理过程中主动对图像进行标注、绘图和高亮操作，将视觉感知与语言推理深度结合。基于 RL 训练框架（verl），模型学会在何时及如何使用视觉工具辅助推理。实验表明，FIGR 在多个数学和科学推理任务上显著提升了 VLM 的推理准确率，展现出「用眼思考」的全新范式。
+
+- **Scaling Open-Ended Reasoning to Predict the Future** `[RL]` `[微调]` — [2512.25070](https://arxiv.org/abs/2512.25070) | [GitHub](https://github.com/OpenForecaster/scaling-forecasting-training)
+  > 本文研究如何训练语言模型对开放性预测问题进行推理与预测。作者从每日新闻中自动合成新颖的预测问题，构建数据集 OpenForesight，并在 Qwen3 思考模型上进行训练，引入 RL 强化学习改善 reward 函数设计。为避免未来信息泄漏，训练与评估均使用离线新闻语料库。最终得到 OpenForecaster 8B，在 2025 年 5-8 月的 held-out 测试中表现媲美更大规模的闭源模型，并在校准性和预测一致性上取得明显提升。全部模型、代码和数据开源。
+
+- **A unified framework for detecting point and collective anomalies in operating system logs via collaborative transformers** `[微调]` — [2512.23380](https://arxiv.org/abs/2512.23380) | [GitHub](https://github.com/NasirzadehMoh/CoLog)
+  > 本文提出 CoLog，一个用于操作系统日志异常检测的统一框架。CoLog 将多情感分析的思路引入日志异常检测，通过协作 Transformer 和多头注意力机制联合编码日志的多种模态（事件序列、参数、语义等），并引入模态适配层解决不同模态间的异质性问题。CoLog 可同时检测点异常和集体异常，在七个标准日志数据集上取得了平均精确率 99.63%、召回率 99.59%、F1 值 99.61% 的优异成绩，显著超越已有方法。
+
+
+## 2026年1月2日
+
+- **Improving Multi-step RAG with Hypergraph-based Memory for Long-Context Complex Relational Modeling** `[MeM]` `[长文本]` — [2512.23959](https://arxiv.org/abs/2512.23959) | [GitHub](https://github.com/Encyclomen/HGMem)
+  > 本文提出 HGMem，一种基于超图的记忆机制，用于改进多步检索增强生成（RAG）系统对长文本和复杂关系的建模能力。传统 RAG 方法在处理需要多跳推理的长上下文时，难以维护实体间的复杂关系结构。HGMem 将检索到的信息组织为超图结构，其中超边可以连接多个相关实体，从而更准确地建模高阶关系。系统通过对超图的动态更新和遍历，支持跨段落的复杂关系推理，在多步问答任务上相比平面向量检索方法有显著提升。
+
+- **DiffThinker: Towards Generative Multimodal Reasoning with Diffusion Models** `[无需训练]` `[VLM]` — [2512.24165](https://arxiv.org/abs/2512.24165) | [GitHub](https://github.com/lcqysl/DiffThinker)
+  > 本文提出 DiffThinker，探索利用扩散模型实现生成式多模态推理的新框架。不同于传统判别式推理方法，DiffThinker 将推理过程建模为生成问题，通过扩散模型的迭代去噪机制在潜在空间中逐步形成推理路径。实验在 FrozenLake、迷宫导航、数独、旅行商问题（TSP）等多种规划与推理任务上验证了方法的有效性，并与 DiffSynth-Studio 框架整合，展示了扩散模型在结构化多模态推理任务上的潜力。
+
+- **TESO: Tabu Enhanced Simulation Optimization for Noisy Black Box Problems** `[RL]` — [2512.24007](https://arxiv.org/abs/2512.24007) | [GitHub](https://github.com/bulentsoykan/TESO)
+  > 本文提出 TESO（禁忌增强仿真优化）算法，专门针对含噪声的黑盒优化问题。该方法将禁忌搜索策略与仿真优化框架相结合，在搜索过程中通过禁忌列表避免循环搜索，从而更高效地探索噪声环境下的解空间。TESO 提供了一个完整的 Python 包（含 setup.py 和 examples 目录），支持工业仿真、运筹优化等场景下的黑盒问题求解，在多个标准测试函数上相比基线优化方法展示了更好的鲁棒性和收敛速度。
+
+
+## 2026年1月5日
+
+- **Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization** `[RL]` `[微调]` — [2512.24615](https://arxiv.org/abs/2512.24615) | [GitHub](https://github.com/TencentCloudADP/youtu-agent)
+  > Youtu-Agent 是腾讯提出的一个模块化 LLM Agent 框架，旨在解决高配置成本与静态能力两大痛点。框架支持自动化生成 Agent（包括 Workflow 模式和 Meta-Agent 模式），可自动合成工具代码、Prompt 和配置文件。同时引入混合策略优化系统：Agent Practice 模块通过 in-context 优化无需参数更新即可积累经验；Agent RL 模块集成分布式训练框架实现大规模强化学习。实验表明，在 WebWalkerQA（71.47%）和 GAIA（72.8%）等基准上达到开源最优，RL 训练加速 40%，编程/推理和搜索能力分别提升 35% 和 21%。代码和框架已开源。
+
+- **SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning** `[RL]` `[VLM]` — [2512.24330](https://arxiv.org/abs/2512.24330) | [GitHub](https://github.com/OpenSenseNova/SenseNova-MARS)
+  > SenseNova-MARS 是一个多模态 Agentic 推理与搜索框架，通过强化学习赋予 VLM 交错式视觉推理与工具使用能力。框架动态整合图像搜索、文本搜索和图像裁剪工具，以应对知识密集型和细粒度视觉理解任务。RL 阶段提出了 BN-GSPO（批归一化群序列策略优化）算法，提升训练稳定性。同时推出首个面向搜索的高分辨率图像理解基准 HR-MMSearch。SenseNova-MARS-8B 在 MMSearch（67.84）和 HR-MMSearch（41.64）上超越 Gemini 和 GPT-5 等专有模型，展示了强大的工具调用与推理能力。代码、模型、数据集将全部开源。
+
+- **Fast-weight Product Key Memory** `[MeM]` `[长文本]` — [2601.00671](https://arxiv.org/abs/2601.00671) | [GitHub](https://github.com/SakanaAI/fast-weight-product-key-memory)
+  > FwPKM（快速权重乘积键存储器）是 Sakana AI 提出的一种新型动态记忆机制，将静态的 Product Key Memory（PKM）转化为可在训练和推理过程中动态更新的快速权重记忆模块。该机制使 LLM 具备情节记忆能力：主模型保留长期语义知识，FwPKM 则作为情节记忆负责存储近期事件、变量及中间推理步骤。通过内置的门控机制决定何时调用记忆，模型能够处理更长的上下文、可靠检索具体细节，并泛化至 128K token 序列（训练序列更短）。实验证明 FwPKM 在长上下文推理、知识融合等任务上表现优异。
+
+
+## 2026年1月6日
+
+- **Recursive Language Models** `[长文本]` `[无需训练]` — [2512.24601](https://arxiv.org/abs/2512.24601) | [GitHub](https://github.com/alexzhang13/rlm)
+  > 本文提出递归语言模型（RLMs），一种处理超长输入的推理时扩展策略。RLM 将超长 prompt 视为外部环境，允许 LLM 以编程方式检查、分解并递归调用自身处理 prompt 片段，从而支持超出上下文窗口两个数量级的输入。实验表明，RLM 在四类长文本任务上显著优于基础 LLM 和常见长文本方案，且查询成本相当甚至更低。该方法无需修改模型权重，是一种纯推理时的长文本解决方案。
+
+- **Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits** `[无需训练]` `[MeM]` — [2512.20578](https://arxiv.org/abs/2512.20578) | [GitHub](https://github.com/Amirhosein-gh98/Gnosis)
+  > 本文提出 Gnosis，一种轻量级自我感知机制，使冻结的 LLM 能够通过解码隐藏状态和注意力模式的信号进行内在自我验证。Gnosis 被动观察内部轨迹，将其压缩为固定预算描述符，以极低推理代价预测输出正确性（仅增加约 500 万参数）。在数学推理、开放域问答和学术知识测试上，Gnosis 持续优于强大的内部基线和大型外部评判器，并能零样本泛化至部分生成，实现对失败轨迹的早期检测。
+
+- **SimpleMem: Efficient Lifelong Memory for LLM Agents** `[MeM]` `[长文本]` — [2601.02553](https://arxiv.org/abs/2601.02553) | [GitHub](https://github.com/aiming-lab/SimpleMem)
+  > 本文提出 SimpleMem，一个基于语义无损压缩的高效终身记忆框架。SimpleMem 包含三阶段流水线：（1）语义结构化压缩，将非结构化交互提炼为紧凑的多视图索引记忆单元；（2）在线语义合成，实时将相关上下文整合为统一抽象表示以消除冗余；（3）意图感知检索规划，动态确定检索范围并高效构建精准上下文。实验显示，SimpleMem 在 LoCoMo 上平均 F1 提升 26.4%，同时将推理时 token 消耗降低最多 30 倍，实现性能与效率的优异平衡。
+
 ## 2026年1月7日
 
 - **NitroGen: An Open Foundation Model for Generalist Gaming Agents** `[VLM]` — [2601.02427](https://arxiv.org/abs/2601.02427) | [GitHub](https://github.com/MineDojo/NitroGen)

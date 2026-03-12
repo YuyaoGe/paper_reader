@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-01-01",
+    "title": "Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem",
+    "arxiv_id": "2512.24873",
+    "github": "https://github.com/alibaba/ROLL",
+    "abstract": "本文介绍 Agentic Learning Ecosystem（ALE），一个为 agent LLM 提供端到端训练基础设施的开源生态系统。ALE 由三部分组成：ROLL（后训练权重优化框架）、ROCK（轨迹生成沙盒管理器）和 iFlow CLI（agent 上下文工程框架）。基于 ALE，作者训练并发布了 ROME（Reasoning Open-source Morphable Engine），该模型在超过一百万条轨迹上训练，采用新颖的交互级策略对齐算法 IPA（Interaction-based Policy Alignment），在 SWE-bench Verified 和 Terminal Bench 等 agent 基准上表现优异，显著优于已有开源 agent 方案。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-01",
+    "title": "Figure It Out: Improving the Frontier of Reasoning with Active Visual Thinking",
+    "arxiv_id": "2512.24297",
+    "github": "https://github.com/chenmeiqii/FIGR",
+    "abstract": "本文提出 FIGR（Figure It out via Active Visual Thinking），通过主动视觉思维来提升大型视觉语言模型（VLM）的推理能力。FIGR 允许模型在推理过程中主动对图像进行标注、绘图和高亮操作，将视觉感知与语言推理深度结合。基于 RL 训练框架（verl），模型学会在何时及如何使用视觉工具辅助推理。实验表明，FIGR 在多个数学和科学推理任务上显著提升了 VLM 的推理准确率，展现出「用眼思考」的全新范式。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-01-01",
+    "title": "Scaling Open-Ended Reasoning to Predict the Future",
+    "arxiv_id": "2512.25070",
+    "github": "https://github.com/OpenForecaster/scaling-forecasting-training",
+    "abstract": "本文研究如何训练语言模型对开放性预测问题进行推理与预测。作者从每日新闻中自动合成新颖的预测问题，构建数据集 OpenForesight，并在 Qwen3 思考模型上进行训练，引入 RL 强化学习改善 reward 函数设计。为避免未来信息泄漏，训练与评估均使用离线新闻语料库。最终得到 OpenForecaster 8B，在 2025 年 5-8 月的 held-out 测试中表现媲美更大规模的闭源模型，并在校准性和预测一致性上取得明显提升。全部模型、代码和数据开源。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-01",
+    "title": "A unified framework for detecting point and collective anomalies in operating system logs via collaborative transformers",
+    "arxiv_id": "2512.23380",
+    "github": "https://github.com/NasirzadehMoh/CoLog",
+    "abstract": "本文提出 CoLog，一个用于操作系统日志异常检测的统一框架。CoLog 将多情感分析的思路引入日志异常检测，通过协作 Transformer 和多头注意力机制联合编码日志的多种模态（事件序列、参数、语义等），并引入模态适配层解决不同模态间的异质性问题。CoLog 可同时检测点异常和集体异常，在七个标准日志数据集上取得了平均精确率 99.63%、召回率 99.59%、F1 值 99.61% 的优异成绩，显著超越已有方法。",
+    "tags": ["微调"]
+  }
+]

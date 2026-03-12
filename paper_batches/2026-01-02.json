@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-01-02",
+    "title": "Improving Multi-step RAG with Hypergraph-based Memory for Long-Context Complex Relational Modeling",
+    "arxiv_id": "2512.23959",
+    "github": "https://github.com/Encyclomen/HGMem",
+    "abstract": "本文提出 HGMem，一种基于超图的记忆机制，用于改进多步检索增强生成（RAG）系统对长文本和复杂关系的建模能力。传统 RAG 方法在处理需要多跳推理的长上下文时，难以维护实体间的复杂关系结构。HGMem 将检索到的信息组织为超图结构，其中超边可以连接多个相关实体，从而更准确地建模高阶关系。系统通过对超图的动态更新和遍历，支持跨段落的复杂关系推理，在多步问答任务上相比平面向量检索方法有显著提升。",
+    "tags": ["MeM", "长文本"]
+  },
+  {
+    "date": "2026-01-02",
+    "title": "DiffThinker: Towards Generative Multimodal Reasoning with Diffusion Models",
+    "arxiv_id": "2512.24165",
+    "github": "https://github.com/lcqysl/DiffThinker",
+    "abstract": "本文提出 DiffThinker，探索利用扩散模型实现生成式多模态推理的新框架。不同于传统判别式推理方法，DiffThinker 将推理过程建模为生成问题，通过扩散模型的迭代去噪机制在潜在空间中逐步形成推理路径。实验在 FrozenLake、迷宫导航、数独、旅行商问题（TSP）等多种规划与推理任务上验证了方法的有效性，并与 DiffSynth-Studio 框架整合，展示了扩散模型在结构化多模态推理任务上的潜力。",
+    "tags": ["无需训练", "VLM"]
+  },
+  {
+    "date": "2026-01-02",
+    "title": "TESO: Tabu Enhanced Simulation Optimization for Noisy Black Box Problems",
+    "arxiv_id": "2512.24007",
+    "github": "https://github.com/bulentsoykan/TESO",
+    "abstract": "本文提出 TESO（禁忌增强仿真优化）算法，专门针对含噪声的黑盒优化问题。该方法将禁忌搜索策略与仿真优化框架相结合，在搜索过程中通过禁忌列表避免循环搜索，从而更高效地探索噪声环境下的解空间。TESO 提供了一个完整的 Python 包（含 setup.py 和 examples 目录），支持工业仿真、运筹优化等场景下的黑盒问题求解，在多个标准测试函数上相比基线优化方法展示了更好的鲁棒性和收敛速度。",
+    "tags": ["RL"]
+  }
+]

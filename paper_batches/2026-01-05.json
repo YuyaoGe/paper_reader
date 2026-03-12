@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-01-05",
+    "title": "Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization",
+    "arxiv_id": "2512.24615",
+    "github": "https://github.com/TencentCloudADP/youtu-agent",
+    "abstract": "Youtu-Agent 是腾讯提出的一个模块化 LLM Agent 框架，旨在解决高配置成本与静态能力两大痛点。框架支持自动化生成 Agent（包括 Workflow 模式和 Meta-Agent 模式），可自动合成工具代码、Prompt 和配置文件。同时引入混合策略优化系统：Agent Practice 模块通过 in-context 优化无需参数更新即可积累经验；Agent RL 模块集成分布式训练框架实现大规模强化学习。实验表明，在 WebWalkerQA（71.47%）和 GAIA（72.8%）等基准上达到开源最优，RL 训练加速 40%，编程/推理和搜索能力分别提升 35% 和 21%。代码和框架已开源。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-05",
+    "title": "SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning",
+    "arxiv_id": "2512.24330",
+    "github": "https://github.com/OpenSenseNova/SenseNova-MARS",
+    "abstract": "SenseNova-MARS 是一个多模态 Agentic 推理与搜索框架，通过强化学习赋予 VLM 交错式视觉推理与工具使用能力。框架动态整合图像搜索、文本搜索和图像裁剪工具，以应对知识密集型和细粒度视觉理解任务。RL 阶段提出了 BN-GSPO（批归一化群序列策略优化）算法，提升训练稳定性。同时推出首个面向搜索的高分辨率图像理解基准 HR-MMSearch。SenseNova-MARS-8B 在 MMSearch（67.84）和 HR-MMSearch（41.64）上超越 Gemini 和 GPT-5 等专有模型，展示了强大的工具调用与推理能力。代码、模型、数据集将全部开源。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-01-05",
+    "title": "Fast-weight Product Key Memory",
+    "arxiv_id": "2601.00671",
+    "github": "https://github.com/SakanaAI/fast-weight-product-key-memory",
+    "abstract": "FwPKM（快速权重乘积键存储器）是 Sakana AI 提出的一种新型动态记忆机制，将静态的 Product Key Memory（PKM）转化为可在训练和推理过程中动态更新的快速权重记忆模块。该机制使 LLM 具备情节记忆能力：主模型保留长期语义知识，FwPKM 则作为情节记忆负责存储近期事件、变量及中间推理步骤。通过内置的门控机制决定何时调用记忆，模型能够处理更长的上下文、可靠检索具体细节，并泛化至 128K token 序列（训练序列更短）。实验证明 FwPKM 在长上下文推理、知识融合等任务上表现优异。",
+    "tags": ["MeM", "长文本"]
+  }
+]

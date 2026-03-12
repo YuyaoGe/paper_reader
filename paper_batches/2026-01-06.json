@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-01-06",
+    "title": "Recursive Language Models",
+    "arxiv_id": "2512.24601",
+    "github": "https://github.com/alexzhang13/rlm",
+    "abstract": "本文提出递归语言模型（RLMs），一种处理超长输入的推理时扩展策略。RLM 将超长 prompt 视为外部环境，允许 LLM 以编程方式检查、分解并递归调用自身处理 prompt 片段，从而支持超出上下文窗口两个数量级的输入。实验表明，RLM 在四类长文本任务上显著优于基础 LLM 和常见长文本方案，且查询成本相当甚至更低。该方法无需修改模型权重，是一种纯推理时的长文本解决方案。",
+    "tags": ["长文本", "无需训练"]
+  },
+  {
+    "date": "2026-01-06",
+    "title": "Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits",
+    "arxiv_id": "2512.20578",
+    "github": "https://github.com/Amirhosein-gh98/Gnosis",
+    "abstract": "本文提出 Gnosis，一种轻量级自我感知机制，使冻结的 LLM 能够通过解码隐藏状态和注意力模式的信号进行内在自我验证。Gnosis 被动观察内部轨迹，将其压缩为固定预算描述符，以极低推理代价预测输出正确性（仅增加约 500 万参数）。在数学推理、开放域问答和学术知识测试上，Gnosis 持续优于强大的内部基线和大型外部评判器，并能零样本泛化至部分生成，实现对失败轨迹的早期检测。",
+    "tags": ["无需训练", "MeM"]
+  },
+  {
+    "date": "2026-01-06",
+    "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
+    "arxiv_id": "2601.02553",
+    "github": "https://github.com/aiming-lab/SimpleMem",
+    "abstract": "本文提出 SimpleMem，一个基于语义无损压缩的高效终身记忆框架。SimpleMem 包含三阶段流水线：（1）语义结构化压缩，将非结构化交互提炼为紧凑的多视图索引记忆单元；（2）在线语义合成，实时将相关上下文整合为统一抽象表示以消除冗余；（3）意图感知检索规划，动态确定检索范围并高效构建精准上下文。实验显示，SimpleMem 在 LoCoMo 上平均 F1 提升 26.4%，同时将推理时 token 消耗降低最多 30 倍，实现性能与效率的优异平衡。",
+    "tags": ["MeM", "长文本"]
+  }
+]
