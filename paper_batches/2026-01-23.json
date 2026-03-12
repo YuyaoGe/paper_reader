@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-01-23",
+    "title": "Evolving Computer Use Agents via Learning from Scalable Synthetic Experience",
+    "arxiv_id": "2601.15876",
+    "github": "https://github.com/meituan/EvoCUA",
+    "abstract": "EvoCUA 是一个原生计算机操作智能体（CUA），通过将数据生成与策略优化整合为自持进化循环来突破静态数据扩展的瓶颈。核心贡献包括：(1) 可验证合成引擎，自动生成多样任务并附带可执行验证器以缓解数据稀缺；(2) 支持数万个异步沙盒 rollout 的可扩展基础设施；(3) 基于大规模轨迹的迭代优化方法。与纯被动模仿静态数据集不同，EvoCUA 通过内在因果动态学习长视野计算机任务，在多个计算机操作基准上显著超越现有方法。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-23",
+    "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+    "arxiv_id": "2601.16206",
+    "github": "https://github.com/llm-in-sandbox/llm-in-sandbox",
+    "abstract": "LLM-in-Sandbox 使 LLM 在代码沙盒（虚拟计算机）中探索，以激发其在非代码领域的通用智能。研究发现强力 LLM 无需额外训练即可利用沙盒解决非代码任务（如访问外部资源获取新知识、利用文件系统处理长上下文、执行脚本满足格式要求）。进一步提出 LLM-in-Sandbox-RL，仅使用非智能体数据训练模型用于沙盒探索。实验表明该方法在数学、物理、化学、生物医学、长文本理解和指令跟随等领域均展现出稳健泛化能力，并开源为 Python 包。",
+    "tags": ["RL", "长文本", "无需训练"]
+  },
+  {
+    "date": "2026-01-23",
+    "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+    "arxiv_id": "2601.15165",
+    "github": "https://github.com/LeapLabTHU/JustGRPO",
+    "abstract": "本文揭示了扩散语言模型（dLLMs）中任意顺序生成的反直觉现象：灵活的生成顺序实际上收窄而非扩展了 dLLMs 的推理边界。研究发现 dLLMs 倾向于利用顺序灵活性绕过高不确定性 token，导致解空间过早坍缩。基于此，提出放弃任意顺序、改用标准 GRPO（JustGRPO）的方案，通过简单高效的强化学习直接提升 dLLMs 推理能力，在数学和代码任务上取得显著性能提升，同时大幅降低实现复杂度。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-23",
+    "title": "Scaling Text-to-Image Diffusion Transformers with Representation Autoencoders",
+    "arxiv_id": "2601.16208",
+    "github": "https://github.com/ZitengWangNYU/Scale-RAE",
+    "abstract": "本文研究表示自编码器（RAE）框架在大规模文字生成图像任务中的可扩展性。通过在冻结表示编码器（SigLIP-2）上扩展 RAE 解码器，使用网络、合成及文字渲染数据训练，发现规模提升改善整体保真度，但特定领域需定向数据组合。对比实验表明，在 0.5B 到 9.8B 参数量的扩散 Transformer 上，RAE 始终优于最先进的 FLUX VAE，且微调时 VAE 模型在 64 epoch 后灾难性过拟合，而 RAE 模型在 256 epoch 保持稳定，收敛更快、生成质量更好，建立了 RAE 作为大规模文字生成图像更强基础的地位。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-23",
+    "title": "Learning to Discover at Test Time",
+    "arxiv_id": "2601.16175",
+    "github": "https://github.com/test-time-training/discover",
+    "abstract": "TTT-Discover 提出在测试时进行强化学习（而非仅用冻结 LLM 搜索），使模型针对特定测试问题持续训练，目标是产生一个极优解而非平均意义上的多个好解。学习目标和搜索子程序均设计为优先探索最有前景的方案。在数学（Erdős 最小重叠问题、自相关不等式）、GPU 核工程（速度提升 2×）、算法竞赛（AtCoder）及单细胞生物学去噪问题上，TTT-Discover 几乎在所有尝试问题上都达到了新的最优水平，结果经专家或竞赛主办方审核确认。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-23",
+    "title": "SAMTok: Representing Any Mask with Two Words",
+    "arxiv_id": "2601.16093",
+    "github": "https://github.com/bytedance/Sa2VA",
+    "abstract": "SAMTok 是一个离散掩码分词器，将任意区域掩码压缩为两个特殊 token，并以高保真度重建掩码。通过将掩码视为新的语言 token，SAMTok 使基础多模态 LLM（如 QwenVL 系列）无需修改架构和专用损失设计，即可通过标准下一 token 预测和简单强化学习学习像素级能力。SAMTok 基于 SAM2，在 2.09 亿个多样掩码上训练，使用掩码编码器和残差向量量化生成离散紧凑信息丰富的 token，在 500 万 SAMTok 格式的掩码数据上微调后，多个像素级理解任务取得 SOTA 性能。",
+    "tags": ["VLM", "RL", "微调"]
+  },
+  {
+    "date": "2026-01-23",
+    "title": "CGPT: Cluster-Guided Partial Tables with LLM-Generated Supervision for Table Retrieval",
+    "arxiv_id": "2601.15849",
+    "github": "https://github.com/yumeow0122/CGPT",
+    "abstract": "CGPT 提出一种通过 LLM 生成监督信号增强表格检索的训练框架。核心方法：使用 K-means 聚类表格实例，跨聚类采样构建语义多样的部分表格，LLM 为这些部分表格生成合成查询，再用于硬负例对比微调嵌入模型。在四个公开基准（MimoTable、OTTQA、FetaQA、E2E-WTQ）上，CGPT 平均 R@1 提升 16.54%，并在跨域评估中展示出强泛化能力，即使使用较小 LLM 生成查询也依然有效，证明了语义引导的部分表格构建结合对比训练的有效性。",
+    "tags": ["微调"]
+  }
+]

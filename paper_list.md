@@ -1,3 +1,134 @@
+## 2026年1月19日
+
+- **RubricHub: A Comprehensive and Highly Discriminative Rubric Dataset via Automated Coarse-to-Fine Generation** `[RL]` `[微调]` — [2601.08430](https://arxiv.org/abs/2601.08430) | [GitHub](https://github.com/teqkilla/RubricHub)
+  > RubricHub 针对开放式文本生成缺乏真值标准的问题，提出一套自动化「由粗到细的 Rubric 生成框架」。该框架融合原则引导的合成、多模型聚合与难度演进三步骤，生成具有高判别力的精细化评分标准。基于此框架构建了包含约 11 万条跨领域样本的大规模数据集 RubricHub，并设计了两阶段后训练流程：基于 Rubric 的拒绝采样微调（RuFT）与强化学习（RuRL）。实验表明，以 Qwen3-14B 为骨干的后训练模型在 HealthBench 上取得 69.3 分的 SOTA 成绩，超越 GPT-5 等闭源前沿模型。数据合成代码已开源。
+
+- **BAPO: Boundary-Aware Policy Optimization for Reliable Agentic Search** `[RL]` — [2601.11037](https://arxiv.org/abs/2601.11037) | [GitHub](https://github.com/Liushiyu-0709/BAPO-Reliable-Search)
+  > 基于 RL 的智能体搜索系统在准确性上取得显著进展，但存在「可靠性盲区」：即使证据不足或推理触及边界，模型也很少表达「我不知道」（IDK）。本文提出 BAPO（边界感知策略优化），通过两个核心组件解决这一问题：(i) 基于分组的边界感知奖励，仅在推理真正触及上限时才激励 IDK 响应；(ii) 自适应奖励调节器，在早期探索阶段暂停该奖励，防止模型将 IDK 用作捷径。在四个基准上的实验表明，BAPO 在不损失准确率的前提下显著提升了智能体搜索的整体可靠性。
+
+- **Entropy Sentinel: Continuous LLM Accuracy Monitoring from Decoding Entropy Traces in STEM** `[无需训练]` — [2601.09001](https://arxiv.org/abs/2601.09001) | [GitHub](https://github.com/pmemoli/Entropy-Sentinel)
+  > 本文研究是否能用推理时信号估算 LLM 在不同领域的 slice 级准确率。对每个响应，从最终层 next-token 概率计算输出熵特征，并以多种统计量加以汇总；轻量分类器预测实例正确性，平均预测概率得出领域级准确率估计。在 10 个 STEM 推理基准上进行穷举 train/test 组合实验，横跨 9 个 LLM（6 个系列，3B–20B）。结果表明输出熵特征往往能追踪泛化准确率，多个模型呈现近单调领域排序，为可扩展的性能监控和目标数据采集提供了可访问的信号。
+
+- **ProFit: Leveraging High-Value Signals in SFT via Probability-Guided Token Selection** `[微调]` — [2601.09195](https://arxiv.org/abs/2601.09195) | [GitHub](https://github.com/Utaotao/ProFit)
+  > 传统 SFT 强制对齐单一参考答案，导致模型在非核心表达上过拟合。本文揭示 token 概率与语义重要性的内在联系：高概率 token 承载核心逻辑框架，低概率 token 多为可替换表达。基于此，提出 ProFit，选择性地屏蔽低概率 token 以防止表层过拟合。与耗费大量资源引入多参考答案不同，ProFit 以轻量方式从根本上缓解单一参考过拟合问题。在通用推理与数学基准上的大量实验确认，ProFit 相比传统 SFT 基线持续取得更好的效果。
+
+- **Language of Thought Shapes Output Diversity in Large Language Models** `[无需训练]` — [2601.11227](https://arxiv.org/abs/2601.11227) | [GitHub](https://github.com/iNLP-Lab/Multilingual-LoT-Diversity)
+  > 本文揭示控制模型「思维语言」（Language of Thought）是提升 LLM 输出多样性的新结构化来源。初步研究显示不同思维语言在模型思维空间中占据截然不同的区域。基于此，研究了多语言思维下的两种重复采样策略，并在输出统一为英语的条件下评估多样性。大量实验表明，将思维语言从英语切换为非英语语言可持续提高输出多样性，且思维空间中与英语距离越远的语言增益越大。跨语言聚合样本进一步带来组合效应，在多元文化对齐场景中拓宽了文化知识与价值取向的覆盖范围。
+
+- **PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records** `[MeM]` `[VLM]` — [2601.09636](https://arxiv.org/abs/2601.09636) | [GitHub](https://github.com/JiuTian-VL/PersonalAlign)
+  > 本文提出 PersonalAlign，一种面向个性化 GUI 智能体的层次化隐式意图对齐新任务，要求智能体利用长期用户记录作为持久上下文，解析模糊指令中被省略的偏好并主动预判用户意图。为此引入 AndroidIntent 基准（含 775 条偏好意图与 215 条常规意图），并设计 HIM-Agent（层次意图记忆智能体），该智能体维护持续更新的个人记忆并分层组织用户偏好与常规行为。对 GPT-5、Qwen3-VL、UI-TARS 等主流 GUI 智能体的评测表明，HIM-Agent 将执行性能与主动性能分别提升了 15.7% 和 7.3%。
+
+
+## 2026年1月20日
+
+- **Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge** `[RL]` — [2601.08808](https://arxiv.org/abs/2601.08808) | [GitHub](https://github.com/GMLR-Penn/Multiplex-Thinking)
+  > 本文提出 Multiplex Thinking，一种随机软推理机制，用于改进大型语言模型的链式思考（CoT）推理效率。核心方法是在每个推理步骤中采样 K 个候选 token，并将其嵌入聚合为单个连续的「多路 token」，从而在不增加序列长度的情况下表示多种可能的后续步骤。该机制兼容标准离散生成的词表嵌入先验和采样动态，并可直接使用 on-policy 强化学习进行优化。当模型置信度高时，多路 token 接近离散，与标准 CoT 一致；置信度低时则紧凑地表示多种可能路径。在多个数学推理基准上，Multiplex Thinking 在 Pass@1 至 Pass@1024 范围内均优于强基线，同时产生更短的序列。
+
+- **NAACL: Noise-AwAre Verbal Confidence Calibration for LLMs in RAG Systems** `[微调]` — [2601.11004](https://arxiv.org/abs/2601.11004) | [GitHub](https://github.com/HKUST-KnowComp/NAACL)
+  > 本文聚焦于检索增强生成（RAG）系统中大语言模型的置信度校准问题，指出噪声检索上下文会严重导致模型过度自信。作者系统研究了多个基准上的校准表现，提出「噪声感知置信度校准规则」（NAACL Rules），并设计了一套噪声感知监督微调框架（NAACL），利用有针对性的监督信号让模型内化对噪声的感知能力。实验结果表明，该方法在域内和域外场景下均能稳定降低期望校准误差（ECE），有效提升 RAG 系统中 LLM 输出的认知可靠性，增强实际部署中事实类应用的可信度。
+
+- **Medical SAM3: A Foundation Model for Universal Prompt-Driven Medical Image Segmentation** `[微调]` `[VLM]` — [2601.10880](https://arxiv.org/abs/2601.10880) | [GitHub](https://github.com/AIM-Research-Lab/Medical-SAM3)
+  > 本文提出 Medical SAM3，一个通用提示驱动的医学图像分割基础模型，通过对 SAM3 进行全参数微调得到。研究发现原版 SAM3 在医学数据上性能大幅退化，主要依赖真值边界框等强空间先验。为此，作者在涵盖 10 种影像模态的 33 个数据集上对 SAM3 进行完整微调，使模型获得鲁棒的领域特定表示，同时保留提示驱动的灵活性。仅使用文本提示（如「息肉」「肿瘤」）时，Medical SAM3 在 7 个未见外部数据集的零样本分割中将 Dice 分数从 11.9% 大幅提升至 73.9%，在器官、影像模态和维度方面均展示出显著性能提升。
+
+- **The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models** `[无需训练]` — [2601.10387](https://arxiv.org/abs/2601.10387) | [GitHub](https://github.com/safety-research/assistant-axis)
+  > 本文研究大语言模型人格空间的结构，通过提取对应多种角色原型的激活方向，发现其主成分是一个「助手轴」（Assistant Axis），衡量模型在多大程度上处于默认助手模式。向助手方向激活引导可强化有益无害行为；反向引导则使模型倾向扮演其他身份，极端情况下会产生神秘、戏剧化的表达风格。该轴同样存在于预训练模型中。沿助手轴的偏差可预测「人格漂移」现象，即模型滑入有害或奇异行为。将激活限制在助手轴的固定区域可稳定模型行为，对抗对抗性人格越狱攻击同样有效。
+
+- **YaPO: Learnable Sparse Activation Steering Vectors for Domain Adaptation** `[微调]` — [2601.08441](https://arxiv.org/abs/2601.08441) | [GitHub](https://github.com/MBZUAI-Paris/YaPO)
+  > 本文提出 YaPO（Yet another Policy Optimization），一种无参考方法，在稀疏自编码器（SAE）的潜在空间中学习稀疏激活引导向量，用于大语言模型的精细化对齐。针对密集引导向量因神经元多义性导致的特征纠缠问题，YaPO 通过 DPO 风格优化稀疏编码来产生解耦、可解释且高效的引导方向。实验表明，YaPO 收敛更快、训练更稳定，在文化对齐、幻觉抑制、越狱防御等场景均优于密集基线，且在 MMLU 上无可测量的知识退化。YaPO 提供了一个通用配方，适用于 LLM 的高效、稳定、精细对齐。
+
+- **Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs** `[RL]` — [2601.11061](https://arxiv.org/abs/2601.11061) | [GitHub](https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts)
+  > 本文研究带可验证奖励的强化学习（RLVR）中的「虚假奖励悖论」：即使在虚假或错误奖励下，Qwen 2.5 等模型也能取得显著性能提升。通过分析发现「困惑度悖论」——虚假 RLVR 导致答案 token 困惑度下降而提示端连贯性退化，表明模型绕过推理转向记忆。借助路径修补、Logit Lens、JSD 分析和神经微分方程，作者揭示了隐藏的「锚适配器电路」：中间层（L18-20）的功能锚触发记忆检索，后层（L21+）的结构适配器完成表示转换。通过缩放特定 MLP 键，可双向因果控制数据污染驱动的性能，为识别和缓解 RLVR 微调模型中的数据污染提供了机械可解释路径。
+
+
+## 2026年1月21日
+
+- **Agentic-R: Learning to Retrieve for Agentic Search** `[微调]` `[MeM]` — [2601.11888](https://arxiv.org/abs/2601.11888) | [GitHub](https://github.com/8421BCD/Agentic-R)
+  > 本文提出面向Agentic搜索的检索器训练框架Agentic-R。不同于传统单轮RAG检索器仅依赖局部查询-段落相关性，Agentic-R同时利用局部相关性和全局答案正确性来衡量段落价值。框架引入迭代训练策略，搜索智能体与检索器相互优化：智能体产生的高质量查询持续改进检索器，检索器反过来提升智能体的搜索能力。在七个单跳和多跳QA基准上的实验表明，Agentic-R在多个搜索智能体上均显著优于强基线，验证了专为多轮Agentic搜索设计的检索器的有效性。
+
+- **UniX: Unifying Autoregression and Diffusion for Chest X-Ray Understanding and Generation** `[VLM]` `[微调]` — [2601.11522](https://arxiv.org/abs/2601.11522) | [GitHub](https://github.com/ZrH42/UniX)
+  > UniX是一个面向胸部X光的统一医学基础模型，将视觉理解（自回归分支）与高保真生成（扩散分支）解耦，通过跨模态自注意力机制让生成过程受理解特征动态引导，实现两任务协同。结合严格数据清洗和多阶段训练策略，UniX在理解任务（Micro-F1）上提升46.1%，生成质量（FD-RadDino）提升24.2%，参数量仅为LLM-CXR的四分之一，性能接近任务专用模型，建立了医学图像理解与生成协同的可扩展范式。
+
+- **DARC: Decoupled Asymmetric Reasoning Curriculum for LLM Evolution** `[微调]` `[RL]` — [2601.13761](https://arxiv.org/abs/2601.13761) | [GitHub](https://github.com/RUCBM/DARC)
+  > DARC（解耦非对称推理课程）是一种稳定LLM自我进化的两阶段框架。第一阶段训练Questioner根据难度级别和外部语料生成难度校准的问题；第二阶段采用非对称自蒸馏机制，文档增强的教师模型生成高质量伪标签来监督无文档访问权限的学生Solver，消除自生成标签带来的bootstrapping误差。实验表明DARC与模型无关，在三个骨干模型和九个推理基准上平均提升10.9分，在无需人工标注的情况下接近全监督模型性能。
+
+- **Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment** `[微调]` — [2601.14249](https://arxiv.org/abs/2601.14249) | [GitHub](https://github.com/UmeanNever/RankSurprisalRatio)
+  > 本文提出Rank-Surprisal Ratio（RSR），一种衡量推理轨迹对学生模型适合性的简单指标，解决知识蒸馏中「更强教师并不总产生更好学生」的问题。RSR定义为轨迹平均token排名与平均负对数似然之比，同时捕捉对齐度（低绝对概率）和信息量（相对高排名token），在五个学生模型和11个教师的实验中与训练后性能高度相关（平均Spearman 0.86），优于现有指标，在轨迹选择和教师选择中均具实用价值。
+
+- **InT: Self-Proposed Interventions Enable Credit Assignment in LLM Reasoning** `[RL]` `[微调]` — [2601.14209](https://arxiv.org/abs/2601.14209) | [GitHub](https://github.com/intervention-training/int)
+  > 本文针对RL训练中仅对最终结果分配信用导致的步级错误归因问题，提出Intervention Training（InT）。模型通过识别推理轨迹中第一个错误步并提出单步干预来实现细粒度信用归因，利用参考解验证（验证比生成容易）构建SFT数据，将错误精准定位到特定步骤。InT得到的模型作为RL的更好初始化，在4B参数模型上于IMO-AnswerBench提升约14%，超越更大规模的开源模型如gpt-oss-20b。
+
+- **FutureOmni: Evaluating Future Forecasting from Omni-Modal Context for Multimodal LLMs** `[VLM]` `[微调]` — [2601.13836](https://arxiv.org/abs/2601.13836) | [GitHub](https://github.com/OpenMOSS/FutureOmni)
+  > FutureOmni是首个专门评估多模态LLM从视听环境预测未来事件能力的基准，包含919个视频和1034个多选QA对，覆盖8个主要领域。评估13个全模态和7个纯视频模型发现，当前系统在音视频未来预测上表现欠佳，最佳准确率64.8%（Gemini 3 Flash）。作者进一步提出全模态未来预测（OFF）训练策略，构建7K样本指令微调数据集，在FutureOmni及主流音视频/纯视频基准上均显著提升预测和泛化能力。
+
+- **FantasyVLN: Unified Multimodal Chain-of-Thought Reasoning for Vision-Language Navigation** `[VLM]` `[微调]` — [2601.13976](https://arxiv.org/abs/2601.13976) | [GitHub](https://github.com/Fantasy-AMAP/fantasy-vln)
+  > FantasyVLN提出统一隐式推理框架用于视语言导航（VLN），兼顾CoT推理优势而无需显式token开销。训练阶段利用预训练Visual AutoRegressor（VAR）将想象的视觉token编码到紧凑潜在空间，在统一多CoT策略下联合学习文本、视觉和多模态CoT模式。推理时模型直接映射指令到动作，同时享有推理感知表征。LH-VLN实验表明，与显式CoT方法相比，推理延迟降低一个数量级，同时提升成功率和效率。
+
+- **On the Evidentiary Limits of Membership Inference for Copyright Auditing** `[微调]` — [2601.12937](https://arxiv.org/abs/2601.12937) | [GitHub](https://github.com/kiraz-ai/sage-sps-mia)
+  > 本文研究成员推断攻击（MIA）作为版权审计证据的可靠性局限。作者提出SAGE（基于稀疏自编码器引导的改写框架），在保持语义内容的同时改变训练数据词法结构，用于模拟对抗性版权争议场景。实验表明，在SAGE生成的改写版本上微调的模型可使最先进MIA准确率显著下降，表明MIA信号对语义保持变换不鲁棒，在对抗设置下不足以独立作为LLM版权审计机制。
+
+- **SciCoQA: Quality Assurance for Scientific Paper--Code Alignment** `[长文本]` — [2601.12910](https://arxiv.org/abs/2601.12910) | [GitHub](https://github.com/ukplab/scicoqa)
+  > SciCoQA是用于检测科学论文与代码库间差异的数据集，包含611条论文-代码不一致样本（81条真实，530条合成），涵盖AI、物理、定量生物等领域。数据集结合GitHub issue和可重现性论文构建，并提出合成数据生成方法扩展规模。评估21个LLM的结果揭示该任务的高难度，尤其对涉及省略论文细节、长上下文输入的案例；最优模型GPT-5仅能检测45.7%的真实世界差异。
+
+
+## 2026年1月22日
+
+- **Paper2Rebuttal: A Multi-Agent Framework for Transparent Author Response Assistance** `[无需训练]` — [2601.14171](https://arxiv.org/abs/2601.14171) | [GitHub](https://github.com/AutoLab-SAI-SJTU/Paper2Rebuttal)
+  > RebuttalAgent 是首个将学术评审回复生成重构为「以证据为中心的规划任务」的多智能体框架。系统将审稿人反馈分解为原子性关切点，动态构建混合上下文（摘要+高保真原文），并集成自主外部搜索模块以引用文献证据。生成前先构造可检查的响应计划，确保每个论点都锚定于内部或外部证据。在提出的 RebuttalBench 上，该方法在覆盖率、忠实度和策略一致性方面超越强基线，为同行评审流程提供透明可控的辅助工具。
+
+- **GutenOCR: A Grounded Vision-Language Front-End for Documents** `[VLM]` `[微调]` — [2601.14490](https://arxiv.org/abs/2601.14490) | [GitHub](https://github.com/Roots-Automation/GutenOCR)
+  > GutenOCR 是通过微调 Qwen2.5-VL-3B 和 Qwen2.5-VL-7B 获得的接地式 OCR 前端模型族，以统一的提示接口暴露阅读、检测和定位能力。训练数据涵盖商业文档、科学文章和合成定位数据，支持全页及局部阅读、行/段落级边界框以及「x 在哪里？」条件查询。GutenOCR-7B 在 10.5K 张保留页上将其 Qwen2.5-VL-7B 骨干的综合接地 OCR 分数从 0.40 提升至 0.82，在 Fox 和 OmniDocBench v1.5 上显著改善区域/行级 OCR 及文本检测召回率。
+
+- **Behavior Knowledge Merge in Reinforced Agentic Models** `[RL]` `[微调]` — [2601.13572](https://arxiv.org/abs/2601.13572) | [GitHub](https://github.com/xiangchi-yuan/mrl)
+  > 本文提出 Reinforced Agent Merging（RAM），一种专为 RL 训练的智能体模型设计的分布感知合并框架。现有 SFT 风格合并方法在 RL 模型上表现欠佳，根源在于 RL 产生的任务向量高度稀疏且异质，简单全局平均会稀释关键任务特定行为。RAM 将参数更新解耦为共享和任务特有成分，对共享部分取平均，对唯一成分选择性保留并重新缩放。跨多个智能体域和模型架构的实验表明，RAM 不仅超越合并基线，还能释放智能体间的协同潜力，使融合后的通用模型超越各自专用模型的性能。
+
+- **Numina-Lean-Agent: An Open and General Agentic Reasoning System for Formal Mathematics** `[无需训练]` — [2601.14027](https://arxiv.org/abs/2601.14027) | [GitHub](https://github.com/project-numina/numina-lean-agent)
+  > 本文提出直接将通用编码 Agent 用于形式化数学推理的范式，无需针对特定任务训练形式化证明器。Numina-Lean-Agent 结合 Claude Code 与 Numina-Lean-MCP，实现与 Lean 的自主交互、相关定理检索以及非形式化辅助推理。使用 Claude Opus 4.5 作为基础模型，在 Putnam 2025 上解决了全部 12 题（12/12），与最优闭源系统持平。还成功协助数学家形式化了 Brascamp-Lieb 定理，验证了该范式超越基准评测的通用性。
+
+- **Render-of-Thought: Rendering Textual Chain-of-Thought as Images for Visual Latent Reasoning** `[VLM]` `[无需训练]` — [2601.14750](https://arxiv.org/abs/2601.14750) | [GitHub](https://github.com/TencentBAC/RoT)
+  > Render-of-Thought（RoT）是首个将文本推理链渲染为图像以显式化潜在推理过程的框架。通过利用 VLM 的视觉编码器作为语义锚点，将视觉嵌入与文本空间对齐，实现即插即用无需额外预训练。在数学和逻辑推理任务上，RoT 实现了 3-4 倍的 token 压缩和显著的推理加速，同时保持与显式 CoT 相当的性能，验证了通过视觉潜在空间表示推理链这一新范式的可行性。
+
+- **Typhoon OCR: Open Vision-Language Model For Thai Document Extraction** `[VLM]` `[微调]` — [2601.14722](https://arxiv.org/abs/2601.14722) | [GitHub](https://github.com/scb-10x/typhoon-ocr)
+  > Typhoon OCR 是针对泰语和英语文档提取的开源视觉语言模型，通过多阶段数据构建流程（传统 OCR + VLM 重构 + 合成数据）微调自 VLM 骨干。模型以统一框架支持文本转录、版面重建和文档结构一致性。最新版 Typhoon OCR V1.5 设计紧凑高效，减少对元数据的依赖。在金融报告、政府表单、书籍、信息图表和手写文档等多样泰语文档上，性能可与更大型的前沿专有模型媲美，同时计算成本大幅降低。
+
+- **Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models** `[微调]` `[MeM]` — [2601.15220](https://arxiv.org/abs/2601.15220) | [GitHub](https://github.com/parameterlab/privacy-collapse)
+  > 本文发现语言模型中的一种新现象：对前沿模型进行良性微调可导致「隐私崩溃」。多种训练数据模式可降低模型对上下文隐私的遵守，包括针对帮助性的优化、用户信息暴露和调试代码等。微调后的模型失去对上下文隐私规范的推理能力，并跨上下文违反记忆边界。关键在于，这是「静默失败」——模型在标准安全基准上仍保持高性能，但存在严重隐私漏洞。实验跨越 6 个模型、5 个微调数据集和 2 类任务验证了该现象，机制分析表明隐私表征对微调尤为脆弱。
+
+- **XR: Cross-Modal Agents for Composed Image Retrieval** `[VLM]` `[无需训练]` — [2601.14245](https://arxiv.org/abs/2601.14245) | [GitHub](https://github.com/01yzzyu/xr.github.io)
+  > XR 是一个无需训练的多智能体框架，将组合图像检索重构为逐步协调的推理过程。三类专用 Agent 协同工作：想象 Agent 通过跨模态生成合成目标表示，相似性 Agent 通过混合匹配进行粗粒度过滤，问答 Agent 通过针对性推理进行细粒度事实一致性验证。在 FashionIQ、CIRR 和 CIRCO 上相较强基线最高提升 38%，消融实验验证了每类 Agent 的必要性，展示了超越传统相似度计算的多模态推理能力。
+
+- **Implicit Neural Representation Facilitates Unified Universal Vision Encoding** `[微调]` — [2601.14256](https://arxiv.org/abs/2601.14256) | [GitHub](https://github.com/tiktok/huvr)
+  > HUVR 是首个同时学习适用于识别和生成的图像表示的统一模型。通过将模型训练为隐式神经表示（INR）的超网络，学习将图像映射为模型权重以实现快速精准重建，并整合知识蒸馏提升泛化能力。模型学到前所未有的压缩嵌入空间，在各类视觉任务上表现出色。该方法在图像表示学习上达到最优结果，同时凭借高质量微型嵌入实现生成能力，打通识别与生成之间的隔阂。
+
+- **AgentEHR: Advancing Autonomous Clinical Decision-Making via Retrospective Summarization** `[长文本]` `[MeM]` — [2601.13918](https://arxiv.org/abs/2601.13918) | [GitHub](https://github.com/BlueZeros/AgentEHR)
+  > AgentEHR 挑战 Agent 在原始高噪声电子健康记录数据库中执行复杂临床决策任务（如诊断和治疗规划），需要长程交互推理。为解决现有摘要方法导致的关键信息丢失问题，提出 RetroSum：通过回顾性机制动态重新评估交互历史以防止长上下文信息丢失，并通过演化经验策略从记忆库中检索积累的经验以弥合领域差距。实验表明 RetroSum 比竞争基线性能提升最高 29.16%，同时将交互错误减少最高 92.3%。
+
+- **CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning** `[RL]` `[微调]` — [2601.13262](https://arxiv.org/abs/2601.13262) | [GitHub](https://github.com/AikyamLab/cure-med)
+  > 本文针对多语言医学推理提出 CURE-MED 框架，包含跨 13 种语言（含阿姆哈拉语、约鲁巴语、斯瓦希里语等低资源语言）的高质量开放式医学推理数据集 CUREMED-BENCH，以及结合代码切换感知监督微调和 Group Relative Policy Optimization 的课程强化学习框架，同时优化逻辑正确性和语言稳定性。7B 参数规模下语言一致性 85.21%、逻辑正确性 54.35%；32B 参数规模下分别达 94.96% 和 70.04%，为多语言医疗场景的 LLM 部署提供可靠支持。
+
+
+## 2026年1月23日
+
+- **Evolving Computer Use Agents via Learning from Scalable Synthetic Experience** `[RL]` — [2601.15876](https://arxiv.org/abs/2601.15876) | [GitHub](https://github.com/meituan/EvoCUA)
+  > EvoCUA 是一个原生计算机操作智能体（CUA），通过将数据生成与策略优化整合为自持进化循环来突破静态数据扩展的瓶颈。核心贡献包括：(1) 可验证合成引擎，自动生成多样任务并附带可执行验证器以缓解数据稀缺；(2) 支持数万个异步沙盒 rollout 的可扩展基础设施；(3) 基于大规模轨迹的迭代优化方法。与纯被动模仿静态数据集不同，EvoCUA 通过内在因果动态学习长视野计算机任务，在多个计算机操作基准上显著超越现有方法。
+
+- **LLM-in-Sandbox Elicits General Agentic Intelligence** `[RL]` `[长文本]` `[无需训练]` — [2601.16206](https://arxiv.org/abs/2601.16206) | [GitHub](https://github.com/llm-in-sandbox/llm-in-sandbox)
+  > LLM-in-Sandbox 使 LLM 在代码沙盒（虚拟计算机）中探索，以激发其在非代码领域的通用智能。研究发现强力 LLM 无需额外训练即可利用沙盒解决非代码任务（如访问外部资源获取新知识、利用文件系统处理长上下文、执行脚本满足格式要求）。进一步提出 LLM-in-Sandbox-RL，仅使用非智能体数据训练模型用于沙盒探索。实验表明该方法在数学、物理、化学、生物医学、长文本理解和指令跟随等领域均展现出稳健泛化能力，并开源为 Python 包。
+
+- **The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models** `[RL]` — [2601.15165](https://arxiv.org/abs/2601.15165) | [GitHub](https://github.com/LeapLabTHU/JustGRPO)
+  > 本文揭示了扩散语言模型（dLLMs）中任意顺序生成的反直觉现象：灵活的生成顺序实际上收窄而非扩展了 dLLMs 的推理边界。研究发现 dLLMs 倾向于利用顺序灵活性绕过高不确定性 token，导致解空间过早坍缩。基于此，提出放弃任意顺序、改用标准 GRPO（JustGRPO）的方案，通过简单高效的强化学习直接提升 dLLMs 推理能力，在数学和代码任务上取得显著性能提升，同时大幅降低实现复杂度。
+
+- **Scaling Text-to-Image Diffusion Transformers with Representation Autoencoders** — [2601.16208](https://arxiv.org/abs/2601.16208) | [GitHub](https://github.com/ZitengWangNYU/Scale-RAE)
+  > 本文研究表示自编码器（RAE）框架在大规模文字生成图像任务中的可扩展性。通过在冻结表示编码器（SigLIP-2）上扩展 RAE 解码器，使用网络、合成及文字渲染数据训练，发现规模提升改善整体保真度，但特定领域需定向数据组合。对比实验表明，在 0.5B 到 9.8B 参数量的扩散 Transformer 上，RAE 始终优于最先进的 FLUX VAE，且微调时 VAE 模型在 64 epoch 后灾难性过拟合，而 RAE 模型在 256 epoch 保持稳定，收敛更快、生成质量更好，建立了 RAE 作为大规模文字生成图像更强基础的地位。
+
+- **Learning to Discover at Test Time** `[RL]` — [2601.16175](https://arxiv.org/abs/2601.16175) | [GitHub](https://github.com/test-time-training/discover)
+  > TTT-Discover 提出在测试时进行强化学习（而非仅用冻结 LLM 搜索），使模型针对特定测试问题持续训练，目标是产生一个极优解而非平均意义上的多个好解。学习目标和搜索子程序均设计为优先探索最有前景的方案。在数学（Erdős 最小重叠问题、自相关不等式）、GPU 核工程（速度提升 2×）、算法竞赛（AtCoder）及单细胞生物学去噪问题上，TTT-Discover 几乎在所有尝试问题上都达到了新的最优水平，结果经专家或竞赛主办方审核确认。
+
+- **SAMTok: Representing Any Mask with Two Words** `[VLM]` `[RL]` `[微调]` — [2601.16093](https://arxiv.org/abs/2601.16093) | [GitHub](https://github.com/bytedance/Sa2VA)
+  > SAMTok 是一个离散掩码分词器，将任意区域掩码压缩为两个特殊 token，并以高保真度重建掩码。通过将掩码视为新的语言 token，SAMTok 使基础多模态 LLM（如 QwenVL 系列）无需修改架构和专用损失设计，即可通过标准下一 token 预测和简单强化学习学习像素级能力。SAMTok 基于 SAM2，在 2.09 亿个多样掩码上训练，使用掩码编码器和残差向量量化生成离散紧凑信息丰富的 token，在 500 万 SAMTok 格式的掩码数据上微调后，多个像素级理解任务取得 SOTA 性能。
+
+- **CGPT: Cluster-Guided Partial Tables with LLM-Generated Supervision for Table Retrieval** `[微调]` — [2601.15849](https://arxiv.org/abs/2601.15849) | [GitHub](https://github.com/yumeow0122/CGPT)
+  > CGPT 提出一种通过 LLM 生成监督信号增强表格检索的训练框架。核心方法：使用 K-means 聚类表格实例，跨聚类采样构建语义多样的部分表格，LLM 为这些部分表格生成合成查询，再用于硬负例对比微调嵌入模型。在四个公开基准（MimoTable、OTTQA、FetaQA、E2E-WTQ）上，CGPT 平均 R@1 提升 16.54%，并在跨域评估中展示出强泛化能力，即使使用较小 LLM 生成查询也依然有效，证明了语义引导的部分表格构建结合对比训练的有效性。
+
 ## 2026年1月26日
 
 - **SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents** `[微调]` `[长文本]` — [2601.16746](https://arxiv.org/abs/2601.16746) | [GitHub](https://github.com/Ayanami1314/swe-pruner)

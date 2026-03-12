@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-01-20",
+    "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
+    "arxiv_id": "2601.08808",
+    "github": "https://github.com/GMLR-Penn/Multiplex-Thinking",
+    "abstract": "本文提出 Multiplex Thinking，一种随机软推理机制，用于改进大型语言模型的链式思考（CoT）推理效率。核心方法是在每个推理步骤中采样 K 个候选 token，并将其嵌入聚合为单个连续的「多路 token」，从而在不增加序列长度的情况下表示多种可能的后续步骤。该机制兼容标准离散生成的词表嵌入先验和采样动态，并可直接使用 on-policy 强化学习进行优化。当模型置信度高时，多路 token 接近离散，与标准 CoT 一致；置信度低时则紧凑地表示多种可能路径。在多个数学推理基准上，Multiplex Thinking 在 Pass@1 至 Pass@1024 范围内均优于强基线，同时产生更短的序列。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-20",
+    "title": "NAACL: Noise-AwAre Verbal Confidence Calibration for LLMs in RAG Systems",
+    "arxiv_id": "2601.11004",
+    "github": "https://github.com/HKUST-KnowComp/NAACL",
+    "abstract": "本文聚焦于检索增强生成（RAG）系统中大语言模型的置信度校准问题，指出噪声检索上下文会严重导致模型过度自信。作者系统研究了多个基准上的校准表现，提出「噪声感知置信度校准规则」（NAACL Rules），并设计了一套噪声感知监督微调框架（NAACL），利用有针对性的监督信号让模型内化对噪声的感知能力。实验结果表明，该方法在域内和域外场景下均能稳定降低期望校准误差（ECE），有效提升 RAG 系统中 LLM 输出的认知可靠性，增强实际部署中事实类应用的可信度。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-20",
+    "title": "Medical SAM3: A Foundation Model for Universal Prompt-Driven Medical Image Segmentation",
+    "arxiv_id": "2601.10880",
+    "github": "https://github.com/AIM-Research-Lab/Medical-SAM3",
+    "abstract": "本文提出 Medical SAM3，一个通用提示驱动的医学图像分割基础模型，通过对 SAM3 进行全参数微调得到。研究发现原版 SAM3 在医学数据上性能大幅退化，主要依赖真值边界框等强空间先验。为此，作者在涵盖 10 种影像模态的 33 个数据集上对 SAM3 进行完整微调，使模型获得鲁棒的领域特定表示，同时保留提示驱动的灵活性。仅使用文本提示（如「息肉」「肿瘤」）时，Medical SAM3 在 7 个未见外部数据集的零样本分割中将 Dice 分数从 11.9% 大幅提升至 73.9%，在器官、影像模态和维度方面均展示出显著性能提升。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-01-20",
+    "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
+    "arxiv_id": "2601.10387",
+    "github": "https://github.com/safety-research/assistant-axis",
+    "abstract": "本文研究大语言模型人格空间的结构，通过提取对应多种角色原型的激活方向，发现其主成分是一个「助手轴」（Assistant Axis），衡量模型在多大程度上处于默认助手模式。向助手方向激活引导可强化有益无害行为；反向引导则使模型倾向扮演其他身份，极端情况下会产生神秘、戏剧化的表达风格。该轴同样存在于预训练模型中。沿助手轴的偏差可预测「人格漂移」现象，即模型滑入有害或奇异行为。将激活限制在助手轴的固定区域可稳定模型行为，对抗对抗性人格越狱攻击同样有效。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-20",
+    "title": "YaPO: Learnable Sparse Activation Steering Vectors for Domain Adaptation",
+    "arxiv_id": "2601.08441",
+    "github": "https://github.com/MBZUAI-Paris/YaPO",
+    "abstract": "本文提出 YaPO（Yet another Policy Optimization），一种无参考方法，在稀疏自编码器（SAE）的潜在空间中学习稀疏激活引导向量，用于大语言模型的精细化对齐。针对密集引导向量因神经元多义性导致的特征纠缠问题，YaPO 通过 DPO 风格优化稀疏编码来产生解耦、可解释且高效的引导方向。实验表明，YaPO 收敛更快、训练更稳定，在文化对齐、幻觉抑制、越狱防御等场景均优于密集基线，且在 MMLU 上无可测量的知识退化。YaPO 提供了一个通用配方，适用于 LLM 的高效、稳定、精细对齐。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-20",
+    "title": "Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs",
+    "arxiv_id": "2601.11061",
+    "github": "https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts",
+    "abstract": "本文研究带可验证奖励的强化学习（RLVR）中的「虚假奖励悖论」：即使在虚假或错误奖励下，Qwen 2.5 等模型也能取得显著性能提升。通过分析发现「困惑度悖论」——虚假 RLVR 导致答案 token 困惑度下降而提示端连贯性退化，表明模型绕过推理转向记忆。借助路径修补、Logit Lens、JSD 分析和神经微分方程，作者揭示了隐藏的「锚适配器电路」：中间层（L18-20）的功能锚触发记忆检索，后层（L21+）的结构适配器完成表示转换。通过缩放特定 MLP 键，可双向因果控制数据污染驱动的性能，为识别和缓解 RLVR 微调模型中的数据污染提供了机械可解释路径。",
+    "tags": ["RL"]
+  }
+]

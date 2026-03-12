@@ -1,0 +1,90 @@
+[
+  {
+    "date": "2026-01-22",
+    "title": "Paper2Rebuttal: A Multi-Agent Framework for Transparent Author Response Assistance",
+    "arxiv_id": "2601.14171",
+    "github": "https://github.com/AutoLab-SAI-SJTU/Paper2Rebuttal",
+    "abstract": "RebuttalAgent 是首个将学术评审回复生成重构为「以证据为中心的规划任务」的多智能体框架。系统将审稿人反馈分解为原子性关切点，动态构建混合上下文（摘要+高保真原文），并集成自主外部搜索模块以引用文献证据。生成前先构造可检查的响应计划，确保每个论点都锚定于内部或外部证据。在提出的 RebuttalBench 上，该方法在覆盖率、忠实度和策略一致性方面超越强基线，为同行评审流程提供透明可控的辅助工具。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "GutenOCR: A Grounded Vision-Language Front-End for Documents",
+    "arxiv_id": "2601.14490",
+    "github": "https://github.com/Roots-Automation/GutenOCR",
+    "abstract": "GutenOCR 是通过微调 Qwen2.5-VL-3B 和 Qwen2.5-VL-7B 获得的接地式 OCR 前端模型族，以统一的提示接口暴露阅读、检测和定位能力。训练数据涵盖商业文档、科学文章和合成定位数据，支持全页及局部阅读、行/段落级边界框以及「x 在哪里？」条件查询。GutenOCR-7B 在 10.5K 张保留页上将其 Qwen2.5-VL-7B 骨干的综合接地 OCR 分数从 0.40 提升至 0.82，在 Fox 和 OmniDocBench v1.5 上显著改善区域/行级 OCR 及文本检测召回率。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "Behavior Knowledge Merge in Reinforced Agentic Models",
+    "arxiv_id": "2601.13572",
+    "github": "https://github.com/xiangchi-yuan/mrl",
+    "abstract": "本文提出 Reinforced Agent Merging（RAM），一种专为 RL 训练的智能体模型设计的分布感知合并框架。现有 SFT 风格合并方法在 RL 模型上表现欠佳，根源在于 RL 产生的任务向量高度稀疏且异质，简单全局平均会稀释关键任务特定行为。RAM 将参数更新解耦为共享和任务特有成分，对共享部分取平均，对唯一成分选择性保留并重新缩放。跨多个智能体域和模型架构的实验表明，RAM 不仅超越合并基线，还能释放智能体间的协同潜力，使融合后的通用模型超越各自专用模型的性能。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "Numina-Lean-Agent: An Open and General Agentic Reasoning System for Formal Mathematics",
+    "arxiv_id": "2601.14027",
+    "github": "https://github.com/project-numina/numina-lean-agent",
+    "abstract": "本文提出直接将通用编码 Agent 用于形式化数学推理的范式，无需针对特定任务训练形式化证明器。Numina-Lean-Agent 结合 Claude Code 与 Numina-Lean-MCP，实现与 Lean 的自主交互、相关定理检索以及非形式化辅助推理。使用 Claude Opus 4.5 作为基础模型，在 Putnam 2025 上解决了全部 12 题（12/12），与最优闭源系统持平。还成功协助数学家形式化了 Brascamp-Lieb 定理，验证了该范式超越基准评测的通用性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "Render-of-Thought: Rendering Textual Chain-of-Thought as Images for Visual Latent Reasoning",
+    "arxiv_id": "2601.14750",
+    "github": "https://github.com/TencentBAC/RoT",
+    "abstract": "Render-of-Thought（RoT）是首个将文本推理链渲染为图像以显式化潜在推理过程的框架。通过利用 VLM 的视觉编码器作为语义锚点，将视觉嵌入与文本空间对齐，实现即插即用无需额外预训练。在数学和逻辑推理任务上，RoT 实现了 3-4 倍的 token 压缩和显著的推理加速，同时保持与显式 CoT 相当的性能，验证了通过视觉潜在空间表示推理链这一新范式的可行性。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "Typhoon OCR: Open Vision-Language Model For Thai Document Extraction",
+    "arxiv_id": "2601.14722",
+    "github": "https://github.com/scb-10x/typhoon-ocr",
+    "abstract": "Typhoon OCR 是针对泰语和英语文档提取的开源视觉语言模型，通过多阶段数据构建流程（传统 OCR + VLM 重构 + 合成数据）微调自 VLM 骨干。模型以统一框架支持文本转录、版面重建和文档结构一致性。最新版 Typhoon OCR V1.5 设计紧凑高效，减少对元数据的依赖。在金融报告、政府表单、书籍、信息图表和手写文档等多样泰语文档上，性能可与更大型的前沿专有模型媲美，同时计算成本大幅降低。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models",
+    "arxiv_id": "2601.15220",
+    "github": "https://github.com/parameterlab/privacy-collapse",
+    "abstract": "本文发现语言模型中的一种新现象：对前沿模型进行良性微调可导致「隐私崩溃」。多种训练数据模式可降低模型对上下文隐私的遵守，包括针对帮助性的优化、用户信息暴露和调试代码等。微调后的模型失去对上下文隐私规范的推理能力，并跨上下文违反记忆边界。关键在于，这是「静默失败」——模型在标准安全基准上仍保持高性能，但存在严重隐私漏洞。实验跨越 6 个模型、5 个微调数据集和 2 类任务验证了该现象，机制分析表明隐私表征对微调尤为脆弱。",
+    "tags": ["微调", "MeM"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "XR: Cross-Modal Agents for Composed Image Retrieval",
+    "arxiv_id": "2601.14245",
+    "github": "https://github.com/01yzzyu/xr.github.io",
+    "abstract": "XR 是一个无需训练的多智能体框架，将组合图像检索重构为逐步协调的推理过程。三类专用 Agent 协同工作：想象 Agent 通过跨模态生成合成目标表示，相似性 Agent 通过混合匹配进行粗粒度过滤，问答 Agent 通过针对性推理进行细粒度事实一致性验证。在 FashionIQ、CIRR 和 CIRCO 上相较强基线最高提升 38%，消融实验验证了每类 Agent 的必要性，展示了超越传统相似度计算的多模态推理能力。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "Implicit Neural Representation Facilitates Unified Universal Vision Encoding",
+    "arxiv_id": "2601.14256",
+    "github": "https://github.com/tiktok/huvr",
+    "abstract": "HUVR 是首个同时学习适用于识别和生成的图像表示的统一模型。通过将模型训练为隐式神经表示（INR）的超网络，学习将图像映射为模型权重以实现快速精准重建，并整合知识蒸馏提升泛化能力。模型学到前所未有的压缩嵌入空间，在各类视觉任务上表现出色。该方法在图像表示学习上达到最优结果，同时凭借高质量微型嵌入实现生成能力，打通识别与生成之间的隔阂。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "AgentEHR: Advancing Autonomous Clinical Decision-Making via Retrospective Summarization",
+    "arxiv_id": "2601.13918",
+    "github": "https://github.com/BlueZeros/AgentEHR",
+    "abstract": "AgentEHR 挑战 Agent 在原始高噪声电子健康记录数据库中执行复杂临床决策任务（如诊断和治疗规划），需要长程交互推理。为解决现有摘要方法导致的关键信息丢失问题，提出 RetroSum：通过回顾性机制动态重新评估交互历史以防止长上下文信息丢失，并通过演化经验策略从记忆库中检索积累的经验以弥合领域差距。实验表明 RetroSum 比竞争基线性能提升最高 29.16%，同时将交互错误减少最高 92.3%。",
+    "tags": ["长文本", "MeM"]
+  },
+  {
+    "date": "2026-01-22",
+    "title": "CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning",
+    "arxiv_id": "2601.13262",
+    "github": "https://github.com/AikyamLab/cure-med",
+    "abstract": "本文针对多语言医学推理提出 CURE-MED 框架，包含跨 13 种语言（含阿姆哈拉语、约鲁巴语、斯瓦希里语等低资源语言）的高质量开放式医学推理数据集 CUREMED-BENCH，以及结合代码切换感知监督微调和 Group Relative Policy Optimization 的课程强化学习框架，同时优化逻辑正确性和语言稳定性。7B 参数规模下语言一致性 85.21%、逻辑正确性 54.35%；32B 参数规模下分别达 94.96% 和 70.04%，为多语言医疗场景的 LLM 部署提供可靠支持。",
+    "tags": ["RL", "微调"]
+  }
+]

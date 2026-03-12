@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-01-21",
+    "title": "Agentic-R: Learning to Retrieve for Agentic Search",
+    "arxiv_id": "2601.11888",
+    "github": "https://github.com/8421BCD/Agentic-R",
+    "abstract": "本文提出面向Agentic搜索的检索器训练框架Agentic-R。不同于传统单轮RAG检索器仅依赖局部查询-段落相关性，Agentic-R同时利用局部相关性和全局答案正确性来衡量段落价值。框架引入迭代训练策略，搜索智能体与检索器相互优化：智能体产生的高质量查询持续改进检索器，检索器反过来提升智能体的搜索能力。在七个单跳和多跳QA基准上的实验表明，Agentic-R在多个搜索智能体上均显著优于强基线，验证了专为多轮Agentic搜索设计的检索器的有效性。",
+    "tags": ["微调", "MeM"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "UniX: Unifying Autoregression and Diffusion for Chest X-Ray Understanding and Generation",
+    "arxiv_id": "2601.11522",
+    "github": "https://github.com/ZrH42/UniX",
+    "abstract": "UniX是一个面向胸部X光的统一医学基础模型，将视觉理解（自回归分支）与高保真生成（扩散分支）解耦，通过跨模态自注意力机制让生成过程受理解特征动态引导，实现两任务协同。结合严格数据清洗和多阶段训练策略，UniX在理解任务（Micro-F1）上提升46.1%，生成质量（FD-RadDino）提升24.2%，参数量仅为LLM-CXR的四分之一，性能接近任务专用模型，建立了医学图像理解与生成协同的可扩展范式。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "DARC: Decoupled Asymmetric Reasoning Curriculum for LLM Evolution",
+    "arxiv_id": "2601.13761",
+    "github": "https://github.com/RUCBM/DARC",
+    "abstract": "DARC（解耦非对称推理课程）是一种稳定LLM自我进化的两阶段框架。第一阶段训练Questioner根据难度级别和外部语料生成难度校准的问题；第二阶段采用非对称自蒸馏机制，文档增强的教师模型生成高质量伪标签来监督无文档访问权限的学生Solver，消除自生成标签带来的bootstrapping误差。实验表明DARC与模型无关，在三个骨干模型和九个推理基准上平均提升10.9分，在无需人工标注的情况下接近全监督模型性能。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment",
+    "arxiv_id": "2601.14249",
+    "github": "https://github.com/UmeanNever/RankSurprisalRatio",
+    "abstract": "本文提出Rank-Surprisal Ratio（RSR），一种衡量推理轨迹对学生模型适合性的简单指标，解决知识蒸馏中「更强教师并不总产生更好学生」的问题。RSR定义为轨迹平均token排名与平均负对数似然之比，同时捕捉对齐度（低绝对概率）和信息量（相对高排名token），在五个学生模型和11个教师的实验中与训练后性能高度相关（平均Spearman 0.86），优于现有指标，在轨迹选择和教师选择中均具实用价值。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "InT: Self-Proposed Interventions Enable Credit Assignment in LLM Reasoning",
+    "arxiv_id": "2601.14209",
+    "github": "https://github.com/intervention-training/int",
+    "abstract": "本文针对RL训练中仅对最终结果分配信用导致的步级错误归因问题，提出Intervention Training（InT）。模型通过识别推理轨迹中第一个错误步并提出单步干预来实现细粒度信用归因，利用参考解验证（验证比生成容易）构建SFT数据，将错误精准定位到特定步骤。InT得到的模型作为RL的更好初始化，在4B参数模型上于IMO-AnswerBench提升约14%，超越更大规模的开源模型如gpt-oss-20b。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "FutureOmni: Evaluating Future Forecasting from Omni-Modal Context for Multimodal LLMs",
+    "arxiv_id": "2601.13836",
+    "github": "https://github.com/OpenMOSS/FutureOmni",
+    "abstract": "FutureOmni是首个专门评估多模态LLM从视听环境预测未来事件能力的基准，包含919个视频和1034个多选QA对，覆盖8个主要领域。评估13个全模态和7个纯视频模型发现，当前系统在音视频未来预测上表现欠佳，最佳准确率64.8%（Gemini 3 Flash）。作者进一步提出全模态未来预测（OFF）训练策略，构建7K样本指令微调数据集，在FutureOmni及主流音视频/纯视频基准上均显著提升预测和泛化能力。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "FantasyVLN: Unified Multimodal Chain-of-Thought Reasoning for Vision-Language Navigation",
+    "arxiv_id": "2601.13976",
+    "github": "https://github.com/Fantasy-AMAP/fantasy-vln",
+    "abstract": "FantasyVLN提出统一隐式推理框架用于视语言导航（VLN），兼顾CoT推理优势而无需显式token开销。训练阶段利用预训练Visual AutoRegressor（VAR）将想象的视觉token编码到紧凑潜在空间，在统一多CoT策略下联合学习文本、视觉和多模态CoT模式。推理时模型直接映射指令到动作，同时享有推理感知表征。LH-VLN实验表明，与显式CoT方法相比，推理延迟降低一个数量级，同时提升成功率和效率。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "On the Evidentiary Limits of Membership Inference for Copyright Auditing",
+    "arxiv_id": "2601.12937",
+    "github": "https://github.com/kiraz-ai/sage-sps-mia",
+    "abstract": "本文研究成员推断攻击（MIA）作为版权审计证据的可靠性局限。作者提出SAGE（基于稀疏自编码器引导的改写框架），在保持语义内容的同时改变训练数据词法结构，用于模拟对抗性版权争议场景。实验表明，在SAGE生成的改写版本上微调的模型可使最先进MIA准确率显著下降，表明MIA信号对语义保持变换不鲁棒，在对抗设置下不足以独立作为LLM版权审计机制。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-21",
+    "title": "SciCoQA: Quality Assurance for Scientific Paper--Code Alignment",
+    "arxiv_id": "2601.12910",
+    "github": "https://github.com/ukplab/scicoqa",
+    "abstract": "SciCoQA是用于检测科学论文与代码库间差异的数据集，包含611条论文-代码不一致样本（81条真实，530条合成），涵盖AI、物理、定量生物等领域。数据集结合GitHub issue和可重现性论文构建，并提出合成数据生成方法扩展规模。评估21个LLM的结果揭示该任务的高难度，尤其对涉及省略论文细节、长上下文输入的案例；最优模型GPT-5仅能检测45.7%的真实世界差异。",
+    "tags": ["长文本"]
+  }
+]

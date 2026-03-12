@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-01-19",
+    "title": "RubricHub: A Comprehensive and Highly Discriminative Rubric Dataset via Automated Coarse-to-Fine Generation",
+    "arxiv_id": "2601.08430",
+    "github": "https://github.com/teqkilla/RubricHub",
+    "abstract": "RubricHub 针对开放式文本生成缺乏真值标准的问题，提出一套自动化「由粗到细的 Rubric 生成框架」。该框架融合原则引导的合成、多模型聚合与难度演进三步骤，生成具有高判别力的精细化评分标准。基于此框架构建了包含约 11 万条跨领域样本的大规模数据集 RubricHub，并设计了两阶段后训练流程：基于 Rubric 的拒绝采样微调（RuFT）与强化学习（RuRL）。实验表明，以 Qwen3-14B 为骨干的后训练模型在 HealthBench 上取得 69.3 分的 SOTA 成绩，超越 GPT-5 等闭源前沿模型。数据合成代码已开源。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-19",
+    "title": "BAPO: Boundary-Aware Policy Optimization for Reliable Agentic Search",
+    "arxiv_id": "2601.11037",
+    "github": "https://github.com/Liushiyu-0709/BAPO-Reliable-Search",
+    "abstract": "基于 RL 的智能体搜索系统在准确性上取得显著进展，但存在「可靠性盲区」：即使证据不足或推理触及边界，模型也很少表达「我不知道」（IDK）。本文提出 BAPO（边界感知策略优化），通过两个核心组件解决这一问题：(i) 基于分组的边界感知奖励，仅在推理真正触及上限时才激励 IDK 响应；(ii) 自适应奖励调节器，在早期探索阶段暂停该奖励，防止模型将 IDK 用作捷径。在四个基准上的实验表明，BAPO 在不损失准确率的前提下显著提升了智能体搜索的整体可靠性。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-19",
+    "title": "Entropy Sentinel: Continuous LLM Accuracy Monitoring from Decoding Entropy Traces in STEM",
+    "arxiv_id": "2601.09001",
+    "github": "https://github.com/pmemoli/Entropy-Sentinel",
+    "abstract": "本文研究是否能用推理时信号估算 LLM 在不同领域的 slice 级准确率。对每个响应，从最终层 next-token 概率计算输出熵特征，并以多种统计量加以汇总；轻量分类器预测实例正确性，平均预测概率得出领域级准确率估计。在 10 个 STEM 推理基准上进行穷举 train/test 组合实验，横跨 9 个 LLM（6 个系列，3B–20B）。结果表明输出熵特征往往能追踪泛化准确率，多个模型呈现近单调领域排序，为可扩展的性能监控和目标数据采集提供了可访问的信号。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-19",
+    "title": "ProFit: Leveraging High-Value Signals in SFT via Probability-Guided Token Selection",
+    "arxiv_id": "2601.09195",
+    "github": "https://github.com/Utaotao/ProFit",
+    "abstract": "传统 SFT 强制对齐单一参考答案，导致模型在非核心表达上过拟合。本文揭示 token 概率与语义重要性的内在联系：高概率 token 承载核心逻辑框架，低概率 token 多为可替换表达。基于此，提出 ProFit，选择性地屏蔽低概率 token 以防止表层过拟合。与耗费大量资源引入多参考答案不同，ProFit 以轻量方式从根本上缓解单一参考过拟合问题。在通用推理与数学基准上的大量实验确认，ProFit 相比传统 SFT 基线持续取得更好的效果。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-19",
+    "title": "Language of Thought Shapes Output Diversity in Large Language Models",
+    "arxiv_id": "2601.11227",
+    "github": "https://github.com/iNLP-Lab/Multilingual-LoT-Diversity",
+    "abstract": "本文揭示控制模型「思维语言」（Language of Thought）是提升 LLM 输出多样性的新结构化来源。初步研究显示不同思维语言在模型思维空间中占据截然不同的区域。基于此，研究了多语言思维下的两种重复采样策略，并在输出统一为英语的条件下评估多样性。大量实验表明，将思维语言从英语切换为非英语语言可持续提高输出多样性，且思维空间中与英语距离越远的语言增益越大。跨语言聚合样本进一步带来组合效应，在多元文化对齐场景中拓宽了文化知识与价值取向的覆盖范围。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-19",
+    "title": "PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
+    "arxiv_id": "2601.09636",
+    "github": "https://github.com/JiuTian-VL/PersonalAlign",
+    "abstract": "本文提出 PersonalAlign，一种面向个性化 GUI 智能体的层次化隐式意图对齐新任务，要求智能体利用长期用户记录作为持久上下文，解析模糊指令中被省略的偏好并主动预判用户意图。为此引入 AndroidIntent 基准（含 775 条偏好意图与 215 条常规意图），并设计 HIM-Agent（层次意图记忆智能体），该智能体维护持续更新的个人记忆并分层组织用户偏好与常规行为。对 GPT-5、Qwen3-VL、UI-TARS 等主流 GUI 智能体的评测表明，HIM-Agent 将执行性能与主动性能分别提升了 15.7% 和 7.3%。",
+    "tags": ["MeM", "VLM"]
+  }
+]
