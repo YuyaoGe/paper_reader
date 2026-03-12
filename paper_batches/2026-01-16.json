@@ -1,0 +1,190 @@
+[
+  {
+    "date": "2026-01-16",
+    "title": "Urban Socio-Semantic Segmentation with Vision-Language Reasoning",
+    "arxiv_id": "2601.10477",
+    "github": "https://github.com/AMAP-ML/SocioReasoner",
+    "abstract": "城市遥感图像中的社会语义分割任务，现有模型能可靠地识别具有物理属性的实体（如建筑物、水体），但对学校、公园等社会定义类别仍然困难。本文通过视觉语言模型推理实现社会语义分割，引入了 SocioSeg 数据集（包含卫星影像、数字地图及像素级社会语义标注），并提出 SocioReasoner 框架，通过跨模态识别与多阶段推理模拟人类标注过程，使用强化学习优化不可微的推理过程，从而激发视觉语言模型的推理能力。实验表明该方法在零样本泛化和精度上均超越现有模型。",
+    "tags": [
+      "VLM",
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Rewarding the Rare: Uniqueness-Aware RL for Creative Problem Solving in LLMs",
+    "arxiv_id": "2601.08763",
+    "github": "https://github.com/zhiyuanhubj/Uniqueness-Aware-RL",
+    "abstract": "强化学习在大型语言模型后训练中面临\"探索崩溃\"问题：策略过早集中于少数主导推理模式，提升 pass@1 却损害 pass@k。本文提出 Uniqueness-Aware RL，一种 rollout 级目标函数，通过 LLM 判别器对同一问题的推理路径按高层策略聚类，对稀有正确策略赋予更高奖励。该方法在数学、物理和医学推理任务中持续改善 pass@k 和 AUC@K，同时不牺牲 pass@1，有效保持了探索多样性。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning",
+    "arxiv_id": "2601.09667",
+    "github": "https://github.com/zhiyuanhubj/MATTRL",
+    "abstract": "多智能体强化学习训练代价高昂且不稳定，本文提出 MATTRL（多智能体测试时强化学习），在推理阶段向多智能体协作中注入结构化文本经验，无需重新训练。MATTRL 组建多专家团队进行多轮讨论，检索并整合测试时经验以达成最终共识。通过信用分配构建轮次级经验池，并重新注入对话。在医学、数学和教育基准上，相比多智能体基线平均提升 3.67%，相比单智能体基线提升 8.67%，提供了一种鲁棒、稳定的无调优多智能体推理方案。",
+    "tags": [
+      "RL",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "VIBE: Visual Instruction Based Editor",
+    "arxiv_id": "2601.02242",
+    "github": "https://github.com/ai-forever/vibe",
+    "abstract": "基于指令的图像编辑领域，本文提出一款紧凑高效的编辑 pipeline，使用 2B 参数的 Qwen3-VL 模型引导编辑过程，配合 1.6B 参数的 Sana1.5 扩散模型生成图像。设计目标为低推理成本与严格的源图一致性，重点优化属性调整、对象去除、背景修改等保留输入图像的编辑类型。在 ImgEdit 和 GEdit 基准上，性能达到或超越参数量更大的基线模型，且整个系统仅需 24GB 显存，在 H100 上约 4 秒生成 2K 分辨率图像。",
+    "tags": [
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "HeartMuLa: A Family of Open Sourced Music Foundation Models",
+    "arxiv_id": "2601.10547",
+    "github": "https://github.com/HeartMuLa/heartlib",
+    "abstract": "本文提出一系列开源音乐基础模型，涵盖四大核心组件：HeartCLAP（音频-文本对齐模型）、HeartTranscriptor（歌词识别模型）、HeartCodec（低帧率高保真音乐编解码器，12.5Hz）以及 HeartMuLa（基于 LLM 的歌曲生成模型，支持风格描述、歌词、参考音频等丰富可控条件）。模型规模扩展至 7B 参数后性能显著提升。首次证明仅使用学术规模数据和 GPU 资源即可复现 Suno 级别的商业品质，为多模态内容创作研究提供强大基线。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Beyond Static Tools: Test-Time Tool Evolution for Scientific Reasoning",
+    "arxiv_id": "2601.07641",
+    "github": "https://github.com/lujiaxuan0520/Test-Time-Tool-Evol",
+    "abstract": "现有 LLM 智能体依赖静态预定义工具库，在科学领域中工具稀疏、异质且本质不完备，这一范式根本性地失效。本文提出测试时工具演化（TTE）新范式，使智能体能够在推理过程中合成、验证并演化可执行工具，将工具从固定资源转化为问题驱动的构件。引入 SciEvo 评估套件（1590 个科学推理任务，925 个自动演化工具），实验表明 TTE 在精度和工具效率上达到最优，并支持跨领域的工具迁移适应。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Toward Ultra-Long-Horizon Agentic Science: Cognitive Accumulation for Machine Learning Engineering",
+    "arxiv_id": "2601.10402",
+    "github": "https://github.com/sjtu-sai-agents/ML-Master",
+    "abstract": "AI 科学智能体面临超长时域自主的瓶颈：如何在跨越数天乃至数周实验周期中保持策略连贯性与迭代修正能力。本文提出 ML-Master 2.0，引入层次认知缓存（HCC）机制，受计算机系统启发，将上下文管理重构为认知积累过程，动态将瞬态执行轨迹提炼为稳定知识和跨任务智慧。在 OpenAI MLE-Bench 24 小时预算评估中，ML-Master 2.0 达到最优 56.44% 奖牌率，为超长时域自主科学探索提供可扩展蓝图。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "DanQing: An Up-to-Date Large-Scale Chinese Vision-Language Pre-training Dataset",
+    "arxiv_id": "2601.10305",
+    "github": "https://github.com/deepglint/DanQing",
+    "abstract": "中文视觉语言预训练因高质量数据匮乏而严重滞后。本文构建了 DanQing 数据集，包含来自 Common Crawl 的 1 亿图文对，采用严格筛选流程确保数据质量，且主要基于 2024-2025 年网络数据，能更好地捕捉当下语义趋势。通过对 SigLIP2 模型的持续预训练，DanQing 在零样本分类、跨模态检索和 LMM 评估等中文下游任务上均取得最优性能，将以 CC-BY 4.0 许可开源。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders",
+    "arxiv_id": "2601.10332",
+    "github": "https://github.com/zhijie-group/Think-Then-Generate",
+    "abstract": "现有文本生成图像（T2I）扩散模型即使配备了 LLM 文本编码器，也仅将其用作文本编码器，未能利用其推理能力。本文提出\"先思考后生成\"（T2G）范式，激励 LLM 文本编码器对原始提示进行推理和改写，以改写后的隐状态作为扩散条件。通过轻量有监督微调激活该模式，再利用 Dual-GRPO 联合优化文本编码器和扩散骨干：前者用图像奖励强化推理，后者确保语义一致。在推理图像生成和编辑基准上，WISE 分数达 0.79，几乎与 GPT-4 持平。",
+    "tags": [
+      "RL",
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "ToolSafe: Enhancing Tool Invocation Safety of LLM-based agents via Proactive Step-level Guardrail and Feedback",
+    "arxiv_id": "2601.10156",
+    "github": "https://github.com/MurrayTom/ToolSafe",
+    "abstract": "LLM 智能体通过调用外部工具与环境交互，但其扩展能力同时放大了安全风险。本文首先构建 TS-Bench（工具调用安全检测基准），再开发 TS-Guard 护栏模型——基于多任务强化学习，通过对交互历史的推理在工具执行前主动检测不安全行为，评估请求危害性和行动攻击相关性。此外，引入护栏反馈驱动的推理框架 TS-Flow，在提示注入攻击下将有害工具调用减少 65%，同时提升约 10% 的无害任务完成率。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "MatchTIR: Fine-Grained Supervision for Tool-Integrated Reasoning via Bipartite Matching",
+    "arxiv_id": "2601.10712",
+    "github": "https://github.com/quchangle1/MatchTIR",
+    "abstract": "工具集成推理（TIR）让 LLM 通过交错推理步骤与外部工具交互完成复杂任务。现有 RL 方法通常依赖结果或轨迹级奖励，对整条轨迹的所有步骤赋予相同优势，粗粒度的信用分配难以区分有效与冗余工具调用。本文提出 MatchTIR，通过基于二部匹配的轮次级奖励分配和双层优势估计引入细粒度监督，在三个基准上均优于基线。尤其在长时域多轮任务中，4B 模型超越大多数 8B 竞争对手。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "LaViT: Aligning Latent Visual Thoughts for Multi-modal Reasoning",
+    "arxiv_id": "2601.10129",
+    "github": "https://github.com/Svardfox/LaViT",
+    "abstract": "当前多模态推理常依赖外部监督（如辅助图像），忽视了模型内在的视觉注意力动态。本文发现知识蒸馏中存在\"感知鸿沟\"：学生模型在模仿教师文本输出时，往往关注截然不同的视觉区域，实质上依赖语言先验而非真正的视觉感知。为此，提出LaViT框架，通过对齐视觉潜在思路（即注意力图中的隐式视觉推理路径）而非静态输出来解决这一问题。实验表明LaViT在多模态推理任务上显著提升了模型的视觉感知能力与推理精度。",
+    "tags": [
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "PRL: Process Reward Learning Improves LLMs' Reasoning Ability and Broadens the Reasoning Boundary",
+    "arxiv_id": "2601.10201",
+    "github": "https://github.com/MaxwellJryao/Process-Reward-Learning",
+    "abstract": "当前大多数LLM推理训练方法仅依赖轨迹级的结果奖励，缺乏推理过程中的细粒度监督。本文提出过程奖励学习（PRL），通过将熵正则化强化学习目标分解为中间步骤，推导出严格的过程奖励分配方案。理论上，PRL等价于奖励最大化与策略模型和参考模型间KL散度惩罚之和，能将结果奖励转化为过程监督信号以指导探索。实验证明PRL不仅提升了平均推理性能（average@n），还拓宽了推理边界（pass@n），且无需MCTS或单独训练奖励模型等繁琐步骤。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Patient-Similarity Cohort Reasoning in Clinical Text-to-SQL",
+    "arxiv_id": "2601.09876",
+    "github": "https://github.com/Barryshen1/ClinSQL",
+    "abstract": "真实临床场景的Text-to-SQL任务需要跨异构EHR表格、时间窗口和患者相似度队列进行推理以生成可执行查询。本文引入CLINSQL，一个包含633个专家标注任务的基准（基于MIMIC-IV v3.1），要求多表连接、临床过滤和可执行SQL生成。该任务涉及模式元数据、临床编码系统导航、长上下文处理以及多步查询组合。评估了多种LLM方法，揭示了在复杂临床推理场景中当前模型的局限性，为临床NLP研究提供了挑战性资源。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Deriving Character Logic from Storyline as Codified Decision Trees",
+    "arxiv_id": "2601.10080",
+    "github": "https://github.com/KomeijiForce/Codified_Decision_Tree",
+    "abstract": "角色扮演（RP）智能体依赖行为配置文件以在多样化叙事情境中保持一致，然而现有配置文件大多非结构化、不可执行且验证薄弱，导致角色行为脆弱。本文提出编码决策树（CDT），一种从大规模叙事数据中自动归纳可执行、可解释决策结构的数据驱动框架。CDT将行为配置表示为条件规则树，内部节点对应语义有效的情境条件，叶节点对应角色行为。实验表明CDT使角色扮演智能体在一致性和可解释性上均有显著提升。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Enhancing Sentiment Classification and Irony Detection in Large Language Models through Advanced Prompt Engineering Techniques",
+    "arxiv_id": "2601.08302",
+    "github": "https://github.com/Marvin2108/ESCID-LLM-APET",
+    "abstract": "本研究探讨利用提示工程增强LLM（GPT-4o-mini和Gemini-1.5-flash）在情感分析任务中的表现。评估了few-shot学习、思维链提示和自一致性等高级提示技术，与基线方法对比。核心任务包括情感分类、基于方面的情感分析以及讽刺检测等细微语义识别。研究证明高级提示策略相比基础提示可显著提升模型在复杂情感理解任务上的准确性，无需额外微调即可获得性能增益。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "VQ-Seg: Vector-Quantized Token Perturbation for Semi-Supervised Medical Image Segmentation",
+    "arxiv_id": "2601.10124",
+    "github": "https://github.com/script-Yang/VQ-Seg",
+    "abstract": "一致性学习结合特征扰动是半监督医学图像分割的常用策略，但现有扰动方法多依赖Dropout，需要手动调优敏感的dropout率，容易导致次优正则化效果。本文提出VQ-Seg，首次将向量量化（VQ）引入该领域，通过离散化特征空间实现特征扰动。VQ将连续特征映射到离散码本向量，自然产生结构化扰动，避免了超参数敏感问题。实验在多个医学图像分割数据集上验证了VQ-Seg的有效性，在半监督设置下超越了现有基线方法。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Memory Bank Compression for Continual Adaptation of Large Language Models",
+    "arxiv_id": "2601.00756",
+    "github": "https://github.com/Thomkat/MBC",
+    "abstract": "LLM在实际应用中面临知识快速过时的问题。持续学习旨在无遗忘地更新模型知识，但全量微调计算代价高且易遭灾难性遗忘。记忆增强方法通过记忆库存储新数据来解决该问题，然而随着数据不断积累，记忆库规模持续膨胀。本文提出记忆库压缩（MBC）方法，通过自动识别并合并冗余记忆条目，在保留关键知识的同时控制记忆库规模，从而实现高效的LLM持续适应。实验证明MBC在减少存储开销的同时维持了持续学习性能。",
+    "tags": [
+      "微调",
+      "MeM"
+    ]
+  }
+]

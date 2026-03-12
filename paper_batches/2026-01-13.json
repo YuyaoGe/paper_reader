@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-01-13",
+    "title": "BabyVision: Visual Reasoning Beyond Language",
+    "arxiv_id": "2601.06521",
+    "github": "https://github.com/UniPat-AI/BabyVision",
+    "abstract": "当前多模态大语言模型（MLLMs）在语言先验上过度依赖，导致其在人类婴幼儿都能轻松完成的基础视觉任务上表现失败。本文提出 BabyVision，一个用于评估 MLLMs 核心视觉能力的基准，包含 388 道题目，横跨 22 个子类别。实验表明，领先模型（如 Gemini3-Pro-Preview 得分 49.7）显著低于成人平均水平 94.1，甚至落后于 6 岁儿童。作者还提出 BabyVision-Gen，探索用生成模型辅助视觉推理，并开源了完整代码与数据集，为面向人类级视觉感知的研究提供了新基础。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-01-13",
+    "title": "PaCoRe: Learning to Scale Test-Time Compute with Parallel Coordinated Reasoning",
+    "arxiv_id": "2601.05593",
+    "github": "https://github.com/stepfun-ai/PaCoRe",
+    "abstract": "本文提出 PaCoRe（并行协调推理），一种训练+推理框架，突破语言模型在固定上下文窗口内无法大规模扩展测试时计算（TTC）的瓶颈。PaCoRe 通过消息传递架构驱动多轮大规模并行推理轨迹探索，每轮压缩发现为有界消息并合成指导下一轮。端到端用结果导向强化学习训练，可扩展至百万 token 级有效 TTC。实验中，8B 模型在 HMMT 2025 数学竞赛上达到 94.5%，超越 GPT-5 的 93.2%，展示了并行扩展推理的强大潜力，代码、数据及推理流程全部开源。",
+    "tags": ["RL", "长文本"]
+  },
+  {
+    "date": "2026-01-13",
+    "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
+    "arxiv_id": "2601.07832",
+    "github": "https://github.com/DAGroup-PKU/MHLA",
+    "abstract": "线性注意力虽然计算复杂度低，但直接应用时性能下降，现有修复方案通常引入额外计算开销。本文识别出核心失败模式「全局上下文坍缩」，即模型丧失表征多样性。为此提出多头线性注意力（MHLA），沿 token 维度分头计算注意力以保留多样性，理论证明保持线性复杂度同时恢复 softmax 注意力的表达能力。实验覆盖多个领域：ImageNet 分类提升 3.6%，NLP 提升 6.3%，图像生成提升 12.6%，视频生成提升 41%，在相同时间复杂度下实现显著性能增益。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-13",
+    "title": "X-Coder: Advancing Competitive Programming with Fully Synthetic Tasks, Solutions, and Tests",
+    "arxiv_id": "2601.06953",
+    "github": "https://github.com/JieWu02/X-Coder",
+    "abstract": "竞赛编程对代码 LLM 要求极高，但现有模型严重依赖真实世界数据。本文探索全合成训练方案：提出特征驱动数据合成流水线 SynthSmith，生成多样化、高挑战性任务及验证通过的解答与测试用例，同时支持 SFT 和 RL 训练。基于合成数据训练的 X-Coder 系列模型（7B）在 LiveCodeBench v5 和 v6 上分别达到 62.9 和 55.8（avg@8），超越 DeepCoder-14B 和 AReal-boba2-14B。实验还验证合成数据遵循扩展律，分阶段训练策略可进一步提升代码推理能力。",
+    "tags": ["RL", "微调"]
+  }
+]

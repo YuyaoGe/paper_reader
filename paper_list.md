@@ -1,3 +1,149 @@
+## 2026年1月12日
+
+- **Thinking with Map: Reinforced Parallel Map-Augmented Agent for Geolocalization** `[RL]` `[VLM]` — [2601.05432](https://arxiv.org/abs/2601.05432) | [GitHub](https://github.com/AMAP-ML/Thinking-with-Map)
+  > 本文提出 Thinking with Map，一个通过强化学习（RL）训练的并行地图增强地理定位智能体。针对地理定位任务，作者将地图信息作为结构化先验引入推理过程，设计了「并行地图增强」机制让智能体在多个候选区域同步搜索，并以 RL 信号驱动策略优化。实验表明，该方法在 IM2GPS3k、YFCC26k 等基准上显著超越现有方法，在不同分辨率的地图下均表现出色，验证了地图辅助推理对视觉-地理匹配的有效性。
+
+- **Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards** `[RL]` — [2601.06021](https://arxiv.org/abs/2601.06021) | [GitHub](https://github.com/THUDM/CaRR)
+  > 本文提出 CaRR（Citation-aware Rubric Rewards）框架，针对深度搜索智能体中纯结果奖励导致的捷径利用和幻觉问题。CaRR 将复杂问题分解为原子可验证的评分准则，仅当智能体明确识别所有隐藏实体、引用支持原文、且证据链与最终答案相连时才给予奖励。在此基础上提出 C-GRPO，为答对的轨迹额外施加引用感知奖励。在 Qwen3-4B 和 Qwen3-30B-A3B 上的实验表明，C-GRPO 稳定超越标准 GRPO，并在测试时扩展中表现出更强的上下文利用能力。
+
+- **EnvScaler: Scaling Tool-Interactive Environments for LLM Agent via Programmatic Synthesis** `[RL]` `[微调]` — [2601.05808](https://arxiv.org/abs/2601.05808) | [GitHub](https://github.com/RUC-NLPIR/EnvScaler)
+  > 本文提出 EnvScaler，一个通过程序化合成自动构建可执行、有状态、工具交互式环境的框架，用于训练 LLM 智能体。EnvScaler 分两阶段工作：SkelBuilder 从现有任务中挖掘环境描述并生成 Python 环境类；ScenGenerator 为每个环境合成具有挑战性的场景和可验证奖励信号。基于该框架，作者合成了 191 个环境和约 7K 场景，并对 Qwen3 系列模型进行 SFT+RL 训练。在三个基准上的实验表明，EnvScaler 显著提升了模型在复杂多轮、多工具交互任务中的能力。
+
+- **AgentOCR: Reimagining Agent History via Optical Self-Compression** `[RL]` `[MeM]` `[长文本]` — [2601.04786](https://arxiv.org/abs/2601.04786) | [GitHub](https://github.com/langfengQ/AgentOCR)
+  > 本文提出 AgentOCR，通过将多轮 LLM 智能体的历史记录渲染为紧凑图像来解决 token 预算快速膨胀的问题。核心贡献包括：利用视觉 token 的高信息密度实现超过 50% 的 token 压缩；引入「段光学缓存」将历史分解为可哈希段并维护视觉缓存，实现 20× 渲染加速；以及「自主自压缩」机制，让智能体主动输出压缩率并通过压缩感知奖励进行 RL 训练。在 ALFWorld 和搜索式 QA 任务上，AgentOCR 在保留 95% 以上性能的同时大幅降低内存占用。
+
+- **Can We Predict Before Executing Machine Learning Agents?** `[无需训练]` — [2601.05930](https://arxiv.org/abs/2601.05930) | [GitHub](https://github.com/zjunlp/predict-before-execute)
+  > 本文探讨 LLM 是否能在不实际执行的情况下预测机器学习智能体的方案优劣。作者提出「数据中心方案偏好」概念，构建了 18,438 对成对比较语料库，验证了 LLM 具有「隐式执行先验」能力。基于此，设计了 FOREAGENT——一个「预测-验证」循环智能体，将探索与昂贵的物理执行解耦。FOREAGENT 在 MLE-bench 上实现 6× 加速、搜索空间扩大 3.2×、相较基线提升 +6% 胜率，DeepSeek-V3.2-Thinking 预测准确率达 61.5%，显著超越随机基线。
+
+- **An Empirical Study on Preference Tuning Generalization and Diversity Under Domain Shift** `[微调]` `[RL]` — [2601.05882](https://arxiv.org/abs/2601.05882) | [GitHub](https://github.com/ckarouzos/prefadap)
+  > 本文系统研究了偏好调优（Preference Tuning）在域偏移下的泛化性和多样性问题。作者比较了 SFT、DPO、KTO、ORPO、PPO、GRPO 等五种对齐目标，以及伪标注、目标域微调等多种适应策略，在摘要和问答任务上进行跨域评估。核心发现是：不同对齐目标在域偏移下的泛化能力存在系统性差异，基于伪标注的适应策略可以大幅减少域偏移导致的性能下降，为跨域对齐提供了实践指导。
+
+- **Illusions of Confidence? Diagnosing LLM Truthfulness via Neighborhood Consistency** `[微调]` — [2601.05905](https://arxiv.org/abs/2601.05905) | [GitHub](https://github.com/zjunlp/belief)
+  > 本文揭示传统点式置信度度量（如自我一致性）的「知识幻觉」问题：即使模型以高度一致性作出正确回答，在轻微上下文干扰下答案也可能崩溃。作者提出「邻域一致性置信度」（NCB），通过测试模型在概念邻域问题上的一致性来度量置信度鲁棒性；并设计认知压力测试模拟同伴压力和权威偏差。进一步提出「结构感知训练」（SAT），在 LoRA 微调框架下强制上下文不变的置信结构，使模型在压力测试下的性能下降减少约 30%。
+
+- **SmartSearch: Process Reward-Guided Query Refinement for Search Agents** `[RL]` `[微调]` — [2601.04888](https://arxiv.org/abs/2601.04888) | [GitHub](https://github.com/RUC-NLPIR/SmartSearch)
+  > 本文提出 SmartSearch，通过过程奖励引导中间搜索查询优化来提升搜索智能体性能。核心机制包括：「双层信用评估」对每个中间查询质量提供细粒度过程奖励；「查询精化」机制选择性地对低质量查询进行重写并重新生成后续搜索轮次。训练采用三阶段课程学习框架：模仿→对齐→泛化。SmartSearch-3B 模型在 ASearcher 等数据集上相对基线取得显著提升，验证了查询质量对搜索推理链的关键作用。
+
+
+## 2026年1月13日
+
+- **BabyVision: Visual Reasoning Beyond Language** `[VLM]` — [2601.06521](https://arxiv.org/abs/2601.06521) | [GitHub](https://github.com/UniPat-AI/BabyVision)
+  > 当前多模态大语言模型（MLLMs）在语言先验上过度依赖，导致其在人类婴幼儿都能轻松完成的基础视觉任务上表现失败。本文提出 BabyVision，一个用于评估 MLLMs 核心视觉能力的基准，包含 388 道题目，横跨 22 个子类别。实验表明，领先模型（如 Gemini3-Pro-Preview 得分 49.7）显著低于成人平均水平 94.1，甚至落后于 6 岁儿童。作者还提出 BabyVision-Gen，探索用生成模型辅助视觉推理，并开源了完整代码与数据集，为面向人类级视觉感知的研究提供了新基础。
+
+- **PaCoRe: Learning to Scale Test-Time Compute with Parallel Coordinated Reasoning** `[RL]` `[长文本]` — [2601.05593](https://arxiv.org/abs/2601.05593) | [GitHub](https://github.com/stepfun-ai/PaCoRe)
+  > 本文提出 PaCoRe（并行协调推理），一种训练+推理框架，突破语言模型在固定上下文窗口内无法大规模扩展测试时计算（TTC）的瓶颈。PaCoRe 通过消息传递架构驱动多轮大规模并行推理轨迹探索，每轮压缩发现为有界消息并合成指导下一轮。端到端用结果导向强化学习训练，可扩展至百万 token 级有效 TTC。实验中，8B 模型在 HMMT 2025 数学竞赛上达到 94.5%，超越 GPT-5 的 93.2%，展示了并行扩展推理的强大潜力，代码、数据及推理流程全部开源。
+
+- **MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head** `[无需训练]` — [2601.07832](https://arxiv.org/abs/2601.07832) | [GitHub](https://github.com/DAGroup-PKU/MHLA)
+  > 线性注意力虽然计算复杂度低，但直接应用时性能下降，现有修复方案通常引入额外计算开销。本文识别出核心失败模式「全局上下文坍缩」，即模型丧失表征多样性。为此提出多头线性注意力（MHLA），沿 token 维度分头计算注意力以保留多样性，理论证明保持线性复杂度同时恢复 softmax 注意力的表达能力。实验覆盖多个领域：ImageNet 分类提升 3.6%，NLP 提升 6.3%，图像生成提升 12.6%，视频生成提升 41%，在相同时间复杂度下实现显著性能增益。
+
+- **X-Coder: Advancing Competitive Programming with Fully Synthetic Tasks, Solutions, and Tests** `[RL]` `[微调]` — [2601.06953](https://arxiv.org/abs/2601.06953) | [GitHub](https://github.com/JieWu02/X-Coder)
+  > 竞赛编程对代码 LLM 要求极高，但现有模型严重依赖真实世界数据。本文探索全合成训练方案：提出特征驱动数据合成流水线 SynthSmith，生成多样化、高挑战性任务及验证通过的解答与测试用例，同时支持 SFT 和 RL 训练。基于合成数据训练的 X-Coder 系列模型（7B）在 LiveCodeBench v5 和 v6 上分别达到 62.9 和 55.8（avg@8），超越 DeepCoder-14B 和 AReal-boba2-14B。实验还验证合成数据遵循扩展律，分阶段训练策略可进一步提升代码推理能力。
+
+
+## 2026年1月14日
+
+- **Enhancing Code Agents through Learning from Governed Human Experiences** `[MeM]` — [2601.06789](https://arxiv.org/abs/2601.06789) | [GitHub](https://github.com/QuantaAlpha/MemGovern)
+  > MemGovern 针对自主软件工程（SWE）Agent 的「闭世界」局限性，提出了一套将 GitHub 历史人类经验转化为 Agent 可用记忆的框架。系统通过「经验治理」模块将非结构化的 issue 追踪数据转换为 Agent 友好的「经验卡片」，并设计了逻辑驱动的检索策略，使 Agent 在面对新 bug 时可主动检索相关历史经验。通过生成 13.5 万张经验卡片，MemGovern 在 SWE-bench Verified 上将 bug 修复率提升了 4.65%，并支持多种 LLM（GPT-4o、Claude-4-Sonnet 等）。该框架作为插件方式部署，为 Agent 提供可扩展的记忆基础设施。
+
+- **ArenaRL: Scaling RL for Open-Ended Agents via Tournament-based Relative Ranking** `[RL]` — [2601.06487](https://arxiv.org/abs/2601.06487) | [GitHub](https://github.com/Alibaba-NLP/qqr)
+  > ArenaRL 针对开放式 Agent 任务（如复杂旅行规划）中 RL 训练的「判别坍塌」问题，提出了基于组内相对排名的强化学习范式。传统逐点打分方式在复杂轨迹间区分度不足，导致奖励信号被噪声主导。ArenaRL 引入过程感知的成对评估机制和锦标赛排名方案（锚点赛、轮循制、瑞士制等），在 O(N) 复杂度下实现接近 O(N²) 的优势估计精度。实验表明，ArenaRL 在 Open-Travel 和 Open-DeepResearch 两个高质量开放式基准上显著优于标准 RL 基线，生成的解决方案逻辑更严谨、鲁棒性更强。
+
+- **ShowUI-π: Flow-based Generative Models as GUI Dexterous Hands** `[VLM]` `[微调]` — [2512.24965](https://arxiv.org/abs/2512.24965) | [GitHub](https://github.com/showlab/showui-pi)
+  > ShowUI-π 是一个 450M 参数的流匹配视觉-语言-动作（VLA）模型，用于 GUI 控制任务。核心创新在于统一动作表示：将点击和拖拽均建模为带鼠标按键状态的光标航路点序列，通过流匹配直接在像素空间生成连续的光标轨迹，无需离散坐标标记。这使模型能够处理手绘、物体旋转、滑块调节等需要精细空间控制的任务。同时贡献了 ScreenDrag 数据集，涵盖 505 个真实拖拽任务和 2 万余条光标轨迹。在 450M 参数规模下，ShowUI-π 在拖拽类 GUI 任务上超越了 7B+ 参数量的竞争模型。
+
+- **Executive Memory as an Agentic Brain for Long-Horizon Reasoning** `[MeM]` `[长文本]` — [2601.08079](https://arxiv.org/abs/2601.08079) | [GitHub](https://github.com/qhjqhj00/MemoBrain)
+  > MemoBrain 提出了一种用于工具增强 Agent 的执行记忆模型，解决长时推理中中间步骤和工具调用结果不断累积、撑爆上下文窗口的问题。系统以「协作驾驶员」方式并行运行，构建依赖感知的推理步骤图，并通过三类操作主动管理工作上下文：Flush（剪除无效步骤）、Fold（折叠已完成子轨迹为紧凑摘要）、以及固定尺寸高显著性推理骨干维护。MemoBrain 将上下文管理从被动累积转变为主动认知控制，在多步工具调用任务上显著提升了推理连贯性和任务完成率。
+
+- **Aligning Text, Code, and Vision: A Multi-Objective Reinforcement Learning Framework for Text-to-Visualization** `[RL]` `[微调]` `[VLM]` — [2601.04582](https://arxiv.org/abs/2601.04582) | [GitHub](https://github.com/vis-nlp/RL-Text2Vis)
+  > RL-Text2Vis 提出了首个用于文本到可视化（Text2Vis）生成的强化学习框架，基于 GRPO（组相对策略优化）构建多目标奖励，联合优化文本准确性、代码可执行性和可视化质量。针对开源模型在该任务上频繁生成不可执行代码或视觉效果差的问题，通过后执行反馈信号引导训练，使传统 SFT 损失无法捕捉的视觉质量得以被优化。训练 Qwen2.5（7B 和 14B）模型后，RL-Text2Vis 在 Text2Vis 基准上图表质量相对 GPT-4o 提升 22%，代码执行成功率从 78% 提升至 97%，并在 VIS-Eval 和 NVBench 等跨域数据集上展示了良好的泛化能力。
+
+
+## 2026年1月15日
+
+- **DeepResearchEval: An Automated Framework for Deep Research Task Construction and Agentic Evaluation** — [2601.09688](https://arxiv.org/abs/2601.09688) | [GitHub](https://github.com/Infinity-AILab/DeepResearchEval)
+  > DeepResearchEval 提出了一套用于深度研究任务构建与智能体评估的自动化框架。任务构建阶段引入 persona 驱动的生成流水线，基于多样化用户画像生成逼真的复杂研究任务，并通过「任务合格性」与「搜索必要性」两级过滤保留需要多源证据整合的任务。评估阶段设计了两个核心组件：自适应逐点质量评估（根据每个任务动态生成评估维度与权重）以及主动事实核查（通过网络检索自主验证报告陈述，无需依赖引用）。该框架有效解决了现有评估体系标注成本高、评估维度静态和引用缺失时事实验证困难等问题。
+
+- **Controlled Self-Evolution for Algorithmic Code Optimization** `[MeM]` — [2601.07348](https://arxiv.org/abs/2601.07348) | [GitHub](https://github.com/QuantaAlpha/EvoControl)
+  > 本文提出受控自进化（CSE）框架，解决代码生成中自进化方法探索效率低的问题。CSE 包含三个核心组件：（1）多样化规划初始化，生成结构各异的算法策略以覆盖宽泛的解空间；（2）遗传进化，以反馈引导机制替代随机操作，实现精准变异与组合交叉；（3）层次进化记忆，在任务内和跨任务两个层次捕获成功与失败经验。在 EffiBench-X 上的实验表明，CSE 在多种 LLM 骨干上持续超越所有基线，并在早期迭代就展现出更高效率，且整个进化过程中保持持续改进。
+
+- **MAXS: Meta-Adaptive Exploration with LLM Agents** `[VLM]` — [2601.09259](https://arxiv.org/abs/2601.09259) | [GitHub](https://github.com/exoskeletonzj/MAXS)
+  > MAXS 是一个面向 LLM 智能体的元自适应推理框架，解决现有方法中局部短视生成和轨迹不稳定两大问题。框架引入前瞻策略，将推理路径向前延伸若干步以估计工具调用的优势值，并结合步内一致性方差与跨步趋势斜率联合选择稳定、高价值的推理步骤。另外提出轨迹收敛机制，在路径一致性达到后停止进一步展开以控制计算开销。在 MiMo-VL-7B、Qwen2.5-VL-7B 和 Qwen2.5-VL-32B 三种模型、五个数据集上的实验表明，MAXS 在性能和推理效率上均持续优于现有方法。
+
+- **OpenDecoder: Open Large Language Model Decoding to Incorporate Document Quality in RAG** — [2601.09028](https://arxiv.org/abs/2601.09028) | [GitHub](https://github.com/fengranMark/OpenDecoder)
+  > OpenDecoder 针对 RAG（检索增强生成）中检索文档质量参差不齐的问题，提出开放式解码框架，使 LLM 在解码时能显式感知并整合文档质量信息。现有方法通常假设检索结果均高度相关，但实际检索文档可能包含噪声、冗余乃至错误内容。OpenDecoder 通过在解码过程中引入文档质量建模机制，提升答案生成对低质量文档的鲁棒性。该论文已被 WWW 2026 收录，代码与检查点已在 GitHub 和 HuggingFace 上公开。
+
+- **FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection** `[VLM]` `[无需训练]` — [2601.03928](https://arxiv.org/abs/2601.03928) | [GitHub](https://github.com/showlab/FocusUI)
+  > FocusUI 针对 UI 截图理解中视觉 token 数量过多（2K 分辨率下约 4700 个）导致的计算开销大和注意力分散问题，提出位置保留的视觉 token 选择方案。核心创新包括：查询引导的视觉 token 选择（融合指令条件分数与基于 UI 图结构的规则分数）；以及 POSPAD（位置保留填充）策略，在压缩 token 同时保持精确空间定位所需的位置连续性。CVPR 2026 收录，在多个 UI grounding 基准上以显著更少的计算量实现与全分辨率输入相当乃至更优的性能。
+
+- **Geometric Stability: The Missing Axis of Representations** — [2601.09173](https://arxiv.org/abs/2601.09173) | [GitHub](https://github.com/prashantcraju/geometric-stability)
+  > 本文提出「几何稳定性」这一表征分析的新维度，以补充现有相似性度量的不足。相似性衡量嵌入与外部参考的对齐程度，却无法反映表征结构在扰动下的鲁棒性。作者引入 Shesha 框架来测量几何稳定性。在七个领域的 2463 种配置上，实验表明稳定性与相似性是不相关的独立轴，共同决定表征质量。该框架为理解和改进预训练模型的表征提供了新工具，所有实验代码已公开。
+
+- **Omni-R1: Towards the Unified Generative Paradigm for Multimodal Reasoning** `[VLM]` `[RL]` `[微调]` — [2601.09536](https://arxiv.org/abs/2601.09536) | [GitHub](https://github.com/ModalityDance/Omni-R1)
+  > Omni-R1 提出统一的生成式多模态推理范式，突破现有方法依赖单一任务特定推理模式的局限。核心框架为两阶段 SFT+RL：PeSFT 在监督微调阶段引入感知对齐损失，PeRPO 在 RL 阶段施加感知奖励，从而实现功能性图像生成。另外提出 Omni-R1-Zero，无需多模态标注即可通过纯文本推理数据自举逐步可视化能力。训练框架基于 verl，支持缩放推理和 RL rollout。实验覆盖需要缩放、绘图、分解等多种推理技能的多模态任务。
+
+- **SCALER:Synthetic Scalable Adaptive Learning Environment for Reasoning** `[RL]` — [2601.04809](https://arxiv.org/abs/2601.04809) | [GitHub](https://github.com/ALEX-nlp/SCALER)
+  > SCALER 面向 LLM 推理的强化学习训练，解决任务难度与模型能力不对齐及训练信号随模型进步退化的问题。框架从真实编程问题中合成可验证、可控难度的推理环境，并通过自适应多环境 RL 机制，在长期训练中持续提供信息丰富的学习信号。SCALER 建立在 verl 框架之上，实验表明该方法能在模型能力提升后仍维持有效的 RL 训练，并在多个推理基准上取得持续提升。
+
+- **SampoNLP: A Self-Referential Toolkit for Morphological Analysis** — [2601.04469](https://arxiv.org/abs/2601.04469) | [GitHub](https://github.com/AragonerUA/SampoNLP)
+  > SampoNLP 是一个用于形态丰富语言（如芬兰语、爱沙尼亚语、匈牙利语）的无监督词素发现工具库。核心算法 IMDP（带位置先验的迭代词素分解）通过 Rust 加速核心与 Python API 封装，实现高性能形态词典构建与分词器评估。工具库采用 MDL 启发的原子性评分，结合词根与词缀的位置先验和 Otsu 自动阈值方法，无需标注语料即可收敛到稳定词素表征，并支持通过 pip 安装。
+
+
+## 2026年1月16日
+
+- **Urban Socio-Semantic Segmentation with Vision-Language Reasoning** `[VLM]` `[RL]` — [2601.10477](https://arxiv.org/abs/2601.10477) | [GitHub](https://github.com/AMAP-ML/SocioReasoner)
+  > 城市遥感图像中的社会语义分割任务，现有模型能可靠地识别具有物理属性的实体（如建筑物、水体），但对学校、公园等社会定义类别仍然困难。本文通过视觉语言模型推理实现社会语义分割，引入了 SocioSeg 数据集（包含卫星影像、数字地图及像素级社会语义标注），并提出 SocioReasoner 框架，通过跨模态识别与多阶段推理模拟人类标注过程，使用强化学习优化不可微的推理过程，从而激发视觉语言模型的推理能力。实验表明该方法在零样本泛化和精度上均超越现有模型。
+
+- **Rewarding the Rare: Uniqueness-Aware RL for Creative Problem Solving in LLMs** `[RL]` — [2601.08763](https://arxiv.org/abs/2601.08763) | [GitHub](https://github.com/zhiyuanhubj/Uniqueness-Aware-RL)
+  > 强化学习在大型语言模型后训练中面临"探索崩溃"问题：策略过早集中于少数主导推理模式，提升 pass@1 却损害 pass@k。本文提出 Uniqueness-Aware RL，一种 rollout 级目标函数，通过 LLM 判别器对同一问题的推理路径按高层策略聚类，对稀有正确策略赋予更高奖励。该方法在数学、物理和医学推理任务中持续改善 pass@k 和 AUC@K，同时不牺牲 pass@1，有效保持了探索多样性。
+
+- **Collaborative Multi-Agent Test-Time Reinforcement Learning for Reasoning** `[RL]` `[无需训练]` — [2601.09667](https://arxiv.org/abs/2601.09667) | [GitHub](https://github.com/zhiyuanhubj/MATTRL)
+  > 多智能体强化学习训练代价高昂且不稳定，本文提出 MATTRL（多智能体测试时强化学习），在推理阶段向多智能体协作中注入结构化文本经验，无需重新训练。MATTRL 组建多专家团队进行多轮讨论，检索并整合测试时经验以达成最终共识。通过信用分配构建轮次级经验池，并重新注入对话。在医学、数学和教育基准上，相比多智能体基线平均提升 3.67%，相比单智能体基线提升 8.67%，提供了一种鲁棒、稳定的无调优多智能体推理方案。
+
+- **VIBE: Visual Instruction Based Editor** `[VLM]` `[微调]` — [2601.02242](https://arxiv.org/abs/2601.02242) | [GitHub](https://github.com/ai-forever/vibe)
+  > 基于指令的图像编辑领域，本文提出一款紧凑高效的编辑 pipeline，使用 2B 参数的 Qwen3-VL 模型引导编辑过程，配合 1.6B 参数的 Sana1.5 扩散模型生成图像。设计目标为低推理成本与严格的源图一致性，重点优化属性调整、对象去除、背景修改等保留输入图像的编辑类型。在 ImgEdit 和 GEdit 基准上，性能达到或超越参数量更大的基线模型，且整个系统仅需 24GB 显存，在 H100 上约 4 秒生成 2K 分辨率图像。
+
+- **HeartMuLa: A Family of Open Sourced Music Foundation Models** `[微调]` — [2601.10547](https://arxiv.org/abs/2601.10547) | [GitHub](https://github.com/HeartMuLa/heartlib)
+  > 本文提出一系列开源音乐基础模型，涵盖四大核心组件：HeartCLAP（音频-文本对齐模型）、HeartTranscriptor（歌词识别模型）、HeartCodec（低帧率高保真音乐编解码器，12.5Hz）以及 HeartMuLa（基于 LLM 的歌曲生成模型，支持风格描述、歌词、参考音频等丰富可控条件）。模型规模扩展至 7B 参数后性能显著提升。首次证明仅使用学术规模数据和 GPU 资源即可复现 Suno 级别的商业品质，为多模态内容创作研究提供强大基线。
+
+- **Beyond Static Tools: Test-Time Tool Evolution for Scientific Reasoning** `[无需训练]` — [2601.07641](https://arxiv.org/abs/2601.07641) | [GitHub](https://github.com/lujiaxuan0520/Test-Time-Tool-Evol)
+  > 现有 LLM 智能体依赖静态预定义工具库，在科学领域中工具稀疏、异质且本质不完备，这一范式根本性地失效。本文提出测试时工具演化（TTE）新范式，使智能体能够在推理过程中合成、验证并演化可执行工具，将工具从固定资源转化为问题驱动的构件。引入 SciEvo 评估套件（1590 个科学推理任务，925 个自动演化工具），实验表明 TTE 在精度和工具效率上达到最优，并支持跨领域的工具迁移适应。
+
+- **Toward Ultra-Long-Horizon Agentic Science: Cognitive Accumulation for Machine Learning Engineering** `[MeM]` — [2601.10402](https://arxiv.org/abs/2601.10402) | [GitHub](https://github.com/sjtu-sai-agents/ML-Master)
+  > AI 科学智能体面临超长时域自主的瓶颈：如何在跨越数天乃至数周实验周期中保持策略连贯性与迭代修正能力。本文提出 ML-Master 2.0，引入层次认知缓存（HCC）机制，受计算机系统启发，将上下文管理重构为认知积累过程，动态将瞬态执行轨迹提炼为稳定知识和跨任务智慧。在 OpenAI MLE-Bench 24 小时预算评估中，ML-Master 2.0 达到最优 56.44% 奖牌率，为超长时域自主科学探索提供可扩展蓝图。
+
+- **DanQing: An Up-to-Date Large-Scale Chinese Vision-Language Pre-training Dataset** `[VLM]` — [2601.10305](https://arxiv.org/abs/2601.10305) | [GitHub](https://github.com/deepglint/DanQing)
+  > 中文视觉语言预训练因高质量数据匮乏而严重滞后。本文构建了 DanQing 数据集，包含来自 Common Crawl 的 1 亿图文对，采用严格筛选流程确保数据质量，且主要基于 2024-2025 年网络数据，能更好地捕捉当下语义趋势。通过对 SigLIP2 模型的持续预训练，DanQing 在零样本分类、跨模态检索和 LMM 评估等中文下游任务上均取得最优性能，将以 CC-BY 4.0 许可开源。
+
+- **Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders** `[RL]` `[微调]` `[VLM]` — [2601.10332](https://arxiv.org/abs/2601.10332) | [GitHub](https://github.com/zhijie-group/Think-Then-Generate)
+  > 现有文本生成图像（T2I）扩散模型即使配备了 LLM 文本编码器，也仅将其用作文本编码器，未能利用其推理能力。本文提出"先思考后生成"（T2G）范式，激励 LLM 文本编码器对原始提示进行推理和改写，以改写后的隐状态作为扩散条件。通过轻量有监督微调激活该模式，再利用 Dual-GRPO 联合优化文本编码器和扩散骨干：前者用图像奖励强化推理，后者确保语义一致。在推理图像生成和编辑基准上，WISE 分数达 0.79，几乎与 GPT-4 持平。
+
+- **ToolSafe: Enhancing Tool Invocation Safety of LLM-based agents via Proactive Step-level Guardrail and Feedback** `[RL]` — [2601.10156](https://arxiv.org/abs/2601.10156) | [GitHub](https://github.com/MurrayTom/ToolSafe)
+  > LLM 智能体通过调用外部工具与环境交互，但其扩展能力同时放大了安全风险。本文首先构建 TS-Bench（工具调用安全检测基准），再开发 TS-Guard 护栏模型——基于多任务强化学习，通过对交互历史的推理在工具执行前主动检测不安全行为，评估请求危害性和行动攻击相关性。此外，引入护栏反馈驱动的推理框架 TS-Flow，在提示注入攻击下将有害工具调用减少 65%，同时提升约 10% 的无害任务完成率。
+
+- **MatchTIR: Fine-Grained Supervision for Tool-Integrated Reasoning via Bipartite Matching** `[RL]` — [2601.10712](https://arxiv.org/abs/2601.10712) | [GitHub](https://github.com/quchangle1/MatchTIR)
+  > 工具集成推理（TIR）让 LLM 通过交错推理步骤与外部工具交互完成复杂任务。现有 RL 方法通常依赖结果或轨迹级奖励，对整条轨迹的所有步骤赋予相同优势，粗粒度的信用分配难以区分有效与冗余工具调用。本文提出 MatchTIR，通过基于二部匹配的轮次级奖励分配和双层优势估计引入细粒度监督，在三个基准上均优于基线。尤其在长时域多轮任务中，4B 模型超越大多数 8B 竞争对手。
+
+- **LaViT: Aligning Latent Visual Thoughts for Multi-modal Reasoning** `[VLM]` `[微调]` — [2601.10129](https://arxiv.org/abs/2601.10129) | [GitHub](https://github.com/Svardfox/LaViT)
+  > 当前多模态推理常依赖外部监督（如辅助图像），忽视了模型内在的视觉注意力动态。本文发现知识蒸馏中存在"感知鸿沟"：学生模型在模仿教师文本输出时，往往关注截然不同的视觉区域，实质上依赖语言先验而非真正的视觉感知。为此，提出LaViT框架，通过对齐视觉潜在思路（即注意力图中的隐式视觉推理路径）而非静态输出来解决这一问题。实验表明LaViT在多模态推理任务上显著提升了模型的视觉感知能力与推理精度。
+
+- **PRL: Process Reward Learning Improves LLMs' Reasoning Ability and Broadens the Reasoning Boundary** `[RL]` `[微调]` — [2601.10201](https://arxiv.org/abs/2601.10201) | [GitHub](https://github.com/MaxwellJryao/Process-Reward-Learning)
+  > 当前大多数LLM推理训练方法仅依赖轨迹级的结果奖励，缺乏推理过程中的细粒度监督。本文提出过程奖励学习（PRL），通过将熵正则化强化学习目标分解为中间步骤，推导出严格的过程奖励分配方案。理论上，PRL等价于奖励最大化与策略模型和参考模型间KL散度惩罚之和，能将结果奖励转化为过程监督信号以指导探索。实验证明PRL不仅提升了平均推理性能（average@n），还拓宽了推理边界（pass@n），且无需MCTS或单独训练奖励模型等繁琐步骤。
+
+- **Patient-Similarity Cohort Reasoning in Clinical Text-to-SQL** `[长文本]` — [2601.09876](https://arxiv.org/abs/2601.09876) | [GitHub](https://github.com/Barryshen1/ClinSQL)
+  > 真实临床场景的Text-to-SQL任务需要跨异构EHR表格、时间窗口和患者相似度队列进行推理以生成可执行查询。本文引入CLINSQL，一个包含633个专家标注任务的基准（基于MIMIC-IV v3.1），要求多表连接、临床过滤和可执行SQL生成。该任务涉及模式元数据、临床编码系统导航、长上下文处理以及多步查询组合。评估了多种LLM方法，揭示了在复杂临床推理场景中当前模型的局限性，为临床NLP研究提供了挑战性资源。
+
+- **Deriving Character Logic from Storyline as Codified Decision Trees** `[无需训练]` — [2601.10080](https://arxiv.org/abs/2601.10080) | [GitHub](https://github.com/KomeijiForce/Codified_Decision_Tree)
+  > 角色扮演（RP）智能体依赖行为配置文件以在多样化叙事情境中保持一致，然而现有配置文件大多非结构化、不可执行且验证薄弱，导致角色行为脆弱。本文提出编码决策树（CDT），一种从大规模叙事数据中自动归纳可执行、可解释决策结构的数据驱动框架。CDT将行为配置表示为条件规则树，内部节点对应语义有效的情境条件，叶节点对应角色行为。实验表明CDT使角色扮演智能体在一致性和可解释性上均有显著提升。
+
+- **Enhancing Sentiment Classification and Irony Detection in Large Language Models through Advanced Prompt Engineering Techniques** `[无需训练]` — [2601.08302](https://arxiv.org/abs/2601.08302) | [GitHub](https://github.com/Marvin2108/ESCID-LLM-APET)
+  > 本研究探讨利用提示工程增强LLM（GPT-4o-mini和Gemini-1.5-flash）在情感分析任务中的表现。评估了few-shot学习、思维链提示和自一致性等高级提示技术，与基线方法对比。核心任务包括情感分类、基于方面的情感分析以及讽刺检测等细微语义识别。研究证明高级提示策略相比基础提示可显著提升模型在复杂情感理解任务上的准确性，无需额外微调即可获得性能增益。
+
+- **VQ-Seg: Vector-Quantized Token Perturbation for Semi-Supervised Medical Image Segmentation** `[微调]` — [2601.10124](https://arxiv.org/abs/2601.10124) | [GitHub](https://github.com/script-Yang/VQ-Seg)
+  > 一致性学习结合特征扰动是半监督医学图像分割的常用策略，但现有扰动方法多依赖Dropout，需要手动调优敏感的dropout率，容易导致次优正则化效果。本文提出VQ-Seg，首次将向量量化（VQ）引入该领域，通过离散化特征空间实现特征扰动。VQ将连续特征映射到离散码本向量，自然产生结构化扰动，避免了超参数敏感问题。实验在多个医学图像分割数据集上验证了VQ-Seg的有效性，在半监督设置下超越了现有基线方法。
+
+- **Memory Bank Compression for Continual Adaptation of Large Language Models** `[微调]` `[MeM]` — [2601.00756](https://arxiv.org/abs/2601.00756) | [GitHub](https://github.com/Thomkat/MBC)
+  > LLM在实际应用中面临知识快速过时的问题。持续学习旨在无遗忘地更新模型知识，但全量微调计算代价高且易遭灾难性遗忘。记忆增强方法通过记忆库存储新数据来解决该问题，然而随着数据不断积累，记忆库规模持续膨胀。本文提出记忆库压缩（MBC）方法，通过自动识别并合并冗余记忆条目，在保留关键知识的同时控制记忆库规模，从而实现高效的LLM持续适应。实验证明MBC在减少存储开销的同时维持了持续学习性能。
+
 ## 2026年1月19日
 
 - **RubricHub: A Comprehensive and Highly Discriminative Rubric Dataset via Automated Coarse-to-Fine Generation** `[RL]` `[微调]` — [2601.08430](https://arxiv.org/abs/2601.08430) | [GitHub](https://github.com/teqkilla/RubricHub)

@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-01-14",
+    "title": "Enhancing Code Agents through Learning from Governed Human Experiences",
+    "arxiv_id": "2601.06789",
+    "github": "https://github.com/QuantaAlpha/MemGovern",
+    "abstract": "MemGovern 针对自主软件工程（SWE）Agent 的「闭世界」局限性，提出了一套将 GitHub 历史人类经验转化为 Agent 可用记忆的框架。系统通过「经验治理」模块将非结构化的 issue 追踪数据转换为 Agent 友好的「经验卡片」，并设计了逻辑驱动的检索策略，使 Agent 在面对新 bug 时可主动检索相关历史经验。通过生成 13.5 万张经验卡片，MemGovern 在 SWE-bench Verified 上将 bug 修复率提升了 4.65%，并支持多种 LLM（GPT-4o、Claude-4-Sonnet 等）。该框架作为插件方式部署，为 Agent 提供可扩展的记忆基础设施。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-01-14",
+    "title": "ArenaRL: Scaling RL for Open-Ended Agents via Tournament-based Relative Ranking",
+    "arxiv_id": "2601.06487",
+    "github": "https://github.com/Alibaba-NLP/qqr",
+    "abstract": "ArenaRL 针对开放式 Agent 任务（如复杂旅行规划）中 RL 训练的「判别坍塌」问题，提出了基于组内相对排名的强化学习范式。传统逐点打分方式在复杂轨迹间区分度不足，导致奖励信号被噪声主导。ArenaRL 引入过程感知的成对评估机制和锦标赛排名方案（锚点赛、轮循制、瑞士制等），在 O(N) 复杂度下实现接近 O(N²) 的优势估计精度。实验表明，ArenaRL 在 Open-Travel 和 Open-DeepResearch 两个高质量开放式基准上显著优于标准 RL 基线，生成的解决方案逻辑更严谨、鲁棒性更强。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-14",
+    "title": "ShowUI-π: Flow-based Generative Models as GUI Dexterous Hands",
+    "arxiv_id": "2512.24965",
+    "github": "https://github.com/showlab/showui-pi",
+    "abstract": "ShowUI-π 是一个 450M 参数的流匹配视觉-语言-动作（VLA）模型，用于 GUI 控制任务。核心创新在于统一动作表示：将点击和拖拽均建模为带鼠标按键状态的光标航路点序列，通过流匹配直接在像素空间生成连续的光标轨迹，无需离散坐标标记。这使模型能够处理手绘、物体旋转、滑块调节等需要精细空间控制的任务。同时贡献了 ScreenDrag 数据集，涵盖 505 个真实拖拽任务和 2 万余条光标轨迹。在 450M 参数规模下，ShowUI-π 在拖拽类 GUI 任务上超越了 7B+ 参数量的竞争模型。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-14",
+    "title": "Executive Memory as an Agentic Brain for Long-Horizon Reasoning",
+    "arxiv_id": "2601.08079",
+    "github": "https://github.com/qhjqhj00/MemoBrain",
+    "abstract": "MemoBrain 提出了一种用于工具增强 Agent 的执行记忆模型，解决长时推理中中间步骤和工具调用结果不断累积、撑爆上下文窗口的问题。系统以「协作驾驶员」方式并行运行，构建依赖感知的推理步骤图，并通过三类操作主动管理工作上下文：Flush（剪除无效步骤）、Fold（折叠已完成子轨迹为紧凑摘要）、以及固定尺寸高显著性推理骨干维护。MemoBrain 将上下文管理从被动累积转变为主动认知控制，在多步工具调用任务上显著提升了推理连贯性和任务完成率。",
+    "tags": ["MeM", "长文本"]
+  },
+  {
+    "date": "2026-01-14",
+    "title": "Aligning Text, Code, and Vision: A Multi-Objective Reinforcement Learning Framework for Text-to-Visualization",
+    "arxiv_id": "2601.04582",
+    "github": "https://github.com/vis-nlp/RL-Text2Vis",
+    "abstract": "RL-Text2Vis 提出了首个用于文本到可视化（Text2Vis）生成的强化学习框架，基于 GRPO（组相对策略优化）构建多目标奖励，联合优化文本准确性、代码可执行性和可视化质量。针对开源模型在该任务上频繁生成不可执行代码或视觉效果差的问题，通过后执行反馈信号引导训练，使传统 SFT 损失无法捕捉的视觉质量得以被优化。训练 Qwen2.5（7B 和 14B）模型后，RL-Text2Vis 在 Text2Vis 基准上图表质量相对 GPT-4o 提升 22%，代码执行成功率从 78% 提升至 97%，并在 VIS-Eval 和 NVBench 等跨域数据集上展示了良好的泛化能力。",
+    "tags": ["RL", "微调", "VLM"]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-01-15",
+    "title": "DeepResearchEval: An Automated Framework for Deep Research Task Construction and Agentic Evaluation",
+    "arxiv_id": "2601.09688",
+    "github": "https://github.com/Infinity-AILab/DeepResearchEval",
+    "abstract": "DeepResearchEval 提出了一套用于深度研究任务构建与智能体评估的自动化框架。任务构建阶段引入 persona 驱动的生成流水线，基于多样化用户画像生成逼真的复杂研究任务，并通过「任务合格性」与「搜索必要性」两级过滤保留需要多源证据整合的任务。评估阶段设计了两个核心组件：自适应逐点质量评估（根据每个任务动态生成评估维度与权重）以及主动事实核查（通过网络检索自主验证报告陈述，无需依赖引用）。该框架有效解决了现有评估体系标注成本高、评估维度静态和引用缺失时事实验证困难等问题。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-15",
+    "title": "Controlled Self-Evolution for Algorithmic Code Optimization",
+    "arxiv_id": "2601.07348",
+    "github": "https://github.com/QuantaAlpha/EvoControl",
+    "abstract": "本文提出受控自进化（CSE）框架，解决代码生成中自进化方法探索效率低的问题。CSE 包含三个核心组件：（1）多样化规划初始化，生成结构各异的算法策略以覆盖宽泛的解空间；（2）遗传进化，以反馈引导机制替代随机操作，实现精准变异与组合交叉；（3）层次进化记忆，在任务内和跨任务两个层次捕获成功与失败经验。在 EffiBench-X 上的实验表明，CSE 在多种 LLM 骨干上持续超越所有基线，并在早期迭代就展现出更高效率，且整个进化过程中保持持续改进。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-01-15",
+    "title": "MAXS: Meta-Adaptive Exploration with LLM Agents",
+    "arxiv_id": "2601.09259",
+    "github": "https://github.com/exoskeletonzj/MAXS",
+    "abstract": "MAXS 是一个面向 LLM 智能体的元自适应推理框架，解决现有方法中局部短视生成和轨迹不稳定两大问题。框架引入前瞻策略，将推理路径向前延伸若干步以估计工具调用的优势值，并结合步内一致性方差与跨步趋势斜率联合选择稳定、高价值的推理步骤。另外提出轨迹收敛机制，在路径一致性达到后停止进一步展开以控制计算开销。在 MiMo-VL-7B、Qwen2.5-VL-7B 和 Qwen2.5-VL-32B 三种模型、五个数据集上的实验表明，MAXS 在性能和推理效率上均持续优于现有方法。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-01-15",
+    "title": "OpenDecoder: Open Large Language Model Decoding to Incorporate Document Quality in RAG",
+    "arxiv_id": "2601.09028",
+    "github": "https://github.com/fengranMark/OpenDecoder",
+    "abstract": "OpenDecoder 针对 RAG（检索增强生成）中检索文档质量参差不齐的问题，提出开放式解码框架，使 LLM 在解码时能显式感知并整合文档质量信息。现有方法通常假设检索结果均高度相关，但实际检索文档可能包含噪声、冗余乃至错误内容。OpenDecoder 通过在解码过程中引入文档质量建模机制，提升答案生成对低质量文档的鲁棒性。该论文已被 WWW 2026 收录，代码与检查点已在 GitHub 和 HuggingFace 上公开。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-15",
+    "title": "FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection",
+    "arxiv_id": "2601.03928",
+    "github": "https://github.com/showlab/FocusUI",
+    "abstract": "FocusUI 针对 UI 截图理解中视觉 token 数量过多（2K 分辨率下约 4700 个）导致的计算开销大和注意力分散问题，提出位置保留的视觉 token 选择方案。核心创新包括：查询引导的视觉 token 选择（融合指令条件分数与基于 UI 图结构的规则分数）；以及 POSPAD（位置保留填充）策略，在压缩 token 同时保持精确空间定位所需的位置连续性。CVPR 2026 收录，在多个 UI grounding 基准上以显著更少的计算量实现与全分辨率输入相当乃至更优的性能。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-01-15",
+    "title": "Geometric Stability: The Missing Axis of Representations",
+    "arxiv_id": "2601.09173",
+    "github": "https://github.com/prashantcraju/geometric-stability",
+    "abstract": "本文提出「几何稳定性」这一表征分析的新维度，以补充现有相似性度量的不足。相似性衡量嵌入与外部参考的对齐程度，却无法反映表征结构在扰动下的鲁棒性。作者引入 Shesha 框架来测量几何稳定性。在七个领域的 2463 种配置上，实验表明稳定性与相似性是不相关的独立轴，共同决定表征质量。该框架为理解和改进预训练模型的表征提供了新工具，所有实验代码已公开。",
+    "tags": []
+  },
+  {
+    "date": "2026-01-15",
+    "title": "Omni-R1: Towards the Unified Generative Paradigm for Multimodal Reasoning",
+    "arxiv_id": "2601.09536",
+    "github": "https://github.com/ModalityDance/Omni-R1",
+    "abstract": "Omni-R1 提出统一的生成式多模态推理范式，突破现有方法依赖单一任务特定推理模式的局限。核心框架为两阶段 SFT+RL：PeSFT 在监督微调阶段引入感知对齐损失，PeRPO 在 RL 阶段施加感知奖励，从而实现功能性图像生成。另外提出 Omni-R1-Zero，无需多模态标注即可通过纯文本推理数据自举逐步可视化能力。训练框架基于 verl，支持缩放推理和 RL rollout。实验覆盖需要缩放、绘图、分解等多种推理技能的多模态任务。",
+    "tags": ["VLM", "RL", "微调"]
+  },
+  {
+    "date": "2026-01-15",
+    "title": "SCALER:Synthetic Scalable Adaptive Learning Environment for Reasoning",
+    "arxiv_id": "2601.04809",
+    "github": "https://github.com/ALEX-nlp/SCALER",
+    "abstract": "SCALER 面向 LLM 推理的强化学习训练，解决任务难度与模型能力不对齐及训练信号随模型进步退化的问题。框架从真实编程问题中合成可验证、可控难度的推理环境，并通过自适应多环境 RL 机制，在长期训练中持续提供信息丰富的学习信号。SCALER 建立在 verl 框架之上，实验表明该方法能在模型能力提升后仍维持有效的 RL 训练，并在多个推理基准上取得持续提升。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-15",
+    "title": "SampoNLP: A Self-Referential Toolkit for Morphological Analysis",
+    "arxiv_id": "2601.04469",
+    "github": "https://github.com/AragonerUA/SampoNLP",
+    "abstract": "SampoNLP 是一个用于形态丰富语言（如芬兰语、爱沙尼亚语、匈牙利语）的无监督词素发现工具库。核心算法 IMDP（带位置先验的迭代词素分解）通过 Rust 加速核心与 Python API 封装，实现高性能形态词典构建与分词器评估。工具库采用 MDL 启发的原子性评分，结合词根与词缀的位置先验和 Otsu 自动阈值方法，无需标注语料即可收敛到稳定词素表征，并支持通过 pip 安装。",
+    "tags": []
+  }
+]

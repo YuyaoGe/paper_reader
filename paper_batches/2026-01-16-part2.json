@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-01-16",
+    "title": "LaViT: Aligning Latent Visual Thoughts for Multi-modal Reasoning",
+    "arxiv_id": "2601.10129",
+    "github": "https://github.com/Svardfox/LaViT",
+    "abstract": "当前多模态推理常依赖外部监督（如辅助图像），忽视了模型内在的视觉注意力动态。本文发现知识蒸馏中存在\"感知鸿沟\"：学生模型在模仿教师文本输出时，往往关注截然不同的视觉区域，实质上依赖语言先验而非真正的视觉感知。为此，提出LaViT框架，通过对齐视觉潜在思路（即注意力图中的隐式视觉推理路径）而非静态输出来解决这一问题。实验表明LaViT在多模态推理任务上显著提升了模型的视觉感知能力与推理精度。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "PRL: Process Reward Learning Improves LLMs' Reasoning Ability and Broadens the Reasoning Boundary",
+    "arxiv_id": "2601.10201",
+    "github": "https://github.com/MaxwellJryao/Process-Reward-Learning",
+    "abstract": "当前大多数LLM推理训练方法仅依赖轨迹级的结果奖励，缺乏推理过程中的细粒度监督。本文提出过程奖励学习（PRL），通过将熵正则化强化学习目标分解为中间步骤，推导出严格的过程奖励分配方案。理论上，PRL等价于奖励最大化与策略模型和参考模型间KL散度惩罚之和，能将结果奖励转化为过程监督信号以指导探索。实验证明PRL不仅提升了平均推理性能（average@n），还拓宽了推理边界（pass@n），且无需MCTS或单独训练奖励模型等繁琐步骤。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Patient-Similarity Cohort Reasoning in Clinical Text-to-SQL",
+    "arxiv_id": "2601.09876",
+    "github": "https://github.com/Barryshen1/ClinSQL",
+    "abstract": "真实临床场景的Text-to-SQL任务需要跨异构EHR表格、时间窗口和患者相似度队列进行推理以生成可执行查询。本文引入CLINSQL，一个包含633个专家标注任务的基准（基于MIMIC-IV v3.1），要求多表连接、临床过滤和可执行SQL生成。该任务涉及模式元数据、临床编码系统导航、长上下文处理以及多步查询组合。评估了多种LLM方法，揭示了在复杂临床推理场景中当前模型的局限性，为临床NLP研究提供了挑战性资源。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Deriving Character Logic from Storyline as Codified Decision Trees",
+    "arxiv_id": "2601.10080",
+    "github": "https://github.com/KomeijiForce/Codified_Decision_Tree",
+    "abstract": "角色扮演（RP）智能体依赖行为配置文件以在多样化叙事情境中保持一致，然而现有配置文件大多非结构化、不可执行且验证薄弱，导致角色行为脆弱。本文提出编码决策树（CDT），一种从大规模叙事数据中自动归纳可执行、可解释决策结构的数据驱动框架。CDT将行为配置表示为条件规则树，内部节点对应语义有效的情境条件，叶节点对应角色行为。实验表明CDT使角色扮演智能体在一致性和可解释性上均有显著提升。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Enhancing Sentiment Classification and Irony Detection in Large Language Models through Advanced Prompt Engineering Techniques",
+    "arxiv_id": "2601.08302",
+    "github": "https://github.com/Marvin2108/ESCID-LLM-APET",
+    "abstract": "本研究探讨利用提示工程增强LLM（GPT-4o-mini和Gemini-1.5-flash）在情感分析任务中的表现。评估了few-shot学习、思维链提示和自一致性等高级提示技术，与基线方法对比。核心任务包括情感分类、基于方面的情感分析以及讽刺检测等细微语义识别。研究证明高级提示策略相比基础提示可显著提升模型在复杂情感理解任务上的准确性，无需额外微调即可获得性能增益。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "VQ-Seg: Vector-Quantized Token Perturbation for Semi-Supervised Medical Image Segmentation",
+    "arxiv_id": "2601.10124",
+    "github": "https://github.com/script-Yang/VQ-Seg",
+    "abstract": "一致性学习结合特征扰动是半监督医学图像分割的常用策略，但现有扰动方法多依赖Dropout，需要手动调优敏感的dropout率，容易导致次优正则化效果。本文提出VQ-Seg，首次将向量量化（VQ）引入该领域，通过离散化特征空间实现特征扰动。VQ将连续特征映射到离散码本向量，自然产生结构化扰动，避免了超参数敏感问题。实验在多个医学图像分割数据集上验证了VQ-Seg的有效性，在半监督设置下超越了现有基线方法。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-16",
+    "title": "Memory Bank Compression for Continual Adaptation of Large Language Models",
+    "arxiv_id": "2601.00756",
+    "github": "https://github.com/Thomkat/MBC",
+    "abstract": "LLM在实际应用中面临知识快速过时的问题。持续学习旨在无遗忘地更新模型知识，但全量微调计算代价高且易遭灾难性遗忘。记忆增强方法通过记忆库存储新数据来解决该问题，然而随着数据不断积累，记忆库规模持续膨胀。本文提出记忆库压缩（MBC）方法，通过自动识别并合并冗余记忆条目，在保留关键知识的同时控制记忆库规模，从而实现高效的LLM持续适应。实验证明MBC在减少存储开销的同时维持了持续学习性能。",
+    "tags": ["微调", "MeM"]
+  }
+]

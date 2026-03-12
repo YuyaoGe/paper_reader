@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-01-12",
+    "title": "Thinking with Map: Reinforced Parallel Map-Augmented Agent for Geolocalization",
+    "arxiv_id": "2601.05432",
+    "github": "https://github.com/AMAP-ML/Thinking-with-Map",
+    "abstract": "本文提出 Thinking with Map，一个通过强化学习（RL）训练的并行地图增强地理定位智能体。针对地理定位任务，作者将地图信息作为结构化先验引入推理过程，设计了「并行地图增强」机制让智能体在多个候选区域同步搜索，并以 RL 信号驱动策略优化。实验表明，该方法在 IM2GPS3k、YFCC26k 等基准上显著超越现有方法，在不同分辨率的地图下均表现出色，验证了地图辅助推理对视觉-地理匹配的有效性。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards",
+    "arxiv_id": "2601.06021",
+    "github": "https://github.com/THUDM/CaRR",
+    "abstract": "本文提出 CaRR（Citation-aware Rubric Rewards）框架，针对深度搜索智能体中纯结果奖励导致的捷径利用和幻觉问题。CaRR 将复杂问题分解为原子可验证的评分准则，仅当智能体明确识别所有隐藏实体、引用支持原文、且证据链与最终答案相连时才给予奖励。在此基础上提出 C-GRPO，为答对的轨迹额外施加引用感知奖励。在 Qwen3-4B 和 Qwen3-30B-A3B 上的实验表明，C-GRPO 稳定超越标准 GRPO，并在测试时扩展中表现出更强的上下文利用能力。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "EnvScaler: Scaling Tool-Interactive Environments for LLM Agent via Programmatic Synthesis",
+    "arxiv_id": "2601.05808",
+    "github": "https://github.com/RUC-NLPIR/EnvScaler",
+    "abstract": "本文提出 EnvScaler，一个通过程序化合成自动构建可执行、有状态、工具交互式环境的框架，用于训练 LLM 智能体。EnvScaler 分两阶段工作：SkelBuilder 从现有任务中挖掘环境描述并生成 Python 环境类；ScenGenerator 为每个环境合成具有挑战性的场景和可验证奖励信号。基于该框架，作者合成了 191 个环境和约 7K 场景，并对 Qwen3 系列模型进行 SFT+RL 训练。在三个基准上的实验表明，EnvScaler 显著提升了模型在复杂多轮、多工具交互任务中的能力。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "AgentOCR: Reimagining Agent History via Optical Self-Compression",
+    "arxiv_id": "2601.04786",
+    "github": "https://github.com/langfengQ/AgentOCR",
+    "abstract": "本文提出 AgentOCR，通过将多轮 LLM 智能体的历史记录渲染为紧凑图像来解决 token 预算快速膨胀的问题。核心贡献包括：利用视觉 token 的高信息密度实现超过 50% 的 token 压缩；引入「段光学缓存」将历史分解为可哈希段并维护视觉缓存，实现 20× 渲染加速；以及「自主自压缩」机制，让智能体主动输出压缩率并通过压缩感知奖励进行 RL 训练。在 ALFWorld 和搜索式 QA 任务上，AgentOCR 在保留 95% 以上性能的同时大幅降低内存占用。",
+    "tags": ["RL", "MeM", "长文本"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "Can We Predict Before Executing Machine Learning Agents?",
+    "arxiv_id": "2601.05930",
+    "github": "https://github.com/zjunlp/predict-before-execute",
+    "abstract": "本文探讨 LLM 是否能在不实际执行的情况下预测机器学习智能体的方案优劣。作者提出「数据中心方案偏好」概念，构建了 18,438 对成对比较语料库，验证了 LLM 具有「隐式执行先验」能力。基于此，设计了 FOREAGENT——一个「预测-验证」循环智能体，将探索与昂贵的物理执行解耦。FOREAGENT 在 MLE-bench 上实现 6× 加速、搜索空间扩大 3.2×、相较基线提升 +6% 胜率，DeepSeek-V3.2-Thinking 预测准确率达 61.5%，显著超越随机基线。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "An Empirical Study on Preference Tuning Generalization and Diversity Under Domain Shift",
+    "arxiv_id": "2601.05882",
+    "github": "https://github.com/ckarouzos/prefadap",
+    "abstract": "本文系统研究了偏好调优（Preference Tuning）在域偏移下的泛化性和多样性问题。作者比较了 SFT、DPO、KTO、ORPO、PPO、GRPO 等五种对齐目标，以及伪标注、目标域微调等多种适应策略，在摘要和问答任务上进行跨域评估。核心发现是：不同对齐目标在域偏移下的泛化能力存在系统性差异，基于伪标注的适应策略可以大幅减少域偏移导致的性能下降，为跨域对齐提供了实践指导。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "Illusions of Confidence? Diagnosing LLM Truthfulness via Neighborhood Consistency",
+    "arxiv_id": "2601.05905",
+    "github": "https://github.com/zjunlp/belief",
+    "abstract": "本文揭示传统点式置信度度量（如自我一致性）的「知识幻觉」问题：即使模型以高度一致性作出正确回答，在轻微上下文干扰下答案也可能崩溃。作者提出「邻域一致性置信度」（NCB），通过测试模型在概念邻域问题上的一致性来度量置信度鲁棒性；并设计认知压力测试模拟同伴压力和权威偏差。进一步提出「结构感知训练」（SAT），在 LoRA 微调框架下强制上下文不变的置信结构，使模型在压力测试下的性能下降减少约 30%。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-01-12",
+    "title": "SmartSearch: Process Reward-Guided Query Refinement for Search Agents",
+    "arxiv_id": "2601.04888",
+    "github": "https://github.com/RUC-NLPIR/SmartSearch",
+    "abstract": "本文提出 SmartSearch，通过过程奖励引导中间搜索查询优化来提升搜索智能体性能。核心机制包括：「双层信用评估」对每个中间查询质量提供细粒度过程奖励；「查询精化」机制选择性地对低质量查询进行重写并重新生成后续搜索轮次。训练采用三阶段课程学习框架：模仿→对齐→泛化。SmartSearch-3B 模型在 ASearcher 等数据集上相对基线取得显著提升，验证了查询质量对搜索推理链的关键作用。",
+    "tags": ["RL", "微调"]
+  }
+]
