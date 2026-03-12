@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-02-16",
+    "title": "Less is Enough: Synthesizing Diverse Data in Feature Space of LLMs",
+    "arxiv_id": "2602.10388",
+    "github": "https://github.com/Zhongzhi660/FAC-Synthesis",
+    "abstract": "本文提出 Feature Activation Coverage（FAC），一种在可解释特征空间中度量数据多样性的指标，用于解决现有后训练数据构建方法依赖文本指标、无法捕捉任务相关特征的问题。基于 FAC，作者进一步提出 FAC Synthesis 框架：先用稀疏自编码器（SAE）识别种子数据集中缺失的特征，再合成明确反映这些特征的样本。实验表明，该方法在指令跟随、毒性检测、奖励建模和行为引导等任务上持续提升数据多样性和下游性能。论文还发现 LLaMA、Mistral、Qwen 等模型族共享可解释特征空间，支持跨模型知识迁移，为 LLM 的数据中心优化提供了扎实的方法论基础。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "OneVision-Encoder: Codec-Aligned Sparsity as a Foundational Principle for Multimodal Intelligence",
+    "arxiv_id": "2602.08683",
+    "github": "https://github.com/EvolvingLMMs-Lab/OneVision-Encoder",
+    "abstract": "本文提出 OneVision-Encoder（OV-Encoder），一种以 Codec 对齐稀疏性为基础原则的视觉编码器。核心假设：AGI 本质上是压缩问题，有效压缩要求架构与数据的基本结构共振。OV-Encoder 采用 Codec Patchification，放弃均匀计算，仅专注于信号熵丰富的 3.1%–25% 区域；采用共享 3D RoPE 统一空间与时序推理，并在百万语义概念上以聚类判别目标训练。在 16 个图像、视频和文档理解 benchmark 上，OV-Encoder 以更少的视觉 token 和预训练数据持续优于 Qwen3-ViT 和 SigLIP2，视频理解任务平均提升 4.1%，验证了效率与精度正相关的核心假设。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "GeoAgent: Learning to Geolocate Everywhere with Reinforced Geographic Characteristics",
+    "arxiv_id": "2602.12617",
+    "github": "https://github.com/HVision-NKU/GeoAgent",
+    "abstract": "本文提出 GeoAgent，一个能像人类专家那样推理并得出精细地址结论的地理定位模型。针对已有 RL 方法依赖 AI 生成思维链数据、与地理特性冲突的问题，作者构建了由地理专家和专业选手标注的 CoT 数据集 GeoSeek，并设计了地理相似性奖励和一致性奖励（由一致性智能体评估），引导模型从地理视角收敛到正确答案，同时保证推理过程的完整性与一致性。实验结果显示，GeoAgent 在多粒度定位任务上优于现有方法和多个通用 VLLM，且生成的推理过程与人类判断高度一致。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "What does RL improve for Visual Reasoning? A Frankenstein-Style Analysis",
+    "arxiv_id": "2602.12395",
+    "github": "https://github.com/tianyi-lab/Frankenstein",
+    "abstract": "本文提出 Frankenstein 风格分析框架，深入剖析强化学习（RL）相对于监督微调（SFT）冷启动在视觉推理中究竟提升了什么能力。框架包含三个维度：（i）因果探针定位功能区域；（ii）参数比对刻画更新特征；（iii）模型合并测试可迁移性。分析发现，RL 在推理时主要在中后层产生一致性迁移，该迁移既可通过合并迁移，也对 RL 增益不可或缺。总体而言，RL 在视觉推理中的可靠贡献不是均匀增强视觉感知，而是系统性精化中后层 Transformer 计算，改善视觉到推理的对齐，揭示了单靠 benchmark 评估的局限性。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "Favia: Forensic Agent for Vulnerability-fix Identification and Analysis",
+    "arxiv_id": "2602.12500",
+    "github": "https://github.com/andstor/agentic-security-patch-classification-replication-package",
+    "abstract": "本文提出 Favia，一个面向漏洞修复提交识别的取证 Agent 框架，结合可扩展候选排名与深度迭代语义推理。Favia 首先通过高效排名阶段缩小提交搜索空间，再用基于 ReAct 的 LLM Agent 对每个提交进行严格评估：Agent 以修复前仓库为环境，借助专业工具定位漏洞组件、遍历代码库，并建立代码变更与漏洞根因之间的因果对齐。在自建大规模数据集 CVEVC（含 3708 个真实仓库、超 800 万提交）上，Favia 在精召权衡和 F1 分数上一致优于传统及 LLM 基线，尤其擅长识别间接、多文件的非平凡修复。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "scPilot: Large Language Model Reasoning Toward Automated Single-Cell Analysis and Discovery",
+    "arxiv_id": "2602.11609",
+    "github": "https://github.com/maitrix-org/scPilot",
+    "abstract": "本文提出 scPilot，首个系统实践「组学原生推理」（omics-native reasoning）的框架：LLM 以自然语言对话的同时直接检查单细胞 RNA-seq 数据和按需生物信息工具。scPilot 将细胞类型注释、发育轨迹重建和转录因子靶向等核心单细胞分析任务转化为逐步推理问题。配套发布评测套件 scBench（9 个专家策划数据集）。实验显示，迭代组学原生推理将细胞类型注释平均准确率提升 11%，Gemini-2.5-Pro 在轨迹图编辑距离上比 one-shot 提示降低 30%，并生成透明的推理轨迹。论文已被 NeurIPS 2025 主会接收。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "Steer2Edit: From Activation Steering to Component-Level Editing",
+    "arxiv_id": "2602.09870",
+    "github": "https://github.com/Trustworthy-ML-Lab/Steer2Edit",
+    "abstract": "本文提出 Steer2Edit，一个理论严格、无需训练的框架，将推理时激活操控（activation steering）向量转化为诊断信号，用于组件级 rank-1 权重编辑。不同于均匀注入 steering 方向的推理时干预，Steer2Edit 将行为影响选择性地分配到各注意力头和 MLP 神经元，生成可解释的编辑，同时保持标准前向传播并与优化并行推理兼容。在安全对齐、幻觉缓解和推理效率三类任务上，Steer2Edit 在相同下游性能下将安全性提升最高 17.2%、真实性提升 9.8%、推理长度平均缩短 12.2%，为表示操控与权重编辑提供了原则性桥梁。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-16",
+    "title": "Code2Worlds: Empowering Coding LLMs for 4D World Generation",
+    "arxiv_id": "2602.11757",
+    "github": "https://github.com/AIGeeksGroup/Code2Worlds",
+    "abstract": "本文提出 Code2Worlds，将 4D 动态场景生成表述为语言到仿真代码生成任务。针对现有方法在多尺度上下文纠缠和语义-物理执行鸿沟两大挑战，作者设计了双流架构：检索增强对象生成流与层级环境编排流相互解耦；并建立物理感知闭环机制，由 PostProcess Agent 脚本化动态行为，配合 VLM-Motion Critic 进行自我反思迭代精炼仿真代码。在 Code4D benchmark 上，Code2Worlds 相比 baseline SGS 增益 41%、Richness 提升 49%，并能唯一生成先前静态方法所缺失的物理感知动态效果。",
+    "tags": ["VLM"]
+  }
+]

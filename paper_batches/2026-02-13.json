@@ -1,0 +1,138 @@
+[
+  {
+    "date": "2026-02-13",
+    "title": "Composition-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models",
+    "arxiv_id": "2602.12036",
+    "github": "https://github.com/XinXU-USTC/Composition-RL",
+    "abstract": "大规模可验证提示是RLVR成功的基础，但现有训练集中包含大量无信息样本且难以扩展。已有工作聚焦于优先使用pass rate为0的困难问题，而本文关注pass rate为1的简单问题在训练中逐渐增多的问题。提出Composition-RL：自动将多个问题组合成新的可验证复合问题，用于RL训练。在4B到30B模型上实验表明，Composition-RL持续提升推理能力，课程式变体通过逐步增加组合深度可进一步增益。此外该方法还支持跨领域RL，通过组合不同领域的提示实现更有效的迁移。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image Generation and Editing",
+    "arxiv_id": "2602.12205",
+    "github": "https://github.com/DeepGenTeam/DeepGen",
+    "abstract": "当前统一多模态图像生成与编辑模型通常依赖超过10B的大规模参数。本文提出DeepGen 1.0，一个轻量级5B统一模型，性能与更大模型相当甚至超越。核心创新是层叠通道桥接（SCB）深度对齐框架，从多个VLM层提取层次化特征并通过可学习「think token」融合，为生成骨干提供结构化推理引导。训练策略包括三个阶段：对齐预训练、联合监督微调、使用MR-GRPO强化学习。仅在约5000万样本上训练，DeepGen 1.0在多项基准上达到领先性能，在WISE上超越80B HunyuanImage达28%，开源训练代码、权重与数据集。",
+    "tags": ["VLM", "RL", "微调"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "LawThinker: A Deep Research Legal Agent in Dynamic Environments",
+    "arxiv_id": "2602.12056",
+    "github": "https://github.com/yxy-919/LawThinker-agent",
+    "abstract": "法律推理不仅要求结论正确，还要求程序合规。现有方法缺乏验证中间推理步骤的机制，导致如不适用法条引用等错误无声传播。本文提出LawThinker，一个采用「探索-验证-记忆」策略的自主法律研究智能体，核心在于将验证作为每次知识探索之后的原子操作。DeepVerifier模块从知识准确性、事实-法律相关性、程序合规性三个维度审查每次检索结果，并通过记忆模块支持长链任务中的跨轮知识复用。在动态基准J1-EVAL上，LawThinker相比直接推理提升24%，相比工作流方法提升11%，在过程导向指标上表现尤为突出。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching",
+    "arxiv_id": "2602.12280",
+    "github": "https://github.com/stroke-of-surprise/Stroke-Of-Surprise",
+    "abstract": "视觉错觉传统上依赖空间操纵，本文引入渐进式语义错觉任务：一幅矢量草图通过依次添加笔触发生戏剧性语义变换。提出Stroke of Surprise生成框架，优化矢量笔触使其在不同绘制阶段满足不同语义解释。核心挑战是「双约束」：前缀笔触须构成连贯对象（如鸭子），同时作为添加增量笔触后第二概念（如绵羊）的结构基础。提出序列感知联合优化框架，驱动机制为双分支Score Distillation Sampling，动态调整前缀笔触探索两者共同结构子空间。引入Overlay Loss强制空间互补性，实验表明方法在可识别性和错觉强度上显著超越基线。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "LIE: Think Longer to Explore Deeper: Learn to Explore In-Context via Length-Incentivized Reinforcement Learning",
+    "arxiv_id": "2602.11748",
+    "github": "https://github.com/LINs-lab/LIE",
+    "abstract": "有效的测试时扩展需要模型具备上下文内探索能力——在单一连续上下文中生成、验证和精炼多个推理假设。基于状态覆盖理论，本文识别出关键瓶颈：更广的状态覆盖需要更长的推理轨迹，但自回归生成中采样此类序列的概率指数衰减（称为「浅层探索陷阱」）。提出Length-Incentivized Exploration（LIE），通过基于长度的奖励加冗余惩罚显式鼓励模型深入探索，从而两步最大化状态覆盖。在Qwen3、Llama等模型上实验表明，LIE在域内任务平均提升4.4%，域外基准提升2.7%。",
+    "tags": ["RL", "长文本"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "dVoting: Fast Voting for dLLMs",
+    "arxiv_id": "2602.12153",
+    "github": "https://github.com/fscdc/dVoting",
+    "abstract": "扩散大语言模型（dLLMs）是超越自回归建模的新范式，天然支持灵活的解码过程，具有并行测试时扩展的巨大潜力。本文提出dVoting，一种无需训练即可提升推理能力的快速投票技术，额外计算开销可接受。dVoting观察到：对同一提示的多次采样中，大多数token预测高度一致，而性能由少量跨样本变化的token决定。利用dLLMs任意位置生成能力，dVoting通过采样、一致性分析识别不确定token、重新投票生成、迭代收敛来精炼输出。实验表明在GSM8K提升6.22%-7.66%，MATH500提升4.40%-7.20%，ARC-C提升3.16%-14.84%。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "DeepSight: An All-in-One LM Safety Toolkit",
+    "arxiv_id": "2602.12092",
+    "github": "https://github.com/AI45Lab/DeepSafe",
+    "abstract": "大模型安全工作流中，评估、诊断和对齐通常由独立工具处理，安全评估只能定位外部行为风险而无法找到内部根因。本文提出开源项目DeepSight，实践「安全评估-诊断一体化」新范式。DeepSight低成本、可复现、高效且高度可扩展，包含评估工具DeepSafe和诊断工具DeepScan。通过统一任务和数据协议，将两阶段串联，将安全评估从黑盒转变为白盒洞察。DeepSight是首个支持前沿AI风险评估和联合安全评估与诊断的开源工具集。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-13",
+    "title": "Unveiling Implicit Advantage Symmetry: Why GRPO Struggles with Exploration and Difficulty Adaptation",
+    "arxiv_id": "2602.05548",
+    "github": "https://github.com/HKU-HealthAI/A-GRAE",
+    "abstract": "RLVR特别是GRPO已成为激发LLM推理的标准方法，但其在探索和难度适应方面的效率仍是开放挑战。本文指出这些瓶颈源于GRAE内隐含的优势对称性，导致两个关键限制：(i)群体级别，正确与错误轨迹的权重严格对称，阻碍新颖正确解的探索；(ii)样本级别，算法隐式偏向中等难度样本。提出Asymmetric GRAE（A-GRAE），动态调节探索激励和样本难度关注，通过不对称抑制正确轨迹优势来鼓励探索，并采用课程式由易到难的转换。七个基准上的实验证明A-GRAE持续提升GRPO及其变体在LLM和MLLM上的表现。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "Dreaming in Code for Curriculum Learning in Open-Ended Worlds",
+    "arxiv_id": "2602.08194",
+    "github": "https://github.com/konstantinosmitsides/dreaming-in-code",
+    "abstract": "开放式学习中，大组合空间使智能体难以发现持续可学习的经验序列。本文提出Dreaming in Code（DiCode），利用基础模型合成可执行环境代码来支撑学习向更高能力进阶。「做梦」表现为在代码层面对世界进行物化变体。在Craftax开放式基准上实例化DiCode，实验表明智能体能习得长时域技能，平均回报比最强基线提升16%，在先前方法完全失败的后期战斗任务上首次取得非零成功率。结果表明代码级环境设计为课程控制提供了实用机制。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "SPES: Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm",
+    "arxiv_id": "2602.11543",
+    "github": "https://github.com/zjr2000/SPES",
+    "abstract": "LLM预训练通常需要集中式集群和数千块高显存GPU。现有去中心化训练方法虽减少了通信开销，但仍需在每个节点上训练完整模型。本文提出SPES（稀疏专家同步），一种用于预训练MoE LLM的内存高效去中心化框架，每个节点仅训练专家子集，显著降低显存占用，并通过定期同步消除全参数传输。引入专家合并热身策略加速收敛。实验表明使用16块48GB GPU通过互联网连接训练2B参数MoE LLM，性能与集中训练相当。进一步验证了7B从头训练和9B从稠密checkpoint升级的可扩展性。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-13",
+    "title": "Sci-CoE: Co-evolving Scientific Reasoning LLMs via Geometric Consensus with Sparse Supervision",
+    "arxiv_id": "2602.12164",
+    "github": "https://github.com/InternScience/Sci-CoE",
+    "abstract": "LLM在科学推理任务上因不可靠的解题评估和有限的验证策略多样性而仍较脆弱。本文提出Sci-CoE，一个两阶段科学协同进化框架，使模型同时作为求解器和验证器进行自我进化，从稀疏监督过渡到无监督学习。第一阶段使用少量标注数据建立基础正确性判断锚点；第二阶段引入几何奖励机制，联合考虑共识性、可靠性和多样性，驱动在未标注数据上的大规模自迭代。在多个通用科学基准上的实验表明Sci-CoE增强了复杂推理能力并表现出强扩展性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "P-GenRM: Personalized Generative Reward Model with Test-time User-based Scaling",
+    "arxiv_id": "2602.12116",
+    "github": "https://github.com/Tongyi-ConvAI/Qwen-Character",
+    "abstract": "个性化LLM对齐旨在通过强化学习将回复适应个人用户偏好。现有个性化奖励模型存在两个持续限制：将多样偏好过度简化为少量固定评估原则，以及在新用户少量反馈下泛化困难。本文提出P-GenRM，首个具有测试时用户级缩放的个性化生成奖励模型。P-GenRM将偏好信号转化为结构化评估链，推导自适应角色和评分标准，并将用户聚类为用户原型，引入双粒度缩放机制。实验表明P-GenRM在个性化奖励模型基准上达到最优，平均提升2.31%，测试时用户级缩放额外提供3%增益。被ICLR 2026接收为Oral。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "MuRGAt: Multimodal Fact-Level Attribution for Verifiable Reasoning",
+    "arxiv_id": "2602.11509",
+    "github": "https://github.com/meetdavidwan/murgat",
+    "abstract": "现有多模态接地基准聚焦于简化的观察型场景或有限模态，无法评估复杂多模态推理中的归因能力。本文引入MuRGAt（带接地归因的多模态推理），一个评估需要超越直接观察进行推理的事实级多模态归因基准。给定跨视频、音频等模态的输入，MuRGAt要求模型生成带明确推理和精确引用的答案，每个引用须指定模态和时间段。引入与人类判断高度相关的自动评估框架。基准测试揭示即使强大的MLLM也会在推理正确的情况下频繁幻构引用，且更深推理或强制结构化接地往往降低准确性，暴露了内部推理与可验证归因之间的显著差距。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning",
+    "arxiv_id": "2602.10575",
+    "github": "https://github.com/MING-ZCH/MetaphorStar",
+    "abstract": "图像隐喻理解对现有AI系统仍是关键挑战，需要复杂多跳推理、文化背景和心智理论能力。本文提出MetaphorStar，首个针对图像含义任务的端到端视觉强化学习框架，包含三个核心组件：细粒度数据集TFQ-Data、视觉RL方法TFQ-GRPO和结构化基准TFQ-Bench。使用TFQ-GRPO在TFQ-Data上训练的MetaphorStar系列模型，在图像含义基准上平均提升82.6%。MetaphorStar-32B在多项指标上达到最优，在真假题上显著超越顶级闭源模型Gemini-3.0-pro。实验还揭示图像含义任务的学习提升了通用视觉推理能力。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "Detecting RLVR Training Data via Structural Convergence of Reasoning",
+    "arxiv_id": "2602.11792",
+    "github": "https://github.com/StevenZHB/Detect_RLVR_Data",
+    "abstract": "RLVR是训练现代推理模型的核心方法，但未公开的训练数据引发了基准污染担忧。与预训练不同，RLVR基于自生成轨迹的奖励反馈进行微调，使基于似然的传统检测方法失效。本文发现RLVR诱导了独特的行为特征：训练时遇到的提示产生更僵化和相似的输出，而未见提示保留更大多样性。提出Min-kNN Distance，一种简单黑盒检测器，通过对给定提示采样多个补全并计算k个最小近邻编辑距离的平均值来量化这种收敛性。该方法无需访问参考模型或token概率，实验表明其可靠区分RL训练样本与未见样本，超越现有基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "ScalSelect: Scalable Training-Free Multimodal Data Selection for Efficient Visual Instruction Tuning",
+    "arxiv_id": "2602.11636",
+    "github": "https://github.com/ChangtiWu/ScalSelect",
+    "abstract": "大规模视觉指令微调（VIT）是提升视觉语言模型性能的关键范式，但大规模数据训练计算开销大。现有数据选择方法要么需要昂贵训练或梯度计算，要么依赖代理模型且扩展性有限。本文提出ScalSelect，一种具有线性时间复杂度的可扩展无需训练多模态数据选择方法，无需外部模型或辅助数据集。ScalSelect通过提取目标VLM中指令token最关注的视觉特征构建样本表示，识别最能近似全数据集表示主子空间的样本。实验表明ScalSelect仅用16%的数据可实现全数据训练97.5%以上的性能，部分设置下甚至超越全数据训练。",
+    "tags": ["无需训练", "VLM"]
+  },
+  {
+    "date": "2026-02-13",
+    "title": "Neural Additive Experts: Context-Gated Experts for Controllable Model Additivity",
+    "arxiv_id": "2602.10585",
+    "github": "https://github.com/Teddy-XiongGZ/NAE",
+    "abstract": "可解释性与准确性之间的权衡是机器学习的核心挑战。标准广义加性模型（GAM）提供清晰的特征归因，但严格的加性性质限制了预测性能，而引入特征交互虽提升准确性却可能掩盖个体特征贡献。本文提出神经加性专家（NAE），一种无缝平衡可解释性与准确性的新框架。NAE采用混合专家框架，为每个特征学习多个专用网络，通过动态门控机制整合跨特征信息，从而放宽严格加性约束。提出有针对性的正则化技术降低专家预测方差，促进从纯加性模型到捕获复杂特征交互的平滑过渡。在合成数据和真实数据集上的实验证实了NAE在预测准确性和可解释性间的最优平衡。接收于AISTATS 2026。",
+    "tags": []
+  }
+]
