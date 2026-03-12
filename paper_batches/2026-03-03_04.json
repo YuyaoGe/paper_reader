@@ -1,0 +1,219 @@
+[
+  {
+    "date": "2026-03-03",
+    "title": "OmniLottie: Generating Vector Animations via Parameterized Lottie Tokens",
+    "arxiv_id": "2603.02138",
+    "github": "https://github.com/OpenVGLab/OmniLottie",
+    "abstract": "OmniLottie 是一个从多模态指令生成高质量矢量动画的统一框架。核心贡献在于设计了 Lottie 分词器，将原始 JSON 格式的 Lottie 文件转化为结构化的命令序列，涵盖形状、动画函数和控制参数，从而消除了大量冗余的结构元数据。在此基础上，框架利用预训练的视觉语言模型接受多模态交织指令并生成矢量动画。为推动研究，作者还构建了 MMLottie-2M，一个包含 200 万条专业矢量动画与文本/视觉注释配对的大规模数据集。实验验证了 OmniLottie 能够生成语义贴合、动作生动的矢量动画。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "OpenAutoNLU: Open Source AutoML Library for NLU",
+    "arxiv_id": "2603.01824",
+    "github": "https://github.com/mts-ai/OpenAutoNLU",
+    "abstract": "OpenAutoNLU 是一个面向自然语言理解任务（文本分类和命名实体识别）的开源自动化机器学习库。核心创新是引入了数据感知的训练策略自动选择机制，无需用户手动配置即可根据数据特性选择最优训练方案。库中还集成了数据质量诊断、可配置的分布外检测（OOD Detection）以及大语言模型特性支持，提供极简的低代码 API 接口。该工具特别适合需要快速部署 NLU 系统的工程师和研究者，降低了 NLU 建模的使用门槛。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-03",
+    "title": "MMR-Life: Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning",
+    "arxiv_id": "2603.02024",
+    "github": "https://github.com/BugMakerzzz/MMR-Life",
+    "abstract": "MMR-Life 是一个评估多模态大模型在真实场景下多图推理能力的综合评测集，包含 2646 道基于 19108 张真实世界图片的多选题，覆盖溯因、类比、因果、演绎、归纳、空间和时间七种推理类型。与现有推理评测不同，MMR-Life 不依赖领域专业知识，而是要求模型综合多张图片进行多样化推理。对 37 个先进模型的评测揭示了显著的挑战性：GPT-5 最高仅达 58% 准确率，且不同推理类型间的表现差异显著。此外，论文还分析了思维长度、推理方式等因素对模型表现的影响。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "LLaDA-o: An Effective and Length-Adaptive Omni Diffusion Model",
+    "arxiv_id": "2603.01068",
+    "github": "https://github.com/ML-GSAI/LLaDA-o",
+    "abstract": "LLaDA-o 是一个有效且长度自适应的全能扩散模型，支持多模态理解与生成。该模型基于混合扩散（MoD）框架，将文本理解的离散掩码扩散与视觉生成的连续扩散解耦，同时通过共享的高效注意力主干进行耦合，减少了对固定条件的冗余计算。在此基础上引入以数据为中心的长度自适应策略，无需修改模型架构即可支持多模态场景下的灵活长度解码。在多模态理解与生成基准上取得同类全能扩散模型的最优表现，在 DPG-Bench 文生图任务上达到 87.04 分。",
+    "tags": [
+      "VLM",
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Spectral Condition for μP under Width-Depth Scaling",
+    "arxiv_id": "2603.00541",
+    "github": "https://github.com/ML-GSAI/Width-Depth-muP",
+    "abstract": "本文针对宽度与深度联合扩展的基础模型训练问题，提出了统一的谱框架以实现最大更新参数化（μP）。作者引入谱 μP 条件，精确刻画权重范数与每步更新量在宽度和深度上的扩展规律，将此前分散的各类 μP 表述统一为特例。基于该条件推导出覆盖广泛优化器的通用 μP 实现方案，不仅能恢复 SGD 和 AdamW 的现有公式，还自然扩展至更多优化器。GPT-2 语言模型实验验证了所提谱 μP 条件在宽深联合扩展下能保持稳定特征学习并实现超参数迁移。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data",
+    "arxiv_id": "2602.21320",
+    "github": "https://github.com/emrecanacikgoz/Tool-R0",
+    "abstract": "Tool-R0 提出了一种在零数据假设下通过自博弈强化学习训练通用工具调用 Agent 的框架。从同一基础大模型出发，共同进化 Generator 和 Solver 两个角色，Generator 在 Solver 能力边界处提出有挑战性的任务，Solver 通过真实工具调用来解决这些任务，二者以互补奖励形成自我演化闭环，无需任何预先构建的任务或数据集。在多个工具使用评测集上，Tool-R0 相比基础模型取得了 92.5% 的相对提升，超越了同等设置下的全监督工具调用基线，并揭示了自博弈 LLM Agent 在协同进化、课程动态和扩展行为上的规律。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "When Does RL Help Medical VLMs? Disentangling Vision, SFT, and RL Gains",
+    "arxiv_id": "2603.01301",
+    "github": "https://github.com/armenjeddi/medbridgerl",
+    "abstract": "本文通过受控实验系统解耦 RL 在医疗视觉语言模型后训练中的实际贡献，沿视觉、SFT 和 RL 三个维度分析其影响。在 MedMNIST 多模态测试床上，研究者对比了 VLM 视觉塔与纯视觉基线的表现，通过 Accuracy@1 与 Pass@K 量化推理支持度与采样效率，并考察 RL 何时能弥合支持度差距。核心发现：RL 在模型已具备一定正确候选支持（高 Pass@K）时最有效，主要作用是锐化输出分布；而 SFT 的作用是拓展支持度，为 RL 奠定基础。据此提出边界感知配方，在 PMC 医疗 VQA 子集上 RL 后训练后，在六个医疗 VQA 基准上取得强劲平均表现。",
+    "tags": [
+      "RL",
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Spectral Attention Steering for Prompt Highlighting",
+    "arxiv_id": "2603.01281",
+    "github": "https://github.com/waylonli/SEKA",
+    "abstract": "注意力引导是控制模型关注点的重要技术，但现有方法需显式存储完整注意力矩阵，与 FlashAttention 等内存高效实现不兼容。本文提出 SEKA（谱编辑键放大），一种免训练的引导方法，通过在注意力计算前直接编辑键嵌入来绕过该限制：利用谱分解将键嵌入引导至可放大特定 token 注意力分数的潜在方向。进一步提出自适应变体 AdaSEKA，通过免训练路由机制基于提示语义意图动态组合多个专家子空间。实验表明，两种方法在标准引导基准上显著优于强基线，同时引入极低的延迟和内存开销，并与优化注意力实现完全兼容。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Half-Truths Break Similarity-Based Retrieval",
+    "arxiv_id": "2602.23906",
+    "github": "https://github.com/kargibora/CS-CLIP",
+    "abstract": "本文揭示了 CLIP 类双编码器在图文相似度计算中存在\"半真实\"漏洞：在正确描述后附加错误细节，相似度分数不降反升。在 COCO 数据集上，CLIP 仅在 40.6% 的情况下偏好正确的较短描述，关系描述错误时降至 32.9%。作者将该问题归因于对比训练仅对齐整句而未显式约束实体和关系的粒度接地。为此提出 CS-CLIP，将标题分解为实体和关系单元，为每个单元构建最小化编辑的干扰样本，并微调模型使正确单元得分高于干扰样本。CS-CLIP 将半真实准确率提升至 69.3%，在组合理解基准上平均提升 5.7 分。",
+    "tags": [
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Reasoning Core: A Scalable Procedural Data Generation Suite for Symbolic Pre-training and Post-Training",
+    "arxiv_id": "2603.02208",
+    "github": "https://github.com/sileod/reasoning_core",
+    "abstract": "Reasoning Core 是一个可扩展的程序化符号推理数据生成套件，用于扩展语言模型的推理边界。与依赖固定谜题或模板的现有生成器不同，它覆盖了 PDDL 规划、一阶逻辑、上下文无关文法解析、因果推理（贝叶斯网络）和方程组五个核心形式推理域，每类任务均配合外部求解器进行严格验证，并支持连续难度控制以实现课程学习。生成样本可选地包含求解器推导的推理链，支持从预训练阶段即开始监督训练，同一接口也可提供 RL 可验证奖励函数。预训练混入 Reasoning Core 数据可提升下游推理表现同时不损害语言建模质量，且 GPT-5 等前沿模型在零样本评估上仍面临显著挑战。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "RAISE: Requirement-Adaptive Evolutionary Refinement for Training-Free Text-to-Image Alignment",
+    "arxiv_id": "2603.00483",
+    "github": "https://github.com/LiyaoJiang1998/RAISE",
+    "abstract": "RAISE 是一个免训练的自适应进化框架，用于提升文生图扩散模型的提示对齐质量。它将图像生成建模为需求驱动的自适应扩展过程，在推理时对候选图像种群进行演化，支持提示重写、噪声重采样和指令编辑等多种精化动作，并通过结构化需求清单对结果进行验证，仅对未满足项分配额外计算资源。这实现了与语义复杂度匹配的自适应测试时扩展。在 GenEval 和 DrawBench 上，RAISE 实现最优对齐分数（GenEval 综合 0.94），同时将生成样本数减少 30-40%，VLM 调用次数减少 80%，展示了高效、可泛化的多轮自我改进能力。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "CC-VQA: Conflict- and Correlation-Aware Method for Mitigating Knowledge Conflict in Knowledge-Based Visual Question Answering",
+    "arxiv_id": "2602.23952",
+    "github": "https://github.com/cqu-student/CC-VQA",
+    "abstract": "CC-VQA 针对知识型视觉问答中检索信息与模型参数知识间冲突问题提出了一个免训练的冲突与相关性感知方法。现有方法忽视了视觉信息在冲突中的关键作用，且受冗余检索上下文干扰。CC-VQA 包含两个核心组件：（1）视觉中心的上下文冲突推理，对内部和外部知识上下文进行视觉语义冲突分析；（2）相关性引导的编码与解码，通过位置编码压缩低相关语句，并使用相关性加权冲突评分进行自适应解码。在 E-VQA、InfoSeek 和 OK-VQA 三个基准上，CC-VQA 相较现有方法实现了 3.3% 到 6.4% 的绝对准确率提升。",
+    "tags": [
+      "无需训练",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "ProtegoFed: Backdoor-Free Federated Instruction Tuning with Interspersed Poisoned Data",
+    "arxiv_id": "2603.00516",
+    "github": "https://github.com/dongdongzhaoUP/ProtegoFed",
+    "abstract": "ProtegoFed 是首个能够处理分散在所有客户端中毒样本的无后门联邦指令微调框架。研究发现，当中毒样本分散于良性客户端时，现有防御方法均失效。为解决这一问题，论文发现频域梯度是区分中毒样本的鲁棒信号，并提出全局二次聚类机制以支持跨客户端协作识别中毒样本。ProtegoFed 在训练中准确检测、移除并净化分散的中毒数据。在四个联邦学习数据集上，中毒样本识别率达 92% 至 100%，攻击成功率降至接近零，同时保持主任务效用。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Planning from Observation and Interaction",
+    "arxiv_id": "2602.24121",
+    "github": "https://github.com/UWRobotLearning/mpail2",
+    "abstract": "本文研究仅凭任务执行观察学习（无奖励、无示教者动作）的 Agent 训练问题，提出了一种基于规划的逆强化学习（IRL）算法，仅从观察与交互中构建世界模型。全程在真实世界中进行实验，在不到一小时内从零开始学习基于图像的操作任务，无需任何先验知识、预训练或额外数据。同时验证了学得的世界模型具备在线迁移学习能力。与 IRL、RL 及行为克隆等假设更严格的方法相比，该方法展示了显著更高的样本效率和成功率，为基于观察的在线世界建模与规划提供了实用路径。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "title": "Monocular Mesh Recovery and Body Measurement of Female Saanen Goats",
+    "arxiv_id": "2602.19896",
+    "github": "https://github.com/bojin-nwafu/Female-Saanen-Goats",
+    "abstract": "本文针对萨能奶山羊体型测量问题提出了单目网格重建方法。首先构建了包含 55 只雌性萨能羊八视角 RGBD 视频的 FemaleSaanenGoat 数据集，利用多视角 DynamicFusion 将嘈杂非刚性点云融合为高保真 3D 扫描。在此基础上开发了 SaanenGoat 参数化 3D 体型模型，包含 41 个骨骼关节和增强的乳房表征，形状空间涵盖 48 只山羊的个体差异。借助该模型实现单视角 RGBD 输入的高精度三维重建，自动测量体长、体高、胸宽、胸围、臀宽、臀高六项关键体尺。实验表明该方法在 3D 重建和体尺测量上均超越基线，为精准畜牧业提供了新范式。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Utonia: Toward One Encoder for All Point Clouds",
+    "arxiv_id": "2603.03283",
+    "github": "https://github.com/Pointcept/Utonia",
+    "abstract": "Utonia 是首个跨多域联合训练的自监督点云 Transformer 编码器，覆盖遥感、户外激光雷达、室内 RGB-D、物体级 CAD 模型以及 RGB-only 视频提升的点云等多个感知域。尽管各域在传感器几何、密度和先验知识上差异显著，Utonia 仍能学习出跨域一致的表征空间，且多域联合训练时涌现出单域训练中未出现的有趣行为。此外，Utonia 的表征也能提升多模态推理能力，在视觉语言模型中集成后在空间推理任务上取得收益。实验验证了该框架在 AR/VR、自动驾驶等下游应用中的广泛潜力。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "BeyondSWE: Can Current Code Agent Survive Beyond Single-Repo Bug Fixing?",
+    "arxiv_id": "2603.03194",
+    "github": "https://github.com/AweAI-Team/BeyondSWE",
+    "abstract": "BeyondSWE 是一个超越单仓库 Bug 修复的代码 Agent 综合评测框架，从解决范围和知识范围两个维度扩展现有评测，包含 500 个真实世界实例，覆盖跨仓库推理、领域专业化问题解决、依赖驱动迁移和全仓库生成四类场景。实验揭示了显著的能力差距：即便是最先进的前沿模型成功率也低于 45%，且没有单一模型能在所有任务类型上保持一致表现。为系统研究外部知识的作用，作者还开发了 SearchSWE 框架，将深度检索与编码能力结合，结果表明检索增强的收益并不稳定，在部分情况下甚至会降低性能，揭示了模拟开发者工作流的固有挑战。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "PRISM: Pushing the Frontier of Deep Think via Process Reward Model-Guided Inference",
+    "arxiv_id": "2603.02479",
+    "github": "https://github.com/Rituraj003/PRISM",
+    "abstract": "PRISM 是一种过程奖励模型（PRM）引导的推理时推断算法，用于改进 DEEPTHINK 系统中的种群增强瓶颈。现有框架在推断时缺乏可靠正确性信号，导致更深层推导放大错误并抑制正确少数解。PRISM 将候选解视为 PRM 定义能量景观中的粒子，通过分数引导的重采样和随机精化重塑种群，在保持多样性的同时将概率质量集中于高质量推理；聚合阶段同样由步级验证引导。在数学和科学基准上，PRISM 以 gpt-oss-20b 在 AIME25、HMMT25、GPQA Diamond 分别达到 90.0%、75.4%、71.4%，匹配或超越 gpt-oss-120b，且通常处于计算-精度帕累托前沿。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Humans and LLMs Diverge on Probabilistic Inferences",
+    "arxiv_id": "2602.23546",
+    "github": "https://github.com/McGill-NLP/probabilistic-reasoning",
+    "abstract": "本文系统研究了人类与大语言模型在概率推断上的差异。研究者构建了 ProbCOPA 数据集，包含 210 条手工设计的概率推断样例，每条由 25-30 名人类参与者标注推断可能性，揭示了人类判断的连续性和差异性。对比八个前沿推理 LLM 的输出后发现，模型一致性地无法产生类人的概率分布。进一步分析 LLM 推理链，发现模型在评估此类推断时存在共同的推理模式缺陷。研究结果揭示了人类与 LLM 之间持续存在的认知差异，强调了在非确定性场景下评估推理能力的必要性。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Surgical Post-Training: Cutting Errors, Keeping Knowledge",
+    "arxiv_id": "2603.01683",
+    "github": "https://github.com/Visual-AI/SPoT",
+    "abstract": "SPoT（手术式后训练）是一种在提升 LLM 推理能力的同时防止灾难性遗忘的新范式。论文从理论和实验两方面揭示了 DPO 奖励估计中内在正则化机制的关键作用。SPoT 由两个核心组件组成：（1）数据修正流水线，利用 Oracle 通过最小化编辑外科式修正错误步骤，生成接近模型当前分布的数据；（2）基于奖励的二元交叉熵目标，将推理正确性建模为二分类问题，实施解耦监督信号。仅用 4K 条修正数学数据对，SPoT 在域内和 OOD 任务上平均提升 Qwen3-8B 准确率 6.2%，在 8×H800 GPU 上仅需 28 分钟训练。",
+    "tags": [
+      "微调",
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "Spilled Energy in Large Language Models",
+    "arxiv_id": "2602.18671",
+    "github": "https://github.com/OmnAI-Lab/spilled-energy",
+    "abstract": "本文将 LLM 最终 softmax 分类器重新诠释为能量函数模型（EBM），将序列到序列的概率链分解为推断时多个交互 EBM。由此引入\"能量溢出\"概念，实验表明其与事实性错误、偏差和失败高度相关。与现有方法不同，作者无需训练探针分类器或激活消融，仅从输出 logits 推导出两个完全免训练的指标：溢出能量（捕捉理论上应匹配的连续生成步骤间的能量值差异）和边际化能量（单步可测量）。在九个基准上，对包括 LLaMA、Mistral、Gemma 等主流 LLM 的评测证明了该方法在幻觉检测上的鲁棒性和跨任务泛化能力。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-03-04",
+    "title": "InfoPO: Information-Driven Policy Optimization for User-Centric Agents",
+    "arxiv_id": "2603.00656",
+    "github": "https://github.com/kfq20/InfoPO",
+    "abstract": "InfoPO 针对现实中用户请求常存在信息不足的问题，提出了信息驱动的策略优化框架。现有多轮 GRPO 方法依赖轨迹级奖励，存在信用分配问题和 rollout 组内优势信号不足等缺陷。InfoPO 将多轮交互建模为主动降低不确定性的过程，计算信息增益奖励以信任那些可测量地改变 Agent 后续动作分布的交互轮次，再通过自适应方差门控融合与任务结果结合。在意图澄清、协作编程、工具增强决策等多类任务上，InfoPO 持续优于提示工程和多轮 RL 基线，同时在用户模拟器偏移和环境交互任务上也表现出良好的鲁棒性与泛化性。",
+    "tags": [
+      "RL"
+    ]
+  }
+]

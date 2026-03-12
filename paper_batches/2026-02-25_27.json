@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-02-25",
+    "title": "PyVision-RL: Forging Open Agentic Vision Models via RL",
+    "arxiv_id": "2602.20739",
+    "github": "https://github.com/agents-x-project/PyVision-RL",
+    "abstract": "本文提出 PyVision-RL，一个针对开源多模态模型的强化学习训练框架，旨在解决交互折叠（interaction collapse）问题——即模型在RL训练中倾向于减少工具调用和多轮推理。核心贡献包括：（1）过采样-过滤-排序（oversampling-filtering-ranking）的 rollout 策略；（2）累积工具奖励（accumulative tool reward），两者协同防止交互折叠并鼓励多轮工具使用。统一训练流水线下，分别训练了 PyVision-Image 和 PyVision-Video 两个模型。对于视频推理，PyVision-Video 引入按需上下文构建机制，在推理时选择性采样任务相关帧，大幅减少视觉 token 用量。实验表明，该方法在多个图像和视频理解任务上实现了强性能与高效率，证明持续交互与按需视觉处理是可扩展多模态 Agent 的关键。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "Multi-Vector Index Compression in Any Modality",
+    "arxiv_id": "2602.21202",
+    "github": "https://github.com/hanxiangqin/omni-col-press",
+    "abstract": "本文研究跨模态后期交互（late interaction）的高效多向量检索压缩问题。后期交互是文本、图像、视觉文档等信息检索的主流范式，但其计算和存储开销随文档长度线性增长。本文探索了四种查询无关的文档多向量表示压缩方法：序列缩放、记忆 token、层次化池化，以及新提出的注意力引导聚类（AGC）。AGC 利用注意力机制识别文档最具语义价值的区域作为聚类中心，并加权聚合 token。在覆盖文本（BEIR）、视觉文档（ViDoRe）和视频（MSR-VTT、MultiVENT 2.0）的检索任务上，AGC 一致优于其他参数化压缩方法，同时比非参数化层次聚类更灵活，且性能与完整未压缩索引相当甚至更优。",
+    "tags": []
+  },
+  {
+    "date": "2026-02-27",
+    "title": "From Blind Spots to Gains: Diagnostic-Driven Iterative Training for Large Multimodal Models",
+    "arxiv_id": "2602.22859",
+    "github": "https://github.com/hongruijia/DPE",
+    "abstract": "本文提出诊断驱动渐进演化（DPE），一种针对大型多模态模型（LMM）的持续训练范式，通过螺旋式迭代循环解决静态训练数据无法针对模型能力盲点的问题。DPE 由两个核心组件构成：首先，多个 Agent 对海量未标注多模态数据进行标注和质量控制，结合网络搜索和图像编辑工具生成多样化样本；其次，DPE 将训练失败归因到具体弱点，动态调整数据配比，并引导 Agent 生成针对性弱点数据。每轮迭代后重新诊断更新后的模型，驱动下一轮改进。在 Qwen3-VL-8B-Instruct 和 Qwen2.5-VL-7B-Instruct 上的实验表明，DPE 在 11 个任务上实现持续稳定提升，是一种可扩展的持续 LMM 训练范式。",
+    "tags": ["微调", "VLM", "RL"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "OmniGAIA: Towards Native Omni-Modal AI Agents",
+    "arxiv_id": "2602.22897",
+    "github": "https://github.com/RUC-NLPIR/OmniGAIA",
+    "abstract": "本文提出 OmniGAIA，一个评估跨视觉、音频和图像模态的全模态 Agent 综合基准，并提出原生全模态基础 Agent OmniAtlas。OmniGAIA 通过全模态事件图方法，从真实世界数据中合成需要跨模态推理和外部工具集成的复杂多跳查询。OmniAtlas 采用工具集成推理范式，通过后见引导树探索策略合成训练轨迹，并利用 OmniDPO 进行细粒度错误纠正，有效增强开源模型的工具使用能力。该工作填补了当前多模态 LLM 主要局限于双模态交互（如视觉-语言）的空缺，迈向真正的全模态通用 AI 助手，在复杂推理和多轮工具执行任务上取得显著进展。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "Imagination Helps Visual Reasoning, But Not Yet in Latent Space",
+    "arxiv_id": "2602.22766",
+    "github": "https://github.com/AI9Stars/CapImagine",
+    "abstract": "本文研究多模态大语言模型中潜在视觉推理（latent visual reasoning）的有效性，运用因果中介分析（Causal Mediation Analysis）揭示其两大关键断层：（1）输入-潜变量断层：对输入的剧烈扰动几乎不改变潜在 token，说明潜在 token 未能有效关注输入序列；（2）潜变量-答案断层：对潜在 token 的扰动对最终答案影响极小。进一步的探针分析发现潜在 token 编码的视觉信息有限且高度相似。基于此，提出简单替代方案 CapImagine，让模型通过文本形式显式想象。在多个视觉推理任务上，CapImagine 显著优于复杂的潜在空间基线，证明显式文字想象是更优的视觉推理路径。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "AgentDropoutV2: Optimizing Information Flow in Multi-Agent Systems via Test-Time Rectify-or-Reject Pruning",
+    "arxiv_id": "2602.23258",
+    "github": "https://github.com/TonySY2/AgentDropoutV2",
+    "abstract": "本文提出 AgentDropoutV2，一个测试时纠错-或-拒绝剪枝框架，无需重新训练即可动态优化多 Agent 系统（MAS）的信息流。该方法作为主动防火墙，拦截 Agent 输出并使用检索增强纠正器，基于失败驱动的指示池迭代纠正错误；无法修复的输出被剪枝以防止错误传播，后备策略保证系统完整性。在广泛数学任务上，AgentDropoutV2 平均准确率提升 6.3 个百分点，同时展现出鲁棒的泛化能力和自适应性：根据任务难度动态调节纠正力度，利用上下文感知指示器解决多样错误模式，有效降低 MAS 中错误级联传播的风险。",
+    "tags": ["无需训练"]
+  }
+]
