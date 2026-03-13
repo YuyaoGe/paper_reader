@@ -1603,3 +1603,29 @@
 
 - **LLM2Vec-Gen: Generative Large Language Models are Strong Text Encoders** `[微调]` — [2603.10913](https://arxiv.org/abs/2603.10913) | [GitHub](https://github.com/McGill-NLP/llm2vec-gen)
   > LLM2Vec-Gen 系统研究了将生成式 LLM 转化为强大文本编码器的方法，挑战了"生成模型不适合做编码器"的惯见。通过在预训练生成 LLM 上施加双向注意力掩码微调，结合对比学习目标，LLM2Vec-Gen 在 MTEB 文本嵌入基准上显著超越同规模的专用编码器模型。研究揭示生成预训练积累的丰富语义知识可被有效迁移至编码任务，为统一生成与理解能力的基础模型提供了实践路径。
+## 2026年3月13日
+
+- **DIVE: Scaling Diversity in Agentic Task Synthesis for Generalizable Tool Use** `[RL]` `[微调]` — [2603.11076](https://arxiv.org/abs/2603.11076) | [GitHub](https://github.com/sheep333c/DIVE)
+  > 现有智能体任务合成方法在训练工具使用 LLM 时，泛化能力不足，根因在于合成任务多样性不够。DIVE 提出「先执行后反推」的合成范式：先调用真实工具获取执行轨迹，再从轨迹反推任务，从根本上保证任务可执行性。方法沿工具池覆盖度与单任务工具集多样性两个维度扩展结构多样性，覆盖 5 个领域 373 个工具，生成 48k SFT + 3.2k RL 训练数据。在 Qwen3-8B 上训练后，平均跨 9 个 OOD benchmark 提升 +22 分，优于最强 8B 基线 +68 分。实验表明，多样性扩展相比数量扩展在 OOD 泛化上始终占优，即使数据量减少 4 倍。
+
+- **Attention Sinks Are Provably Necessary in Softmax Transformers: Evidence from Trigger-Conditional Tasks** `[无需训练]` — [2603.11487](https://arxiv.org/abs/2603.11487) | [GitHub](https://github.com/YuvMilo/sinks-are-provably-necessary)
+  > 本文从理论角度证明 Softmax Transformer 中注意力汇聚（attention sink）现象的必然性。核心结论：在 Softmax 自注意力中，要实现「触发条件行为」（当特定 trigger token 出现时返回所有前驱 token 表示的均值，否则输出零），模型必然产生注意力汇聚。这是因为 softmax 归一化必须将概率质量集中在稳定锚点以实现默认状态。相比之下，非归一化 ReLU 注意力可以在不产生 sink 的情况下完成相同任务，验证了归一化约束是 sink 行为的根本驱动因素。实验结果与理论预测一致，在单头和多头设置下均得到验证。
+
+- **Geometric Autoencoder for Diffusion Models** `[微调]` — [2603.10365](https://arxiv.org/abs/2603.10365) | [GitHub](https://github.com/sii-research/GAE)
+  > 潜在扩散模型中，现有自编码器设计大多依赖启发式方法，难以同时兼顾语义判别性、重建保真度和潜在空间紧凑性。本文提出几何自编码器（GAE），通过分析多种对齐范式，从视觉基础模型（VFM）中构建优化的低维语义监督目标。此外，用潜在归一化替代标准 VAE 的 KL 散度约束，在扩散学习专项优化的稳定潜在流形上实现更好效果；同时引入动态噪声采样机制增强高强度噪声下的重建鲁棒性。在 ImageNet-1K 256×256 上，GAE 仅训练 80 epoch 即达到 gFID 1.82，训练 800 epoch 后达到 1.31（无 CFG），显著超越当前 SOTA。
+
+- **EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models** `[VLM]` `[微调]` — [2603.12252](https://arxiv.org/abs/2603.12252) | [GitHub](https://github.com/InternLM/EndoCoT)
+  > 现有将多模态大语言模型（MLLM）集成到扩散框架的方案存在两个瓶颈：文本编码器缺乏足够的推理深度（单步编码无法激活 CoT 过程），以及解码过程中引导保持不变导致复杂指令分解不足。EndoCoT 提出「内生思维链」框架，通过迭代思维引导模块不断优化潜在思维状态，再经由终止思维接地模块将推理轨迹与文本监督对齐，使 DiT 能逐步执行推理结果。在 Maze、TSP、VSP、Sudoku 等多样 benchmark 上平均准确率达 92.1%，比最强基线高 8.3 个百分点。
+
+- **One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers** `[微调]` — [2603.12245](https://arxiv.org/abs/2603.12245) | [GitHub](https://github.com/snap-research/elit)
+  > 扩散 Transformer（DiT）将 FLOP 与图像分辨率绑定，无法灵活进行延迟-质量权衡，且对所有空间 token 均匀分配计算资源，造成浪费。ELIT 提出弹性潜在接口机制，在 DiT 中插入可学习的变长 token 序列，通过轻量 Read/Write 交叉注意力层在空间 token 与潜在 token 间传递信息并聚焦重要区域。训练时随机丢弃末尾潜在 token，使模型学习到重要性排序的表示；推理时动态调整 token 数量以匹配计算约束。该方法仅添加两层交叉注意力，不修改 DiT 主体结构。在 ImageNet-1K 512px 上，FID 和 FDD 分别平均提升 35.3% 和 39.6%。
+
+- **Coarse-Guided Visual Generation via Weighted h-Transform Sampling** `[无需训练]` — [2603.12057](https://arxiv.org/abs/2603.12057) | [GitHub](https://github.com/HKUST-LongGroup/Coarse-guided-Gen)
+  > 粗糙引导视觉生成任务旨在从退化或低保真粗略参考合成精细视觉样本。现有训练自由方法要么需要已知正向变换算子，要么难以平衡引导强度与生成质量。本文提出基于 h-变换的引导方法，通过在每个采样时间步的转移概率中添加漂移函数，将生成引导至理想精细样本方向。为解决不可避免的近似误差，引入噪声水平感知调度，随误差增大逐渐降低漂移权重，实现引导遵从与高质量合成的平衡。跨多种图像生成任务的实验验证了方法的有效性与泛化能力。该方法无需训练，可直接应用于预训练扩散模型。
+
+- **TeamHOI: Learning a Unified Policy for Cooperative Human-Object Interactions with Any Team Size** `[RL]` — [2603.07988](https://arxiv.org/abs/2603.07988) | [GitHub](https://github.com/sail-sg/TeamHOI)
+  > 基于物理的类人体控制在单智能体场景已取得显著进展，但扩展到多智能体协作人-物交互（HOI）仍具挑战性。TeamHOI 提出单一去中心化策略框架，使任意数量智能体能协作完成 HOI 任务。每个智能体仅使用局部观测，通过基于 Transformer 的策略网络中的「队友 token」感知其他成员，实现可扩展的可变团队协调。针对协作 HOI 数据稀缺问题，引入遮蔽对抗运动先验（masked AMP）策略，使用单人参考动作并在训练中遮蔽与物体交互的身体部位，再由任务奖励引导这些部位产生多样且物理合理的协作行为。在涉及 2-8 个类人体智能体的协作搬运任务上取得高成功率。
+
+- **OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams** `[VLM]` — [2603.12265](https://arxiv.org/abs/2603.12265) | [GitHub](https://github.com/Go2Heart/OmniStream)
+  > 现代视觉智能体需要通用、因果且物理结构化的表示以在实时流环境中运行，但当前视觉基础模型仍各自为政。OmniStream 提出统一流式视觉主干，通过因果时空注意力和 3D 旋转位置编码（3D-RoPE），支持逐帧在线处理视频流（借助持久 KV-cache）。在 29 个数据集上进行多任务预训练，耦合静态与时序表示学习、流式几何重建和视觉语言对齐。实验表明，即使完全冻结主干，OmniStream 在图像视频探测、流式几何重建、复杂视频与空间推理等任务上均与专业专家持平，展示了单一通用视觉主干在语义、空间、时序推理上的可行性。
+
