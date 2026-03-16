@@ -1629,3 +1629,20 @@
 - **OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams** `[VLM]` — [2603.12265](https://arxiv.org/abs/2603.12265) | [GitHub](https://github.com/Go2Heart/OmniStream)
   > 现代视觉智能体需要通用、因果且物理结构化的表示以在实时流环境中运行，但当前视觉基础模型仍各自为政。OmniStream 提出统一流式视觉主干，通过因果时空注意力和 3D 旋转位置编码（3D-RoPE），支持逐帧在线处理视频流（借助持久 KV-cache）。在 29 个数据集上进行多任务预训练，耦合静态与时序表示学习、流式几何重建和视觉语言对齐。实验表明，即使完全冻结主干，OmniStream 在图像视频探测、流式几何重建、复杂视频与空间推理等任务上均与专业专家持平，展示了单一通用视觉主干在语义、空间、时序推理上的可行性。
 
+
+## 2026年3月16日
+
+- **Cheers: Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation** `[VLM]` `[微调]` — [2603.12793](https://arxiv.org/abs/2603.12793) | [GitHub](https://github.com/AI9Stars/Cheers)
+  > Cheers 提出了一种统一多模态模型，通过将图像的像素级细节与语义表示解耦，同时支持视觉理解与图像生成。核心设计包括：(1) 统一视觉分词器，将图像压缩为语义 token；(2) 基于 LLM 的 Transformer，融合自回归文本生成与扩散式图像解码；(3) 门控细节残差机制，在生成阶段补充细节信息以提升保真度。该方法在语义层面稳定多模态理解，同时避免细节信息干扰语言建模。实验表明，Cheers 在多模态理解和图像生成任务上均取得有竞争力的结果，验证了解耦范式在统一模型中的有效性。
+
+- **daVinci-Env: Open SWE Environment Synthesis at Scale** — [2603.13023](https://arxiv.org/abs/2603.13023) | [GitHub](https://github.com/GAIR-NLP/OpenSWE)
+  > OpenSWE 是目前规模最大的全透明软件工程（SWE）智能体训练框架，包含 45,320 个可执行 Docker 环境，跨越超过 12,800 个 Python 仓库，所有 Dockerfile、评测脚本与基础设施均完全开源。该框架通过多智能体合成流水线在 64 节点集群上部署，自动化生成带有可执行测试的代码编辑任务，支持迭代式代码修改、测试执行与方案优化的动态反馈循环。OpenSWE 旨在打破现有开源数据集规模有限、仓库多样性不足的瓶颈，为学术界提供工业级 SWE 智能体训练基础设施，大幅降低训练高能力代码智能体的门槛。
+
+- **Visual-ERM: Reward Modeling for Visual Equivalence** `[RL]` `[VLM]` — [2603.13224](https://arxiv.org/abs/2603.13224) | [GitHub](https://github.com/InternLM/Visual-ERM)
+  > Visual-ERM 提出了一种多模态生成式奖励模型，专门用于 vision-to-code 任务（如图表、表格、SVG 重建），直接在渲染后的视觉空间中评估生成质量。现有奖励机制依赖文本规则或粗粒度视觉嵌入相似度，无法捕捉细粒度视觉差异且容易被奖励欺骗。Visual-ERM 通过可解释的、任务无关的细粒度反馈信号解决上述问题，并集成到强化学习训练流程中。实验表明，使用 Visual-ERM 作为奖励信号的 RL 训练相比监督微调和基于规则奖励的方法，在视觉保真度和代码执行准确率上均取得显著提升。
+
+- **LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation** `[长文本]` `[无需训练]` — [2603.10899](https://arxiv.org/abs/2603.10899) | [GitHub](https://github.com/SamsungLabs/LookaheadKV)
+  > LookaheadKV 提出了一种高效的 KV Cache 淘汰方法，通过「预瞥未来」来精准估计缓存重要性，同时避免了现有方法中代价高昂的草稿生成过程。核心思想是利用注意力图的未来预测信息而非实际生成 token，从而在不引入额外生成开销的情况下提升 KV 淘汰质量。该方法无需模型微调，可即插即用地应用于主流 Transformer 模型。在 LongBench 和 RULER 等长文本评测集上，LookaheadKV 相比 FullKV 和现有淘汰方法在速度与精度上均取得更优的平衡，尤其在超长输入场景下优势显著。
+
+- **Can Vision-Language Models Solve the Shell Game?** `[VLM]` `[无需训练]` — [2603.08436](https://arxiv.org/abs/2603.08436) | [GitHub](https://github.com/liutiedong/shellgame)
+  > 本文引入 VET-Bench，一个专门评估视觉实体追踪能力的合成诊断测试集，要求模型仅凭时空连续性追踪外观完全相同的对象（类似「三杯猜球」游戏），从而消除静态视觉捷径。实验发现当前最先进的 VLM 在 VET-Bench 上性能接近随机水平，揭示了其过度依赖静态帧特征、无法维持跨时间实体表示的根本局限。理论分析证明固定深度 Transformer 在状态追踪问题上存在表达能力上界。此外，作者提出 SGCoT（Shell Game Chain-of-Thought），一种无需训练的推理时干预方法，通过引导模型逐步追踪实体状态来显著提升追踪准确率。
