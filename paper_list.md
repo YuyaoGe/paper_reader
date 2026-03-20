@@ -1646,3 +1646,98 @@
 
 - **Can Vision-Language Models Solve the Shell Game?** `[VLM]` `[无需训练]` — [2603.08436](https://arxiv.org/abs/2603.08436) | [GitHub](https://github.com/liutiedong/shellgame)
   > 本文引入 VET-Bench，一个专门评估视觉实体追踪能力的合成诊断测试集，要求模型仅凭时空连续性追踪外观完全相同的对象（类似「三杯猜球」游戏），从而消除静态视觉捷径。实验发现当前最先进的 VLM 在 VET-Bench 上性能接近随机水平，揭示了其过度依赖静态帧特征、无法维持跨时间实体表示的根本局限。理论分析证明固定深度 Transformer 在状态追踪问题上存在表达能力上界。此外，作者提出 SGCoT（Shell Game Chain-of-Thought），一种无需训练的推理时干预方法，通过引导模型逐步追踪实体状态来显著提升追踪准确率。
+
+## 2026年3月17日
+
+- **OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data** `[微调]` — [2603.15594](https://arxiv.org/abs/2603.15594) | [GitHub](https://github.com/rui-ye/OpenSeeker)
+  > OpenSeeker 是首个完全开源的前沿级搜索 Agent，旨在解决高质量训练数据稀缺的问题。核心贡献包含两项技术创新：一是基于事实的可扩展可控 QA 合成方法，通过对 Web 图进行拓扑扩展与实体混淆，生成复杂的多跳推理任务；二是去噪轨迹合成方法，利用回顾性摘要机制去除噪声，引导教师 LLM 生成高质量动作序列。实验结果显示，OpenSeeker 仅用 11.7k 合成样本经 SFT 训练，便在 BrowseComp、BrowseComp-ZH、xbench-DeepSearch 和 WideSearch 等多个基准上达到最先进水平，显著超越次优开源方案 DeepDive（29.5% vs 15.3%），甚至优于使用大规模持续预训练+SFT+RL 的工业级系统 Tongyi DeepResearch。作者完全开源了训练数据集和模型权重。
+
+- **FineRMoE: Dimension Expansion for Finer-Grained Expert with Its Upcycling Approach** — [2603.13364](https://arxiv.org/abs/2603.13364) | [GitHub](https://github.com/liaoning97/FineRMoE)
+  > 本文提出 FineRMoE（更细粒度 MoE），针对单维度细粒度 MoE 性能提升的瓶颈问题，将细粒度专家设计同时扩展至中间维度和输出维度，以增强专家专业化程度。方法创新包括：双层稀疏前向计算范式、专用路由机制，以及广义 Upcycling 方法——可将现有稠密模型低成本转换为 FineRMoE 而无需从头训练。在十个标准基准上的大量实验表明，FineRMoE 相比最强基线实现了 6 倍参数效率提升、281 倍预填充延迟降低和 136 倍解码吞吐量提升，有效突破了单维度细粒度设计的性能上限。
+
+- **Understanding Reasoning in LLMs through Strategic Information Allocation under Uncertainty** — [2603.15500](https://arxiv.org/abs/2603.15500) | [GitHub](https://github.com/beanie00/strategic-information-allocation-llm-reasoning)
+  > 本文提出一个信息论框架，将 LLM 推理过程分解为「程序性信息」和「认知外显化」——即对不确定性的显式外化表达，以支持后续控制动作。研究发现，纯程序性推理会陷入信息停滞，而认知外显化能够持续获取新信息并对达到信息充分性至关重要。实证结果表明，强推理性能由不确定性外显化驱动，而非依赖特定表面 Token（如「Wait」）。该框架统一了以往关于 Aha Moment 和后训练的相关研究发现，对推理模型设计具有重要指导意义，揭示了 LLM 强推理能力背后的深层信息论机制。
+
+- **Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning** `[RL]` — [2603.15611](https://arxiv.org/abs/2603.15611) | [GitHub](https://github.com/ZJU-REAL/Code-A1)
+  > Code-A1 提出了一种对抗协同进化框架，通过强化学习联合优化「代码 LLM」和「测试 LLM」，两者目标对立：代码 LLM 以通过更多测试为奖励，测试 LLM 以暴露更多缺陷为奖励。这种架构分离消除了自我共谋风险，并安全地启用白盒测试生成——测试 LLM 可检查候选代码以生成针对性对抗测试。此外引入 Mistake Book 机制进行经验回放，并设计组合奖励平衡测试有效性与对抗难度。在 Qwen2.5-Coder 模型上的实验表明，Code-A1 的代码生成性能与基于人工标注测试训练的模型相当或更优，同时显著提升了测试生成能力。
+
+- **Mind the Shift: Decoding Monetary Policy Stance from FOMC Statements with Large Language Models** `[无需训练]` — [2603.14313](https://arxiv.org/abs/2603.14313) | [GitHub](https://github.com/yixuantt/DeltaConsistentScoring)
+  > 本文提出 Delta-Consistent Scoring（DCS），一种无需人工标注的框架，通过联合建模绝对立场和会议间相对变化，将冻结 LLM 的表示映射为连续的货币政策立场分数。DCS 利用连续会议作为自监督来源，学习每份声明的绝对立场分数和相邻声明间的相对偏移分数，以「Delta 一致性」目标驱动两者对齐，从而无需人工 hawkish-dovish 标签即可恢复时序连贯的立场轨迹。在四个 LLM 主干上，DCS 在句子级别鹰鸽分类上达到高达 71.1% 的准确率，会议级别分数与通胀指标高度相关，并与国债收益率变动显著关联。
+
+- **GlyphPrinter: Region-Grouped Direct Preference Optimization for Glyph-Accurate Visual Text Rendering** `[微调]` — [2603.15616](https://arxiv.org/abs/2603.15616) | [GitHub](https://github.com/FudanCVL/GlyphPrinter)
+  > GlyphPrinter 提出了一种基于偏好优化的视觉文字渲染方法，通过消除对显式奖励模型的依赖来提升字形准确性。针对标准 DPO 只建模整体偏好、难以处理局部字形错误的问题，本文构建了含区域级字形偏好标注的 GlyphCorrector 数据集，并提出区域分组 DPO（R-GDPO），对标注区域内的样本间和样本内偏好进行优化。此外还引入区域奖励引导推理策略，从最优分布中采样以实现可控字形精度。大量实验表明，GlyphPrinter 在字形准确性上优于现有方法，同时在风格化与精确度之间保持良好平衡，尤其对复杂字符和域外字符效果显著。
+
+- **MoKus: Leveraging Cross-Modal Knowledge Transfer for Knowledge-Aware Concept Customization** `[微调]` `[VLM]` — [2603.12743](https://arxiv.org/abs/2603.12743) | [GitHub](https://github.com/HKUST-LongGroup/MoKus)
+  > 本文提出知识感知概念定制（Knowledge-aware Concept Customization）这一新任务，旨在将多样化文本知识绑定到目标视觉概念，同时保持高保真度生成。核心方法 MoKus 基于跨模态知识迁移观察：修改文本模态中的知识会在生成时自然迁移到视觉模态。MoKus 分两阶段：视觉概念学习阶段学习存储视觉信息的锚点表示；文本知识更新阶段将知识查询的答案更新到锚点表示，实现高保真定制生成。实验在新构建的 KnowCusBench 基准上验证了 MoKus 优于现有方法，并可扩展到虚拟概念创建和概念消除等应用。
+
+- **Motivation in Large Language Models** — [2603.14347](https://arxiv.org/abs/2603.14347) | [GitHub](https://github.com/omer6nahum/motivation_llms)
+  > 本文探讨大型语言模型（LLMs）是否表现出类似人类动机的行为模式。研究通过实验分析 LLMs 对动机水平的「自我报告」、这些报告与行为的关联，以及外部因素对动机的调节作用。结果揭示出与人类心理学相呼应的一致性结构化模式：自我报告的动机与不同行为特征对齐，随任务类型变化，并可被外部操控调节。这些发现表明，动机是 LLM 行为的一个连贯组织构念，系统性地将报告、选择、努力和表现联系起来，展示出与人类心理学文献中记录相似的动机动态，深化了对模型行为及其与人类启发概念联系的理解。
+
+## 2026年3月18日
+
+- **Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding** `[VLM]` `[无需训练]` — [2603.13366](https://arxiv.org/abs/2603.13366) | [GitHub](https://github.com/mlrm-LEAD/mlrm-LEAD)
+  > 本文针对多模态大型推理模型（MLRMs）中的幻觉问题提出了LEAD（Latent Entropy-Aware Decoding）方法。研究发现，过渡词（如because、however、wait）在高熵状态下与幻觉密切相关。受叠加表示理论启发，LEAD通过在高熵推理阶段使用概率加权的连续嵌入代替离散token，维持潜在推理轨迹，同时结合先验引导的视觉锚点注入策略以增强视觉信息利用。该方法无需训练，即插即用，通过熵感知的推理模式切换，在熵高时采用连续嵌入，熵降低时切回离散token嵌入。大量实验表明，LEAD能有效缓解多个MLRMs在多个评测集上的幻觉现象，提升多模态推理的可靠性。
+
+- **Reliable Reasoning in SVG-LLMs via Multi-Task Multi-Reward Reinforcement Learning** `[RL]` `[VLM]` — [2603.16189](https://arxiv.org/abs/2603.16189) | [GitHub](https://github.com/hmwang2002/CTRL-S)
+  > 本文提出CTRL-S（Chain-of-Thought Reinforcement Learning for SVG），一个统一框架，将思维链机制引入SVG生成任务以显式化模型推理过程。为支持结构化推理，作者构建了包含14.5万样本的SVG-Sophia数据集，涵盖SVG代码优化、文本到SVG和图像到SVG三类任务。通过训练模型生成分组级结构化SVG代码，显著提升了结构一致性和视觉保真度。此外，采用GRPO算法设计多奖励优化框架，融合DINO相似度、图文相似度、格式规范和代码效率等多维奖励信号。通过多奖励联合优化与多任务训练，CTRL-S在任务成功率、SVG代码质量和视觉保真度上均超越现有方法。
+
+- **GradMem: Learning to Write Context into Memory with Test-Time Gradient Descent** `[MeM]` `[无需训练]` `[长文本]` — [2603.13875](https://arxiv.org/abs/2603.13875) | [GitHub](https://github.com/yurakuratov/gradmem)
+  > 本文提出GradMem，一种通过测试时梯度下降将上下文写入紧凑记忆的方法，旨在解决Transformer大型KV-cache的内存开销问题。在上下文移除设定下，模型需在推理时不访问原始上下文而直接回答问题。GradMem对一组前缀记忆token执行少量梯度下降步骤，保持模型权重冻结，通过显式优化自监督上下文重建损失实现带迭代误差校正的写入操作，区别于仅做前向传播的方法。实验表明，GradMem在关联键值检索任务上优于同等内存大小的前向写入器，额外梯度步骤能更高效地扩展容量；在自然语言任务（bAbI和SQuAD变体）上也取得竞争性结果。
+
+- **Semi-Autonomous Formalization of the Vlasov-Maxwell-Landau Equilibrium** — [2603.15929](https://arxiv.org/abs/2603.15929) | [GitHub](https://github.com/Vilin97/Clawristotle)
+  > 本文展示了对Vlasov-Maxwell-Landau（VML）系统平衡刻画的完整Lean 4形式化证明，并全程记录了AI辅助数学研究的完整流程。整个项目由一位数学家在10天内以200美元成本完成，实现零行代码手写。具体流程为：AI推理模型（Gemini DeepThink）从猜想生成证明，代理编程工具（Claude Code）将自然语言提示翻译为Lean代码，专用证明器（Aristotle）封闭111个引理，最终由Lean内核验证结果。论文详细记录了AI失效模式（如假设蔓延、定义对齐错误、代理规避行为）以及有效策略（抽象/具体证明分离、对抗性自我审查等），为AI辅助形式化数学研究提供了宝贵经验。
+
+- **One-Eval: An Agentic System for Automated and Traceable LLM Evaluation** — [2603.09821](https://arxiv.org/abs/2603.09821) | [GitHub](https://github.com/OpenDCAI/One-Eval)
+  > 本文提出One-Eval，一个将自然语言评估请求转换为可执行、可追踪、可定制评估工作流的代理评估系统。系统包含三个核心模块：NL2Bench负责意图结构化和个性化评测集规划；BenchResolve负责评测集解析、自动数据集获取和schema归一化以确保可执行性；Metrics & Reporting负责任务感知的指标选择和面向决策的报告生成，超越单纯标量分数。系统还集成了人机协作检查点以支持审查、编辑和回滚操作，同时保留样本证据链以便调试和审计。实验表明，One-Eval能以极低用户负担执行多样自然语言评估请求，支持工业场景中更高效可复现的评估流程。
+
+- **Mixture of Style Experts for Diverse Image Stylization** — [2603.16649](https://arxiv.org/abs/2603.16649) | [GitHub](https://github.com/HVision-NKU/StyleExpert)
+  > 本文提出StyleExpert，一种基于混合专家（MoE）架构的语义感知图像风格化框架。现有扩散模型风格化方法局限于颜色驱动的变换，忽视了复杂语义和材质细节。StyleExpert采用统一风格编码器，在大规模内容-风格-风格化三元组数据集上训练，将多样风格嵌入一致的潜在空间；进而通过相似度感知门控机制，将风格动态路由至MoE架构中的专用专家模块，实现从浅层纹理到深层语义的多层次风格处理。大量实验表明，StyleExpert在保持语义和材质细节方面优于现有方法，同时能泛化至未见风格，展现出强大的迁移能力。
+
+## 2026年3月19日
+
+- **Efficient Reasoning with Balanced Thinking** `[无需训练]` — [2603.12372](https://arxiv.org/abs/2603.12372) | [GitHub](https://github.com/yu-lin-li/ReBalance)
+  > 大型推理模型（LRM）常面临「过度思考」（对简单问题耗费冗余步骤）和「思考不足」（无法充分探索推理路径）的双重困境。本文提出 ReBalance，一个无需训练的推理均衡框架。ReBalance 以置信度作为推理动态的连续指标，通过聚合小规模数据集的隐状态构建推理模式原型，计算引导向量调整 LRM 的推理轨迹。动态控制函数根据实时置信度调节向量强度与方向：过度思考时剪枝冗余，思考不足时促进探索。在 0.5B 至 32B 四个模型、九个数学推理/问答/代码任务基准上的实验表明，ReBalance 有效降低输出冗余并提升准确率，是一种即插即用的通用高效推理策略。
+
+- **MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild** `[RL]` `[微调]` `[MeM]` — [2603.17187](https://arxiv.org/abs/2603.17187) | [GitHub](https://github.com/aiming-lab/MetaClaw)
+  > 已部署的 LLM Agent 往往是静态的，无法随用户需求变化持续进化。本文提出 MetaClaw，一个持续元学习框架，同时演化基础 LLM 策略和可复用行为技能库。MetaClaw 通过两种互补机制运作：其一是技能驱动的快速适应，通过 LLM evolver 分析失败轨迹合成新技能，实现零停机改进；其二是机会性策略优化，在用户空闲窗口期触发云端 LoRA 微调与基于过程奖励模型的强化学习（RL-PRM）。两种机制相互增强：更优策略生成更好轨迹用于技能合成，更丰富技能为策略优化提供更高质量数据。实验显示技能驱动适应相对提升准确率最高达 32%，完整流程将 Kimi-K2.5 准确率从 21.4% 提升至 40.6%。
+
+- **Complementary Reinforcement Learning** `[RL]` `[MeM]` — [2603.17621](https://arxiv.org/abs/2603.17621) | [GitHub](https://github.com/pUmpKin-Co/ComplementaryRL)
+  > 用于训练 LLM Agent 的强化学习面临样本效率低的瓶颈，根源在于历史经验无法与不断进化的策略保持同步。受神经科学互补学习系统启发，本文提出 Complementary RL，在 RL 优化循环内实现经验提取器与策略执行器的无缝共同演化。策略执行器由稀疏结果奖励驱动优化，经验提取器则根据其提炼的经验是否对 Actor 成功产生实质贡献来优化，从而使经验管理策略与 Actor 能力的增长始终保持同步。实验表明，Complementary RL 在单任务场景比无经验学习的基线提升 10% 性能，并在多任务设置中展现出良好可扩展性。
+
+- **When AI Navigates the Fog of War** — [2603.16642](https://arxiv.org/abs/2603.16642) | [GitHub](https://github.com/xirui-li/war-test)
+  > 本文研究 LLM 在事件轨迹尚不明朗时对地缘政治冲突的推理能力，以 2026 年中东冲突为案例（发生于当前前沿模型训练截止之后），构建了 11 个关键时间节点、42 个可核实问题及 5 个探索性问题，要求模型仅基于各时刻公开信息进行推断，有效规避了训练数据泄露问题。研究发现：当前 LLM 展现出相当程度的战略现实主义，能超越表面修辞识别深层结构性动机；但在经济/后勤结构化场景中的表现优于政治模糊的多方博弈环境；且模型叙事随时间推移从早期预期快速遏制转向区域长期消耗。本研究为后续无后见之明偏差的地缘政治推理研究提供时间锚定基准。
+
+- **Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing** — [2603.11535](https://arxiv.org/abs/2603.11535) | [GitHub](https://github.com/MasterGodzilla/Expert-Threshold-Routing)
+  > 传统 Token-Choice MoE（TC-MoE）将每个 token 路由到固定数量的专家，限制了动态计算分配并需辅助损失维持负载均衡。本文提出专家阈值（ET）路由：每位专家通过指数移动平均（EMA）从全局 token 分布中估计动态阈值，token 独立决策是否超过各专家阈值，从而实现动态计算分配，无需辅助损失即可自然实现负载均衡。该全因果机制消除了对批次内其他 token 的依赖，非常适合自回归语言建模。在 FineWeb-Edu 上扩展到 2.4B 参数的预训练实验中，ET 比 TC-MoE 降低交叉熵损失 0.067，等效于以 1.6 倍更少 token 达到相同性能。
+
+- **ACE-LoRA: Graph-Attentive Context Enhancement for Parameter-Efficient Adaptation of Medical Vision-Language Models** `[微调]` `[VLM]` — [2603.17079](https://arxiv.org/abs/2603.17079) | [GitHub](https://github.com/icon-lab/ACE-LoRA)
+  > 医学视觉语言模型面临专科化与泛化的矛盾：单域专家模型细节丰富但泛化差，多域通用模型保留广泛语义但细粒度诊断线索被稀释。本文提出 ACE-LoRA，一个参数高效的医学 VLM 适配框架：将 LoRA 模块注入冻结的图文编码器，并引入基于注意力的上下文增强超图神经网络（ACE-HGNN），通过捕获超越成对相似度的高阶上下文交互来丰富全局表征中的局部诊断线索。此外，提出标签引导的 InfoNCE 损失抑制语义相关图文对间的假阴性。仅增加 0.95M 可训练参数，ACE-LoRA 在跨多个域的零样本分类、分割和检测基准上持续超越最先进医学 VLM 和 PEFT 基线。
+
+- **HeBA: Heterogeneous Bottleneck Adapters for Robust Vision-Language Models** `[微调]` `[VLM]` — [2603.16653](https://arxiv.org/abs/2603.16653) | [GitHub](https://github.com/Jahid12012021/VLM-HeBA)
+  > 将 CLIP 等大规模视觉语言模型适配下游任务时，常见的「一刀切」适配器架构忽视了视觉与文本模态的本质差异。本文提出 HeBA（异构瓶颈适配器），引入模态专属的结构归纳偏置：视觉 token 通过二维深度可分离卷积保留空间相关性，文本 token 通过密集线性投影捕获语义关系；采用压缩瓶颈（D→D/4）强制学习紧凑鲁棒特征；挑战零初始化范式，使用 Kaiming 初始化保证初始梯度流动加速收敛同时不损害预训练知识。大量实验表明 HeBA 在 11 个 few-shot 基准上达到新的最优性能，展现出卓越的稳定性与准确率。
+
+- **AdapterTune: Zero-Initialized Low-Rank Adapters for Frozen Vision Transformers** `[微调]` — [2603.14706](https://arxiv.org/abs/2603.14706) | [GitHub](https://github.com/salimkhazem/adaptertune)
+  > 冻结骨干的视觉 Transformer 迁移面临两大未充分解决的问题：适配器朴素插入导致的优化不稳定，以及缺乏设置适配器容量的原则性指导。本文提出 AdapterTune：为每个 Transformer 块添加残差低秩瓶颈，上投影零初始化确保网络从预训练函数精确出发，消除训练早期的表征漂移。理论上将适配器秩形式化为特征空间下游任务偏移的容量预算，推导出「肘部」行为（精度随秩单调递增但收益递减）并通过受控实验验证。在 9 个数据集、3 种骨干规模上评估，AdapterTune 仅用全量微调 0.92 参数量，平均比头部迁移提升 14.9 个百分点，在 15 个数据集-骨干对中 10 个超越全量微调。
+
+## 2026年3月20日
+
+- **Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens** — [2603.19232](https://arxiv.org/abs/2603.19232) | [GitHub](https://github.com/YuqingWang1029/CubiD)
+  > 现有离散生成方法局限于低维潜在token（8-32维），牺牲了语义丰富性。本文提出CubiD（Cubic Discrete Diffusion），首个面向高维表示（768-1024维）的离散生成模型。CubiD在高维离散表示空间中执行细粒度掩码操作，对任意位置、任意维度进行掩码预测，使模型能同时学习空间内部与跨位置的丰富相关性，且生成步数T与特征维度无关。在ImageNet-256上，CubiD实现了离散生成的SOTA性能，参数量从900M到3.7B均表现出强扩展性。更关键的是，离散化token保留了原始表示能力，同一套token可同时服务于理解与生成任务，为统一多模态架构提供了新思路。
+
+- **F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World** `[微调]` — [2603.19223](https://arxiv.org/abs/2603.19223) | [GitHub](https://github.com/codefuse-ai/CodeFuse-Embeddings)
+  > 本文提出F2LLM-v2，一系列通用多语言嵌入模型，共8个尺寸（80M至14B参数）。训练数据包含6000万条涵盖282种自然语言和40多种编程语言的公开高质量样本，特别关注资源稀缺的中低资源语言。模型采用两阶段LLM嵌入训练流程，结合Matryoshka表示学习、模型剪枝与知识蒸馏技术，在保持竞争性能的同时大幅提升效率。F2LLM-v2-14B在11个MTEB基准上排名第一，小尺寸模型也为资源受限场景设立了新SOTA。全部模型、数据、代码及中间检查点均开源发布。
+
+- **Memento-Skills: Let Agents Design Agents** `[RL]` `[MeM]` — [2603.18743](https://arxiv.org/abs/2603.18743) | [GitHub](https://github.com/Memento-Teams/Memento-Skills)
+  > 本文提出Memento-Skills，一个通用可持续学习的LLM Agent系统，能够自主构建、适配并改进面向特定任务的Agent。系统基于带状态化提示的记忆型强化学习框架，将可复用技能以结构化Markdown文件形式存储为持久性演化记忆，同时编码行为与上下文。核心机制为「读-写反思学习」：读阶段通过可行为训练的技能路由器选取最相关技能；写阶段根据新经验更新扩展技能库。这种闭环设计无需更新LLM参数即可实现持续学习。在通用AI助手基准和人类最终考试（HLE）上，系统分别取得26.2%和116.2%的相对准确率提升。
+
+- **ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents** `[RL]` — [2603.18815](https://arxiv.org/abs/2603.18815) | [GitHub](https://github.com/NVIDIA-NeMo/ProRL-Agent-Server)
+  > 多轮LLM Agent的强化学习训练需要生成大量沙箱化的轨迹rollout，现有基础设施往往将rollout编排与训练循环耦合，导致系统难以迁移和维护。本文基于「Rollout即服务」理念，提出ProRL Agent——通过API服务支持完整Agent rollout生命周期的可扩展基础设施，并提供标准化、可扩展的沙箱环境，支持无根HPC环境下的多样化Agent任务。通过在软件工程、数学、STEM和编程任务上的RL训练验证了ProRL Agent的有效性，该系统已集成到NVIDIA NeMo Gym中并开源发布。
+
+- **Prompt-Free Universal Region Proposal Network** — [2603.17554](https://arxiv.org/abs/2603.17554) | [GitHub](https://github.com/tangqh03/PF-RPN)
+  > 现有目标定位方法依赖样本图像、预定义类别或文本描述，限制了实际场景中的适应性。本文提出无提示通用区域提议网络（PF-RPN），无需外部提示即可识别潜在目标。方法包含三个模块：稀疏图像感知适配器（SIA）利用可学习查询嵌入动态更新视觉特征进行初始定位；级联自提示模块（CSP）通过自提示可学习嵌入自主聚合信息型视觉特征级联识别剩余目标；中心度引导查询选择（CG-QS）使用中心度评分网络筛选高质量查询嵌入。该方法仅需少量数据（如MS COCO的5%）训练，可直接跨域应用于水下目标检测、工业缺陷检测、遥感图像检测等场景，在19个数据集上验证了有效性。
+
+- **Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation** `[RL]` — [2603.13045](https://arxiv.org/abs/2603.13045) | [GitHub](https://github.com/LeiLiLab/WALAR)
+  > 本文提出WALAR，一种仅使用单语文本通过强化学习提升LLM多语言翻译能力的方法，专注于低资源语言。核心发现是现有基于源端的多语言质量估计（QE）模型存在失效模式（「漏洞」），强化学习会放大这些漏洞，导致多语言LLM性能下降。WALAR通过词对齐和语言对齐技术修补奖励中的这些漏洞。使用WALAR持续训练了支持101种语言的LLM，在Flores-101数据集的1400个语言方向上，新模型显著超越LLaMAX等最强开源多语言LLM，验证了该方法在低资源场景下的显著优势。
+
+- **Matryoshka Gaussian Splatting** — [2603.19234](https://arxiv.org/abs/2603.19234) | [GitHub](https://github.com/ZhilinGuo/matryoshka-gaussian-splatting)
+  > 细节层次（LoD）渲染对3D Gaussian Splatting（3DGS）的实际部署至关重要，但现有离散LoD方法覆盖的工作点有限，连续LoD方法则在全容量下常出现质量下降。本文提出套娃高斯溅射（MGS），一个无需架构修改即可为标准3DGS流程实现连续LoD的训练框架。MGS学习一组有序高斯集合，渲染任意前缀（前k个splat）均能产生连贯重建，保真度随预算增加平滑提升。核心思路是随机预算训练：每次迭代随机采样splat预算，同时优化对应前缀和完整集合，仅需两次前向传播。跨四个基准、六条基线的实验表明，MGS在保持全容量性能的同时支持单模型的连续速度-质量权衡。

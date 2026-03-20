@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-03-19",
+    "title": "Efficient Reasoning with Balanced Thinking",
+    "arxiv_id": "2603.12372",
+    "github": "https://github.com/yu-lin-li/ReBalance",
+    "abstract": "大型推理模型（LRM）常面临「过度思考」（对简单问题耗费冗余步骤）和「思考不足」（无法充分探索推理路径）的双重困境。本文提出 ReBalance，一个无需训练的推理均衡框架。ReBalance 以置信度作为推理动态的连续指标，通过聚合小规模数据集的隐状态构建推理模式原型，计算引导向量调整 LRM 的推理轨迹。动态控制函数根据实时置信度调节向量强度与方向：过度思考时剪枝冗余，思考不足时促进探索。在 0.5B 至 32B 四个模型、九个数学推理/问答/代码任务基准上的实验表明，ReBalance 有效降低输出冗余并提升准确率，是一种即插即用的通用高效推理策略。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-19",
+    "title": "MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild",
+    "arxiv_id": "2603.17187",
+    "github": "https://github.com/aiming-lab/MetaClaw",
+    "abstract": "已部署的 LLM Agent 往往是静态的，无法随用户需求变化持续进化。本文提出 MetaClaw，一个持续元学习框架，同时演化基础 LLM 策略和可复用行为技能库。MetaClaw 通过两种互补机制运作：其一是技能驱动的快速适应，通过 LLM evolver 分析失败轨迹合成新技能，实现零停机改进；其二是机会性策略优化，在用户空闲窗口期触发云端 LoRA 微调与基于过程奖励模型的强化学习（RL-PRM）。两种机制相互增强：更优策略生成更好轨迹用于技能合成，更丰富技能为策略优化提供更高质量数据。实验显示技能驱动适应相对提升准确率最高达 32%，完整流程将 Kimi-K2.5 准确率从 21.4% 提升至 40.6%。",
+    "tags": ["RL", "微调", "MeM"]
+  },
+  {
+    "date": "2026-03-19",
+    "title": "Complementary Reinforcement Learning",
+    "arxiv_id": "2603.17621",
+    "github": "https://github.com/pUmpKin-Co/ComplementaryRL",
+    "abstract": "用于训练 LLM Agent 的强化学习面临样本效率低的瓶颈，根源在于历史经验无法与不断进化的策略保持同步。受神经科学互补学习系统启发，本文提出 Complementary RL，在 RL 优化循环内实现经验提取器与策略执行器的无缝共同演化。策略执行器由稀疏结果奖励驱动优化，经验提取器则根据其提炼的经验是否对 Actor 成功产生实质贡献来优化，从而使经验管理策略与 Actor 能力的增长始终保持同步。实验表明，Complementary RL 在单任务场景比无经验学习的基线提升 10% 性能，并在多任务设置中展现出良好可扩展性。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-03-19",
+    "title": "When AI Navigates the Fog of War",
+    "arxiv_id": "2603.16642",
+    "github": "https://github.com/xirui-li/war-test",
+    "abstract": "本文研究 LLM 在事件轨迹尚不明朗时对地缘政治冲突的推理能力，以 2026 年中东冲突为案例（发生于当前前沿模型训练截止之后），构建了 11 个关键时间节点、42 个可核实问题及 5 个探索性问题，要求模型仅基于各时刻公开信息进行推断，有效规避了训练数据泄露问题。研究发现：当前 LLM 展现出相当程度的战略现实主义，能超越表面修辞识别深层结构性动机；但在经济/后勤结构化场景中的表现优于政治模糊的多方博弈环境；且模型叙事随时间推移从早期预期快速遏制转向区域长期消耗。本研究为后续无后见之明偏差的地缘政治推理研究提供时间锚定基准。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-19",
+    "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+    "arxiv_id": "2603.11535",
+    "github": "https://github.com/MasterGodzilla/Expert-Threshold-Routing",
+    "abstract": "传统 Token-Choice MoE（TC-MoE）将每个 token 路由到固定数量的专家，限制了动态计算分配并需辅助损失维持负载均衡。本文提出专家阈值（ET）路由：每位专家通过指数移动平均（EMA）从全局 token 分布中估计动态阈值，token 独立决策是否超过各专家阈值，从而实现动态计算分配，无需辅助损失即可自然实现负载均衡。该全因果机制消除了对批次内其他 token 的依赖，非常适合自回归语言建模。在 FineWeb-Edu 上扩展到 2.4B 参数的预训练实验中，ET 比 TC-MoE 降低交叉熵损失 0.067，等效于以 1.6 倍更少 token 达到相同性能。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-19",
+    "title": "ACE-LoRA: Graph-Attentive Context Enhancement for Parameter-Efficient Adaptation of Medical Vision-Language Models",
+    "arxiv_id": "2603.17079",
+    "github": "https://github.com/icon-lab/ACE-LoRA",
+    "abstract": "医学视觉语言模型面临专科化与泛化的矛盾：单域专家模型细节丰富但泛化差，多域通用模型保留广泛语义但细粒度诊断线索被稀释。本文提出 ACE-LoRA，一个参数高效的医学 VLM 适配框架：将 LoRA 模块注入冻结的图文编码器，并引入基于注意力的上下文增强超图神经网络（ACE-HGNN），通过捕获超越成对相似度的高阶上下文交互来丰富全局表征中的局部诊断线索。此外，提出标签引导的 InfoNCE 损失抑制语义相关图文对间的假阴性。仅增加 0.95M 可训练参数，ACE-LoRA 在跨多个域的零样本分类、分割和检测基准上持续超越最先进医学 VLM 和 PEFT 基线。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-03-19",
+    "title": "HeBA: Heterogeneous Bottleneck Adapters for Robust Vision-Language Models",
+    "arxiv_id": "2603.16653",
+    "github": "https://github.com/Jahid12012021/VLM-HeBA",
+    "abstract": "将 CLIP 等大规模视觉语言模型适配下游任务时，常见的「一刀切」适配器架构忽视了视觉与文本模态的本质差异。本文提出 HeBA（异构瓶颈适配器），引入模态专属的结构归纳偏置：视觉 token 通过二维深度可分离卷积保留空间相关性，文本 token 通过密集线性投影捕获语义关系；采用压缩瓶颈（D→D/4）强制学习紧凑鲁棒特征；挑战零初始化范式，使用 Kaiming 初始化保证初始梯度流动加速收敛同时不损害预训练知识。大量实验表明 HeBA 在 11 个 few-shot 基准上达到新的最优性能，展现出卓越的稳定性与准确率。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-03-19",
+    "title": "AdapterTune: Zero-Initialized Low-Rank Adapters for Frozen Vision Transformers",
+    "arxiv_id": "2603.14706",
+    "github": "https://github.com/salimkhazem/adaptertune",
+    "abstract": "冻结骨干的视觉 Transformer 迁移面临两大未充分解决的问题：适配器朴素插入导致的优化不稳定，以及缺乏设置适配器容量的原则性指导。本文提出 AdapterTune：为每个 Transformer 块添加残差低秩瓶颈，上投影零初始化确保网络从预训练函数精确出发，消除训练早期的表征漂移。理论上将适配器秩形式化为特征空间下游任务偏移的容量预算，推导出「肘部」行为（精度随秩单调递增但收益递减）并通过受控实验验证。在 9 个数据集、3 种骨干规模上评估，AdapterTune 仅用全量微调 0.92 参数量，平均比头部迁移提升 14.9 个百分点，在 15 个数据集-骨干对中 10 个超越全量微调。",
+    "tags": ["微调"]
+  }
+]
