@@ -1742,6 +1742,10 @@
 - **Matryoshka Gaussian Splatting** — [2603.19234](https://arxiv.org/abs/2603.19234) | [GitHub](https://github.com/ZhilinGuo/matryoshka-gaussian-splatting)
   > 细节层次（LoD）渲染对3D Gaussian Splatting（3DGS）的实际部署至关重要，但现有离散LoD方法覆盖的工作点有限，连续LoD方法则在全容量下常出现质量下降。本文提出套娃高斯溅射（MGS），一个无需架构修改即可为标准3DGS流程实现连续LoD的训练框架。MGS学习一组有序高斯集合，渲染任意前缀（前k个splat）均能产生连贯重建，保真度随预算增加平滑提升。核心思路是随机预算训练：每次迭代随机采样splat预算，同时优化对应前缀和完整集合，仅需两次前向传播。跨四个基准、六条基线的实验表明，MGS在保持全容量性能的同时支持单模型的连续速度-质量权衡。
 
+- **What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?** — [2603.19017](https://arxiv.org/abs/2603.19017) | [GitHub](https://github.com/gagan3012/mtb)
+  > 提出MultiTempBench，一个跨语言时间推理基准，涵盖日期算术、时区转换和时间关系抽取三项任务，覆盖五种语言（英/德/中/阿拉伯/豪萨）和多种历法体系（公历/伊斯兰历/农历）。共15000个样本，评估20个LLM，引入多语言日期碎片化比率（mDFR）指标，结合几何探测分析内部时间表示。关键发现：分词质量是低资源语言的瓶颈，碎片化破坏年月日分离导致准确率崩溃；高资源语言中时间线性度是最强预测因子，而低资源语言中碎片化才是关键因素。为理解LLM时间推理机制提供了系统性实证分析。
+
+
 ## 2026年3月23日
 
 - **TerraScope: Pixel-Grounded Visual Reasoning for Earth Observation** `[VLM]` `[微调]` — [2603.19039](https://arxiv.org/abs/2603.19039) | [GitHub](https://github.com/shuyansy/Earth-Observation-VLMs)
@@ -1761,32 +1765,6 @@
 
 - **Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders** `[VLM]` — [2603.19209](https://arxiv.org/abs/2603.19209) | [GitHub](https://github.com/raykuo18/vlm-ssm-vision-encoders)
   > 本文系统评估SSM（状态空间模型）视觉骨干在视觉语言模型中的表现。匹配ImageNet-1K初始化下，SSM骨干在VQA和定位任务上取得最强综合性能；用检测/分割训练适配后，SSM在更小模型规模下保持竞争力。研究发现更高ImageNet精度或更大骨干不能可靠提升VLM性能，部分骨干在定位任务中存在不稳定现象。通过稳定化策略提升鲁棒性，凸显SSM作为ViT替代方案的潜力，为VLM视觉骨干选择提供了系统性实证指导。
-
-## 2026年3月20日
-
-- **Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens** — [2603.19232](https://arxiv.org/abs/2603.19232) | [GitHub](https://github.com/YuqingWang1029/CubiD)
-  > 现有离散生成方法局限于低维潜在token（8-32维），牺牲了语义丰富性。本文提出CubiD（Cubic Discrete Diffusion），首个面向高维表示（768-1024维）的离散生成模型。CubiD在高维离散表示空间中执行细粒度掩码操作，对任意位置、任意维度进行掩码预测，使模型能同时学习空间内部与跨位置的丰富相关性，且生成步数T与特征维度无关。在ImageNet-256上，CubiD实现了离散生成的SOTA性能，参数量从900M到3.7B均表现出强扩展性。更关键的是，离散化token保留了原始表示能力，同一套token可同时服务于理解与生成任务，为统一多模态架构提供了新思路。
-
-- **F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World** `[微调]` — [2603.19223](https://arxiv.org/abs/2603.19223) | [GitHub](https://github.com/codefuse-ai/CodeFuse-Embeddings)
-  > 本文提出F2LLM-v2，一系列通用多语言嵌入模型，共8个尺寸（80M至14B参数）。训练数据包含6000万条涵盖282种自然语言和40多种编程语言的公开高质量样本，特别关注资源稀缺的中低资源语言。模型采用两阶段LLM嵌入训练流程，结合Matryoshka表示学习、模型剪枝与知识蒸馏技术，在保持竞争性能的同时大幅提升效率。F2LLM-v2-14B在11个MTEB基准上排名第一，小尺寸模型也为资源受限场景设立了新SOTA。全部模型、数据、代码及中间检查点均开源发布。
-
-- **Memento-Skills: Let Agents Design Agents** `[RL]` `[MeM]` — [2603.18743](https://arxiv.org/abs/2603.18743) | [GitHub](https://github.com/Memento-Teams/Memento-Skills)
-  > 本文提出Memento-Skills，一个通用可持续学习的LLM Agent系统，能够自主构建、适配并改进面向特定任务的Agent。系统基于带状态化提示的记忆型强化学习框架，将可复用技能以结构化Markdown文件形式存储为持久性演化记忆，同时编码行为与上下文。核心机制为「读-写反思学习」：读阶段通过可行为训练的技能路由器选取最相关技能；写阶段根据新经验更新扩展技能库。这种闭环设计无需更新LLM参数即可实现持续学习。在通用AI助手基准和人类最终考试（HLE）上，系统分别取得26.2%和116.2%的相对准确率提升。
-
-- **ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents** `[RL]` — [2603.18815](https://arxiv.org/abs/2603.18815) | [GitHub](https://github.com/NVIDIA-NeMo/ProRL-Agent-Server)
-  > 多轮LLM Agent的强化学习训练需要生成大量沙箱化的轨迹rollout，现有基础设施往往将rollout编排与训练循环耦合，导致系统难以迁移和维护。本文基于「Rollout即服务」理念，提出ProRL Agent——通过API服务支持完整Agent rollout生命周期的可扩展基础设施，并提供标准化、可扩展的沙箱环境，支持无根HPC环境下的多样化Agent任务。通过在软件工程、数学、STEM和编程任务上的RL训练验证了ProRL Agent的有效性，该系统已集成到NVIDIA NeMo Gym中并开源发布。
-
-- **Prompt-Free Universal Region Proposal Network** — [2603.17554](https://arxiv.org/abs/2603.17554) | [GitHub](https://github.com/tangqh03/PF-RPN)
-  > 现有目标定位方法依赖样本图像、预定义类别或文本描述，限制了实际场景中的适应性。本文提出无提示通用区域提议网络（PF-RPN），无需外部提示即可识别潜在目标。方法包含三个模块：稀疏图像感知适配器（SIA）利用可学习查询嵌入动态更新视觉特征进行初始定位；级联自提示模块（CSP）通过自提示可学习嵌入自主聚合信息型视觉特征级联识别剩余目标；中心度引导查询选择（CG-QS）使用中心度评分网络筛选高质量查询嵌入。该方法仅需少量数据（如MS COCO的5%）训练，可直接跨域应用于水下目标检测、工业缺陷检测、遥感图像检测等场景，在19个数据集上验证了有效性。
-
-- **Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation** `[RL]` — [2603.13045](https://arxiv.org/abs/2603.13045) | [GitHub](https://github.com/LeiLiLab/WALAR)
-  > 本文提出WALAR，一种仅使用单语文本通过强化学习提升LLM多语言翻译能力的方法，专注于低资源语言。核心发现是现有基于源端的多语言质量估计（QE）模型存在失效模式（「漏洞」），强化学习会放大这些漏洞，导致多语言LLM性能下降。WALAR通过词对齐和语言对齐技术修补奖励中的这些漏洞。使用WALAR持续训练了支持101种语言的LLM，在Flores-101数据集的1400个语言方向上，新模型显著超越LLaMAX等最强开源多语言LLM，验证了该方法在低资源场景下的显著优势。
-
-- **Matryoshka Gaussian Splatting** — [2603.19234](https://arxiv.org/abs/2603.19234) | [GitHub](https://github.com/ZhilinGuo/matryoshka-gaussian-splatting)
-  > 细节层次（LoD）渲染对3D Gaussian Splatting（3DGS）的实际部署至关重要，但现有离散LoD方法覆盖的工作点有限，连续LoD方法则在全容量下常出现质量下降。本文提出套娃高斯溅射（MGS），一个无需架构修改即可为标准3DGS流程实现连续LoD的训练框架。MGS学习一组有序高斯集合，渲染任意前缀（前k个splat）均能产生连贯重建，保真度随预算增加平滑提升。核心思路是随机预算训练：每次迭代随机采样splat预算，同时优化对应前缀和完整集合，仅需两次前向传播。跨四个基准、六条基线的实验表明，MGS在保持全容量性能的同时支持单模型的连续速度-质量权衡。
-
-- **What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?** — [2603.19017](https://arxiv.org/abs/2603.19017) | [GitHub](https://github.com/gagan3012/mtb)
-  > 提出MultiTempBench，一个跨语言时间推理基准，涵盖日期算术、时区转换和时间关系抽取三项任务，覆盖五种语言（英/德/中/阿拉伯/豪萨）和多种历法体系（公历/伊斯兰历/农历）。共15000个样本，评估20个LLM，引入多语言日期碎片化比率（mDFR）指标，结合几何探测分析内部时间表示。关键发现：分词质量是低资源语言的瓶颈，碎片化破坏年月日分离导致准确率崩溃；高资源语言中时间线性度是最强预测因子，而低资源语言中碎片化才是关键因素。为理解LLM时间推理机制提供了系统性实证分析。
 
 ## 2026年3月24日
 
