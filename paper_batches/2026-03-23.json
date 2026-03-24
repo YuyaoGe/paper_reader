@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-03-23",
+    "title": "TerraScope: Pixel-Grounded Visual Reasoning for Earth Observation",
+    "arxiv_id": "2603.19039",
+    "github": "https://github.com/shuyansy/Earth-Observation-VLMs",
+    "abstract": "本文提出TerraScope，面向地球观测的统一视觉语言模型，具备像素级空间推理能力。模型支持模态灵活推理（光学/SAR单模态及多模态自适应融合）和多时相推理（时间序列变化分析）。构建了含100万样本的Terra-CoT数据集，涵盖像素级掩码推理链。提出首个像素级地理空间推理基准，含六个子任务。实验表明TerraScope显著超越现有VLM。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-03-23",
+    "title": "The Y-Combinator for LLMs: Solving Long-Context Rot with λ-Calculus",
+    "arxiv_id": "2603.20105",
+    "github": "https://github.com/lambda-calculus-LLM/lambda-RLM",
+    "abstract": "本文提出λ-RLM框架，用基于λ演算的类型化函数式运行时替代自由递归代码生成，解决LLM长上下文推理瓶颈。框架执行预验证组合子库，仅在有界叶子子问题上用神经推理，提供终止性和代价界等形式化保证。在四个长上下文任务和九个基座模型上，36个对比中29个超越标准RLM，精度最高提升21.9分，延迟降低4.1倍。",
+    "tags": ["长文本", "无需训练"]
+  },
+  {
+    "date": "2026-03-23",
+    "title": "BEAVER: A Training-Free Hierarchical Prompt Compression Method via Structure-Aware Page Selection",
+    "arxiv_id": "2603.19635",
+    "github": "https://github.com/JusperLee/BEAVER",
+    "abstract": "本文提出BEAVER，免训练的层级化提示压缩框架。通过双路径池化将变长上下文映射为页级张量以最大化硬件并行，结合语义与词法双分支选择及句子平滑保持语篇完整性。四个长上下文基准评估表明性能与LongLLMLingua等SOTA相当，在RULER多针检索中保持高保真。128k上下文延迟降低26.4倍。",
+    "tags": ["无需训练", "长文本"]
+  },
+  {
+    "date": "2026-03-23",
+    "title": "Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas",
+    "arxiv_id": "2603.19453",
+    "github": "https://github.com/vicgalle/llm-policies-social-dilemmas",
+    "abstract": "本文研究LLM策略合成：利用大模型迭代生成多智能体环境的程序化策略函数，无需RL训练。对比稀疏反馈（标量奖励）与密集反馈（含效率、平等等社会指标）在两个序贯社会困境和Claude Sonnet 4.6、Gemini 3.1 Pro上的效果。密集反馈持续匹配或超越稀疏反馈，社会指标作为协调信号引导LLM发现领地划分和自适应角色分配等合作策略。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-03-23",
+    "title": "Language on Demand, Knowledge at Core: Composing LLMs with Encoder-Decoder Translation Models for Extensible Multilinguality",
+    "arxiv_id": "2603.17512",
+    "github": "https://github.com/ictnlp/XBridge",
+    "abstract": "本文提出XBridge，组合式编码器-LLM-解码器架构，将多语言理解和生成卸载给预训练翻译模型，保留LLM作为英语中心知识核心。引入轻量跨模型映射层和基于最优传输的对齐目标解决表示对齐问题。在四个LLM的多语言理解、推理、摘要和生成任务上超越强基线，尤其在低资源和未见语言上表现突出，无需重训LLM。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-23",
+    "title": "Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders",
+    "arxiv_id": "2603.19209",
+    "github": "https://github.com/raykuo18/vlm-ssm-vision-encoders",
+    "abstract": "本文系统评估SSM视觉骨干在视觉语言模型中的表现。匹配ImageNet-1K初始化下，SSM骨干在VQA和定位任务上取得最强综合性能。用检测/分割训练适配后，SSM在更小模型规模下保持竞争力。研究发现更高ImageNet精度或更大骨干不能可靠提升VLM性能，部分骨干在定位中不稳定。提出稳定化策略提升鲁棒性，凸显SSM作为ViT替代方案的潜力。",
+    "tags": ["VLM"]
+  }
+]

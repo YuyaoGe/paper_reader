@@ -1744,11 +1744,23 @@
 
 ## 2026年3月23日
 
+- **TerraScope: Pixel-Grounded Visual Reasoning for Earth Observation** `[VLM]` `[微调]` — [2603.19039](https://arxiv.org/abs/2603.19039) | [GitHub](https://github.com/shuyansy/Earth-Observation-VLMs)
+  > 本文提出TerraScope，面向地球观测的统一视觉语言模型，具备像素级空间推理能力。模型支持模态灵活推理（光学/SAR单模态及多模态自适应融合）和多时相推理（时间序列变化分析）。构建了含100万样本的Terra-CoT数据集，涵盖像素级掩码推理链，提出首个像素级地理空间推理基准，含六个子任务。实验表明TerraScope在遥感理解与推理任务上显著超越现有VLM，为地球观测领域的多模态推理树立了新基准。
+
+- **The Y-Combinator for LLMs: Solving Long-Context Rot with λ-Calculus** `[长文本]` `[无需训练]` — [2603.20105](https://arxiv.org/abs/2603.20105) | [GitHub](https://github.com/lambda-calculus-LLM/lambda-RLM)
+  > 本文提出λ-RLM框架，用基于λ演算的类型化函数式运行时替代自由递归代码生成，解决LLM长上下文推理瓶颈。框架执行预验证组合子库，仅在有界叶子子问题上用神经推理，提供终止性和代价界等形式化保证。在四个长上下文任务和九个基座模型上，36个对比中29个超越标准RLM，精度最高提升21.9分，延迟降低4.1倍，为长上下文推理提供了可形式化验证的新路径。
+
 - **BEAVER: A Training-Free Hierarchical Prompt Compression Method via Structure-Aware Page Selection** `[无需训练]` `[长文本]` — [2603.19635](https://arxiv.org/abs/2603.19635) | [GitHub](https://github.com/JusperLee/BEAVER)
   > 提出 BEAVER，一个无需训练的结构感知层次化 prompt 压缩框架。核心思路是将压缩从线性 token 裁剪转变为基于页面级张量的层次化选择：通过双路径池化将变长上下文映射为密集页面张量，最大化硬件并行性；混合规划器结合语义和词法双分支选择与句子平滑，保持篇章完整性。三种结构先验（锚点先验、流动先验、闪存先验）协同工作选取高价值片段。在 LongBench、ZeroSCROLLS、RULER、L-Eval 四个长上下文基准上达到与 LongLLMLingua 等 SOTA 方法可比的性能，在 RULER 多针检索任务上保真度显著优于基线。在 128k 上下文上实现 26.4 倍延迟降低，为高吞吐场景提供可扩展方案。
 
 - **Language on Demand, Knowledge at Core: Composing LLMs with Encoder-Decoder Translation Models for Extensible Multilinguality** `[微调]` — [2603.17512](https://arxiv.org/abs/2603.17512) | [GitHub](https://github.com/ictnlp/XBridge)
   > 提出 XBridge，一种组合式 encoder-LLM-decoder 架构，将多语言理解和生成能力卸载到外部预训练翻译模型，同时保留 LLM 作为以英语为中心的通用知识处理核心。为解决跨模型表征不对齐问题，引入轻量级跨模型映射层和基于最优传输的对齐目标，实现细粒度语义一致性。跨模型映射层是语言无关的，甚至能泛化到未训练过的语言。在四个 LLM 上的多语言理解、推理、摘要和生成实验表明，XBridge 显著优于强基线，尤其在低资源和未见语言上表现突出，且无需重新训练 LLM，训练仅需少量额外参数和有限双语数据。
+
+- **Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas** `[API]` — [2603.19453](https://arxiv.org/abs/2603.19453) | [GitHub](https://github.com/vicgalle/llm-policies-social-dilemmas)
+  > 本文研究LLM策略合成：利用大模型迭代生成多智能体环境的程序化策略函数，无需RL训练。对比稀疏反馈（标量奖励）与密集反馈（含效率、平等等社会指标）在两个序贯社会困境上的效果，使用Claude Sonnet和Gemini Pro进行实验。密集反馈持续匹配或超越稀疏反馈，社会指标作为协调信号引导LLM发现领地划分和自适应角色分配等合作策略，为多智能体协作涌现提供了新视角。
+
+- **Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders** `[VLM]` — [2603.19209](https://arxiv.org/abs/2603.19209) | [GitHub](https://github.com/raykuo18/vlm-ssm-vision-encoders)
+  > 本文系统评估SSM（状态空间模型）视觉骨干在视觉语言模型中的表现。匹配ImageNet-1K初始化下，SSM骨干在VQA和定位任务上取得最强综合性能；用检测/分割训练适配后，SSM在更小模型规模下保持竞争力。研究发现更高ImageNet精度或更大骨干不能可靠提升VLM性能，部分骨干在定位任务中存在不稳定现象。通过稳定化策略提升鲁棒性，凸显SSM作为ViT替代方案的潜力，为VLM视觉骨干选择提供了系统性实证指导。
 
 ## 2026年3月20日
 
