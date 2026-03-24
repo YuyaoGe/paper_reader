@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-03-24",
+    "title": "Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning",
+    "arxiv_id": "2603.21065",
+    "github": "https://github.com/meituan-longcat/LongCat-Flash-Prover",
+    "abstract": "本文提出 LongCat-Flash-Prover，一个 5600 亿参数的开源混合专家（MoE）模型，通过智能体工具集成推理（TIR）在 Lean4 形式化证明中实现原生形式推理的新突破。工作将形式推理分解为自动形式化、草图生成和证明三个子任务，并提出混合专家迭代框架（Hybrid-Experts Iteration Framework）来扩展高质量任务轨迹。在 Agentic RL 阶段，设计了分层重要性采样策略优化算法（HisPO），通过梯度掩码策略同时处理序列和 token 级别的策略陈旧性与训练-推理引擎差异，并引入定理一致性和合法性检测机制消除奖励欺骗问题。实验结果显示，该模型在 MiniF2F-Test 上仅用每题 72 次推理预算即达到 97.1% 通过率，在 ProverBench 上解决 70.8%，在 PutnamBench 上解决 41.5%，显著超越现有开源基线。",
+    "tags": ["RL", "长文本"]
+  },
+  {
+    "date": "2026-03-24",
+    "title": "Addressing Dataset Mixtures Overfiting Heterogeneously in Multi-task SFT",
+    "arxiv_id": "2603.21606",
+    "github": "https://github.com/reiss-koh/msft",
+    "abstract": "当前多任务监督微调（SFT）通常对所有子数据集使用相同的计算预算，但这会导致学习速度快的任务提前过拟合、学习速度慢的任务欠拟合的异质性问题。本文提出 mSFT，一种基于过拟合感知的迭代搜索算法，用于优化多任务数据混合策略。mSFT 在当前活跃混合上训练模型，识别并排除最早出现过拟合的子数据集，并回退到该子数据集的最优检查点后继续训练。在 10 个基准、6 个基础模型上的广泛实验表明，mSFT 持续优于 4 个基线方法，且对数据集规模、任务粒度鲁棒，对唯一新增的超参数（计算预算）不敏感。在低计算预算场景下，mSFT 还能在降低训练 FLOPs 的同时提升性能，为多任务 SFT 场景下的数据混合优化提供了实用解决方案。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-24",
+    "title": "MemDLM: Memory-Enhanced DLM Training",
+    "arxiv_id": "2603.22241",
+    "github": "https://github.com/JarvisPei/MemDLM",
+    "abstract": "扩散语言模型（DLM）因全注意力并行解码和灵活生成而备受关注，但存在训练-推理不匹配问题：训练时使用静态单步掩码预测目标，推理时却需多步渐进去噪。本文提出 MemDLM，通过双层优化将模拟去噪过程嵌入训练：内层循环更新快速权重，形成「参数化记忆」以捕获每个样本的局部轨迹经验；外层循环在该记忆条件下更新基础模型。通过将记忆压力从 token 表示转移到参数，MemDLM 实现更快收敛和更低训练损失。推理时可重新启用内层循环作为自适应步骤，在长上下文理解任务上获得额外增益。实验表明，参数化记忆在激活时充当一种涌现的权重内检索机制，有效缓解 Needle-in-a-Haystack 等长上下文检索任务中的注意力瓶颈。",
+    "tags": ["微调", "长文本"]
+  },
+  {
+    "date": "2026-03-24",
+    "title": "Effective Strategies for Asynchronous Software Engineering Agents",
+    "arxiv_id": "2603.21489",
+    "github": "https://github.com/JiayiGeng/CAID",
+    "abstract": "本文研究多智能体异步协作完成长时程软件工程任务的策略，提出 CAID（集中式异步隔离委托）框架。CAID 以三个软件工程原语为基础：集中任务委托、异步执行和 git worktree 隔离工作区，通过中心管理者构建依赖感知的任务图并委托给多个工程师智能体并行执行，各智能体在独立工作区开发后通过 git merge 合并。在 PaperBench（复现论文结果）上，CAID 比单智能体基线提升 26.7%（绝对值）；在 Commit0-Lite（从零实现 Python 库）上提升 14.3%。实验使用 Claude-4.5-Sonnet、MiniMax 2.5 和 GLM 4.7 三种模型验证，结果表明从一开始就采用多智能体协调比先尝试单智能体再切换更具成本效益。分析揭示了 branch-and-merge 协调机制和 worktree 隔离是多智能体长时程 SWE 任务成功的核心要素。",
+    "tags": ["API"]
+  }
+]
