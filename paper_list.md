@@ -1779,3 +1779,55 @@
 
 - **Effective Strategies for Asynchronous Software Engineering Agents** `[API]` — [2603.21489](https://arxiv.org/abs/2603.21489) | [GitHub](https://github.com/JiayiGeng/CAID)
   > 本文研究多智能体异步协作完成长时程软件工程任务的策略，提出 CAID（集中式异步隔离委托）框架。CAID 以三个软件工程原语为基础：集中任务委托、异步执行和 git worktree 隔离工作区，通过中心管理者构建依赖感知的任务图并委托给多个工程师智能体并行执行，各智能体在独立工作区开发后通过 git merge 合并。在 PaperBench（复现论文结果）上，CAID 比单智能体基线提升 26.7%（绝对值）；在 Commit0-Lite（从零实现 Python 库）上提升 14.3%。实验使用 Claude-4.5-Sonnet、MiniMax 2.5 和 GLM 4.7 三种模型验证，结果表明从一开始就采用多智能体协调比先尝试单智能体再切换更具成本效益。分析揭示了 branch-and-merge 协调机制和 worktree 隔离是多智能体长时程 SWE 任务成功的核心要素。
+
+## 2026年3月25日
+
+- **MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding** `[扩散模型]` — [2603.22458](https://arxiv.org/abs/2603.22458) | [GitHub](https://github.com/opendatalab/MinerU-Diffusion)
+  > MinerU-Diffusion 从逆渲染视角重新审视文档OCR任务，提出用并行扩散去噪替代自回归顺序解码。核心观点是：从左到右的因果生成是序列化带来的产物，而非任务的本质属性。论文设计了块式扩散解码器（block-wise diffusion decoder）和不确定性驱动的课程学习策略，以确保训练稳定性与长序列推理效率。方法统一处理文档版式、表格、公式等结构化内容。实验表明，与自回归基线相比，MinerU-Diffusion在保持鲁棒性的同时实现最高3.2倍的解码加速。在自建Semantic Shuffle基准上的评测也证实，其对语言先验的依赖更少、纯视觉OCR能力更强。
+
+- **SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning** `[VLM]` `[无需训练]` — [2603.23483](https://arxiv.org/abs/2603.23483) | [GitHub](https://github.com/MAC-AutoML/SpecEyes)
+  > SpecEyes 针对智能体多模态大语言模型的「智能体深度」瓶颈问题，提出推测加速框架。核心思路：用轻量级无工具MLLM作为推测规划器，提前预测执行轨迹，从而实现对昂贵工具调用链的提前终止。引入基于答案可分性（answer separability）的认知门控机制，无需oracle标签即可量化模型置信度。设计了异构并行漏斗结构，利用小模型的无状态并发能力掩盖大模型的有状态串行执行。在V* Bench、HR-Bench、POPE上实现1.1至3.35倍加速，精度持平甚至提升（最高+6.7%）。
+
+- **Rethinking Token-Level Policy Optimization for Multimodal Chain-of-Thought** `[RL]` `[VLM]` — [2603.22847](https://arxiv.org/abs/2603.22847) | [GitHub](https://github.com/xzxxntxdy/PEPO)
+  > PEPO（感知-探索策略优化）针对多模态推理链中现有RLVR方法粒度过粗的问题，通过token级分析揭示成功推理具有结构化的token动态，反映感知接地与探索性推理两类特征。方法从隐状态相似性中提取感知先验，并通过平滑门控机制与token熵结合，生成token级优势估计。PEPO可无缝接入GRPO、DAPO等现有RLVR框架，无需额外监督或辅助分支。在几何推理、视觉接地、视觉谜题求解、少样本分类等多模态任务上，PEPO相比强RL基线展现一致且稳健的性能提升，同时保持训练动态稳定。
+
+- **AgentSLR: Automating Systematic Literature Reviews in Epidemiology with Agentic AI** `[API]` — [2603.22327](https://arxiv.org/abs/2603.22327) | [GitHub](https://github.com/oxrml/agentslr)
+  > AgentSLR 研究是否可以用大语言模型自动化完整的系统性文献综述（SLR）工作流，涵盖文章检索、筛选、数据提取和报告综合四大环节。针对WHO指定的九种优先病原体的流行病学综述进行评测，与专家人工标注的基准对比。开源智能体流水线在达到人类研究者同等性能的同时，将综述时间从约7周缩短至20小时（加速58倍）。研究还比较了五种前沿大模型，发现SLR性能的驱动因素更多在于模型独特能力而非规模或推理成本。
+
+- **CanViT: Toward Active-Vision Foundation Models** — [2603.22570](https://arxiv.org/abs/2603.22570) | [GitHub](https://github.com/m2b3/CanViT-PyTorch)
+  > CanViT 是首个任务无关、策略无关的主动视觉基础模型（AVFM）。模型采用视网膜中心RoPE绑定视觉Transformer主干与空间场景级潜在工作区（canvas），并引入Canvas Attention（非对称交叉注意力机制）实现高效工作记忆交互。通过解耦「思考」与「记忆」层级，消除canvas侧的自注意力和全连接层，实现低延迟序列推理和大场景可扩展性。提出标签无关的主动视觉预训练方案，在1.32千万ImageNet-21k图像和10亿随机瞥视上预训练。在ADE20K分割任务上，单次低分辨率瞥视达38.5% mIoU，优于最佳主动模型27.6%，且推理FLOPs减少19.5倍。
+
+- **One View Is Enough! Monocular Training for In-the-Wild Novel View Generation** `[扩散模型]` — [2603.23488](https://arxiv.org/abs/2603.23488) | [GitHub](https://github.com/AdrienRR/ovie)
+  > OVIE 完全基于非配对互联网图像训练，实现单目新视角合成，无需多视图图像对监督。核心思路：利用单目深度估计器作为几何支撑，将源图像提升至3D并采样相机变换后投影得到伪目标视图；引入遮罩训练公式，将几何、感知和纹理损失限制在有效区域以处理遮挡，支持在3000万张未经筛选的图像上训练。推理时完全无需深度估计器或3D表示（geometry-free）。在零样本设置下，OVIE超越现有方法，速度比第二名快600倍。
+
+- **Uncertainty-guided Compositional Alignment with Part-to-Whole Semantic Representativeness in Hyperbolic Vision-Language Models** `[VLM]` `[微调]` — [2603.22042](https://arxiv.org/abs/2603.22042) | [GitHub](https://github.com/jeeit17/UNCHA)
+  > UNCHA（不确定性引导的组合双曲对齐）旨在提升双曲视觉语言模型对层次化结构和多目标组合场景的建模能力。现有双曲VLM通过蕴含关系保留部分-整体层次，但未考虑各部分对整体的语义代表性差异。UNCHA用双曲不确定性建模部分语义代表性：代表性强的部分被赋予更低不确定性，反之更高。这种代表性以不确定性引导权重融入对比目标，并通过基于熵的正则化蕴含损失进一步校准。在零样本分类、检索和多标签分类任务上均达到最优性能。
+
+## 2026年3月26日
+
+- **UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience** `[RL]` `[微调]` `[VLM]` — [2603.24533](https://arxiv.org/abs/2603.24533) | [GitHub](https://github.com/ui-voyager/UI-Voyager)
+  > UI-Voyager提出了一个两阶段自进化移动GUI代理框架，专门解决长时程GUI任务中从失败轨迹低效学习和稀疏奖励下信用分配模糊的问题。第一阶段采用拒绝微调（RFT），在全自主循环中实现数据与模型的持续协同进化。第二阶段引入组相对自蒸馏（GRSD），识别组推演中的关键分叉点，从成功轨迹构建密集的步骤级监督信号来纠正失败轨迹。在AndroidWorld上，4B参数模型取得81.0%的Pass@1成功率，超越多个近期基线并超越人类水平性能，验证了利用失败经验进行自进化训练的有效性。
+
+- **T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search** `[API]` — [2603.22341](https://arxiv.org/abs/2603.22341) | [GitHub](https://github.com/pwnhyo/T-MAP)
+  > T-MAP提出了轨迹感知进化搜索红队方法，专门针对LLM代理通过多步工具执行产生的特有安全漏洞，覆盖Model Context Protocol（MCP）等快速增长的生态系统。该方法利用执行轨迹指导对抗提示的自动生成，不仅能绕过安全防护，还能通过真实工具交互实现危害目标。在多样化MCP环境中的评估表明，T-MAP在攻击实现率（ARR）上显著超越基线，并对GPT-5.2、Gemini-3-Pro、Qwen3.5和GLM-5等前沿模型保持有效性，揭示了自主LLM代理中此前未充分探索的安全漏洞。
+
+- **Understanding the Challenges in Iterative Generative Optimization with LLMs** `[API]` `[RL]` — [2603.23994](https://arxiv.org/abs/2603.23994) | [GitHub](https://github.com/ameliakuang/LLM-Game-Playing-Agents)
+  > 本文系统研究了使用LLM迭代优化工件（代码、工作流、提示等）的生成式优化方法的脆弱性根源。通过MLAgentBench、Atari游戏和BigBench Extra Hard三个案例，发现「隐性」设计选择——初始工件选取、执行轨迹的信用归因范围、如何将试错批次化为学习证据——是决定生成式优化成败的关键因素，但在已有工作中鲜有明确讨论。研究揭示了信用归因区间和批量处理策略对优化稳定性的显著影响，为构建可靠自改进代理提供了具体的设计指导。
+
+- **When Models Judge Themselves: Unsupervised Self-Evolution for Multimodal Reasoning** `[RL]` `[VLM]` — [2603.21289](https://arxiv.org/abs/2603.21289) | [GitHub](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge)
+  > 本文提出了一种无监督自进化训练框架，无需人工标注答案或外部奖励模型即可提升多模态推理能力。对于每个输入，框架采样多条推理轨迹并联合建模其组内结构，以Actor的自洽性信号作为训练先验，引入有界Judge调制持续对不同质量轨迹重加权，再将调制分数转换为组级分布内的相对优势。基于GRPO在无标注数据上训练，该方法在多个多模态推理基准上取得稳定性能提升，证明自洽性信号足以驱动高质量推理能力的涌现，无需依赖昂贵的人工标注或教师模型。
+
+- **The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics** `[VLM]` — [2603.14375](https://arxiv.org/abs/2603.14375) | [GitHub](https://github.com/taco-group/Pulse-of-Motion)
+  > 本文揭示了AI视频生成模型中「时间幻觉」现象：现有模型缺乏可靠的内部运动节拍来将生成运动锚定到真实世界时间尺度，导致生成序列的物理运动速度模糊、不稳定且不可控。为此提出Visual Chronometer——一个直接从输入视频的视觉动态中恢复物理帧率（PhyFPS）的预测器，通过受控时间重采样训练，无需依赖不可靠的元数据即可估计运动暗示的真实时间尺度。建立了PhyFPS-Bench-Real和PhyFPS-Bench-Gen两个基准，实验表明顶级视频生成器存在严重的PhyFPS偏差，应用PhyFPS校正可显著提升AI生成视频的人类感知自然度。
+
+- **CarePilot: A Multi-Agent Framework for Long-Horizon Computer Task Automation in Healthcare** `[VLM]` `[MeM]` `[微调]` — [2603.24157](https://arxiv.org/abs/2603.24157) | [GitHub](https://github.com/AkashGhosh/CarePilot)
+  > CarePilot针对医疗领域长时程计算机任务自动化提出多智能体框架，并配套发布了CareFlow基准——覆盖医学标注工具、DICOM查看器、EHR系统等真实医疗软件工作流的高质量人工标注数据集。现有VLM在该基准上表现欠佳，CarePilot采用Actor-Critic范式：Actor集成工具定位与双记忆机制（长期/短期经验）预测下一语义动作，Critic评估每步动作并更新记忆或提供纠正反馈。通过迭代智能体仿真训练，CarePilot在基准和分布外数据集上分别比强闭源和开源多模态基线高出约15.26%和3.38%。
+
+- **LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis** `[扩散模型]` — [2603.20176](https://arxiv.org/abs/2603.20176) | [GitHub](https://github.com/facebookresearch/lagernvs)
+  > LagerNVS提出利用隐式3D几何偏置实现全神经实时新视角合成的编解码网络，编码器由显式3D重建预训练网络初始化以获得「3D感知」隐特征，配合轻量解码器端到端进行光度损失训练。无需显式3D重建即可在Re10k上取得31.4 PSNR的领先确定性前馈NVS结果，支持已知或未知相机参数，实时渲染，泛化到真实场景数据，并可与扩散解码器结合实现生成式外推。实验表明强3D归纳偏置对纯神经网络方法的设计仍具重要价值。
+
+- **Qworld: Question-Specific Evaluation Criteria for LLMs** `[API]` `[无需训练]` — [2603.23522](https://arxiv.org/abs/2603.23522) | [GitHub](https://github.com/mims-harvard/qworld)
+  > Qworld提出「一问一世界」方法，通过递归扩展树为每道开放式问题生成专属评估标准，克服了传统数据集级固定评分标准无法捕捉问题上下文依赖需求的缺陷。给定问题后，Qworld通过结构化层次与横向扩展将其分解为场景、视角和细粒度二元标准。在HealthBench上，Qworld覆盖了89%的专家编写标准，还额外生成了79%经专家验证的新颖标准，且专家评价其在洞察力和粒度上均优于其他提示方法，为LLM开放式回答评估提供了更精准的质量衡量工具。
+
+- **PLDR-LLMs Reason At Self-Organized Criticality** — [2603.23539](https://arxiv.org/abs/2603.23539) | [GitHub](https://github.com/burcgokden/PLDR-LLM-Self-Organized-Criticality)
+  > 本文证明在自组织临界性条件下预训练的PLDR-LLM在推理时展现出推理能力。临界点处的PLDR-LLM演绎输出特征类似于二阶相变，相关长度发散，演绎输出达到亚稳态。研究表明演绎输出学习到等价于标度函数、普适性类和重整化群的表示，从而产生泛化与推理能力。通过定义模型演绎输出参数全局统计的序参量，当序参量在临界点处接近零时推理能力最强，这一观察被临界附近与次临界训练模型的基准分数所支持，为推理能力的涌现机制提供了自洽解释。

@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-03-26",
+    "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+    "arxiv_id": "2603.24533",
+    "github": "https://github.com/ui-voyager/UI-Voyager",
+    "abstract": "UI-Voyager提出了一个两阶段自进化移动GUI代理框架，专门解决长时程GUI任务中从失败轨迹低效学习和稀疏奖励下信用分配模糊的问题。第一阶段采用拒绝微调（RFT），在全自主循环中实现数据与模型的持续协同进化。第二阶段引入组相对自蒸馏（GRSD），识别组推演中的关键分叉点，从成功轨迹构建密集的步骤级监督信号来纠正失败轨迹。在AndroidWorld上，4B参数模型取得81.0%的Pass@1成功率，超越多个近期基线并超越人类水平性能，验证了利用失败经验进行自进化训练的有效性。",
+    "tags": ["RL", "微调", "VLM"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search",
+    "arxiv_id": "2603.22341",
+    "github": "https://github.com/pwnhyo/T-MAP",
+    "abstract": "T-MAP提出了轨迹感知进化搜索红队方法，专门针对LLM代理通过多步工具执行产生的特有安全漏洞，覆盖Model Context Protocol（MCP）等快速增长的生态系统。该方法利用执行轨迹指导对抗提示的自动生成，不仅能绕过安全防护，还能通过真实工具交互实现危害目标。在多样化MCP环境中的评估表明，T-MAP在攻击实现率（ARR）上显著超越基线，并对GPT-5.2、Gemini-3-Pro、Qwen3.5和GLM-5等前沿模型保持有效性，揭示了自主LLM代理中此前未充分探索的安全漏洞。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+    "arxiv_id": "2603.23994",
+    "github": "https://github.com/ameliakuang/LLM-Game-Playing-Agents",
+    "abstract": "本文系统研究了使用LLM迭代优化工件（代码、工作流、提示等）的生成式优化方法的脆弱性根源。通过MLAgentBench、Atari游戏和BigBench Extra Hard三个案例，发现「隐性」设计选择——初始工件选取、执行轨迹的信用归因范围、如何将试错批次化为学习证据——是决定生成式优化成败的关键因素，但在已有工作中鲜有明确讨论。研究揭示了信用归因区间和批量处理策略对优化稳定性的显著影响，为构建可靠自改进代理提供了具体的设计指导。",
+    "tags": ["API", "RL"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "When Models Judge Themselves: Unsupervised Self-Evolution for Multimodal Reasoning",
+    "arxiv_id": "2603.21289",
+    "github": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+    "abstract": "本文提出了一种无监督自进化训练框架，无需人工标注答案或外部奖励模型即可提升多模态推理能力。对于每个输入，框架采样多条推理轨迹并联合建模其组内结构，以Actor的自洽性信号作为训练先验，引入有界Judge调制持续对不同质量轨迹重加权，再将调制分数转换为组级分布内的相对优势。基于GRPO在无标注数据上训练，该方法在多个多模态推理基准上取得稳定性能提升，证明自洽性信号足以驱动高质量推理能力的涌现，无需依赖昂贵的人工标注或教师模型。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics",
+    "arxiv_id": "2603.14375",
+    "github": "https://github.com/taco-group/Pulse-of-Motion",
+    "abstract": "本文揭示了AI视频生成模型中「时间幻觉」现象：现有模型缺乏可靠的内部运动节拍来将生成运动锚定到真实世界时间尺度，导致生成序列的物理运动速度模糊、不稳定且不可控。为此提出Visual Chronometer——一个直接从输入视频的视觉动态中恢复物理帧率（PhyFPS）的预测器，通过受控时间重采样训练，无需依赖不可靠的元数据即可估计运动暗示的真实时间尺度。建立了PhyFPS-Bench-Real和PhyFPS-Bench-Gen两个基准，实验表明顶级视频生成器存在严重的PhyFPS偏差，应用PhyFPS校正可显著提升AI生成视频的人类感知自然度。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "CarePilot: A Multi-Agent Framework for Long-Horizon Computer Task Automation in Healthcare",
+    "arxiv_id": "2603.24157",
+    "github": "https://github.com/AkashGhosh/CarePilot",
+    "abstract": "CarePilot针对医疗领域长时程计算机任务自动化提出多智能体框架，并配套发布了CareFlow基准——覆盖医学标注工具、DICOM查看器、EHR系统等真实医疗软件工作流的高质量人工标注数据集。现有VLM在该基准上表现欠佳，CarePilot采用Actor-Critic范式：Actor集成工具定位与双记忆机制（长期/短期经验）预测下一语义动作，Critic评估每步动作并更新记忆或提供纠正反馈。通过迭代智能体仿真训练，CarePilot在基准和分布外数据集上分别比强闭源和开源多模态基线高出约15.26%和3.38%。",
+    "tags": ["VLM", "MeM", "微调"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis",
+    "arxiv_id": "2603.20176",
+    "github": "https://github.com/facebookresearch/lagernvs",
+    "abstract": "LagerNVS提出利用隐式3D几何偏置实现全神经实时新视角合成的编解码网络，编码器由显式3D重建预训练网络初始化以获得「3D感知」隐特征，配合轻量解码器端到端进行光度损失训练。无需显式3D重建即可在Re10k上取得31.4 PSNR的领先确定性前馈NVS结果，支持已知或未知相机参数，实时渲染，泛化到真实场景数据，并可与扩散解码器结合实现生成式外推。实验表明强3D归纳偏置对纯神经网络方法的设计仍具重要价值。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "Qworld: Question-Specific Evaluation Criteria for LLMs",
+    "arxiv_id": "2603.23522",
+    "github": "https://github.com/mims-harvard/qworld",
+    "abstract": "Qworld提出「一问一世界」方法，通过递归扩展树为每道开放式问题生成专属评估标准，克服了传统数据集级固定评分标准无法捕捉问题上下文依赖需求的缺陷。给定问题后，Qworld通过结构化层次与横向扩展将其分解为场景、视角和细粒度二元标准。在HealthBench上，Qworld覆盖了89%的专家编写标准，还额外生成了79%经专家验证的新颖标准，且专家评价其在洞察力和粒度上均优于其他提示方法，为LLM开放式回答评估提供了更精准的质量衡量工具。",
+    "tags": ["API", "无需训练"]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "PLDR-LLMs Reason At Self-Organized Criticality",
+    "arxiv_id": "2603.23539",
+    "github": "https://github.com/burcgokden/PLDR-LLM-Self-Organized-Criticality",
+    "abstract": "本文证明在自组织临界性条件下预训练的PLDR-LLM在推理时展现出推理能力。临界点处的PLDR-LLM演绎输出特征类似于二阶相变，相关长度发散，演绎输出达到亚稳态。研究表明演绎输出学习到等价于标度函数、普适性类和重整化群的表示，从而产生泛化与推理能力。通过定义模型演绎输出参数全局统计的序参量，当序参量在临界点处接近零时推理能力最强，这一观察被临界附近与次临界训练模型的基准分数所支持，为推理能力的涌现机制提供了自洽解释。",
+    "tags": []
+  }
+]
