@@ -1831,3 +1831,38 @@
 
 - **PLDR-LLMs Reason At Self-Organized Criticality** — [2603.23539](https://arxiv.org/abs/2603.23539) | [GitHub](https://github.com/burcgokden/PLDR-LLM-Self-Organized-Criticality)
   > 本文证明在自组织临界性条件下预训练的PLDR-LLM在推理时展现出推理能力。临界点处的PLDR-LLM演绎输出特征类似于二阶相变，相关长度发散，演绎输出达到亚稳态。研究表明演绎输出学习到等价于标度函数、普适性类和重整化群的表示，从而产生泛化与推理能力。通过定义模型演绎输出参数全局统计的序参量，当序参量在临界点处接近零时推理能力最强，这一观察被临界附近与次临界训练模型的基准分数所支持，为推理能力的涌现机制提供了自洽解释。
+
+## 2026年3月27日
+
+- **PixelSmile: Toward Fine-Grained Facial Expression Editing** `[扩散模型]` — [2603.25728](https://arxiv.org/abs/2603.25728) | [GitHub](https://github.com/Ammmob/PixelSmile)
+  > 提出 PixelSmile，一个用于细粒度人脸表情编辑的扩散框架。针对现有方法中表情语义耦合导致编辑混乱的问题，作者构建了 Flex Facial Expression (FFE) 数据集（含连续情感标注），并设计 FFE-Bench 从结构混乱度、编辑准确率、线性可控性和身份保留等维度评测。PixelSmile 通过全对称联合训练解耦表情语义，结合强度监督与对比学习生成更具区分度的表情，利用文本潜空间插值实现平滑的表情混合与线性可控编辑，在身份保留与精确编辑间取得显著改进。
+
+- **Calibri: Enhancing Diffusion Transformers via Parameter-Efficient Calibration** `[扩散模型]` `[无需训练]` — [2603.24800](https://arxiv.org/abs/2603.24800) | [GitHub](https://github.com/v-gen-ai/Calibri)
+  > 提出 Calibri，仅需调整约 100 个参数即可显著提升扩散 Transformer（DiT）生成质量的参数高效校准方法。核心思路是在每个 DiT block 引入单个可学习缩放参数，通过黑盒奖励优化（进化算法）自动搜索最优配置，无需梯度反传。实验表明 Calibri 在多种文生图模型上稳定提升生成质量，同时还能减少推理步骤，兼顾效率与效果，是轻量级即插即用的 DiT 增强方案。
+
+- **RealRestorer: Towards Generalizable Real-World Image Restoration with Large-Scale Image Editing Models** — [2603.25502](https://arxiv.org/abs/2603.25502) | [GitHub](https://github.com/yfyang007/RealRestorer)
+  > 提出 RealRestorer，面向真实世界图像复原的开源框架，通过大规模图像编辑模型提升泛化能力。作者构建了涵盖 9 种常见退化类型的大规模数据集，训练最先进的开源模型以缩小与闭源方案的性能差距。同时发布 RealIR-Bench，包含 464 张真实退化图像及聚焦退化去除与一致性保留的评测指标。RealRestorer 在开源方法中排名第一，达到 SOTA 水平。
+
+- **MACRO: Advancing Multi-Reference Image Generation with Structured Long-Context Data** `[长文本]` `[VLM]` — [2603.25319](https://arxiv.org/abs/2603.25319) | [GitHub](https://github.com/HKU-MMLab/Macro)
+  > 提出 MACRO，解决多参考图像生成中随输入数量增加性能急剧下降的问题。作者识别根本原因为数据瓶颈：现有数据集以单参考或少参考为主，导致模型无法处理大量参考。MACRO 构建了结构化长上下文多参考数据集并配套训练策略，使模型能有效整合多个视觉参考进行图像生成，适用于多主体合成、叙事插图、新视角合成等场景，在多参考图像生成任务上取得显著改进。
+
+- **VFIG: Vectorizing Complex Figures in SVG with Vision-Language Models** `[VLM]` `[RL]` — [2603.24575](https://arxiv.org/abs/2603.24575) | [GitHub](https://github.com/RAIVNLab/VFig)
+  > 提出 VFIG，利用视觉语言模型将复杂光栅图（PNG/JPEG）还原为可编辑 SVG 矢量格式的系统。针对原始矢量文件丢失后难以手动重建的问题，VFIG 通过 VLM 生成结构化 SVG 代码，配套强化学习（RL）和 SFT 训练流程提升质量，提供专用评测集和指标，在科学图表和技术插图的矢量化还原上表现突出。
+
+- **Representation Alignment for Just Image Transformers is not Easier than You Think** `[扩散模型]` — [2603.14366](https://arxiv.org/abs/2603.14366) | [GitHub](https://github.com/kaist-cvml/PixelREPA)
+  > 探讨将表示对齐（REPA）方法迁移到像素空间扩散 Transformer（JiT）的挑战。REPA 已被证明可有效加速潜空间 DiT 训练，但 JiT 无需预训练 tokenizer，避免了潜扩散的重建瓶颈。本文系统分析像素空间中 REPA 的失效原因，提出 PixelREPA，通过针对性设计解决像素域对齐的特有难题（尺度不匹配、去噪目标冲突等），有效加速 JiT 训练同时保持生成质量。
+
+- **S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation** `[无需训练]` — [2603.25702](https://arxiv.org/abs/2603.25702) | [GitHub](https://github.com/phymhan/S2D2)
+  > 提出 S2D2，一种免训练的扩散语言模型快速解码框架。针对块扩散语言模型在少步推理时置信度阈值解码不稳定的问题（激进阈值损害质量，保守阈值效率低下），S2D2 通过自推测机制让模型自身生成候选 token 后验证，动态平衡质量与速度。无需额外训练，在 LLaDA 等扩散 LLM 上实现显著加速，同时维持生成质量。
+
+- **MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution** `[MeM]` — [2603.18718](https://arxiv.org/abs/2603.18718) | [GitHub](https://github.com/ventr1c/memma)
+  > 提出 MemMA，通过多智能体协同推理统一协调 LLM Agent 记忆生命周期（构建、检索、使用）的框架。现有系统将三个环节孤立处理，导致策略盲目性和适应性不足。MemMA 设计专职 Agent 负责各阶段，并引入原位自进化机制让记忆根据交互反馈自动更新优化。在长时程对话和任务执行实验中显著优于现有记忆增强方案。
+
+- **Pixel-level Scene Understanding in One Token: Visual States Need What-is-Where Composition** `[VLM]` — [2603.13904](https://arxiv.org/abs/2603.13904) | [GitHub](https://github.com/SeokminLee-Chris/CroBo)
+  > 提出 CroBo，面向机器人序列决策的视觉状态表示学习框架，核心论点是有效视觉状态需同时编码「是什么」（语义）和「在哪里」（位置）信息。现有自监督方法迁移性强但未显式解耦这两类信息。CroBo 通过 what-is-where 组合目标进行预训练，在单一 token 中实现像素级场景理解，在多个视觉状态表示基准和下游任务上验证有效性。
+
+- **Can MLLMs Read Students' Minds? Unpacking Multimodal Error Analysis in Handwritten Math** `[VLM]` `[API]` — [2603.24961](https://arxiv.org/abs/2603.24961) | [GitHub](https://github.com/ai-for-edu/ScratchMath)
+  > 提出 ScratchMath，评测多模态大语言模型对学生手写数学草稿进行错误分析能力的数据集与框架。手写草稿评估面临字迹多样、布局复杂和解题路径各异等挑战，现有教育 NLP 主要关注文字答案而忽视多模态手写内容。ScratchMath 包含真实学生手写数学解题过程，配套评测指标考察模型错误定位、类型识别和教学反馈生成能力，揭示当前 MLLM 在教育场景中的明显局限。
+
+- **Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models** `[RL]` — [2603.24844](https://arxiv.org/abs/2603.24844) | [GitHub](https://github.com/ishapuri/multi_answer_rl)
+  > 提出利用强化学习训练语言模型进行分布式推理的框架，解决后训练过程导致模型输出单一众数答案、丢失多样性的问题。现有后训练假设每个问题只有唯一正确答案，但现实任务常存在多个合理解或不可消除的不确定性。作者设计基于 GRPO 的训练目标，使模型在生成样本时覆盖多个有效答案而非坍缩到单一模式，在需要分布推理的任务上显著提升表现。
