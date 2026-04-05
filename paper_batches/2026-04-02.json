@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-04-02",
+    "title": "ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers",
+    "arxiv_id": "2603.24414",
+    "github": "https://github.com/SafeAI-Lab-X/ClawKeeper",
+    "abstract": "ClawKeeper 是针对 OpenClaw 开源 Agent 运行时的综合安全框架，填补了现有安全措施碎片化的空白。框架分为三层：（1）基于 Skill 的指令级保护，直接向 Agent 上下文注入安全策略；（2）基于 Plugin 的运行时防护，提供配置加固、威胁检测和行为监控；（3）基于 Watcher 的系统级安全中间件，在不耦合 Agent 内部逻辑的前提下，支持实时拦截高风险操作或强制人工确认。作者认为 Watcher 范式可作为下一代 Agent 安全的基础组件。实验在多种威胁场景下验证了 ClawKeeper 的有效性和鲁棒性，代码已开源。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-02",
+    "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+    "arxiv_id": "2604.00025",
+    "github": "https://github.com/logicsame/Brevity-Constraints-Reverse-Performance-Hierarchies-in-Language-Models",
+    "abstract": "本文发现了一个反直觉现象：在5个数据集的7.7%问题上，大模型的表现比小模型低28.4个百分点。通过对31个模型（0.5B-405B参数）系统评估，研究者识别出根本原因是大模型的"过度冗长"倾向——大模型倾向于过度阐述而引入错误。因果干预实验表明，对大模型施加简洁约束可将准确率提升26个百分点，并在数学推理和科学知识任务上将性能差距缩小三分之二，甚至完全逆转排名。结果表明大模型具有更强的隐藏能力，通用提示方式掩盖了这一能力，应采用规模感知的提示工程策略。",
+    "tags": ["无需训练", "API"]
+  },
+  {
+    "date": "2026-04-02",
+    "title": "Paper Reconstruction Evaluation: Evaluating Presentation and Hallucination in AI-written Papers",
+    "arxiv_id": "2604.01128",
+    "github": "https://github.com/Agent4Science-UTokyo/PaperRecon",
+    "abstract": "本文提出 PaperRecon，首个系统量化 AI 写作论文质量与风险的评估框架。方法是从已有论文生成概要（overview.md），让 Agent 基于概要和最少资源重写论文，再将结果与原文对比。框架将评估解耦为两个维度：Presentation（呈现质量，基于评分标准）和 Hallucination（幻觉率，通过 Agent 对照原文评估）。实验使用 PaperWrite-Bench（51篇顶会论文）发现：ClaudeCode 表现质量更高但每篇论文平均超过10处幻觉，Codex 幻觉较少但质量较低，两者存在明确的权衡关系。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-04-02",
+    "title": "Do Phone-Use Agents Respect Your Privacy?",
+    "arxiv_id": "2604.00986",
+    "github": "https://github.com/FreedomIntelligence/MyPhoneBench",
+    "abstract": "本文研究手机 Agent 在完成正常任务时是否尊重隐私。研究者提出 MyPhoneBench，一个可验证的移动 Agent 隐私行为评估框架，将隐私遵守操作化为"授权访问、最小披露、用户控制记忆"三原则（iMy 隐私合约），并配备模拟 App 和基于规则的审计工具。在5个前沿模型、10款手机应用、300个任务上的实验表明：任务成功率、隐私合规完成率和偏好记忆应用三项能力相互独立，无单一模型全面优秀；最普遍的失败模式是数据最小化——Agent 填写了任务不需要的个人信息字段。结果显示当前 Agent 部署准备不足。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-02",
+    "title": "S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models",
+    "arxiv_id": "2604.01168",
+    "github": "https://github.com/JackYoung27/s0-tuning",
+    "abstract": "本文提出 S0 Tuning，一种针对混合递归-注意力模型的零推理开销参数高效微调方法。方法仅优化每个递归层的初始状态矩阵，冻结全部模型权重。使用约48个 HumanEval 训练样本，S0 Tuning 在 HumanEval 上超越 LoRA 10.8个百分点（p<0.001）；在 Qwen3.5-4B 上提升23.6个百分点；在 MATH-500 和 GSM8K 上表现出显著的跨域迁移能力。纯 Transformer 的前缀调优控制实验性能下降，说明该方法专属于具有递归状态的混合架构。调优后的状态文件仅48MB，切换任务无需合并权重。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-04-02",
+    "title": "PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding",
+    "arxiv_id": "2604.00886",
+    "github": "https://github.com/OPPO-Mente-Lab/PixelPrune",
+    "abstract": "PixelPrune 是一种基于预测编码的视觉 Token 无损压缩方法，专为文档理解和 GUI 交互等高分辨率 VLM 场景设计。研究发现文档和 GUI 图像中22~71%的 patch 与其他 patch 完全重复，PixelPrune 在像素空间（ViT 编码前）利用这一冗余进行预测编码压缩，同步加速 ViT 编码器和下游 LLM 的全推理流程。该方法无需训练、无可学习参数，支持无损压缩（τ=0）和可控有损压缩（τ>0）。在三种模型规模、多个文档和 GUI 基准上，PixelPrune 保持竞争性任务准确率的同时，实现最高4.2倍推理加速和1.9倍训练加速。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-04-02",
+    "title": "AgentWatcher: A Rule-based Prompt Injection Monitor",
+    "arxiv_id": "2604.01194",
+    "github": "https://github.com/Wang-Yanting/AgentWatcher",
+    "abstract": "AgentWatcher 针对 LLM Agent 的提示注入攻击提出了两项改进：（1）通过因果归因将 Agent 输出关联到少量关键上下文片段，使检测可扩展至长上下文，解决现有方法随上下文增长性能下降的问题；（2）明确定义提示注入的判定规则集，由监控 LLM 基于归因文本对规则进行推理，使检测决策更可解释、透明。在工具调用 Agent 基准和长上下文理解数据集上的实验表明，AgentWatcher 能有效检测提示注入攻击，同时在无攻击场景下维持正常功能，代码已开源。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-02",
+    "title": "AI Generalisation Gap In Comorbid Sleep Disorder Staging",
+    "arxiv_id": "2603.23582",
+    "github": "https://github.com/HimalayanSaswataBose/iSLEEPS_GeneralisationGapAndExplainability",
+    "abstract": "本文研究深度学习睡眠分期模型在合并症患者（脑卒中）群体中的泛化差距问题。研究使用 SE-ResNet + 双向 LSTM 模型在单通道 EEG 数据上进行睡眠分期，引入新的临床标注数据集 iSLEEPS（缺血性脑卒中患者，计划公开）。通过 Grad-CAM 可解释性分析发现，模型在患者数据上关注了生理无意义的 EEG 区域。统计和计算分析进一步确认健康人群与脑卒中患者之间睡眠架构存在显著差异，表明跨域性能差的根本原因在于睡眠模式的本质差异，强调需要面向特定疾病的患者感知模型才能实现安全部署。",
+    "tags": ["微调"]
+  }
+]

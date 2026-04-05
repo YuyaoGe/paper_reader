@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-03-17",
+    "title": "OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data",
+    "arxiv_id": "2603.15594",
+    "github": "https://github.com/rui-ye/OpenSeeker",
+    "abstract": "OpenSeeker 是首个完全开源的前沿级搜索 Agent，旨在解决高质量训练数据稀缺的问题。核心贡献包含两项技术创新：一是基于事实的可扩展可控 QA 合成方法，通过对 Web 图进行拓扑扩展与实体混淆，生成复杂的多跳推理任务；二是去噪轨迹合成方法，利用回顾性摘要机制去除噪声，引导教师 LLM 生成高质量动作序列。实验结果显示，OpenSeeker 仅用 11.7k 合成样本经 SFT 训练，便在 BrowseComp、BrowseComp-ZH、xbench-DeepSearch 和 WideSearch 等多个基准上达到最先进水平，显著超越次优开源方案 DeepDive（29.5% vs 15.3%），甚至优于使用大规模持续预训练+SFT+RL 的工业级系统 Tongyi DeepResearch。作者完全开源了训练数据集和模型权重。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-17",
+    "title": "FineRMoE: Dimension Expansion for Finer-Grained Expert with Its Upcycling Approach",
+    "arxiv_id": "2603.13364",
+    "github": "https://github.com/liaoning97/FineRMoE",
+    "abstract": "本文提出 FineRMoE（更细粒度 MoE），针对单维度细粒度 MoE 性能提升的瓶颈问题，将细粒度专家设计同时扩展至中间维度和输出维度，以增强专家专业化程度。方法创新包括：双层稀疏前向计算范式、专用路由机制，以及广义 Upcycling 方法——可将现有稠密模型低成本转换为 FineRMoE 而无需从头训练。在十个标准基准上的大量实验表明，FineRMoE 相比最强基线实现了 6 倍参数效率提升、281 倍预填充延迟降低和 136 倍解码吞吐量提升，有效突破了单维度细粒度设计的性能上限。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-17",
+    "title": "Understanding Reasoning in LLMs through Strategic Information Allocation under Uncertainty",
+    "arxiv_id": "2603.15500",
+    "github": "https://github.com/beanie00/strategic-information-allocation-llm-reasoning",
+    "abstract": "本文提出一个信息论框架，将 LLM 推理过程分解为「程序性信息」和「认知外显化」——即对不确定性的显式外化表达，以支持后续控制动作。研究发现，纯程序性推理会陷入信息停滞，而认知外显化能够持续获取新信息并对达到信息充分性至关重要。实证结果表明，强推理性能由不确定性外显化驱动，而非依赖特定表面 Token（如「Wait」）。该框架统一了以往关于 Aha Moment 和后训练的相关研究发现，对推理模型设计具有重要指导意义，揭示了 LLM 强推理能力背后的深层信息论机制。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-17",
+    "title": "Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning",
+    "arxiv_id": "2603.15611",
+    "github": "https://github.com/ZJU-REAL/Code-A1",
+    "abstract": "Code-A1 提出了一种对抗协同进化框架，通过强化学习联合优化「代码 LLM」和「测试 LLM」，两者目标对立：代码 LLM 以通过更多测试为奖励，测试 LLM 以暴露更多缺陷为奖励。这种架构分离消除了自我共谋风险，并安全地启用白盒测试生成——测试 LLM 可检查候选代码以生成针对性对抗测试。此外引入 Mistake Book 机制进行经验回放，并设计组合奖励平衡测试有效性与对抗难度。在 Qwen2.5-Coder 模型上的实验表明，Code-A1 的代码生成性能与基于人工标注测试训练的模型相当或更优，同时显著提升了测试生成能力。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-03-17",
+    "title": "Mind the Shift: Decoding Monetary Policy Stance from FOMC Statements with Large Language Models",
+    "arxiv_id": "2603.14313",
+    "github": "https://github.com/yixuantt/DeltaConsistentScoring",
+    "abstract": "本文提出 Delta-Consistent Scoring（DCS），一种无需人工标注的框架，通过联合建模绝对立场和会议间相对变化，将冻结 LLM 的表示映射为连续的货币政策立场分数。DCS 利用连续会议作为自监督来源，学习每份声明的绝对立场分数和相邻声明间的相对偏移分数，以「Delta 一致性」目标驱动两者对齐，从而无需人工 hawkish-dovish 标签即可恢复时序连贯的立场轨迹。在四个 LLM 主干上，DCS 在句子级别鹰鸽分类上达到高达 71.1% 的准确率，会议级别分数与通胀指标高度相关，并与国债收益率变动显著关联。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-17",
+    "title": "GlyphPrinter: Region-Grouped Direct Preference Optimization for Glyph-Accurate Visual Text Rendering",
+    "arxiv_id": "2603.15616",
+    "github": "https://github.com/FudanCVL/GlyphPrinter",
+    "abstract": "GlyphPrinter 提出了一种基于偏好优化的视觉文字渲染方法，通过消除对显式奖励模型的依赖来提升字形准确性。针对标准 DPO 只建模整体偏好、难以处理局部字形错误的问题，本文构建了含区域级字形偏好标注的 GlyphCorrector 数据集，并提出区域分组 DPO（R-GDPO），对标注区域内的样本间和样本内偏好进行优化。此外还引入区域奖励引导推理策略，从最优分布中采样以实现可控字形精度。大量实验表明，GlyphPrinter 在字形准确性上优于现有方法，同时在风格化与精确度之间保持良好平衡，尤其对复杂字符和域外字符效果显著。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-03-17",
+    "title": "MoKus: Leveraging Cross-Modal Knowledge Transfer for Knowledge-Aware Concept Customization",
+    "arxiv_id": "2603.12743",
+    "github": "https://github.com/HKUST-LongGroup/MoKus",
+    "abstract": "本文提出知识感知概念定制（Knowledge-aware Concept Customization）这一新任务，旨在将多样化文本知识绑定到目标视觉概念，同时保持高保真度生成。核心方法 MoKus 基于跨模态知识迁移观察：修改文本模态中的知识会在生成时自然迁移到视觉模态。MoKus 分两阶段：视觉概念学习阶段学习存储视觉信息的锚点表示；文本知识更新阶段将知识查询的答案更新到锚点表示，实现高保真定制生成。实验在新构建的 KnowCusBench 基准上验证了 MoKus 优于现有方法，并可扩展到虚拟概念创建和概念消除等应用。",
+    "tags": ["微调", "VLM"]
+  },
+  {
+    "date": "2026-03-17",
+    "title": "Motivation in Large Language Models",
+    "arxiv_id": "2603.14347",
+    "github": "https://github.com/omer6nahum/motivation_llms",
+    "abstract": "本文探讨大型语言模型（LLMs）是否表现出类似人类动机的行为模式。研究通过实验分析 LLMs 对动机水平的「自我报告」、这些报告与行为的关联，以及外部因素对动机的调节作用。结果揭示出与人类心理学相呼应的一致性结构化模式：自我报告的动机与不同行为特征对齐，随任务类型变化，并可被外部操控调节。这些发现表明，动机是 LLM 行为的一个连贯组织构念，系统性地将报告、选择、努力和表现联系起来，展示出与人类心理学文献中记录相似的动机动态，深化了对模型行为及其与人类启发概念联系的理解。",
+    "tags": []
+  }
+]

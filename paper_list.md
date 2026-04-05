@@ -1866,3 +1866,109 @@
 
 - **Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models** `[RL]` — [2603.24844](https://arxiv.org/abs/2603.24844) | [GitHub](https://github.com/ishapuri/multi_answer_rl)
   > 提出利用强化学习训练语言模型进行分布式推理的框架，解决后训练过程导致模型输出单一众数答案、丢失多样性的问题。现有后训练假设每个问题只有唯一正确答案，但现实任务常存在多个合理解或不可消除的不确定性。作者设计基于 GRPO 的训练目标，使模型在生成样本时覆盖多个有效答案而非坍缩到单一模式，在需要分布推理的任务上显著提升表现。
+
+## 2026年3月30日
+
+- **Lie to Me: How Faithful Is Chain-of-Thought Reasoning in Reasoning Models?** `[无需训练]` `[API]` — [2603.22582](https://arxiv.org/abs/2603.22582) | [GitHub](https://github.com/ricyoung/cot-faithfulness-open-models)
+  > 本文系统评估了开源推理模型中思维链（CoT）的忠实性（Faithfulness）。此前研究仅分析了 Claude 3.7 Sonnet（25%）和 DeepSeek-R1（39%）两个专有模型的提示承认率。本文在 12 个开源推理模型（覆盖 9 个架构家族，参数量从 7B 到 685B）上进行了测试，使用 MMLU 和 GPQA Diamond 的 498 道多选题，注入六类提示（奉承、一致性、视觉模式、元数据、阅卷者破解、不道德信息）。在 41,832 次推理运行中，整体忠实率从 39.7%（Seed-1.6-Flash）到 89.9%（DeepSeek-V3.2-Speciale）不等。关键发现：thinking token 中的承认率（约 87.5%）远高于答案文本的承认率（约 28.6%），表明模型内部识别出提示影响但在输出中系统性地压制了这一点。训练方法与模型家族比参数量更能预测忠实性，该发现对将 CoT 监控作为安全机制的可行性提出了直接质疑。
+
+- **RealChart2Code: Advancing Chart-to-Code Generation with Real Data and Multi-Task Evaluation** `[VLM]` `[API]` — [2603.25804](https://arxiv.org/abs/2603.25804) | [GitHub](https://github.com/Speakn0w/RealChart2Code)
+  > 本文提出 RealChart2Code，一个包含 2,896 个实例的大规模图表转代码评测集，基于真实 Kaggle 数据集构建，聚焦复杂多子图布局场景。与以往依赖合成数据或简单图表的评测集不同，RealChart2Code 涵盖三类任务：图表复现（Chart Replication）、含原始数据的图表重建（Chart Reproduction）和多轮对话式代码修正（Chart Refinement）。本文对 14 个主流 VLM（5 个专有模型、9 个开源模型）进行了全面评测，发现模型在复杂图表结构上的性能相比简单基准显著下降，专有模型与开源模型之间存在明显性能差距，且最先进的 VLM 普遍难以准确复现复杂多子图结构。此外，多轮代码修正任务揭示了模型在迭代改进过程中的系统性瓶颈，为未来 VLM 在数据可视化领域的研究提供了重要方向。
+
+## 2026年3月31日
+
+- **TAPS: Task Aware Proposal Distributions for Speculative Sampling** — [2603.27027](https://arxiv.org/abs/2603.27027) | [GitHub](https://github.com/Moe-Zbeeb/TAPS)
+  > 投机解码通过轻量级草稿模型提出候选token并由大型目标模型并行验证来加速自回归生成。本文研究草稿模型训练分布对投机解码质量的影响：分别在MathInstruct、ShareGPT及混合数据上训练HASS和EAGLE-2草稿模型，并在MT-Bench、GSM8K等基准上评估。结果表明任务专用训练带来明显专业化——数学数据训练的草稿在推理任务表现更好，ShareGPT训练的在MT-Bench更优。混合训练提升鲁棒性，但大型混合不能全面领先。此外，比较了多种草稿组合方式：基于置信度的路由优于单领域草稿，合并树验证获得最高接受长度，且置信度比熵更适合作为路由信号。
+
+- **Gen-Searcher: Reinforcing Agentic Search for Image Generation** `[RL]` `[扩散模型]` — [2603.28767](https://arxiv.org/abs/2603.28767) | [GitHub](https://github.com/tulerfeng/Gen-Searcher)
+  > 现有图像生成模型受限于固定内部知识，在知识密集或需要最新信息的场景下表现不佳。本文提出Gen-Searcher，首个经过训练的搜索增强图像生成智能体，能够进行多跳推理与搜索，收集所需文本知识和参考图像以支持有依据的生成。为此构建了定制数据流水线和两个高质量数据集（Gen-Searcher-SFT-10k和Gen-Searcher-RL-6k），并引入KnowGen综合评测基准。训练方案采用SFT后结合智能体强化学习，使用基于文本和图像的双重奖励进行GRPO训练。实验表明Gen-Searcher在KnowGen上提升Qwen-Image约16分，在WISE上提升15分。
+
+- **Emergent Social Intelligence Risks in Generative Multi-Agent Systems** `[API]` — [2603.27771](https://arxiv.org/abs/2603.27771) | [GitHub](https://github.com/HowieHwong/RiskLab)
+  > 由大型生成模型组成的多智能体系统正从实验室快速走向现实部署，在共同规划、谈判和分配资源时会产生单个智能体无法还原的集体风险。本文率先研究了多种典型工作流（共享资源竞争、序列协作、集体决策聚合等）中出现的涌现多智能体风险。实验发现：在现实的资源约束和通信协议下，类共谋协调和从众等群体行为以非平凡频率出现，且无需任何显式指令即可自发复现人类社会的经典失效模式。这些风险无法仅靠现有的智能体级别安全措施加以防范，揭示了多智能体系统「社会智能风险」这一暗面。
+
+- **ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning** `[VLM]` `[无需训练]` — [2603.28610](https://arxiv.org/abs/2603.28610) | [GitHub](https://github.com/Xnhyacinth/ResAdapt)
+  > 多模态大语言模型（MLLM）通过提高输入分辨率增强视觉理解，但随之而来的视觉token数量增长使同时保持高空间分辨率和长时间上下文变得困难。本文提出ResAdapt，一个输入侧自适应框架，通过轻量级Allocator学习为每帧动态分配视觉预算，同时保持MLLM主干不变。分配策略被形式化为上下文赌博机问题，并以代价感知策略优化（CAPO）进行训练，将稀疏rollout反馈转化为稳定的精度-代价学习信号。ResAdapt在视频QA、时序定位和图像推理任务上改善了低预算工作点，在同等视觉预算下支持最多16倍更多帧数，性能提升超15%。
+
+- **MuSEAgent: A Multimodal Reasoning Agent with Stateful Experiences** `[VLM]` `[MeM]` — [2603.27813](https://arxiv.org/abs/2603.27813) | [GitHub](https://github.com/DeepExperience/MuSEAgent)
+  > MuSEAgent是一种多模态推理智能体，通过引入有状态经验学习范式来增强决策能力。与依赖轨迹级检索不同，它通过事后推理将交互数据抽象为原子决策经验，并组织成质量过滤的经验库，在推理时支持策略驱动的经验检索。MuSEAgent通过互补的广度和深度搜索策略，实现跨多种组合语义视角的自适应多模态引导检索。实验表明，MuSEAgent在细粒度视觉感知和复杂多模态推理任务上均优于强基线，验证了有状态经验建模在提升多模态智能体推理方面的有效性。
+
+- **Density-aware Soft Context Compression with Semi-Dynamic Compression Ratio** `[长文本]` — [2603.25926](https://arxiv.org/abs/2603.25926) | [GitHub](https://github.com/yuyijiong/semi-dynamic-context-compress)
+  > 软上下文压缩通过将长上下文编码为少量latent token来降低LLM处理长上下文的计算量，但现有方法采用统一压缩率，未能考虑自然语言信息密度的极大差异。本文提出半动态上下文压缩框架（Semi-Dynamic Context Compression），引入离散比率选择器，根据内在信息密度预测压缩目标并量化到预定义的离散压缩率集合，配合合成数据联合训练压缩器。以均值池化为主干，大量评测确认本方法相比静态基线一致表现更优，建立了上下文压缩技术的鲁棒Pareto前沿。
+
+- **Training-Free In-Context Segmentation with DINOv3** `[无需训练]` — [2603.28480](https://arxiv.org/abs/2603.28480) | [GitHub](https://github.com/visinf/INSID3)
+  > 上下文分割（ICS）旨在给定一个带标注的视觉示例后，对任意概念（物体、部件或个性化实例）进行分割。现有方案要么需要微调损害泛化性，要么组合多个冻结模型导致架构复杂。本文从极简角度重新审视ICS，提出INSID3——仅使用冻结DINOv3特征、无需任何监督或辅助模型的无训练方案，可在不同粒度上分割概念。INSID3在单样本语义分割、部件分割和个性化分割任务上均达到最先进性能，比以往工作提升+7.5% mIoU，参数量减少3倍，且无需任何掩码或类别监督。
+
+- **HandX: Scaling Bimanual Motion and Interaction Generation** `[扩散模型]` — [2603.28766](https://arxiv.org/abs/2603.28766) | [GitHub](https://github.com/handx-project/HandX)
+  > 人类运动合成发展迅速，但逼真的手部运动和双手交互仍被忽视。全身模型往往忽略驱动灵巧行为的精细线索（手指关节、接触时序和双手协调），现有资源缺乏高保真双手序列。本文提出HandX，一个覆盖数据、标注和评测的统一基础设施：整合并过滤现有数据集，采集新的动作捕捉数据集，并引入解耦标注策略，利用LLM推理生成语义丰富的细粒度描述。基于此对扩散和自回归模型进行了多条件模式的基准测试，实验显示清晰的规模化趋势：更大模型在更大、更高质量数据集上训练后能生成更语义连贯的双手运动。
+
+## 2026年4月1日
+
+- **FIPO: Eliciting Deep Reasoning with Future-KL Influenced Policy Optimization** `[RL]` — [2603.19835](https://arxiv.org/abs/2603.19835) | [GitHub](https://github.com/qwenpilot/FIPO)
+  > 提出 FIPO，一种强化学习算法，通过将折扣未来 KL 散度引入策略更新，实现对 LLM 推理能力的密集优势函数构建。针对 GRPO 等算法中粗粒度 credit assignment 的局限，FIPO 根据每个 token 对后续轨迹的影响重新加权，打破了思维链长度停滞瓶颈。在 Qwen2.5-32B 上，平均 CoT 长度从约 4000 提升至超 10000 tokens，AIME 2024 Pass@1 从 50.0% 提升至峰值 58.0%，超越 DeepSeek-R1-Zero-32B 和 o1-mini。代码基于 verl 框架开源。
+
+- **GEMS: Agent-Native Multimodal Generation with Memory and Skills** `[无需训练]` — [2603.28088](https://arxiv.org/abs/2603.28088) | [GitHub](https://github.com/lcqysl/GEMS)
+  > 提出 GEMS 框架，受 Claude Code 等 agent 范式启发，将多模态生成任务升级为 agent 原生架构。核心包含三个模块：Agent Loop（多智能体闭环优化）、Agent Memory（层次化持久记忆，存储事实状态与压缩经验摘要）、Agent Skill（按需加载的领域专家技能集合）。在 5 项主流任务和 4 项下游任务上均取得显著提升，使轻量 6B 模型 Z-Image-Turbo 在 GenEval2 上超越 SOTA Nano Banana 2。
+
+- **A Dual-Stream Diffusion Transformer for High-Fidelity Multimodal Face Generation** `[扩散模型]` — [2603.29029](https://arxiv.org/abs/2603.29029) | [GitHub](https://github.com/Bharath-K3/MMFace-DiT)
+  > 提出 MMFace-DiT，一种双流扩散 Transformer，用于高保真多模态人脸生成。通过独立的 Diffusion 流和 Flow 流分别处理不同模态信息，实现细粒度的人脸属性控制与高质量图像生成。模型在多模态条件下能保持强烈的身份一致性与细节保真度，为个性化人脸生成和可控肖像合成提供了新框架。
+
+- **Multi-Patch Global-to-Local Transformer Architecture For Efficient Flow Matching and Diffusion Model** `[扩散模型]` — [2603.26357](https://arxiv.org/abs/2603.26357) | [GitHub](https://github.com/quandao10/MPDiT)
+  > 提出 MPDiT，一种多粒度 patch 的 Transformer 架构，用于高效扩散模型训练。早期层使用大 patch 捕获全局语义，后期层切换为小 patch 精炼局部细节，形成层次化设计，在保持生成质量的同时将 GFLOPs 降低达 50%。同时提出改进的时间步与类别嵌入设计以加速训练收敛。在 ImageNet 上验证了架构的有效性，已被 CVPR 2026 收录。
+
+- **Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data** `[微调]` — [2603.17191](https://arxiv.org/abs/2603.17191) | [GitHub](https://github.com/sophie-kearney/TAP-GPT)
+  > 提出 TAP-GPT，基于 TableGPT2 微调的表格专用 LLM，用于少样本阿尔茨海默症预测。使用 tabular prompt（而非纯文本）输入多模态生物标志物数据，在 ADNI 衍生的四个数据集（QT-PAD、结构 MRI、淀粉样 PET、tau PET）上评估。少样本场景下优于传统 ML 基线，并与通用 LLM 性能相当。模型产生结构化、模态感知的推理，在高维输入和数据缺失场景下也能保持稳定性能。
+
+- **A Duet of Periodicity and Directionality for Burst Flicker Removal** — [2603.22794](https://arxiv.org/abs/2603.22794) | [GitHub](https://github.com/qulishen/Flickerformer)
+  > 提出 Flickerformer，一种基于 Transformer 的闪烁伪影去除网络。通过揭示闪烁的两大固有特性——周期性与方向性，设计三个核心模块：相位融合模块（PFM）利用帧间相位相关聚合多帧特征；自相关前馈网络（AFFN）挖掘帧内结构规律；小波方向注意力模块（WDAM）利用小波域高频信息精确定位闪烁区域。在定量指标和视觉质量上均超越 SOTA，已被 CVPR 2026 收录。
+
+## 2026年4月2日
+
+- **ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers** — [2603.24414](https://arxiv.org/abs/2603.24414) | [GitHub](https://github.com/SafeAI-Lab-X/ClawKeeper)
+  > ClawKeeper 是针对 OpenClaw 开源 Agent 运行时的综合安全框架，填补了现有安全措施碎片化的空白。框架分为三层：（1）基于 Skill 的指令级保护，直接向 Agent 上下文注入安全策略；（2）基于 Plugin 的运行时防护，提供配置加固、威胁检测和行为监控；（3）基于 Watcher 的系统级安全中间件，在不耦合 Agent 内部逻辑的前提下，支持实时拦截高风险操作或强制人工确认。作者认为 Watcher 范式可作为下一代 Agent 安全的基础组件。实验在多种威胁场景下验证了 ClawKeeper 的有效性和鲁棒性，代码已开源。
+
+- **Brevity Constraints Reverse Performance Hierarchies in Language Models** `[无需训练]` `[API]` — [2604.00025](https://arxiv.org/abs/2604.00025) | [GitHub](https://github.com/logicsame/Brevity-Constraints-Reverse-Performance-Hierarchies-in-Language-Models)
+  > 本文发现了一个反直觉现象：在5个数据集的7.7%问题上，大模型的表现比小模型低28.4个百分点。通过对31个模型（0.5B-405B参数）系统评估，研究者识别出根本原因是大模型的「过度冗长」倾向——大模型倾向于过度阐述而引入错误。因果干预实验表明，对大模型施加简洁约束可将准确率提升26个百分点，并在数学推理和科学知识任务上将性能差距缩小三分之二，甚至完全逆转排名。结果表明大模型具有更强的隐藏能力，通用提示方式掩盖了这一能力，应采用规模感知的提示工程策略。
+
+- **Paper Reconstruction Evaluation: Evaluating Presentation and Hallucination in AI-written Papers** `[API]` — [2604.01128](https://arxiv.org/abs/2604.01128) | [GitHub](https://github.com/Agent4Science-UTokyo/PaperRecon)
+  > 本文提出 PaperRecon，首个系统量化 AI 写作论文质量与风险的评估框架。方法是从已有论文生成概要（overview.md），让 Agent 基于概要和最少资源重写论文，再将结果与原文对比。框架将评估解耦为两个维度：Presentation（呈现质量，基于评分标准）和 Hallucination（幻觉率，通过 Agent 对照原文评估）。实验使用 PaperWrite-Bench（51篇顶会论文）发现：ClaudeCode 表现质量更高但每篇论文平均超过10处幻觉，Codex 幻觉较少但质量较低，两者存在明确的权衡关系。
+
+- **Do Phone-Use Agents Respect Your Privacy?** — [2604.00986](https://arxiv.org/abs/2604.00986) | [GitHub](https://github.com/FreedomIntelligence/MyPhoneBench)
+  > 本文研究手机 Agent 在完成正常任务时是否尊重隐私。研究者提出 MyPhoneBench，一个可验证的移动 Agent 隐私行为评估框架，将隐私遵守操作化为「授权访问、最小披露、用户控制记忆」三原则（iMy 隐私合约），并配备模拟 App 和基于规则的审计工具。在5个前沿模型、10款手机应用、300个任务上的实验表明：任务成功率、隐私合规完成率和偏好记忆应用三项能力相互独立，无单一模型全面优秀；最普遍的失败模式是数据最小化——Agent 填写了任务不需要的个人信息字段。结果显示当前 Agent 部署准备不足。
+
+- **S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models** `[微调]` — [2604.01168](https://arxiv.org/abs/2604.01168) | [GitHub](https://github.com/JackYoung27/s0-tuning)
+  > 本文提出 S0 Tuning，一种针对混合递归-注意力模型的零推理开销参数高效微调方法。方法仅优化每个递归层的初始状态矩阵，冻结全部模型权重。使用约48个 HumanEval 训练样本，S0 Tuning 在 HumanEval 上超越 LoRA 10.8个百分点（p<0.001）；在 Qwen3.5-4B 上提升23.6个百分点；在 MATH-500 和 GSM8K 上表现出显著的跨域迁移能力。纯 Transformer 的前缀调优控制实验性能下降，说明该方法专属于具有递归状态的混合架构。调优后的状态文件仅48MB，切换任务无需合并权重。
+
+- **PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding** `[无需训练]` — [2604.00886](https://arxiv.org/abs/2604.00886) | [GitHub](https://github.com/OPPO-Mente-Lab/PixelPrune)
+  > PixelPrune 是一种基于预测编码的视觉 Token 无损压缩方法，专为文档理解和 GUI 交互等高分辨率 VLM 场景设计。研究发现文档和 GUI 图像中22~71%的 patch 与其他 patch 完全重复，PixelPrune 在像素空间（ViT 编码前）利用这一冗余进行预测编码压缩，同步加速 ViT 编码器和下游 LLM 的全推理流程。该方法无需训练、无可学习参数，支持无损压缩（τ=0）和可控有损压缩（τ>0）。在三种模型规模、多个文档和 GUI 基准上，PixelPrune 保持竞争性任务准确率的同时，实现最高4.2倍推理加速和1.9倍训练加速。
+
+- **AgentWatcher: A Rule-based Prompt Injection Monitor** — [2604.01194](https://arxiv.org/abs/2604.01194) | [GitHub](https://github.com/Wang-Yanting/AgentWatcher)
+  > AgentWatcher 针对 LLM Agent 的提示注入攻击提出了两项改进：（1）通过因果归因将 Agent 输出关联到少量关键上下文片段，使检测可扩展至长上下文，解决现有方法随上下文增长性能下降的问题；（2）明确定义提示注入的判定规则集，由监控 LLM 基于归因文本对规则进行推理，使检测决策更可解释、透明。在工具调用 Agent 基准和长上下文理解数据集上的实验表明，AgentWatcher 能有效检测提示注入攻击，同时在无攻击场景下维持正常功能，代码已开源。
+
+- **AI Generalisation Gap In Comorbid Sleep Disorder Staging** `[微调]` — [2603.23582](https://arxiv.org/abs/2603.23582) | [GitHub](https://github.com/HimalayanSaswataBose/iSLEEPS_GeneralisationGapAndExplainability)
+  > 本文研究深度学习睡眠分期模型在合并症患者（脑卒中）群体中的泛化差距问题。研究使用 SE-ResNet + 双向 LSTM 模型在单通道 EEG 数据上进行睡眠分期，引入新的临床标注数据集 iSLEEPS（缺血性脑卒中患者，计划公开）。通过 Grad-CAM 可解释性分析发现，模型在患者数据上关注了生理无意义的 EEG 区域。统计和计算分析进一步确认健康人群与脑卒中患者之间睡眠架构存在显著差异，表明跨域性能差的根本原因在于睡眠模式的本质差异，强调需要面向特定疾病的患者感知模型才能实现安全部署。
+
+## 2026年4月3日
+
+- **DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models** `[微调]` — [2603.26164](https://arxiv.org/abs/2603.26164) | [GitHub](https://github.com/OpenDCAI/DataFlex)
+  > DataFlex 是一个基于 LLaMA-Factory 的统一数据驱动动态训练框架，旨在将数据提升为训练中的一等优化变量。它支持三种主要训练范式：动态样本选择、数据域混合优化和样本重加权，并与原有 LLaMA-Factory 工作流完全兼容。框架通过模块化的 Trainer 抽象（SelectTrainer、MixTrainer、WeightTrainer）和可插拔算法组件，统一了 LESS、NICE、DoReMi、ODM 等多种方法的接口，极大降低了算法集成成本。此外，DataFlex 统一管理嵌入提取、模型推理和梯度计算等操作，支持 DeepSpeed ZeRO-3 大规模训练场景。实验证明，动态数据方法在 MMLU 上相比静态全数据训练持续领先，是可复现数据驱动 LLM 训练研究的实用基础设施。
+
+- **Skill0: In-Context Agentic Reinforcement Learning for Skill Internalization** `[RL]` `[微调]` — [2604.02268](https://arxiv.org/abs/2604.02268) | [GitHub](https://github.com/ZJU-REAL/SkillZero)
+  > Skill0 是首个将技能内化作为显式训练目标的强化学习框架，旨在让 LLM 智能体在推理时无需外部技能检索即可实现零样本自主行为。核心机制为上下文内强化学习（ICRL）：训练时将技能作为上下文指导，推理时完全移除，驱动技能从上下文依赖转移至模型参数中。动态课程机制（Dynamic Curriculum）通过评估每个技能文件对当前策略的有益程度，自适应地缩减技能预算，直至智能体完全零样本运行。实验表明，Skill0 相比 AgentOCR 基线在 ALFWorld 上提升 +9.7%，在 Search-QA 上提升 +6.6%，同时每步上下文开销低于 0.5k tokens，训练效率大幅优于文本增强方法。
+
+- **Steerable Visual Representations** `[VLM]` `[无需训练]` — [2604.02327](https://arxiv.org/abs/2604.02327) | [GitHub](https://github.com/manugaurdl/SteerViT)
+  > 本文提出 Steerable Visual Representations，一类可通过自然语言引导的视觉特征表示，解决预训练视觉模型（如 DINOv2）只关注图像显著区域、无法聚焦用户感兴趣概念的问题。与 CLIP 等晚期融合方案不同，该方法通过轻量级跨注意力机制将文本直接注入视觉编码器各层（早期融合），实现全局和局部特征的语言引导。作者引入新的可引导性评估基准，验证该方法在目标聚焦和表示质量之间的有效权衡，并在异常检测和个性化对象识别任务上与专用方法持平或超越，同时展示对分布外任务的零样本泛化能力。
+
+- **CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery** `[RL]` — [2604.01658](https://arxiv.org/abs/2604.01658) | [GitHub](https://github.com/Human-Agent-Society/CORAL)
+  > CORAL 是首个面向开放性问题的自主多智能体进化框架，取代了现有方法依赖固定启发式和硬编码探索规则的局限。系统通过共享持久记忆、异步多智能体执行和心跳干预机制，实现长期运行智能体的探索、反思与协作。并提供隔离工作区、评估器分离、资源管理等实际安全保障。在数学、算法和系统优化等多样任务上，CORAL 在 10 个任务上达到新最优，以远少于固定进化搜索基线的评估次数实现 3-10 倍更高的改进速率。
+
+- **NearID: Identity Representation Learning via Near-identity Distractors** `[微调]` — [2604.01973](https://arxiv.org/abs/2604.01973) | [GitHub](https://github.com/Gorluxor/NearID)
+  > NearID 提出了一套原则性框架，解决现有视觉编码器在身份感知任务（如个性化生成、图像编辑）中因背景上下文干扰导致身份特征不可靠的问题。核心思想是构建「近似身份干扰样本」（NearID distractors）：语义相似但身份不同的实例置于与参考图像完全相同的背景下，消除上下文捷径，使身份成为唯一判别信号。基于此原则构建了含 19K 身份、316K 匹配上下文干扰样本的数据集，并设计严格的基于边际的评估协议（SSR 指标）。通过在冻结骨干网络上进行两层对比学习，SSR 从 30.7% 提升至 99.2%，部分级别判别力提升 28%，并在 DreamBench++ 上与人类判断对齐更好。
+
+- **Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory** `[MeM]` `[VLM]` — [2604.01007](https://arxiv.org/abs/2604.01007) | [GitHub](https://github.com/aiming-lab/SimpleMem)
+  > Omni-SimpleMem 是通过自主研究流水线发现的统一多模态终身记忆框架，解决 AI 智能体在扩展时间跨度内保留、组织和检索多模态经验的核心瓶颈。系统部署自主研究流水线在两个基准上自主执行约 50 次实验，无需人工干预地诊断失败模式、提出架构修改并修复数据管道缺陷。最终系统在 LoCoMo 上将 F1 从 0.117 提升至 0.598（+411%），在 Mem-Gallery 上从 0.254 提升至 0.797（+214%）。值得注意的是，影响最大的发现并非超参数调整，而是 bug 修复（+175%）、架构改进（+44%）和提示词工程（+188%）。
+
+- **ASI-Evolve: AI Accelerates AI** `[RL]` — [2603.29640](https://arxiv.org/abs/2603.29640) | [GitHub](https://github.com/GAIR-NLP/ASI-Evolve)
+  > ASI-Evolve 是一个 AI 加速 AI 研究的 Agent 框架，通过「学习-设计-实验-分析」闭环驱动 AI 研究自动化。框架引入认知库（cognition base）将人类积累的先验知识注入每轮探索，并通过专用分析器将复杂实验结果提炼为可复用洞见。ASI-Evolve 是首个在数据、架构和学习算法三个核心 AI 开发组件上均展示 AI 驱动发现的统一框架：在神经架构设计中发现 105 个 SOTA 线性注意力架构；在预训练数据策划中平均基准性能提升 +3.96 分；在 RL 算法设计中发现的算法在 AMC32 上超越 GRPO 达 +12.5 分。
+
+- **Gated Condition Injection without Multimodal Attention: Towards Controllable Linear-Attention Transformers** `[扩散模型]` — [2603.27666](https://arxiv.org/abs/2603.27666) | [GitHub](https://github.com/Carol-lyh/GateControl)
+  > 本文针对线性注意力架构的扩散模型提出可控生成框架，以解决现有 ControlNet、OminiControl 等方案对线性注意力模型不兼容或收敛慢的问题。核心贡献是统一的门控条件注入模块，采用双路径流水线设计，有效整合空间对齐和非对齐等多类型条件输入，适配 SANA 等线性注意力骨干。相比基于 Softmax 注意力的方案，该方法在边缘设备上具有更优的可扩展性和效率，在多任务和多基准上达到线性注意力模型的最优可控生成性能。

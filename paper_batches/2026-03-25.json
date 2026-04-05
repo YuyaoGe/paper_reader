@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-03-25",
+    "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
+    "arxiv_id": "2603.22458",
+    "github": "https://github.com/opendatalab/MinerU-Diffusion",
+    "abstract": "MinerU-Diffusion 从逆渲染视角重新审视文档OCR任务，提出用并行扩散去噪替代自回归顺序解码。核心观点是：从左到右的因果生成是序列化带来的产物，而非任务的本质属性。论文设计了块式扩散解码器（block-wise diffusion decoder）和不确定性驱动的课程学习策略，以确保训练稳定性与长序列推理效率。方法统一处理文档版式、表格、公式等结构化内容。实验表明，与自回归基线相比，MinerU-Diffusion在保持鲁棒性的同时实现最高3.2倍的解码加速。在自建Semantic Shuffle基准上的评测也证实，其对语言先验的依赖更少、纯视觉OCR能力更强。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+    "arxiv_id": "2603.23483",
+    "github": "https://github.com/MAC-AutoML/SpecEyes",
+    "abstract": "SpecEyes 针对智能体多模态大语言模型（如OpenAI o3、Gemini Agentic Vision）的「智能体深度」瓶颈问题，提出了推测加速框架。核心思路：用轻量级无工具MLLM作为推测规划器，提前预测执行轨迹，从而实现对昂贵工具调用链的提前终止。引入基于答案可分性（answer separability）的认知门控机制，无需oracle标签即可量化模型置信度。此外，设计了异构并行漏斗结构，利用小模型的无状态并发能力掩盖大模型的有状态串行执行，最大化系统吞吐量。在V* Bench、HR-Bench、POPE上的实验表明，SpecEyes相比智能体基线实现1.1至3.35倍加速，同时精度持平甚至提升（最高+6.7%）。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "Rethinking Token-Level Policy Optimization for Multimodal Chain-of-Thought",
+    "arxiv_id": "2603.22847",
+    "github": "https://github.com/xzxxntxdy/PEPO",
+    "abstract": "PEPO（感知-探索策略优化）针对多模态推理链（CoT）中现有RLVR方法粒度过粗的问题，通过token级分析揭示成功推理具有结构化的token动态，反映感知接地与探索性推理两类特征。方法从隐状态相似性中提取感知先验，并通过平滑门控机制与token熵结合，生成token级优势估计。PEPO可无缝接入GRPO、DAPO等现有RLVR框架，无需额外监督或辅助分支。在几何推理、视觉接地、视觉谜题求解、少样本分类等多模态任务上，PEPO相比强RL基线展现了一致且稳健的性能提升，同时保持训练动态稳定。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "AgentSLR: Automating Systematic Literature Reviews in Epidemiology with Agentic AI",
+    "arxiv_id": "2603.22327",
+    "github": "https://github.com/oxrml/agentslr",
+    "abstract": "AgentSLR 研究是否可以用大语言模型自动化完整的系统性文献综述（SLR）工作流，涵盖文章检索、筛选、数据提取和报告综合四大环节。针对WHO指定的九种优先病原体的流行病学综述进行评测，与专家人工标注的基准对比。开源智能体流水线在达到人类研究者同等性能的同时，将综述时间从约7周缩短至20小时（加速58倍）。研究还比较了五种前沿大模型，发现SLR性能的驱动因素更多在于模型独特能力而非规模或推理成本。通过人机协作验证识别出关键失败模式。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "CanViT: Toward Active-Vision Foundation Models",
+    "arxiv_id": "2603.22570",
+    "github": "https://github.com/m2b3/CanViT-PyTorch",
+    "abstract": "CanViT 是首个任务无关、策略无关的主动视觉基础模型（AVFM）。模型采用视网膜中心RoPE绑定视觉Transformer主干（负责局部瞥视处理）与空间场景级潜在工作区（canvas），并引入Canvas Attention（非对称交叉注意力机制）实现高效工作记忆交互。通过解耦「思考」与「记忆」层级，消除canvas侧的自注意力和全连接层，实现低延迟序列推理和大场景可扩展性。提出标签无关的主动视觉预训练方案，在1.32千万ImageNet-21k图像和10亿随机瞥视上预训练。在ADE20K分割任务上，单次低分辨率瞥视达38.5% mIoU，优于最佳主动模型27.6%，且推理FLOPs减少19.5倍；多次瞥视后达45.9% mIoU。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-25",
+    "title": "One View Is Enough! Monocular Training for In-the-Wild Novel View Generation",
+    "arxiv_id": "2603.23488",
+    "github": "https://github.com/AdrienRR/ovie",
+    "abstract": "OVIE 完全基于非配对互联网图像训练，实现单目新视角合成，无需多视图图像对监督。核心思路：利用单目深度估计器作为几何支撑，将源图像提升至3D并采样相机变换后投影得到伪目标视图；引入遮罩训练公式，将几何、感知和纹理损失限制在有效区域以处理遮挡，支持在3000万张未经筛选的图像上训练。推理时完全无需深度估计器或3D表示（geometry-free）。在零样本设置下，OVIE超越现有方法，速度比第二名快600倍。实验证明单视图训练的有效性，打破了多视图监督的传统范式。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "Uncertainty-guided Compositional Alignment with Part-to-Whole Semantic Representativeness in Hyperbolic Vision-Language Models",
+    "arxiv_id": "2603.22042",
+    "github": "https://github.com/jeeit17/UNCHA",
+    "abstract": "UNCHA（不确定性引导的组合双曲对齐）旨在提升双曲视觉语言模型对层次化结构和多目标组合场景的建模能力。现有双曲VLM通过蕴含关系保留部分-整体层次，但未考虑各部分对整体的语义代表性差异。UNCHA用双曲不确定性建模部分语义代表性：代表性强的部分被赋予更低不确定性，反之更高。这种代表性以不确定性引导权重融入对比目标，并通过基于熵的正则化蕴含损失进一步校准。UNCHA在零样本分类、检索和多标签分类任务上均达到最优性能，有效提升了模型对复杂多目标场景的组合理解能力。",
+    "tags": ["VLM", "微调"]
+  }
+]

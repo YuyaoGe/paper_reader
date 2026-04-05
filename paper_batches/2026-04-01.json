@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-04-01",
+    "title": "FIPO: Eliciting Deep Reasoning with Future-KL Influenced Policy Optimization",
+    "arxiv_id": "2603.19835",
+    "github": "https://github.com/qwenpilot/FIPO",
+    "abstract": "提出 FIPO，一种强化学习算法，通过将折扣未来 KL 散度引入策略更新，实现对 LLM 推理能力的密集优势函数构建。针对 GRPO 等算法中粗粒度 credit assignment 的局限，FIPO 根据每个 token 对后续轨迹的影响重新加权，打破了思维链长度停滞瓶颈。在 Qwen2.5-32B 上，平均 CoT 长度从约 4000 提升至超 10000 tokens，AIME 2024 Pass@1 从 50.0% 提升至峰值 58.0%，超越 DeepSeek-R1-Zero-32B 和 o1-mini。代码基于 verl 框架开源。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-04-01",
+    "title": "GEMS: Agent-Native Multimodal Generation with Memory and Skills",
+    "arxiv_id": "2603.28088",
+    "github": "https://github.com/lcqysl/GEMS",
+    "abstract": "提出 GEMS 框架，受 Claude Code 等 agent 范式启发，将多模态生成任务升级为 agent 原生架构。核心包含三个模块：Agent Loop（多智能体闭环优化）、Agent Memory（层次化持久记忆，存储事实状态与压缩经验摘要）、Agent Skill（按需加载的领域专家技能集合）。在 5 项主流任务和 4 项下游任务上均取得显著提升，使轻量 6B 模型 Z-Image-Turbo 在 GenEval2 上超越 SOTA Nano Banana 2。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-04-01",
+    "title": "A Dual-Stream Diffusion Transformer for High-Fidelity Multimodal Face Generation",
+    "arxiv_id": "2603.29029",
+    "github": "https://github.com/Bharath-K3/MMFace-DiT",
+    "abstract": "提出 MMFace-DiT，一种双流扩散 Transformer，用于高保真多模态人脸生成。通过独立的 Diffusion 流和 Flow 流分别处理不同模态信息，实现细粒度的人脸属性控制与高质量图像生成。模型在多模态条件下能保持强烈的身份一致性与细节保真度，为个性化人脸生成和可控肖像合成提供了新框架。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-04-01",
+    "title": "Multi-Patch Global-to-Local Transformer Architecture For Efficient Flow Matching and Diffusion Model",
+    "arxiv_id": "2603.26357",
+    "github": "https://github.com/quandao10/MPDiT",
+    "abstract": "提出 MPDiT，一种多粒度 patch 的 Transformer 架构，用于高效扩散模型训练。早期层使用大 patch 捕获全局语义，后期层切换为小 patch 精炼局部细节，形成层次化设计，在保持生成质量的同时将 GFLOPs 降低达 50%。同时提出改进的时间步与类别嵌入设计以加速训练收敛。在 ImageNet 上验证了架构的有效性，已被 CVPR 2026 收录。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-04-01",
+    "title": "Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data",
+    "arxiv_id": "2603.17191",
+    "github": "https://github.com/sophie-kearney/TAP-GPT",
+    "abstract": "提出 TAP-GPT，基于 TableGPT2 微调的表格专用 LLM，用于少样本阿尔茨海默症预测。使用 tabular prompt（而非纯文本）输入多模态生物标志物数据，在 ADNI 衍生的四个数据集（QT-PAD、结构 MRI、淀粉样 PET、tau PET）上评估。少样本场景下优于传统 ML 基线，并与通用 LLM 性能相当。模型产生结构化、模态感知的推理，在高维输入和数据缺失场景下也能保持稳定性能。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-04-01",
+    "title": "A Duet of Periodicity and Directionality for Burst Flicker Removal",
+    "arxiv_id": "2603.22794",
+    "github": "https://github.com/qulishen/Flickerformer",
+    "abstract": "提出 Flickerformer，一种基于 Transformer 的闪烁伪影去除网络。通过揭示闪烁的两大固有特性——周期性与方向性，设计三个核心模块：相位融合模块（PFM）利用帧间相位相关聚合多帧特征；自相关前馈网络（AFFN）挖掘帧内结构规律；小波方向注意力模块（WDAM）利用小波域高频信息精确定位闪烁区域。在定量指标和视觉质量上均超越 SOTA，已被 CVPR 2026 收录。",
+    "tags": []
+  }
+]

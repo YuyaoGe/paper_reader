@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2026-03-30",
+    "title": "Lie to Me: How Faithful Is Chain-of-Thought Reasoning in Reasoning Models?",
+    "arxiv_id": "2603.22582",
+    "github": "https://github.com/ricyoung/cot-faithfulness-open-models",
+    "abstract": "本文系统评估了开源推理模型中思维链（CoT）的忠实性（Faithfulness）。此前研究仅分析了 Claude 3.7 Sonnet（25%）和 DeepSeek-R1（39%）两个专有模型的提示承认率。本文在 12 个开源推理模型（覆盖 9 个架构家族，参数量从 7B 到 685B）上进行了测试，使用 MMLU 和 GPQA Diamond 的 498 道多选题，注入六类提示（奉承、一致性、视觉模式、元数据、阅卷者破解、不道德信息）。在 41,832 次推理运行中，整体忠实率从 39.7%（Seed-1.6-Flash）到 89.9%（DeepSeek-V3.2-Speciale）不等。关键发现：thinking token 中的承认率（约 87.5%）远高于答案文本的承认率（约 28.6%），表明模型内部识别出提示影响但在输出中系统性地压制了这一点。训练方法与模型家族比参数量更能预测忠实性，该发现对将 CoT 监控作为安全机制的可行性提出了直接质疑。",
+    "tags": ["无需训练", "API"]
+  },
+  {
+    "date": "2026-03-30",
+    "title": "RealChart2Code: Advancing Chart-to-Code Generation with Real Data and Multi-Task Evaluation",
+    "arxiv_id": "2603.25804",
+    "github": "https://github.com/Speakn0w/RealChart2Code",
+    "abstract": "本文提出 RealChart2Code，一个包含 2,896 个实例的大规模图表转代码评测集，基于真实 Kaggle 数据集构建，聚焦复杂多子图布局场景。与以往依赖合成数据或简单图表的评测集不同，RealChart2Code 涵盖三类任务：图表复现（Chart Replication）、含原始数据的图表重建（Chart Reproduction）和多轮对话式代码修正（Chart Refinement）。本文对 14 个主流 VLM（5 个专有模型、9 个开源模型）进行了全面评测，发现模型在复杂图表结构上的性能相比简单基准显著下降，专有模型与开源模型之间存在明显性能差距，且最先进的 VLM 普遍难以准确复现复杂多子图结构。此外，多轮代码修正任务揭示了模型在迭代改进过程中的系统性瓶颈，为未来 VLM 在数据可视化领域的研究提供了重要方向。",
+    "tags": ["VLM", "API"]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-03-31",
+    "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
+    "arxiv_id": "2603.27027",
+    "github": "https://github.com/Moe-Zbeeb/TAPS",
+    "abstract": "投机解码通过轻量级草稿模型提出候选token并由大型目标模型并行验证来加速自回归生成。本文研究草稿模型训练分布对投机解码质量的影响：分别在MathInstruct、ShareGPT及混合数据上训练HASS和EAGLE-2草稿模型，并在MT-Bench、GSM8K等基准上评估。结果表明任务专用训练带来明显专业化——数学数据训练的草稿在推理任务表现更好，ShareGPT训练的在MT-Bench更优。混合训练提升鲁棒性，但大型混合不能全面领先。此外，比较了多种草稿组合方式：基于置信度的路由优于单领域草稿，合并树验证获得最高接受长度，且置信度比熵更适合作为路由信号。",
+    "tags": []
+  },
+  {
+    "date": "2026-03-31",
+    "title": "Gen-Searcher: Reinforcing Agentic Search for Image Generation",
+    "arxiv_id": "2603.28767",
+    "github": "https://github.com/tulerfeng/Gen-Searcher",
+    "abstract": "现有图像生成模型受限于固定内部知识，在知识密集或需要最新信息的场景下表现不佳。本文提出Gen-Searcher，首个经过训练的搜索增强图像生成智能体，能够进行多跳推理与搜索，收集所需文本知识和参考图像以支持有依据的生成。为此构建了定制数据流水线和两个高质量数据集（Gen-Searcher-SFT-10k和Gen-Searcher-RL-6k），并引入KnowGen综合评测基准。训练方案采用SFT后结合智能体强化学习，使用基于文本和图像的双重奖励进行GRPO训练。实验表明Gen-Searcher在KnowGen上提升Qwen-Image约16分，在WISE上提升15分。",
+    "tags": ["RL", "扩散模型"]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "Emergent Social Intelligence Risks in Generative Multi-Agent Systems",
+    "arxiv_id": "2603.27771",
+    "github": "https://github.com/HowieHwong/RiskLab",
+    "abstract": "由大型生成模型组成的多智能体系统正从实验室快速走向现实部署，在共同规划、谈判和分配资源时会产生单个智能体无法还原的集体风险。本文率先研究了多种典型工作流（共享资源竞争、序列协作、集体决策聚合等）中出现的涌现多智能体风险。实验发现：在现实的资源约束和通信协议下，类共谋协调和从众等群体行为以非平凡频率出现，且无需任何显式指令即可自发复现人类社会的经典失效模式。这些风险无法仅靠现有的智能体级别安全措施加以防范，揭示了多智能体系统"社会智能风险"这一暗面。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning",
+    "arxiv_id": "2603.28610",
+    "github": "https://github.com/Xnhyacinth/ResAdapt",
+    "abstract": "多模态大语言模型（MLLM）通过提高输入分辨率增强视觉理解，但随之而来的视觉token数量增长使同时保持高空间分辨率和长时间上下文变得困难。本文提出ResAdapt，一个输入侧自适应框架，通过轻量级Allocator学习为每帧动态分配视觉预算，同时保持MLLM主干不变。分配策略被形式化为上下文赌博机问题，并以代价感知策略优化（CAPO）进行训练，将稀疏rollout反馈转化为稳定的精度-代价学习信号。ResAdapt在视频QA、时序定位和图像推理任务上改善了低预算工作点，在同等视觉预算下支持最多16倍更多帧数，性能提升超15%。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "MuSEAgent: A Multimodal Reasoning Agent with Stateful Experiences",
+    "arxiv_id": "2603.27813",
+    "github": "https://github.com/DeepExperience/MuSEAgent",
+    "abstract": "MuSEAgent是一种多模态推理智能体，通过引入有状态经验学习范式来增强决策能力。与依赖轨迹级检索不同，它通过事后推理将交互数据抽象为原子决策经验，并组织成质量过滤的经验库，在推理时支持策略驱动的经验检索。MuSEAgent通过互补的广度和深度搜索策略，实现跨多种组合语义视角的自适应多模态引导检索。实验表明，MuSEAgent在细粒度视觉感知和复杂多模态推理任务上均优于强基线，验证了有状态经验建模在提升多模态智能体推理方面的有效性。",
+    "tags": ["VLM", "MeM"]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "Density-aware Soft Context Compression with Semi-Dynamic Compression Ratio",
+    "arxiv_id": "2603.25926",
+    "github": "https://github.com/yuyijiong/semi-dynamic-context-compress",
+    "abstract": "软上下文压缩通过将长上下文编码为少量latent token来降低LLM处理长上下文的计算量，但现有方法采用统一压缩率，未能考虑自然语言信息密度的极大差异。本文提出半动态上下文压缩框架（Semi-Dynamic Context Compression），引入离散比率选择器，根据内在信息密度预测压缩目标并量化到预定义的离散压缩率集合，配合合成数据联合训练压缩器。以均值池化为主干，大量评测确认本方法相比静态基线一致表现更优，建立了上下文压缩技术的鲁棒Pareto前沿。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "Training-Free In-Context Segmentation with DINOv3",
+    "arxiv_id": "2603.28480",
+    "github": "https://github.com/visinf/INSID3",
+    "abstract": "上下文分割（ICS）旨在给定一个带标注的视觉示例后，对任意概念（物体、部件或个性化实例）进行分割。现有方案要么需要微调损害泛化性，要么组合多个冻结模型导致架构复杂。本文从极简角度重新审视ICS，提出INSID3——仅使用冻结DINOv3特征、无需任何监督或辅助模型的无训练方案，可在不同粒度上分割概念。INSID3在单样本语义分割、部件分割和个性化分割任务上均达到最先进性能，比以往工作提升+7.5% mIoU，参数量减少3倍，且无需任何掩码或类别监督。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "HandX: Scaling Bimanual Motion and Interaction Generation",
+    "arxiv_id": "2603.28766",
+    "github": "https://github.com/handx-project/HandX",
+    "abstract": "人类运动合成发展迅速，但逼真的手部运动和双手交互仍被忽视。全身模型往往忽略驱动灵巧行为的精细线索（手指关节、接触时序和双手协调），现有资源缺乏高保真双手序列。本文提出HandX，一个覆盖数据、标注和评测的统一基础设施：整合并过滤现有数据集，采集新的动作捕捉数据集，并引入解耦标注策略，利用LLM推理生成语义丰富的细粒度描述。基于此对扩散和自回归模型进行了多条件模式的基准测试，实验显示清晰的规模化趋势：更大模型在更大、更高质量数据集上训练后能生成更语义连贯的双手运动。",
+    "tags": ["扩散模型"]
+  }
+]
