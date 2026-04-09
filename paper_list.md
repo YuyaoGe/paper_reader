@@ -1972,3 +1972,92 @@
 
 - **Gated Condition Injection without Multimodal Attention: Towards Controllable Linear-Attention Transformers** `[扩散模型]` — [2603.27666](https://arxiv.org/abs/2603.27666) | [GitHub](https://github.com/Carol-lyh/GateControl)
   > 本文针对线性注意力架构的扩散模型提出可控生成框架，以解决现有 ControlNet、OminiControl 等方案对线性注意力模型不兼容或收敛慢的问题。核心贡献是统一的门控条件注入模块，采用双路径流水线设计，有效整合空间对齐和非对齐等多类型条件输入，适配 SANA 等线性注意力骨干。相比基于 Softmax 注意力的方案，该方法在边缘设备上具有更优的可扩展性和效率，在多任务和多基准上达到线性注意力模型的最优可控生成性能。
+
+## 2026年4月6日
+
+- **GrandCode: Achieving Grandmaster Level in Competitive Programming via Agentic Reinforcement Learning** `[RL]` — [2604.02721](https://arxiv.org/abs/2604.02721) | [GitHub](https://github.com/deepreinforce-ai/codeforces)
+  > GrandCode是一个面向竞技编程的多智能体强化学习系统，实现了AI在Codeforces真实比赛中持续击败所有人类选手（包括传奇大师）的历史性突破。系统核心有两大创新：其一是协调假设生成、求解、测试生成、摘要等多种智能体模块，通过后训练和在线测试时RL联合优化各模块能力；其二是提出Agentic GRPO算法，专门解决多阶段智能体序列中延迟奖励与严重离策略漂移的挑战。在最近三场Codeforces直播比赛（Round 1087、1088、1089）中，GrandCode全部摘得第一，证明AI系统在竞技编程这一人类最后高地上已实现对最强程序员的超越。
+
+- **Communicating about Space: Language-Mediated Spatial Integration Across Partial Views** `[VLM]` `[API]` — [2603.27183](https://arxiv.org/abs/2603.27183) | [GitHub](https://github.com/ankursikarwar/Cosmic)
+  > 本文提出COSMIC基准，系统测试多模态大语言模型（MLLM）能否通过自然语言对话整合不同视角的局部观测，形成共享的空间心理模型。两个静态MLLM智能体从不同位置观察同一3D室内场景，通过多轮对话协同回答空间查询，包含899个多样场景和1250个问答对，覆盖锚点识别、全局计数、相对距离、相对方向和认知地图五类任务。评估显示MLLM性能随任务层次递减，即便最强模型Gemini-3-Pro-Thinking也仅达72%均值准确率，而人类达95%。研究揭示MLLM在跨视角接地和几何推理上存在根本性缺陷，且无法像人类那样通过对话快速收敛于共享空间模型，为多智能体空间协作研究提供了重要评估平台。
+
+
+## 2026年4月7日
+
+- **TriAttention: Efficient Long Reasoning with Trigonometric KV Compression** `[长文本]` `[无需训练]` — [2604.04921](https://arxiv.org/abs/2604.04921) | [GitHub](https://github.com/WeianMao/triattention)
+  > 针对大语言模型长推理场景下KV缓存的内存瓶颈问题，TriAttention提出利用pre-RoPE空间中Q/K向量的集中分布特性来估计键的重要性。研究发现Q/K向量在固定非零中心附近高度集中，且在不同位置保持稳定，这导致查询对特定距离的键产生偏好，形成三角级数规律。TriAttention利用这一规律，通过向量中心刻画的距离偏好对键进行评分，并结合Q/K范数作为额外信号。在AIME25上使用32K token生成时，TriAttention在匹配完整注意力推理精度的同时实现2.5倍更高吞吐量或10.7倍KV内存减少，而主流基线在相同效率下仅达到约一半精度。该方法使长上下文大模型可在单个消费级GPU上部署。
+
+- **FileGram: Grounding Agent Personalization in File-System Behavioral Traces** `[MeM]` — [2604.04901](https://arxiv.org/abs/2604.04901) | [GitHub](https://github.com/synvo-ai/FileGram)
+  > FileGram提出将Agent的个性化记忆建立在文件系统行为轨迹之上，解决了因隐私壁垒和多模态真实世界轨迹采集困难导致的数据匮乏问题。框架包含三个核心组件：(1) FileGramEngine，一个由角色驱动的可扩展数据引擎，模拟真实工作流并生成细粒度多模态动作序列；(2) FileGramBench，基于文件系统行为轨迹的诊断评测集，涵盖用户画像重建、轨迹解耦、角色漂移检测等任务；(3) FileGramOS，一种自底向上的记忆架构，直接从原子操作和内容增量构建用户画像，并编码为程序性、语义性和情节性三个记忆通道。实验表明现有顶级记忆系统在FileGramBench上仍具挑战性。
+
+- **SkillX: Automatically Constructing Skill Knowledge Bases for Agents** `[MeM]` — [2604.04804](https://arxiv.org/abs/2604.04804) | [GitHub](https://github.com/zjunlp/SkillX)
+  > SkillX是一个全自动框架，用于为LLM Agent构建可插拔复用的技能知识库，解决现有自进化范式中Agent孤立学习、重复探索和泛化不足的问题。框架通过三项协同创新实现：(1) 多层次技能设计，将原始轨迹提炼为战略计划、功能技能和原子技能三级层次；(2) 迭代技能精炼，基于执行反馈自动修订技能以持续提升质量；(3) 探索性技能扩展，主动生成并验证新技能以扩大覆盖范围。以GLM-4.6为骨干自动构建技能库后，在AppWorld、BFCL-v3和τ²-Bench等长视野交互型评测上验证了技能库的迁移能力，结果表明SkillKB显著提升了弱基础Agent的任务成功率和执行效率。
+
+- **PLUME: Latent Reasoning Based Universal Multimodal Embedding** `[VLM]` `[无需训练]` — [2604.02073](https://arxiv.org/abs/2604.02073) | [GitHub](https://github.com/haoxiangzhao12138/PLUME)
+  > PLUME提出用潜在推理替代显式思维链（CoT）来提升通用多模态嵌入（UME）性能。现有方法在提取嵌入前生成显式CoT推理，这带来了大量推理开销并将丰富的多模态证据压缩进狭窄的文本瓶颈。PLUME将CoT替换为连续潜在状态的短自回归展开，并引入语义锚引导的过渡适配器在固定计算预算下沿不同推理轨迹引导潜在展开。训练上采用渐进式从显式到隐式的课程学习，在推理阶段完全消除CoT。在MMEB-v2的78个任务上，PLUME超越强显式CoT基线，将推理从数百个生成token缩短至不足10个潜在步骤，实现超过30倍的推理加速，在视频和视觉文档检索场景中优势尤为突出。
+
+- **Learning to Learn-at-Test-Time: Language Agents with Learnable Adaptation Policies** `[RL]` — [2604.00830](https://arxiv.org/abs/2604.00830) | [GitHub](https://github.com/zzzlou/meta-ttl)
+  > 测试时学习（TTL）使语言Agent能在推理时通过与环境的反复交互迭代提升性能，其核心是根据历史经验更新Actor策略的适应策略。现有方法依赖固定的手工设计适应策略而非对其优化。本文提出Meta-TTL框架，将有效适应策略的发现形式化为双层优化问题：内层执行标准TTL过程以评估候选适应策略的效果，外层通过在多样化训练任务分布上进行进化搜索来迭代精炼适应策略。在Jericho和WebArena-Lite上的分布内和分布外实验表明，Meta-TTL持续优于手工设计基线，所优化的适应策略能编码可跨任务分布迁移的通用策略。
+
+- **CLEAR: Unlocking Generative Potential for Degraded Image Understanding in Unified Multimodal Models** `[RL]` `[VLM]` `[微调]` — [2604.04780](https://arxiv.org/abs/2604.04780) | [GitHub](https://github.com/haoxiangzhao12138/CLEAR)
+  > 图像退化（模糊、噪声、压缩、光照不足）严重损害了真实场景中的多模态理解能力。CLEAR框架通过三个渐进步骤将生成与理解能力连接：(1) 在退化感知数据集上进行监督微调，建立「先生成再回答」推理模式；(2) 潜在表示桥接（Latent Representation Bridge），以可优化直连替代解码-重编码绕路，支持联合优化；(3) 交错GRPO，一种在答案正确性奖励下联合优化文本推理与视觉生成的强化学习方法。实验构建了涵盖六个标准多模态评测、三个退化严重程度的MMD-Bench，结果表明CLEAR在退化输入上显著提升鲁棒性的同时保持了清晰图像性能。
+
+- **Less Detail, Better Answers: Degradation-Driven Prompting for VQA** `[VLM]` `[无需训练]` — [2604.04838](https://arxiv.org/abs/2604.04838) | [GitHub](https://github.com/ziplab/DDP)
+  > 高分辨率细节有时会成为VLM在视觉问答（VQA）中产生幻觉和推理错误的噪声来源。本文提出退化驱动提示（DDP）框架，通过战略性降低图像保真度迫使模型聚焦于关键结构信息。针对物理属性任务，DDP结合80p下采样、结构视觉辅助（白色背景掩码和正交线）及上下文学习（ICL）来校准模型关注点；针对感知现象任务（视觉异常、颜色、运动、格式塔、几何及视觉幻觉），DDP集成任务分类阶段并配以模糊掩码和对比度增强等专用工具。实验验证了「少即是多」的原则：通过刻意退化视觉输入并提供针对性结构提示，DDP使VLM能够绕过干扰纹理，在挑战性视觉评测上实现更优推理精度。
+
+- **Scaling Teams or Scaling Time? Memory Enabled Lifelong Learning in LLM Multi-Agent Systems** `[MeM]` — [2604.03295](https://arxiv.org/abs/2604.03295) | [GitHub](https://github.com/ShanglinWu/MAS_lifelong_learning)
+  > LLM多智能体系统可沿两个维度扩展：增加Agent数量和通过积累经验持续改进。本文引入联合考虑团队规模和终身学习能力的多智能体系统扩展视图，并提出LLMA-Mem——支持灵活记忆拓扑的LLM多智能体终身记忆框架。在MultiAgentBench的编程、研究和数据库环境中评估表明，LLMA-Mem持续提升长视野任务性能同时降低成本。分析揭示了非单调扩展现象：更大的团队不总能产生更好的长期表现，当记忆能更好支持经验复用时，小团队可超越大团队。这些发现将记忆设计定位为更高效、更持久扩展多智能体系统的实用途径。
+
+- **The Geometric Alignment Tax: Tokenization vs. Continuous Geometry in Scientific Foundation Models** — [2604.04155](https://arxiv.org/abs/2604.04155) | [GitHub](https://github.com/prashantcraju/geometric-alignment-tax)
+  > 生物和物理领域的基础模型优化预测精度，但其内部表示系统性地无法保留所建模系统的连续几何结构。本文识别了根本原因：几何对齐税（Geometric Alignment Tax），即将连续流形强制通过离散类别瓶颈所带来的内在代价。在合成动力系统上的受控消融实验表明，在相同编码器上用连续头替换交叉熵损失可将几何失真降低至多8.5倍，而更细的向量量化反而因双重约束使几何结构更差。对14个生物基础模型的评估识别了三种失败模式：局部-全局解耦、表征压缩和几何虚空，表明在连续离散化选择上现有模型均未能同时实现低失真、高互信息和全局一致性。
+
+- **Type-Checked Compliance: Deterministic Guardrails for Agentic Financial Systems Using Lean 4 Theorem Proving** — [2604.01483](https://arxiv.org/abs/2604.01483) | [GitHub](https://github.com/arkanemystic/lean-agent-protocol)
+  > 金融服务中的自主AI Agent面临存在性架构危机：LLM是概率性非确定性系统，却在要求绝对合规保障的领域运行。现有护栏方案（包括NVIDIA NeMo和Guardrails AI）依赖概率分类器，无法执行SEC、FINRA和OCC要求的复杂多变量监管约束。本文提出Lean-Agent Protocol，一个基于形式验证的AI护栏平台，利用Harmonic AI的Aristotle神经符号模型将机构政策自动形式化为Lean 4代码。每个Agent动作被视为数学猜想，仅当Lean 4内核证明该动作满足预编译监管公理时才允许执行，在微秒延迟内提供密码学级别的合规确定性，直接满足SEC Rule 15c3-5、FINRA Rule 3110等监管要求。
+
+- **Cog-DRIFT: Exploration on Adaptively Reformulated Instances Enables Learning from Hard Reasoning Problems** `[RL]` — [2604.04767](https://arxiv.org/abs/2604.04767) | [GitHub](https://github.com/dinobby/Cog-DRIFT)
+  > 基于可验证奖励的强化学习（RLVR）提升了LLM推理能力，但当问题太难以至于模型无法解决时便无法产生有效奖励信号。Cog-DRIFT提出基于任务重构的解决方案：将开放式难题转化为认知上更简单的变体（如多选和完形填空格式），在保留原始答案的同时缩小搜索空间并提供更密集的学习信号。这些变体跨越从判别到生成任务的谱系，用于引导学习：模型先从结构化简单格式学习，再将知识迁移回原始开放式问题。基于此，Cog-DRIFT构建重构变体并按难度组织成自适应课程。跨2个模型和6个推理评测的实验中，Cog-DRIFT在原本不可解的难题上取得绝对提升（Qwen +10.11%，Llama +8.64%），并持续超越标准GRPO和强探索基线。
+
+- **Emergent Compositional Communication for Latent World Properties** — [2604.03266](https://arxiv.org/abs/2604.03266) | [GitHub](https://github.com/TomekKaszynski/emergent-physics-comm)
+  > 本文研究多智能体通信压力能否从冻结视频特征中提取出离散、组合性的不可见物理属性表示。研究表明，通过Gumbel-Softmax瓶颈进行通信并结合迭代学习的Agent，能够在无属性标签或消息结构监督的情况下，自发形成弹性、摩擦力、质量比等潜在属性的位置解耦协议。4个Agent时80个随机种子中100%收敛至近完美组合性（PosDis=0.999，泛化集98.3%）。受控主干比较揭示感知先验决定可通信内容：DINOv2在空间可见物理（98.3%）上占优，V-JEPA 2在仅动态碰撞物理（87.4%）上占优。冻结协议支持动作条件规划（91.5%）和反事实速度推理（r=0.780），在真实相机拍摄的Physics 101数据集上验证了85.6%的质量比较精度。
+
+- **POEMetric: The Last Stanza of Humanity** `[API]` — [2604.03695](https://arxiv.org/abs/2604.03695) | [GitHub](https://github.com/Bingru-Li/POEMetric)
+  > LLM能够创作诗歌，但与人类诗人的差距有多大？本文引入POEMetric——首个诗歌评估综合框架，考察：(1) 按特定形式和主题生成诗歌的基础指令遵循能力；(2) 创造力、词汇多样性、独特性、情感共鸣以及意象和文学手法运用等高级能力；(3) 整体诗歌质量和作者身份估计。研究整理了203首7种固定格式的英文人类诗歌（含格律、韵脚和主题标注），并测试了30个LLM在相同形式和主题下的诗歌生成能力（共6090首LLM诗歌）。结果表明：尽管顶级模型在形式准确性（4.26/5）和主题契合度（4.99/5）上表现优异，但在创造力、独特性、情感共鸣和文学手法等高级维度上均无法达到人类诗人水平，诗歌生成对LLM仍是巨大挑战。
+
+
+## 2026年4月8日
+
+- **Learning to Retrieve from Agent Trajectories** `[微调]` — [2604.04949](https://arxiv.org/abs/2604.04949) | [GitHub](https://github.com/Yuqi-Zhou/LRAT)
+  > 传统信息检索（IR）系统基于人类用户交互日志（如点击、停留时间）训练，但随着 LLM 驱动的搜索智能体兴起，检索系统日益被智能体而非人类调用，导致基于人类假设训练的检索模型与智能体行为存在根本性错位。本文提出从智能体轨迹中学习检索（LRAT）的新范式，以多步智能体交互为监督信号，从中挖掘高质量检索监督。通过分析搜索智能体轨迹，识别出揭示文档效用的关键行为信号（包括浏览操作、未浏览拒绝和浏览后推理链），并引入带权重优化的相关性强度建模。在域内外深度研究基准上的大量实验表明，LRAT 训练的检索器能一致提升证据召回率、端到端任务成功率和执行效率。
+
+- **Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning** — [2604.05404](https://arxiv.org/abs/2604.05404) | [GitHub](https://github.com/sqs-ustc/tool-reasoning-framework-PTE)
+  > 在工具集成推理（TIR）场景中，LLM 需要交替执行推理和外部工具调用，工具调用会中断 KV 缓存并导致重新计算，同时工具返回的冗长响应会膨胀 KV 缓存，使推理延迟随上下文长度增加而持续上升。现有效率指标（token 数、工具调用次数）无法捕捉真实推理延迟。本文提出 PTE（预填充 Token 等效量），一种感知硬件特性的 TIR 效率指标，可统一内部推理和外部工具使用成本，并显式建模不可复用 KV 缓存和长工具响应场景。在高并发工业环境验证表明 PTE 与实际延迟显著更吻合。在五个 TIR 基准上的实验识别出四种低效模式，并发现高 PTE 轨迹往往推理正确性更低。该工作已被 ACL 2026 收录。
+
+- **ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement** `[RL]` — [2604.01591](https://arxiv.org/abs/2604.01591) | [GitHub](https://github.com/CSSLab/ThinkTwice)
+  > 本文提出 ThinkTwice，一个基于组相对策略优化（GRPO）的两阶段联合训练框架，使 LLM 同时具备问题求解和自我精炼能力。每对训练步骤中，ThinkTwice 先优化模型在推理问题上的求解能力，再优化模型对自身解答的精炼能力，两个阶段使用相同的二元正确性奖励，无需正确性信号或批注标注。在五个数学推理基准以及 Qwen3-4B 和 Olmo3-7B 两个模型系列上，ThinkTwice 显著超越竞争性在线策略优化基线。在 Qwen3-4B 上，ThinkTwice 在 AIME 上的精炼前 pass@4 比 GRPO 高 5 个百分点，精炼一步后高 11.5 个百分点。训练动态分析揭示了隐式的"先纠错后巩固"课程：精炼在早期训练阶段主要纠正错误，随模型改进逐渐转向保持正确解答。
+
+- **MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU** `[长文本]` — [2604.05091](https://arxiv.org/abs/2604.05091) | [GitHub](https://github.com/DLYuanGod/MegaTrain)
+  > MegaTrain 是一个以内存为核心的系统，可在单张 GPU 上以全精度高效训练 1000 亿参数以上的大语言模型。与传统 GPU 中心系统不同，MegaTrain 将参数和优化器状态存储在宿主内存（CPU 内存）中，将 GPU 作为瞬态计算引擎。对每一层，系统流式传入参数并输出梯度，最小化持久设备状态。为突破 CPU-GPU 带宽瓶颈，采用两项关键优化：流水线双缓冲执行引擎，跨多个 CUDA 流重叠参数预取、计算和梯度卸载；无状态层模板替代持久自动微分图，权重动态绑定。在配备 1.5TB 宿主内存的单 H200 GPU 上，MegaTrain 可稳定训练高达 1200 亿参数的模型，训练 140 亿参数模型时吞吐量达 DeepSpeed ZeRO-3 的 1.84 倍，还支持在单 GH200 上以 512k token 上下文训练 70 亿参数模型。
+
+- **General Multimodal Protein Design Enables DNA-Encoding of Chemistry** `[扩散模型]` — [2604.05181](https://arxiv.org/abs/2604.05181) | [GitHub](https://github.com/DISCO-design/DISCO)
+  > 进化是酶多样性的强大引擎，但 DNA 可编码的化学空间远未被充分探索。深度生成模型可设计能与配体结合的新蛋白质，但此前均未能在不预先指定催化残基的情况下创造酶。本文提出 DISCO（用于序列-结构协同设计的扩散模型），这是一个围绕任意生物分子协同设计蛋白质序列和三维结构的多模态模型，并提供了在两种模态上优化目标函数的推理时扩展方法。仅以反应中间体为条件，DISCO 能设计出具有新型活性位点几何结构的多样性血红素酶，这些酶可催化自然界中未出现的卡宾转移反应（包括烯烃环丙烷化和 N-H 插入），展示了 DNA 可编码化学的扩展可能性。
+
+- **Paper Circle: An Open-source Multi-agent Research Discovery and Analysis Framework** `[API]` — [2604.06170](https://arxiv.org/abs/2604.06170) | [GitHub](https://github.com/MAXNORM8650/papercircle)
+  > 科学文献的快速增长使研究人员难以高效发现、评估和综合相关工作。本文提出 Paper Circle，一个基于多智能体 LLM 的研究发现与分析系统，旨在降低学术文献查找、评估、组织和理解的成本。系统包含两个互补流水线：（1）发现流水线，整合离线和在线多源检索、多标准评分、多样性感知排序和结构化输出；（2）分析流水线，将单篇论文转化为包含概念、方法、实验和图表等类型节点的结构化知识图谱，支持图感知问答和覆盖率验证。两个流水线均在基于 coder LLM 的多智能体编排框架下实现，生成可复现的同步输出（JSON、CSV、BibTeX、Markdown、HTML）。在论文检索和综述生成上的实验表明，更强的智能体模型带来一致性提升，已被 ACL 2026 主会（Oral）收录。
+
+- **DARE: Diffusion Large Language Models Alignment and Reinforcement Executor** `[RL]` `[微调]` `[扩散模型]` — [2604.04215](https://arxiv.org/abs/2604.04215) | [GitHub](https://github.com/yjyddq/DARE)
+  > 扩散大语言模型（dLLM）以迭代去噪和并行生成替代逐 token 自回归生成，是自回归模型的有力替代。然而，其开源生态系统在模型系列和后训练流水线上仍高度碎片化，强化学习目标、rollout 实现和评估脚本通常以论文特定代码库形式发布，严重阻碍研究迭代与公平比较。本文提出 DARE（dLLMs 对齐与强化执行器），一个基于 verl 和 OpenCompass 的 dLLM 后训练与评估开放框架，统一了监督微调、参数高效微调、偏好优化和 dLLM 专用强化学习。在 LLaDA、Dream、SDAR 和 LLaDA2.x 等主流模型上，DARE 提供广泛的算法覆盖、可复现基准评估和实际加速，定位为开发、比较和部署 dLLM 后训练方法的可复用研究基础设施。
+
+- **Demystifying When Pruning Works via Representation Hierarchies** — [2603.24652](https://arxiv.org/abs/2603.24652) | [GitHub](https://github.com/CASE-Lab-UMD/Pruning-on-Representations)
+  > 网络剪枝被期望在保持性能的同时提升效率，但这一期望在语言任务上并不总是成立：剪枝模型在非生成任务上表现良好，却在生成任务中频繁失效。本文从表示层次角度分析网络剪枝，将语言模型的内部计算分解为嵌入空间、logit 空间和概率空间三个顺序空间。研究发现，嵌入和 logit 空间的表示对剪枝扰动具有较强鲁棒性，但从 logit 到概率的非线性变换会放大这些偏差，并在时间步上累积，导致生成时严重退化。相反，类别 token 概率子空间的稳定性以及嵌入空间的鲁棒性，支撑了剪枝在检索和多选等非生成任务上的有效性，为剪枝的应用场景提供了实践指导。
+
+- **Expert-Choice Routing Enables Adaptive Computation in Diffusion Language Models** `[扩散模型]` — [2604.01622](https://arxiv.org/abs/2604.01622) | [GitHub](https://github.com/zhangshuibai/EC-DLM)
+  > 扩散语言模型（DLM）实现并行非自回归文本生成，但现有 DLM 混合专家（MoE）模型从自回归系统继承了 token 选择（TC）路由，导致负载不均衡和计算分配僵化。本文证明专家选择（EC）路由更适合 DLM：其通过设计确定性负载均衡，产生更高吞吐量和更快收敛。利用 EC 容量可外部控制的特性，提出时间步依赖的专家容量分配方案，在低掩码比步骤分配更多容量，并提供机制解释：低掩码比上下文中的 token 学习效率高一个数量级，因此在这些步骤集中计算可获得最大边际回报。实验还表明，现有预训练 TC DLM 可通过替换路由器改造为 EC，在多种下游任务上实现更快收敛和更好精度。
+
+- **CUE-R: Beyond the Final Answer in Retrieval-Augmented Generation** `[API]` — [2604.05467](https://arxiv.org/abs/2604.05467) | [GitHub](https://github.com/jainsid24/cue-r)
+  > 随着语言模型从单次答案生成转向在推理过程中检索和消费证据的多步推理，评估单个检索项的作用变得更加重要。现有 RAG 评估通常针对最终答案质量、引用忠实度或答案级归因，而本文关注基于干预的单证据项效用评估视角。CUE-R 是一个轻量级干预框架，通过 REMOVE、REPLACE 和 DUPLICATE 三种算子扰动单个证据项，沿正确性、代理基础忠实度和置信度误差三个效用轴以及轨迹偏差信号测量变化。在 HotpotQA 和 2WikiMultihopQA 上使用 Qwen-3 8B 和 GPT-5.2 的实验揭示：REMOVE 和 REPLACE 显著损害正确性，而 DUPLICATE 在答案层面冗余但行为上并非完全中性；多跳证据项存在非加性交互效应，两项支持同时移除的损害远超单项移除。
+
+- **Can Natural Image Autoencoders Compactly Tokenize fMRI Volumes for Long-Range Dynamics Modeling?** `[长文本]` — [2604.03619](https://arxiv.org/abs/2604.03619) | [GitHub](https://github.com/beotborry/TABLeT)
+  > 功能磁共振成像（fMRI）中的长程时空动态建模因四维信号的高维性而面临重大挑战。现有基于体素的模型性能优异但受限于巨大内存需求，只能捕捉有限时间窗口。本文提出 TABLeT（二维自编码脑潜在 Transformer），利用预训练的二维自然图像自编码器对 fMRI 体积进行分词，将每个三维 fMRI 体积压缩为紧凑的连续 token 集合，使用简单 Transformer 编码器在有限显存下实现长序列建模。在 UK-Biobank、HCP 和 ADHD-200 数据集上的实验表明，TABLeT 在多项任务上超越现有模型，同时相比最先进体素方法在相同输入条件下展现出显著的计算和内存效率提升。此外还开发了自监督掩码 token 建模预训练方法，进一步提升下游任务性能。该工作已被 CVPR 2026 收录。
+
+- **Squeez: Task-Conditioned Tool-Output Pruning for Coding Agents** `[微调]` — [2604.04979](https://arxiv.org/abs/2604.04979) | [GitHub](https://github.com/KRLabsOrg/squeez)
+  > 编程智能体反复消费长工具输出，但每个输出中只有少部分对下一步有用。本文研究任务条件化的工具输出剪枝：给定一个聚焦查询和一个工具输出，返回智能体下一步应检查的最小逐字证据块。作者构建了包含 11477 个样本的基准（来自 SWE-bench 仓库交互和合成多生态系统工具输出），并手动整理了 618 个测试集样例。通过 LoRA 对 Qwen 3.5 2B 进行微调，并与大型零样本模型和启发式剪枝基线对比。该微调模型达到 0.86 召回率和 0.80 F1，同时移除 92% 的输入 token，召回率比零样本 Qwen 3.5 35B A3B 高 11 个百分点，并大幅超越所有启发式基线。

@@ -1,0 +1,106 @@
+[
+  {
+    "date": "2026-04-07",
+    "title": "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
+    "arxiv_id": "2604.04921",
+    "github": "https://github.com/WeianMao/triattention",
+    "abstract": "针对大语言模型长推理场景下KV缓存的内存瓶颈问题，TriAttention提出利用pre-RoPE空间中Q/K向量的集中分布特性来估计键的重要性。研究发现Q/K向量在固定非零中心附近高度集中，且在不同位置保持稳定，这导致查询对特定距离的键产生偏好，形成三角级数规律。TriAttention利用这一规律，通过向量中心刻画的距离偏好对键进行评分，并结合Q/K范数作为额外信号。在AIME25上使用32K token生成时，TriAttention在匹配完整注意力推理精度的同时实现2.5倍更高吞吐量或10.7倍KV内存减少，而主流基线在相同效率下仅达到约一半精度。该方法使长上下文大模型可在单个消费级GPU上部署。",
+    "tags": ["长文本", "无需训练"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces",
+    "arxiv_id": "2604.04901",
+    "github": "https://github.com/synvo-ai/FileGram",
+    "abstract": "FileGram提出将Agent的个性化记忆建立在文件系统行为轨迹之上，解决了因隐私壁垒和多模态真实世界轨迹采集困难导致的数据匮乏问题。框架包含三个核心组件：(1) FileGramEngine，一个由角色驱动的可扩展数据引擎，模拟真实工作流并生成细粒度多模态动作序列；(2) FileGramBench，基于文件系统行为轨迹的诊断评测集，涵盖用户画像重建、轨迹解耦、角色漂移检测等任务；(3) FileGramOS，一种自底向上的记忆架构，直接从原子操作和内容增量构建用户画像，并编码为程序性、语义性和情节性三个记忆通道。实验表明现有顶级记忆系统在FileGramBench上仍具挑战性。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "SkillX: Automatically Constructing Skill Knowledge Bases for Agents",
+    "arxiv_id": "2604.04804",
+    "github": "https://github.com/zjunlp/SkillX",
+    "abstract": "SkillX是一个全自动框架，用于为LLM Agent构建可插拔复用的技能知识库，解决现有自进化范式中Agent孤立学习、重复探索和泛化不足的问题。框架通过三项协同创新实现：(1) 多层次技能设计，将原始轨迹提炼为战略计划、功能技能和原子技能三级层次；(2) 迭代技能精炼，基于执行反馈自动修订技能以持续提升质量；(3) 探索性技能扩展，主动生成并验证新技能以扩大覆盖范围。以GLM-4.6为骨干自动构建技能库后，在AppWorld、BFCL-v3和τ²-Bench等长视野交互型评测上验证了技能库的迁移能力，结果表明SkillKB显著提升了弱基础Agent的任务成功率和执行效率。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "PLUME: Latent Reasoning Based Universal Multimodal Embedding",
+    "arxiv_id": "2604.02073",
+    "github": "https://github.com/haoxiangzhao12138/PLUME",
+    "abstract": "PLUME提出用潜在推理替代显式思维链（CoT）来提升通用多模态嵌入（UME）性能。现有方法在提取嵌入前生成显式CoT推理，这带来了大量推理开销并将丰富的多模态证据压缩进狭窄的文本瓶颈。PLUME将CoT替换为连续潜在状态的短自回归展开，并引入语义锚引导的过渡适配器在固定计算预算下沿不同推理轨迹引导潜在展开。训练上采用渐进式从显式到隐式的课程学习，在推理阶段完全消除CoT。在MMEB-v2的78个任务上，PLUME超越强显式CoT基线，将推理从数百个生成token缩短至不足10个潜在步骤，实现超过30倍的推理加速，在视频和视觉文档检索场景中优势尤为突出。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Learning to Learn-at-Test-Time: Language Agents with Learnable Adaptation Policies",
+    "arxiv_id": "2604.00830",
+    "github": "https://github.com/zzzlou/meta-ttl",
+    "abstract": "测试时学习（TTL）使语言Agent能在推理时通过与环境的反复交互迭代提升性能，其核心是根据历史经验更新Actor策略的适应策略。现有方法依赖固定的手工设计适应策略而非对其优化。本文提出Meta-TTL框架，将有效适应策略的发现形式化为双层优化问题：内层执行标准TTL过程以评估候选适应策略的效果，外层通过在多样化训练任务分布上进行进化搜索来迭代精炼适应策略。在Jericho和WebArena-Lite上的分布内和分布外实验表明，Meta-TTL持续优于手工设计基线，所优化的适应策略能编码可跨任务分布迁移的通用策略。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "CLEAR: Unlocking Generative Potential for Degraded Image Understanding in Unified Multimodal Models",
+    "arxiv_id": "2604.04780",
+    "github": "https://github.com/haoxiangzhao12138/CLEAR",
+    "abstract": "图像退化（模糊、噪声、压缩、光照不足）严重损害了真实场景中的多模态理解能力。CLEAR框架通过三个渐进步骤将生成与理解能力连接：(1) 在退化感知数据集上进行监督微调，建立「先生成再回答」推理模式；(2) 潜在表示桥接（Latent Representation Bridge），以可优化直连替代解码-重编码绕路，支持联合优化；(3) 交错GRPO，一种在答案正确性奖励下联合优化文本推理与视觉生成的强化学习方法。实验构建了涵盖六个标准多模态评测、三个退化严重程度的MMD-Bench，结果表明CLEAR在退化输入上显著提升鲁棒性的同时保持了清晰图像性能。",
+    "tags": ["RL", "VLM", "微调"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Less Detail, Better Answers: Degradation-Driven Prompting for VQA",
+    "arxiv_id": "2604.04838",
+    "github": "https://github.com/ziplab/DDP",
+    "abstract": "高分辨率细节有时会成为VLM在视觉问答（VQA）中产生幻觉和推理错误的噪声来源。本文提出退化驱动提示（DDP）框架，通过战略性降低图像保真度迫使模型聚焦于关键结构信息。针对物理属性任务，DDP结合80p下采样、结构视觉辅助（白色背景掩码和正交线）及上下文学习（ICL）来校准模型关注点；针对感知现象任务（视觉异常、颜色、运动、格式塔、几何及视觉幻觉），DDP集成任务分类阶段并配以模糊掩码和对比度增强等专用工具。实验验证了「少即是多」的原则：通过刻意退化视觉输入并提供针对性结构提示，DDP使VLM能够绕过干扰纹理，在挑战性视觉评测上实现更优推理精度。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Scaling Teams or Scaling Time? Memory Enabled Lifelong Learning in LLM Multi-Agent Systems",
+    "arxiv_id": "2604.03295",
+    "github": "https://github.com/ShanglinWu/MAS_lifelong_learning",
+    "abstract": "LLM多智能体系统可沿两个维度扩展：增加Agent数量和通过积累经验持续改进。本文引入联合考虑团队规模和终身学习能力的多智能体系统扩展视图，并提出LLMA-Mem——支持灵活记忆拓扑的LLM多智能体终身记忆框架。在MultiAgentBench的编程、研究和数据库环境中评估表明，LLMA-Mem持续提升长视野任务性能同时降低成本。分析揭示了非单调扩展现象：更大的团队不总能产生更好的长期表现，当记忆能更好支持经验复用时，小团队可超越大团队。这些发现将记忆设计定位为更高效、更持久扩展多智能体系统的实用途径。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "The Geometric Alignment Tax: Tokenization vs. Continuous Geometry in Scientific Foundation Models",
+    "arxiv_id": "2604.04155",
+    "github": "https://github.com/prashantcraju/geometric-alignment-tax",
+    "abstract": "生物和物理领域的基础模型优化预测精度，但其内部表示系统性地无法保留所建模系统的连续几何结构。本文识别了根本原因：几何对齐税（Geometric Alignment Tax），即将连续流形强制通过离散类别瓶颈所带来的内在代价。在合成动力系统上的受控消融实验表明，在相同编码器上用连续头替换交叉熵损失可将几何失真降低至多8.5倍，而更细的向量量化反而因双重约束使几何结构更差。对14个生物基础模型的评估识别了三种失败模式：局部-全局解耦、表征压缩和几何虚空，表明在连续离散化选择上现有模型均未能同时实现低失真、高互信息和全局一致性。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Type-Checked Compliance: Deterministic Guardrails for Agentic Financial Systems Using Lean 4 Theorem Proving",
+    "arxiv_id": "2604.01483",
+    "github": "https://github.com/arkanemystic/lean-agent-protocol",
+    "abstract": "金融服务中的自主AI Agent面临存在性架构危机：LLM是概率性非确定性系统，却在要求绝对合规保障的领域运行。现有护栏方案（包括NVIDIA NeMo和Guardrails AI）依赖概率分类器，无法执行SEC、FINRA和OCC要求的复杂多变量监管约束。本文提出Lean-Agent Protocol，一个基于形式验证的AI护栏平台，利用Harmonic AI的Aristotle神经符号模型将机构政策自动形式化为Lean 4代码。每个Agent动作被视为数学猜想，仅当Lean 4内核证明该动作满足预编译监管公理时才允许执行，在微秒延迟内提供密码学级别的合规确定性，直接满足SEC Rule 15c3-5、FINRA Rule 3110等监管要求。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Cog-DRIFT: Exploration on Adaptively Reformulated Instances Enables Learning from Hard Reasoning Problems",
+    "arxiv_id": "2604.04767",
+    "github": "https://github.com/dinobby/Cog-DRIFT",
+    "abstract": "基于可验证奖励的强化学习（RLVR）提升了LLM推理能力，但当问题太难以至于模型无法解决时便无法产生有效奖励信号。Cog-DRIFT提出基于任务重构的解决方案：将开放式难题转化为认知上更简单的变体（如多选和完形填空格式），在保留原始答案的同时缩小搜索空间并提供更密集的学习信号。这些变体跨越从判别到生成任务的谱系，用于引导学习：模型先从结构化简单格式学习，再将知识迁移回原始开放式问题。基于此，Cog-DRIFT构建重构变体并按难度组织成自适应课程。跨2个模型和6个推理评测的实验中，Cog-DRIFT在原本不可解的难题上取得绝对提升（Qwen +10.11%，Llama +8.64%），并持续超越标准GRPO和强探索基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Emergent Compositional Communication for Latent World Properties",
+    "arxiv_id": "2604.03266",
+    "github": "https://github.com/TomekKaszynski/emergent-physics-comm",
+    "abstract": "本文研究多智能体通信压力能否从冻结视频特征中提取出离散、组合性的不可见物理属性表示。研究表明，通过Gumbel-Softmax瓶颈进行通信并结合迭代学习的Agent，能够在无属性标签或消息结构监督的情况下，自发形成弹性、摩擦力、质量比等潜在属性的位置解耦协议。4个Agent时80个随机种子中100%收敛至近完美组合性（PosDis=0.999，泛化集98.3%）。受控主干比较揭示感知先验决定可通信内容：DINOv2在空间可见物理（98.3%）上占优，V-JEPA 2在仅动态碰撞物理（87.4%）上占优。冻结协议支持动作条件规划（91.5%）和反事实速度推理（r=0.780），在真实相机拍摄的Physics 101数据集上验证了85.6%的质量比较精度。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-07",
+    "title": "POEMetric: The Last Stanza of Humanity",
+    "arxiv_id": "2604.03695",
+    "github": "https://github.com/Bingru-Li/POEMetric",
+    "abstract": "LLM能够创作诗歌，但与人类诗人的差距有多大？本文引入POEMetric——首个诗歌评估综合框架，考察：(1) 按特定形式和主题生成诗歌的基础指令遵循能力；(2) 创造力、词汇多样性、独特性、情感共鸣以及意象和文学手法运用等高级能力；(3) 整体诗歌质量和作者身份估计。研究整理了203首7种固定格式的英文人类诗歌（含格律、韵脚和主题标注），并测试了30个LLM在相同形式和主题下的诗歌生成能力（共6090首LLM诗歌）。结果表明：尽管顶级模型在形式准确性（4.26/5）和主题契合度（4.99/5）上表现优异，但在创造力、独特性、情感共鸣和文学手法等高级维度上均无法达到人类诗人水平，诗歌生成对LLM仍是巨大挑战。",
+    "tags": ["API"]
+  }
+]

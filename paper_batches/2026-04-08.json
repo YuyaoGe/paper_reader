@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-04-08",
+    "title": "Learning to Retrieve from Agent Trajectories",
+    "arxiv_id": "2604.04949",
+    "github": "https://github.com/Yuqi-Zhou/LRAT",
+    "abstract": "传统信息检索（IR）系统基于人类用户交互日志（如点击、停留时间）训练，但随着 LLM 驱动的搜索智能体兴起，检索系统日益被智能体而非人类调用，导致基于人类假设训练的检索模型与智能体行为存在根本性错位。本文提出从智能体轨迹中学习检索（LRAT）的新范式，以多步智能体交互为监督信号，从中挖掘高质量检索监督。通过分析搜索智能体轨迹，识别出揭示文档效用的关键行为信号（包括浏览操作、未浏览拒绝和浏览后推理链），并引入带权重优化的相关性强度建模。在域内外深度研究基准上的大量实验表明，LRAT 训练的检索器能一致提升证据召回率、端到端任务成功率和执行效率。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning",
+    "arxiv_id": "2604.05404",
+    "github": "https://github.com/sqs-ustc/tool-reasoning-framework-PTE",
+    "abstract": "在工具集成推理（TIR）场景中，LLM 需要交替执行推理和外部工具调用，工具调用会中断 KV 缓存并导致重新计算，同时工具返回的冗长响应会膨胀 KV 缓存，使推理延迟随上下文长度增加而持续上升。现有效率指标（token 数、工具调用次数）无法捕捉真实推理延迟。本文提出 PTE（预填充 Token 等效量），一种感知硬件特性的 TIR 效率指标，可统一内部推理和外部工具使用成本，并显式建模不可复用 KV 缓存和长工具响应场景。在高并发工业环境验证表明 PTE 与实际延迟显著更吻合。在五个 TIR 基准上的实验识别出四种低效模式，并发现高 PTE 轨迹往往推理正确性更低。该工作已被 ACL 2026 收录。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-08",
+    "title": "ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement",
+    "arxiv_id": "2604.01591",
+    "github": "https://github.com/CSSLab/ThinkTwice",
+    "abstract": "本文提出 ThinkTwice，一个基于组相对策略优化（GRPO）的两阶段联合训练框架，使 LLM 同时具备问题求解和自我精炼能力。每对训练步骤中，ThinkTwice 先优化模型在推理问题上的求解能力，再优化模型对自身解答的精炼能力，两个阶段使用相同的二元正确性奖励，无需正确性信号或批注标注。在五个数学推理基准以及 Qwen3-4B 和 Olmo3-7B 两个模型系列上，ThinkTwice 显著超越竞争性在线策略优化基线。在 Qwen3-4B 上，ThinkTwice 在 AIME 上的精炼前 pass@4 比 GRPO 高 5 个百分点，精炼一步后高 11.5 个百分点。训练动态分析揭示了隐式的\"先纠错后巩固\"课程：精炼在早期训练阶段主要纠正错误，随模型改进逐渐转向保持正确解答。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU",
+    "arxiv_id": "2604.05091",
+    "github": "https://github.com/DLYuanGod/MegaTrain",
+    "abstract": "MegaTrain 是一个以内存为核心的系统，可在单张 GPU 上以全精度高效训练 1000 亿参数以上的大语言模型。与传统 GPU 中心系统不同，MegaTrain 将参数和优化器状态存储在宿主内存（CPU 内存）中，将 GPU 作为瞬态计算引擎。对每一层，系统流式传入参数并输出梯度，最小化持久设备状态。为突破 CPU-GPU 带宽瓶颈，采用两项关键优化：流水线双缓冲执行引擎，跨多个 CUDA 流重叠参数预取、计算和梯度卸载；无状态层模板替代持久自动微分图，权重动态绑定。在配备 1.5TB 宿主内存的单 H200 GPU 上，MegaTrain 可稳定训练高达 1200 亿参数的模型，训练 140 亿参数模型时吞吐量达 DeepSpeed ZeRO-3 的 1.84 倍，还支持在单 GH200 上以 512k token 上下文训练 70 亿参数模型。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "General Multimodal Protein Design Enables DNA-Encoding of Chemistry",
+    "arxiv_id": "2604.05181",
+    "github": "https://github.com/DISCO-design/DISCO",
+    "abstract": "进化是酶多样性的强大引擎，但 DNA 可编码的化学空间远未被充分探索。深度生成模型可设计能与配体结合的新蛋白质，但此前均未能在不预先指定催化残基的情况下创造酶。本文提出 DISCO（用于序列-结构协同设计的扩散模型），这是一个围绕任意生物分子协同设计蛋白质序列和三维结构的多模态模型，并提供了在两种模态上优化目标函数的推理时扩展方法。仅以反应中间体为条件，DISCO 能设计出具有新型活性位点几何结构的多样性血红素酶，这些酶可催化自然界中未出现的卡宾转移反应（包括烯烃环丙烷化和 N-H 插入），展示了 DNA 可编码化学的扩展可能性。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Paper Circle: An Open-source Multi-agent Research Discovery and Analysis Framework",
+    "arxiv_id": "2604.06170",
+    "github": "https://github.com/MAXNORM8650/papercircle",
+    "abstract": "科学文献的快速增长使研究人员难以高效发现、评估和综合相关工作。本文提出 Paper Circle，一个基于多智能体 LLM 的研究发现与分析系统，旨在降低学术文献查找、评估、组织和理解的成本。系统包含两个互补流水线：（1）发现流水线，整合离线和在线多源检索、多标准评分、多样性感知排序和结构化输出；（2）分析流水线，将单篇论文转化为包含概念、方法、实验和图表等类型节点的结构化知识图谱，支持图感知问答和覆盖率验证。两个流水线均在基于 coder LLM 的多智能体编排框架下实现，生成可复现的同步输出（JSON、CSV、BibTeX、Markdown、HTML）。在论文检索和综述生成上的实验表明，更强的智能体模型带来一致性提升，已被 ACL 2026 主会（Oral）收录。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "DARE: Diffusion Large Language Models Alignment and Reinforcement Executor",
+    "arxiv_id": "2604.04215",
+    "github": "https://github.com/yjyddq/DARE",
+    "abstract": "扩散大语言模型（dLLM）以迭代去噪和并行生成替代逐 token 自回归生成，是自回归模型的有力替代。然而，其开源生态系统在模型系列和后训练流水线上仍高度碎片化，强化学习目标、rollout 实现和评估脚本通常以论文特定代码库形式发布，严重阻碍研究迭代与公平比较。本文提出 DARE（dLLMs 对齐与强化执行器），一个基于 verl 和 OpenCompass 的 dLLM 后训练与评估开放框架，统一了监督微调、参数高效微调、偏好优化和 dLLM 专用强化学习。在 LLaDA、Dream、SDAR 和 LLaDA2.x 等主流模型上，DARE 提供广泛的算法覆盖、可复现基准评估和实际加速，定位为开发、比较和部署 dLLM 后训练方法的可复用研究基础设施。",
+    "tags": ["RL", "微调", "扩散模型"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Demystifying When Pruning Works via Representation Hierarchies",
+    "arxiv_id": "2603.24652",
+    "github": "https://github.com/CASE-Lab-UMD/Pruning-on-Representations",
+    "abstract": "网络剪枝被期望在保持性能的同时提升效率，但这一期望在语言任务上并不总是成立：剪枝模型在非生成任务上表现良好，却在生成任务中频繁失效。本文从表示层次角度分析网络剪枝，将语言模型的内部计算分解为嵌入空间、logit 空间和概率空间三个顺序空间。研究发现，嵌入和 logit 空间的表示对剪枝扰动具有较强鲁棒性，但从 logit 到概率的非线性变换会放大这些偏差，并在时间步上累积，导致生成时严重退化。相反，类别 token 概率子空间的稳定性以及嵌入空间的鲁棒性，支撑了剪枝在检索和多选等非生成任务上的有效性，为剪枝的应用场景提供了实践指导。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Expert-Choice Routing Enables Adaptive Computation in Diffusion Language Models",
+    "arxiv_id": "2604.01622",
+    "github": "https://github.com/zhangshuibai/EC-DLM",
+    "abstract": "扩散语言模型（DLM）实现并行非自回归文本生成，但现有 DLM 混合专家（MoE）模型从自回归系统继承了 token 选择（TC）路由，导致负载不均衡和计算分配僵化。本文证明专家选择（EC）路由更适合 DLM：其通过设计确定性负载均衡，产生更高吞吐量和更快收敛。利用 EC 容量可外部控制的特性，提出时间步依赖的专家容量分配方案，在低掩码比步骤分配更多容量，并提供机制解释：低掩码比上下文中的 token 学习效率高一个数量级，因此在这些步骤集中计算可获得最大边际回报。实验还表明，现有预训练 TC DLM 可通过替换路由器改造为 EC，在多种下游任务上实现更快收敛和更好精度。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "CUE-R: Beyond the Final Answer in Retrieval-Augmented Generation",
+    "arxiv_id": "2604.05467",
+    "github": "https://github.com/jainsid24/cue-r",
+    "abstract": "随着语言模型从单次答案生成转向在推理过程中检索和消费证据的多步推理，评估单个检索项的作用变得更加重要。现有 RAG 评估通常针对最终答案质量、引用忠实度或答案级归因，而本文关注基于干预的单证据项效用评估视角。CUE-R 是一个轻量级干预框架，通过 REMOVE、REPLACE 和 DUPLICATE 三种算子扰动单个证据项，沿正确性、代理基础忠实度和置信度误差三个效用轴以及轨迹偏差信号测量变化。在 HotpotQA 和 2WikiMultihopQA 上使用 Qwen-3 8B 和 GPT-5.2 的实验揭示：REMOVE 和 REPLACE 显著损害正确性，而 DUPLICATE 在答案层面冗余但行为上并非完全中性；多跳证据项存在非加性交互效应，两项支持同时移除的损害远超单项移除。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Can Natural Image Autoencoders Compactly Tokenize fMRI Volumes for Long-Range Dynamics Modeling?",
+    "arxiv_id": "2604.03619",
+    "github": "https://github.com/beotborry/TABLeT",
+    "abstract": "功能磁共振成像（fMRI）中的长程时空动态建模因四维信号的高维性而面临重大挑战。现有基于体素的模型性能优异但受限于巨大内存需求，只能捕捉有限时间窗口。本文提出 TABLeT（二维自编码脑潜在 Transformer），利用预训练的二维自然图像自编码器对 fMRI 体积进行分词，将每个三维 fMRI 体积压缩为紧凑的连续 token 集合，使用简单 Transformer 编码器在有限显存下实现长序列建模。在 UK-Biobank、HCP 和 ADHD-200 数据集上的实验表明，TABLeT 在多项任务上超越现有模型，同时相比最先进体素方法在相同输入条件下展现出显著的计算和内存效率提升。此外还开发了自监督掩码 token 建模预训练方法，进一步提升下游任务性能。该工作已被 CVPR 2026 收录。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Squeez: Task-Conditioned Tool-Output Pruning for Coding Agents",
+    "arxiv_id": "2604.04979",
+    "github": "https://github.com/KRLabsOrg/squeez",
+    "abstract": "编程智能体反复消费长工具输出，但每个输出中只有少部分对下一步有用。本文研究任务条件化的工具输出剪枝：给定一个聚焦查询和一个工具输出，返回智能体下一步应检查的最小逐字证据块。作者构建了包含 11477 个样本的基准（来自 SWE-bench 仓库交互和合成多生态系统工具输出），并手动整理了 618 个测试集样例。通过 LoRA 对 Qwen 3.5 2B 进行微调，并与大型零样本模型和启发式剪枝基线对比。该微调模型达到 0.86 召回率和 0.80 F1，同时移除 92% 的输入 token，召回率比零样本 Qwen 3.5 35B A3B 高 11 个百分点，并大幅超越所有启发式基线。",
+    "tags": ["微调"]
+  }
+]

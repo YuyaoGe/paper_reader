@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2026-04-06",
+    "title": "GrandCode: Achieving Grandmaster Level in Competitive Programming via Agentic Reinforcement Learning",
+    "arxiv_id": "2604.02721",
+    "github": "https://github.com/deepreinforce-ai/codeforces",
+    "abstract": "GrandCode是一个面向竞技编程的多智能体强化学习系统，实现了AI在Codeforces真实比赛中持续击败所有人类选手（包括传奇大师）的历史性突破。系统核心有两大创新：其一是协调假设生成、求解、测试生成、摘要等多种智能体模块，通过后训练和在线测试时RL联合优化各模块能力；其二是提出Agentic GRPO算法，专门解决多阶段智能体序列中延迟奖励与严重离策略漂移的挑战。在最近三场Codeforces直播比赛（Round 1087、1088、1089）中，GrandCode全部摘得第一，证明AI系统在竞技编程这一人类最后高地上已实现对最强程序员的超越。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-04-06",
+    "title": "Communicating about Space: Language-Mediated Spatial Integration Across Partial Views",
+    "arxiv_id": "2603.27183",
+    "github": "https://github.com/ankursikarwar/Cosmic",
+    "abstract": "本文提出COSMIC基准，系统测试多模态大语言模型（MLLM）能否通过自然语言对话整合不同视角的局部观测，形成共享的空间心理模型。两个静态MLLM智能体从不同位置观察同一3D室内场景，通过多轮对话协同回答空间查询，包含899个多样场景和1250个问答对，覆盖锚点识别、全局计数、相对距离、相对方向和认知地图五类任务。评估显示MLLM性能随任务层次递减，即便最强模型Gemini-3-Pro-Thinking也仅达72%均值准确率，而人类达95%。研究揭示MLLM在跨视角接地和几何推理上存在根本性缺陷，且无法像人类那样通过对话快速收敛于共享空间模型，为多智能体空间协作研究提供了重要评估平台。",
+    "tags": ["VLM", "API"]
+  }
+]
