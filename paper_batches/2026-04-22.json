@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-04-22",
+    "title": "AgentSPEX: An Agent SPecification and EXecution Language",
+    "arxiv_id": "2604.13346",
+    "github": "https://github.com/ScaleML/AgentSPEX",
+    "abstract": "AgentSPEX 是一种用于声明式定义 LLM 智能体工作流的语言与执行框架，支持显式控制流、模块化结构、类型化步骤、分支循环、并行执行及状态管理。相比 LangGraph、DSPy 等将工作流逻辑与 Python 深度耦合的框架，AgentSPEX 将工作流逻辑从代码中解耦，使智能体行为更易于维护与修改。执行层提供工具访问、沙箱虚拟环境、断点恢复和日志支持，并附带可视化编辑器。作者提供了深度研究和科学研究两个即用型智能体，并在 7 个基准上进行了评估，用户研究表明 AgentSPEX 比主流框架具有更好的可解释性和易用性。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "TEMPO: Scaling Test-time Training for Large Reasoning Models",
+    "arxiv_id": "2604.19295",
+    "github": "https://github.com/QingyangZhang/TEMPO",
+    "abstract": "TEMPO 是一个面向大型推理模型的测试时训练（TTT）框架，解决了现有 TTT 方法因自生成奖励信号漂移导致性能停滞的问题。核心思路是将策略细化与周期性的评判者重校准交替进行：通过 EM 算法形式化分析，揭示了先前方法本质上是省略了关键重校准步骤的不完整变体。重新引入该步骤能有效收紧 ELBO，实现持续提升。实验表明，TEMPO 使 OLMO3-7B 在 AIME 2024 上从 33.0% 提升至 51.1%，Qwen3-14B 从 42.3% 提升至 65.8%，同时保持高生成多样性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "PlayCoder: Making LLM-Generated GUI Code Playable",
+    "arxiv_id": "2604.19742",
+    "github": "https://github.com/Tencent/PlayCoder",
+    "abstract": "PlayCoder 是一个多智能体框架，专注于生成可实际运行的 GUI 应用程序代码。现有方法仅检测编译和单元测试成功率，忽视了 GUI 应用中隐性逻辑错误（如碰撞检测失效）。PlayCoder 通过 PlayDeveloper（仓库感知代码生成）和 PlayRefiner（自动化程序修复）两个专用智能体协作，引入 Play@k 指标通过实际用户交互仿真评估行为正确性。PlayEval 数据集覆盖 43 个跨语言 GUI 应用，涉及 Python、TypeScript、JavaScript 和多种 GUI 框架，在 FSE 2026 上发表。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "Understanding and Enforcing Weight Disentanglement in Task Arithmetic",
+    "arxiv_id": "2604.17078",
+    "github": "https://github.com/RL-MIND/OrthoReg",
+    "abstract": "本文从理论上解释了任务算术（Task Arithmetic）中权重解耦成功的根本原因。作者提出任务特征专化（TFS）概念，证明 TFS 是权重解耦的充分条件，并会产生权重向量正交性这一可观测几何结论。基于此，提出 OrthoReg 正则化方法，通过在微调时对权重更新 ΔW 施加列正交约束来促进解耦，并给出理论证明。在 ViT-B-32、ViT-B-16、ViT-L-14 上的实验验证 OrthoReg 显著提升多任务算术方法性能，荣获 CVPR 2026 Oral。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "Target-Oriented Pretraining Data Selection via Neuron-Activated Graph",
+    "arxiv_id": "2604.15706",
+    "github": "https://github.com/asillycat/NAG",
+    "abstract": "NAG（Neuron-Activated Graph Ranking）是一个无需训练的可解释预训练数据选择框架，用于面向目标任务的语言模型预训练。方法通过量化神经元重要性，从现成 LLM 中提取目标输入对应的高影响力神经元，构建紧凑的神经元激活图，并以此排序候选数据。在 6 个基准上的实验显示，NAG 比随机采样平均提升 4.9%，在 HellaSwag 上超越 SOTA 基线 5.3%，且在多目标设置中同样有效。消融实验表明仅 0.12% 的神经元失活即导致 23.5% 的性能崩溃。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "UDM-GRPO: Stable and Efficient Group Relative Policy Optimization for Uniform Discrete Diffusion Models",
+    "arxiv_id": "2604.18518",
+    "github": "https://github.com/Yovecent/UDM-GRPO",
+    "abstract": "UDM-GRPO 是首个将均匀离散扩散模型（UDM）与强化学习结合的框架。直接应用 GRPO 于 UDM 会导致训练不稳定和性能提升有限，本文提出两个核心改进：(1) 以最终干净样本作为动作以获得准确稳定的优化信号；(2) 通过扩散前向过程重建轨迹以更好对齐预训练分布。同时引入 Reduced-Step 和 CFG-Free 两个策略提升训练效率。实验中 GenEval 准确率从 69% 提升至 96%，PickScore 从 20.46 提升至 23.81，达到连续和离散设置下的 SOTA。",
+    "tags": ["RL", "扩散模型"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "SmartPhotoCrafter: Unified Reasoning, Generation and Optimization for Automatic Photographic Image Editing",
+    "arxiv_id": "2604.19587",
+    "github": "https://github.com/vivoCameraResearch/SmartPhotoCrafter",
+    "abstract": "SmartPhotoCrafter 是一个全自动照片图像编辑框架，将图像编辑重新定义为闭环推理到生成的过程，无需用户提供显式编辑指令。Image Critic 模块负责图像质量理解和缺陷识别，Photographic Artist 模块执行有针对性的编辑。采用三阶段训练流程：(1) 基础预训练建立审美理解与编辑能力；(2) 带推理引导的多编辑监督适配；(3) 协调推理与生成的强化学习联合优化。支持图像复原（去噪、去模糊、低光增强）和润色（色调、对比度）双模式，在自动摄影增强任务上超越现有生成模型。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-04-22",
+    "title": "Micro Language Models Enable Instant Responses",
+    "arxiv_id": "2604.19642",
+    "github": "https://github.com/Sensente/micro_language_model_swen_project",
+    "abstract": "微型语言模型（μLM）是 8M-30M 参数的超紧凑模型，专为智能手表、智能眼镜等边缘设备设计。现有最小的 100M-1B 参数模型因功耗限制无法在边缘端持续运行，而云端推理又有多秒延迟。μLM 的策略是在设备端即时生成响应的前 4-8 个词，同时云端模型完成后续内容，从而掩盖云端延迟。论文提出协作生成框架，将云端模型定义为续写者而非独立回答者，实现无缝的句中接力，并设计三种纠错方法应对本地模型输出错误的情况。实验表明 μLM 可媲美多个 70M-256M 规模的模型。",
+    "tags": ["API", "微调"]
+  }
+]

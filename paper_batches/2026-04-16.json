@@ -1,0 +1,148 @@
+[
+  {
+    "date": "2026-04-16",
+    "title": "GameWorld: Towards Standardized and Verifiable Evaluation of Multimodal Game Agents",
+    "arxiv_id": "2604.07429",
+    "github": "https://github.com/gameworld-project/gameworld",
+    "abstract": "GameWorld 提出了一个标准化、可验证的多模态 LLM 游戏智能体评测框架，覆盖 34 款浏览器游戏共 170 项任务。框架支持两类接口：基于键鼠控制的 computer-use 智能体与语义动作空间的通用多模态智能体，并配套状态可验证指标实现结果驱动评估。对 18 种模型-接口组合的测评表明，当前最优智能体与人类水平仍存在显著差距。实验还揭示了实时交互、上下文记忆敏感性及动作合法性等多项挑战，为多模态游戏智能体研究提供了坚实基础。",
+    "tags": [
+      "VLM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "RationalRewards: Reasoning Rewards Scale Visual Generation Both Training and Test Time",
+    "arxiv_id": "2604.11626",
+    "github": "https://github.com/TIGER-AI-Lab/RationalRewards",
+    "abstract": "RationalRewards 提出让奖励模型在评分前生成多维度结构化批评，从而将其从被动评估器转变为主动优化工具。训练时，结构化理由为强化学习提供可解释的细粒度奖励；测试时，生成-批评-精炼循环无需更新参数即可提升生成质量。为避免昂贵的理由标注，作者提出 PARROT 框架从偏好数据中恢复高质量理由。RationalRewards（8B）在开源奖励模型中达到 SOTA，性能媲美 Gemini-2.5-Pro，训练数据仅需同类基线的 1/10–1/20，并在文生图和图像编辑任务上持续优于标量奖励。",
+    "tags": [
+      "RL",
+      "VLM",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "SpatialEvo: Self-Evolving Spatial Intelligence via Deterministic Geometric Environments",
+    "arxiv_id": "2604.14144",
+    "github": "https://github.com/ZJU-REAL/SpatialEvo",
+    "abstract": "SpatialEvo 提出一个用于空间推理的自进化框架，核心是确定性几何环境（DGE）。DGE 从点云和相机位姿直接计算真实标签，无需模型共识，避免了伪标签强化自身错误的问题。框架中单一共享参数策略同时扮演提问者和求解者角色：提问者生成物理合法的空间问题，求解者依据 DGE 验证的真值作答。任务自适应调度器自动将训练集中在模型薄弱类别，形成动态课程。在 9 项基准上，SpatialEvo 在 3B 和 7B 规模均取得最高平均分，且不影响通用视觉理解能力。",
+    "tags": [
+      "RL",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "From P(y|x) to P(y): Investigating Reinforcement Learning in Pre-train Space",
+    "arxiv_id": "2604.14142",
+    "github": "https://github.com/Trae1ounG/Pretrain_Space_RLVR",
+    "abstract": "本文提出 PreRL，将带可验证奖励的强化学习从条件分布 P(y|x) 扩展至预训练空间的边缘分布 P(y)，突破基础模型输出分布的瓶颈。理论和实验验证了 log P(y) 与 log P(y|x) 之间的梯度对齐。进一步发现，PreRL 中的负样本强化（NSR）能快速剪除错误推理空间，并激发内生反思行为，使过渡性和反思性思维分别提升 14.89 倍和 6.54 倍。在此基础上提出双空间 RL（DSRL），先用 NSR-PreRL 初始化模型扩展推理边界，再切换到标准 RL 进行细粒度优化，在多项基准上超越强基线。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Exploration and Exploitation Errors Are Measurable for Language Model Agents",
+    "arxiv_id": "2604.13151",
+    "github": "https://github.com/jjj-madison/measurable-explore-exploit",
+    "abstract": "本文提出一套可量化语言模型智能体探索与利用误差的评估框架，设计了由部分可观测 2D 网格地图和未知任务 DAG 构成的可控环境，可程序化调节探索/利用难度。定义了与策略无关的指标，仅依据观测动作轨迹即可量化两类错误。对多个前沿模型的评测发现，即便最强模型也在该任务上表现欠佳，推理模型整体优于普通模型。最小化 harness 工程（如 GPT-4.1 成功率从 63% 提升至 92.6%）即可显著改善两类错误，代码已开源。",
+    "tags": [
+      "API",
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Sema Code: Decoupling AI Coding Agents into Programmable, Embeddable Infrastructure",
+    "arxiv_id": "2604.11045",
+    "github": "https://github.com/midea-ai/sema-code-core",
+    "abstract": "Sema Code 提出将 AI 编程智能体核心引擎完全与客户端解耦，以独立 npm 库形式发布，使任意运行时均可编程驱动。框架设计了八项核心机制：多租户隔离、FIFO 输入队列、自适应上下文压缩、多智能体协作调度、基于 Todo 的流程管理、四层异步权限控制、MCP/Skills/Plugins 三层生态集成及后台任务框架。同一核心引擎同时驱动 VSCode 扩展和多渠道消息网关（SemaClaw），展示了将复杂 Agent 引擎转化为可共享、可编程基础设施的工程实践。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Target Policy Optimization",
+    "arxiv_id": "2604.06159",
+    "github": "https://github.com/JeanKaddour/tpo",
+    "abstract": "TPO（目标策略优化）将 RL 中\"哪些补全应获得更高概率\"与\"参数如何更新\"解耦。给定带评分的候选补全，TPO 构造目标分布 q_i ∝ p_i^old · exp(u_i) 并以交叉熵最小化拟合策略，梯度在策略匹配目标时精确归零，无需裁剪或其他优化器技巧。在表格型 bandit、Transformer 序列任务及十亿参数 LLM 的 RLVR 实验中，TPO 在简单任务上与 PG/PPO/GRPO/DG 持平，在稀疏奖励场景下显著超越这些基线。JAX 实现已开源。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "SemaClaw: A Step Towards General-Purpose Personal AI Agents through Harness Engineering",
+    "arxiv_id": "2604.11548",
+    "github": "https://github.com/midea-ai/SemaClaw",
+    "abstract": "SemaClaw 是面向通用个人 AI 智能体的开源 harness 工程框架，应对大规模个人智能体部署的挑战。核心贡献包括：基于 DAG 的两阶段混合智能体团队编排方法（LLM 动态分解 + 确定性 DAG 执行）、PermissionBridge 行为安全系统、三层上下文管理架构（工作上下文/长期记忆/人设分区）以及 agentic wiki 技能（自动构建个人知识库）。框架同时提供 Telegram、飞书等多渠道适配器和 React WebUI，以 MIT 协议开源，旨在推动个人 AI 智能体工程基础设施的共同发展。",
+    "tags": [
+      "MeM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "LangFlow: Continuous Diffusion Rivals Discrete in Language Modeling",
+    "arxiv_id": "2604.11748",
+    "github": "https://github.com/nealchen2003/LangFlow",
+    "abstract": "LangFlow 是首个在语言建模上与离散扩散模型媲美的连续扩散语言模型。通过将嵌入空间 DLM 与 Flow Matching 经由 Bregman 散度相连接，提出三项关键创新：基于 ODE 的新型 NLL 下界用于原则化评估；信息均匀原则指导噪声调度，驱动基于 Gumbel 分布的可学习噪声调度器；引入 self-conditioning 以改善嵌入空间 DLM 的似然与样本质量。LangFlow 在 LM1B 上困惑度为 30.0，在 OpenWebText 上为 24.6，并在 7 个零样本迁移基准中的 4 个超越自回归基线。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "UI-Zoomer: Uncertainty-Driven Adaptive Zoom-In for GUI Grounding",
+    "arxiv_id": "2604.14113",
+    "github": "https://github.com/ZJU-REAL/UI-Zoomer",
+    "abstract": "UI-Zoomer 提出无需训练的自适应缩放 GUI 定位框架，将缩放触发和缩放尺度都转化为预测不确定性量化问题。置信感知门控结合候选预测的空间共识与词元级置信度，仅在定位不确定时触发缩放；不确定性驱动的裁剪尺寸模块将预测方差分解为样本间位置散布和样本内框范围，推导每实例自适应裁剪半径。在 ScreenSpot-Pro、UI-Vision 和 ScreenSpot-v2 三个基准上，UI-Zoomer 对多种模型架构均实现一致提升，最高分别提升 +13.4%、+10.3% 和 +4.2%，无需任何额外训练。",
+    "tags": [
+      "VLM",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "SkVM: Compiling Skills for Efficient Execution Everywhere",
+    "arxiv_id": "2604.03088",
+    "github": "https://github.com/SJTU-IPADS/SkVM",
+    "abstract": "SkVM 提出将 LLM 智能体技能（Skill）视为代码、LLM 视为异构处理器，构建面向可移植高效技能执行的编译与运行时系统。通过分析 118,000 个技能，将技能需求分解为原始能力集合并测量模型-harness 对的能力覆盖，驱动 AOT 编译（能力适配、环境绑定、并发提取）和 JIT 优化（代码固化与自适应重编译）。在 8 个 LLM 和 3 种 harness 的评测中，SkVM 显著提升任务完成率，token 消耗降低至多 40%，并发带来最高 3.2 倍加速，代码固化实现 19–50 倍延迟降低。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Narrative-Driven Paper-to-Slide Generation via ArcDeck",
+    "arxiv_id": "2604.11969",
+    "github": "https://github.com/RehgLab/ArcDeck",
+    "abstract": "ArcDeck 将论文转幻灯片任务建模为结构化叙事重构，而非简单文本摘要。框架首先解析论文构建篇章树和全局承诺文档以保留高层意图，再由多个专门智能体（话语解析器、承诺构建器、幻灯片规划器、叙事批评者、叙事裁判）迭代批评和修订大纲，最终渲染视觉布局。作者还构建了 ArcBench 基准（100 篇顶会口头报告论文及其幻灯片）。实验表明，显式篇章建模结合角色专属智能体协调显著提升生成幻灯片的叙事连贯性和逻辑一致性。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "title": "What do Language Models Learn and When? The Implicit Curriculum Hypothesis",
+    "arxiv_id": "2604.08510",
+    "github": "https://github.com/KaiserWhoLearns/ElementalTask",
+    "abstract": "本文提出\"隐式课程假说\"：LLM 预训练遵循跨模型和数据混合一致的组合性可预测课程。作者设计了涵盖检索、词法变换、共指消解、逻辑推理和数学的简单可组合任务套件，追踪四个模型系列（410M–13B）的涌现节点。研究发现：45 对模型间的涌现顺序高度一致（ρ=0.81），复合任务通常在其组件任务之后涌现；这一结构编码于模型表征中——函数向量相似的任务训练轨迹也相似；利用任务集表征空间可有效预测新组合任务的训练轨迹（R²=0.68–0.84）。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Mobile GUI Agents under Real-world Threats: Are We There Yet?",
+    "arxiv_id": "2507.04227",
+    "github": "https://github.com/Zsbyqx20/AgentHazard",
+    "abstract": "本文研究移动 GUI 智能体在真实世界威胁下的鲁棒性。作者提出可扩展的应用内容注入框架，在现有应用中灵活植入来自不可信第三方的广告、用户生成内容等干扰材料，构建包含 122 个可复现动态任务和 3,000+ 静态场景的测试套件。实验表明，所有被测开源及商业 GUI 智能体均显著受到第三方内容干扰，动态和静态环境下平均误导率分别达 42.0% 和 36.1%，揭示了当前 GUI 智能体大规模部署前亟需解决的安全隐患。",
+    "tags": [
+      "VLM",
+      "API"
+    ]
+  }
+]

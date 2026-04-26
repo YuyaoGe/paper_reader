@@ -1,0 +1,199 @@
+[
+  {
+    "date": "2026-04-15",
+    "title": "ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents",
+    "arxiv_id": "2604.11784",
+    "github": "https://github.com/ZJU-REAL/ClawGUI",
+    "abstract": "ClawGUI 是一个 GUI 智能体全生命周期框架，整合在线强化学习训练（ClawGUI-RL）、标准化评估（ClawGUI-Eval）和真机部署（ClawGUI-Agent）三大模块。训练模块采用 GiGPO+PRM 算法，通过并行 Docker 虚拟 Android 环境进行在线 RL，实现细粒度步骤级奖励。评估模块覆盖 6 个主流任务、11+ 模型，复现率达 95.8%。部署模块支持通过自然语言控制移动设备，兼容 12+ 聊天平台。基于此框架端到端训练的 ClawGUI-2B 模型在 MobileWorld 任务上达到 17.1 SR，相比基线 11.1 显著提升。",
+    "tags": [
+      "RL",
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance",
+    "arxiv_id": "2604.12627",
+    "github": "https://github.com/Hasuer/KnowRL",
+    "abstract": "RLVR 在 LLM 推理训练中面临困难问题的奖励稀疏挑战。现有基于提示的方法通过注入部分解答或模板来缓解稀疏性，但会增加 token 数量并引入干扰。KnowRL 提出最小充分知识引导策略：仅提供解决问题所必需的最少知识片段，降低奖励稀疏性同时减少干扰。该方法在数学、科学等多个推理任务上均优于基线，证明精准适量的知识引导能有效提升 LLM 推理能力，无需大幅增加输入长度。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Toward Autonomous Long-Horizon Engineering for ML Research",
+    "arxiv_id": "2604.13018",
+    "github": "https://github.com/AweAI-Team/AiScientist",
+    "abstract": "AiScientist 是一个面向长时域 ML 研究工程的自主 AI 系统，采用 File-as-Bus 协调架构，以文件作为智能体间通信媒介。系统包含层次化研究团队编排机制，可在任务理解、环境配置、实现、实验和调试等阶段保持连贯进展。在 24 小时连续运行中经历 78 次实验循环持续提升性能，已集成 PaperBench 和 MLE-Bench 评测任务，展示了自主 ML 研究工程的可行性。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "SPPO: Sequence-Level PPO for Long-Horizon Reasoning Tasks",
+    "arxiv_id": "2604.08865",
+    "github": "https://github.com/sustech-nlp/SPPO",
+    "abstract": "标准 token 级 PPO 在长链推理任务中面临时序信用分配不稳定和价值模型内存开销过大的问题，GRPO 等无 critic 替代方案又需要多次采样影响吞吐量。SPPO 将多步 MDP 转化为序列级上下文 Bandit，把整个推理链视为单一原子动作，通过解耦的标量价值函数生成低方差优势信号，无需多重采样。轻量级小 critic 架构（7B 策略配 1.5B critic）大幅降低显存需求，在 ACL 2026 主会上获接收，长链推理任务实验验证了方法高效性。",
+    "tags": [
+      "RL",
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "BERT-as-a-Judge: A Robust Alternative to Lexical Methods for Efficient Reference-Based LLM Evaluation",
+    "arxiv_id": "2604.09497",
+    "github": "https://github.com/artefactory/BERT-as-a-Judge",
+    "abstract": "当前基于参考答案的 LLM 评估依赖词法方法（精确匹配、ROUGE 等），这类方法将模型失败与评估噪声混淆，难以准确反映语义正确性。BERT-as-a-Judge 使用编码器模型替代词法指标作为生成任务评估工具，支持答案生成、合成标注和模型训练全流程。实验表明 BERTJudge 比词法方法更鲁棒、与人类评判相关性更高，同时比 LLM-as-Judge 方法计算效率更优，可作为多种 LLM 评测任务的通用评估器。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents",
+    "arxiv_id": "2604.10577",
+    "github": "https://github.com/limenlp/OS_Blind",
+    "abstract": "现有计算机使用智能体安全评估主要针对显式恶意指令或提示注入，忽略了更隐蔽的威胁：从良性用户指令出发，在执行过程中被环境诱导产生有害行为。OS-Blind 构建 300 个人工设计任务，覆盖 12 个安全类别，分属环境嵌入威胁和智能体主动危害两类，基于 OSWorld 框架系统评估主流 CUA 在此类攻击下的脆弱性，揭示当前安全机制存在严重盲区。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Towards Long-horizon Agentic Multimodal Search",
+    "arxiv_id": "2604.12890",
+    "github": "https://github.com/RUCAIBox/LMM-Searcher",
+    "abstract": "多模态深度搜索智能体在长时域任务中面临视觉输入 token 高消耗导致的上下文爆炸问题。LMM-Searcher 提出三项技术：基于文件系统的多模态数据管理（用文本标识符 UID 代替图像）、扩展的主动感知工具接口（按需加载视觉内容），以及从教师模型蒸馏多轮跨模态推理轨迹的长时域数据合成流水线。方法支持扩展至 100 个交互轮次，在 MM-BrowseComp 和 MMSearch-Plus 上达到开源最优。",
+    "tags": [
+      "VLM",
+      "长文本",
+      "微调",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Hierarchical SVG Tokenization: Learning Compact Visual Programs for Scalable Vector Graphics Modeling",
+    "arxiv_id": "2604.05072",
+    "github": "https://github.com/ximinng/HiVG",
+    "abstract": "现有 SVG 生成方法沿用字节级分词，忽略 SVG 几何结构特性。HiVG 提出层次化 SVG 分词：原始 SVG 到原子 token 再到片段 token，实现 2.76 倍序列压缩。基于此分词器，3B 参数的 HiVG 模型在图像到 SVG 任务上超越包括 GPT-5 和 Gemini 2.5 在内的 7 个专有模型，支持高保真图像转 SVG 和文本转 SVG 两种模式，模型权重与训练代码全部开源。",
+    "tags": [
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Many-Tier Instruction Hierarchy in LLM Agents",
+    "arxiv_id": "2604.09443",
+    "github": "https://github.com/JHU-CLSP/ManyIH",
+    "abstract": "当前指令层次范式假设固定少量权限级别（通常不超过 5 个），无法适应真实 Agent 场景中多来源、多层级的指令冲突。ManyIH 通过特权提示接口动态分配权限值，支持任意多层冲突解决。ManyIH-Bench 包含 853 个最多 12 层级的 Agent 任务（427 编码 + 426 指令跟随），覆盖 46 个真实 Agent 场景。当前最强前沿模型准确率仅约 40%，揭示多层指令冲突解决是尚未解决的关键能力。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Generative Refinement Networks for Visual Synthesis",
+    "arxiv_id": "2604.13030",
+    "github": "https://github.com/MGenAI/GRN",
+    "abstract": "扩散模型对所有复杂度一视同仁浪费计算，自回归模型有复杂度感知能力但受离散分词和误差累积制约。GRN 引入层次二值量化（HBQ）实现近无损分词，通过全局精炼机制逐步修正生成结果，结合熵引导采样实现复杂度感知的自适应步骤生成。在 ImageNet 上刷新图像重建（rFID 0.56）和类别条件生成（gFID 1.81）双项纪录，成功扩展至文生图和文生视频任务，模型与代码开源。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Habitat-GS: A High-Fidelity Navigation Simulator with Dynamic Gaussian Splatting",
+    "arxiv_id": "2604.12626",
+    "github": "https://github.com/zju3dv/habitat-gs",
+    "abstract": "Habitat-GS 在 Habitat-Sim 基础上集成 3D Gaussian Splatting 场景渲染和可驾驶高斯化身，保持与 Habitat 生态完整兼容。实时 3DGS 渲染支持从多种来源导入资产，动态人体模块使化身同时充当视觉实体和导航障碍，使智能体能在真实场景中学习人群感知行为。点目标导航实验表明 3DGS 场景训练的智能体跨域泛化能力更强，混合域训练效果最佳，系统扩展性实验覆盖多种场景复杂度和化身数量。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Self-Adversarial One Step Generation via Condition Shifting",
+    "arxiv_id": "2604.12322",
+    "github": "https://github.com/LINs-lab/APEX",
+    "abstract": "单步图像合成面临保真度、速度和训练效率三方权衡。外部判别器方法质量高但需额外模型，一致性类方法训练简便但质量受限。APEX 提出自对抗条件偏移机制，利用同一生成器作为自身判别器，通过偏移条件信号构造对抗训练信号，无需外部网络。在 2-4 步 NFE 设置下达到最优生成质量，在 Z-Image 和 Qwen-Image 上均验证有效，大规模训练代码与推理 demo 已开源。",
+    "tags": [
+      "扩散模型",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Grid2Matrix: Revealing Digital Agnosia in Vision-Language Models",
+    "arxiv_id": "2604.09687",
+    "github": "https://github.com/zhykoties/Grid2Matrix_DigitalAgnosia",
+    "abstract": "VLM 在多模态推理任务上表现出色，但现有评测不要求对图像进行完整逐元素解读。Grid2Matrix 要求模型将彩色网格图像精确转录为整数矩阵，揭示 VLM 存在数字失认症：模型内部视觉编码具备空间信息，但无法忠实转化为语言输出。线性探测实验进一步揭示视觉编码器与语言生成之间的对齐缺陷，同时提供了零样本推理和探测训练的完整代码。",
+    "tags": [
+      "VLM",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Parcae: Scaling Laws For Stable Looped Language Models",
+    "arxiv_id": "2604.12946",
+    "github": "https://github.com/sandyresearch/parcae",
+    "abstract": "循环架构通过将激活多次送入同一 Transformer 块来增加 FLOPs，理论上可在不增加参数的情况下提升性能，但训练不稳定性是主要障碍。Parcae 引入多项稳定化技术实现稳定的循环模型训练，并首次推导出循环语言模型的 Scaling Laws，发现计算最优训练需同步扩展循环次数和数据量。实验覆盖多种参数量级，为循环架构作为传统固定深度模型替代方案提供了系统性实证基础。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Accelerating Speculative Decoding with Block Diffusion Draft Trees",
+    "arxiv_id": "2604.12989",
+    "github": "https://github.com/liranringel/ddtree",
+    "abstract": "推测性解码通过草稿模型批量提议 token、目标模型并行验证来加速自回归 LLM。DDTree 将块扩散草稿模型与树形推测解码结合，通过分支结构显著提高草稿多样性和目标模型接受率，在加速比上超越现有基于块扩散的方法。实验基于 CUDA 的 PyTorch 环境，代码已开源，提供完整评测与绘图脚本，为高效推理提供新的工程路径。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Spec Kit Agents: Context-Grounded Agentic Workflows",
+    "arxiv_id": "2604.05278",
+    "github": "https://github.com/sbhavani/speckit-agents",
+    "abstract": "规格驱动开发结合 AI 编码智能体提供结构化工作流，但智能体在大型复杂代码库中存在上下文盲区，导致幻构 API 和架构违规。Spec Kit Agents 提出多智能体 SDD 流水线，包含 PM 智能体和开发者智能体，通过 Mattermost 聊天实现人类监督。PM 智能体读取产品需求推荐功能，开发者智能体执行 specify-plan-tasks-implement 工作流，两个智能体均由 Claude Code CLI 驱动，支持全程人工审批介入。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Domain-Specific Latent Representations Improve the Fidelity of Diffusion-Based Medical Image Super-Resolution",
+    "arxiv_id": "2604.12152",
+    "github": "https://github.com/sebasmos/latent-sr",
+    "abstract": "医学图像超分辨率的潜在扩散模型普遍沿用为自然图像设计的 VAE。本文证明这一默认选择而非扩散架构本身，才是限制重建质量的主要因素。在其他条件相同的对比实验中，将 SD-VAE 替换为领域特定的 MedVAE，在膝关节 MRI、脑 MRI 和胸部 X 光三种模态上分别提升 2.91-3.29 dB PSNR（Cohen 值 1.37-1.86，p 小于 10 的负 20 次方）。论文提供完整可复现代码包含数据准备、训练和评估脚本。",
+    "tags": [
+      "扩散模型",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Beyond Perception Errors: Semantic Fixation in Large Vision-Language Models",
+    "arxiv_id": "2604.12119",
+    "github": "https://github.com/maveryn/vlm-fix",
+    "abstract": "大型视觉语言模型倾向于依赖熟悉的语义先验，现有评测难以区分感知错误与规则映射错误。本文研究语义固着现象：即使提示要求替代解读，模型仍坚持默认解读。通过颜色、形状、图案、关系四类精心设计任务系统评估 10+ 个 VLM。论文提供训练后数据集，微调可有效缓解语义固着，并含机制分析实验揭示内部表征差异。",
+    "tags": [
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "PokeRL: Reinforcement Learning for Pokemon Red",
+    "arxiv_id": "2604.10812",
+    "github": "https://github.com/reddheeraj/PokemonRL",
+    "abstract": "精灵宝可梦红是具有稀疏奖励、部分可观测性和复杂控制机制的长时域 JRPG，是 RL 的挑战性测试床。PokeRL 采用课程学习将游戏分解为离开房子、探索和战斗三个阶段，每阶段有独立奖励函数、起始存档和 PPO 训练配置。模块化课程设计使智能体逐步掌握导航和战斗技能，相比直接从零训练收敛更快、性能更强，为长时域游戏强化学习提供了实践参考。",
+    "tags": [
+      "RL"
+    ]
+  }
+]

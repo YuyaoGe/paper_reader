@@ -1,0 +1,146 @@
+[
+  {
+    "date": "2026-04-10",
+    "title": "Rethinking Generalization in Reasoning SFT: A Conditional Analysis on Optimization, Data, and Model Capability",
+    "arxiv_id": "2604.06628",
+    "github": "https://github.com/Nebularaid2000/rethink_sft_generalization",
+    "abstract": "本文重新审视了'SFT只会记忆、RL才能泛化'这一流行观点，在长链条思维（CoT）监督下研究推理SFT的跨域泛化能力。研究发现，跨域泛化并非缺失，而是受优化动态、训练数据质量和基模型能力共同调控。若训练不充分，跨域性能会先下降后回升（下探-恢复模式），因此短训练检查点会低估泛化能力。数据质量至关重要：低质量解会损害泛化，而经过验证的长CoT轨迹则能带来跨域增益。模型能力越强，越能从简单任务中内化可迁移的过程模式（如回溯）。此外，泛化是不对称的——推理能力提升的同时安全性下降，揭示了推理SFT泛化的条件性与代价。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "SkillClaw: Let Skills Evolve Collectively with Agentic Evolver",
+    "arxiv_id": "2604.08377",
+    "github": "https://github.com/AMAP-ML/SkillClaw",
+    "abstract": "本文提出SkillClaw，一个面向多用户LLM智能体生态系统的技能集体演化框架。当前智能体依赖可复用技能完成复杂任务，但这些技能在部署后基本保持静态，导致不同用户反复重新发现相同的失败模式。SkillClaw将跨用户、跨时间的交互轨迹作为主要信号，通过自主Evolver持续聚合交互数据，识别反复出现的行为模式，并将其转化为技能更新（细化已有技能或添加新能力）。更新后的技能存储于共享仓库并同步给所有用户，使某一场景中发现的改进能系统级传播。实验表明，SkillClaw显著提升了Qwen3-Max在真实智能体场景中的表现。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "MegaStyle: Constructing Diverse and Scalable Style Dataset via Consistent Text-to-Image Style Mapping",
+    "arxiv_id": "2604.08364",
+    "github": "https://github.com/Tencent/MegaStyle",
+    "abstract": "本文提出MegaStyle，一个可扩展的风格数据集构建流程，旨在生成风格内一致、风格间多样的高质量数据集。核心思路是利用大型生成模型的一致性文生图风格映射能力，从给定风格描述中批量生成同一风格的图像。作者整理了含17万条风格提示和40万条内容提示的Prompt库，并生成了拥有140万样本的大规模数据集MegaStyle-1.4M。在此基础上，提出风格监督对比学习来微调风格编码器MegaStyle-Encoder，并训练基于FLUX的风格迁移模型MegaStyle-FLUX。实验表明MegaStyle-1.4M对风格相似度度量和可泛化的风格迁移均有显著贡献。",
+    "tags": [
+      "微调",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "DMax: Aggressive Parallel Decoding for dLLMs",
+    "arxiv_id": "2604.08302",
+    "github": "https://github.com/czg1225/DMax",
+    "abstract": "本文提出DMax，一种针对扩散语言模型（dLLMs）的高效并行解码新范式。传统掩码dLLM的二元掩码到词元转换在并行解码中会积累误差，而DMax将解码重新表述为从掩码嵌入到词元嵌入的渐进式自精化过程。核心贡献是On-Policy统一训练策略，使模型能同时从掩码输入和自身错误预测中恢复正确词元。在此基础上提出软并行解码，将解码中间状态表示为预测词元嵌入与掩码嵌入的插值，在嵌入空间中实现迭代自修正。与LLaDA-2.0-mini相比，GSM8K上TPF从2.04提升至5.47，MBPP上从2.71提升至5.86，同时在两块H200 GPU上实现平均1338 TPS的吞吐量。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
+    "arxiv_id": "2604.08539",
+    "github": "https://github.com/uclanlp/OpenVLThinker",
+    "abstract": "本文针对多模态大模型的强化学习训练提出Gaussian GRPO（G2RPO），解决跨任务奖励分布方差极大和感知与多步推理平衡困难两大挑战。G2RPO用非线性分布匹配替代标准线性缩放，将任意任务的优势分布强制收敛到标准正态分布N(0,1)，保证任务间梯度公平性、减少重尾异常值干扰并提供对称的正负奖励更新。同时引入两种任务级塑形机制：响应长度塑形动态激发复杂问题的长推理链，熵塑形有效约束探索空间防止熵崩溃或爆炸。基于上述方法构建的OpenVLThinkerV2在18个多样化基准上超越强开源模型和领先闭源模型。",
+    "tags": [
+      "RL",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
+    "arxiv_id": "2604.08545",
+    "github": "https://github.com/Accio-Lab/Metis",
+    "abstract": "本文针对智能体多模态模型中的元认知缺陷问题——即模型无法合理判断何时使用内部知识、何时调用外部工具——提出HDPO框架。现有RL方法通过标量惩罚控制工具调用频率，但存在两难困境：惩罚过强会压制必要工具使用，惩罚过弱则因奖励方差淹没而无效。HDPO将工具效率从竞争性标量目标重新定义为严格条件性目标，设立两个正交优化通道：精度通道最大化任务正确性，效率通道仅在正确轨迹中通过条件优势估计强制执行精简操作。实验表明，由此训练的Metis模型在大幅减少工具调用次数的同时显著提升推理准确率。",
+    "tags": [
+      "RL",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "OpenSpatial: A Principled Data Engine for Empowering Spatial Intelligence",
+    "arxiv_id": "2604.07296",
+    "github": "https://github.com/VINHYU/OpenSpatial",
+    "abstract": "本文提出OpenSpatial，一个面向空间智能的开源数据生成引擎，旨在填补高质量空间数据系统化生成的空白。OpenSpatial以三维边界框为基本原语，构建涵盖空间测量、空间关系、相机感知、多视角一致性和场景感知推理五大任务的完整数据层次体系。基于该可扩展基础设施，作者整理了包含300万高保真样本的OpenSpatial-3M数据集。在该数据集上训练的模型在多个空间推理基准上取得最优性能，最高相对提升达19%。通过开源引擎和数据集，为空间智能研究提供了坚实基础。",
+    "tags": [
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "Graph of Skills: Dependency-Aware Structural Retrieval for Massive Agent Skills",
+    "arxiv_id": "2604.05333",
+    "github": "https://github.com/davidliuk/graph-of-skills",
+    "abstract": "本文提出Graph of Skills（GoS），一种面向大规模技能库的推理时结构化检索层，解决技能集扩展至数千条时的上下文窗口饱和、幻觉和延迟问题。GoS离线从技能包构建可执行技能图，推理时通过混合语义-词汇种子、反向加权个性化PageRank和上下文预算水化，检索一个边界明确、依赖感知的技能包。在SkillsBench和ALFWorld上，与全技能加载基线相比，GoS将平均奖励提升43.6%，同时将输入Token减少37.8%，且能在Claude Sonnet、GPT-5.2 Codex和MiniMax三种模型上泛化。",
+    "tags": [
+      "无需训练",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "Automating Database-Native Function Code Synthesis with LLMs",
+    "arxiv_id": "2604.06231",
+    "github": "https://github.com/weAIDB/OpenCook",
+    "abstract": "本文提出DBCooker，一个自动合成数据库原生函数代码的LLM驱动系统，解决现有通用代码生成工具在数据库特定开发中易产生幻觉的问题。DBCooker包含三个模块：函数特征化模块聚合多源声明并追踪跨单元依赖；伪代码编码计划生成器构建结构化实现骨架；混合填空模型结合概率先验和组件感知集成核心逻辑。此外，三层渐进验证（语法、规范、LLM语义）保障合成质量，自适应编排策略统一所有操作。实验在SQLite、PostgreSQL和DuckDB上平均准确率比其他方法高34.55%，并能合成最新SQLite中不存在的新函数。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference",
+    "arxiv_id": "2604.07394",
+    "github": "https://github.com/qqtang-code/FluxAttention",
+    "abstract": "本文提出Flux Attention，一种上下文感知的混合注意力框架，解决标准注意力机制在长上下文场景下的二次复杂度瓶颈。与现有静态分配全注意力和稀疏注意力比例的方法不同，Flux Attention通过轻量级Layer Router动态在层级路由每一层到全注意力或稀疏注意力，并插入冻结的预训练LLM中。层级路由保证了高保真信息检索和连续内存访问，将理论计算量减少转化为实际加速。仅需8块A800 GPU训练12小时，Flux Attention在多个长上下文和数学推理基准上实现预填充阶段2.8倍、解码阶段2.0倍的加速，同时保持性能。",
+    "tags": [
+      "长文本",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "AnomalyVFM -- Transforming Vision Foundation Models into Zero-Shot Anomaly Detectors",
+    "arxiv_id": "2601.20524",
+    "github": "https://github.com/MaticFuc/AnomalyVFM",
+    "abstract": "本文提出AnomalyVFM，一个将任意预训练视觉基础模型（VFM）转化为强零样本异常检测器的通用框架。现有基于VFM的方法在性能上落后于基于视觉语言模型（如CLIP）的方法，原因在于辅助数据集多样性不足且VFM适配策略过于浅层。AnomalyVFM结合鲁棒的三阶段合成数据集生成方案与参数高效适配机制（低秩特征适配器和置信度加权像素损失），显著提升VFM的零样本异常检测能力。以RADIO为骨干网络，在9个多样化数据集上的平均图像级AUROC达94.1%，超越先前最优方法3.3个百分点。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "POS-ISP: Pipeline Optimization at the Sequence Level for Task-aware ISP",
+    "arxiv_id": "2604.06938",
+    "github": "https://github.com/w1jyun/POS-ISP",
+    "abstract": "本文提出POS-ISP，一个序列级强化学习框架，将模块化ISP优化建模为全局序列预测问题。现有面向任务的ISP流水线优化方法（NAS或逐步RL）存在训练-推理不匹配或训练不稳定、计算开销大等问题。POS-ISP在单次前向传播中同时预测完整模块序列及其参数，并使用终端任务奖励优化流水线，消除了中间监督和冗余执行的需求。在多个下游任务（深度估计、目标检测、语义分割）上的实验表明，POS-ISP在提升任务性能的同时降低了计算成本，验证了序列级优化作为任务感知ISP的稳定高效范式。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "Structural Graph Probing of Vision-Language Models",
+    "arxiv_id": "2603.27070",
+    "github": "https://github.com/he-h/vlm-graph-probing",
+    "abstract": "本文从神经拓扑视角研究视觉语言模型（VLM）的内部组织方式，将每一层表示为由神经元协激活导出的层内相关图。通过这一视角探讨：群体级结构是否具有行为意义、其如何随模态和层深度变化，以及它是否能识别在干预下具有因果影响力的内部组件。研究发现，相关拓扑携带可恢复的行为信号；跨模态结构随深度围绕一组紧凑的循环中枢神经元逐步整合，对这些中枢神经元的定向扰动会显著改变模型输出。神经拓扑因此成为VLM可解释性的有意义中间尺度：比局部归因更丰富，比完整回路恢复更易处理，并与多模态行为实证关联。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "title": "CylinderDepth: Cylindrical Spatial Attention for Multi-View Consistent Self-Supervised Surround Depth Estimation",
+    "arxiv_id": "2511.16428",
+    "github": "https://github.com/abualhanud/CylinderDepth",
+    "abstract": "本文提出CylinderDepth，一种面向多相机环视系统的自监督深度估计方法，解决现有方法在重叠图像间深度估计不一致的问题。CylinderDepth通过将图像特征位置映射到共享柱面坐标系，建立跨视图邻域关系，并基于柱面位置上的距离对跨视图特征进行非学习权重的显式空间注意力聚合，扩展了边界区域的感受野并限制了跨视图注意力范围。调制后的特征被解码为每个视图的深度图。在DDAD和nuScenes数据集上的评估表明，该方法在跨视图深度一致性和整体深度精度上均优于现有最先进方法。",
+    "tags": []
+  }
+]

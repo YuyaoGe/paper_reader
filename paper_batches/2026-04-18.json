@@ -1,0 +1,64 @@
+[
+  {
+    "date": "2026-04-18",
+    "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
+    "arxiv_id": "2604.14164",
+    "github": "https://github.com/CoopReason/TESSY",
+    "abstract": "本文提出 TESSY（Teacher-Student Cooperative Data Synthesis），一种用于推理模型微调的教师-学生协同数据合成框架。传统做法是直接用强教师模型生成数据进行 SFT，但对 Qwen3-8B 等新型推理模型会导致严重的灾难性遗忘。TESSY 的核心创新在于将生成过程解耦：教师模型负责生成\"能力 token\"（推理逻辑），学生模型负责生成\"风格 token\"（如思考前缀词），从而合成既具备教师推理能力又与学生分布一致的训练数据。实验表明，相比直接用 GPT-OSS-120B 生成数据导致的性能下降，TESSY 在 LiveCodeBench-Pro 上提升 11.25%，在 OJBench 上提升 6.68%，有效解决了跨模型 SFT 中的分布漂移问题。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "title": "RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework",
+    "arxiv_id": "2604.15308",
+    "github": "https://github.com/hustvl/RAD",
+    "abstract": "本文提出 RAD-2，一种用于自动驾驶闭环规划的生成器-判别器统一框架。扩散模型作为生成器产生多样化轨迹候选，RL 优化的判别器按长期驾驶质量对候选排序，解耦设计避免了对高维轨迹空间直接施加稀疏奖励。本文还引入时序一致的群体相对策略优化（TC-GRPO），利用时序连贯性缓解信用分配问题；以及在线策略生成器优化，将闭环反馈转化为纵向优化信号。同时提出 BEV-Warp 高吞吐仿真环境，在鸟瞰图特征空间直接进行闭环评估。相比强扩散规划基线，RAD-2 碰撞率降低 56%，真实部署中驾驶安全性和平顺性显著提升。",
+    "tags": [
+      "RL",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "title": "TRACER: Trace-Based Adaptive Cost-Efficient Routing for LLM Classification",
+    "arxiv_id": "2604.14531",
+    "github": "https://github.com/adrida/tracer",
+    "abstract": "本文提出 TRACER，一个开源系统，利用 LLM 分类端点的生产日志作为免费训练集，训练轻量级 ML 代理模型（逻辑回归、梯度提升树等）来承接大部分分类流量。系统通过\"奇偶门\"控制部署：只有当代理模型与教师 LLM 的一致性超过用户指定阈值 α 时才激活代理。每次被延迟到 LLM 的输入都产生新训练数据，覆盖率随时间自动增长。实验表明，在 77 类意图分类任务中，TRACER 实现 83-100% 的代理覆盖率；在 150 类任务中代理完全替代教师模型，每日 1 万次查询可节省约 $6670/年。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "title": "Reinforcement Learning via Value Gradient Flow",
+    "arxiv_id": "2604.14265",
+    "github": "https://github.com/ryanxhr/vgf",
+    "abstract": "本文提出价值梯度流（VGF），一种用于行为正则化强化学习的可扩展新范式。VGF 将行为正则化 RL 形式化为最优传输问题，将参考分布映射到价值诱导的最优策略分布，通过离散梯度流求解，价值梯度引导从参考分布初始化的粒子。与重参数化策略梯度（难以扩展到大型生成模型）和拒绝采样（过于保守）相比，VGF 无需显式策略参数化，支持通过调整传输预算实现自适应测试时扩展。在离线 RL 基准（D4RL、OGBench）和 LLM RL 任务上均达到最优水平，对 LLM 微调中的 KL 正则化问题有重要意义。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "title": "MM-WebAgent: A Hierarchical Multimodal Web Agent for Webpage Generation",
+    "arxiv_id": "2604.15309",
+    "github": "https://github.com/microsoft/MM-WebAgent",
+    "abstract": "本文提出 MM-WebAgent，一种用于多模态网页生成的层级式智能体框架，将网页创作转化为自动化设计流程，协调 AIGC 工具生成图像、视频、图表和布局。框架分三层优化：全局布局规划（页面级连贯性）、局部多模态内容生成（上下文约束下的资产质量）和跨元素一致性精炼（层级多轮反思）。相比传统代码生成方式，MM-WebAgent 生成的网页在多模态集成、风格一致性和视觉和谐度上显著更优。同时引入 MM-WebGEN-Bench，包含 11 类场景、11 种视觉风格、多种多模态元素组合的 120 个设计提示，以及多层次评估协议。",
+    "tags": [
+      "VLM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-18",
+    "title": "Towards Autonomous Mechanistic Reasoning in Virtual Cells",
+    "arxiv_id": "2604.11661",
+    "github": "https://github.com/valence-labs/VCR-Agent",
+    "abstract": "本文针对 LLM 在生物学等开放性科学领域缺乏事实依据和可操作解释的问题，提出了一种用于虚拟细胞的结构化解释形式主义，将生物推理表示为机制动作图，支持系统化验证和证伪。在此基础上提出 VCR-Agent，一个多智能体框架，集成基于生物知识的检索与验证器过滤方法，自主生成和验证机制推理。利用该框架发布了 VC-TRACES 数据集，包含从 Tahoe-100M 图谱衍生的经验证机制解释。实验表明，用这些解释训练可提升下游基因表达预测的事实精度，为虚拟细胞研究提供可靠的机制推理能力。",
+    "tags": [
+      "API"
+    ]
+  }
+]

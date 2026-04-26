@@ -1,0 +1,77 @@
+[
+  {
+    "date": "2026-04-11",
+    "title": "DeepSeek-R1 Thoughtology: Let's <think> about LLM Reasoning",
+    "arxiv_id": "2504.07128",
+    "github": "https://github.com/mcgill-NLP/thoughtology",
+    "abstract": "本文对 DeepSeek-R1 等大型推理模型（LRM）的思维链行为进行系统性分析，提出\"思维学（Thoughtology）\"研究范式。从推理构建块分类出发，研究涵盖思维长度的影响与可控性、长/混乱上下文的处理能力、文化与安全隐患，以及与认知现象（如类人语言处理与世界建模）的对比。研究发现：额外推理时间存在\"甜蜜点\"，过多反而损害性能；模型有反复纠缠已探索过问题形式的倾向；与非推理版本相比，DeepSeek-R1 表现出更强的安全漏洞，甚至会危及安全对齐的 LLM。",
+    "tags": [
+      "无需训练",
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "title": "C3PO: Critical-Layer, Core-Expert, Collaborative Pathway Optimization for Test-Time Expert Re-Mixing",
+    "arxiv_id": "2504.07964",
+    "github": "https://github.com/tianyi-lab/C3PO",
+    "abstract": "MoE 大模型在预训练时学到的专家路径存在严重次优问题，导致 10–20% 的精度损失空间。本文提出 C3PO，一类测试时优化方法，通过对每个测试样本重新加权\"核心专家\"在\"关键层\"的混合权重来改善推理路径。由于测试时标注未知，作者构建了基于\"成功邻居\"样本的代理目标，并提出众数搜索、核回归和平均损失三种算法。C3PO 在两个 MoE 模型上一致提升基础模型精度 7–15%，超越 ICL 和 Prompt/Prefix Tuning 等基线；1–3B 激活参数的 MoE 模型可超越 7–9B 的稠密模型，显著提升效率。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "title": "VisualCloze: A Universal Image Generation Framework via Visual In-Context Learning",
+    "arxiv_id": "2504.07960",
+    "github": "https://github.com/lzyhha/VisualCloze",
+    "abstract": "本文提出 VisualCloze，一个基于视觉上下文学习的通用图像生成框架，支持域内任务、未见任务泛化、多任务融合及逆向生成。与依赖语言指令的现有方法不同，VisualCloze 通过视觉示例让模型从图像中识别任务，避免任务歧义。为解决视觉任务分布稀疏导致知识难以迁移的问题，作者构建了 Graph200K 图结构数据集，增强任务密度与可迁移知识。此外，统一的图像生成目标与图像填充任务目标一致，可直接利用预训练填充模型的强先验而无需修改架构。",
+    "tags": [
+      "扩散模型",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "title": "MM-IFEngine: Towards Multimodal Instruction Following",
+    "arxiv_id": "2504.07957",
+    "github": "https://github.com/SYuan03/MM-IFEngine",
+    "abstract": "本文提出 MM-IFEngine，一个专为多模态大语言模型（MLLM）指令遵循能力提升设计的数据生成流水线。MM-IFEngine 生成大规模高质量图文指令对数据集 MM-IFInstruct-23k（用于 SFT）和 MM-IFDPO-23k（用于 DPO）。此外提出 MM-IFEval 评测集，包含输出约束与图像感知约束两类指令，并采用规则与模型联合评估。实验表明，在上述数据上微调 MLLM 后，MM-IFEval 提升 10.2%、MIA 提升 7.6%、IFEval 提升 12.3%，全面验证了数据管道的有效性。",
+    "tags": [
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "title": "SoTA with Less: MCTS-Guided Sample Selection for Data-Efficient Visual Reasoning Self-Improvement",
+    "arxiv_id": "2504.07934",
+    "github": "https://github.com/si0wang/ThinkLite-VL",
+    "abstract": "本文提出 ThinkLite-VL，一种无需知识蒸馏、仅依赖自我改进的数据高效视觉推理增强方法。核心思想是：强化微调（RFT）中训练数据的难度至关重要。作者将蒙特卡洛树搜索（MCTS）复用于样本难度量化——以 VLM 解决问题所需的迭代次数衡量难度——从 70k 开源样本中筛选出 11k 高质量样本，对 Qwen2.5-VL-7B 进行 RFT。最终在 8 个基准上平均提升 7%，MathVista 达到 75.1 的 SoTA 成绩，超越 Qwen2.5-VL-72B、GPT-4o 和 O1。",
+    "tags": [
+      "RL",
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "title": "MOSAIC: Modeling Social AI for Content Dissemination and Regulation in Multi-Agent Simulations",
+    "arxiv_id": "2504.07830",
+    "github": "https://github.com/genglinliu/MOSAIC",
+    "abstract": "本文提出 MOSAIC，一个开源社交网络多智能体仿真框架，由生成式语言智能体模拟用户点赞、转发、举报等行为。系统将 LLM 智能体与有向社交图结合，分析内容传播与涌现式欺骗行为，帮助理解用户如何判断在线内容真实性。通过细粒度用户画像构建，系统支持大规模多智能体仿真。框架内评估了三种内容审核策略，发现其不仅能遏制虚假内容传播，还能提升用户参与度，并开源了完整仿真代码以促进 AI 与社会科学交叉研究。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "title": "TAPNext: Tracking Any Point (TAP) as Next Token Prediction",
+    "arxiv_id": "2504.05579",
+    "github": "https://github.com/google-deepmind/tapnet",
+    "abstract": "本文提出 TAPNext，将任意点追踪（TAP）问题重新表述为序列掩码 token 解码任务。该模型采用因果架构，以纯在线方式进行追踪，去除了追踪特有的归纳偏置和启发式规则，从而具有极低延迟，无需现有方法常用的时间窗口机制。尽管设计简洁，TAPNext 在在线与离线追踪器中均达到新的 SOTA 水平。实验还发现，许多常用追踪启发式规则在端到端训练中可从 TAPNext 中自然涌现，表明模型具有很强的自组织能力。",
+    "tags": [
+      "无需训练"
+    ]
+  }
+]

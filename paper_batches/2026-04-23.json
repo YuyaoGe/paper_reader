@@ -1,0 +1,87 @@
+[
+  {
+    "date": "2026-04-23",
+    "title": "Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+    "arxiv_id": "2604.20796",
+    "github": "https://github.com/inclusionAI/LLaDA2.0-Uni",
+    "abstract": "LLaDA2.0-Uni 是一个基于离散扩散大语言模型（dLLM）的统一多模态理解与生成框架。其架构结合了 SigLIP-VQ 语义离散分词器、MoE 扩散主干网络和扩散解码器，通过掩码扩散范式统一处理文本和视觉输入。模型支持图像理解、图像生成、图像编辑及多模态交错生成，通过前缀感知优化和多步蒸馏提升推理效率。实验结果表明 LLaDA2.0-Uni 在多模态理解上接近专用 VLM，在图像生成和编辑上也表现出色，为下一代统一基础模型提供了可扩展范式。",
+    "tags": [
+      "扩散模型",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Towards Frontier Edge-Scale Deep Research Agents with Only 10K Open Data",
+    "arxiv_id": "2604.19859",
+    "github": "https://github.com/inclusionAI/DR-Venus",
+    "abstract": "DR-Venus 是一个仅用约 10K 开源数据训练的 4B 参数深度研究 Agent，专为边缘端部署设计。训练分两阶段：首先通过 Agentic 监督微调（SFT）建立基础能力，结合严格数据清洗和长轨迹重采样提升数据质量；然后通过 Agentic 强化学习（基于 IGPO）进一步提升长视野深度研究任务的可靠性，设计了基于信息增益的回合级奖励和格式感知正则化以提高小模型的 RL 效果。DR-Venus-4B 在多个深度研究基准上显著超越已有 9B 以下模型，并缩小了与 30B 级系统的差距。",
+    "tags": [
+      "微调",
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Building Open Mobile Agents with Task and Trajectory Synthesis",
+    "arxiv_id": "2604.15093",
+    "github": "https://github.com/njucckevin/OpenMobile-Code",
+    "abstract": "OpenMobile 是一个开源框架，用于合成高质量移动端任务指令和 Agent 轨迹。核心组件包括：基于环境探索构建全局记忆的可扩展任务合成流水线，以及通过学习者/专家模型交替切换捕获错误恢复数据的策略切换轨迹生成方法。在 OpenMobile 数据上微调的 Qwen2.5-VL 和 Qwen3-VL 在 AndroidWorld 上分别达到 51.7% 和 64.7%，远超已有开源数据方法。该框架弥合了移动 Agent 训练的数据空白，为学术界提供了透明可复现的合成方案。",
+    "tags": [
+      "微调",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "title": "A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression",
+    "arxiv_id": "2604.19572",
+    "github": "https://github.com/multimodal-art-projection/TACO",
+    "abstract": "TACO 是一个即插即用的自演化终端 Agent 观测上下文压缩框架，解决多轮终端任务中原始 shell 输出堆积导致 token 成本随步骤数二次增长的问题。TACO 通过在线从交互轨迹中自动发现并优化压缩规则，维护跨任务共享的全局规则池以支持知识迁移，无需修改底层 Agent 框架即可使用。在 TerminalBench、SWE-Bench Lite 等多个终端相关基准上，TACO 在主流 Agent 框架和强基础模型上均取得一致性能提升（+1%~4%），同时降低约 10% 的 token 开销。",
+    "tags": [
+      "无需训练",
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Learning Social Savoir-Faire via Shapley-based Reward Attribution",
+    "arxiv_id": "2604.18982",
+    "github": "https://github.com/jyyyyy0/SAVOIR",
+    "abstract": "SAVOIR 提出了基于合作博弈论 Shapley 值的社会对话强化学习奖励归因框架，解决多轮对话中的信用分配问题。与现有方法直接用语言模型分配回合级奖励不同，SAVOIR 结合期望效用（从前瞻性视角评估话语战略价值）和 Shapley 值（保证效率、对称性、边际性等公理化保证），提供理论严格的细粒度回合级奖励。在 SOTOPIA 社交对话基准上，SAVOIR 刷新全场景 SOTA，7B 模型可媲美或超越 GPT-4o 和 Claude-3.5-Sonnet。该框架使用 LLM API 模拟未来对话路径进行奖励计算。",
+    "tags": [
+      "RL",
+      "微调",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Self-Evolving LLM Memory Extraction Across Heterogeneous Tasks",
+    "arxiv_id": "2604.11610",
+    "github": "https://github.com/ayyyq/heterogeneous-memory-extraction",
+    "abstract": "本文形式化了异构记忆提取任务，引入包含 18 个数据集的 BEHEMOTH 基准（覆盖个性化、问题求解、Agentic 任务），并提出 CluE：基于聚类的自演化提取策略。CluE 将训练样本聚类为不同提取场景组，独立分析每个聚类并综合跨聚类洞察来更新提取 prompt，解决了现有自演化框架在异构任务分布下性能退化的问题。实验表明 CluE 在 BEHEMOTH 上相较基线获得 +9.04% 的相对提升，能有效泛化到各类异构任务。系统依赖 LLM API 进行 prompt 优化与评估。",
+    "tags": [
+      "MeM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Coding Agent Interactions From Real Users in the Wild",
+    "arxiv_id": "2604.20779",
+    "github": "https://github.com/SALT-NLP/SWE-chat",
+    "abstract": "SWE-chat 是首个大规模真实编程 Agent 交互数据集，收集自开源开发者的真实会话，目前包含 6000 个会话、6.3 万+用户 prompt 和 35.5 万+ Agent 工具调用，并持续增长。通过分析发现编程模式呈双峰分布：41% 会话中 Agent 几乎编写全部代码（\"vibe coding\"），23% 中人类全部手写。仅 44% 的 Agent 生成代码被用户采纳，且 Agent 代码引入安全漏洞的比例高于人类。用户在 44% 的回合中对 Agent 输出进行纠正、中断或否定。该数据集为理解真实开发工作流中的 AI Agent 行为提供了实证基础。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Streaming Structured Inference with Flash-SemiCRF",
+    "arxiv_id": "2604.18780",
+    "github": "https://github.com/biobenkj/flash-semicrf",
+    "abstract": "半马尔可夫条件随机场（semi-CRF）在序列分段标注任务中能进行精确的段级推理，但现有实现需要实例化随序列长度、最大段长和标签数增长的大型边势张量，在长序列（如基因组超过 10 万位置）上内存不可承受。Flash-SemiCRF 通过三项改进解决这一瓶颈：用前缀和查找替代边势存储以减少内存占用、流式前向-反向传播保持工作内存亚线性、零中心累积分数控制数值漂移。结合这些技术的融合 Triton 内核使得 semi-CRF 推理可扩展至此前无法处理的超长序列规模。",
+    "tags": [
+      "长文本"
+    ]
+  }
+]

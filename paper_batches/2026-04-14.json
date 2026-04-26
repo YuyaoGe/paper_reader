@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-04-14",
+    "title": "The Past Is Not Past: Memory-Enhanced Dynamic Reward Shaping",
+    "arxiv_id": "2604.11297",
+    "github": "https://github.com/Linxi000/MEDS",
+    "abstract": "MEDS（Memory-Enhanced Dynamic Reward Shaping）是一种面向大语言模型强化学习训练的记忆增强奖励塑形框架，旨在解决策略重复生成相似错误行为、采样多样性不足的问题。经典熵正则化仅鼓励当前策略的随机性，而MEDS通过存储并利用中间层logits作为轻量化行为表征，配合基于密度的聚类算法识别高频错误模式，对属于高频错误簇的rollout施加更重惩罚，从而引导模型进行更广泛的探索。实验跨越五个数据集和三种基础模型，MEDS在pass@1和pass@128指标上均超越现有基线，同时显著提升了采样行为的多样性。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-04-14",
+    "title": "CodeTracer: Towards Traceable Agent States",
+    "arxiv_id": "2604.11641",
+    "github": "https://github.com/NJU-LINK/CodeTracer",
+    "abstract": "CodeTracer是一套面向代码智能体的追踪与故障定位框架，解决复杂多阶段代码任务中早期错误难以追溯的问题。框架通过进化式提取器解析异构运行日志，将完整状态转移历史重建为带持久记忆的层次化追踪树，并自动定位故障起始点及其下游影响链。配套构建了CodeTraceBench评测集，覆盖四种主流代码智能体框架、五种前沿模型（含GPT-5、Claude、DeepSeek）和多类软件工程任务，提供阶段级与步骤级失败标注。实验表明CodeTracer在步骤级定位上的宏F1达46-48%，是直接提示方法的两至三倍，且将诊断信号反馈给智能体后，原本失败的任务通过率提升约6个百分点。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-04-14",
+    "title": "Introspective Diffusion Language Models",
+    "arxiv_id": "2604.11035",
+    "github": "https://github.com/Introspective-Diffusion/I-DLM",
+    "abstract": "I-DLM（Introspective Diffusion Language Model）针对扩散语言模型质量落后于自回归模型的问题，提出了内省一致性（introspective consistency）概念：自回归模型天然认可自己生成的token，而扩散模型往往不具备这一特性。I-DLM引入内省步幅解码（ISD）算法，在同一前向传播中同步验证历史token并生成新token，保留扩散式并行解码的同时继承了自回归训练的内省一致性。在系统层面，基于SGLang构建了兼容AR优化的推理引擎，并定制了静态批调度器。I-DLM在15个基准上首次实现同规模扩散模型与自回归模型质量持平，AIME-24得分69.6，同时吞吐量约为现有最优扩散模型的3倍。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-04-14",
+    "title": "Solving Physics Olympiad Problems via Reinforcement Learning on Physics Simulators",
+    "arxiv_id": "2604.11805",
+    "github": "https://github.com/Sim2Reason/Sim2Reason",
+    "abstract": "Sim2Reason探索利用物理仿真器上的强化学习解决物理奥林匹克问题，填补了现有LLM在需要精确物理推理的复杂数值问题上的能力空白。方案构建了物理仿真环境作为可验证奖励来源，通过RL训练使模型学会将抽象物理概念与仿真计算相结合。相比单纯基于文本的推理方法，模型能够利用仿真器验证中间步骤、纠正错误假设，从而在竞赛级物理题上取得显著性能提升，为将物理仿真器整合进LLM推理链提供了新范式。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-04-14",
+    "title": "TRACE: Capability-Targeted Agentic Training",
+    "arxiv_id": "2604.05336",
+    "github": "https://github.com/ScalingIntelligence/TRACE",
+    "abstract": "TRACE（Turning Recurrent Agent failures into Capability-targeted training Environments）是一套针对目标环境进行智能体自我改进的端到端系统。框架通过对比成功与失败轨迹自动识别模型所欠缺的能力，为每种能力缺陷合成专项训练环境并用GRPO训练独立LoRA适配器，推理时路由至相关适配器。在τ²-Bench（客服）和ToolSandBox（工具使用）两个环境上均超越基线：τ²-Bench通过率提升+14.1点，优于最强基线+7.4点；同等rollout预算下，TRACE比GRPO和GEPA分别高出+9.2和+7.4点，展现出更高效的扩展性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-04-14",
+    "title": "Low-rank Optimization Trajectories Modeling for LLM RLVR Acceleration",
+    "arxiv_id": "2604.11446",
+    "github": "https://github.com/RUCAIBox/NExt",
+    "abstract": "NExt（Nonlinear Extrapolation of low-rank Trajectories）研究RLVR训练过程中LLM参数rank-1子空间的演化规律，发现LoRA微调能增强rank-1子空间的主导地位，且其演化本质上是非线性的。基于此，提出利用LoRA训练轨迹中多个检查点的rank-1子空间差异训练预测器，以非线性方式外推模型参数，跳过大量中间训练步骤。方法在四种规模的LLM和多个任务上验证，在仅250步RLVR的情况下达到与完整400步相当甚至更好的性能，总体计算开销降低约37.5%，且对超参数、任务类型和RLVR算法均表现出强鲁棒性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-04-14",
+    "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
+    "arxiv_id": "2604.09212",
+    "github": "https://github.com/lhannnn/SPASM",
+    "abstract": "SPASM（Stable Persona-driven Agent Simulation for Multi-turn dialogue generation）是一个面向多轮对话数据生成的稳定性优先智能体仿真框架，解决LLM-LLM对话中的角色漂移、角色混淆和回声效应问题。核心贡献是自我中心上下文投影（ECP）机制：将对话历史以视角无关形式存储，并在生成前动态投影为每个智能体的自我视角，无需修改模型权重即可显著减少长对话中的角色漂移。基于GPT-4o-mini、DeepSeek-V3.2和Qwen-Plus三种模型构建了包含4500个角色、45000段对话的数据集，人工验证证实ECP能消除回声现象并恢复角色结构。",
+    "tags": ["API"]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-04-21",
+    "title": "Extending One-Step Image Generation from Class Labels to Text via Discriminative Text Representation",
+    "arxiv_id": "2604.18168",
+    "github": "https://github.com/AMAP-ML/EMF",
+    "abstract": "现有的 MeanFlow 单步图像生成方法主要针对类标签条件，本文首次将其扩展至灵活的文本输入条件，提出 EMF（Extending MeanFlow to Text-to-Image）框架。研究发现，直接将大型语言模型文本编码器融入 MeanFlow 会导致性能不佳，根本原因在于单步生成对文本表示的判别性要求极高。通过系统分析文本特征的判别性与解耦性，本文选用具备这些属性的 LLM 文本编码器，并在 BLIP3o-NEXT 扩散模型上验证了方法的有效性。EMF 在 DPG-Bench 和 HPS-v2.1 等标准基准上取得了领先性能，4步推理效果可媲美原始模型的30步采样，同时展现出良好的可扩展性。",
+    "tags": [
+      "扩散模型",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-21",
+    "title": "OpenGame: Open Agentic Coding for Games",
+    "arxiv_id": "2604.18394",
+    "github": "https://github.com/leigest519/OpenGame",
+    "abstract": "游戏开发需要跨文件的复杂状态管理，现有代码智能体在生成完整可玩游戏时常失败。OpenGame 是首个面向端到端网页游戏生成的开源智能体框架，核心包括：Template Skill（从经验积累项目骨架库）和 Debug Skill（维护已验证修复协议）共同构成 Game Skill，使智能体能够系统修复集成错误。框架驱动模型为 GameCoder-27B，通过持续预训练、监督微调和执行导向强化学习三阶段管道训练，专精游戏引擎代码。同时引入 OpenGame-Bench，基于无头浏览器执行和 VLM 评测来评估游戏的构建健康度、视觉可用性与意图对齐。在150个多样化游戏提示上建立了新的最优性能。",
+    "tags": [
+      "RL",
+      "微调",
+      "VLM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-21",
+    "title": "ClawEnvKit: Automatic Environment Generation for Claw-Like Agents",
+    "arxiv_id": "2604.18543",
+    "github": "https://github.com/xirui-li/ClawEnvKit",
+    "abstract": "为 Claw 类智能体构建训练和评估环境长期依赖人工操作且难以规模化。ClawEnvKit 提出了一种自动化生成流水线，从自然语言描述出发自动实例化结构化环境。该流水线由三个模块构成：解析器（从自然语言提取结构化生成参数）、生成器（产生任务规范、工具接口和评分配置）以及验证器（确保生成环境的可行性、多样性和内部一致性）。利用 ClawEnvKit 构建了 Auto-ClawEval，包含24个类别共1040个环境，成本仅为人工标注的1/13800。在4个模型家族和8个智能体框架上的实验表明，智能体工程优化可比 ReAct 基线提升15.7个百分点，且 ClawEnvKit 还支持按需生成评估环境，实现持续用户驱动的评估。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-21",
+    "title": "ArbGraph: Conflict-Aware Evidence Arbitration for Reliable Long-Form Retrieval-Augmented Generation",
+    "arxiv_id": "2604.18362",
+    "github": "https://github.com/1212Judy/ArbGraph",
+    "abstract": "长文本 RAG 场景中，检索到的证据往往存在噪声与矛盾，导致生成内容事实不一致。ArbGraph 提出\"先仲裁后生成\"范式，在生成前显式解决证据冲突。框架将检索文档分解为原子声明，构建包含支持与矛盾关系的冲突感知证据图，并通过强度驱动的迭代仲裁机制传播可信度信号，抑制不可靠声明。实验在 LongFact 和 RAGChecker 两个长文本 RAG 基准上，使用多种 LLM 主干验证了方法在事实召回率、信息密度和抗噪声鲁棒性上的持续提升，尤其在证据冲突或实体歧义场景下效果显著。",
+    "tags": [
+      "长文本",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-21",
+    "title": "Stratagem: Learning Transferable Reasoning via Trajectory-Modulated Game Self-Play",
+    "arxiv_id": "2604.17696",
+    "github": "https://github.com/ydyyyy/Stratagem",
+    "abstract": "游戏自对弈是培养语言模型通用推理能力的有效范式，但现有方法仅依赖终局结果，无法区分可迁移的推理模式与游戏特定启发式策略。STRATAGEM 通过两个核心机制解决推理迁移的根本障碍：推理迁移系数（Reasoning Transferability Coefficient）选择性强化体现抽象领域无关推理的轨迹，推理演化奖励（Reasoning Evolution Reward）激励自适应推理发展。在数学推理、通用推理和代码生成等多个基准上验证，尤其在竞赛级数学（多步推理关键）上取得显著提升。消融研究和人工评估确认了两个组件的独立贡献。",
+    "tags": [
+      "RL",
+      "API"
+    ]
+  }
+]

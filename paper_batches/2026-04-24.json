@@ -1,0 +1,75 @@
+[
+  {
+    "date": "2026-04-24",
+    "title": "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+    "arxiv_id": "2604.21689",
+    "github": "https://github.com/kwanyun/StyleID",
+    "abstract": "StyleID 提出了一套以人类感知为基础的风格化人脸身份识别评估框架，解决现有身份编码器在卡通、素描、绘画等艺术风格化场景下脆弱性问题。框架包含两个数据集：StyleBench-H 收集了人类在不同风格化强度下的\"同异\"验证判断；StyleBench-S 则通过受控双选实验获取心理测量辨识强度曲线作为监督信号。基于 StyleBench-S，对现有语义编码器进行微调，使其相似度排序与人类感知对齐。实验表明，校准后的模型与人类判断的相关性显著提升，并在域外的艺术家手绘肖像上展现出更强鲁棒性。所有数据集、代码和预训练模型均已公开。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+    "arxiv_id": "2604.20987",
+    "github": "https://github.com/wuxiyang1996/cos-play",
+    "abstract": "COSPLAY 是一个协同进化框架，用于解决大语言模型在长期交互游戏环境中缺乏结构化技能发现与复用能力的问题。框架包含两个智能体：决策智能体从可学习技能库中检索技能来指导动作选择；技能库智能体则从无标签的历史轨迹中持续提取、精炼和更新可复用技能。两者协同进化：决策智能体学习更好的技能检索与动作生成，技能库智能体不断优化技能表示。基于 8B 参数模型的 COSPLAY 在六个游戏环境中，单人游戏基准上相比四个前沿 LLM 基线实现了超过 25.1% 的平均奖励提升，在多人社交推理游戏中也具有竞争力。系统采用 GRPO 训练五个功能专用 LoRA 适配器。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "title": "EditCrafter: Tuning-free High-Resolution Image Editing via Pretrained Diffusion Model",
+    "arxiv_id": "2604.10268",
+    "github": "https://github.com/EditCrafter/EditCrafter",
+    "abstract": "EditCrafter 是一种无需微调即可对高分辨率图像进行文本引导编辑的方法，支持最高 4K（4096×4096）分辨率，基于 SD 1.5/2.1/SDXL 等预训练文生图扩散模型。核心思路是利用分块 DDIM 反演来保持图像原始身份，同时通过噪声阻尼流形约束分类器引导（NDCFG++）实现高质量文本引导编辑。方法突破了现有扩散模型编辑方法在超高分辨率下的局限：分块策略避免了分辨率外推问题，而改进的引导机制则确保编辑一致性。无需针对特定图像进行优化或额外训练，直接利用大规模预训练模型的生成先验。",
+    "tags": [
+      "扩散模型",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "title": "UniGenDet: A Unified Generative-Discriminative Framework for Co-Evolutionary Image Generation and Generated Image Detection",
+    "arxiv_id": "2604.21904",
+    "github": "https://github.com/Zhangyr2022/UniGenDet",
+    "abstract": "UniGenDet 提出了一个统一的生成-判别协同进化框架，打破图像生成与AI生成图像检测长期独立发展的局面。框架核心在于让两类任务显式交换有效信号：多模态自注意力机制将生成与真实性理解在共享架构中桥接；生成-检测统一微调（GDUF）为检测器注入生成先验，提升泛化能力与可解释性；检测器信息引导的生成对齐（DIGA）将真实性约束反馈回合成过程，改善生成质量。该框架将传统\"生成器与检测器对抗\"转变为闭环协作，基于 BAGEL 预训练组件构建完整的训练与评估流水线。",
+    "tags": [
+      "微调",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Temporally Extended Mixture-of-Experts Models",
+    "arxiv_id": "2604.20156",
+    "github": "https://github.com/princeton-polaris-lab/rl_moe",
+    "abstract": "稀疏混合专家（MoE）模型目前在几乎每个 token 处都进行专家切换，当模型规模超出 GPU 显存时，频繁的专家换入换出使卸载和预取优化失效。本文提出利用强化学习中的期权（Options）框架来解决此问题，构建时间延展的 MoE 层：基于期权-评论家框架并引入deliberation代价，在每个 MoE 层添加轻量级控制器，学习何时切换专家集合及选择哪组专家加载。控制器基于 LLM 隐层状态通过 DeepSets 进行专家选择，以自蒸馏奖励（冻结教师与增强学生间的逐 token 反向 KL）训练。实验表明专家切换率从超 50% 降至不足 5%，同时保留约 90% 的基础模型准确率。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
+    "arxiv_id": "2604.21300",
+    "github": "https://github.com/hieum98/avae",
+    "abstract": "EAVAE（可解释作者风格变分自编码器）针对作者归属与AI生成文本检测中内容-风格纠缠问题，提出通过对抗判别器与互信息正则化显式解耦作者写作风格与语义内容。框架包含风格编码器（双向 Qwen）、内容编码器（GTE-Qwen 密集检索模型）和生成器（因果语言模型），分别提取风格潜变量与内容潜变量，再拼接后重构文本。训练中引入风格/内容判别器保证两个潜空间相互独立，并使用循环 KL 退火稳定训练。在多个作者验证数据集（HRS、MUD、PAN20/21）上展示了强泛化能力。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Encoder-Free Human Motion Understanding via Structured Motion Descriptions",
+    "arxiv_id": "2604.21668",
+    "github": "https://github.com/yaozhang182/motion-smd",
+    "abstract": "本文提出结构化运动描述（SMD）方法，无需专用运动编码器，直接将人体运动序列转换为结构化自然语言文本供 LLM 处理。SMD 基于规则确定性地从关节位置序列计算 26 个生物力学角度，经时序分割与全局轨迹提取后生成约 1K-4K token 的结构化文本描述。任意 LLM 仅需轻量 LoRA 微调即可完成运动问答与字幕生成任务，无需跨模态对齐模块。在 BABEL-QA（66.7% 准确率）、HuMMan-QA（90.1% 准确率）和 HumanML3D（R@1=0.584）上取得领先结果，且该文本表示方法对 Qwen2.5、Qwen3、Gemma3、LLaMA-3.1、GLM-4 等多种骨干模型均有效。",
+    "tags": [
+      "微调"
+    ]
+  }
+]
