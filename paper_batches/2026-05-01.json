@@ -1,0 +1,88 @@
+[
+  {
+    "date": "2026-05-01",
+    "title": "Heterogeneous Scientific Foundation Model Collaboration",
+    "arxiv_id": "2604.27351",
+    "github": "https://github.com/Violet24K/Eywa",
+    "abstract": "提出 Eywa 异构智能体框架，将语言模型-centric 系统扩展至科学领域基础模型。核心思想是为领域专用基础模型赋予基于语言模型的推理接口，使语言模型能够指导非语言数据模态上的推断。Eywa 可作为单智能体或多智能体系统的即插即用方案。实验覆盖物理、生命和社会科学领域，结果表明 Eywa 在结构化数据任务上提升性能，同时降低对纯语言推理的依赖。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Representation Fréchet Loss for Visual Generation",
+    "arxiv_id": "2604.28190",
+    "github": "https://github.com/Jiawei-Yang/FD-Loss",
+    "abstract": "提出在表示空间中优化 Fréchet 距离的训练目标 FD-loss，将 FD 估计的总体规模与梯度计算的批量规模解耦。研究发现，对基础生成器进行 FD-loss 后训练可一致提升视觉质量；无需教师蒸馏或对抗训练即可将多步生成器转化为强单步生成器。提出多表示度量 FDr^k 解决 FID 误排序问题，在 ImageNet 256x256 上单步生成器达到 0.72 FID。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Length Value Model: Scalable Value Pretraining for Token-Level Length Modeling",
+    "arxiv_id": "2604.27039",
+    "github": "https://github.com/eric-ai-lab/Length-Value-Model",
+    "abstract": "提出 Length Value Model（LenVM），token 级长度建模框架，将长度建模形式化为价值估计，为每个生成 token 分配负奖励，预测折扣回报作为剩余长度的代理。监督无需标注且可扩展。实验表明 LenVM 在推理时提供高效信号：LIFEBench 上将 7B 模型长度分数从 30.9 提升至 64.8；GSM8K 200 token 下保持 63% 准确率，能预测总长度。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence",
+    "arxiv_id": "2604.24954",
+    "github": "https://github.com/NVIDIA-NeMo/Megatron-Bridge",
+    "abstract": "介绍 Nemotron 3 Nano Omni，Nemotron 系列首款原生支持音频的多模态模型（同时支持文本、图像和视频）。基于 Nemotron 3 Nano 30B-A3B 骨干网络，通过架构和训练数据改进，在所有模态上超越前代。在文档理解、长音视频理解和智能体计算机使用方面取得领先结果。采用创新的多模态 token 削减技术，推理延迟和吞吐量显著优于同尺寸模型，已发布多精度检查点与代码。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "title": "The Last Human-Written Paper: Agent-Native Research Artifacts",
+    "arxiv_id": "2604.24658",
+    "github": "https://github.com/Orchestra-Research/Agent-Native-Research-Artifact",
+    "abstract": "提出 Agent-Native Research Artifact（ARA）协议，用机器可执行的研究包替代叙事式论文，包含科学逻辑、可执行代码、保留探索失败的探索图、以及将声明与原始输出关联的证据四层结构。配套实时研究管理器、ARA 编译器和原生评审系统。在 PaperBench 上将问答准确率从 72.4% 提升至 93.7%，复现成功率从 57.4% 提升至 64.4%。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Step-level Optimization for Efficient Computer-use Agents",
+    "arxiv_id": "2604.27151",
+    "github": "https://github.com/yale-nlp/StepWise",
+    "abstract": "提出事件驱动的计算机使用智能体步级级联框架 StepWise，针对长程 GUI 任务中计算资源分配低效问题。默认运行轻量级小策略，仅当监控器检测到高风险时才升级为强模型。结合「卡住监控器」（检测进度退化并触发恢复）和「里程碑监控器」（识别语义检查点以捕捉漂移）两种信号。该设计将始终开启的前沿模型推理转化为自适应按需计算分配，可直接叠加到现有智能体上。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Compliance versus Sensibility: On the Reasoning Controllability in Large Language Models",
+    "arxiv_id": "2604.27251",
+    "github": "https://github.com/Xingwei-Tan/compliance_sensibility",
+    "abstract": "首次系统研究大语言模型推理可控性，通过推理冲突考察归纳、演绎和溯因等基本推理模式能否与任务实例解耦。发现 LLM 始终优先选择合理性而非遵循指令，但冲突模式下仍保持较高性能，表明对参数化记忆的依赖随规模增大。证明推理冲突可通过置信度内部检测，且推理类型从中层到后期层线性编码。基于激活级干预使模型偏向遵循指令，指令跟随率最高提升 29%。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Instruction-Guided Poetry Generation in Arabic and Its Dialects",
+    "arxiv_id": "2604.27766",
+    "github": "https://github.com/mbzuai-nlp/instructpoet-ar",
+    "abstract": "针对阿拉伯语诗歌创作，构建大规模基于指令的阿拉伯语诗歌数据集，涵盖现代标准阿拉伯语和多种方言，支持写诗、改诗、续诗及诗歌分析等任务，可按风格和韵律进行可控生成。实验表明，在该数据集上微调的 LLM 能够有效生成符合用户要求的诗歌，自动评估和母语者人工评价均验证生成质量。数据和代码已开源。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-05-01",
+    "title": "FlashRT: Towards Computationally and Memory Efficient Red-Teaming for Prompt Injection and Knowledge Corruption",
+    "arxiv_id": "2604.28157",
+    "github": "https://github.com/wang-yanting/FlashRT",
+    "abstract": "提出 FlashRT 框架，首次针对长上下文 LLM 中的优化型提示注入和知识腐败攻击提升计算与内存效率。相比 nanoGCG 基线实现 2 至 7 倍加速，GPU 内存降低 2 至 4 倍。在 32K token 攻击中，GPU 内存从 264.1 GB 降至 65.7 GB。FlashRT 可应用于 TAP 和 AutoDAN 等黑盒优化方法，为评估长上下文 LLM 安全提供高效红队测试工具。",
+    "tags": [
+      "无需训练"
+    ]
+  }
+]

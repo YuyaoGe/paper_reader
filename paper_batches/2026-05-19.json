@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-05-19",
+    "title": "Lance: Unified Multimodal Modeling by Multi-Task Synergy",
+    "arxiv_id": "2605.18678",
+    "github": "https://github.com/bytedance/Lance",
+    "abstract": "提出Lance，一种轻量级原生统一多模态模型，支持图像和视频的理解、生成与编辑。模型从头训练，采用双路混合专家架构，在共享交错多模态序列上实现联合上下文学习，并将理解与生成路径解耦。引入模态感知旋转位置编码以缓解异构视觉token间的干扰。实验表明，Lance在图像和视频生成上显著优于现有开源统一模型，同时保持强大的多模态理解能力。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "OProver: A Unified Framework for Agentic Formal Theorem Proving",
+    "arxiv_id": "2605.17283",
+    "github": "https://github.com/multimodal-art-projection/OProver",
+    "abstract": "提出OProver，一种面向Lean 4的统一agent化形式定理证明框架。失败证明通过检索编译器验证的证明和Lean反馈进行迭代修正。通过继续预训练和迭代后训练优化：每轮运行agent化证明，索引新验证证明到OProofs，使用修复轨迹作为SFT数据，未解决难题用于RL。OProver-32B在MiniF2F上达93.3% Pass@32，在五个基准上取得最佳或次佳表现。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models",
+    "arxiv_id": "2605.17672",
+    "github": "https://github.com/giovanni-vaccarino/PUMA",
+    "abstract": "针对大推理模型生成过长思维链导致的过度推理问题，提出PUMA框架，实现语义保持的推理提前退出。现有方法主要依赖答案级信号，可能在模型完成探索前过早触发。PUMA引入推理级语义冗余检测作为补充信号，结合轻量级冗余检测器与答案级验证，在移除冗余延续的同时保持答案准确性和连贯推理前缀。在五个推理模型和五个基准上，PUMA平均减少26.2%的token消耗，同时保持准确率。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Measuring Maximum Activations in Open Large Language Models",
+    "arxiv_id": "2605.15572",
+    "github": "https://github.com/clx1415926/Max_act_llm",
+    "abstract": "系统测量现代开源大语言模型中的最大激活幅度，覆盖8个开源家族的27个检查点，包括稠密、MoE、视觉语言和指令微调变体。研究发现全局最大值跨家族差异近四个数量级，Qwen3.5和MoE在10²-10³范围，而Gemma3-27B-it达约7×10⁵；MoE检查点的峰值比同规模稠密模型低14-23.4倍。实验表明最大激活幅度是与模型家族、架构和训练阶段相关的属性，应在低比特部署前进行测量和报告。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-19",
+    "title": "AstraFlow: Dataflow-Oriented Reinforcement Learning for Agentic LLMs",
+    "arxiv_id": "2605.15565",
+    "github": "https://github.com/Infini-AI-Lab/astraflow",
+    "abstract": "提出AstraFlow，一种数据流导向的强化学习系统，解决agent化LLM的RL训练成本问题。系统将训练器为中心的控制替换为组件抽象，将rollout服务、数据流管理和训练解耦为自治组件，原生支持多策略agent化RL和弹性异构计算。在数学、代码、搜索和AgentBench上评估表明，多策略协作训练中AstraFlow加速2.7倍，同时保持或提升准确率。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "EndPrompt: Efficient Long-Context Extension via Terminal Anchoring",
+    "arxiv_id": "2605.14589",
+    "github": "https://github.com/clx1415926/EndPrompt",
+    "abstract": "提出EndPrompt，一种仅需短训练序列实现上下文窗口扩展的方法。核心洞察是暴露模型于长距离位置无需全长度输入：保留原始短上下文为完整首段，附加简短终端提示为第二段并赋予目标长度附近的位置索引。基于RoPE的理论分析表明位置插值对注意力施加平滑约束。在LLaMA上从8K扩展到64K，EndPrompt在RULER平均得分76.03，超越LCEG、LongLoRA和全长度微调，计算量大幅减少。",
+    "tags": ["长文本", "微调"]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Model-Adaptive Tool Necessity Reveals the Knowing-Doing Gap in LLM Tool Use",
+    "arxiv_id": "2605.14038",
+    "github": "https://github.com/chengez/Tool-Cognition-Action",
+    "abstract": "提出模型自适应的工具必要性定义，基于经验性能评估各模型。在算术和事实问答上对比四个模型的工具必要性与实际调用，发现显著错配（26.5-54.0%和30.8-41.8%）。将工具使用分解为认知和执行两阶段，发现信号虽均可线性解码，但探测方向在驱动下一token的末层处几乎正交。轨迹分析揭示大部分错配集中在认知到行动的转化阶段，揭示LLM工具使用中的「知行差距」。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Targeted Neuron Modulation via Contrastive Pair Search",
+    "arxiv_id": "2605.12290",
+    "github": "https://github.com/NousResearch/neural-steering",
+    "abstract": "提出对比神经元归因方法CNA，仅需前向传播即可识别区分有害与良性提示的0.1% MLP神经元，无需梯度或辅助训练。在指令模型中，消融该回路可将越狱基准拒绝率降低超50%，同时保持流畅性。在Llama和Qwen（1B到72B）的匹配基础与指令模型上应用CNA，发现基础模型含类似末层判别结构，但干预仅产生内容偏移而非行为改变，表明神经元级干预可实现高质量行为引导。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-19",
+    "title": "SafeDiffusion-R1: Online Reward Steering for Safe Diffusion Post-Training",
+    "arxiv_id": "2605.18719",
+    "github": "https://github.com/MAXNORM8650/SafeDiffusion-R1",
+    "abstract": "提出在线RL框架SafeDiffusion-R1，通过GRPO对正负文本提示后训练，解决扩散模型安全内容去除的数据稀缺和灾难性遗忘。引入steering reward机制，利用CLIP嵌入属性将文本表示向安全方向引导。在线策略使模型能从多样化提示学习而不遗忘。实验表明不当内容降至18.07%（对比SD v1.4的48.9%），裸体检测降至15（对比646），提升了GenEval组合生成质量。",
+    "tags": ["扩散模型", "RL"]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Geometric Phase Transition Enables Extreme Hippocampal Memory Capacity",
+    "arxiv_id": "2605.17199",
+    "github": "https://github.com/prashantcraju/hippocampal-stability",
+    "abstract": "揭示卓越空间记忆源于海马群体几何的离散刚性化——从混乱到晶体化集体编码的相变。比较食物缓存山雀与非缓存斑胸草雀，发现缓存海马维持拓扑刚性的「晶体」几何，稳定性更高（Shesha 0.245 vs 0.166），时间相干性近两倍。兴奋性与抑制性神经元形成正交解相关的协同电路。建模表明，拓扑刚性是高保真读出超1000个位置的数学前提，混乱编码在10个位置以下失效，晶体编码具有100倍以上容量优势。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "SNLP: Layer-Parallel Inference via Structured Newton Corrections",
+    "arxiv_id": "2605.17842",
+    "github": "https://github.com/phymhan/nanochat-snlp",
+    "abstract": "提出结构化牛顿层并行框架SNLP，将Transformer逐层顺序执行转化为可并行的非线性残差方程。用架构诱导的替代动力学替代雅可比矩阵，实现恒等牛顿校正与HC牛顿校正。引入SNLP感知正则化，使少量牛顿迭代近似顺序前向传播。在nanochat规模模型上，SNLP改善层并行兼容性，困惑度降低4.7%-23.4%，0.5B模型推理加速2.3倍，PPL改善6.1%。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Symmetry-Compatible Principle for Optimizer Design: Embeddings, LM Heads, SwiGLU MLPs, and MoE Routers",
+    "arxiv_id": "2605.18106",
+    "github": "https://github.com/timlautk/equivariant_optimizers",
+    "abstract": "针对神经网络具有丰富对称性而主流优化器（如AdamW）以坐标方式运行无法尊重参数空间等变结构的问题，提出对称兼容优化器设计原则：梯度更新规则应在权重块的对称群作用下保持等变。为嵌入和LM头矩阵、SwiGLU MLP投影和MoE路由矩阵推导出匹配其对称群的更新规则，包括单侧谱、行范数等。在Qwen3、Gemma 3、OLMoE和gpt-oss预训练中，对称兼容更新一致改善验证损失和训练稳定性。",
+    "tags": []
+  }
+]

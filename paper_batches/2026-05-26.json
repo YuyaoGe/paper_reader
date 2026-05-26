@@ -1,0 +1,122 @@
+[
+  {
+    "date": "2026-05-26",
+    "title": "Foundation Protocol: A Coordination Layer for Agentic Society",
+    "arxiv_id": "2605.23218",
+    "github": "https://github.com/FoundationAgents/foundation-protocol",
+    "abstract": "针对自主智能体规模扩展中的协调瓶颈，提出 Foundation Protocol（FP），一种面向人机社会的图优先协调层。FP 将智能体、工具、资源、人类、机构等异构实体统一为图结构，支持原生多方组织与事件驱动协作，并提供计量、收据、结算等经济原语。设计上采用桥接现有协议的策略，可在降低集成与治理开销的同时实现渐进式采用，使协调本身成为开放、多元且可治理的人机社会共享基础设施。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+    "arxiv_id": "2605.23081",
+    "github": "https://github.com/joesharratt1229/ThriftAttention",
+    "abstract": "针对长上下文 FP4 注意力的质量退化，提出 ThriftAttention 低比特注意力变体。核心发现是量化误差对注意力输出的影响高度非均匀，关键查询-键交互块集中了主要功能误差。方法分两阶段：启发式筛选少量重要块以 FP16 计算，其余以 FP4 并通过在线 softmax 合并。实验表明仅 5% FP16 块即可平均恢复 89.1% 的 FP4-to-FP16 性能差距，优势随序列长度增长。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "QUEST: Training Frontier Deep Research Agents with Fully Synthetic Tasks",
+    "arxiv_id": "2605.24218",
+    "github": "https://github.com/OSU-NLP-Group/QUEST",
+    "abstract": "发布 QUEST 系列开放深度研究智能体（2B 至 35B），通过可验证奖励的合成任务训练实现通用长程搜索。训练融合中期训练、SFT 和 RL，核心是基于统一评分树的数据合成流水线，可自动生成带可验证奖励的训练数据。内置上下文管理机制支持长程推理。仅用 8K 合成任务，QUEST 在八个深度研究基准上接近或超越前沿闭源智能体，为近期开放权重智能体中综合最佳。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Your Embedding Model is SMARTer Than You Think",
+    "arxiv_id": "2605.24938",
+    "github": "https://github.com/HanSolo9682/SMART",
+    "abstract": "提出 SMART 框架，解锁单向量嵌入模型的潜在多向量检索能力。研究发现标准对比学习通过梯度流隐式塑造了前序隐藏状态的检索几何。SMART 在推理时对冻结隐藏状态执行迟交互，作为即插即用增强方案，在多模态上持续提升检索效果，甚至改进 MMEB-V2 SOTA。轻量级后训练节省算力，在视觉文档检索上使单向量模型超越 SOTA 多向量对手。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Anticipate and Learn: Unleashing Idle-Time Compute in Proactive Agents",
+    "arxiv_id": "2605.25971",
+    "github": "https://github.com/AgentACE-AI/ProAct",
+    "abstract": "提出 ProAct 主动式智能体架构，突破仅在显式提示后才响应的被动范式。利用交互间空闲时间，通过分析对话历史与持久记忆预测用户即将到来的需求并迭代获取信息。构建 ProActEval 基准含 40 领域 200 场景。实验表明 ProAct 加速任务完成（减少 14.8% 轮次）、降低用户工作量 11.7%、减少幻觉率 28.1%，并在 MemBench 达到 SOTA 反思准确率。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "MemForest: An Efficient Agent Memory System with Hierarchical Temporal Indexing",
+    "arxiv_id": "2605.23986",
+    "github": "https://github.com/Concyclics/MemForest",
+    "abstract": "提出 MemForest 智能体记忆框架，将记忆构建重新建模为写高效的时序数据管理问题。通过并行分块提取打破顺序更新瓶颈，解耦为并发独立操作。引入 MemTree 层次时序索引，以时序树组织记忆，将全状态重写替换为局部节点更新，仅影响相关树路径。在 LongMemEval-S 和 LoCoMo 基准上达到最佳整体性能（79.8% pass@1），记忆构建吞吐量约为 SOTA 的 6 倍。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents",
+    "arxiv_id": "2605.25624",
+    "github": "https://github.com/xlang-ai/CUA-Gym",
+    "abstract": "提出 CUA-Gym 流水线协同生成计算机使用智能体的任务、环境与奖励函数，解决 RLVR 数据稀缺。Generator 构建环境状态，Discriminator 编写奖励函数，Orchestrator 驱动迭代过滤。构建 CUA-Gym-Hub 模拟 Web 套件。基于 32K 元组训练，模型在 OSWorld-Verified 上超越同规模开源 CUA，展现良好的数据规模与环境多样性扩展性。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Towards Customized Multimodal Role-Play",
+    "arxiv_id": "2605.08129",
+    "github": "https://github.com/Tangc03/UniCharacter",
+    "abstract": "提出定制化多模态角色扮演（CMRP）新任务，构建 RoleScape-20 数据集含 20 个角色。设计 UniCharacter 两阶段框架：统一监督微调与角色专属 GRPO。仅需 10 张图像及交互示例，模型即可习得目标角色，在文本与图像中保持连贯人格、风格与视觉身份。在 RoleScape-20 上显著超越先前方法，消融验证了跨模态一致性与少样本定制策略。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Injecting Image Guidance into Text-Conditioned Diffusion Models at Inference",
+    "arxiv_id": "2605.25191",
+    "github": "https://github.com/thijmennijdam/stable-diffusion-v2",
+    "abstract": "提出 Visual Concept Fusion（VCF），首次实现无需概念专属训练即可在推理时向文本扩散模型注入视觉引导。VCF 通过 CLIP 图像特征与文本嵌入空间对齐实现视觉概念注入，包含轻量对齐器、融合策略与可选 Prompt-Noise Optimization（PNO）模块。实验表明 VCF 成功迁移参考图像的风格、构图与色调，同时保持文本遵循性，在参考保真度上超越基线。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "SEAL: Synergistic Co-Evolution of Agents and Learning Environments",
+    "arxiv_id": "2605.24426",
+    "github": "https://github.com/yihaohu0118/SEAL",
+    "abstract": "提出 SEAL 闭环协同进化框架，针对工具使用智能体同时适应策略与学习环境的结构性缺口。收集可执行验证下的在线轨迹，将失败 rollout 诊断为轮次级失败标签，并以此为共享信号驱动环境端适应与模型端策略优化。环境通过暴露更清晰工具线索与恢复反馈进化学习界面，策略通过诊断引导的优势重加权更新。仅 400 样本即带来 +8.25 至 +26.25 平均提升，并展现正向分布外迁移。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Reinforcing Few-step Generators via Reward-Tilted Distribution Matching",
+    "arxiv_id": "2605.26108",
+    "github": "https://github.com/Harahan/RTDMD",
+    "abstract": "提出 RTDMD 统一分布匹配蒸馏与奖励引导 RL 以对齐少步流生成器。理论表明最小化到奖励倾斜教师分布的 KL 散度分解为分布匹配与奖励最大化两项。第一阶段 AC-DMD 执行子区间分布匹配并以一致性正则增强假分数；第二阶段推导混合策略梯度，结合 GRPO 与确定性最终步直接奖励反向传播，引入 SubGRPO 降低方差。在 SD3、SD3.5 和 FLUX.2 上仅用 4 步刷新 SOTA。",
+    "tags": ["RL", "扩散模型"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Faithfulness Metrics Don't Measure Faithfulness: A Meta-Evaluation with Ground Truth",
+    "arxiv_id": "2605.25052",
+    "github": "https://github.com/yoavgur/BonaFide",
+    "abstract": "构建首个带真实标签的思维链忠实度元评估基准 BonaFide，含 3,066 条标注 CoT 横跨 13 任务与 10 模型。通过设计输出揭示中间计算过程的自动标注流水线获得真实标签。系统评估显示多数忠实度指标接近随机，存在强偏差且在长 CoT 上退化。最佳指标 AUROC 仅 0.70（CoT 级）与 0.59（步骤级），且均无法跨设置迁移。结果暴露当前评估根本性缺陷。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Decoupling Communication from Policy: Robust MARL under Bandwidth Constraints",
+    "arxiv_id": "2605.21085",
+    "github": "https://github.com/alexicanesse/Decoupling-Communication-from-Policy-Robust-MARL-under-Bandwidth-Constraints",
+    "abstract": "针对带宽受限场景下 MARL 的通信瓶颈，提出 β 归一化带宽预算统一稀疏性、通信轮次与消息维度约束，并设计 SLIM 架构将通信通路与策略潜在表示解耦。该设计可在隔离带宽效应与策略容量效应的同时受益于步内通信。在多个部分可观测 MARL 基准上达到 SOTA，在通信受限下表现强扩展性与鲁棒性，带宽缩减时仅产生边际性能退化。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "ClaimDiff-RL: Fine-Grained Caption Reinforcement Learning through Visual Claim Comparison",
+    "arxiv_id": "2605.20278",
+    "github": "https://github.com/ltl3A87/ClaimDiff-RL",
+    "abstract": "提出 ClaimDiff-RL 细粒度图像描述 RL 框架，以视觉声明差异作为奖励单元解决序列级奖励粒度不足。多模态裁判枚举视觉锚定差异，逐条验证真实性，分配开放词汇错误类型与严重程度。这使幻觉声明与遗漏显著事实分别可测且可调。实验表明 ClaimDiff-RL 暴露并平衡忠实度与覆盖率权衡，在 160 图人工标注诊断基准及公开基准上超越 Gemini-3-Pro-Preview。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Decoding the Critique Mechanism in Large Reasoning Models",
+    "arxiv_id": "2603.16331",
+    "github": "https://github.com/mail-research/lrm-critique-vectors",
+    "abstract": "系统研究大型推理模型的自我纠错机制，通过在中间推理步骤插入算术错误发现：即使错误在思维链中传播且无言语化修正，模型仍能得出正确答案。这一现象暗示存在内部错误检测机制，称之为隐藏批判能力。通过特征空间分析识别出高可解释性的批判向量。跨多尺度与多模型实验表明，用该向量引导潜在表征可提升错误检测能力，并零成本增强测试时扩展性能。",
+    "tags": []
+  }
+]

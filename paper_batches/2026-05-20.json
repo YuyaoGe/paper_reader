@@ -1,0 +1,201 @@
+[
+  {
+    "date": "2026-05-20",
+    "title": "AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration",
+    "arxiv_id": "2605.20025",
+    "github": "https://github.com/aiming-lab/AutoResearchClaw",
+    "abstract": "提出多智能体自主研究平台AutoResearchClaw，将科研过程建模为迭代循环而非线性管道。通过多Agent协作、人机协同审查与跨轮次经验积累，实现假设生成、实验执行与失败恢复的闭环。系统在多个学科领域展现出持续改进的研究能力，相关代码与配置完全开源。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Active Learners as Efficient PRP Rerankers",
+    "arxiv_id": "2605.14236",
+    "github": "https://github.com/jerecoder/IReranker",
+    "abstract": "将PRP Pairwise Ranking Prompting重排序重构为从噪声成对比较中进行主动学习的问题。针对传统排序算法在噪声与非传递性判断上的失效，提出基于主动学习的选择策略，在有限调用预算内更可靠地识别top-K结果。方法无需训练，仅通过智能采样提升大语言模型重排序效率与稳定性。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "OpenComputer: Verifiable Software Worlds for Computer-Use Agents",
+    "arxiv_id": "2605.19769",
+    "github": "https://github.com/echo0715/OpenComputer",
+    "abstract": "提出OpenComputer框架，为计算机使用Agent构建可验证的软件世界。集成应用专属状态验证器、自进化验证层、机器可检查的桌面任务合成管道以及评估工具链。通过结构化检查端点与执行反馈提升验证可靠性，支持Agent在真实软件环境中进行可验证的任务执行与自动化评估。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment",
+    "arxiv_id": "2605.19577",
+    "github": "https://github.com/xiaoxuanNLP/GoLongRL",
+    "abstract": "提出GoLongRL，面向长上下文强化学习的开源后训练方案。针对现有方法任务同质化、奖励公式无法反映实际需求的问题，设计能力导向的数据构建策略与多任务对齐机制。通过可验证奖励的强化学习提升长文本理解与推理能力，开源完整数据构造流程与训练代码。",
+    "tags": [
+      "RL",
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Process Rewards with Learned Reliability",
+    "arxiv_id": "2605.15529",
+    "github": "https://github.com/JinYuanLi0012/Beta-Binomial-PRM",
+    "abstract": "提出BetaPRM，一种分布式的过程奖励模型，同时预测步骤级成功概率与该预测的可靠性。针对现有PRM仅输出单点奖励、下游方法无法判断何时应信任预测的问题，利用Beta分布建模不确定性。基于蒙特卡洛估计的步骤监督进行训练，为推理过程提供更可靠的不确定性感知决策信号。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "EnvFactory: Scaling Tool-Use Agents via Executable Environments Synthesis and Robust RL",
+    "arxiv_id": "2605.18703",
+    "github": "https://github.com/LARK-AI-Lab/EnvFactory",
+    "abstract": "提出EnvFactory，通过可执行环境合成与鲁棒强化学习扩展工具使用Agent的能力。针对现有方法依赖昂贵真实API、幻觉严重的模拟器或单轮合成环境的问题，设计自动化的环境生成管道与多轮交互训练框架。支持Agent在多样化合成环境中学习隐式人类推理模式，降低工具使用Agent的训练门槛。",
+    "tags": [
+      "RL",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "ThoughtTrace: Understanding User Thoughts in Real-World LLM Interactions",
+    "arxiv_id": "2605.20087",
+    "github": "https://github.com/thoughttrace-project/thoughttrace",
+    "abstract": "构建ThoughtTrace数据集，首次将真实世界多轮人机对话与用户自报告的思维过程配对，包含超过1000名用户、2000余条对话和10000余条思维标注。分析揭示用户提问动机与对助手回复的反应模式，为理解大语言模型交互中的隐性认知过程提供大规模实证基础，数据集与分析方法完全开源。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Semantic Generative Tuning for Unified Multimodal Models",
+    "arxiv_id": "2605.18714",
+    "github": "https://github.com/song2yu/SGT",
+    "abstract": "提出语义生成微调SGT，解决统一多模态模型中视觉理解与生成表示空间错位的问题。针对现有方法独立优化理解任务和生成任务导致的空间隔离，设计语义级对齐目标，使视觉理解和生成能够相互增强。首次系统研究了生成式微调对统一多模态模型表示对齐与任务迁移的促进作用。",
+    "tags": [
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents",
+    "arxiv_id": "2605.19932",
+    "github": "https://github.com/zhuohangu/peek",
+    "abstract": "提出PEEK，一种面向长上下文LLM Agent的方向缓存机制。针对Agent在重复同上下文任务中缺乏可复用方向知识的问题，构建上下文地图来记录上下文结构、组织方式和关键实体信息。通过缓存方向知识避免每次从头阅读长文档，显著提升Agent在长上下文环境中的持续任务执行效率与一致性。",
+    "tags": [
+      "长文本",
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Where Does Authorship Signal Emerge in Encoder-Based Language Models?",
+    "arxiv_id": "2605.19908",
+    "github": "https://github.com/Madjakul/DeepStylometry",
+    "abstract": "利用机制可解释性工具分析编码器模型中作者风格信号的涌现位置。发现风格特征在各层均匀分布，性能差距并非来自表示质量，而是源于评分机制对风格特征的提取方式差异。通过因果干预定位风格分类头的关键层，揭示作者归因任务中特征可用与特征利用的分离现象，为风格分析模型设计提供新视角。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-20",
+    "title": "CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning",
+    "arxiv_id": "2605.20075",
+    "github": "https://github.com/sdc17/CopT",
+    "abstract": "提出CopT，一种反转传统思维链顺序的推理框架。针对标准CoT在模型已能识别答案时仍进行冗长表演性推理的问题，设计连续空间中的对比式on-policy思考机制。允许模型在推理过程中动态决定何时停止思考并给出答案，有效减少不必要的token消耗，在通用推理与Agent任务中提升推理效率。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Omni-DuplexEval: Evaluating Real-time Duplex Omni-modal Interaction",
+    "arxiv_id": "2605.17360",
+    "github": "https://github.com/OpenBMB/Omni-DuplexEval",
+    "abstract": "提出Omni-DuplexEval，首个面向实时双工多模态交互的综合评估框架。针对现有视觉语言模型仅在离线设置下评估、无法反映真实世界流式交互需求的问题，设计主动提醒与实时描述两类评估任务及自动评测协议。为开发支持连续流式输入与适时响应的多模态系统提供标准化测评工具与数据集。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Why Do Reasoning Models Lose Coverage? The Role of Data and Forks in the Road",
+    "arxiv_id": "2605.17026",
+    "github": "https://github.com/psunlpgroup/reasoning_forks",
+    "abstract": "系统研究推理模型在后训练过程中覆盖率下降的现象。提出路径分叉假设：监督微调训练将模型分布坍缩到高频推理路径，导致对替代路径的覆盖能力降低。通过理论分析与大规模实验验证数据分布与模型覆盖率的关系，为设计保持多样性的推理训练策略提供深刻洞见，开源完整实验代码。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Bug or Feature^2: Weight Drift, Activation Sparsity, and Spikes",
+    "arxiv_id": "2605.17659",
+    "github": "https://github.com/On-Point-RND/BugOrFeature",
+    "abstract": "识别并分析现代神经网络中的负权重漂移现象，证明MSE与交叉熵损失在初始化时会对正预激活产生非负梯度期望，驱动下游权重趋向负值。揭示正偏置激活函数与标准损失交互导致的训练动力学问题，分析权重漂移与激活稀疏性、尖峰现象的深层关联，为神经网络架构设计与训练稳定性提供理论指导。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Base Models Look Human To AI Detectors",
+    "arxiv_id": "2605.19516",
+    "github": "https://github.com/YixuanEvenXu/humanization-by-iterative-paraphrasing",
+    "abstract": "发现基础模型生成的文本在商业AI检测器上常被判定为人类创作，而指令微调模型则不然。基于此观察提出Humanization by Iterative Paraphrasing，通过迭代改写框架将AI生成文本转化为检测器难以识别的人类风格文本。方法无需训练模型，仅通过API调用实现文本去机器化，为AI文本检测鲁棒性研究提供新视角。",
+    "tags": [
+      "无需训练",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "S-Bus: Automatic Read-Set Reconstruction for Multi-Agent LLM State Coordination",
+    "arxiv_id": "2605.17076",
+    "github": "https://github.com/sajjadanwar0/sbus",
+    "abstract": "提出S-Bus，一种用于多Agent LLM状态协调的HTTP中间件。针对并发Agent共享可变自然语言状态时产生的结构性竞态条件，设计基于DeliveryLog的自动读集重建机制。通过服务器端记录各Agent的HTTP GET操作日志，在提交时自动检测并解决写冲突与跨分片脏读问题，保障多Agent协作的一致性。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Delta Attention Residuals",
+    "arxiv_id": "2605.18855",
+    "github": "https://github.com/wdlctc/delta-attention-residuals-code",
+    "abstract": "提出Delta Attention Residuals，解决标准Attention Residuals中的路由崩溃问题。发现深层网络中注意力权重因冗余的累积隐藏状态而趋于均匀分布，导致跨层路由失效。通过仅关注层间增量变化而非完整隐藏状态，恢复注意力权重的对比度，使深层模型能够有效选择信息丰富的历史层输出，提升深层网络性能。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-20",
+    "title": "optimize_anything: A Universal API for Optimizing any Text Parameter",
+    "arxiv_id": "2605.19633",
+    "github": "https://github.com/gepa-ai/gepa",
+    "abstract": "提出通用文本参数优化系统，将跨领域优化问题统一为改进由评分函数评估的文本产物。支持单任务搜索、多任务迁移与零样本泛化，在Agent架构发现等六个不同任务上达到或超越专用工具性能。系统无需领域特定训练，仅通过大语言模型API调用实现通用优化，代码完全开源。",
+    "tags": [
+      "API",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "When Vision Speaks for Sound",
+    "arxiv_id": "2605.16403",
+    "github": "https://github.com/rakanWen/wvs-code",
+    "abstract": "揭示视频多模态大语言模型中存在的音频视觉Clever Hans效应：模型依赖视觉线索推断或幻觉声学信息，而非真正验证音频流。该现象在开源与闭源先进模型中普遍存在。通过系统分析表征模型的虚假音频理解机制，指出当前多模态模型在音视频联合推理中的根本性缺陷，为改进音视频融合建模提供方向。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Context Memorization for Efficient Long Context Generation",
+    "arxiv_id": "2605.18226",
+    "github": "https://github.com/yasu0001/AttentionMemory",
+    "abstract": "提出上下文记忆机制，解决前缀增强推理中前缀影响力衰减与注意力计算随前缀长度线性增长的问题。通过将长前缀压缩为可复用的记忆表示，在保持前缀控制效果的同时降低推理计算开销。方法适用于需要长条件前缀控制生成行为的现代大语言模型应用场景，有效提升长上下文生成效率。",
+    "tags": [
+      "长文本"
+    ]
+  }
+]

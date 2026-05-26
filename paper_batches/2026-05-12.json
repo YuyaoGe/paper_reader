@@ -1,0 +1,178 @@
+[
+  {
+    "date": "2026-05-12",
+    "title": "Geometry Conflict: Explaining and Controlling Forgetting in LLM Continual Post-Training",
+    "arxiv_id": "2605.09608",
+    "github": "https://github.com/wyy-code/GCWM",
+    "abstract": "研究LLM持续后训练中的灾难性遗忘问题，首次从任务几何角度解释遗忘机制。将每个后训练任务表示为参数更新，发现遗忘源于任务间协方差几何与模型状态几何的不对齐。基于该发现提出GCWM方法，通过高斯Wasserstein重心构建共享度量，利用几何冲突门控实现几何感知校正。在Qwen3 0.6B到14B的域持续和能力持续设置上，无需回放数据即可一致超越无数据基线，为遗忘提供了解释信号和实用的控制信号。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-12",
+    "title": "TMAS: Scaling Test-Time Compute via Multi-Agent Synergy",
+    "arxiv_id": "2605.10344",
+    "github": "https://github.com/IQuestLab/tmas",
+    "abstract": "提出TMAS框架，通过多Agent协同扩展测试时计算。将推理组织为专业化Agent间的协作过程，引入层次化记忆机制：经验库复用可靠的中间结论和局部反馈，指南库记录高层策略以引导后续推理远离冗余模式。设计混合奖励强化学习方案，联合保持基本推理能力、增强经验利用和鼓励超越既有策略的探索。在挑战性推理基准上，TMAS超越现有测试时扩展基线，混合奖励训练进一步提升迭代扩展的有效性和稳定性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Model Merging Scaling Laws in Large Language Models",
+    "arxiv_id": "2509.24244",
+    "github": "https://github.com/InfiXAI/Merging-Scaling-Law",
+    "abstract": "首次为语言模型合并建立以交叉熵衡量的经验扩展规律，发现模型规模与专家数量满足紧凑幂律关系：规模相关的性能下限随模型容量降低，而合并尾部在专家数量上呈现明显的边际递减。该规律在领域内和跨领域均成立，紧密拟合多种架构和方法的实测曲线，解释了两个稳健规律：大部分增益早期到达，变异性随专家数量增加而减小。基于此可实现预测性规划，为分布式生成AI的组合专家路径提供理论支撑。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-12",
+    "title": "PaperFit: Vision-in-the-Loop Typesetting Optimization for Scientific Documents",
+    "arxiv_id": "2605.10341",
+    "github": "https://github.com/OpenRaiser/PaperFit",
+    "abstract": "将LaTeX排版优化形式化为视觉排版优化任务，提出PaperFit视觉在环Agent，迭代渲染页面、诊断缺陷并应用约束修复。构建五类排版缺陷分类体系指导诊断，并建立PaperFit-Bench基准，涵盖200篇论文、10种会议模板和13种缺陷类型。实验表明PaperFit大幅超越所有基线，证明从可编译源码到出版级PDF的鸿沟需要视觉在环优化来弥合，为文档自动化流水线填补了关键的缺失环节。",
+    "tags": ["VLM", "API"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "SEIF: Self-Evolving Reinforcement Learning for Instruction Following",
+    "arxiv_id": "2605.07465",
+    "github": "https://github.com/Rainier-rq1/SEIF",
+    "abstract": "提出SEIF自进化强化学习框架，通过指令难度演化与模型能力演化的闭环相互促进来提升LLM指令跟随能力。框架包含四个角色：Instructor生成渐进复杂指令、Filter过滤冲突或无效指令、Follower学习跟随演化指令、Judger提供强化学习奖励信号。Instructor与Follower交替训练并协同演化。在多种模型规模和架构上均持续提升性能，揭示了自进化开放式任务的有效训练策略：早期充分训练打牢基础，后期适度训练缓解过拟合以获得更优最终性能。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Key-Value Means",
+    "arxiv_id": "2605.09877",
+    "github": "https://github.com/recursal/KVM-paper",
+    "abstract": "提出KVM，一种新型块循环注意力机制，支持固定大小或动态增长的KV状态。为强Transformer基线配备固定大小KVM注意力层即可得到强大的O(N)分块RNN，仅增加极少参数。训练具有可增长KVM缓存的Transformer，在长上下文测试中表现优异，预填充时间为次二次方，状态增长为次线性。KVM可用标准操作实现，无需自定义核函数，支持分块并行化训练和预填充，可替代传统注意力以节省KV缓存内存，为长上下文建模提供灵活方案。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria",
+    "arxiv_id": "2605.08354",
+    "github": "https://github.com/OpenEnvision/AutoRubric-as-Reward",
+    "abstract": "提出ARR框架，将多模态生成模型的奖励建模从隐式权重优化转变为显式基于标准的分解。在成对比较前，ARR将VLM内部化的偏好知识外化为提示特定的评分标准，将整体意图转化为可独立验证的质量维度，显著抑制包括位置偏差在内的评估偏差。进一步提出RPO策略优化，将结构化多维评估蒸馏为鲁棒的二元奖励，以评分标准条件化的偏好决策替代不透明标量回归。在文生图和图像编辑基准上，ARR-RPO超越成对奖励模型和VLM评判器。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+    "arxiv_id": "2605.08985",
+    "github": "https://github.com/THUMAI-Lab/LLaVA-UHD-v4",
+    "abstract": "重新审视MLLM视觉编码的计算瓶颈，从编码策略和视觉token压缩两个维度进行优化。控制实验表明分片编码优于全局编码，保留局部细节更有利于细粒度感知。提出ViT层内早期压缩机制，在浅层减少token数量，显著降低视觉编码FLOPs同时保持下游性能。LLaVA-UHD v4在文档理解、OCR和通用VQA等基准上减少55.8%视觉编码FLOPs，性能持平甚至超越基线，为高效高分辨率多模态大语言模型提供实用设计方向。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "G-Zero: Self-Play for Open-Ended Generation from Zero Data",
+    "arxiv_id": "2605.09959",
+    "github": "https://github.com/Chengsong-Huang/G-Zero",
+    "abstract": "提出G-Zero，一种无需验证器的协同进化自改进框架，用于开放式生成任务的自主提升。核心创新是Hint-δ内在奖励，量化Generator模型在无辅助回答与受自生成提示条件回答间的预测偏移。Proposer通过GRPO持续针对Generator盲点合成挑战查询和信息提示，Generator通过DPO并发优化以内化提示引导改进。理论上证明了理想化标准DPO版本的最佳迭代次优性保证。通过完全从内部分布动态中导出监督，G-Zero绕过外部评判器的能力上限，为不可验证领域的LLM自进化提供可扩展路径。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "NanoResearch: Co-Evolving Skills, Memory, and Policy for Personalized Research Automation",
+    "arxiv_id": "2605.10813",
+    "github": "https://github.com/OpenRaiser/NanoResearch",
+    "abstract": "提出NanoResearch多Agent框架，通过三层协同演化实现个性化研究自动化。技能库将重复操作蒸馏为可跨项目复用的紧凑规则，记忆模块维护用户和项目特定经验以支撑规划决策，无标签策略学习将自由反馈转化为规划器的持久参数更新。三层相互促进：可靠技能产生丰富记忆，丰富记忆指导更好规划，偏好内化持续将循环对准每位用户。实验表明NanoResearch显著超越现有AI研究系统，并在连续迭代中以更低成本产出更优研究。",
+    "tags": ["MeM", "API"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "ELF: Embedded Language Flows",
+    "arxiv_id": "2605.10938",
+    "github": "https://github.com/lillian039/ELF",
+    "abstract": "提出ELF，一类在连续嵌入空间中的扩散语言模型，基于连续时间流匹配。与现有主要在离散token上操作的扩散语言模型不同，ELF在连续嵌入空间中运行直至最后时刻，才通过共享权重网络映射到离散token。这种形式可直接适配图像域扩散模型的成熟技术如分类器无关引导。实验表明ELF在更少采样步数下超越领先的离散和连续扩散语言模型，实现更优生成质量，为有效的连续空间语言生成提供有前景的路径。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Addressing Performance Saturation for LLM RL via Precise Entropy Curve Control",
+    "arxiv_id": "2604.26326",
+    "github": "https://github.com/lblaoke/entrocraft",
+    "abstract": "提出Entrocraft，一种简单的拒绝采样方法，通过偏置优势分布实现用户定制的熵调度，解决LLM强化学习中的性能饱和问题。无需目标正则化，且与优势估计器无关。理论上将每步熵变化与优势分布关联，解释了现有RL和熵保持方法的行为。系统研究表明线性退火表现最佳。实验表明Entrocraft显著提升泛化能力、输出多样性和长期训练稳定性，使4B模型超越8B基线，将改进持续4倍更长才达到平台期，pass@K提升50%。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning",
+    "arxiv_id": "2605.10923",
+    "github": "https://github.com/ejhshen/SLIM",
+    "abstract": "提出SLIM框架，将Agentic强化学习中的外部技能集视为与策略学习联合优化的动态变量。通过留一技能验证估计每个活跃技能的边际外部贡献，执行三种生命周期操作：保留高价值技能、淘汰贡献可忽略的技能、在持续失败暴露能力缺口时扩展技能库。在ALFWorld和SearchQA上平均超越最佳基线7.1个百分点。结果表明策略学习与外部技能保留并非互斥：部分技能被策略吸收，部分持续提供外部价值，支持SLIM作为基于技能的Agentic RL的更通用范式。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Make Each Token Count: Towards Improving Long-Context Performance with KV Cache Eviction",
+    "arxiv_id": "2605.09649",
+    "github": "https://github.com/ngocbh/trimkv",
+    "abstract": "提出基于全局保留的KV驱逐方法，学习每个token在统一内存预算下的未来效用。轻量级保留门为缓存KV条目分配效用分数，共享的最终评分投影跨所有层和头校准分数，实现单一全局驱逐策略，使不同层、头和模态的token直接竞争缓存容量。理论分析表明优先保留有用token可减少注意力稀释，并证明几何保留作为查询无关的未来效用代理的合理性。在多样化长上下文语言和视觉语言推理及多轮对话基准上，显著降低KV内存同时匹配或超越全缓存推理。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Prompt-Activation Duality: Improving Activation Steering via Attention-Level Interventions",
+    "arxiv_id": "2605.10664",
+    "github": "https://github.com/NihiI-obstat/Gated-Cropped-Attention-Delta",
+    "abstract": "提出GCAD方法，通过从系统提示对自注意力的贡献中提取导向信号，并应用token级门控，解决激活导向中的KV缓存污染问题。在多轮对话的人物导向实验中，GCAD在保持特质控制的同时显著改善长程连贯性。在主要多轮基准上，平均连贯性漂移从-18.6改善到-1.9，第10轮特质表达从78.0提升到93.1。结果表明，当干预遵循模型已用于行为控制的提示介导路径时，激活导向变得更加可靠。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "AgentForesight: Online Auditing for Early Failure Prediction in Multi-Agent Systems",
+    "arxiv_id": "2605.08715",
+    "github": "https://github.com/ZBox1005/AgentForesight",
+    "abstract": "提出AgentForesight框架，将多Agent系统的事后故障归因重新定义为在线审计问题。构建AFTraj-2K轨迹语料库，开发AgentForesight-7B紧凑在线审计模型，采用从粗到细的强化学习训练策略：首先在相邻安全与不安全前缀对上建立风险预期先验，然后通过三轴奖励将先验锐化为精确的步级定位。在AFTraj-2K和外部Who&When基准上超越GPT-4.1和DeepSeek-V4-Pro等专有模型，实现高达19.9%性能提升和3倍更低的步定位误差，开启从事后检测到部署时干预的闭环。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Mela: Test-Time Memory Consolidation based on Transformation Hypothesis",
+    "arxiv_id": "2605.10537",
+    "github": "https://github.com/Musubi-ai/Mela",
+    "abstract": "受神经科学记忆巩固理论启发，提出层次化记忆模块HMM，由低频和高频两个功能子模块组成。低频模块捕获抽象 gist 级知识，高频模块保留丰富的情景细节，最终记忆输出动态重构为上下文相关的组合。将HMM集成到Transformer解码器中形成Mela，在测试时执行在线记忆巩固。进一步提出MemStack方法，将不同层级记忆特征分布到解码器早期层。语言建模实验表明Mela在所有规模上超越Transformer基线，预训练长度固定为4K时仍能在显著更长上下文保持性能。",
+    "tags": ["MeM", "长文本"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Can Muon Fine-tune Adam-Pretrained Models?",
+    "arxiv_id": "2605.10468",
+    "github": "https://github.com/XingyuQu/muon-finetune",
+    "abstract": "探究Muon优化器微调Adam预训练模型时的性能下降问题，通过控制实验发现优化器不匹配会破坏预训练知识，且破坏程度随更新强度增加。假设约束更新可缓解不匹配，并通过LoRA验证：在语言和视觉任务上，LoRA显著缩小Adam与Muon在全量微调下的性能差距。对LoRA秩、灾难性遗忘和LoRA变体的研究进一步确认不匹配严重性与更新强度相关，为理解优化器不匹配的影响机制及缓解策略提供了深入认识，代码已公开。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Conformal Agent Error Attribution",
+    "arxiv_id": "2605.06788",
+    "github": "https://github.com/layer6ai-labs/conformal-agent-error-attribution",
+    "abstract": "基于共形预测提出多Agent系统错误归因框架，为序列数据提供有限样本、分布无关的覆盖保证。引入新的基于过滤的共形预测算法，预测集合为连续序列以支持高效恢复和调试。与现有共形预测方法不同，该算法专为Agent轨迹等序列数据设计。在多种Agent和数据集上验证理论保证，精确隔离错误并利用预测集将多Agent系统回滚至正确状态。该方法与模型无关，为多Agent系统错误归因提供原则性的不确定性量化层。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Rethinking Agentic Search with Pi-Serini: Is Lexical Retrieval Sufficient?",
+    "arxiv_id": "2605.10848",
+    "github": "https://github.com/justram/pi-serini",
+    "abstract": "重新审视词法检索器在前沿LLM能力增强的Agent循环中是否足够的问题。提出Pi-Serini搜索Agent，配备检索、浏览和阅读三种工具。在BrowseComp-Plus上，配置良好的词法检索器配合足够检索深度和更强LLM时能有效支持深度研究。Pi-Serini配合gpt-5.5达到83.1%答案准确率和94.7%表面证据召回率，超越使用稠密检索器的现有搜索Agent。控制消融表明BM25调优带来18.0%准确率提升，增加检索深度进一步带来25.3%召回率提升。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "DeepRefine: Agent-Compiled Knowledge Refinement via Reinforcement Learning",
+    "arxiv_id": "2605.10488",
+    "github": "https://github.com/HKUST-KnowComp/DeepRefine",
+    "abstract": "提出DeepRefine通用LLM推理模型，用于改进Agent编译知识库的质量。通过与知识库多轮交互，执行溯因诊断定位缺陷并执行针对性精炼操作实现增量更新。引入Gain-Beyond-Draft奖励，无需金标准参考即可端到端优化精炼策略。在多个下游任务上持续超越强基线，证明知识库的不完整性、不正确性和冗余性缺陷可通过交互式推理和强化学习显著提升，为开放域知识密集型任务中的Agent知识库维护提供通用解决方案。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+    "arxiv_id": "2605.10933",
+    "github": "https://github.com/thunlp/DECO",
+    "abstract": "提出DECO稀疏MoE架构，在相同总参数量和训练token下匹配稠密Transformer性能。采用基于ReLU的可微路由结合可学习专家缩放，自适应平衡路由专家和共享专家贡献。引入NormSiLU激活函数，在SiLU前归一化输入，产生更稳定的路由专家激活比和更高内在稀疏度。还识别出使用非门控MLP专家配合ReLU路由的经验优势，表明MoE架构可简化。实验表明DECO仅激活20%专家即可匹配稠密性能并超越现有MoE基线，专用加速核在真实硬件上实现3.00倍加速。",
+    "tags": []
+  }
+]

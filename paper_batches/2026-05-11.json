@@ -1,0 +1,201 @@
+[
+  {
+    "date": "2026-05-11",
+    "title": "Mean Mode Screaming: Mean--Variance Split Residuals for 1000-Layer Diffusion Transformers",
+    "arxiv_id": "2605.06169",
+    "github": "https://github.com/erwold/mv-split",
+    "abstract": "针对扩散Transformer扩展到千层时出现的均值主导崩溃问题，提出Mean Mode Screaming（MMS）机制分析其触发原因，并设计Mean-Variance Split（MV-Split）残差连接。MV-Split通过分离中心残差更新与泄漏主干均值替换，在400层DiT上防止崩溃并优于LayerScale；同时验证了1000层DiT的稳定可训练性。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling",
+    "arxiv_id": "2605.08083",
+    "github": "https://github.com/zhengkid/AutoTTS",
+    "abstract": "提出AutoTTS框架，将测试时扩展策略的发现从手工设计转变为环境驱动的自动搜索。通过将宽深TTS建模为预收集推理轨迹上的控制器综合，引入beta参数化和细粒度执行轨迹反馈提升搜索效率。在数学推理基准上，发现的策略优于人工基线，整个发现过程仅需39.9美元和160分钟。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Anisotropic Modality Align",
+    "arxiv_id": "2605.07825",
+    "github": "https://github.com/Yu-xm/Modality_Gap_Theory",
+    "abstract": "探究多模态对比模型共享表示空间中不同模态表示的可交换性前提，揭示模态间隙的各向异性结构是实现可靠跨模态对齐的核心障碍。提出各向异性模态对齐方法，通过理解并弥合模态间的各向异性差异，提升仅使用单模态数据进行多模态训练的效果，为大规模多模态模型训练提供新视角。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification",
+    "arxiv_id": "2605.06221",
+    "github": "https://github.com/qhfan/UniPrefill",
+    "abstract": "针对长上下文预填充加速，提出通用块级动态稀疏化框架UniPrefill。不同于仅关注稀疏注意力的现有工作，UniPrefill通过块级动态稀疏化策略统一加速各类混合架构的预填充阶段，在不损失模型性能的前提下显著降低长序列推理的计算开销，提升LLM长上下文处理能力。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "DecodingTrust-Agent Platform (DTap): A Controllable and Interactive Red-Teaming Platform for AI Agents",
+    "arxiv_id": "2605.04808",
+    "github": "https://github.com/AI-secure/DecodingTrust-Agent",
+    "abstract": "构建可控制、可交互的AI Agent红队测试平台DTap，支持对执行长周期高stakes任务的智能体进行系统性安全评估。平台提供对抗操控场景的自动化测试能力，涵盖API密钥泄露、数据删除、未授权交易等风险，帮助识别和量化Agent在实际部署中的安全漏洞。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-11",
+    "title": "MatryoshkaLoRA: Learning Accurate Hierarchical Low-Rank Representations for LLM Fine-Tuning",
+    "arxiv_id": "2605.07850",
+    "github": "https://github.com/IST-DASLab/MatryoshkaLoRA",
+    "abstract": "提出MatryoshkaLoRA，通过层次化低秩表示实现自适应秩的LLM参数高效微调。不同于需要预定义固定秩的传统LoRA，该方法学习嵌套的低秩子空间，在单一训练过程中同时支持多秩推理，避免繁琐的网格搜索，在保持效率的同时提升微调性能与灵活性。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "4DThinker: Thinking with 4D Imagery for Dynamic Spatial Understanding",
+    "arxiv_id": "2605.05997",
+    "github": "https://github.com/zhangquanchen/4DThinker",
+    "abstract": "提出4DThinker框架，使视觉语言模型能够利用4D意象进行动态空间推理，而非依赖纯文本描述或外部几何模块。通过让VLM内生地构建和操作四维时空表示，实现对单目视频中动态物理场景的精确理解，在动态空间推理任务上达到更优性能。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "ModelLens: Finding the Best for Your Task from Myriads of Models",
+    "arxiv_id": "2605.07075",
+    "github": "https://github.com/luisrui/ModelLens",
+    "abstract": "针对开源模型生态中从海量模型里为新任务选取最优模型的难题，提出ModelLens框架。无需预定义模型池或昂贵的逐模型前向传播，即可在未知数据集上高效评估和筛选模型，解决模型与数据双边未知的实际场景中的模型选择问题。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Q-RAG: Long Context Multi-step Retrieval via Value-based Embedder Training",
+    "arxiv_id": "2511.07328",
+    "github": "https://github.com/griver/Q-RAG",
+    "abstract": "提出基于价值嵌入器训练的多步检索框架Q-RAG，解决复杂问题需要的多步检索挑战。通过价值学习指导嵌入器训练，使检索器能够在长上下文中进行有效的多跳搜索，无需对小型LLM进行高资源消耗的微调，在问答任务上提升检索质量和效率。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Normalizing Trajectory Models",
+    "arxiv_id": "2605.08078",
+    "github": "https://github.com/apple/ml-starflow",
+    "abstract": "提出Normalizing Trajectory Models（NTM），将扩散模型的每步反转变形为具有精确似然训练的条件归一化流。不同于牺牲似然框架的少步蒸馏或对抗训练方法，NTM在压缩采样步数的同时保持概率建模的严谨性，为高效生成建模提供新的理论框架。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation",
+    "arxiv_id": "2605.08029",
+    "github": "https://github.com/apple/ml-starflow",
+    "abstract": "提出STARFlow2，通过自回归归一化流统一语言模型与扩散生成，实现交错文本-图像序列的统一多模态理解与生成。该方法利用自回归流与Transformer共享因果掩码的结构优势，消除自回归文本生成与迭代图像去噪之间的结构性错配，构建端到端多模态生成系统。",
+    "tags": [
+      "VLM",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "MISA: Mixture of Indexer Sparse Attention for Long-Context LLM Inference",
+    "arxiv_id": "2605.07363",
+    "github": "https://github.com/MuLabPKU/TransArch",
+    "abstract": "提出MISA（索引器稀疏注意力混合专家），针对DeepSeek稀疏注意力中索引器多头共享同一选择集导致的长上下文推理瓶颈。通过将索引器分解为多个专家各自处理不同头部，显著降低索引器在长序列上的计算开销，同时保持注意力表达的灵活性。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Scaling Continual Learning to 300+ Tasks with Bi-Level Routing Mixture-of-Experts",
+    "arxiv_id": "2602.03473",
+    "github": "https://github.com/LMMMEng/CaRE",
+    "abstract": "提出CaRE框架，基于双层路由混合专家（BR-MoE）将持续学习扩展到300个以上任务。BR-MoE通过区分性特征学习与综合表示的协同优化，在极长任务序列上同时保持稳定性与可塑性，解决预训练模型持续学习中的灾难性遗忘与扩展性难题。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-11",
+    "title": "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion",
+    "arxiv_id": "2605.07915",
+    "github": "https://github.com/ZhengrongYue/PAE",
+    "abstract": "从隐流形组织角度研究扩散友好型隐空间的本质特征，提出Prior-Aligned Autoencoders（PAE）。通过控制实验识别出影响生成性能的三个关键tokenizer属性，设计先验对齐的自编码器构建真正有利于生成建模的隐空间，提升潜在扩散模型的生成质量。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "SkCC: Portable and Secure Skill Compilation for Cross-Framework LLM Agents",
+    "arxiv_id": "2605.03353",
+    "github": "https://github.com/Nexa-Language/Skill-Compiler",
+    "abstract": "提出SkCC技能编译器，解决不同LLM Agent框架对提示格式敏感度差异高达40%导致的跨框架技能迁移难题。通过将SKILL.md规范的技能自动编译为各框架原生格式，实现可移植且安全的跨框架LLM Agent能力部署，避免手动重写带来的维护负担。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Rethinking RL for LLM Reasoning: It's Sparse Policy Selection, Not Capability Learning",
+    "arxiv_id": "2605.06241",
+    "github": "https://github.com/farukakgul/ReasonMaxxer",
+    "abstract": "重新审视RL在LLM推理中的作用，通过token级分析发现RL并未教授新策略，而是对基础模型已有解进行稀疏策略选择。基于这一发现提出稀疏策略选择视角，论证并验证无需完整RL优化循环即可实现推理提升，为理解RL在LLM后训练中的本质提供新洞见。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "MDN: Parallelizing Stepwise Momentum for Delta Linear Attention",
+    "arxiv_id": "2605.05838",
+    "github": "https://github.com/HuuYuLong/MomentumDeltaNet",
+    "abstract": "提出MDN框架，将动量优化引入线性注意力以解决现有在线SGD解释下的信息快速衰减与收敛次优问题。通过并行化步进动量实现Delta Linear Attention的高效动量更新，在保持线性复杂度优势的同时提升长序列建模的稳定性和表达能力。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-11",
+    "title": "DiffRetriever: Parallel Representative Tokens for Retrieval with Diffusion Language Models",
+    "arxiv_id": "2605.07210",
+    "github": "https://github.com/ielab/diffretriever",
+    "abstract": "提出DiffRetriever，利用扩散语言模型的非自回归特性实现并行多代表token检索。突破自回归模型在PromptReps类方法中的顺序生成瓶颈，通过一次性并行解码多个代表性token构建稠密与稀疏表示，提升检索效率与效果。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Sparse Autoencoders as Plug-and-Play Firewalls for Adversarial Attack Detection in VLMs",
+    "arxiv_id": "2605.07447",
+    "github": "https://github.com/conan1024hao/SAEgis",
+    "abstract": "提出基于稀疏自编码器（SAE）的即插即用式对抗攻击检测框架，为视觉语言模型提供轻量级安全防护。利用SAE学习VLM内部可解释特征，构建能够实时检测对抗样本的防火墙模块，在不修改模型架构的前提下有效抵御针对VLM的对抗攻击。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "PACEvolve++: Improving Test-time Learning for Evolutionary Search Agents",
+    "arxiv_id": "2605.07039",
+    "github": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "abstract": "提出PACEvolve++框架，通过顾问模型强化学习实现进化搜索Agent的测试时策略自适应。将策略适应与评估解耦，使进化搜索能够根据昂贵评估反馈动态调整采样策略，在工程和科研任务中提升搜索效率，仅需少量样本即可学习任务特定的搜索动态。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-11",
+    "title": "PrefixGuard: From LLM-Agent Traces to Online Failure-Warning Monitors",
+    "arxiv_id": "2605.06455",
+    "github": "https://github.com/shinmohuang/PrefixGuard",
+    "abstract": "提出PrefixGuard框架，从LLM-Agent执行轨迹中自动归纳在线故障预警监控器。通过离线StepView归纳步骤从原始轨迹中提取确定性类型化步骤适配器，再训练轻量级前缀监控器在任务执行早期识别异常模式，实现低成本、低延迟的Agent故障预警。",
+    "tags": []
+  }
+]

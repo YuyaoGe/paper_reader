@@ -1,0 +1,228 @@
+[
+  {
+    "date": "2026-05-13",
+    "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
+    "arxiv_id": "2605.12500",
+    "github": "https://github.com/OpenSenseNova/SenseNova-U1",
+    "abstract": "提出 SenseNova-U1 原生统一多模态范式，基于 NEO-unify 架构打破理解与生成之间的结构性割裂，将二者视为单一底层过程的协同视图。推出 8B 稠密和 30B-A3B MoE 两个变体，在文本理解、视觉语言感知、知识推理、智能体决策和空间智能等任务上达到顶尖理解型 VLM 水平，同时在任意到图像生成、复杂图文信息图生成和交错视觉语言生成等生成任务上展现强语义一致性和视觉保真度。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents",
+    "arxiv_id": "2605.09530",
+    "github": "https://github.com/MemTensor/MemPrivacy",
+    "abstract": "提出 MemPrivacy，一种面向边缘-云代理的隐私保护个性化记忆管理方案。在边缘设备识别隐私敏感片段，用类型感知占位符替换后上传云端处理，本地按需恢复原始值。构建 MemPrivacy-Bench 覆盖 200 用户和 5.2 万隐私实例，引入四级隐私分类法。实验表明其在隐私提取上超越 GPT-5.2 和 Gemini-3.1-Pro，且将记忆系统效用损失控制在 1.6% 以内。",
+    "tags": [
+      "MeM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "δ-mem: Efficient Online Memory for Large Language Models",
+    "arxiv_id": "2605.12357",
+    "github": "https://github.com/declare-lab/delta-Mem",
+    "abstract": "提出 δ-mem，一种轻量级在线记忆机制，为冻结的全注意力骨干配备紧凑关联记忆状态。通过 delta-rule 学习压缩历史信息到固定状态矩阵，利用读出结果在生成时对注意力施加低秩修正。仅需 8×8 在线记忆状态，平均分数提升至冻结骨干的 1.10 倍和最强基线的 1.15 倍，在 MemoryAgentBench 上增益达 1.31 倍，无需全量微调或扩展上下文窗口。",
+    "tags": [
+      "MeM",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "L2P: Unlocking Latent Potential for Pixel Generation",
+    "arxiv_id": "2605.12013",
+    "github": "https://github.com/TencentYoutuResearch/T2I-L2P",
+    "abstract": "提出 Latent-to-Pixel（L2P）迁移范式，一种高效利用预训练潜在扩散模型丰富知识来构建强大像素空间模型的框架。通过直接从预训练 LDM 迁移知识，避免从头训练像素扩散模型所需的海量计算和数据资源。该框架实现了像素级生成质量的提升，同时保留了 LDM 的语义理解能力，为像素空间视觉生成提供了一条经济高效的迁移路径。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+    "arxiv_id": "2605.12495",
+    "github": "https://github.com/huangrh99/AlphaGRPO",
+    "abstract": "提出 AlphaGRPO 框架，将组相对策略优化（GRPO）应用于自回归扩散统一多模态模型，无需额外冷启动阶段即可增强多模态生成能力。通过分解可验证奖励机制，解锁模型执行高级推理任务的内在潜力，包括推理式文本到图像生成、多步视觉推理和自反思生成。实验表明该方法在多项多模态生成基准上取得显著提升，验证了强化学习在统一多模态模型后训练中的有效性。",
+    "tags": [
+      "RL",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Beyond the Last Layer: Multi-Layer Representation Fusion for Visual Tokenization",
+    "arxiv_id": "2605.10780",
+    "github": "https://github.com/zhuzil/DRoRAE",
+    "abstract": "提出多层表示融合的视觉 token 化方法，突破现有表示自编码器仅从编码器最后一层提取特征的限制。证明底层视觉细节在最后一层中仅作为残差存在，而丰富的层级信息分布在中间层中。通过融合多层表示，该方法在图像重建和生成质量上取得显著改进，为视觉语言模型提供了更丰富的视觉 token 表示，提升了下游多模态理解和生成任务的性能。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+    "arxiv_id": "2605.12481",
+    "github": "https://github.com/X-PLUG/ToolCUA",
+    "abstract": "提出 ToolCUA，一种面向计算机使用代理的最优 GUI-工具路径编排框架。解决代理在原子 GUI 操作和高级工具调用之间切换的决策困难，通过构建高质量的交错 GUI-工具轨迹数据集，训练模型学习何时使用 GUI 操作、何时调用工具。实验表明该框架显著提升代理在复杂任务中的执行效率和成功率，为混合动作空间的计算机使用代理提供了有效的编排策略。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Towards On-Policy Data Evolution for Visual-Native Multimodal Deep Search Agents",
+    "arxiv_id": "2605.10832",
+    "github": "https://github.com/JoeYing1019/ODE",
+    "abstract": "提出面向视觉原生多模态深度搜索代理的策略内数据演化方法。解决现有系统中中间视觉证据无法被后续工具重复消费的问题，以及策略外训练数据与真实推理分布之间的错位。通过视觉感知的工具使用框架和策略内数据演化机制，使代理能够在不断演化的文本和视觉上下文中链接搜索、工具使用和视觉推理。实验表明该方法在开放世界多模态搜索任务上取得显著性能提升。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Continual Harness: Online Adaptation for Self-Improving Foundation Agents",
+    "arxiv_id": "2605.09998",
+    "github": "https://github.com/sethkarten/continual-harness",
+    "abstract": "提出 Continual Harness，一种面向基础代理的在线自适应自我改进框架。针对具身代理长视界部分可观测决策挑战，通过迭代人类在环 harness 精炼实现持续改进。以 Gemini Plays Pokemon 为例，使代理成为首个在困难模式下完成 Pokemon Blue 和 Yellow Legacy 的 AI 系统，为具身代理领域提供了可扩展的自我改进方案。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Missing Old Logits in Asynchronous Agentic RL: Semantic Mismatch and Repair Methods for Off-Policy Correction",
+    "arxiv_id": "2605.12070",
+    "github": "https://github.com/millioniron/ROLL",
+    "abstract": "揭示异步强化学习在大型语言模型代理中的关键失效模式。在异构训练系统中，PPO 风格的策略外校正需要将总重要性比率分解为训练-推理差异和策略陈旧性两个语义不同的因子，但现有方法忽略了对旧 logits 的语义匹配要求。提出语义不匹配修复方法，通过显式维护旧策略的语义表示来修复策略外校正，在异步代理 RL 系统中显著改善训练稳定性和最终性能。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "On-Policy Self-Evolution via Failure Trajectories for Agentic Safety Alignment",
+    "arxiv_id": "2605.11882",
+    "github": "https://github.com/YinBo0927/FATE",
+    "abstract": "提出 FATE，一种通过失败轨迹进行策略内自我进化的代理安全对齐框架。针对工具使用 LLM 代理可能执行不安全工具调用、遵循注入指令或过度拒绝良性任务等安全问题，收集失败轨迹作为训练信号，通过策略内进化迭代提升代理安全性。实验表明该方法在保持实用性的同时显著提升代理安全对齐水平，避免了传统安全对齐中常见的安全-效用权衡困境。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Your Language Model is Its Own Critic: Reinforcement Learning with Value Estimation from Actor's Internal States",
+    "arxiv_id": "2605.07579",
+    "github": "https://github.com/holi-lab/POISE",
+    "abstract": "提出 POISE，一种从演员模型内部状态获取价值估计的强化学习策略优化方法。针对 RLVR 中基线估计的方差缩减需求，避免了 PPO 需要同规模评判模型和 GRPO 需要多轮 rollout 的高昂代价。通过挖掘演员模型内部激活中的价值信息，获得稳定且低方差的基线估计，在推理任务上实现与 PPO 和 GRPO 相当甚至更优的性能，同时大幅降低计算开销。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "SeePhys Pro: Diagnosing Modality Transfer and Blind-Training Effects in Multimodal RLVR for Physics Reasoning",
+    "arxiv_id": "2605.09266",
+    "github": "https://github.com/AI4Phys/SeePhy-Pro",
+    "abstract": "提出 SeePhys Pro，一个细粒度的模态迁移基准，用于诊断多模态 RLVR 在物理推理中的模态迁移和盲训练效应。通过将关键信息从文本逐步迁移到图像，评估模型是否保持相同的推理能力。包含四种语义对齐的问题变体，从纯文本到纯视觉逐步过渡。实验揭示了现有模型在视觉模态下的推理退化现象，为改进多模态物理推理模型的训练策略提供了重要洞察。",
+    "tags": [
+      "RL",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "One Turn Too Late: Response-Aware Defense Against Hidden Malicious Intent in Multi-Turn Dialogue",
+    "arxiv_id": "2605.05630",
+    "github": "https://github.com/Graph-COM/TurnGate",
+    "abstract": "提出 TurnGate，一种面向多轮对话中隐藏恶意意图的响应感知防御方法。针对攻击者将有害目标分布在多个看似良性的轮次中的新型威胁，通过响应感知机制检测跨轮次的恶意意图累积。该方法不依赖单轮输入的静态分析，而是建模对话上下文中的语义漂移和意图演化。实验表明 TurnGate 在多种隐藏攻击场景下显著优于现有防御方法，有效保护部署的 LLM 免受多轮对抗攻击。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-13",
+    "title": "EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at Individual, Team, and Population Scales",
+    "arxiv_id": "2605.11136",
+    "github": "https://github.com/Mercury7353/EvoChamber",
+    "abstract": "提出 EVOCHAMBER，一种在个体、团队和种群三个尺度上进行测试时协同进化的多智能体系统框架。指出多智能体测试时进化不是单智能体进化的简单复制，而是额外涉及协作伙伴选择、协作方式和知识跨种群流动等无单智能体对应物的组件。通过协同进化机制产生涌现的专业化现象，在复杂多智能体协作任务上取得显著性能提升，为测试时计算扩展提供了新的多智能体视角。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "PASA: A Principled Embedding-Space Watermarking Approach for LLM-Generated Text under Semantic-Invariant Attacks",
+    "arxiv_id": "2605.10977",
+    "github": "https://github.com/ai-kunkun/PASA",
+    "abstract": "提出 PASA，一种面向语义不变攻击的鲁棒无失真嵌入空间水印算法。针对现有 LLM 水印方法易被改写等语义不变攻击破解的问题，在语义层面嵌入和检测水印而非词汇层面。通过将水印嵌入模型的语义表示空间，使得即使文本被改写，语义表示中的水印信号仍可被可靠检测。实验表明 PASA 在多种语义不变攻击下保持高检测率和低误报率，为 LLM 生成文本的负责任部署提供了有效保障。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-13",
+    "title": "LoopUS: Recasting Pretrained LLMs into Looped Latent Refinement Models",
+    "arxiv_id": "2605.11011",
+    "github": "https://github.com/Thrillcrazyer/LoopUS",
+    "abstract": "提出 LoopUS，一种将预训练 LLM 重新铸造成循环潜在细化模型的方法。针对现有循环计算方案需要从头训练或破坏性改造预训练模型的问题，通过循环深度上采样机制在测试时动态增加模型的循环深度。该方法无需额外训练即可利用预训练模型的知识进行循环细化，在推理任务上显著提升性能，同时避免了传统循环模型训练不稳定和部署成本高昂的问题，为测试时计算扩展提供了一种轻量级方案。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+    "arxiv_id": "2605.12477",
+    "github": "https://github.com/SeokwonJung-Jay/MEME-public",
+    "abstract": "提出 MEME，一个面向多实体和演化记忆的综合评估基准。针对现有记忆基准仅评估单实体更新的局限，定义六个任务覆盖多实体和演化两个维度的完整空间，包括级联和缺失等依赖推理任务以及删除任务。这些任务在先前工作中均未被评分。实验全面评估了当前主流记忆系统在处理复杂多实体关系和长期演化信息方面的能力，揭示了现有系统在依赖推理和动态更新方面的关键不足。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Solve the Loop: Attractor Models for Language and Reasoning",
+    "arxiv_id": "2605.12466",
+    "github": "https://github.com/jacobfa/Attractor",
+    "abstract": "提出 Attractor Models，一种稳定高效的循环 Transformer 替代方案。针对循环架构训练不稳定、优化部署成本高且受限于小固定循环深度的问题，通过骨干模块先提出输出嵌入，然后循环模块将其迭代细化到目标解。该机制避免了传统循环模型的训练不稳定性，支持任意深度的循环细化，在语言建模和推理任务上取得显著改进，为循环计算在大型语言模型中的应用提供了一条实用路径。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+    "arxiv_id": "2605.12492",
+    "github": "https://github.com/Sphere-AI-Lab/pion",
+    "abstract": "提出 Pion，一种基于正交等价变换的频谱保持优化器。与 Adam 和 Muon 等加法优化器不同，Pion 通过左右正交变换更新每个权重矩阵，在训练全程保持其奇异值不变。这种优化机制通过调节权重空间的几何结构而非改变频谱来实现参数更新，在大语言模型训练实验中展现出与主流优化器相当或更优的收敛性能，同时为理解神经网络优化的几何特性提供了新的视角。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-13",
+    "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
+    "arxiv_id": "2605.12493",
+    "github": "https://github.com/xiaowu0162/LongMemEval-V2",
+    "abstract": "提出 LongMemEval-V2，一个面向专业网络环境长期代理记忆的综合评估基准。针对现有记忆基准主要关注用户历史、短轨迹或下游任务成功率的局限，直接评估记忆系统是否有效内化环境动态、界面功能和反复出现的失败模式。通过模拟经验丰富的同事所需的长期记忆能力，该基准揭示了当前记忆系统在环境适应性和工作流记忆方面的关键差距，为开发更具经验的代理提供了评估框架。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "AutoLLMResearch: Training Research Agents for Automating LLM Experiment Configuration -- Learning from Cheap, Optimizing Expensive",
+    "arxiv_id": "2605.11518",
+    "github": "https://github.com/taichengguo/AutoLLMResearch",
+    "abstract": "提出 AutoLLMResearch，一个用于自动化 LLM 实验配置的研究代理训练框架。针对架构设计、超参数调优等实验配置不当导致计算资源浪费的问题，通过从廉价配置中学习、优化昂贵配置的策略，训练研究代理自动探索和优化 LLM 实验空间。该方法将代理的训练成本控制在可接受范围内，同时显著提升实验配置的效率和质量，为 LLM 研究的自动化和可扩展性提供了新的解决方案。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Micro-Defects Expose Macro-Fakes: Detecting AI-Generated Images via Local Distributional Shifts",
+    "arxiv_id": "2605.09296",
+    "github": "https://github.com/ZBox1005/MDMF",
+    "abstract": "提出 MDMF，一种基于局部分布感知的 AI 生成图像检测框架。针对现有检测器过度依赖全局语义而忽略关键微观缺陷的局限，通过捕捉真实图像与 AI 生成图像在局部区域分布上的细微差异实现检测。该方法不依赖预训练特征提取器的全局语义，而是关注像素级的局部分布偏移，在多种生成模型和攻击场景下展现出高检测率和强泛化能力，为 AI 生成内容的识别提供了新的技术路径。",
+    "tags": []
+  }
+]

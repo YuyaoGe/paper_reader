@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2026-05-25",
+    "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",
+    "arxiv_id": "2605.23904",
+    "github": "https://github.com/microsoft/SkillOpt",
+    "abstract": "提出 SkillOpt，首个系统化的可控文本空间 Agent 技能优化器，将技能视为冻结 Agent 的外部状态进行训练。通过独立优化器模型将评分后的 rollout 转化为对技能文档的增删改编辑，仅在验证分数严格提升时才接受。引入文本学习率预算、拒绝编辑缓冲区和 epoch 级慢更新机制保证训练稳定，部署时零推理开销。在 6 个 benchmark、7 个目标模型和 3 种执行环境的 52 个评估单元上均取得最优或持平，在 GPT-5.5 上平均提升 23.5 个百分点。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "Lens: Rethinking Training Efficiency for Foundational Text-to-Image Models",
+    "arxiv_id": "2605.21573",
+    "github": "https://github.com/microsoft/Lens",
+    "abstract": "提出 38 亿参数的文本到图像模型 Lens，在多个 benchmark 上达到甚至超越 60 亿参数以上 SOTA 模型的性能，训练计算量仅为 Z-Image 的 19.3%。通过 8 亿条 GPT-4.1 生成的密集标注图像-文本对训练，每批次融合多分辨率多宽高比图像以扩大有效视觉覆盖；采用语义 VAE 和强语言编码器加速收敛并支持多语言泛化。预训练后通过 RL、reasoner 模块和蒸馏加速实现 4 步推理，在单张 H100 上生成 1024² 图像仅需 3.15 秒。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research",
+    "arxiv_id": "2605.22878",
+    "github": "https://github.com/zjunlp/SciAtlas",
+    "abstract": "构建大规模多学科异构学术资源知识图谱 SciAtlas，整合超过 4300 万篇论文、1.57 亿实体和 30 亿三元组，为 AI Agent 提供结构化拓扑认知底图以打破学科壁垒。提出神经符号检索算法，通过三路协同召回和图重排序实现从简单语义匹配到确定性关联发现的转变。支持文献综述、自动研究趋势综合、创意定位和学术轨迹探索等应用，可作为赋能自动科研全链路的「认知地图」，显著降低推理成本。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-25",
+    "title": "From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills",
+    "arxiv_id": "2605.23899",
+    "github": "https://github.com/microsoft/SkillLens",
+    "abstract": "对模型生成 Agent 技能进行系统性研究，覆盖从原始经验到技能消费的完整生命周期。分析领域级和模型生成技能的提取、验证与复用机制，揭示当前技能提取方法在规模化应用中的关键瓶颈。通过大规模实验对比不同技能生成策略在多个任务域上的效果，提出提升技能质量和可迁移性的最佳实践，为构建可自我提升的语言 Agent 提供理论和实证基础。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-25",
+    "title": "RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution",
+    "arxiv_id": "2605.21195",
+    "github": "https://github.com/syjmelody/RankE",
+    "abstract": "针对离散自回归文本到图像模型后训练中仅优化策略而冻结 VQ 解码器导致的潜在协变量偏移问题，提出 RankE 端到端后训练方法。通过解码器协同进化机制，使策略和 VQ 解码器同步优化，消除 token 分布漂移带来的对齐瓶颈。实验表明，该方法显著提升离散 T2I 模型的图像质量与文本对齐度，为自回归图像生成模型的后训练提供了新范式。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "ETCHR: Editing To Clarify and Harness Reasoning",
+    "arxiv_id": "2605.23897",
+    "github": "https://github.com/InternLM/ETCHR",
+    "abstract": "提出 ETCHR，一种通过图像编辑辅助多模态推理的新范式。针对纯文本思维链在需要细粒度空间推理或视角转换任务中的瓶颈，将专用图像编辑模型与视觉理解模型解耦，利用编辑后的中间图像引导推理过程，避免统一多模态方法产生的噪声中间结果。在多个视觉推理基准上验证了该方法的有效性，为「以图推理」提供了更灵活可控的实现路径。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "From Seeing to Thinking: Decoupling Perception and Reasoning Improves Post-Training of Vision-Language Models",
+    "arxiv_id": "2605.20177",
+    "github": "https://github.com/UCSC-VLAA/VLM-CapCurriculum",
+    "abstract": "提出将视觉语言模型的感知与推理能力解耦的后训练框架，系统研究二者在 VLM 后训练中的相互作用。将能力分解为视觉感知、视觉推理和文本推理三个独立训练阶段，每个阶段使用专门设计的训练数据和课程学习策略。实验表明，视觉任务性能主要受限于感知能力而非推理本身，通过针对性强化视觉感知阶段可显著提升 VLM 在复杂视觉任务上的表现。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "Good Token Hunting: A Hitchhiker's Guide to Token Selection for Visual Geometry Transformers",
+    "arxiv_id": "2605.23892",
+    "github": "https://github.com/zsh2000/gotohunt",
+    "abstract": "提出 Good Token Hunting 策略，通过限制视觉几何 Transformer 中每个查询关注的 key/value token 数量，解决全局注意力导致计算量随输入序列长度二次增长的问题。该方法简单通用，可即插即用地应用于多种多视图 3D 重建的视觉几何 Transformer 架构，在保持重建精度的同时显著降低计算开销，提升模型的可扩展性和推理效率。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-25",
+    "title": "The Illusion of Reasoning: Exposing Evasive Data Contamination in LLMs via Zero-CoT Truncation",
+    "arxiv_id": "2605.21856",
+    "github": "https://github.com/Yifan-Lan/zero-cot-probe",
+    "abstract": "提出 Zero-CoT Truncation 方法，用于检测大型语言模型中隐蔽的间接数据污染。针对恶意发布者通过改写 benchmark 数据等规避策略人为提升排行榜性能的问题，利用零样本思维链截断来暴露模型对训练数据的记忆而非真正推理能力。实验表明该方法能有效识别多种隐蔽污染形式，为维护 LLM 推理能力评估的公平性和客观性提供了可靠工具。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-25",
+    "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning",
+    "arxiv_id": "2605.21488",
+    "github": "https://github.com/locuslab/eqr",
+    "abstract": "提出 Equilibrium Reasoners，一种通过学习任务条件吸引子实现可扩展测试时推理的新范式。将通用推理形式化为潜动态系统的稳定不动点学习，使模型在测试时通过迭代更新潜状态收敛到有效解。理论分析和实验表明，该方法能够有效泛化到未见过的推理模式，为理解迭代推理模型的内部机制提供了新的动力学视角，并在多个推理基准上验证了可扩展性优势。",
+    "tags": ["无需训练"]
+  }
+]

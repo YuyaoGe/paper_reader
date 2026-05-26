@@ -1,0 +1,11 @@
+# Runtime logs from Kimi backfill / daily fetch
+.kimi_logs/
+
+# Local backups
+*.bak
+paper_list.md.bak
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

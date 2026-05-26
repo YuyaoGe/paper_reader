@@ -1,0 +1,154 @@
+[
+  {
+    "date": "2026-05-08",
+    "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+    "arxiv_id": "2605.05242",
+    "github": "https://github.com/DCI-Agent/DCI-Agent-Lite",
+    "abstract": "针对agentic search中传统检索器因固定top-k接口丢失关键证据的瓶颈，本文提出直接语料交互（DCI）范式，让智能体通过grep、文件读取等终端工具直接搜索原始语料，无需嵌入模型或向量索引。实验表明，DCI在BRIGHT、BEIR等数据集上显著超越稀疏、稠密及重排序基线，在BrowseComp-Plus和多跳问答中取得优异表现，为agentic search开辟更灵活的接口设计空间。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Skill1: Unified Evolution of Skill-Augmented Agents via Reinforcement Learning",
+    "arxiv_id": "2605.06130",
+    "github": "https://github.com/AlphaLab-USTC/Skill1",
+    "abstract": "本文提出Skill1框架，通过单一策略协同演化技能选择、利用与蒸馏三项能力，以共享任务结果信号驱动学习。该策略生成查询检索技能库、重排序候选技能、基于选定技能执行任务，并从轨迹中蒸馏新技能。实验在ALFWorld和WebShop上表明，Skill1优于现有基于技能和强化学习的基线，消融实验验证了各信用信号对协同演化的必要性。",
+    "tags": [
+      "RL",
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Continuous Latent Diffusion Language Model",
+    "arxiv_id": "2605.06548",
+    "github": "https://github.com/ByteDance-Seed/Cola-DLM",
+    "abstract": "本文提出Cola DLM，一种层次化潜在扩散语言模型，通过文本VAE学习稳定的文本到潜在映射，以块因果DiT在连续潜在空间建模全局语义先验，再通过条件解码生成文本。该设计将全局语义组织与局部文本实现分离，支持连续空间的语义压缩。在约2B参数规模及2000 EFLOPs缩放曲线上，Cola DLM展现出强大的生成质量和缩放行为。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "RaguTeam at SemEval-2026 Task 8: Meno and Friends in a Judge-Orchestrated LLM Ensemble for Faithful Multi-Turn Response Generation",
+    "arxiv_id": "2605.04523",
+    "github": "https://github.com/RaguTeam/ragu_mtrag_semeval",
+    "abstract": "本文提出异构七模型集成系统，结合两种提示变体，通过GPT-4o-mini裁判为每实例选择最优候选，在SemEval-2026 MTRAGEval任务B中排名第一。实验表明模型家族、规模和提示策略的多样性至关重要，集成系统持续优于任何单一模型。同时推出7B领域自适应模型Meno-Lite-0.1，在成本与性能间取得良好平衡。",
+    "tags": [
+      "API",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "MARBLE: Multi-Aspect Reward Balance for Diffusion RL",
+    "arxiv_id": "2605.06507",
+    "github": "https://github.com/aim-uofa/MARBLE",
+    "abstract": "针对扩散模型RL微调中多维度奖励优化的难题，本文提出MARBLE梯度空间优化框架。该方法为每个奖励维护独立的优势估计器，计算各奖励策略梯度后通过二次规划和谐统一为单一更新方向，无需手动调参。在SD3.5 Medium上五维奖励同时提升，训练速度仅为基础训练的0.97倍，有效解决了加权求和导致的样本级失配问题。",
+    "tags": [
+      "RL",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Nonsense Helps: Prompt Space Perturbation Broadens Reasoning Exploration",
+    "arxiv_id": "2605.05566",
+    "github": "https://github.com/shrango/LoPE",
+    "abstract": "本文提出LoPE框架，通过向提示前随机拼接Lorem Ipsum伪拉丁文本作为扰动，打破GRPO训练中零优势问题的探索瓶颈。实验证明，这种任务无关的提示空间扰动能显著改变模型输出分布，解锁正交推理路径。在1.7B、4B和7B模型上，LoPE均显著优于原始提示重采样基线，为LLM强化学习中的探索提供了有效新思路。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction",
+    "arxiv_id": "2605.06642",
+    "github": "https://github.com/xxyQwQ/StraTA",
+    "abstract": "本文提出StraTA框架，将显式轨迹级策略引入agentic强化学习。该框架从初始任务状态采样紧凑策略，后续动作以该策略为条件，采用层次化GRPO式 rollout 设计联合训练策略生成与动作执行。在ALFWorld、WebShop和SciWorld上，StraTA分别达到93.1%、84.2%和63.5%的成功率，显著优于强基线和前沿闭源模型。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+    "arxiv_id": "2605.06651",
+    "github": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "abstract": "本文提出AI Co-Mathematician工作平台，为数学家提供交互式AI agent支持，涵盖构思、文献检索、计算探索、定理证明和理论构建。该平台通过异步有状态工作空间管理不确定性、细化用户意图并追踪失败假设。在FrontierMath Tier 4上达到48%的新高分，展示了AI辅助数学发现的高度交互范式。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key",
+    "arxiv_id": "2605.06638",
+    "github": "https://github.com/wtl666wtl/ScaleLogic",
+    "abstract": "本文提出ScaleLogic合成逻辑推理框架，独立控制推理深度和逻辑表达力两个难度维度。实验发现RL训练计算量T与推理深度D呈幂律关系，且缩放指数随逻辑表达力单调增长（从1.04到2.60）。在下游数学和推理基准上，更具表达力的训练设置带来最高+10.66分的性能提升和更高效的迁移，证明训练内容而非仅训练规模决定迁移效果。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Auto Research with Specialist Agents Develops Effective and Non-Trivial Training Recipes",
+    "arxiv_id": "2605.05724",
+    "github": "https://github.com/cxcscmu/Auto-Research-Recipes",
+    "abstract": "本文构建由外部评估驱动的自主研究闭环，通过专业agent分工搜索训练配方。关键发现是谱系反馈让agent将评估结果转化为程序级配方编辑而非一次性建议。在1197次试验中，系统将Parameter Golf验证bpb降低0.81%，NanoChat-D12 CORE提升38.7%，CIFAR-10 Airbench96墙钟时间减少4.59%，全程无需人工干预。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "A^2TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping",
+    "arxiv_id": "2605.06200",
+    "github": "https://github.com/CuSO4-Chen/A-TGPO",
+    "abstract": "本文提出A^2TGPO，解决多轮交互中基于信息增益的内在过程信号三大挑战：提出轮次组归一化，仅与相同交互深度的对等轮次比较；设计方差重标度的折扣累积，保持跨轮次优势幅度可比；实现自适应轮次级裁剪，根据归一化信息增益动态调节更新区域。该方法无需外部奖励模型，有效提升了agentic LLM的信用分配精度。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
+    "arxiv_id": "2605.06663",
+    "github": "https://github.com/allenai/EMO",
+    "abstract": "本文提出EMO，一种面向模块化的混合专家模型，通过限制同文档token从共享池中选择专家，使专家分组在预训练中自发涌现。预训练1B激活/14B总参数的EMO在1T token上达到标准MoE性能，同时仅保留25%专家时仅下降1%绝对值，而标准MoE在此设置下严重崩溃。专家子集在语义层面（如数学、代码）特化，为模块化高效部署提供新路径。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
+    "arxiv_id": "2605.06665",
+    "github": "https://github.com/Centaurus-Alpha/UniPool",
+    "abstract": "本文提出UniPool，将MoE中逐层独立专家集替换为全局共享专家池，通过池级辅助损失平衡全局专家利用率，并采用NormRouter实现稳定稀疏路由。在五个LLaMA架构规模（182M-978M参数）上，UniPool验证损失最多降低0.0386。进一步发现缩减池大小的UniPool变体仅用41.6%-66.7%的专家参数预算即可匹配或超越逐层MoE，证明专家参数可次线性增长。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "The Granularity Axis: A Micro-to-Macro Latent Direction for Social Roles in Language Models",
+    "arxiv_id": "2605.06196",
+    "github": "https://github.com/qinchonghanzuibang/Granularity-Axis",
+    "abstract": "本文发现大语言模型内部表征编码了社会角色的粒度信息，定义粒度轴为宏观与微观角色隐藏状态之差。在Qwen3-8B中，该轴与角色表征空间主成分对齐度达0.972，解释52.6%方差。构建75个跨五级粒度的社会角色，通过激活操控可将Llama响应粒度从2.00调至3.17，证明社会角色粒度是结构化、有序且因果可操控的潜在方向。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "GeoStack: A Framework for Quasi-Abelian Knowledge Composition in VLMs",
+    "arxiv_id": "2605.06477",
+    "github": "https://github.com/QuantitativeImagingLaboratory/GeoStack",
+    "abstract": "本文提出GeoStack框架，解决视觉语言模型中跨领域知识组合导致的灾难性遗忘问题。通过对适配器流形施加几何结构约束，GeoStack确保基础模型知识得以保留，并数学证明其权重折叠性质可实现常数时间推理复杂度O(1)。在多领域适配和类增量学习实验中，GeoStack有效缓解灾难性遗忘，为VLM的长期知识组合提供了高效模块化方案。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Recovering Hidden Reward in Diffusion-Based Policies",
+    "arxiv_id": "2605.00623",
+    "github": "https://github.com/sotaagi/EnergyFlow",
+    "abstract": "本文提出EnergyFlow框架，通过参数化标量能量函数统一生成式动作建模与逆强化学习。理论上证明在去噪得分匹配下学习的分数函数恢复了专家软Q函数梯度，无需对抗训练即可提取奖励。实验表明EnergyFlow在多种操作任务上达到最优模仿性能，同时提供的奖励信号在下游RL中超越对抗IRL和基于似然的替代方法，证明了保守性约束同时有利于策略泛化。",
+    "tags": [
+      "RL",
+      "扩散模型"
+    ]
+  }
+]

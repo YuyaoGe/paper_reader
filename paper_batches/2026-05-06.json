@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-05-06",
+    "title": "ARIS: Autonomous Research via Adversarial Multi-Agent Collaboration",
+    "arxiv_id": "2605.03042",
+    "github": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+    "abstract": "提出ARIS开源自主研究框架，通过跨模型对抗协作协调机器学习研究流程。执行模型驱动研究进展，来自不同模型家族的审稿人批判中间产物并请求修订。框架包含执行层（65个以上可复用Markdown技能、MCP模型集成、持久研究wiki）、编排层（五种端到端工作流）和保证层（三阶段验证实验声明是否有证据支持，含五轮科学编辑、数学证明检查）。原型自改进循环记录研究轨迹并经审稿人批准后采纳改进。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-06",
+    "title": "OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories",
+    "arxiv_id": "2605.04036",
+    "github": "https://github.com/PolarSeeker/OpenSeeker",
+    "abstract": "证明简单SFT在高质量轨迹驱动下可训练前沿搜索智能体。通过扩展知识图谱、扩充工具集、低步数过滤三项改进，仅用10.6k数据训练的OpenSeeker-v2在四基准达SOTA：BrowseComp 46.0%、BrowseComp-ZH 58.1%、HLE 34.6%、xbench 78.0%，超越通义深度研究的CPT+SFT+RL流程。这是首个纯学术团队仅用SFT达该规模SOTA的搜索智能体。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-05-06",
+    "title": "Beyond SFT-to-RL: Pre-alignment via Black-Box On-Policy Distillation for Multimodal RL",
+    "arxiv_id": "2604.28123",
+    "github": "https://github.com/XIAO4579/PRISM",
+    "abstract": "针对多模态模型后训练中SFT引入的分布漂移，提出PRISM三阶段流水线，在SFT与RLVR间插入显式分布对齐。基于黑盒在线策略蒸馏，将分布对齐建模为策略与MoE判别器的响应级对抗博弈，配备感知和推理专家提供解耦修正信号。在Qwen3-VL上实验表明，PRISM在GRPO、DAPO、GSPO等多种RL算法和多模态基准上持续提升下游RLVR性能，4B和8B分别较基线提升平均精度4.4和6.0个点。",
+    "tags": ["RL", "VLM", "微调"]
+  },
+  {
+    "date": "2026-05-06",
+    "title": "HeavySkill: Heavy Thinking as the Inner Skill in Agentic Harness",
+    "arxiv_id": "2605.02396",
+    "github": "https://github.com/wjn1996/HeavySkill",
+    "abstract": "提出HeavySkill视角，将深度思考不仅视为编排框架的最小执行单元，更内化为驱动模型解决复杂任务的内部技能。该技能表现为「并行推理后总结」的两阶段流程，可嵌入任何agent框架。实验表明该内部技能持续优于传统Best-of-N策略，更强LLM甚至接近Pass@N。关键发现是深度思考的深度和宽度可作为可学习技能通过强化学习进一步扩展，为自进化LLM提供新路径。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-06",
+    "title": "Skills-Coach: A Self-Evolving Skill Optimizer via Training-Free GRPO",
+    "arxiv_id": "2604.27488",
+    "github": "https://github.com/T1aNS1R/Skills-Coach",
+    "abstract": "提出Skills-Coach自动化框架，增强基于LLM的智能体技能自进化。包含四个核心模块：多样化任务生成、轻量优化技能提示与代码、对比执行评估原始与优化技能、可追溯评估严格按标准评估。支持虚拟和真实两种执行模式。在48种技能的Skill-X基准上实验表明，Skills-Coach在广泛类别上显著提升技能能力，推动更鲁棒自适应的LLM智能体发展。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-06",
+    "title": "Chain of Evidence: Pixel-Level Visual Attribution for Iterative Retrieval-Augmented Generation",
+    "arxiv_id": "2605.01284",
+    "github": "https://github.com/PeiYangLiu/CoE",
+    "abstract": "针对迭代检索增强生成中粗粒度归因和视觉语义丢失两大瓶颈，提出Chain of Evidence视觉归因框架。利用视觉语言模型直接对检索文档截图进行推理，消除格式特定解析，输出精确边界框以可视化完整推理链。在Wiki-CoE和SlideVQA两个基准上评估，微调后的Qwen3-VL-8B-Instruct在需要视觉布局理解的场景中显著优于文本基线，为像素级可解释iRAG提供了检索器无关的解决方案。",
+    "tags": ["VLM"]
+  }
+]

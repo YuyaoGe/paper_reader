@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2026-05-18",
+    "title": "MMSkills: Towards Multimodal Skills for General Visual Agents",
+    "arxiv_id": "2605.13527",
+    "github": "https://github.com/DeepExperience/MMSkills",
+    "abstract": "提出 MMSkills 框架，为视觉智能体构建可复用的多模态技能包。每个技能包耦合文本程序、运行时状态卡片和多视角关键帧。通过 agentic 轨迹到技能的生成器从公开交互数据中提取多模态技能，并引入分支加载的多模态技能智能体，在临时分支中检查状态卡片和关键帧。在 GUI 和游戏视觉智能体基准上持续提升前沿和小规模多模态智能体性能。",
+    "tags": ["VLM", "MeM"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Auditing Agent Harness Safety",
+    "arxiv_id": "2605.14271",
+    "github": "https://github.com/eric-ai-lab/HarnessAudit",
+    "abstract": "提出 HarnessAudit 框架，审计 LLM agent 执行轨迹的全程安全性，涵盖边界合规、执行保真度和系统稳定性三个维度。引入 HarnessAudit-Bench 基准，包含 210 个任务覆盖 8 个真实领域。评估发现任务完成度与安全执行不对齐，违规随轨迹长度累积，多 agent 协作显著扩大安全风险面，而 harness 设计决定了安全部署的上限。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR",
+    "arxiv_id": "2605.15726",
+    "github": "https://github.com/tally0818/NudgeRL",
+    "abstract": "提出 NudgeRL 框架，为 RLVR 引入结构化多样性探索。通过 Strategy Nudging 为每次 rollout 注入轻量级策略上下文，无需昂贵 oracle 监督即可产生多样化推理轨迹。统一目标函数将奖励分解为上下文间和上下文内组件，并引入蒸馏目标将发现的行为迁移回基础策略。在 5 个数学基准上超越标准 GRPO 和 oracle 引导基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "PAGER: Bridging the Semantic-Execution Gap in Point-Precise Geometric GUI Control",
+    "arxiv_id": "2605.15963",
+    "github": "https://github.com/OpenRaiser/Pager",
+    "abstract": "提出 PAGER，一个拓扑感知的 GUI agent，解决精确几何构建中的语义-执行鸿沟。将构建分解为依赖结构规划和像素级执行，通过像素接地监督微调建立可执行动作语法，并通过精度对齐的强化学习缓解 rollout 暴露偏差。在 PAGE Bench 上实现 4.1 倍于最强基线的任务成功率，将 GUI 专用智能体的步骤成功率从 9% 提升至 62%。",
+    "tags": ["VLM", "API"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Unlocking Dense Metric Depth Estimation in VLMs",
+    "arxiv_id": "2605.15876",
+    "github": "https://github.com/hanxunyu/DepthVLM",
+    "abstract": "提出 DepthVLM，将 VLM 转化为原生密集几何预测器。在 LLM 骨干上附加轻量级深度头，在统一的视觉-文本监督范式下通过两阶段调度训练，单次前向传播即可生成全分辨率深度图和语言输出。在室内外统一度量深度基准上显著超越现有 VLM 和领先纯视觉模型，提升复杂 3D 空间推理能力。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Steered LLM Activations are Non-Surjective",
+    "arxiv_id": "2604.09839",
+    "github": "https://github.com/aamixsh/invertsteer",
+    "abstract": "从理论上证明激活操控会将残差流推离离散提示可达状态流形，几乎必然不存在任何文本提示能复现操控诱导的内部行为。在三个广泛使用的 LLM 上实证验证了该发现，建立了白盒可操控性与黑盒提示之间的形式化分离。警示不应将激活操控的成功简单等同于基于提示的可解释性或脆弱性。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models",
+    "arxiv_id": "2605.15961",
+    "github": "https://github.com/Fabian-Mor/sae-ft",
+    "abstract": "提出 SAE-FT，仅作用于视觉表示的鲁棒微调方法。通过稀疏自编码器识别预训练模型中的语义有意义特征，惩罚这些特征的增减以防止灾难性遗忘，使微调过程可解释。在 ImageNet 及其分布偏移基准上匹配或超越 SOTA，且计算高效，无需昂贵的文本引导。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Physics-R1: An Audited Olympiad Corpus and Recipe for Visual Physics Reasoning",
+    "arxiv_id": "2605.14040",
+    "github": "https://github.com/shanyang-me/physics-r1-code",
+    "abstract": "审计多模态物理评估流程，发现训练-测试污染、翻译漂移和 MCQ 饱和三大隐蔽问题。发布 PhysCorp-A 三阶段审计语料库、PhysR1Corp RL 训练池、PhysOlym-A 500 题奥林匹克评估集，以及 Physics-R1 参考训练配方。Physics-R1 在 PhysOlym-A 上从 8.0% 提升至 26.3%，在 PhysReason 上从 23.9% 提升至 39.6%。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces",
+    "arxiv_id": "2605.14786",
+    "github": "https://github.com/KabakaWilliam/known_actions",
+    "abstract": "证明被动 JavaScript 追踪器可通过 agent 动作和交互时序识别底层 LLM 模型，F1 高达 96%。分类器可跨模型尺寸和族系泛化，仅需少量交互轨迹即可训练，且可在 episode 早期推断身份。注入随机时延可降低分类器性能但无法提供鲁棒保护，重新训练后分类器基本恢复性能，揭示 LLM browser agent 的安全隐患。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Hölder Policy Optimisation",
+    "arxiv_id": "2605.12058",
+    "github": "https://github.com/YihangChen9/HolderPO",
+    "abstract": "提出 HölderPO，通过 Hölder 均值统一 token 级概率聚合的广义策略优化框架。通过参数 p 显式调节梯度集中与方差边界之间的权衡，理论上证明大 p 集中梯度放大稀疏学习信号，小 p 严格约束梯度方差。实例化动态退火算法在训练生命周期中渐进调度 p，在数学基准上取得 SOTA 平均 54.9%，相对 GRPO 提升 7.2%。",
+    "tags": ["RL"]
+  }
+]

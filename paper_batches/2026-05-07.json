@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-05-07",
+    "title": "OpenSearch-VL: An Open Recipe for Frontier Multimodal Search Agents",
+    "arxiv_id": "2605.05185",
+    "github": "https://github.com/shawn0728/OpenSearch-VL",
+    "abstract": "提出 OpenSearch-VL，训练前沿多模态深度搜索 agent 的完全开源方案。通过 Wikipedia 路径采样、模糊实体重写和源锚点视觉定位构建高质量训练数据，设计统一文本搜索、图像搜索、OCR 等工具的多样化环境。提出 fatal-aware GRPO 算法处理级联工具失败，掩码失败后 token 并保留失败前推理。在七个基准上平均提升超过 10 分，达到与商业专有模型相当效果。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-05-07",
+    "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+    "arxiv_id": "2604.27393",
+    "github": "https://github.com/OpenBMB/MiniCPM-o",
+    "abstract": "提出 MiniCPM-o 4.5，一个 9B 参数的实时全双工全模态交互模型。核心创新是 Omni-Flow 统一流式框架，将全模态输入输出沿共享时间轴对齐，实现同时感知与响应。模型支持基于连续场景理解的主动行为，可在不足 12GB RAM 的边缘设备上实时交互。视觉语言能力接近 Gemini 2.5 Flash，全模态理解超越 Qwen3-Omni-30B-A3B。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-07",
+    "title": "Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems",
+    "arxiv_id": "2605.04018",
+    "github": "https://github.com/yale-nlp/Bright-Pro",
+    "abstract": "提出 BRIGHT-Pro 专家标注基准和 RTriever-4B 检索模型。扩展查询多方面黄金证据，支持静态与 agentic 搜索双重评估。RTriever-Synth 合成语料通过方面分解生成互补正例与条件硬负例，基于 Qwen3-Embedding-4B 进行 LoRA 微调。实验表明方面感知与 agentic 评估揭示标准指标隐藏行为，RTriever-4B 显著提升检索效果。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-05-07",
+    "title": "Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation",
+    "arxiv_id": "2605.04128",
+    "github": "https://github.com/jd-opensource/JoyAI-Image",
+    "abstract": "提出 JoyAI-Image，一个统一的多模态基础模型，支持视觉理解、文本到图像生成和指令引导图像编辑。将空间增强的多模态大语言模型与多模态扩散 Transformer 耦合，通过共享多模态接口实现感知与生成交互。训练方案结合统一指令微调、长文本渲染监督、空间 grounded 数据和编辑信号，增强几何感知推理和可控视觉合成。在理解、生成、长文本渲染和编辑基准上达到最先进或极具竞争力的性能。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-07",
+    "title": "ResRL: Boosting LLM Reasoning via Negative Sample Projection Residual Reinforcement Learning",
+    "arxiv_id": "2605.00380",
+    "github": "https://github.com/1229095296/ResRL",
+    "abstract": "提出 ResRL，通过负样本投影残差强化学习提升 LLM 推理能力。针对 RLVR 中正向奖励过度激励导致的生成多样性受限问题，将正负响应的相似语义分布解耦，利用 SVD 低秩正子空间投影负样本隐层表示，以投影残差调制负梯度。在数学、代码、Agent 任务和函数调用等十二个基准上超越强基线，数学推理相比 NSR 在 Avg@16 提升 9.4%。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-07",
+    "title": "A Foundation Model for Zero-Shot Logical Rule Induction",
+    "arxiv_id": "2605.04916",
+    "github": "https://github.com/phuayj/neural-rule-inducer",
+    "abstract": "提出 Neural Rule Inducer (NRI)，首个用于零样本逻辑规则归纳的预训练基础模型。不同于现有方法将参数绑定到特定谓词，NRI 使用类条件比率、熵和共现等域无关统计属性表示文字，实现跨变量身份和数量的零样本泛化。统计编码器和并行槽位解码器保持逻辑析取的置换不变性，乘积 T-范数松弛使规则执行可微。在规则恢复、噪声鲁棒性和真实基准迁移上表现优异。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-07",
+    "title": "MedSkillAudit: A Domain-Specific Audit Framework for Medical Research Agent Skills",
+    "arxiv_id": "2604.20441",
+    "github": "https://github.com/aipoch/medical-research-skills",
+    "abstract": "提出 MedSkillAudit，面向医疗研究 agent skills 的域特定部署前审计框架。评估五个类别 75 个技能的质量评分和发布分级，通过 ICC 量化系统与专家一致性。平均共识质量分 72.4，57.3% 低于 Limited Release 阈值；系统专家一致性 ICC 为 0.449 超过人类评分者间 0.300。为医疗研究 agent skills 治理提供结构化审计基础。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-07",
+    "title": "Turning Drift into Constraint: Robust Reasoning Alignment in Non-Stationary Environments",
+    "arxiv_id": "2510.04142",
+    "github": "https://github.com/XiaoyuYoung/APO",
+    "abstract": "提出 Autonomous Preference Optimization (APO) 框架，解决非平稳环境中多源多模态大语言模型推理对齐的分布漂移问题。将模型间分歧视为动态负约束而非噪声，通过两阶段协议实现：监督引导将目标模型投影到源模型能力并集，约束感知优化通过多负例 Plackett-Luce 目标抑制漂移轨迹。在胸部 X 光解释任务上，7B 模型展现出卓越鲁棒性，平均准确率超越专有源模型。",
+    "tags": ["VLM", "RL"]
+  }
+]

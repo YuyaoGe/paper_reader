@@ -1,0 +1,100 @@
+[
+  {
+    "date": "2026-05-22",
+    "title": "DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards",
+    "arxiv_id": "2605.21467",
+    "github": "https://github.com/RUCBM/DelTA",
+    "abstract": "提出判别式视角理解RLVR的token-level更新机制，揭示策略梯度更新方向可视为对token梯度向量的线性判别器，从而精确解释哪些token获得信用分配以及分配强度。通过理论分析和实验验证，为RLVR训练中的token credit assignment提供了新的理解框架，并据此设计更高效的训练策略。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Perception or Prejudice: Can MLLMs Go Beyond First Impressions of Personality?",
+    "arxiv_id": "2605.22109",
+    "github": "https://github.com/kkkcx/MM-OCEAN",
+    "abstract": "针对MLLM人格感知能力的评估空白，提出Grounded Personality Reasoning（GPR）任务，要求模型基于行为理解而非表面模式匹配来推断人格特质。构建新的评估框架与数据集，系统探究MLLM是否能超越第一印象进行深度人格推理，推动多模态模型在人格感知领域的发展。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning",
+    "arxiv_id": "2605.22642",
+    "github": "https://github.com/Spreadsheet-RL/Spreadsheet-RL",
+    "abstract": "提出基于强化学习的电子表格智能体训练框架Spreadsheet-RL，结合多轮电子表格交互、原生工具调用、沙箱代码执行和基于最终工作簿重新计算的结果奖励，在真实Microsoft Excel环境中端到端训练LLM agent。发布Spreadsheet-RL-4B模型检查点，显著提升复杂表格任务的处理能力。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+    "arxiv_id": "2605.22791",
+    "github": "https://github.com/NVlabs/GatedDeltaNet-2",
+    "abstract": "在线性注意力架构中解耦擦除与写入操作，通过独立的门控机制分别控制记忆衰减和新信息写入，从根本上解决Delta-rule模型中单门控同时处理两者导致的记忆干扰与关联混淆问题。在保持线性复杂度优势的同时，显著提升记忆编辑精度和长序列建模能力。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Unsupervised Process Reward Models",
+    "arxiv_id": "2605.10158",
+    "github": "https://github.com/CJReinforce/PURE",
+    "abstract": "提出无监督过程奖励模型（uPRM）训练方法，突破PRM必须依赖人工逐步标注或最终答案验证的瓶颈，仅通过自监督信号即可训练提供细粒度步骤级监督的过程奖励模型。大幅降低了PRM的部署门槛和标注成本，使过程奖励模型能够在更大规模上应用于LLM推理优化。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Maestro: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles",
+    "arxiv_id": "2605.22177",
+    "github": "https://github.com/jinyangwu/Maestro",
+    "abstract": "提出层次化模型-技能集成的强化学习编排框架Maestro，通过RL动态调度不同LLM和模块化技能的组合策略，突破现有框架依赖单一模型和固定逻辑调用的性能瓶颈。在多领域复杂任务中充分利用不同模型的互补优势，实现更高效的agent协作与下游任务性能提升。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "ClinSeekAgent: Automating Multimodal Evidence Seeking for Agentic Clinical Reasoning",
+    "arxiv_id": "2605.20176",
+    "github": "https://github.com/UCSC-VLAA/ClinSeekAgent",
+    "abstract": "提出面向临床推理的动态多模态证据搜寻智能体框架ClinSeekAgent，改变传统临床AI被动接收预处理证据的模式，使agent能够主动规划搜寻策略、迭代检索并综合异构多模态数据源。针对真实临床工作流设计，为agentic临床决策支持系统提供可扩展的技术基础。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+    "arxiv_id": "2605.22138",
+    "github": "https://github.com/sailing-lab/sr2am-self-regulated-planning",
+    "abstract": "提出自调节模拟规划机制SR2AM，将agent决策过程分解为规划存在性、规划结构和规划范围三个独立控制系统，显式决定何时以及如何规划。有效解决端到端训练agent中推理长度膨胀而准确率不升的核心问题，在保持推理精度的同时显著降低token消耗，提升agent推理效率。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "I didn't Make the Micro Decisions: Measuring, Inducing, and Exposing Goal-Level AI Contributions in Collaboration",
+    "arxiv_id": "2605.21363",
+    "github": "https://github.com/rladmstn1714/CoTrace",
+    "abstract": "提出目标层级的归因框架CoTrace，将显式目标分解为可验证需求并追踪人机协作中AI对目标形成的全过程贡献。突破现有方法仅关注最终产出而忽略目标共同塑造过程的局限，实现从目标层面系统度量、诱导和暴露AI在协作中的真实贡献，帮助用户校准对AI的依赖程度。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Lean Refactor: Multi-Objective Controllable Proof Optimization via Agentic Strategy Search",
+    "arxiv_id": "2605.20244",
+    "github": "https://github.com/oOo0oOo/lean-lsp-mcp",
+    "abstract": "提出检索增强的智能体框架Lean Refactor，用于Lean形式化证明的多目标可控重构，同时优化证明长度、编译成本和版本兼容性三个常相互冲突的目标。有效解决LLM生成证明冗长且脆弱的问题，通过策略搜索实现即插即用的证明优化，并保证重构后的证明在不同库版本间的鲁棒性。",
+    "tags": [
+      "API"
+    ]
+  }
+]

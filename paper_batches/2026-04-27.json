@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-04-27",
+    "title": "LLM Safety From Within: Detecting Harmful Content with Internal Representations",
+    "arxiv_id": "2604.18519",
+    "github": "https://github.com/CSSLab/SIREN",
+    "abstract": "现有安全检测模型仅依赖LLM末层表征，忽略了内部各层丰富的安全相关信息。本文提出SIREN，一种轻量级安全检测模型，通过线性探测识别安全神经元，并以自适应层加权策略整合多层级特征，在不修改底层LLM的前提下构建有害内容检测器。实验表明，SIREN在多个基准上显著优于现有开源安全模型，训练参数量仅为后者的1/250，同时具备更强的泛化能力与推理效率。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets",
+    "arxiv_id": "2604.22294",
+    "github": "https://github.com/stanford-oval/sliders",
+    "abstract": "面向长文档集合的问答任务，固定上下文窗口难以应对海量文档。本文提出SLIDERS框架，通过结构化推理将关键信息提取到关系数据库中，以SQL查询替代文本拼接实现可扩展推理，并引入数据调和阶段修复不一致记录。在现有长文本基准及新构建的390万/3600万token基准上，SLIDERS平均超越GPT-4.1达6.6分，在超长文档场景下较次优基线提升约19至32分。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Sessa: Selective State Space Attention",
+    "arxiv_id": "2604.18580",
+    "github": "https://github.com/LibratioAI/sessa",
+    "abstract": "长上下文建模中，Transformer注意力易稀释单token影响，状态空间模型则可能丢失长程敏感性。本文提出Sessa，将注意力机制置于循环反馈路径中，构建多条注意力通路使历史token影响未来状态。理论证明Sessa可实现幂律记忆衰减且支持灵活选择性检索。在匹配实验条件下，Sessa在长文本基准上取得最优性能，同时在短文本语言建模中保持与Transformer及Mamba基线的竞争力。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Memanto: Typed Semantic Memory with Information-Theoretic Retrieval for Long-Horizon Agents",
+    "arxiv_id": "2604.22085",
+    "github": "https://github.com/moorcheh-ai/memanto",
+    "abstract": "当前Agent记忆系统依赖复杂知识图谱架构，带来高昂计算开销。本文提出Memanto通用记忆层，集成十三类预定义语义记忆模式、自动冲突消解与时序版本管理，依托信息论搜索引擎实现确定性亚90毫秒检索且无索引延迟。在LongMemEval和LoCoMo基准上，Memanto分别以89.8%和87.1%的准确率超越所有混合图谱与向量系统，仅需单次检索查询，显著降低运营复杂度。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-04-27",
+    "title": "AgriIR: A Scalable Framework for Domain-Specific Knowledge Retrieval",
+    "arxiv_id": "2604.16353",
+    "github": "https://github.com/Shuvam-Banerji-Seal/AgriIR",
+    "abstract": "领域特定检索增强生成需要兼顾准确性与计算成本。本文提出AgriIR可配置RAG框架，将信息访问过程分解为查询精化、子查询规划、检索、综合与评估五个声明式模块化阶段，使从业者无需修改架构即可适配新领域。参考实现面向印度农业信息查询，集成10亿参数语言模型与自适应检索器，支持确定性引用与可审计部署。实验表明，精心设计的数据管道可在有限资源下实现高可信的领域准确检索。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-27",
+    "title": "DiagramBank: A Large-scale Dataset of Diagram Design Exemplars with Paper Metadata for Retrieval-Augmented Generation",
+    "arxiv_id": "2604.20857",
+    "github": "https://github.com/csml-rpi/DiagramBank",
+    "abstract": "高质量科学示意图生成是端到端论文自动撰写的关键瓶颈。本文提出DiagramBank大规模数据集，包含从顶级学术出版物中策展的89,422张示意图，通过自动化流水线提取图表与文中引用关系，并以CLIP过滤器区分示意图与普通数据图。每个样本配有摘要、标题及引用上下文等多粒度信息。研究者提供了即用的检索增强生成代码库，支持基于范例的科学插图条件合成。",
+    "tags": []
+  }
+]

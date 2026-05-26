@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-05-05",
+    "title": "From Context to Skills: Can Language Models Learn from Context Skillfully?",
+    "arxiv_id": "2604.27660",
+    "github": "https://github.com/S1s-Z/Ctx2Skill",
+    "abstract": "提出 Ctx2Skill 自进化框架，使语言模型无需人工监督即可从复杂上下文中自主发现、精炼和选择特定技能。核心是一个多智能体自博弈循环：Challenger 生成探测任务，Reasoner 在演化技能集引导下求解，Judge 提供二元反馈。通过 Proposer 和 Generator 智能体分析失败案例并合成针对性技能更新，实现自动化技能发现。引入 Cross-time Replay 机制防止对抗性崩溃，确保技能鲁棒泛化。在 CL-bench 四个上下文学习基准上，该方法持续提升各类骨干模型的解题率。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs",
+    "arxiv_id": "2605.00814",
+    "github": "https://github.com/huaixuheqing/PVM",
+    "abstract": "针对自回归大型视觉语言模型在深度生成中出现的视觉信号稀释问题，提出 Persistent Visual Memory（PVM）轻量级可学习模块。PVM 作为并行分支集成于 FFN 旁，建立与距离无关的检索路径，直接提供视觉嵌入以实现精确视觉感知，从结构上缓解深层生成中的信号抑制。在 Qwen3-VL 4B 和 8B 模型上的实验表明，PVM 以极小的参数开销带来显著性能提升，尤其在需要持久视觉感知的复杂推理任务中效果突出，并能抵抗长度诱导的信号衰减。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "AcademiClaw: When Students Set Challenges for AI Agents",
+    "arxiv_id": "2605.02661",
+    "github": "https://github.com/GAIR-NLP/AcademiClaw",
+    "abstract": "构建 AcademiClaw 双语基准测试，包含 80 个来自大学生真实学术工作流的复杂长程任务，涵盖数学竞赛、语言学、GPU 强化学习和全栈系统调试等 25 个以上专业领域。每个任务在独立 Docker 沙箱中执行，采用六维互补技术组合评分，并经过五类别安全审计。对六个前沿模型的实验显示，最优模型通过率仅 55%，揭示了当前 AI Agent 在真实学术场景中的能力边界，为 OpenClaw 社区推动更通用、更强大的 Agent 发展提供了重要诊断信号。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "ComboStoc: Combinatorial Stochasticity for Diffusion Generative Models",
+    "arxiv_id": "2405.13729",
+    "github": "https://github.com/Xrvitd/ComboStoc",
+    "abstract": "研究扩散生成模型中组合复杂性的影响，发现现有训练方案难以充分覆盖维度与属性组合所张成的空间，从而限制测试时性能。提出 ComboStoc 方法，通过构造充分利用组合结构的随机过程来加速训练。实验表明，该策略在图像和三维结构化形状等多种数据模态上均能显著加速网络训练。此外，ComboStoc 支持异步时间步的测试时生成方式，为不同维度和属性提供不同程度的控制。代码已开源。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "T^2PO: Uncertainty-Guided Exploration Control for Stable Multi-Turn Agentic Reinforcement Learning",
+    "arxiv_id": "2605.02178",
+    "github": "https://github.com/WillDreamer/T2PO",
+    "abstract": "针对多轮强化学习中普遍存在的训练不稳定性问题，提出 Token 和 Turn 级策略优化框架 T2PO。该方法认为不稳定性源于低效探索，即在多轮设置中策略持续生成低信息量的动作。在 Token 级别，T2PO 监控不确定性动态，当边际不确定性变化低于阈值时触发思考干预；在 Turn 级别，识别探索进展可忽略的交互并动态重采样以避免浪费 rollout。在 WebShop、ALFWorld 和 Search QA 等多样化环境中的评估表明，T2PO 在训练稳定性和性能方面均有显著提升，并改善了探索效率。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Linear-Time Global Visual Modeling without Explicit Attention",
+    "arxiv_id": "2605.01711",
+    "github": "https://github.com/LeapLabTHU/WeightFormer",
+    "abstract": "提出一种新视角：注意力可被数学重构为具有动态预测参数的多层感知机，其全局建模能力并非源于显式的 token 级聚合，而是动态生成参数作为全局上下文的压缩表示。基于这一洞见，探究能否完全通过动态参数化实现 Transformer 级别的序列全局建模，同时保持线性复杂度。设计多种动态参数预测策略并集成到标准网络层中。在视觉模型上的大量实证研究表明，动态参数化确实可以作为显式注意力的有效线性复杂度替代方案，为高效序列建模开辟新路径。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Hierarchical Abstract Tree for Cross-Document Retrieval-Augmented Generation",
+    "arxiv_id": "2605.00529",
+    "github": "https://github.com/Newiz430/Psi-RAG",
+    "abstract": "针对现有树状 RAG 方法在跨文档多跳问答中的三大挑战——分布适应性差、结构隔离和粗粒度抽象，提出 Ψ-RAG 框架。核心包含两个组件：一是通过迭代合并与 collapse 过程构建的层次抽象树索引，无需先验分布假设即可自适应数据分布；二是多粒度检索智能体，通过重组查询和智能体驱动的混合检索器与知识库交互。Ψ-RAG 支持从 token 级问答到文档级摘要的多样化任务，在跨文档多跳 QA 基准上平均 F1 超越 RAPTOR 25.9% 和 HippoRAG 2 达 7.4%。",
+    "tags": ["无需训练"]
+  }
+]

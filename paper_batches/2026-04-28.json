@@ -1,0 +1,110 @@
+[
+  {
+    "date": "2026-04-28",
+    "title": "Tuna-2: Pixel Embeddings Beat Vision Encoders for Multimodal Understanding and Generation",
+    "arxiv_id": "2604.24763",
+    "github": "https://github.com/facebookresearch/tuna-2",
+    "abstract": "Tuna-2 是一种原生统一多模态模型，直接基于像素嵌入执行视觉理解与生成，彻底摒弃了 VAE 或表示编码器等模块化视觉编码器设计。实验表明 Tuna-2 在多模态基准上达到 SOTA，证明统一像素空间建模可与潜在空间方法竞争。此外，无编码器设计在大规模上实现了更强的多模态理解，尤其在细粒度视觉感知任务上表现突出，说明预训练视觉编码器对多模态建模并非必要。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Sapiens2",
+    "arxiv_id": "2604.21681",
+    "github": "https://github.com/facebookresearch/sapiens2",
+    "abstract": "Sapiens2 是一系列高分辨率 transformer 模型，专注于以人为中心的视觉任务，模型规模从 0.4B 到 5B 参数，支持原生 1K 分辨率及分层 4K 变体。相比前代，Sapiens2 在预训练和后训练阶段均有显著改进：通过自监督预训练同时捕捉低级细节和高级语义，并引入多任务适配器实现统一输出空间。在人体姿态估计、深度估计、表面法线预测等任务上均取得 SOTA 性能。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models",
+    "arxiv_id": "2604.21106",
+    "github": "https://github.com/kschwethelm/looped-lm-scaling",
+    "abstract": "本文量化了循环 transformer 中一次递归等价于多少独立参数。通过在循环次数 1/2/4/8 上进行等深度预训练扫描，拟合了联合扩展定律，测得递归等价指数约为 0.46。结果表明循环块在计算效率和内存占用上优于独立层，且在相同总计算量下，循环模型的下游迁移性能优于参数等效的深度模型，为循环语言模型的设计提供了理论依据和实证指导。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-28",
+    "title": "SketchVLM: Vision language models can annotate images to explain thoughts and guide users",
+    "arxiv_id": "2604.22875",
+    "github": "https://github.com/Brandon-Collins7/sketchvlm",
+    "abstract": "SketchVLM 是一个无需训练、模型无关的框架，使视觉语言模型能够在输入图像上生成非破坏性、可编辑的 SVG 覆盖层，以视觉化方式解释其答案。在涵盖视觉推理、导航和定位的七个基准上，SketchVLM 显著提升了答案的可验证性和用户信任度，同时保持了原始模型的准确率。该框架兼容 Gemini-3-Pro、GPT-5 等多种商业和开源 VLM。",
+    "tags": [
+      "VLM",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "For-Value: Efficient Forward-Only Data Valuation for finetuning LLMs and VLMs",
+    "arxiv_id": "2508.10180",
+    "github": "https://github.com/vengdeng/For-Value-Efficient-Forward-Only-Data-Valuation-for-finetuning",
+    "abstract": "For-Value 是一种前向传播 only 的数据估值框架，专为十亿参数规模的 LLM 和 VLM 设计，避免了传统基于梯度的方法在计算和批处理上的瓶颈。通过利用模型内部注意力机制捕捉样本间依赖，For-Value 实现了高效的批处理可扩展估值。在多个微调任务上的实验表明，For-Value 在数据选择质量上匹敌甚至超越基于梯度的 Shapley 值方法，同时将计算开销降低数个数量级。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Stabilizing Efficient Reasoning with Step-Level Advantage Selection",
+    "arxiv_id": "2604.24003",
+    "github": "https://github.com/HanNight/SAS",
+    "abstract": "本文提出 Step-Level Advantage Selection（SAS），一种通过后训练稳定高效推理的方法。研究发现短上下文后训练本身即可使模型在推理时生成长思维链，而 SAS 在此基础上引入步骤级优势选择机制，自动过滤低质量推理步骤并保留高价值路径。在数学推理基准上，SAS 在保持与完整推理相近准确率的同时，将推理长度缩短 40% 以上，且训练稳定性显著优于基于长度奖励的基线方法。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Towards Understanding the Robustness of Sparse Autoencoders",
+    "arxiv_id": "2604.18756",
+    "github": "https://github.com/AikyamLab/sparse-jailbreak",
+    "abstract": "本文研究了稀疏自编码器对优化型越狱攻击的防御能力。通过在推理时将预训练 SAE 集成到 transformer 残差流中（不修改模型权重），在 Gemma、LLaMA、Mistral、Qwen 四个模型家族上评估发现，SAE 增强模型可将越狱成功率降低最高 5 倍，同时减少跨模型攻击迁移性。参数消融揭示了 L0 稀疏度与攻击成功率之间的单调剂量响应关系，以及中间层在鲁棒性与干净性能之间的最佳平衡。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Taming Actor-Observer Asymmetry in Agents via Dialectical Alignment",
+    "arxiv_id": "2604.19548",
+    "github": "https://github.com/unikcc/ReTAS",
+    "abstract": "本文发现多智能体角色扮演系统中存在一种类人认知偏差——行动者-观察者不对称（AOA）：行动者 agent 倾向于将成功归因于自身能力而失败归因于环境，观察者则相反。为此提出辩证对齐框架，通过引入结构化自我反思和跨 agent 辩论机制来校正 AOA。在多个复杂任务上的实验表明，该框架显著提升了多智能体协作的可靠性和决策质量，同时保持了角色专业化的优势。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis",
+    "arxiv_id": "2604.24198",
+    "github": "https://github.com/zjunlp/DataMind",
+    "abstract": "本文针对数据分析 agent 中的过程级奖励建模进行了系统研究，发现通用领域 PRM 难以检测不触发异常的静默逻辑错误。为此提出 DataMind，一种专为数据分析设计的过程级奖励模型，通过将分析过程分解为可验证的原子步骤并引入领域特定的正确性检查，实现了对数据分析 agent 的细粒度监督。在多个真实数据集上的实验表明，DataMind 将 agent 的数据分析准确率提升了 15% 以上。",
+    "tags": [
+      "RL",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-04-28",
+    "title": "ProEval: Proactive Failure Discovery and Efficient Performance Estimation for Generative AI Evaluation",
+    "arxiv_id": "2604.23099",
+    "github": "https://github.com/google-deepmind/proeval",
+    "abstract": "ProEval 是一种主动评估框架，利用迁移学习和高斯过程作为性能分数函数的代理模型，以高效估计生成式 AI 模型的性能并主动发现失败案例。通过在小规模参考模型上预训练 GP 并在目标模型上快速适配，ProEval 将评估所需的模型调用和人工标注量减少 80% 以上，同时保持与全量评估相近的准确率和召回率。在文本生成、代码生成和多模态任务上的实验验证了该框架的通用性和效率优势。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Discovering Agentic Safety Specifications from 1-Bit Danger Signals",
+    "arxiv_id": "2604.23210",
+    "github": "https://github.com/vicgalle/experiential-prompt-optimization-safe",
+    "abstract": "EPO-Safe 是一种从稀疏二元危险信号中迭代发现安全规范的框架。LLM agent 生成行动计划，接收 1-bit 危险警告，并通过反思演化自然语言行为规范。与依赖丰富文本反馈的标准反射方法不同，EPO-Safe 证明了仅通过稀疏信号即可学习复杂的安全约束。在多个交互式环境中的实验表明，EPO-Safe 将 agent 的安全违规率降低了 60% 以上，且生成的规范具有良好的可解释性和迁移性。",
+    "tags": [
+      "API"
+    ]
+  }
+]

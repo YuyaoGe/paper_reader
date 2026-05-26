@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-05-21",
+    "title": "HRM-Text: Efficient Pretraining Beyond Scaling",
+    "arxiv_id": "2605.20613",
+    "github": "https://github.com/sapientinc/HRM-Text",
+    "abstract": "受生物系统多时间尺度处理启发，提出用分层循环模型（HRM）替代标准 Transformer，将计算解耦为慢速战略层与快速执行层。引入 MagicNorm 和 warmup deep credit assignment 稳定深度循环语言建模，并改用指令-响应对与任务完成目标进行训练，替代传统原始文本预训练。1B 参数模型在仅 40B token 和 1500 美元预算下从零训练，达到 MMLU 60.7%、ARC-C 81.9%、DROP 82.2%、GSM8K 84.5% 与 MATH 56.2%。以 100~900 倍更少的训练 token 和 96~432 倍更低计算量，性能媲美 2-7B 开源模型，证明架构与目标联合设计可大幅降低预训练计算门槛。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-21",
+    "title": "You Only Need Minimal RLVR Training: Extrapolating LLMs via Rank-1 Trajectories",
+    "arxiv_id": "2605.21468",
+    "github": "https://github.com/weizhepei/RELEX",
+    "abstract": "揭示 RLVR 权重轨迹具有极低秩且高度可预测的几何特性，发现下游性能增益主要可被参数变化的秩-1 近似所捕获，且该投影幅值随训练步数近线性演化。据此提出 RELEX 方法，从短观察窗口估计秩-1 子空间，通过线性回归外推未来检查点，无需任何学习模型。在 Qwen2.5-Math-1.5B、Qwen3-4B-Base 和 Qwen3-8B-Base 上，仅用 15% 训练步数即可匹配或超越完整 RLVR 性能，且可零成本外推至 10~20 倍观察窗口。消融分析证实其极简充分性，成功源于秩-1 投影的「去噪」效应。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-21",
+    "title": "RiT: Vanilla Diffusion Transformers Suffice in Representation Space",
+    "arxiv_id": "2605.21981",
+    "github": "https://github.com/lezhang7/RiT",
+    "abstract": "探索在预训练表示空间中进行 flow matching 的优势，沿四个几何轴对比像素、SD-VAE 与 DINOv2 特征，发现 DINOv2 具有更高有效秩、更好协方差条件数、更低峰度与更低流形插值误差等有利统计性质。提出 Representation Image Transformer（RiT），直接在冻结 DINOv2 特征上以 x-prediction 训练朴素扩散 Transformer，辅以维度感知噪声调度与联合 CLS-patch 建模。在 ImageNet 256×256 上达到 FID 1.45（无引导）和 1.14（CFG），参数比 DiT 少 19%。5 步 Heun 求解即可达 FID 2.0，无需蒸馏或一致性训练。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-21",
+    "title": "The Unlearnability Phenomenon in RLVR for Language Models",
+    "arxiv_id": "2605.16787",
+    "github": "https://github.com/yulinchen99/unlearnability-rlvr",
+    "abstract": "首次系统揭示 RLVR 训练中存在的「不可学习性」现象：即使存在正确 rollout，部分难题仍始终无法被模型学会。通过跨样本梯度分析证明，不可学习样本存在根本性表征缺陷，表现为与其余样本梯度相似度极低、推理模式不可泛化。进一步发现数据增强无法改善梯度相似性，表明表征缺陷在 RL 框架下难以缓解。现有优化与采样技术均无法解决该问题。该研究为当前 RL 推理方法的根本局限性提供了重要洞察，对理解 RLVR 学习动态与优化训练数据选择具有深远意义。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-05-21",
+    "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload",
+    "arxiv_id": "2605.20179",
+    "github": "https://github.com/ims-kdks/TIDE",
+    "abstract": "针对 MoE 架构扩散大语言模型在资源受限设备上的部署挑战，提出 TIDE 无损推理系统。利用扩散块内专家激活的时间稳定性，引入基于区间的专家刷新策略，以 I/O 感知方式动态更新专家放置。将推理调度建模为数学规划问题，求解最小化 I/O 流量与 CPU 计算的最优刷新区间。TIDE 为无需任何模型重训练的「免费午餐」式加速。在单 GPU-CPU 系统上，相比基线实现 LLaDA2.0-mini 1.4 倍与 LLaDA2.0-flash 1.5 倍吞吐提升，为 dLLM 边缘部署提供了高效可行方案。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-05-21",
+    "title": "Safety Alignment as Continual Learning: Mitigating the Alignment Tax via Orthogonal Gradient Projection",
+    "arxiv_id": "2602.07892",
+    "github": "https://github.com/SunGL001/OGPSA",
+    "abstract": "从持续学习视角研究 LLM 安全后训练中的对齐税问题，提出正交梯度投影安全对齐方法 OGPSA。通过在小规模通用能力数据上估计低秩参考子空间，从每个安全梯度中移除位于该子空间内的分量，在保留通用能力的同时实现最陡局部安全下降。兼容标准 SFT、DPO 及顺序 SFT→DPO 后训练流程，无需大规模回放数据。在 Qwen2.5-7B-Instruct 上平均性能增益从 33.98% 提升至 42.74%，Llama3.1-8B-Instruct 上从 19.74% 提升至 32.98%，显著改善了安全与效用之间的帕累托权衡。",
+    "tags": []
+  }
+]

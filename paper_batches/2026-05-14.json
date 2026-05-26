@@ -1,0 +1,114 @@
+[
+  {
+    "date": "2026-05-14",
+    "title": "Many-Shot CoT-ICL: Making In-Context Learning Truly Learn",
+    "arxiv_id": "2605.13511",
+    "github": "https://github.com/TTChungC/Manyshot-CoT-ICL",
+    "abstract": "针对长上下文模型中 many-shot 链式思维上下文学习（ICL）的推理任务表现，系统研究了其 scaling 行为。发现非推理任务上的现有结论无法直接迁移到推理任务，并提出使 ICL 真正具备学习能力的策略。通过大量实验验证了 many-shot CoT-ICL 在数学推理等复杂任务上的有效性，为无需微调的推理时扩展提供了新思路。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Asymmetric Flow Models",
+    "arxiv_id": "2605.12964",
+    "github": "https://github.com/Lakonik/LakonLab",
+    "abstract": "针对高维空间流式生成中速度预测需建模高维噪声的难题，提出非对称流模型（AsymFlow）。通过秩非对称速度参数化，将噪声预测限制在低秩子空间，同时保持数据预测的全维度。从该非对称预测器可导出低秩扩散损失与简化训练目标，在保持生成质量的同时显著降低计算开销。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "HAGE: Harnessing Agentic Memory via RL-Driven Weighted Graph Evolution",
+    "arxiv_id": "2605.09942",
+    "github": "https://github.com/FredJiang0324/HAGE_MVPReview",
+    "abstract": "针对 Agent 系统中记忆检索依赖固定图结构、无法捕获关系动态变化的问题，提出 HAGE 加权多关系记忆框架。通过强化学习驱动的加权图演化机制，动态调整事件间关系的强度、置信度和查询相关性。实验表明，该框架显著提升了 Agent 在长程交互中的记忆检索准确性与决策质量。",
+    "tags": ["MeM", "RL"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Orthrus: Memory-Efficient Parallel Token Generation via Dual-View Diffusion",
+    "arxiv_id": "2605.12825",
+    "github": "https://github.com/chiennv2000/orthrus",
+    "abstract": "提出 Orthrus 双架构框架，统一自回归大语言模型的精确生成保真度与扩散模型的高速并行 token 生成能力。通过双视图扩散机制，在保持与自回归模型等价生成质量的同时，实现内存高效的并行解码。实验验证了该方法在推理吞吐量和生成质量之间取得了优势权衡。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Learning Agentic Policy from Action Guidance",
+    "arxiv_id": "2605.12004",
+    "github": "https://github.com/AMAP-ML/ActGuide-RL",
+    "abstract": "针对 Agent 强化学习中基策略探索能力不足导致训练信号缺失的问题，提出从动作引导（Action Guidance）中学习 Agent 策略的方法。无需代价高昂的迭代监督，通过外部动作引导为基策略提供有效学习信号，使其能够到达奖励状态。实验表明该方法在复杂 Agent 任务上显著提升了策略学习效率和最终性能。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Retrieval is Cheap, Show Me the Code: Executable Multi-Hop Reasoning for Retrieval-Augmented Generation",
+    "arxiv_id": "2605.12975",
+    "github": "https://github.com/GasolSun36/PyRAG",
+    "abstract": "针对检索增强生成（RAG）在多跳推理任务中因中间状态隐式表达而脆弱的问题，提出可执行多跳推理框架。通过代码显式表示推理中间状态，使检索查询可执行、可验证。实验表明，该方法显著提升了知识密集型多跳问答的准确性和推理可解释性。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-14",
+    "title": "PresentAgent-2: Towards Generalist Multimodal Presentation Agents",
+    "arxiv_id": "2605.11363",
+    "github": "https://github.com/AIGeeksGroup/PresentAgent-2",
+    "abstract": "提出 PresentAgent-2 通用多模态演示 Agent 框架，可根据开放式用户查询生成端到端的演示视频。框架包含查询摘要、研究 grounding、多模态媒体生成和交互式交付等模块，实现了从静态幻灯片到动态演示视频的跨越。实验验证了该框架在演示内容生成质量和多模态一致性上的优势。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "FeatCal: Feature Calibration for Post-Merging Models",
+    "arxiv_id": "2605.13030",
+    "github": "https://github.com/egangu/featcal",
+    "abstract": "针对模型合并后性能仍低于任务专家的瓶颈，从特征漂移角度系统分析合并模型的行为差异。将漂移分解为上游传播误差和局部错位，并提出特征校准方法（FeatCal）来减小合并模型与专家模型在相同输入上的特征差异。实验表明，该校准方法有效提升了合并模型在多个任务上的性能表现。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-14",
+    "title": "MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading",
+    "arxiv_id": "2605.10268",
+    "github": "https://github.com/iiGray/MemReread",
+    "abstract": "针对 Agent 长上下文推理中线性逐块阅读可能导致隐式证据丢失的问题，提出 MemReread 记忆引导重读机制。在 Agent 记忆动态更新的同时，引入基于记忆的检索模块指导对关键段落的重读，从而补充潜在证据。实验表明，该方法显著提升了 Agent 在长文档理解和多步推理任务上的表现。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "MC-RFM: Geometry-Aware Few-Shot Adaptation via Mixed-Curvature Riemannian Flow Matching",
+    "arxiv_id": "2605.08557",
+    "github": "https://github.com/salimkhazem/MC-RFM",
+    "abstract": "提出 MC-RFM 混合曲率黎曼流匹配方法，用于预训练视觉模型的小样本自适应。通过将特征位移建模为黎曼流形上的测地线流，显式刻画任务诱导的特征几何变化。混合曲率设计使方法能够适应不同任务内在的几何结构，实验表明其在少样本图像分类上优于传统的线性探针和提示学习方法。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "FAAST: Forward-Only Associative Learning via Closed-Form Fast Weights for Test-Time Supervised Adaptation",
+    "arxiv_id": "2605.04651",
+    "github": "https://github.com/baoguangsheng/faast",
+    "abstract": "提出 FAAST 前向关联学习框架，仅需单次前向传播即可将标注样本解析为闭式快速权重，实现测试时监督自适应。该方法完全消除了反向传播的训练开销和基于记忆的推理负担，在保持常数时间推理复杂度的同时，达到了与现有测试时方法相当的自适应性能。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Learning to Explore: Scaling Agentic Reasoning via Exploration-Aware Policy Optimization",
+    "arxiv_id": "2605.08978",
+    "github": "https://github.com/HansenHua/EAPO-ICML26",
+    "abstract": "针对现有 Agent 推理方法采用无差别探索策略、无法自适应判断何时需要探索的局限，提出探索感知策略优化（EAPO）框架。通过强化学习机制使模型在测试时自适应地决定何时收集环境反馈、何时直接输出答案。实验表明，该方法有效扩展了 Agent 推理的测试时计算规模并提升了复杂任务的解决率。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Source or It Didn't Happen: A Multi-Agent Framework for Citation Hallucination Detection",
+    "arxiv_id": "2605.08583",
+    "github": "https://github.com/aaFrostnova/CiteTracer",
+    "abstract": "提出基于多 Agent 协作的引用幻觉检测框架，将引用验证从二元发现/未发现决策重构为可审计的字段级验证流程。多 Agent 分工协作完成文献检索、引文解析和事实核对，显著提升了引用幻觉检测的准确性和可解释性。实验表明该框架在科学文献引用验证任务上优于现有基线方法。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-14",
+    "title": "SafeHarbor: Hierarchical Memory-Augmented Guardrail for LLM Agent Safety",
+    "arxiv_id": "2605.05704",
+    "github": "https://github.com/ljj-cyber/SafeHarbor",
+    "abstract": "提出 SafeHarbor 分层记忆增强护栏机制，用于保障大语言模型 Agent 的工具调用安全。通过层次化记忆模块记录和检索历史交互模式，在不过度拒绝合法请求的前提下，有效识别和拦截恶意操纵导致的危险工具执行。实验表明该护栏在安全性与可用性之间取得了更优的平衡。",
+    "tags": ["MeM"]
+  }
+]

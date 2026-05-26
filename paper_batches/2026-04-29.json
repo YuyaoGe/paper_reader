@@ -1,0 +1,86 @@
+[
+  {
+    "date": "2026-04-29",
+    "title": "Recursive Multi-Agent Systems",
+    "arxiv_id": "2604.25917",
+    "github": "https://github.com/RecursiveMAS/RecursiveMAS",
+    "abstract": "提出 RecursiveMAS，将递归缩放原理从单模型扩展到多智能体系统。通过轻量级 RecursiveLink 模块连接异构智能体形成协作循环，实现分布内潜在思维生成和跨智能体状态转移。设计内外循环学习算法进行整体系统协同优化。在数学、科学、医学、搜索和代码生成等9个基准上，平均精度提升8.3%，端到端推理加速1.2-2.4倍，token使用量减少34.6%-75.6%。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-29",
+    "title": "Programming with Data: Test-Driven Data Engineering for Self-Improving LLMs from Raw Corpora",
+    "arxiv_id": "2604.24819",
+    "github": "https://github.com/OpenRaiser/ProDa",
+    "abstract": "提出 Programming with Data 框架，将数据工程生命周期映射到软件开发生命周期：训练数据视为源代码、模型训练视为编译、benchmark视为单元测试、失败驱动的数据修复视为调试。模型失败可分解为概念级缺口和推理链断裂，追溯至数据缺陷并通过定向补丁修复。在自然科学、工程、生物医学和社会科学等16个学科实例化，证明训练数据与模型行为之间的关系是结构可追溯和可系统修复的。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-29",
+    "title": "Meta-CoT: Enhancing Granularity and Generalization in Image Editing",
+    "arxiv_id": "2604.24625",
+    "github": "https://github.com/shiyi-zh0408/Meta-CoT",
+    "abstract": "提出 Meta-CoT 范式，通过两级分解增强图像编辑的理解粒度和泛化能力。第一级将编辑意图分解为（任务、目标、所需理解能力）三元组，生成任务特定的思维链并遍历所有目标；第二级将编辑任务进一步拆解为五种元任务。引入 CoT-Editing 一致性奖励，使模型编辑行为与推理过程对齐。在21个编辑任务上总体提升15.8%，仅用少量元任务训练即可有效泛化到未见编辑任务。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-29",
+    "title": "Refinement via Regeneration: Enlarging Modification Space Boosts Image Refinement in Unified Multimodal Models",
+    "arxiv_id": "2604.25636",
+    "github": "https://github.com/LeapLabTHU/RvR",
+    "abstract": "提出 RvR 框架，将统一多模态模型中的图像细化工重新定义条件图像再生而非编辑。不依赖编辑指令和严格内容保留，基于目标提示与初始图像语义token进行条件再生，实现更完整的语义对齐和更大修改空间。实验表明 RvR 显著提升图像细化质量，Geneval从0.78提升至0.91，DPGBench从84.02提升至87.21，UniGenBench++从61.53提升至77.41。",
+    "tags": [
+      "VLM",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-29",
+    "title": "MAIC-UI: Making Interactive Courseware with Generative UI",
+    "arxiv_id": "2604.25806",
+    "github": "https://github.com/THU-MAIC/MAIC-UI",
+    "abstract": "提出 MAIC-UI 零代码创作系统，使教育工作者能从教科书、PPT和PDF快速创建和编辑交互式课件。采用结构化知识分析与多模态理解确保教学严谨性，两阶段生成-验证-优化流水线分离内容对齐与视觉细化，Click-to-Locate编辑配合统一Diff增量生成实现低于10秒的迭代周期。40人受控实验显示编辑迭代次数减少（4.9 vs 7.0），三个月课堂部署中实验班STEM成绩提升9.21分。",
+    "tags": []
+  },
+  {
+    "date": "2026-04-29",
+    "title": "BARRED: Synthetic Training of Custom Policy Guardrails via Asymmetric Debate",
+    "arxiv_id": "2604.25203",
+    "github": "https://github.com/plurai-ai/BARRED",
+    "abstract": "提出 BARRED 框架，仅使用任务描述和少量无标签示例即可生成忠实且多样的合成训练数据。通过将领域空间分解为维度确保全面覆盖，并采用多智能体辩论验证标签正确性，获得高质量训练语料。在多种自定义策略上的实验表明，基于合成数据微调的小语言模型持续超越最先进的专有LLM（包括推理模型）和专用护栏模型。消融研究证实维度分解和辩论验证对确保微调的多样性和标签保真度至关重要。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-04-29",
+    "title": "GoClick: Lightweight Element Grounding Model for Autonomous GUI Interaction",
+    "arxiv_id": "2604.23941",
+    "github": "https://github.com/ZJULiHongxin/GoClick",
+    "abstract": "提出 GoClick，仅230M参数的轻量级GUI元素定位视觉语言模型，在资源受限设备上实现低延迟的GUI智能体交互。选用编码器-解码器架构，在小参数量级下优于解码器替代方案。设计渐进式数据精炼流程，通过任务类型过滤和数据比例调整，从1080万原始数据集中提取380万样本高质量核心集。在多个GUI元素定位基准上表现优异，集成到端云协作框架后可帮助云端任务规划器实现更精确的元素定位。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-04-29",
+    "title": "V-GRPO: Online Reinforcement Learning for Denoising Generative Models Is Easier than You Think",
+    "arxiv_id": "2604.23380",
+    "github": "https://github.com/tang-bd/v-grpo",
+    "abstract": "提出 V-GRPO，将基于ELBO的似然代理与GRPO算法相结合，用于去噪生成模型的在线强化学习对齐。通过降低代理方差和控制梯度步长，使ELBO方法兼具稳定性和效率。该方法易于实现，与预训练目标对齐，避免了基于MDP方法的局限性。在文本到图像合成上达到最优性能，相比MixGRPO加速2倍，相比DiffusionNFT加速3倍。",
+    "tags": [
+      "RL",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-04-29",
+    "title": "Seeing Isn't Believing: Uncovering Blind Spots in Evaluator Vision-Language Models",
+    "arxiv_id": "2604.21523",
+    "github": "https://github.com/AI4Bharat/focus",
+    "abstract": "系统评估 Evaluator VLMs 在图像到文本和文本到图像任务中的可靠性。引入针对物体幻觉、空间推理、事实基础和视觉保真度等关键错误维度的扰动，测试评估器能否可靠地检测质量退化。使用超过4000个扰动实例的综合基准评估4个主流VLM，发现当前评估器存在显著盲区：在某些情况下超过50%的扰动输出未被检测，对细粒度组合和空间错误尤其困难。结果表明成对比较更可靠，但失败率仍然存在。",
+    "tags": []
+  }
+]

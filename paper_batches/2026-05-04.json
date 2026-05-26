@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-05-04",
+    "title": "Web2BigTable: A Bi-Level Multi-Agent LLM System for Internet-Scale Information Search and Extraction",
+    "arxiv_id": "2604.27221",
+    "github": "https://github.com/web2bigtable/web2bigtable",
+    "abstract": "该论文提出Web2BigTable，一个双层多智能体LLM系统，用于互联网规模的信息搜索和提取。系统通过多智能体协作处理深度推理和结构化聚合两类需求，支持从网页到表格的自动信息抽取。实验表明该系统在大规模信息提取任务上具有良好的扩展性和准确性。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Let ViT Speak: Generative Language-Image Pre-training",
+    "arxiv_id": "2605.00809",
+    "github": "https://github.com/YanFangCS/GenLIP",
+    "abstract": "该论文提出GenLIP，一种面向多模态大语言模型的极简生成式预训练框架。通过让ViT直接用标准语言建模目标从视觉token预测语言token，无需对比学习批构建或额外文本解码器。实验表明该方法在视觉语言任务上取得了更好的对齐效果，为MLLM的视觉编码器训练提供了新思路。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-04",
+    "title": "From Skill Text to Skill Structure: The Scheduling-Structural-Logical Representation for Agent Skills",
+    "arxiv_id": "2604.24026",
+    "github": "https://github.com/COOLPKU/SSL",
+    "abstract": "该论文提出SSL表示法，将agent技能从文本描述转化为调度-结构-逻辑三层结构化表示。通过引入形式化的技能结构，解决了当前agent系统中技能表示依赖自然语言、难以管理和复用的问题。实验表明结构化技能表示能显著提升agent系统的技能调用准确率和任务完成效率。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-04",
+    "title": "MASCing: Configurable Mixture-of-Experts Behavior via Activation Steering Masks",
+    "arxiv_id": "2604.27818",
+    "github": "https://github.com/jonatelintelo/MASCing",
+    "abstract": "该论文提出MASCing方法，通过轻量级激活引导mask实现对大语言模型MoE架构行为的可配置控制。无需完整微调或重训练，仅通过在推理时施加mask即可调整模型在不同安全场景下的行为。实验表明该方法能有效解决MoE稀疏激活带来的行为不可控问题，同时保持较低的计算开销。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Themis: Training Robust Multilingual Code Reward Models for Flexible Multi-Criteria Scoring",
+    "arxiv_id": "2605.00754",
+    "github": "https://github.com/iNeil77/Themis",
+    "abstract": "该论文提出Themis，一个鲁棒的多语言代码奖励模型训练框架，支持灵活的多标准评分。不同于现有工作仅关注执行反馈和功能正确性，Themis扩展了奖励模型在代码生成中的评估维度。实验表明该模型在多语言代码任务上实现了更可靠的评分，为代码大模型的策略对齐和测试时扩展提供了有效支撑。",
+    "tags": ["RL"]
+  }
+]

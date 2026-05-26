@@ -1,0 +1,10 @@
+[
+  {
+    "date": "2026-04-30",
+    "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
+    "arxiv_id": "2604.26752",
+    "github": "https://github.com/zai-org/GLM-V",
+    "abstract": "GLM-5V-Turbo 是面向多模态智能体的原生基础模型，将多模态感知深度整合为推理、规划、工具使用与执行的核心组件，而非语言模型的附属接口。该模型在多模态编码、视觉工具使用和基于框架的智能体任务上表现优异，同时保持了有竞争力的文本编码能力。开发过程突出了多模态感知、分层优化和端到端可靠验证在构建多模态智能体中的核心作用，为实际部署提供了重要的工程洞察。",
+    "tags": ["VLM"]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-05-15",
+    "title": "Achieving Gold-Medal-Level Olympiad Reasoning via Simple and Unified Scaling",
+    "arxiv_id": "2605.13301",
+    "github": "https://github.com/Simplified-Reasoning/SU-01",
+    "abstract": "提出简单统一的奥林匹克级推理扩展方案，通过逆困惑度课程SFT培养严格证明搜索与自检行为，再以两阶段RL（可验证奖励RL到证明级RL）规模化，并结合测试时扩展提升性能。在30B-A3B骨干上仅用340K轨迹和200步RL训练，所得SU-01模型在IMO 2025/USAMO 2026及IPhO 2024/2025上达到金牌水平，支持超100K token长轨迹稳定推理。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+    "arxiv_id": "2605.15128",
+    "github": "https://github.com/MinghoKwok/MemEye",
+    "abstract": "提出以视觉为中心的多模态Agent记忆评估框架MemEye，从证据粒度（场景级到像素级）和使用方式（单证据到演化综合）两个维度评估记忆能力。构建覆盖8个生活场景的基准，通过可答性、捷径抗性、视觉必要性等消融验证门评估13种记忆方法。实验表明现有架构难以保留细粒度视觉细节并推理时序状态变化，揭示了证据路由、时序追踪和细节提取对长期多模态记忆的关键作用。",
+    "tags": ["MeM", "VLM"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "RouteProfile: Elucidating the Design Space of LLM Profiles for Routing",
+    "arxiv_id": "2605.00180",
+    "github": "https://github.com/ulab-uiuc/RouteProfile",
+    "abstract": "系统研究LLM路由中profile设计对路由性能的影响，提出四维设计空间RouteProfile，涵盖组织形式、表示类型、聚合深度和学习配置。通过在三种代表性路由器上的系统评估发现：结构化profile持续优于扁平profile；查询级信号比粗粒度域级信号更可靠；在新模型泛化场景下，可训练配置的结构化profile收益最大。该工作将LLM profile设计确立为路由研究的重要方向，推动了更公平的路由系统比较与开发。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "Long Context Pre-Training with Lighthouse Attention",
+    "arxiv_id": "2605.06554",
+    "github": "https://github.com/ighoshsubho/lighthouse-attention",
+    "abstract": "提出Lighthouse Attention，一种训练专用的对称选择分层注意力算法，包裹在标准SDPA之外并可在训练末期移除。其核心贡献包括：子二次层次化预处理实现序列自适应压缩与解压；对称压缩策略同时池化QKV并保持从左到右因果性以提升并行度；两阶段训练法，大部分时间用Lighthouse Attention预训练，最后短训恢复全注意力模型。小规模LLM预训练实验表明，该方法在匹配设置下实现更快总训练时间和更低最终损失。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale",
+    "arxiv_id": "2605.14445",
+    "github": "https://github.com/FrontierCS/FrontierSmith",
+    "abstract": "提出FrontierSmith自动化系统，用于从现有封闭式编程任务迭代演化大规模开放性问题。通过改变问题目标、限制输出和泛化输入生成候选变体，再用定量思路发散度指标筛选能引发求解器真正多样化方法的问题，最后由Agent生成测试用例和验证器。在FrontierCS和ALE-bench上，Qwen3.5-9B与27B训练后分别获得显著分数提升，合成问题使Agent消耗更多轮次和token，接近人工筛选问题的特性。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-15",
+    "title": "RewardHarness: Self-Evolving Agentic Post-Training",
+    "arxiv_id": "2605.08703",
+    "github": "https://github.com/TIGER-AI-Lab/RewardHarness",
+    "abstract": "提出RewardHarness自进化Agent奖励框架，将奖励建模重构为上下文演化而非权重优化。仅需100条偏好演示，Orchestrator从工具库中选择最相关子集，冻结Sub-Agent构建推理链产出偏好判断，再通过与真实偏好对比自动精炼工具库。在图像编辑评估基准上仅用EditReward数据0.05%即达47.4%平均准确率，超越GPT-5达5.3分；作为GRPO微调奖励信号时RL调优模型在ImgEdit-Bench达3.52分。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "Does Synthetic Layered Design Data Benefit Layered Design Decomposition?",
+    "arxiv_id": "2605.15167",
+    "github": "https://github.com/YangHaolin0526/SynLayers",
+    "abstract": "探究纯合成分层数据能否改善平面设计分解。基于CLD基线框架构建合成数据集SynLayers，利用视觉语言模型生成文本监督并自动预测边界框作为推理输入。三项关键发现：纯合成数据训练可超越PrismLayersPro等不可扩展替代方案；性能随数据规模增加持续提升，约50K样本后收益饱和；合成数据可平衡控制层数分布，避免真实数据集的层数不平衡。该数据为中心的研究鼓励将合成数据作为分层设计编辑系统的实用基础。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "BOOKMARKS: Efficient Active Storyline Memory for Role-playing",
+    "arxiv_id": "2605.14169",
+    "github": "https://github.com/KomeijiForce/BOOKMARKS_Koishiday_2026",
+    "abstract": "提出基于搜索的角色扮演Agent记忆框架BOOKMARKS，主动初始化、维护和更新与当前任务相关的书签片段，替代传统循环摘要导致的细节丢失。书签结构化为storyline特定位置问题的答案，支持概念、行为、状态三种搜索及高效同步方法。相比循环摘要，BOOKMARKS提供主动锚定捕获任务特定细节和被动更新避免不必要计算两大优势。在16部作品的85个角色上显著超越RPA记忆基线，验证了搜索式记忆对角色扮演Agent的有效性。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+    "arxiv_id": "2605.15188",
+    "github": "https://github.com/OpenForecaster/futuresim",
+    "abstract": "提出FutureSim基准，通过按时间顺序重放真实世界新闻文章构建grounded simulation，评估Agent在知识截止日期之外预测世界事件的能力。在2026年1至3月三个月期间测试前沿Agent，揭示能力明显分层：最佳Agent准确率仅25%，许多Agent的Brier技能分甚至不如不做预测。通过消融实验展示FutureSim为长程测试时适应、搜索、记忆和不确定性推理等新兴研究方向提供真实评估场景，为衡量AI长期开放适应能力奠定基础。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-15",
+    "title": "LLM-based Detection of Manipulative Political Narratives",
+    "arxiv_id": "2605.14354",
+    "github": "https://github.com/SinclairSchneider/manipulative_narrative_detection",
+    "abstract": "提出检测和结构化操纵性政治叙事的计算框架。通过详细few-shot提示结合已记录campaign叙事与合法批评进行区分，由推理模型标注筛选操纵性帖子；随后用UMAP降维和HDBSCAN聚类发现叙事群组；最后由推理模型揭示各群组背后的叙事。该方法独立于预定义类别列表，可发现新叙事集群。应用于超120万条社交媒体帖子，有效识别出41个distinct操纵性叙事集群，为政治话语分析提供可扩展的自动化工具。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-05-15",
+    "title": "Ideology Prediction of German Political Texts",
+    "arxiv_id": "2605.14352",
+    "github": "https://github.com/SinclairSchneider/german_ideology_prediction",
+    "abstract": "提出基于Transformer的德国政治文本意识形态预测模型，将政治取向投影到-1到1的连续左右光谱。构建四个语料库（德国联邦议院速记、Wahl-O-Mat决策工具、33家报纸文章、53.5万条议员推文），用两个语料库训练、两个测试以缓解过拟合。DeBERTa-large在域内F1达0.844，X平台外域测试ACC达0.864；Gemma2-2B在报纸外域测试MAE为0.172。研究表明Transformer可识别德国新闻中的政治框架，模型架构和领域数据与模型规模同样影响偏见估计。",
+    "tags": []
+  },
+  {
+    "date": "2026-05-15",
+    "title": "Boosting Reinforcement Learning with Verifiable Rewards via Randomly Selected Few-Shot Guidance",
+    "arxiv_id": "2605.15012",
+    "github": "https://github.com/KaiYan289/FEST",
+    "abstract": "提出FEST算法，仅随机选取128条SFT演示即可有效引导RLVR训练。发现三个关键组件至关重要：监督信号、on-policy信号和对few-shot SFT数据集的衰减权重以防止多轮训练过拟合。在多个基准上，FEST以数量级更少的SFT数据超越基线，甚至用完整数据集匹配其性能。为提升RLVR在难以生成正确rollout的困难问题上的样本效率提供了简洁实用的方案。",
+    "tags": ["RL"]
+  }
+]
