@@ -3264,3 +3264,53 @@
 
 - **Decoding the Critique Mechanism in Large Reasoning Models** — [2603.16331](https://arxiv.org/abs/2603.16331) | [GitHub](https://github.com/mail-research/lrm-critique-vectors)
   > 系统研究大型推理模型的自我纠错机制，通过在中间推理步骤插入算术错误发现：即使错误在思维链中传播且无言语化修正，模型仍能得出正确答案。这一现象暗示存在内部错误检测机制，称之为隐藏批判能力。通过特征空间分析识别出高可解释性的批判向量。跨多尺度与多模型实验表明，用该向量引导潜在表征可提升错误检测能力，并零成本增强测试时扩展性能。
+
+## 2026年5月27日
+
+- **MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research** — [2605.26114](https://arxiv.org/abs/2605.26114) | [GitHub](https://github.com/Purewhiter/mobilegym)
+  > 提出 MobileGym，一个基于浏览器的轻量化移动设备仿真环境，支持日常应用交互的高保真模拟。通过结构化 JSON 状态实现可验证的结果判定，支持低成本并行 rollout 实现在线强化学习训练。该环境可捕获、配置、分叉和比较完整的应用状态，为移动 GUI Agent 研究提供可扩展的评估与训练基础设施。
+
+- **Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling** `[无需训练]` — [2605.27030](https://arxiv.org/abs/2605.27030) | [GitHub](https://github.com/WangXinglin/CPT)
+  > 提出协作并行思考（CPT）框架，解决测试时扩展中分支间信息隔离导致的冗余探索问题。通过让并行搜索分支实时共享中间发现，避免重复搜索已探索区域，显著降低推理计算开销。实验表明该方法在保持准确率的同时减少搜索步数，为高效测试时计算分配提供了新的协作范式。
+
+- **LLaVA-OneVision-2: Towards Next-Generation Perceptual Intelligence** `[VLM]` — [2605.25979](https://arxiv.org/abs/2605.25979) | [GitHub](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2)
+  > 推出 LLaVA-OneVision-2，基于原生 OneVision-Encoder 构建的新一代视觉语言模型。引入 Windowed Attention 实现高效局部计算并保持原生分辨率，核心创新为 codec-stream tokenization，将压缩视频视为连续比特流并根据比特成本动态自适应分配视觉 token。在多项多模态基准测试中取得领先性能。
+
+- **JLT: Clean-Latent Prediction in Latent Diffusion Transformers** `[扩散模型]` — [2605.27102](https://arxiv.org/abs/2605.27102) | [GitHub](https://github.com/akatsuki-neo/JLT)
+  > 探索 clean-data prediction 在潜在空间中的有效性，提出 JLT——基于冻结 FLUX.2 VAE 的 130M 潜在扩散 Transformer。对比 clean-latent 与 velocity prediction 策略，验证直接回归 clean latent 能更有效利用结构化信息，为扩散模型训练目标设计提供新视角。
+
+- **QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents** — [2605.27068](https://arxiv.org/abs/2605.27068) | [GitHub](https://github.com/AAAAA-Academia-Attractions/QUACK)
+  > 提出 QUACK 开源框架，用于评估多模态社交推理 Agent 的语言是否真正基于其感知和行为。通过细粒度审计机制分析 Agent 通信内容的真实性，识别其失败模式，超越单纯的游戏胜负指标。为提升多模态 Agent 的可解释性和推理可靠性提供了系统化的评测工具与方法论。
+
+- **Efficient Agentic Reinforcement Learning with On-Policy Intrinsic Knowledge Boundary Enhancement** `[RL]` — [2605.26952](https://arxiv.org/abs/2605.26952) | [GitHub](https://github.com/CuSO4-Chen/AKBE)
+  > 针对 Agentic RL 训练中工具调用冗余和模型内在知识边界模糊的问题，提出基于 on-policy 内在知识边界增强（AKBE）的方法。通过细粒度奖励塑造区分工具调用与参数知识的适用场景，减少不必要的 API 调用，提升 agent 在工具使用和知识推理之间的平衡能力与训练效率。
+
+- **Does Seeing More Mean Knowing More? Mono-Anchored Advantage Normalization for Multi-Source Visual Reasoning** `[RL]` `[VLM]` — [2605.25437](https://arxiv.org/abs/2605.25437) | [GitHub](https://github.com/AI9Stars/MARS)
+  > 提出单锚点优势归一化（MAN）方法，解决多源视觉输入在 RLVR 训练中的信息增益与干扰区分问题。通过动态建模多源输入间的交互关系，自适应地识别有效信息源并抑制干扰，在多源视觉推理任务中显著提升模型对异构信息源的整合能力与决策质量。
+
+- **Confidence and Calibration of Activation Oracles for Reliable Interpretation of Language Model Internals** — [2605.26045](https://arxiv.org/abs/2605.26045) | [GitHub](https://github.com/federicotorrielli/probabilistic_activation_oracles)
+  > 系统研究激活预言机（activation oracle）的置信度估计与校准问题，评估六种不同置信度估计方法在 6000 样本上的校准性能。发现现有预言机的置信度分数普遍存在校准不足问题，提出改进的不确定性量化策略，为语言模型内部表示的可信赖解读提供了实证基础和方法指导。
+
+- **DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs** — [2605.25188](https://arxiv.org/abs/2605.25188) | [GitHub](https://github.com/PearLoveTana/DarkForest_Review)
+  > 提出受控通信协调框架 DarkForest，解决多智能体 LLM 系统中通信开销大与错误传播问题。通过限制智能体间交换原始响应和推理轨迹，减少错误中间推理的放大效应，显著降低 token 消耗和推理延迟，同时保持甚至提升多智能体协作的推理准确率与决策质量。
+
+- **Balancing Fidelity and Diversity in Diffusion Models via Symmetric Attention Decomposition: Hopfield Perspective** `[扩散模型]` — [2605.27476](https://arxiv.org/abs/2605.27476) | [GitHub](https://github.com/hyeon-cho/Attention-Symmetric-Decomposition)
+  > 从 Hopfield 网络视角分析 Transformer 的预 softmax 注意力矩阵，将其对称分量解释为能量景观结构控制，反对称分量解释为景观上的流动驱动。基于该分解提出对称注意力分解方法，在保持生成保真度的同时提升多样性，为扩散模型的注意力机制提供新的理论解释与优化路径。
+
+- **SAM: State-Adaptive Memory for Long-Horizon Reasoning Agent** `[MeM]` — [2605.24468](https://arxiv.org/abs/2605.24468) | [GitHub](https://github.com/qhjqhj00/cabeza)
+  > 提出状态自适应记忆（SAM）机制，解决长程交互历史中信息分散与动态相关性问题。通过自适应地维护、压缩和检索交互历史中的关键状态，使 LLM Agent 能够在长周期任务中准确获取跨时间步的决策相关信息，显著提升长程推理的准确性与任务执行效率。
+
+- **ZeroUnlearn: Few-Shot Knowledge Unlearning in Large Language Models** `[微调]` — [2605.18879](https://arxiv.org/abs/2605.18879) | [GitHub](https://github.com/XMUDeepLIT/ZeroUnlearn)
+  > 将机器遗忘重新定义为精确的知识重映射问题，提出 ZeroUnlearn 方法实现 LLM 的少样本知识遗忘。无需重新训练或大规模微调，通过模型编辑技术精确移除敏感信息同时保留相关知识和整体模型效用，在隐私保护和安全对齐场景中展现出高效性与实用性。
+
+- **Understanding Data Temporality Impact on Large Language Models Pre-training** — [2605.22769](https://arxiv.org/abs/2605.22769) | [GitHub](https://github.com/kyutai-labs/kairos)
+  > 系统研究预训练数据时序对 LLM 获取时间敏感事实知识的影响，提出包含七千余个时序问题的综合评测基准和评估协议。发现数据排序显著影响模型对时间信息的编码方式，为设计具有时间感知能力的预训练策略提供了重要的实证基础和方向指导。
+
+- **NSF-SciFy: Mining the NSF Awards Database for Scientific Claims** — [2503.08600](https://arxiv.org/abs/2503.08600) | [GitHub](https://github.com/darpa-scify/NSFSciFy)
+  > 构建 NSF-SciFy 大规模科学声明数据集，从 40 万篇 NSF 资助摘要中提取 280 万条科学声明，覆盖所有科学与数学学科。提供两个聚焦子集：NSF-SciFy-MatSci（材料科学，11.4 万声明）和 NSF-SciFy-CompSci（计算机科学），为科学声明验证和跨学科知识挖掘提供高质量资源。
+
+- **CroCo: Cross-Lingual Contrastive Preference Tuning on Self-Generations** `[微调]` — [2605.26293](https://arxiv.org/abs/2605.26293) | [GitHub](https://github.com/jjzha/CroCo)
+  > 将基于自生成响应的对比偏好微调方法扩展到 14 种高资源和低资源语言，提出跨语言对比偏好微调 CroCo。核心发现是该方法无需语言特定的偏好标注即可实现跨语言迁移，在多样化任务上验证自生成对比学习在多语言设置下的有效性和泛化能力。
+
+- **STREAM: A Data-Centric Framework for Mining High-Value Task-Oriented Dialogues from Streaming Media** — [2605.25162](https://arxiv.org/abs/2605.25162) | [GitHub](https://github.com/hitxueliang/DialogDataSetBySTREAM)
+  > 提出 Stream 数据框架，利用公开直播和短视频合成高质量垂直领域任务导向对话数据。通过多阶段数据挖掘与质量过滤流程，从流媒体内容中提取复杂的领域特定对话模式，缓解专家标注成本高、真实对话受隐私限制和静态语料时效性差的困境。
