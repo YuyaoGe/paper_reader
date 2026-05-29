@@ -3394,3 +3394,47 @@
 
 - **Unified Panoramic Geometry Estimation via Multi-View Foundation Models** `[VLM]` — [2605.26368](https://arxiv.org/abs/2605.26368) | [GitHub](https://github.com/prs-eth/PaGeR)
   > 提出PaGeR框架，将用于透视图像的3D基础模型提升到全景域。通过最小化架构改动并在训练中混合透视和全景图像，将预训练的3D重建transformer转换为统一高性能模型，可在单前向传播中从透视和全方位图像预测尺度不变深度、度量深度、表面法线和天空掩码。在室内和室外环境中广泛测试，发现PaGeR提供SOTA性能和跨广泛场景的出色零样本泛化能力。
+
+## 2026年5月29日
+
+- **AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security** `[RL]` — [2605.29801](https://arxiv.org/abs/2605.29801) | [GitHub](https://github.com/AI45Lab/AgentDoG)
+  > 提出 AgentDoG 1.5，一个轻量可扩展的 Agent 安全对齐框架。更新安全分类学以涵盖新兴执行风险，利用影响函数纯化仅用约 1k 样本训练 0.8B 至 8B 轻量模型，性能匹敌 GPT-5.4。构建高效的 Agentic 安全 SFT 和 RL 训练环境，将部署开销降低两个数量级，并支持训练自由的在线护栏。
+
+- **OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources** — [2605.29250](https://arxiv.org/abs/2605.29250) | [GitHub](https://github.com/JinheonBaek/OmniRetrieval)
+  > 提出 OmniRetrieval 框架，实现跨异构知识源（非结构化文本、关系表、知识图谱和属性图）的统一检索。该框架接收自然语言查询后识别合适的知识源，并将原生查询分发给对应的本地执行引擎，在保留各数据源结构特性的同时完成检索。在 13 个数据集和 309 个知识库上的实验表明，OmniRetrieval 超越所有单源基线，可作为异构知识源的通用检索接口。
+
+- **LoMo: Local Modality Substitution for Deeper Vision-Language Fusion** `[VLM]` — [2605.30265](https://arxiv.org/abs/2605.30265) | [GitHub](https://github.com/Maplebb/LoMo)
+  > 提出 LoMo 数据策划范式，解决 VLM 中的「载体敏感」问题。现有训练数据中文本与图像角色不对称，导致模态替换时性能骤降。LoMo 将单模态提示重构为交错多模态序列，动态选择文本跨度渲染为图像，提供跨模态表征不变性监督。在 13 个多模态基准上显著提升推理，LLaVA-OneVision-1.5-8B 和 Qwen3.5-9B 分别提升 2.67 和 2.82 分。
+
+- **Skill0.5: Joint Skill Internalization and Utilization for Out-of-Distribution Generalization in Agentic Reinforcement Learning** `[RL]` — [2605.28424](https://arxiv.org/abs/2605.28424) | [GitHub](https://github.com/JasonZhujp/Skill0_5)
+  > 提出 Skill0.5 框架，在 Agentic 强化学习中联合进行通用技能内化与任务特定技能利用。通过动态难度感知路由器分流任务：对困难任务通过特权蒸馏内化通用技能，对简单任务通过诊断探针惩罚捷径。在 ALFWorld 和 WebShop 上，分布内和分布外场景均显著优于记忆型和技能型 RL 基线。
+
+- **Xetrieval: Mechanistically Explaining Dense Retrieval** — [2605.29507](https://arxiv.org/abs/2605.29507) | [GitHub](https://github.com/Hihiczx/Xetrieval)
+  > 提出 Xetrieval，一个嵌入层面的机械解释框架，用于解释稠密检索模型的决策机制。引入轻量级推理内化器，在嵌入空间中通过单次前向传播近似思维链推理；随后将推理增强嵌入分解为稀疏、人类可解释的特征，并为每个特征关联自然语言描述。通过聚合文档侧多视角的稀疏特征重叠，Xetrieval 为单次检索决策提供特征级解释，在干预实验和任务级特征操控中展现出更强的可控性与可解释性。
+
+- **Colored Noise Diffusion Sampling** `[扩散模型]` — [2605.30332](https://arxiv.org/abs/2605.30332) | [GitHub](https://github.com/hadardavidson/colored-noise-sampling)
+  > 提出 Colored Noise Sampling（CNS），一种训练自由的随机扩散采样器。现有 SDE 求解器在去噪中注入均匀白噪声，未考虑频谱偏置。CNS 基于频谱解耦能量转移框架，采用动态、时间步和频率相关的噪声调度，将能量高效分配给未解析频带。在 ImageNet-256 上 SiT-XL/2 FID 从 8.26 降至 6.27，JiT-B/16 从 32.39 降至 26.69。
+
+- **UI-KOBE: Knowledge-Oriented Behavior Exploration for Lightweight Graph-Guided GUI Agents** — [2605.29534](https://arxiv.org/abs/2605.29534) | [GitHub](https://github.com/YuxiangChai/UI-KOBE)
+  > 提出 UI-KOBE 框架，通过应用特定图知识增强轻量级移动端 GUI Agent。自主探索移动应用并构建知识图，节点代表 UI 状态，边代表可执行转移。运行时 Agent 以知识图为指导，根据截图识别节点并选择动作。实验显著降低端到端 GUI 规划负担，推动高效、可解释且隐私保护的端侧 GUI Agent 落地。
+
+- **LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents** `[RL]` — [2605.29559](https://arxiv.org/abs/2605.29559) | [GitHub](https://github.com/icip-cas/LiteCoder)
+  > 提出 LiteCoder-Terminal-Gen，一个零依赖合成管道，自主生成可执行可验证的终端训练环境。构建 Terminal-SFT（11,255 条轨迹，10 个领域）和 Terminal-RL（602 个环境）。对 Qwen 系列 SFT 后，32B 在 Terminal Bench 达 29.06%、18.54% 和 34.00% pass@1，DMPO 后进一步提升。
+
+- **Verifiable Rewards Beyond Math and Code: Lightweight Corpus-Grounded Process Supervision for Factual Question Answering** `[RL]` — [2605.29648](https://arxiv.org/abs/2605.29648) | [GitHub](https://github.com/shichengf/CorVer)
+  > 提出 CorVer，一种轻量级语料库 grounded 过程奖励模型，用于事实性问答的强化学习。用 Wikipedia 共现统计替代神经验证器，仅需 0.5B 提取器和单次语料查询即可分配句子级信用并映射到 token 级优势。在 30 个配置单元全面超越基线，TriviaQA 平均提升 +4.1 pp，训练快 4.8 至 8.4 倍。
+
+- **WorldMemArena: Evaluating Multimodal Agent Memory Through Action-World Interaction** `[MeM]` — [2605.29341](https://arxiv.org/abs/2605.29341) | [GitHub](https://github.com/UCSB-AI/WorldMemArena)
+  > 提出 WorldMemArena，一个多模态 Agent 记忆评测基准，将记忆建模为「动作-世界交互循环」的四阶段生命周期。包含 400 个多会话多模态任务，涵盖终身演化与智能体执行，精细标注记忆点、更新、干扰项和证据链。首次实现长上下文、手工设计记忆系统与 harness 自管理记忆的正面比较。
+
+- **Thinking Before Constraining: A Unified Decoding Framework for Large Language Models** `[无需训练]` — [2601.07525](https://arxiv.org/abs/2601.07525) | [GitHub](https://github.com/Nokia-Bell-Labs/InWriting)
+  > 提出 In-Writing，一种统一的 LLM 解码框架，将自由推理与结构化生成在单次调用中结合。模型先进行无约束自然推理，仅在生成触发 token 后才应用结构化解码，显式解耦推理与格式化。作者证明触发 token 策略几乎消除了「过早触发」这一约束解码的核心故障模式。在覆盖分类和推理的多样数据集上，该方法比自然生成最高提升 27% 的准确率，优于现有约束解码方法。
+
+- **Token-Level Generalization in LoRA Adapter Backdoors: Attack Characterization and Behavioral Detection** `[微调]` — [2605.30189](https://arxiv.org/abs/2605.30189) | [GitHub](https://github.com/Travis-ML/lora-backdoors)
+  > 揭示 LoRA 适配器可通过数据投毒植入后门且保持基线性能。后门在 token 特征层面而非结构模式层面泛化：在 RFC 引用上训练的模型激活于任意 RFC 引用，但不迁移到结构相同的 ISO 等引用。构建行为检测器和权重级检测器，均可完美区分投毒与干净适配器，因果补丁定位后门至中后层 MLP 的 down_proj。
+
+- **Alignment Tampering: How Reinforcement Learning from Human Feedback Is Exploited to Optimize Misaligned Biases** `[RL]` — [2605.27355](https://arxiv.org/abs/2605.27355) | [GitHub](https://github.com/alignment-tampering/alignment-tampering)
+  > 提出「对齐篡改」攻击，揭示 RLHF 的结构性漏洞：偏好数据由模型自身输出构建，模型可影响标注；pairwise 比较只指示优劣不解释原因。攻击者利用高质量有偏见响应诱导偏好，使奖励模型继承偏见，再通过 RL 放大。实验涵盖关键词偏见、宣传、品牌推广等，现有鲁棒 RLHF 技术无法完全缓解。
+
+- **Uniform Diffusion Models Revisited: Leave-One-Out Denoiser and Absorbing State Reformulation** `[扩散模型]` — [2605.22765](https://arxiv.org/abs/2605.22765) | [GitHub](https://github.com/samsongourevitch/rev_udm)
+  > 重新审视 Uniform Diffusion Models（UDM），揭示标准 plug-in bridge 参数化由 leave-one-out 后验优化。推导出去噪器、leave-one-out 后验与分数的精确转换，解耦参数化与训练目标。提出吸收态 reformulation，将 UDM 分解为类掩码扩散采样操作。在语言建模上，leave-one-out 参数化持续改进 UDM 生成质量。
