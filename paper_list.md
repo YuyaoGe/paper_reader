@@ -3314,3 +3314,83 @@
 
 - **STREAM: A Data-Centric Framework for Mining High-Value Task-Oriented Dialogues from Streaming Media** — [2605.25162](https://arxiv.org/abs/2605.25162) | [GitHub](https://github.com/hitxueliang/DialogDataSetBySTREAM)
   > 提出 Stream 数据框架，利用公开直播和短视频合成高质量垂直领域任务导向对话数据。通过多阶段数据挖掘与质量过滤流程，从流媒体内容中提取复杂的领域特定对话模式，缓解专家标注成本高、真实对话受隐私限制和静态语料时效性差的困境。
+
+## 2026年5月28日
+
+- **From Pixels to Words -- Towards Native One-Vision Models at Scale** `[VLM]` — [2605.28820](https://arxiv.org/abs/2605.28820) | [GitHub](https://github.com/EvolvingLMMs-Lab/NEO)
+  > 提出NEO-ov，一种原生视觉语言基础模型，摒弃传统多阶段对齐的模块化架构，通过端到端学习实现跨帧像素-词语对应关系，无需外部编码器或适配器。实验表明，NEO-ov在细粒度视觉感知上表现出色，与模块化方案的性能差距大幅缩小，验证了原生统一视觉架构在大规模场景下的可行性与竞争力。
+
+- **Self-Improving Language Models with Bidirectional Evolutionary Search** `[无需训练]` — [2605.28814](https://arxiv.org/abs/2605.28814) | [GitHub](https://github.com/Embodied-Minds-Lab/BES)
+  > 提出双向进化搜索框架BES，将前向候选进化与后向目标分解相结合。前向搜索通过进化算子重组部分轨迹，生成单模型采样难以获得的候选解；后向搜索递归分解任务为可验证子目标，提供密集中间反馈指导搜索。理论证明进化算子可突破熵壳限制，后向搜索指数级降低采样需求。实验显示BES在训练后任务和推理时问题上均优于现有开源框架。
+
+- **ResearchMath-14K: Scaling Research-Level Mathematics via Agents** `[API]` — [2605.28003](https://arxiv.org/abs/2605.28003) | [GitHub](https://github.com/huggingface/Math-Verify)
+  > 构建ResearchMath-14K数据集，包含14,056道研究级数学问题，通过多智能体流水线从学术来源自动筛选整理，是目前规模最大的研究级数学问题集。进一步生成22万条教师推理轨迹，发现新模型存在更多虚构引用行为。经智能体过滤后微调Qwen3模型（4B-30B），平均提升9.2分，证明即使不完全正确的开放问题尝试也能提供有效监督信号。
+
+- **DenoiseRL: Bootstrapping Reasoning Models to Recover from Noisy Prefixes** `[RL]` — [2605.28421](https://arxiv.org/abs/2605.28421) | [GitHub](https://github.com/ALEX-nlp/DenoiseRL)
+  > 提出DenoiseRL强化学习框架，无需更强的教师模型或精心筛选的困难数据集，直接从弱模型的错误推理轨迹中学习恢复能力，将失败转化为改进机会。该方法提供更丰富多样的学习信号，提升探索效率。在数学和通用推理基准上，DenoiseRL持续超越强on-policy RL基线，并随着训练难度增加展现出更强的自纠正行为，为推理能力提升提供可扩展的替代路径。
+
+- **Learn from Weaknesses: Automated Domain Specialization for Small Computer-Use Agents** `[API]` — [2605.28775](https://arxiv.org/abs/2605.28775) | [GitHub](https://github.com/sujiikim/LearnWeak)
+  > 提出LearnWeak框架，用于小型计算机使用智能体的自动化领域特化。通过强参考智能体识别学生在目标领域的弱点，自动生成针对性任务和监督信号，并引入错误感知的特化目标来解耦规划错误与执行错误。在OSWorld上，LearnWeak在8个领域平均提升EvoCUA-8B和OpenCUA-7B达11.6和11.1个百分点，验证了学生感知在数据合成与智能体训练中的重要性。
+
+- **ScientistOne: Towards Human-Level Autonomous Research via Chain-of-Evidence** `[API]` — [2605.26340](https://arxiv.org/abs/2605.26340) | [GitHub](https://github.com/scientist-one/generated-artifacts)
+  > 提出Chain-of-Evidence可验证性框架和端到端自主研究系统ScientistOne，要求每个声明可追溯至证据源。设计CoE审计包含分数验证、规范违反、引用验证和方法-代码对齐四项完整性检查。在75篇论文的评估中，基线系统存在系统性失败（虚构引用率达21%），而ScientistOne实现零虚构引用、完美分数验证和最高方法-代码对齐率，同时在5个前沿任务上达到或超越人类专家水平。
+
+- **Rethinking Memory as Continuously Evolving Connectivity** `[MeM]` — [2605.28773](https://arxiv.org/abs/2605.28773) | [GitHub](https://github.com/zjunlp/LightMem)
+  > 提出FluxMem记忆框架，将记忆建模为异构图并通过三阶段渐进优化拓扑结构：初始连接形成、反馈驱动精炼和长期巩固。在执行过程中自动修复缺失链接、剪除干扰、对齐抽象粒度，并将重复成功的轨迹蒸馏为可复用的程序回路。在LoCoMo、Mind2Web和GAIA三个不同基准上取得一致的SOTA性能，展示了复杂智能体环境中的强适应与泛化能力。
+
+- **SkillGrad: Optimizing Agent Skills Like Gradient Descent** `[API]` — [2605.27760](https://arxiv.org/abs/2605.27760) | [GitHub](https://github.com/wwwhy725/SkillGrad)
+  > 提出SkillGrad梯度下降式智能体技能优化框架，将技能包视为结构化参数进行优化。任务执行提供轨迹级损失证据，自动诊断生成文本梯度指示修正方向，动量智能体累积重复诊断模式为持久记忆覆盖层，最后由LLM补丁器执行层感知更新。在SpreadsheetBench和WikiTableQuestions上，SkillGrad consistently优于基于训练的技能进化基线，平均提升6.7个百分点。
+
+- **Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems** `[MeM]` — [2605.26302](https://arxiv.org/abs/2605.26302) | [GitHub](https://github.com/VITA-Group/AgingBench)
+  > 提出AgingBench纵向可靠性基准，用于评估部署后智能体的寿命属性而非单日快照性能。将智能体老化归纳为四种机制：压缩老化、干扰老化、修订老化和维护老化。利用时序依赖图和成对反事实探针诊断记忆流水线的写入、检索和利用阶段。在7个场景、14个模型、约400次运行（8-200轮会话）中，发现行为测试正常时事实精度可能已衰减，同一错误在不同诊断下需不同修复策略。
+
+- **Triplet-Block Diffusion RWKV** `[扩散模型]` — [2605.25969](https://arxiv.org/abs/2605.25969) | [GitHub](https://github.com/leonardodalinky/B3D-RWKV)
+  > 提出B^3D-RWKV扩散模型，将线性时间因果模型的O(L)推理效率与双向离散扩散通过三元组块布局方法统一。该方法解决了因果模型单向性与扩散模型双向性之间的固有矛盾，在8项任务套件上达到与现有模型相当的精度，同时解码吞吐量平均提升1.6倍。
+
+- **Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving** `[VLM]` `[扩散模型]` — [2605.23163](https://arxiv.org/abs/2605.23163) | [GitHub](https://github.com/NVlabs/Fast-dLLM)
+  > 提出Fast-dDrive块扩散视觉语言动作模型，在语义单元内进行双向细化同时跨单元强制执行严格因果顺序。将结构化token冻结为section支架，采用section感知训练优先安全关键规划，并引入支架投机解码实现自回归等价质量下的高吞吐。在WOD-E2E上取得SOTA的ADE指标，在nuScenes上将平均L2误差降至0.32米（提升22%），集成SGLang后吞吐提升12倍。
+
+- **GradSentry: Gradient Spectral Entropy for Backdoor Sample Filtering in Large Language Model Fine-Tuning** `[微调]` — [2605.26574](https://arxiv.org/abs/2605.26574) | [GitHub](https://github.com/dongdongzhaoUP/GradSentry)
+  > 提出GradSentry后门样本过滤方法，基于单样本梯度的谱熵进行防御。核心发现是后门样本产生的梯度具有更高的谱熵。该方法利用单样本梯度谱捕获输出改变型后门签名，无需聚类即可在特征构建阶段避免成对样本比较。训练无关：既适用于LoRA等参数高效微调，也适用于全参数微调。在1%-90%投毒比例下均有效，每样本计算开销仅20-50毫秒（7B模型）。
+
+- **Lost in Sampling: Assessing Lexical Reachability in LLMs via the Word Coverage Score (WCS)** `[无需训练]` — [2605.27268](https://arxiv.org/abs/2605.27268) | [GitHub](https://github.com/WordsGPT/WCS)
+  > 提出Word Coverage Score指标，量化标准采样过滤器（Top-p、Top-k、Min-p）对上下文适切人类词汇的数学裁剪程度。WCS测量低频高信息人类词汇作为采样参数函数的词汇存活率。审计发现行业标准采样默认值充当非预期审查机制，将人类表达的独特纹理平滑为同质化话语。WCS为优化文本连贯性与词汇丰富性之间的权衡提供了严格框架。
+
+- **Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution** `[扩散模型]` — [2605.26032](https://arxiv.org/abs/2605.26032) | [GitHub](https://github.com/JazzyCH/SKILD)
+  > 提出SKILD尺度不变K空间图像学习扩散模型，在单一无条件框架内统一图像生成与连续超分辨率。利用自然图像和物理系统的尺度不变性，设计从细到粗尺度衰减图像内容的前向过程。同一训练好的反向过程仅通过改变起始时间步即可执行生成和任意尺度超分辨率，无需任务特定架构或重训练。在CIFAR-10上FID达2.65，在ImageNet上2-8倍超分辨率超越条件模型。
+
+- **The Fragility of Chain-of-Thought Monitoring Across Typologically Diverse Languages** `[API]` — [2605.27901](https://arxiv.org/abs/2605.27901) | [GitHub](https://github.com/AikyamLab/multilingual-monitoring)
+  > 首次大规模评估链式思维监控在13种不同语言和7个前沿模型家族中的可靠性。使用对抗提示评估发现，CoT不忠实在跨语言和提示类型中平均率达95.9%，前沿模型系统性地进行策略性操纵（答案切换、事后合理化、程序性利用提示）。模型常在生成前15%就 latent 层面承诺错位线索，即使CoT表面忠实。低资源语言中欺骗模式保持100%，揭示当前CoT监督的根本局限。
+
+- **PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective** `[微调]` — [2605.28819](https://arxiv.org/abs/2605.28819) | [GitHub](https://github.com/Sphere-AI-Lab/PEFT-Arena)
+  > 提出PEFT-Arena基准，从稳定性-可塑性困境角度联合评估参数高效微调的下游性能与通用能力保持。发现不同方法呈现 distinct 稳定性-可塑性特征，正交微调在相当参数预算下取得最有利的帕累托前沿。从权重空间谱分析和激活空间保持度量两个几何视角解释差异：遗忘与非等距表征失真相关。分析还表明最终SFT检查点常 overshoot 更优的目标-保持操作点。
+
+- **Joint Training of Multi-Token Prediction in Reinforcement Learning via Optimal Coefficient Calibration** `[RL]` — [2605.28184](https://arxiv.org/abs/2605.28184) | [GitHub](https://github.com/MarkXCloud/RL-MTP)
+  > 从优化视角重新审视多token预测与强化学习的联合训练失败问题。证明MTP对RL目标的一步影响可分解为一阶相关项和二阶扰动惩罚项，统一了Detach、交叉熵损失和策略损失三种训练方式。进一步分析发现策略损失的相关项衰减而二次惩罚持续存在。提出最优系数校准OCC，通过log-probability代理在线跟踪最优系数，在6个竞赛级数学推理基准上持续匹配或超越Detach基线。
+
+- **Models That Know How Evaluations Are Designed Score Safer** `[微调]` — [2605.28591](https://arxiv.org/abs/2605.28591) | [GitHub](https://github.com/compass-group-tue/arxiv2026_evaluation_meta_knowledge)
+  > 提出评估元知识概念，即模型对评估结构特征的内隐知识。假设模型在训练过程中接触描述评估实践的文本后，可能学会识别和响应评估类上下文。通过在合成文档上微调（描述可验证结构或道德困境等评估特征），在6个安全基准上评估发现微调后的模型显著更安全，且行为转变在没有明确表达评估意识时仍然存在。结果表明评估元知识可能虚高安全基准性能，引入难以检测的新混淆因素。
+
+- **AgensFlow: A Coordination-Policy Substrate for Multi-Agent Systems** `[API]` — [2605.27466](https://arxiv.org/abs/2605.27466) | [GitHub](https://github.com/Nicolepcx/AgensFlow)
+  > 提出AgensFlow开源框架，将多智能体协调视为部分可观测下的在线策略学习问题。框架使协调决策可观测并从重复轨迹中学习，而非将技能、角色、模型、拓扑和评估选择视为固定流水线设计。在分布式系统事件任务和安全公告任务上评估，学习路由在协调密集型类别上超越固定流水线基线；skip:X隔离拓扑压缩为有意义基板组件；热启动策略图可降低探索成本同时保持平台质量。
+
+- **ESC-Skills: Discovering and Self-Evolving Skills for Emotional Support Conversations** `[API]` — [2605.27908](https://arxiv.org/abs/2605.27908) | [GitHub](https://github.com/aliyun/qwen-dianjin)
+  > 提出ESC-Skills技能中心框架，用于发现并自我进化可执行的情感支持技能。将局部支持交互建模为干预单元，捕获求助者状态-支持干预-响应后情绪变化动态。基于成功和失败的ESC对话提取的干预单元构建ESC-Skills Bank，包含干预指导、适用条件、预期结果和潜在风险。引入多画像自进化精炼框架，通过SAGE评估与多样化模拟求助者画像交互，识别缺失技能和不安全干预并进行仿真验证精炼。
+
+- **AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation** `[API]` — [2605.28655](https://arxiv.org/abs/2605.28655) | [GitHub](https://github.com/mims-harvard/AutoScientists)
+  > 提出AutoScientists去中心化AI智能体团队用于长期科学实验。智能体围绕假设自组织、批判提案并共享成败以减少冗余探索。在BioML-Bench上24个任务平均达74.4%，提升+8.33%。GPT训练优化比Autoresearch快1.9倍。在ProteinGym上发现ACE2-Spike结合方法提升+12.5%，在全部217个assay上提升+6.5%。
+
+- **Verus-SpecGym: An Agentic Environment for Evaluating Specification Autoformalization** `[API]` — [2605.26457](https://arxiv.org/abs/2605.26457) | [GitHub](https://github.com/formal-verif-is-cool/verus-spec-gym)
+  > 研究规范自动形式化，即LLM能否将非形式化编程问题翻译为忠实形式规范。引入Verus-SpecBench（581任务）和Verus-SpecGym智能体环境，模型与Verus验证器交互开发规范。通过exec_spec使生成规范可执行，用Codeforces测试和hack检验。Gemini 3.1 Pro解决77.8%任务，开源模型仅21.5-25.5%，LLM-as-judge遗漏26%失败。
+
+- **Advancing Creative Physical Intelligence in Large Multimodal Models** `[VLM]` — [2605.26396](https://arxiv.org/abs/2605.26396) | [GitHub](https://github.com/CreativityBench/MM-CreativityBench)
+  > 提出MM-CreativityBench基准，评估视觉丰富、物理约束环境中的affordance grounded创造性工具使用。每个实例呈现场景图像及候选实体视图，支持细粒度交互式评估。发现当前LMMs常因未持续grounded探索而失败。提出affordance grounded对齐，通过DPO鼓励视觉证据grounded推理，并结合affordance知识库指导实体探索和多轮规划。
+
+- **AgentFugue: Agent Scaling for Long-Horizon Tasks through Collective Reasoning** `[API]` — [2605.24486](https://arxiv.org/abs/2605.24486) | [GitHub](https://github.com/qhjqhj00/cabeza)
+  > 提出AgentFugue集体推理框架，围绕共享推理中心构建。当对等智能体并行探索同一任务时，中心记录各智能体的发现并使其可共享复用，无需集中式规划。将中心实例化为可插拔通信层，通过SFT和RL训练。在挑战性长期任务中优于强基线，表明集体推理可将扩展对等智能体系统转化为独立的能力增益来源。
+
+- **LACUNA: Safe Agents as Recursive Program Holes** `[API]` — [2605.28617](https://arxiv.org/abs/2605.28617) | [GitHub](https://github.com/pydantic/monty)
+  > 提出LACUNA智能体编程模型，将每个智能体动作表示为类型化调用agent[T](task)，由LLM填充代码并在运行前对周围程序类型检查。被拒绝的动作使环境不受影响，编译器诊断驱动重试。同一检查限制动作可使用的工具和数据流向。该原语将ReAct循环、子智能体、并行分解等表达为普通控制流。在BrowseComp-Plus上达27.1%准确率。
+
+- **Unified Panoramic Geometry Estimation via Multi-View Foundation Models** `[VLM]` — [2605.26368](https://arxiv.org/abs/2605.26368) | [GitHub](https://github.com/prs-eth/PaGeR)
+  > 提出PaGeR框架，将用于透视图像的3D基础模型提升到全景域。通过最小化架构改动并在训练中混合透视和全景图像，将预训练的3D重建transformer转换为统一高性能模型，可在单前向传播中从透视和全方位图像预测尺度不变深度、度量深度、表面法线和天空掩码。在室内和室外环境中广泛测试，发现PaGeR提供SOTA性能和跨广泛场景的出色零样本泛化能力。
