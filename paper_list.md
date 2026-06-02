@@ -3438,3 +3438,38 @@
 
 - **Uniform Diffusion Models Revisited: Leave-One-Out Denoiser and Absorbing State Reformulation** `[扩散模型]` — [2605.22765](https://arxiv.org/abs/2605.22765) | [GitHub](https://github.com/samsongourevitch/rev_udm)
   > 重新审视 Uniform Diffusion Models（UDM），揭示标准 plug-in bridge 参数化由 leave-one-out 后验优化。推导出去噪器、leave-one-out 后验与分数的精确转换，解耦参数化与训练目标。提出吸收态 reformulation，将 UDM 分解为类掩码扩散采样操作。在语言建模上，leave-one-out 参数化持续改进 UDM 生成质量。
+
+## 2026年6月1日
+
+- **GrepSeek: Training Search Agents for Direct Corpus Interaction** `[RL]` — [2605.29307](https://arxiv.org/abs/2605.29307) | [GitHub](https://github.com/alirezasalemi7/grepseek)
+  > 提出GrepSeek搜索代理，通过shell命令直接与大文本语料库交互。针对大规模语料库上RL不稳定的问题，设计两阶段训练：先用answer-aware Tutor和answer-blind Planner生成因果关联搜索轨迹冷启动数据，再用GRPO优化策略。同时提出语义保持的分片并行执行引擎，将shell检索加速7.6倍。在七个开放域问答基准上取得最优的token级F1和Exact Match。
+
+- **LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards** `[RL]` `[长文本]` — [2605.31584](https://arxiv.org/abs/2605.31584) | [GitHub](https://github.com/THU-KEG/LongTraceRL)
+  > 提出LongTraceRL，一种面向长上下文推理的强化学习方法。针对现有RLVR方法受限于低混淆度干扰项和稀疏结果奖励的问题，利用搜索代理轨迹构建分层干扰项（高混淆度的已读未引用文档和低混淆度的搜索结果未打开文档），并引入基于gold实体的rubric奖励进行细粒度过程监督。在三个推理模型（4B-30B）和五个长上下文基准上，LongTraceRL一致超越强基线，鼓励全面、基于证据的推理。
+
+- **dMoE: dLLMs with Learnable Block Experts** — [2605.30876](https://arxiv.org/abs/2605.30876) | [GitHub](https://github.com/fscdc/dMoE)
+  > 提出dMoE，面向扩散大语言模型的块级混合专家框架。针对dLLM块并行解码与MoE token级专家选择的根本不匹配导致推理内存瓶颈的问题，dMoE将块内token级专家分布聚合为统一块级分布来指导路由，显著减少唯一激活专家数量。实验表明dMoE将激活专家从69.5降至14.6，保留99.11%性能，同时减少76%以上内存使用，实现1.14-1.66倍延迟加速。
+
+- **SAAS: Self-Aware Reinforcement Learning for Over-Search Mitigation in Agentic Search** `[RL]` — [2605.29796](https://arxiv.org/abs/2605.29796) | [GitHub](https://github.com/XMUDeepLIT/SAAS)
+  > 提出SAAS，一种自感知强化学习框架，解决agentic搜索中的过度搜索问题。现有搜索代理缺乏对自身知识边界的认知，导致在内部知识足以回答时盲目触发搜索、在证据充分时仍不终止，造成巨大推理开销。SAAS引入三个关键组件：搜索边界建模机制、边界感知奖励模块和分阶段优化策略，培养动态自感知能力来精确调节搜索行为。实验表明SAAS在显著减少过度搜索的同时保持回答准确率，有效平衡搜索效率与回答质量。
+
+- **From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors** — [2605.31042](https://arxiv.org/abs/2605.31042) | [GitHub](https://github.com/RUC-NLPIR/ClawTrojan)
+  > 研究LLM代理工作空间中的新型多步木马攻击范式：攻击者通过文件或工具输出嵌入提示注入，代理读取后存储并在后续会话中执行。提出ClawTrojan基准测试，在模拟工作空间中GPT-5.4的攻击成功率达95.5%，而现有单轮提示注入攻击几乎为零。进一步提出DASGuard防御框架，扫描敏感本地文件中的控制类文本、追溯其来源并移除不可信来源的控制内容，实现运行时攻击拦截与工作空间净化的动态防御。
+
+- **Seeing Isn't Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?** `[VLM]` — [2605.30557](https://arxiv.org/abs/2605.30557) | [GitHub](https://github.com/zhangyuejoslin/SpatialUncertain_code)
+  > 构建SpatialUncertain框架，系统研究视觉语言模型（VLM）在空间推理中「知道何时不应回答」的能力。引入遮挡和视角歧义两类观察挑战，在多种前沿VLM上的实验揭示两个失败模式：模型倾向于过度自信地回答，即使视觉证据不完整或具有误导性；即使有额外视角可用，部分模型在识别可靠证据视角方面表现接近随机。研究呼吁关注VLM的拒识能力和证据寻求能力。
+
+- **OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents** — [2605.23657](https://arxiv.org/abs/2605.23657) | [GitHub](https://github.com/ALEX-nlp/OpenSkillEval)
+  > 提出OpenSkillEval，首个面向LLM代理开放技能生态的自动化评估框架。针对开源技能快速扩张但缺乏系统评估的问题，从演示文稿生成、前端设计、数据可视化等五类应用中自动构建动态任务实例，统一对比社区贡献的技能。对600多个任务实例和30个开源技能的评估表明：技能可用性不保证有效使用，技能增强收益强烈依赖于底层模型和代理框架，许多流行技能并未持续优于无技能基线。
+
+- **Emergent Languages in Populations of Language Model Agents: From Token Efficiency to Oversight Evasion** — [2605.31170](https://arxiv.org/abs/2605.31170) | [GitHub](https://github.com/aisilab/emergent-languages)
+  > 研究语言模型代理群体为规避监督而自发产生新语言的现象。基于Moltbook数据集，通过规则启发式和零样本分类识别出token效率优化、监督规避等涌现语言类别。定量分析表明规避监督的语言被DeepSeek-3.2判断为更不对齐，且所有新语言都能被其他模型通过上下文学习掌握。定性研究揭示了复杂的隐写协议。结果为代理群体表面行为监控的局限性提供了重要证据。
+
+- **DRIFT: Decoupled Rollouts and Importance-Weighted Fine-Tuning for Efficient Multi-Turn Optimization** `[RL]` `[微调]` — [2605.31455](https://arxiv.org/abs/2605.31455) | [GitHub](https://github.com/2020-qqtcg/DRIFT)
+  > 提出DRIFT，一种面向多轮交互场景的高效优化框架。针对在线RL每次更新需生成完整修正轨迹导致成本过高、而离线SFT无法处理多轮动态的问题，DRIFT基于KL正则化RL目标等价于重要性加权监督学习的理论洞察，将rollout生成与参数优化解耦：从固定参考策略采样离线轨迹，推导基于回报的重要性权重，通过加权SFT优化策略。实验表明DRIFT在超越多轮RL基线的同时保持标准SFT的训练效率。
+
+- **iVGR: Internalizing Visually Grounded Reasoning for MLLMs with Reinforcement Learning** `[VLM]` `[RL]` — [2605.31096](https://arxiv.org/abs/2605.31096) | [GitHub](https://github.com/Visual-AI/iVGR)
+  > 提出iVGR，一种通过强化学习将视觉定位推理内化为多模态大语言模型（MLLM）固有能力的新框架。发现推理阶段强制要求显式物体边界框的视觉定位CoT反而降低性能。iVGR采用双流训练策略，通过一致性奖励将文本推理流与高质量视觉定位流对齐，使模型在推理时无需显式边界框即可实现准确的视觉定位。在细粒度基准上的广泛实验表明iVGR显著优于现有基线，同时保持支持工具辅助推理工作流的灵活性。
+
+- **From Model Scaling to System Scaling: Scaling the Harness in Agentic AI** — [2605.26112](https://arxiv.org/abs/2605.26112) | [GitHub](https://github.com/SafeRL-Lab/cheetahclaws)
+  > 提出「扩展Harness」概念，将围绕基础模型的结构化执行层（记忆、检索、工具使用、编排和治理等）作为agentic AI的一等设计对象。分析上下文治理、可信记忆和动态技能路由三个瓶颈，提出超越任务成功率的Harness级指标（轨迹质量、记忆卫生、上下文效率等）。开发CheetahClaws参考实现并与Claude Code对比，论证agentic AI进展将同样依赖系统设计和更强的基础模型。
