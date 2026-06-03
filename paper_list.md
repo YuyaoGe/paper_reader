@@ -3473,3 +3473,47 @@
 
 - **From Model Scaling to System Scaling: Scaling the Harness in Agentic AI** — [2605.26112](https://arxiv.org/abs/2605.26112) | [GitHub](https://github.com/SafeRL-Lab/cheetahclaws)
   > 提出「扩展Harness」概念，将围绕基础模型的结构化执行层（记忆、检索、工具使用、编排和治理等）作为agentic AI的一等设计对象。分析上下文治理、可信记忆和动态技能路由三个瓶颈，提出超越任务成功率的Harness级指标（轨迹质量、记忆卫生、上下文效率等）。开发CheetahClaws参考实现并与Claude Code对比，论证agentic AI进展将同样依赖系统设计和更强的基础模型。
+
+## 2026年6月2日
+
+- **Crafter: A Multi-Agent Harness for Editable Scientific Figure Generation from Diverse Inputs** — [2605.30611](https://arxiv.org/abs/2605.30611) | [GitHub](https://github.com/HaozheZhao/Crafter)
+  > Crafter 是一个多智能体框架，用于从多样化输入生成可编辑的科学图表。它将图表生成分解为多个专业智能体协作的任务流程，支持跨图表类型泛化，无需架构修改即可适配不同输入条件。配合 CraftEditor 可将栅格输出转换为可编辑的 SVG 矢量图。实验表明，Crafter 在 PaperBanana-Bench 和自建基准上均显著优于独立生成器和基线方法，且每个组件均有独立贡献。
+
+- **Domino: Decoupling Causal Modeling from Autoregressive Drafting in Speculative Decoding** `[无需训练]` — [2605.29707](https://arxiv.org/abs/2605.29707) | [GitHub](https://github.com/jianuo-huang/Domino)
+  > Domino 提出一种投机解码框架，将因果依赖建模与自回归草稿执行分离。先用并行草稿骨干生成初步分布，再用轻量级 Domino 头注入前缀依赖的因果信息 refine。引入 base-anchored 训练课程稳定因果编码。在 Qwen3 模型上实验，Domino 在 Transformers 后端实现最高 5.49 倍端到端加速，在 SGLang 服务下达到 5.8 倍吞吐加速。
+
+- **Masking Stale Observations Helps Search Agents -- Until It Doesn't: A Regime Map and Its Mechanism** — [2606.00408](https://arxiv.org/abs/2606.00408) | [GitHub](https://github.com/i-DeepSearch/observation-masking)
+  > 研究搜索智能体中 mask 过时观察对性能的影响机制。通过系统扫描 4B 到 284B 参数模型和三种检索器，发现 mask 的收益呈不对称倒U型：弱检索器下收益平坦，强检索器配中等容量模型时达峰值，模型饱和后急剧崩溃。机制分析表明，mask 实现了 token-步数权衡，其效果取决于检索器召回率与模型隐式过滤能力的交互。论文为智能体上下文管理提供了基于机制的指导。
+
+- **Harness-1: Reinforcement Learning for Search Agents with State-Externalizing Harnesses** `[RL]` — [2606.02373](https://arxiv.org/abs/2606.02373) | [GitHub](https://github.com/pat-jj/harness-1)
+  > Harness-1 提出状态外部化框架，将搜索智能体的状态管理从策略中剥离到环境侧。环境维护候选池、精选集、证据链接、验证记录等结构化工作记忆，策略只需专注语义决策。基于该框架训练了 20B 参数的检索子智能体，在跨越网页、金融、专利和多跳问答的八个基准上平均精选召回率达 0.730，超越最强开源搜索子智能体 11.4 个百分点。
+
+- **When Does Multi-Agent RL Improve LLM Workflows? Workflow, Scale, and Policy-Sharing Tradeoffs** `[RL]` — [2605.24202](https://arxiv.org/abs/2605.24202) | [GitHub](https://github.com/XHMY/marl-llm-workflows)
+  > 系统研究多智能体 LLM 工作流端到端 RL 训练何时优于基线，比较共享策略与隔离策略两种范式。实验覆盖 Eval-Opt、Voting、Orch-Workers 三种工作流、数学与代码任务、0.6B 到 4B 三种规模。发现多智能体 RL 通常能提升基线，但增益取决于工作流、任务和规模的联合作用。通过梯度动力学分析揭示了不同策略共享模式下的失效机制及其与工作流拓扑的内在关联。
+
+- **Joint Agent Memory and Exploration Learning via Novelty Signals** `[MeM]` — [2606.01528](https://arxiv.org/abs/2606.01528) | [GitHub](https://github.com/MobileLLM/JAMEL)
+  > JAMEL 联合训练智能体记忆与探索策略，利用新颖性驱动交互为潜在记忆提供自然且无标注的监督信号。发现记忆与探索形成相互依赖的正反馈循环：更好的记忆支持更深探索，新颖探索经历又丰富记忆。以 GUI 领域的代码覆盖率为确定性新颖性信号，JAMEL 在未见环境中成功泛化，探索深度匹敌闭源模型，同时显著降低 token 消耗。
+
+- **OpenWebRL: Demystifying Online Multi-turn Reinforcement Learning for Visual Web Agents** `[RL]` `[VLM]` — [2606.02031](https://arxiv.org/abs/2606.02031) | [GitHub](https://github.com/OpenWebRL/OpenWebRL)
+  > OpenWebRL 是首个用于视觉网页智能体的在线多轮强化学习开源框架，涵盖实时浏览器基础设施、监督初始化、多模态上下文管理、轨迹级成功判定和高效多轮策略优化。仅用 0.4K 初始化轨迹和 2.2K RL 训练任务，训练出的 OpenWebRL-4B 在 Online-Mind2Web 达到 67.0%、DeepShop 达到 64.0%，超越同规模或更大规模的开源智能体，与 OpenAI CUA 和 Gemini CUA 等专有系统相当。
+
+- **Speculative Pipeline Decoding: Higher-Accruacy and Zero-Bubble Speculation via Pipeline Parallelism** `[无需训练]` — [2605.30852](https://arxiv.org/abs/2605.30852) | [GitHub](https://github.com/yuyijiong/speculative_pipeline_decoding)
+  > Speculative Pipeline Decoding（SPD）将目标 LLM 划分为 n 个流水线阶段，实现单序列解码中的零气泡并行投机。通过聚合不同流水线深度的中间特征预测下一 token，与目标模型的流水线步骤严格并行执行。相比主流多 token 预测方法，SPD 避免了预测难度递增和串行草稿延迟。实验表明，SPD 理论加速比显著高于主流基线，为高可扩展的 LLM 解码加速提供了新方案。
+
+- **Agent Skills Should Go Beyond Text: The Case for Visual Skills** `[VLM]` — [2606.01414](https://arxiv.org/abs/2606.01414) | [GitHub](https://github.com/Little-Fridge/AutoVisualSkill)
+  > 提出 AutoVisualSkill 多模态技能范式，将智能体经验存储为结合文本逻辑与视觉支持的复用资产，包括稳定空间惯例的静态先验、现场视觉工作记忆的动态先验，以及将文本步骤绑定到源帧的交错视觉技能。引入自动系统将轨迹转换为多模态技能，保留文本推理、空间引用、视觉边界和交互模式。在 GUI 等视觉中心任务上，视觉技能显著优于纯文本技能，尤其在需要空间对应和视觉证据时。
+
+- **Measuring the Depth of LLM Unlearning via Activation Patching** — [2605.24614](https://arxiv.org/abs/2605.24614) | [GitHub](https://github.com/gnueaj/unlearning-depth-score)
+  > 提出 Unlearning Depth Score（UDS），一种通过激活修补量化 LLM 遗忘机制深度的通用指标。UDS 先利用 retain model 基线识别编码目标知识的层，再测量未学习模型中该知识的擦除程度。在覆盖 8 种方法的 150 个模型的元评估中，UDS 获得最高的忠实度和鲁棒性。案例研究揭示白盒指标在层级别可能存在分歧，且擦除深度因样本而异，为 LLM 安全审计提供了可靠工具。
+
+- **FineVerify: Scaling Test-Time Compute with Fine-Grained Self-Verification for Agentic Search** `[无需训练]` — [2606.00660](https://arxiv.org/abs/2606.00660) | [GitHub](https://github.com/XuZhao0/fineverify)
+  > FineVerify 是一种细粒度自验证框架，将复杂问题分解为可检查的子问题，对候选答案逐条验证并聚合得分，将选择问题转化为更简单的局部判断。在四个搜索智能体基准和两个模型上，FineVerify 持续优于标准测试时扩展基线。仅用 4 条采样轨迹，FineVerify 使 GPT-5-mini 提升 8.2 个准确率点、Gemini-3-flash 提升 5.6%，12 条采样即可让 GPT-5-mini 超越前沿 GPT-5。
+
+- **Not only where, But when: Temporal Scheduling for RLVR** `[RL]` — [2605.25381](https://arxiv.org/abs/2605.25381) | [GitHub](https://github.com/Jinghaoleven/RLVR-Schedule)
+  > 针对 RLVR 训练中信用分配准则全程固定的问题，引入时间调度维度，根据训练阶段动态调整分配策略。优先关注具有特定策略行为的靶向 token，并逐步衰减至通用优化，实现更稳定高效的学习动态。利用轨迹百分位数区分策略行为，与时间调度有效配合。分析表明标准优化在兼顾异质行为时牺牲策略熵，而时间调度产生更健康的策略演化。在数学和通用推理基准上均取得一致提升。
+
+- **ACL-Verbatim: hallucination-free question answering for research** — [2605.21102](https://arxiv.org/abs/2605.21102) | [GitHub](https://github.com/KRLabsOrg/acl-verbatim)
+  > ACL-Verbatim 将提取式问答系统 VerbatimRAG 应用于 ACL Anthology 学术论文集，通过将用户查询直接映射到检索文档中的原文片段，从根本上消除 LLM 幻觉。构建了一个查询到论文文本片段的 ground truth 数据集，由 NLP 研究人员标注。在该基准上，基于自定义 ScIRGen 流程生成的银监督训练的 150M 参数 ModernBERT token 分类器达到最优词级 F1（53.6），超越最强 LLM 提取器（48.7）。
+
+- **MindZero: Learning Online Mental Reasoning With Zero Annotations** `[RL]` `[VLM]` — [2606.00240](https://arxiv.org/abs/2606.00240) | [GitHub](https://github.com/SCAI-JHU/MindZero)
+  > MindZero 是一个自监督强化学习框架，无需人工心智状态标注即可训练多模态大语言模型进行在线心智推理。训练时模型通过生成最大化观测动作似然的心智假设获得奖励，类似基于模型的心智推理。训练后内化为快速的单遍推理。在网格世界和 household 领域的心智推理与 AI 辅助任务中，MindZero 显著提升了 MLLM 的内在心智理论能力，在准确率和效率上均优于基于模型的方法，证明心智推理可作为自监督技能有效学习。
