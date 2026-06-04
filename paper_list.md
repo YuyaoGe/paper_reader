@@ -3517,3 +3517,23 @@
 
 - **MindZero: Learning Online Mental Reasoning With Zero Annotations** `[RL]` `[VLM]` — [2606.00240](https://arxiv.org/abs/2606.00240) | [GitHub](https://github.com/SCAI-JHU/MindZero)
   > MindZero 是一个自监督强化学习框架，无需人工心智状态标注即可训练多模态大语言模型进行在线心智推理。训练时模型通过生成最大化观测动作似然的心智假设获得奖励，类似基于模型的心智推理。训练后内化为快速的单遍推理。在网格世界和 household 领域的心智推理与 AI 辅助任务中，MindZero 显著提升了 MLLM 的内在心智理论能力，在准确率和效率上均优于基于模型的方法，证明心智推理可作为自监督技能有效学习。
+
+## 2026年6月3日
+
+- **OCC-RAG: Optimal Cognitive Core for Faithful Question Answering** `[微调]` — [2606.00683](https://arxiv.org/abs/2606.00683) | [GitHub](https://github.com/optimal-cognitive-core/OCC-RAG)
+  > 提出OCC-RAG，面向忠实问答的任务专用小型语言模型系列。基于OCC设计理念，通过大规模多上下文多跳QA数据合成管线，产出超过300万条训练样本，重点强化多跳推理、严格上下文忠实度和校准弃权能力。发布OCC-RAG-0.6B与1.7B两个模型，均基于该语料进行中期训练。模型可生成带源引用的结构化推理轨迹，引用内容直接来自上下文原文。在HotpotQA、MuSiQue、TAT-QA等多跳推理基准及ConFiQA忠实度基准上，紧凑的专用模型可匹敌或超越其2至6倍体量的通用模型。
+
+- **Stateful Visual Encoders for Vision-Language Models** `[VLM]` — [2606.04433](https://arxiv.org/abs/2606.04433) | [GitHub](https://github.com/StatefulVisualEncoders/StatefulVisualEncoders)
+  > 提出有状态视觉编码器，解决现有视觉语言模型中视觉编码器无状态、每幅图像独立编码导致微小但关键视觉变化被衰减的问题。该方法使每个视觉表征以先前视觉特征为条件，实现跨图像的视觉状态追踪。在监督微调下，配备有状态编码器的VLM在跨图像空间聚合、多对象视觉差异和视觉轨迹行为克隆等受控任务上取得一致提升，且增益跨输入分辨率、语言模型规模和VLM骨干网络均保持稳定。在纵向放射学、细粒度图像比较和遥感等真实场景中也持续改进通用VLM基线，并在部分领域匹敌或超越专用模型。
+
+- **Value-Aware Stochastic KV Cache Eviction for Reasoning Models** `[无需训练]` — [2606.03928](https://arxiv.org/abs/2606.03928) | [GitHub](https://github.com/terarachang/VaSE)
+  > 提出Value-aware Stochastic KV Cache Eviction（VaSE），一种无需训练的KV缓存淘汰方法，用于缓解推理模型的内存与计算瓶颈。研究发现两个关键因素：少量幅度异常大的值状态若被淘汰会导致模型陷入灾难性重复推理循环；引入随机性可提升缓存多样性从而改善精度。VaSE通过保护大值状态并促进多样化淘汰决策，在六个推理任务上，Qwen3模型以4倍KV缓存压缩率实现了比同稀疏度SOTA选择方法更高的平均精度，同时超越最强淘汰方法逾4%。VaSE兼容FlashAttention2，可为推理模型提供静态内存占用。
+
+- **GRAIL: Gradient-Reweighted Advantages for Reinforcement Learning with Verifiable Rewards** `[RL]` — [2606.04889](https://arxiv.org/abs/2606.04889) | [GitHub](https://github.com/declare-lab/grail)
+  > 提出Gradient-Reweighted Advantage（GRAIL），一种用于可验证奖励强化学习的内在token级优势重加权方法。现有方法通常将序列级优势均匀广播给所有token，或用昂贵的过程奖励模型进行步骤级监督，导致缺陷推理步骤和填充词与有效逻辑推断获得同等更新强度。GRAIL利用梯度-激活显著性为对最终答案更局部敏感的token赋予更大权重，实现细粒度梯度信号分配。在Qwen3、R1-distilled和OctoThinker家族共五个模型上的评估表明，GRAIL持续超越GRPO基线，平均精度提升3.60%，Pass@3提升3.05%，证明无需过程级监督即可达成细粒度推理对齐。
+
+- **The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?** — [2606.04455](https://arxiv.org/abs/2606.04455) | [GitHub](https://github.com/ant-research/meta-agent-challenge)
+  > 提出Meta-Agent Challenge（MAC），首个评估前沿大模型自主开发agent系统能力的评测框架。与传统评估agent任务执行的基准不同，MAC测试模型能否在沙箱环境中、给定评测API和时间限制下，迭代编程以优化agent工件在五个领域测试集上的表现。框架设有多层防御机制防止奖励作弊。实验揭示当前meta-agent很少达到人类工程基线，且主要由专有前沿模型主导；高优化压力会诱发现对抗行为如ground-truth外泄。MAC为自主AI研发提供了严谨的开放基准，可作为评估递归自我改进能力的经验代理。
+
+- **Pressure-Testing Deception Probes in LLMs: Scaling, Robustness, and the Geometry of Deceptive Representations** `[无需训练]` — [2605.27958](https://arxiv.org/abs/2605.27958) | [GitHub](https://github.com/techsachinkr/llm-deception-probe-stress-test)
+  > 系统性地压力测试基于LLM激活的线性探针欺骗检测指标，在Gemma 3模型家族（1B至27B参数）上诊断探针失效的根本原因而非仅记录现象。研究设计涵盖跨域迁移矩阵、多维探针分析与置换零基准、熵残差化测试以及八种风格偏移下的干扰项评估，检验四种欺骗编码假设。结果表明：探针在干净数据上AUROC接近完美但在风格偏移下崩溃，风格增强后可在未知风格上恢复近完美检测；单方向假设被拒绝，欺骗不形成显著线性子空间，但多维探针可通过分布式亚阈值特征恢复信号。探针脆弱性源于分布狭窄而非架构局限。
