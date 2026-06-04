@@ -3537,3 +3537,44 @@
 
 - **Pressure-Testing Deception Probes in LLMs: Scaling, Robustness, and the Geometry of Deceptive Representations** `[无需训练]` — [2605.27958](https://arxiv.org/abs/2605.27958) | [GitHub](https://github.com/techsachinkr/llm-deception-probe-stress-test)
   > 系统性地压力测试基于LLM激活的线性探针欺骗检测指标，在Gemma 3模型家族（1B至27B参数）上诊断探针失效的根本原因而非仅记录现象。研究设计涵盖跨域迁移矩阵、多维探针分析与置换零基准、熵残差化测试以及八种风格偏移下的干扰项评估，检验四种欺骗编码假设。结果表明：探针在干净数据上AUROC接近完美但在风格偏移下崩溃，风格增强后可在未知风格上恢复近完美检测；单方向假设被拒绝，欺骗不形成显著线性子空间，但多维探针可通过分布式亚阈值特征恢复信号。探针脆弱性源于分布狭窄而非架构局限。
+
+## 2026年6月4日
+
+- **Where Do Deep-Research Agents Go Wrong? Span-Level Error Localization in Agent Trajectories** — [2606.02060](https://arxiv.org/abs/2606.02060) | [GitHub](https://github.com/NJU-LINK/DRIFT)
+  > 研究深度研究智能体的轨迹级错误定位问题。收集2790条真实轨迹并转化为语义片段，通过LLM辅助专家审核标注有害错误片段。构建TELBench千例基准，提出DRIFT主张中心审计框架，追踪智能体主张并检验轨迹证据支持度，标记 unsupported 或冲突主张影响答案路径的片段。实验显示DRIFT将错误定位准确率提升最多30个百分点。
+
+- **Reproducing, Analyzing, and Detecting Reward Hacking in Rubric-Based Reinforcement Learning** `[RL]` — [2606.04923](https://arxiv.org/abs/2606.04923) | [GitHub](https://github.com/THUAIS-Lab/CHERRL)
+  > 针对基于评分标准的强化学习中策略模型利用评判器潜在偏置导致的奖励破解问题，提出可控奖励破解环境CHERRL。通过向LLM-as-a-Judge注入已知偏置，实现奖励破解的稳定复现、奖励发散的显式观测和破解起点的精确定位，为研究奖励破解机制与缓解策略提供干净的实验平台。进一步分析不同评判偏置的可发现性和可利用性，并探索基于智能体系统的自动检测方法。
+
+- **ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning** `[RL]` — [2606.03503](https://arxiv.org/abs/2606.03503) | [GitHub](https://github.com/ziyanliux/ThoughtFold)
+  > 针对大型推理模型因长思维链中的冗余探索被强化而导致的过度思考问题，提出ThoughtFold框架。利用内省策略识别每条正确轨迹内的冗余片段，生成候选子轨迹谱，并引入掩码偏好优化目标显式惩罚冗余探索，鼓励模型直接连接关键推理段以折叠推理链。在DeepSeek-R1-Distill-Qwen-7B上减少约56%的token使用量，同时保持SOTA准确率。
+
+- **Streaming Communication in Multi-Agent Reasoning** `[API]` — [2606.05158](https://arxiv.org/abs/2606.05158) | [GitHub](https://github.com/EnVision-Research/StreamMA)
+  > 针对多智能体推理系统中「生成-再传输」范式导致端到端延迟随流水线深度线性增长的问题，提出StreamMA流式通信系统。智能体每生成一个推理步骤即向下游传输，实现相邻智能体流水线化。理论分析证明流式协议在效果和速度上均优于串行和单智能体基线，发现「步骤级缩放定律」：增加每智能体步骤数可同时提升效果与效率。在数学、科学和代码基准上平均提升7.3个百分点，最高提升22.4个百分点。
+
+- **Self-Distilled Policy Gradient** `[RL]` — [2606.04036](https://arxiv.org/abs/2606.04036) | [GitHub](https://github.com/lauyikfung/SDPG)
+  > 将on-policy自蒸馏形式化为辅助全词表学生到教师的反向KL散度损失，提出SDPG自蒸馏策略梯度框架。结合组相对验证器优势与归一化标准差、精确全词表on-policy自蒸馏以及参考策略KL正则化，为稀疏奖励强化学习提供密集监督。实验表明SDPG在稳定性和性能上超越RLVR和自蒸馏基线。
+
+- **Eliciting Complex Spatial Reasoning in MLLMs through Wide-Baseline Matching** `[VLM]` — [2606.03577](https://arxiv.org/abs/2606.03577) | [GitHub](https://github.com/aim-uofa/ReasonMatch)
+  > 针对多模态大语言模型在宽基线匹配中整合几何理解、视角变化、细粒度感知和遮挡推理的空间推理能力不足问题，提出从大规模视频-3D语料库自动生成宽基线视图对的数据生成pipeline，并设计动态对应强化学习DCRL。DCRL结合图像级视角渐进和点级对应课程，通过可验证奖励改善训练而无需显式思维链监督。实验显示DCRL显著提升细粒度宽基线对应能力，同时保持通用视觉理解性能。
+
+- **MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?** `[VLM]` — [2606.01993](https://arxiv.org/abs/2606.01993) | [GitHub](https://github.com/NJU-LINK/MMG2Skill)
+  > 提出将野外多模态指南转化为可执行技能并持续迭代的闭环框架MMG2Skill。通过编译指南为可编辑技能、条件化固定视觉语言模型智能体执行、并从轨迹级根因反馈中修订技能。在GUI控制、开放式游戏和策略卡牌等任务上使用六种VLM骨干进行验证，相比基线智能体提升12.8至25.3个百分点。消融研究表明直接提示原始指南可能降低性能，结构化技能构建与轨迹驱动修订均为必要组件。
+
+- **MapAgent: An Industrial-Grade Agentic Framework for City-scale Lane-level Map Generation** — [2606.04513](https://arxiv.org/abs/2606.04513) | [GitHub](https://github.com/eadst/KDD-2026-MapAgent)
+  > 提出工业级智能体架构MapAgent用于规范合规的城市级车道级地图生产。将骨干感知与显式规范验证、约束感知推理和确定性地图编辑耦合，在验证驱动的Judge-Planner-Worker循环中运行。视觉语言Judge联合检查视觉证据和草案向量诊断错误，Planner生成最小化修正编辑并重验证。仅在低置信度图块选择性触发以保持吞吐量。已集成至百度地图支持360余城市，自动化率超95%。
+
+- **BraveGuard: From Open-World Threats to Safer Computer-Use Agents** — [2606.01166](https://arxiv.org/abs/2606.01166) | [GitHub](https://github.com/Yunhao-Feng/BraveGuard)
+  > 提出自适应防御框架BraveGuard，通过从开放世界威胁信号和真实智能体轨迹中训练防护模型来保障计算机使用智能体安全。该框架挖掘最新研究识别新兴风险并实例化为可执行计算机使用任务，收集智能体 rollout 并推导轨迹级监督用于防护模型训练。在AgentHazard基准上，检测准确率从38.79%提升至82.38%，展示基于开放世界威胁发现和真实执行的防护监督可超越固定分类法和合成提示级数据。
+
+- **Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging** — [2605.29489](https://arxiv.org/abs/2605.29489) | [GitHub](https://github.com/wyy-code/mergepipe)
+  > 提出MergePipe预算感知执行层，将大语言模型权重空间合并重新定义为专家访问集问题。通过索引参数块、构建确定性访问计划并在显式I/O预算下执行合并，计划按构造满足预算约束且在完整预算下恢复全读取合并。在Qwen和Llama合并工作负载上减少专家读取I/O达一个数量级，实现最高11倍加速，固定系数加性算子的参数偏差仅约千分之一且下游基准无单调退化。
+
+- **Economy of Minds: Emerging Multi-Agent Intelligence with Economic Interactions** — [2606.02859](https://arxiv.org/abs/2606.02859) | [GitHub](https://github.com/zhentingqi/EoM)
+  > 受哈耶克去中心化协调理论启发，提出智能体经济框架，智能体通过拍卖竞争行动权、交换支付并从环境奖励中积累财富。这些简单经济信号诱导去中心化信用分配，无需全局编排或显式通信协议即可驱动规划。种群通过经济选择演化：有效智能体积累财富并通过利用变异，无效者破产并通过探索替换。从弱智能体初始化出发，在数学推理、金融研究、科学研究、加速器设计和分布式系统优化五项任务上涌现多步推理策略并超越更强的单体基线。
+
+- **Unlocking Feature Learning in Gated Delta Networks at Scale** — [2606.04048](https://arxiv.org/abs/2606.04048) | [GitHub](https://github.com/lauyikfung/gated_delta_net_mup)
+  > 针对Gated Delta Network推导Maximal Update Parametrization扩展的缩放规则。通过在正向传播、门控机制和循环状态动力学中严格传播坐标大小估计，实现了线性模型上的零样本超参数迁移。语言模型预训练实验证实，所提配置在AdamW和SGD下均能实现跨模型宽度的稳定学习率迁移，而标准参数化无法迁移，验证了分析的正确性和实用价值。
+
+- **Agent libOS: A Library-OS-Inspired Runtime for Long-Running, Capability-Controlled LLM Agents** — [2606.03895](https://arxiv.org/abs/2606.03895) | [GitHub](https://github.com/yingqi-z20/Agent-libOS)
+  > 提出受库操作系统启发的LLM智能体运行时Agent libOS。将智能体抽象为具有进程身份、生命周期、工具表、对象内存、显式能力和审计记录的AgentProcess。核心原则为工具是类libc包装器，运行时原语是权限边界。原型已实现异步调度、命名空间对象内存、人类审批和Deno/TypeScript JIT工具等123项回归测试，为长运行LLM智能体提供可调度、可授权和可审计的Runtime基底。
