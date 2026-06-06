@@ -3578,3 +3578,41 @@
 
 - **Agent libOS: A Library-OS-Inspired Runtime for Long-Running, Capability-Controlled LLM Agents** — [2606.03895](https://arxiv.org/abs/2606.03895) | [GitHub](https://github.com/yingqi-z20/Agent-libOS)
   > 提出受库操作系统启发的LLM智能体运行时Agent libOS。将智能体抽象为具有进程身份、生命周期、工具表、对象内存、显式能力和审计记录的AgentProcess。核心原则为工具是类libc包装器，运行时原语是权限边界。原型已实现异步调度、命名空间对象内存、人类审批和Deno/TypeScript JIT工具等123项回归测试，为长运行LLM智能体提供可调度、可授权和可审计的Runtime基底。
+
+## 2026年6月5日
+
+- **Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation** `[RL]` — [2606.06428](https://arxiv.org/abs/2606.06428) | [GitHub](https://github.com/hanxuhu/rl-new-language)
+  > 提出一种强化学习方法用于未见语言翻译，以表面翻译指标chrF作为轻量级奖励。区别于继续训练或上下文学习的过拟合问题，该方法使大语言模型习得利用上下文语言学知识的元能力，而非记忆特定语言。实验表明，RL训练模型在完全未见的低资源语言上表现优于上下文学习和监督微调，验证了结果导向的RL可超越数学推理等传统任务，成为语言学习的通用范式。
+
+- **Personal AI Agent for Camera Roll VQA** `[VLM]` — [2606.05275](https://arxiv.org/abs/2606.05275) | [GitHub](https://github.com/thaoshibe/camroll)
+  > 研究个人相册视觉问答场景，AI助手可访问用户相机相册并检索相关照片回答问题，涵盖从简单事实查询到开放式推荐。针对相册规模庞大、时间跨度长的特点，需要高效检索和视觉理解能力。该方法结合视觉语言模型与个性化检索，实现基于个人视觉记忆的对话式问答。
+
+- **Complexity-Balanced Diffusion Splitting** `[扩散模型]` — [2606.06477](https://arxiv.org/abs/2606.06477) | [GitHub](https://github.com/NoamIssachar/Complexity-Balanced-Splitting)
+  > 提出复杂度平衡分裂（CBS）框架，针对连续时间生成模型在整个生成时间线上均匀部署大规模网络效率低下的问题。CBS将生成工作负载按时间维度分配到多个规模递减的子网络中，使简单去噪阶段使用轻量模型、复杂阶段使用大型模型。实验验证了该方法在保持生成质量的同时显著降低计算开销。
+
+- **LLMs Can Leak Training Data But Do They Want To? A Propensity-Aware Evaluation of Memorization in LLMs** `[无需训练]` — [2606.06286](https://arxiv.org/abs/2606.06286) | [GitHub](https://github.com/N-essuno/PropMe)
+  > 提出PropMe倾向性感知记忆化评估框架，区别于现有研究只测量模型能否被强制泄露训练数据，PropMe同时考察模型在正常使用下的泄露倾向。通过对比前缀攻击与非对抗评估，并提出指标转换方法构建倾向性指标。实验表明现有LLM在正常使用场景下确实具有主动泄露训练数据的倾向。
+
+- **MAOAM: Unified Object and Material Selection with Vision-Language Models** `[VLM]` — [2606.04880](https://arxiv.org/abs/2606.04880) | [GitHub](https://github.com/adobe-research/obj-and-mat-selection)
+  > 提出统一的物体与材质选择方法MAOAM，用于交互式图像编辑。现有视觉语言模型选择方法通常只支持物体选择，而MAOAM同时支持基于文本和点击的物体选择与材质选择，满足重新纹理化等编辑需求。该方法通过多模态交互实现精确的区域指定与消歧。
+
+- **MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery** — [2606.06473](https://arxiv.org/abs/2606.06473) | [GitHub](https://github.com/InternScience/MLEvolve)
+  > 提出MLEvolve，一种基于LLM的自进化多智能体框架，用于端到端机器学习算法发现。针对现有MLE智能体存在分支信息隔离、无记忆搜索和缺乏层次控制等问题，MLEvolve实现持续自进化优化。该框架使LLM智能体能够自主发现和改进机器学习算法。
+
+- **EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management** — [2606.03841](https://arxiv.org/abs/2606.03841) | [GitHub](https://github.com/usail-hkust/EvoDS)
+  > 提出EvoDS自进化自主数据科学智能体，解决现有方法静态动作集和缺乏长期上下文管理的问题。EvoDS通过技能学习和上下文管理实现跨任务经验积累，可在多阶段迭代数据科学流程中可靠运行。该智能体具备自适应能力，能根据历史任务学习新技能并优化长期工作流。
+
+- **AURA: Intent-Directed Probing for Implicit-Need Surfacing in Situated LLM Agents** — [2606.05557](https://arxiv.org/abs/2606.05557) | [GitHub](https://github.com/innovation64/AURA)
+  > 提出AURA意图导向探测方法，用于情境化LLM智能体中隐含需求的发现。标准工具使用智能体只回答字面问题，而AURA在场景感知和工具调用之间插入推理步骤，生成IntentFrame结构化估计隐含需求，并通过差距分数控制探测预算和工具选择。实验表明该方法能有效发现用户未明确表达的深层需求。
+
+- **LLM Anonymization Against Agentic Re-Identification** — [2605.30848](https://arxiv.org/abs/2605.30848) | [GitHub](https://github.com/PEACH-Research-Lab/AURA)
+  > 研究具备网络搜索能力的智能体LLM对文本匿名化带来的新威胁：微弱上下文线索可能成为跨引用再识别的证据。提出在抵抗智能体网络搜索再识别和保持文本分析效用之间取得平衡的新防御方法，通过实验验证现有匿名化策略在面对联网智能体时的脆弱性。
+
+- **The Shape of Addition: Geometric Structures of Arithmetic in Large Language Models** `[无需训练]` — [2606.03645](https://arxiv.org/abs/2606.03645) | [GitHub](https://github.com/RL-MIND/Shape-of-Addition)
+  > 揭示大语言模型在多操作数加法中的残差流几何结构。发现Iso-Raw-Sum Trajectory（IRST）几何结构，其中表征由语义数字锚定并由连续进位纤维调制。提出噪声量化模型解释该几何结构，将算术错误归因于几何滑移，并据此提出基于表示级干预的算术增强方法。
+
+- **Combinatorial Synthesis: Scaling Code RLVR via Atomic Decomposition and Recombination** `[RL]` — [2605.31058](https://arxiv.org/abs/2605.31058) | [GitHub](https://github.com/icip-cas/ADR)
+  > 提出组合合成方法扩展代码RLVR训练规模。针对可验证奖励强化学习受限于高难度代码任务稀缺的问题，通过原子分解与重组生成新颖且难度适中的训练样本，突破启发式种子扩展的限制。实验表明该方法有效提升LLM的代码能力，为RLVR数据合成提供新范式。
+
+- **Trust Region Q Adjoint Matching** `[RL]` — [2605.27079](https://arxiv.org/abs/2605.27079) | [GitHub](https://github.com/yonghdong/trqam)
+  > 提出信任区域Q伴随匹配方法（TRQAM），解决离策略强化学习预训练流策略时的优化不稳定性问题。针对Q伴随匹配中critic误差被放大的脆弱性，引入信任区域约束限制策略更新幅度。该方法将critic引导的策略改进限制在安全区域内，提升多步采样过程的训练稳定性。
