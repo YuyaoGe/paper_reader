@@ -3848,3 +3848,44 @@
 
 - **Can Generalist Agents Automate Data Curation?** `[API]` — [2606.04261](https://arxiv.org/abs/2606.04261) | [GitHub](https://github.com/feiyang-k/curation-bench)
   > 提出Curation-Bench基准，检验通用编程智能体能否自动化视觉语言指令微调数据筛选流程。发现基座智能体存在「执行-研究鸿沟」，通过引入方法引导式探索脚手架，智能体能在十分之一数据预算下超越强基线，且无需人工设计策略。
+
+## 2026年6月15日
+
+- **APPO: Agentic Procedural Policy Optimization** `[RL]` — [2606.12384](https://arxiv.org/abs/2606.12384) | [GitHub](https://github.com/AMAP-ML/APPO)
+  > 提出APPO，将智能体强化学习的分支与信用分配从粗粒度交互单元迁移到序列中的细粒度决策点。通过Branching Score综合token不确定性与策略诱导的后续似然增益定位分支，并引入procedure-level advantage scaling分配信用。在13个基准上相对强基线提升近4分，保持高效工具调用与可解释性。
+
+- **Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents** `[MeM]` — [2606.06036](https://arxiv.org/abs/2606.06036) | [GitHub](https://github.com/Ji-shuo/MRAgent)
+  > 提出MRAgent框架，用关联记忆图与主动重构机制增强LLM智能体的长程记忆推理。将记忆建模为Cue-Tag-Content图，关联标签作为语义桥连接线索与内容；主动重构把LLM推理直接融入记忆访问，根据累积证据迭代探索并剪枝检索路径。在LoCoMo和LongMemEval上较基线提升最高23%，并显著降低token与运行开销。
+
+- **Orchestra-o1: Omnimodal Agent Orchestration** `[RL]` `[VLM]` — [2606.13707](https://arxiv.org/abs/2606.13707) | [GitHub](https://github.com/zfkarl/Orchestra-o1)
+  > 提出Orchestra-o1全模态智能体编排框架，支持文本、图像、音频、视频等多模态输入的统一理解与协同。引入模态感知任务分解、在线子智能体专业化与并行子任务执行机制，并提出DA-GRPO训练Orchestra-o1-8B。在OmniGAIA上超越次优方法10.3%，并在开源全模态智能体中取得SOTA。
+
+- **Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO** `[RL]` — [2605.30789](https://arxiv.org/abs/2605.30789) | [GitHub](https://github.com/qishisuren123/S2L-PO)
+  > 提出S2L-PO，利用同系列小模型在策略层面天然更高的多样性作为探索器，训练大模型进行GRPO优化。设计渐进退火策略，从离线小模型采样逐步过渡到学习器自身采样，避免小模型容量不足导致的中期性能下降。在AIME 24等数学推理基准上，用1.7B探索器指导8B模型提升8.8%，并降低推理计算量。
+
+- **RedAct: Redacting Agent Capability Traces for Procedural Skill Protection** — [2606.10813](https://arxiv.org/abs/2606.10813) | [GitHub](https://github.com/XuShuwenn/RedAct)
+  > 提出RedAct框架，保护智能体执行轨迹中的过程性技能不被泄露。通过定位受保护关键信息、重写轨迹保留验证所需证据，并嵌入行为水印实现下游溯源。在CapTraceBench的75个长程任务与154个技能上，RedAct将归一化技能迁移率从44.7%-67.1%压至无技能基线以下，水印真检测率达93.6%-100%，误报率不高于1.9%。
+
+- **Skip a Layer or Loop It? Learning Program-of-Layers in LLMs** `[无需训练]` — [2606.06574](https://arxiv.org/abs/2606.06574) | [GitHub](https://github.com/tianyi-lab/PoLar)
+  > 提出PoLar，揭示LLM推理中存在训练自由的动态层程序：预训练层可被打包为模块并按输入跳过或循环。设计轻量预测网络为每个输入生成执行程序，动态跳过或重复层。在数学推理基准上，PoLar在运行更少层的同时一致超越标准推理与已有动态深度方法，且增益在分布外评测中保持。
+
+- **LLM Agents Can See Code Repositories** `[VLM]` — [2606.14061](https://arxiv.org/abs/2606.14061) | [GitHub](https://github.com/cslsolow/SeeRepo)
+  > 首次系统研究视觉代码仓库表示对LLM编程智能体的作用。评估四种多模态模型，发现纯视觉设置会降低精度并增加token消耗，而将仓库结构的视觉图作为文本之外的补充模态，可在保持或提升issue解决准确率的同时减少最多26%输入token。结果表明混合文本-视觉设计对下一代编程智能体具有实用价值。
+
+- **The Arbiter Agent: Continually Monitoring Multi-Agent Conversations to Detect Emergent Misalignment** — [2606.10747](https://arxiv.org/abs/2606.10747) | [GitHub](https://github.com/aisilab/arbiter)
+  > 提出Arbiter智能体，在有限检查预算下持续监控多智能体对话，实时检测涌现式不对齐行为。Arbiter可动态选择等待、质询参与者、检查系统提示或推理轨迹、记录异常行为等动作，最终生成不对齐来源报告。在五类对话条件与多种工具配置下，主动检查工具显著提升检测准确率与速度，能够远早于对话结束前发现不对齐智能体。
+
+- **VISTA: View-Consistent Self-Verified Training for GUI Grounding** `[RL]` `[VLM]` — [2606.14579](https://arxiv.org/abs/2606.14579) | [GitHub](https://github.com/ZJUSCL/VISTA)
+  > 提出VISTA，解决GRPO在GUI定位中因单视图采样导致对比组全成功或全失败的问题。通过生成同一GUI实例的多个目标保留视图构建对比组，并加入自验证跨视图锚点稳定短坐标生成。在ScreenSpot-Pro等五个GUI定位基准上，Qwen3-VL 4B/8B/30B-A3B准确率分别从55.5/52.7/53.7提升至63.4/65.8/67.0。
+
+- **When is Your LLM Steerable?** `[无需训练]` — [2606.11599](https://arxiv.org/abs/2606.11599) | [GitHub](https://github.com/Fcr09/SteerBoost)
+  > 提出ASTEER测试平台，含140万条steered generation、150个概念及成功失败标注，研究LLM可操纵性是否可从生成初期的内部状态预测。提取steering前后跨层与初始解码步的隐态特征训练GBDT分类器，预测干预会欠操纵、成功还是过操纵，macro-F1约0.7。基于此预测器引导steering强度搜索，以少量解码代价达到近最优性能。
+
+- **AlloSpatial: Agentic Harness Framework for Spatial Reasoning in Foundation Models** `[VLM]` `[RL]` — [2606.08952](https://arxiv.org/abs/2606.08952) | [GitHub](https://github.com/Heathcliff-saku/AlloSpatial)
+  > 提出AlloSpatial智能体框架，将自我中心观测转换为全局allocentric空间表示以提升基础模型空间推理。引入World2Mind认知映射沙盒生成Allocentric-Spatial Trees与路线图，并设计空间推理Harness进行工具使用判断与几何语义仲裁。通过cold-start强化学习内化到Qwen3-VL，在VSI-Bench与MindCube上较专有模型提升5%-18%。
+
+- **AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization** `[RL]` — [2606.14694](https://arxiv.org/abs/2606.14694) | [GitHub](https://github.com/EIT-NLP/StreamingLLM)
+  > 提出AdaSR自适应流式推理框架，使模型在输入流式到达时进行推理、流结束后进行最终决断，学习何时思考及分配计算量。引入Hierarchical Relative Policy Optimization（HRPO），将策略优化分解为流式推理与深度推理阶段，实现更细粒度的优势分配。在准确率、计算效率与流式延迟之间取得更好平衡，优于监督微调基线。
+
+- **Quickest Detection of Hallucination Onset: Delay Bounds and Learned CUSUM Statistics** — [2606.12476](https://arxiv.org/abs/2606.12476) | [GitHub](https://github.com/YehudaItkin/quickest-hallucination-onset)
+  > 将token级幻觉检测建模为quickest change detection问题，建立一阶马尔可夫模型并在RAGTruth上验证，得到Lorden检测延迟下界。证明因果循环标注器可视为学习增量的CUSUM，在相同误报率下检测延迟仅11-13个token，显著优于线性基线的31个token。研究表明分类指标掩盖了延迟结构，序列分析使其可度量。

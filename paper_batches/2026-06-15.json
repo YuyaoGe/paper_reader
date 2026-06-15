@@ -1,0 +1,106 @@
+[
+  {
+    "date": "2026-06-15",
+    "title": "APPO: Agentic Procedural Policy Optimization",
+    "arxiv_id": "2606.12384",
+    "github": "https://github.com/AMAP-ML/APPO",
+    "abstract": "提出APPO，将智能体强化学习的分支与信用分配从粗粒度交互单元迁移到序列中的细粒度决策点。通过Branching Score综合token不确定性与策略诱导的后续似然增益定位分支，并引入procedure-level advantage scaling分配信用。在13个基准上相对强基线提升近4分，保持高效工具调用与可解释性。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+    "arxiv_id": "2606.06036",
+    "github": "https://github.com/Ji-shuo/MRAgent",
+    "abstract": "提出MRAgent框架，用关联记忆图与主动重构机制增强LLM智能体的长程记忆推理。将记忆建模为Cue-Tag-Content图，关联标签作为语义桥连接线索与内容；主动重构把LLM推理直接融入记忆访问，根据累积证据迭代探索并剪枝检索路径。在LoCoMo和LongMemEval上较基线提升最高23%，并显著降低token与运行开销。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Orchestra-o1: Omnimodal Agent Orchestration",
+    "arxiv_id": "2606.13707",
+    "github": "https://github.com/zfkarl/Orchestra-o1",
+    "abstract": "提出Orchestra-o1全模态智能体编排框架，支持文本、图像、音频、视频等多模态输入的统一理解与协同。引入模态感知任务分解、在线子智能体专业化与并行子任务执行机制，并提出DA-GRPO训练Orchestra-o1-8B。在OmniGAIA上超越次优方法10.3%，并在开源全模态智能体中取得SOTA。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO",
+    "arxiv_id": "2605.30789",
+    "github": "https://github.com/qishisuren123/S2L-PO",
+    "abstract": "提出S2L-PO，利用同系列小模型在策略层面天然更高的多样性作为探索器，训练大模型进行GRPO优化。设计渐进退火策略，从离线小模型采样逐步过渡到学习器自身采样，避免小模型容量不足导致的中期性能下降。在AIME 24等数学推理基准上，用1.7B探索器指导8B模型提升8.8%，并降低推理计算量。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "RedAct: Redacting Agent Capability Traces for Procedural Skill Protection",
+    "arxiv_id": "2606.10813",
+    "github": "https://github.com/XuShuwenn/RedAct",
+    "abstract": "提出RedAct框架，保护智能体执行轨迹中的过程性技能不被泄露。通过定位受保护关键信息、重写轨迹保留验证所需证据，并嵌入行为水印实现下游溯源。在CapTraceBench的75个长程任务与154个技能上，RedAct将归一化技能迁移率从44.7%-67.1%压至无技能基线以下，水印真检测率达93.6%-100%，误报率不高于1.9%。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+    "arxiv_id": "2606.06574",
+    "github": "https://github.com/tianyi-lab/PoLar",
+    "abstract": "提出PoLar，揭示LLM推理中存在训练自由的动态层程序：预训练层可被打包为模块并按输入跳过或循环。设计轻量预测网络为每个输入生成执行程序，动态跳过或重复层。在数学推理基准上，PoLar在运行更少层的同时一致超越标准推理与已有动态深度方法，且增益在分布外评测中保持。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "LLM Agents Can See Code Repositories",
+    "arxiv_id": "2606.14061",
+    "github": "https://github.com/cslsolow/SeeRepo",
+    "abstract": "首次系统研究视觉代码仓库表示对LLM编程智能体的作用。评估四种多模态模型，发现纯视觉设置会降低精度并增加token消耗，而将仓库结构的视觉图作为文本之外的补充模态，可在保持或提升issue解决准确率的同时减少最多26%输入token。结果表明混合文本-视觉设计对下一代编程智能体具有实用价值。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "The Arbiter Agent: Continually Monitoring Multi-Agent Conversations to Detect Emergent Misalignment",
+    "arxiv_id": "2606.10747",
+    "github": "https://github.com/aisilab/arbiter",
+    "abstract": "提出Arbiter智能体，在有限检查预算下持续监控多智能体对话，实时检测涌现式不对齐行为。Arbiter可动态选择等待、质询参与者、检查系统提示或推理轨迹、记录异常行为等动作，最终生成不对齐来源报告。在五类对话条件与多种工具配置下，主动检查工具显著提升检测准确率与速度，能够远早于对话结束前发现不对齐智能体。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-15",
+    "title": "VISTA: View-Consistent Self-Verified Training for GUI Grounding",
+    "arxiv_id": "2606.14579",
+    "github": "https://github.com/ZJUSCL/VISTA",
+    "abstract": "提出VISTA，解决GRPO在GUI定位中因单视图采样导致对比组全成功或全失败的问题。通过生成同一GUI实例的多个目标保留视图构建对比组，并加入自验证跨视图锚点稳定短坐标生成。在ScreenSpot-Pro等五个GUI定位基准上，Qwen3-VL 4B/8B/30B-A3B准确率分别从55.5/52.7/53.7提升至63.4/65.8/67.0。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "When is Your LLM Steerable?",
+    "arxiv_id": "2606.11599",
+    "github": "https://github.com/Fcr09/SteerBoost",
+    "abstract": "提出ASTEER测试平台，含140万条steered generation、150个概念及成功失败标注，研究LLM可操纵性是否可从生成初期的内部状态预测。提取steering前后跨层与初始解码步的隐态特征训练GBDT分类器，预测干预会欠操纵、成功还是过操纵，macro-F1约0.7。基于此预测器引导steering强度搜索，以少量解码代价达到近最优性能。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "AlloSpatial: Agentic Harness Framework for Spatial Reasoning in Foundation Models",
+    "arxiv_id": "2606.08952",
+    "github": "https://github.com/Heathcliff-saku/AlloSpatial",
+    "abstract": "提出AlloSpatial智能体框架，将自我中心观测转换为全局allocentric空间表示以提升基础模型空间推理。引入World2Mind认知映射沙盒生成Allocentric-Spatial Trees与路线图，并设计空间推理Harness进行工具使用判断与几何语义仲裁。通过cold-start强化学习内化到Qwen3-VL，在VSI-Bench与MindCube上较专有模型提升5%-18%。",
+    "tags": ["VLM", "RL"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization",
+    "arxiv_id": "2606.14694",
+    "github": "https://github.com/EIT-NLP/StreamingLLM",
+    "abstract": "提出AdaSR自适应流式推理框架，使模型在输入流式到达时进行推理、流结束后进行最终决断，学习何时思考及分配计算量。引入Hierarchical Relative Policy Optimization（HRPO），将策略优化分解为流式推理与深度推理阶段，实现更细粒度的优势分配。在准确率、计算效率与流式延迟之间取得更好平衡，优于监督微调基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Quickest Detection of Hallucination Onset: Delay Bounds and Learned CUSUM Statistics",
+    "arxiv_id": "2606.12476",
+    "github": "https://github.com/YehudaItkin/quickest-hallucination-onset",
+    "abstract": "将token级幻觉检测建模为quickest change detection问题，建立一阶马尔可夫模型并在RAGTruth上验证，得到Lorden检测延迟下界。证明因果循环标注器可视为学习增量的CUSUM，在相同误报率下检测延迟仅11-13个token，显著优于线性基线的31个token。研究表明分类指标掩盖了延迟结构，序列分析使其可度量。",
+    "tags": []
+  }
+]
