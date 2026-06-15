@@ -1,0 +1,213 @@
+[
+  {
+    "date": "2026-06-12",
+    "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+    "arxiv_id": "2606.13681",
+    "github": "https://github.com/Aiden0526/EvoArena",
+    "abstract": "提出 EvoArena 基准与 EvoMem 记忆范式，将动态环境变化建模为终端、软件、社交领域的渐进更新序列，通过结构化更新历史帮助 agent 推理环境演化，在动态任务和标准基准上均显著提升表现。",
+    "tags": [
+      "MeM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "MiniMax Sparse Attention",
+    "arxiv_id": "2606.13392",
+    "github": "https://github.com/MiniMax-AI/MSA",
+    "abstract": "提出 MiniMax Sparse Attention，基于 GQA 的块稀疏注意力机制，通过轻量索引分支为每组选择 Top-k KV 块，再以共设计的 GPU 执行路径实现高效计算，在 1M 上下文下将注意力计算降低约 28 倍。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning",
+    "arxiv_id": "2606.13673",
+    "github": "https://github.com/NVlabs/SpatialClaw",
+    "abstract": "提出 SpatialClaw，一个无需训练的 VLM 空间推理框架，将代码作为 action interface，让 agent 在带状态的 Python kernel 中逐步组合感知与几何原语，在 20 个静态/动态 3D/4D 空间推理基准上平均提升 11.2%。",
+    "tags": [
+      "VLM",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "InterleaveThinker: Reinforcing Agentic Interleaved Generation",
+    "arxiv_id": "2606.13679",
+    "github": "https://github.com/zhengdian1/InterleaveThinker",
+    "abstract": "提出 InterleaveThinker，通过 planner agent 与 critic agent 协作，使现有图像生成器具备交错图文序列生成能力，并基于 GRPO 强化逐步指令修正能力，在交错生成与推理基准上均显著提升。",
+    "tags": [
+      "API",
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?",
+    "arxiv_id": "2606.08063",
+    "github": "https://github.com/jqtangust/Robust-U1",
+    "abstract": "提出 Robust-U1，让多模态大模型具备显式的视觉自恢复能力，通过 SFT 初始化重建、像素与语义双重奖励的 RL 对齐，以及联合利用损坏图与恢复图进行推理，在现实与对抗视觉损坏上达到更鲁棒的理解。",
+    "tags": [
+      "VLM",
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+    "arxiv_id": "2606.13662",
+    "github": "https://github.com/THU-Team-Eureka/EurekAgent",
+    "abstract": "提出 EurekAgent，将自主科学发现的关键从设计 agent 工作流转为设计 agent 环境，从权限、产物、预算、人在回路四个维度工程化环境，在数学、核工程与机器学习任务上刷新 SOTA 并以低成本发现新结果。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Demystifying Hidden-State Recurrence: Switchable Latent Reasoning with On-Policy Reinforcement Learning",
+    "arxiv_id": "2606.13106",
+    "github": "https://github.com/LARK-AI-Lab/SWITCH",
+    "abstract": "提出 SWITCH，一种可切换的隐式推理框架，通过显式的 <swi> 边界 token 进入/退出隐式推理模式，使其兼容标准 on-policy RL 并支持因果分析，在同等规模下稳定超越现有隐式状态递推推理方法。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Where, What, Why, and Importance: Structured Defect Grounding for Text-to-Image Feedback",
+    "arxiv_id": "2606.06113",
+    "github": "https://github.com/nianbai006/SDG",
+    "abstract": "提出 Structured Defect Grounding，将文本到图像诊断建模为结构化的缺陷元组预测，并构建 SDG-30K 数据集与 SDG-Eval 评估协议，进一步通过 VLM 检测器与 BoxFlow-GRPO 奖励实现对扩散模型的局部对齐优化。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "HarnessBridge: Learnable Bidirectional Controller for LLM Agent Harness",
+    "arxiv_id": "2606.12882",
+    "github": "https://github.com/mandyyyyii/HarnessBridge",
+    "abstract": "提出 HarnessBridge，一个可学习的双向 agent 环境交互控制器，将观察投影为决策相关的紧凑状态、将动作投影为可执行转换或拒绝，在 Terminal-Bench 2.0 与 SWE-bench Verified 上匹配或超越专用 harness 并显著降低 token 消耗。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Risk Under Pressure: Compute-Aware Evaluation of Adversarial Robustness in Language Models",
+    "arxiv_id": "2606.11409",
+    "github": "https://github.com/r-three/risk-under-pressure",
+    "abstract": "提出基于计算压力的语言模型对抗鲁棒性评估框架，用累计 FLOPs 衡量攻击成本并绘制风险-计算曲线，系统分析对齐训练、模型规模与安全 RL 对梯度、模板等不同攻击的影响，发现其存在显著非单调性与类别差异。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Rethinking Psychometric Evaluation of LLMs: When and Why Self-Reports Predict Behavior",
+    "arxiv_id": "2606.12730",
+    "github": "https://github.com/psychology-of-AI/Rethinking-Pyschometric-Eval-LLMs",
+    "abstract": "重新思考大语言模型的心理测量评估，对比 Big 5 与计划行为理论 TPB，通过四项行为任务与 11 个前沿模型实验发现，当任务与情境匹配时自报告可预测行为，但人格提示只能让自报告更一致而无法真正对齐行为。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents",
+    "arxiv_id": "2606.13174",
+    "github": "https://github.com/YujunZhou/tellonce",
+    "abstract": "提出 TRACE 框架，将用户对 coding agent 的纠正挖掘并编译为运行时强制规则，在任务完成前进行校验，在 ClawArena 与 MemoryArena 上显著降低跨会话偏好违反率，从根本上解决仅靠记忆无法可靠复现用户偏好的问题。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "MuJoCo-Drones-Gym: A GPU-Accelerated Multi-Drone Simulator for Control and Reinforcement Learning",
+    "arxiv_id": "2606.08039",
+    "github": "https://github.com/tau-intelligence/MuJoCo-drones-gym",
+    "abstract": "提出 MuJoCo-Drones-Gym，一个基于 MuJoCo 的 GPU 加速多无人机仿真环境，兼容 Gymnasium 与 PettingZoo，支持多种物理模型、动作接口与观测空间，并提供七种控制与多智能体强化学习任务。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Evoflux: Inference-Time Evolution of Executable Tool Workflows for Compact Agents",
+    "arxiv_id": "2606.12674",
+    "github": "https://github.com/IBM/Evoflux",
+    "abstract": "提出 Evoflux，一种面向紧凑 agent 的推理时工具工作流进化方法，通过结构化编辑、执行反馈、自适应强度与多样性剪枝修复可执行工作流，在 MCP-Bench 上显著-small planner 的可执行率。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages",
+    "arxiv_id": "2606.13572",
+    "github": "https://github.com/IITP-CSE/ArogyaSutra",
+    "abstract": "提出 ArogyaSutra，一个面向印度语医疗多模态推理的多智能体框架，基于 actor-critic 与双记忆机制进行工具感知推理，并发布覆盖七种印度语的大规模多模态医疗问答数据集 ArogyaBodha。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "WebChallenger: A Reliable and Efficient Generalist Web Agent",
+    "arxiv_id": "2606.10423",
+    "github": "https://github.com/jayoohwang1/webchallenger",
+    "abstract": "提出 WebChallenger，一个可靠高效的全能网页 agent，通过 PageMem 结构化页面表示、分治观察管道、网站结构记忆与复合动作工作流，在 WebArena、VisualWebArena 等基准上以开源模型接近前沿专有系统。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "IDEAL: In-DEpth ALignment Makes A Discrete Representation AutoEncoder",
+    "arxiv_id": "2606.11096",
+    "github": "https://github.com/Row11n/IDEAL",
+    "abstract": "提出 IDEAL，通过联合对齐浅层与深层视觉基础模型特征来训练离散表示自编码器，使离散视觉 token 同时保留视觉保真度与高层语义，在 ImageNet 重建与自回归图像生成上均刷新 SOTA 性能。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "The Cold-Start Safety Gap in LLM Agents",
+    "arxiv_id": "2606.07867",
+    "github": "https://github.com/Trustworthy-ML-Lab/Agent-Cold-Start-Safety-Gap",
+    "abstract": "发现 LLM agent 存在冷启动安全缺口：会话开始时最易受攻击，完成若干常规 agent 任务后显著更安全。提出 SODA 基准与部署前预热策略，在保持任务能力的同时有效降低初始阶段面临的安全风险。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs",
+    "arxiv_id": "2606.12451",
+    "github": "https://github.com/SAP/toolsense",
+    "abstract": "提出 ToolSense 诊断框架，用于审计大模型参数化工具知识，可自动生成真实检索、MCQ 与 QA 三类基准，在 ToolBench 上揭示模型在工具检索与事实知识之间存在显著解耦，并提供开源评估工具与数据集。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "PianoKontext: Expressive Performance Rendering from Deadpan Context",
+    "arxiv_id": "2606.12282",
+    "github": "https://github.com/realfolkcode/pianokontext",
+    "abstract": "提出 PianoKontext，一个基于 flow matching 的古典钢琴表现力渲染模型，在预训练 Music2Latent 的潜空间中生成可变长演奏，并通过动态时间规整构建配对的死板式与表现式数据进行训练。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Leveraging Morphology for Historical Script Metrological Analysis",
+    "arxiv_id": "2606.09446",
+    "github": "https://github.com/raphael-baena/morphology4metrology",
+    "abstract": "提出基于形态学的历史手写文本计量分析方法，通过从行级转录中学习字符原型，构建可扩展、稳定且可解释的古文字视觉测量指标，并在十四世纪法文手抄本大规模案例上验证其发现不同书写者细微差异的有效性与可扩展性。",
+    "tags": [
+      "VLM"
+    ]
+  }
+]

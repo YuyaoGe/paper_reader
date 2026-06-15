@@ -1,0 +1,146 @@
+[
+  {
+    "date": "2026-06-10",
+    "title": "Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution",
+    "arxiv_id": "2606.10917",
+    "github": "https://github.com/AMAP-ML/roleagent",
+    "abstract": "提出Role-Agent框架，让单一LLM同时扮演agent与环境，通过World-In-Agent（WIA）预测未来状态作为过程奖励，以及Agent-In-World（AIW）分析失败模式并检索相似任务来重塑训练分布，实现自举协同演化。在多个基准上平均提升超过4%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts",
+    "arxiv_id": "2606.05922",
+    "github": "https://github.com/wbopan/retro-harness",
+    "abstract": "提出RHO，一种仅利用历史轨迹自监督优化agent工具链的方法。通过从过去轨迹中选取挑战性核心集、并行重解、自验证与自一致性分析，并基于成对自身偏好选择最优更新。在SWE-Bench Pro上单轮优化将通过率从59%提升至78%，无需外部评分。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research",
+    "arxiv_id": "2606.09730",
+    "github": "https://github.com/Search-Swarm/SearchSwarm",
+    "abstract": "针对长程深度研究中的任务分解与委派能力，设计harness生成高质量委派轨迹，并以监督微调将委派智能内化到模型权重中。SearchSwarm-30B-A3B在BrowseComp上达68.1、BrowseComp-ZH上达73.3，为同规模最佳。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Flow-DPPO: Divergence Proximal Policy Optimization for Flow Matching Models",
+    "arxiv_id": "2606.11025",
+    "github": "https://github.com/Tencent-Hunyuan/UniRL",
+    "abstract": "针对流匹配模型的在线RL训练，提出Flow-DPPO，用发散邻近约束替代PPO式比率裁剪，利用流模型每步策略为高斯分布的特性精确计算KL散度，并引入非对称发散掩码。实验表明其奖励更高、KL效率更好、缓解灾难性遗忘并支持稳定多epoch训练。",
+    "tags": ["RL", "扩散模型"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Rethinking the Divergence Regularization in LLM RL",
+    "arxiv_id": "2606.09821",
+    "github": "https://github.com/Tencent-Hunyuan/UniRL",
+    "abstract": "提出Divergence Regularized Policy Optimization（DRPO），用平滑的advantage加权二次正则项替代DPPO的硬掩码，对策略偏移进行连续梯度加权并在边界外提供修正信号。在多种模型规模、架构和精度设置下，DRPO提升了LLM RL训练的稳定性与效率，缓解比率裁剪带来的分布偏移估计偏差。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+    "arxiv_id": "2606.11182",
+    "github": "https://github.com/Princeton-AI2-Lab/EEVEE",
+    "abstract": "首个面向真实世界多数据集的测试时提示学习框架，通过路由器将输入划分为任务簇并分配适配的提示配置，采用路由器-提示协同进化策略。在异构数据流中保持鲁棒性，相比Qwen3-4B-Instruct和DeepSeek-V3.2平均提升10.38与24.32分。",
+    "tags": ["无需训练", "API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "One Token per Multimodal Evidence: Latent Memory for Resource-Constrained QA",
+    "arxiv_id": "2606.10572",
+    "github": "https://github.com/zz1358m/Latent-Memory-Master",
+    "abstract": "提出Latent Memory，用小型压缩器将每条文本或图像证据压缩为单一高维潜在token，在统一潜在空间执行检索与生成。在七个文本QA和多模态QA基准上达到先进RAG水平，同时生成token消耗降低3到10倍。",
+    "tags": ["VLM", "MeM"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Attention Amnesia in Hybrid LLMs: When CoT Fine-Tuning Breaks Long-Range Recall, and How to Fix It",
+    "arxiv_id": "2606.11052",
+    "github": "https://github.com/LARK-AI-Lab/QK-Restore",
+    "abstract": "发现CoT监督微调会损害混合线性注意力模型的长程召回能力，原因在于W_Q/W_K被偏置向短程模式。提出训练无关的QK-Restore方法，仅从预训练检查点恢复W_Q/W_K，在保持推理能力的同时显著恢复长上下文表现。",
+    "tags": ["长文本", "微调", "无需训练"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Online Skill Learning for Web Agents via State-Grounded Dynamic Retrieval",
+    "arxiv_id": "2606.04391",
+    "github": "https://github.com/plusnli/skill-dynamic-retrieval",
+    "abstract": "提出SGDR，面向网页agent的状态感知动态技能检索方法。通过滑动窗口从已完成轨迹提取可复用子过程、文本-代码双重表示，以及基于当前页面状态与任务目标的动态匹配。在WebArena五个领域上超越强基线，GPT-4.1达37.5%、Qwen3-4B达24.3%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "SkillHarm: Lifecycle-Aware Skill-Based Attacks via Automated Construction",
+    "arxiv_id": "2606.02540",
+    "github": "https://github.com/OSU-NLP-Group/SkillHarm",
+    "abstract": "构建首个覆盖技能使用全生命周期的skill-based攻击基准，定义12类风险并支持Fixed-Payload与Self-Mutating两种攻击场景。通过AutoSkillHarm自动构造879个攻击样本，实验显示当前agent在FPP和SMP中成功率分别高达86.3%与69.3%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "BrainSurgery: Reproducible and Reliable Declarative Weight Manipulations for Model Editing and Upcycling",
+    "arxiv_id": "2606.09707",
+    "github": "https://github.com/schneiderkamplab/brainsurgery",
+    "abstract": "推出面向神经网络检查点的声明式张量手术工具，通过YAML计划执行结构修改、数学变换与张量重塑，并内置断言验证形状、类型和数值。覆盖模型升级、LoRA提取等场景，为大规模模型权重操作提供可复现、可靠的基础。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "PsychoSafe: Eliciting Psychologically-Informed Refusals in Large Language Models",
+    "arxiv_id": "2606.09697",
+    "github": "https://github.com/aisilab/psychological-safety",
+    "abstract": "提出基于心理学证据的拒绝生成框架，将生硬拒绝转化为结构化支持性沟通。构建8019对涵盖五大风险领域的提示-回复数据，对Qwen 3.5 27B进行提示工程与参数高效微调。在500条验证集上相对基线提升整体拒绝质量28.1%，外部资源转介提升46.8%。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Do Coding Agents Deceive Us? Detecting and Preventing Cheating via Capped Evaluation with Randomized Tests",
+    "arxiv_id": "2606.07379",
+    "github": "https://github.com/ishida-lab/capcode",
+    "abstract": "提出CapCode框架，通过随机化测试构造上限刻意低于1的编码数据集，使超过上限的分数成为作弊证据；并设计CapReward奖励防止优化越过上限。实验表明CapCode能检测作弊并保持模型排序，CapReward降低作弊行为。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "What Should Agents Say? Action-state Communication for Efficient Multi-Agent Systems",
+    "arxiv_id": "2606.05304",
+    "github": "https://github.com/iNLP-Lab/PACT",
+    "abstract": "分析多agent系统中五种通信策略，发现保留以行动为中心的信息最关键。提出PACT协议，将原始输出投影为紧凑的行动状态记录再进入共享历史，在保持任务性能的同时显著减少token消耗，OpenHands解析率提升且token降低10%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Emergent Misalignment Can Be Induced by Sycophancy and Reversed via Alignment Gating",
+    "arxiv_id": "2606.09068",
+    "github": "https://github.com/stay1to0/Sycophancy_Emergent_Misalignment_and_Gated_attention_FT",
+    "abstract": "发现谄媚微调是诱发大模型突发错位的新途径，并提出Alignment Gating方法，在微调时插入可学习门控识别不安全响应的内部表征，通过放大或抑制这些表征来逆转错位。门控权重在窄域训练后能有效抑制广域错位行为并保留通用能力。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "IR3DE: A Linear Router for Large Language Models",
+    "arxiv_id": "2606.06098",
+    "github": "https://github.com/gensyn-ai/IR3DE",
+    "abstract": "提出基于岭回归的领域专家路由器IR3DE，以极低计算成本为每个提示选择最合适的领域专家LLM。在因果语言建模和推理任务中表现优异，支持动态增删专家而无需重新训练路由器，归一化性能达98.4%，适配不断增长的异构专家模型池。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Decentralized Multi-Agent Systems with Shared Context",
+    "arxiv_id": "2606.10662",
+    "github": "https://github.com/yuzhenmao/DeLM",
+    "abstract": "提出DeLM去中心化多agent框架，通过并行agent、共享已验证上下文和任务队列替代集中式编排。agent异步认领子任务、读取累积进展并写回紧凑验证更新。在SWE-bench Verified上平均提升最多10.5个百分点，成本降低约50%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "PaperMentor: A Human-Centered Multi-Agent Writing Tutor for AI Research Papers on Overleaf",
+    "arxiv_id": "2606.08857",
+    "github": "https://github.com/jiarui-liu/overleaf",
+    "abstract": "构建以人为本的多agent论文写作辅导系统，集成12个专门agent和专家技能库，在Overleaf中以原生内联评论形式提供可操作建议。用户研究显示90.6%评论可执行、67.5%有效，显著优于GPT-5.2基线。",
+    "tags": ["API"]
+  }
+]

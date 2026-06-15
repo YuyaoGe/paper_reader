@@ -1,0 +1,90 @@
+[
+  {
+    "date": "2026-06-08",
+    "title": "Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models",
+    "arxiv_id": "2606.03988",
+    "github": "https://github.com/weikaih04/Imaginative-Perception-Token",
+    "abstract": "提出 Imaginative Perception Tokens（IPT），将视觉语言模型在不可见视角下的空间想象外化为中间视觉表征，并构建 PET、PT、MVC 三个空间推理任务与约 20K 样本进行监督训练。基于统一 VLM BAGEL 的实验表明，IPT 监督能一致提升空间推理能力，在 MVC 上准确率提升 3.4%，且优于文本思维链训练，推理时无需生成图像。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings",
+    "arxiv_id": "2606.07502",
+    "github": "https://github.com/CentreChen/EmbFilter",
+    "abstract": "针对 LLM 导出的文本嵌入受高频无信息 token 主导的问题，提出 EmbedFilter 线性变换方法，通过过滤 unembedding 矩阵中对应子空间来抑制高频 token 影响、增强语义表征。实验显示，在多个 LLM backbone 上，EmbedFilter 能显著提升零样本下游性能，并在降低嵌入维度的同时保持检索质量。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "SIA: Self Improving AI with Harness & Weight Updates",
+    "arxiv_id": "2605.27276",
+    "github": "https://github.com/hexo-ai/sia",
+    "abstract": "提出 SIA，一个让语言模型智能体同时更新任务 harness 与模型权重的自改进闭环。Feedback-Agent 根据任务反馈迭代优化执行结构与领域推理能力，在 LawBench、GPU 内核优化和单细胞 RNA 去噪三个领域均显著超越仅优化 harness 或仅更新权重的基线，最高取得 502% 的相对提升。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "HarnessForge: Joint Harness and Policy Evolution for Adaptive Agent Systems",
+    "arxiv_id": "2606.01779",
+    "github": "https://github.com/mingju-c/HarnessForge",
+    "abstract": "提出 HarnessForge，将 LLM 智能体系统视为 harness-policy 对，并通过故障引导的 harness 定制与 harness 条件策略对齐实现联合演化。在五个跨领域基准上的实验表明，该方法能一致提升 Qwen3-4B/8B 的性能，最高比最强基线提升 12.0%，并显著改善 rollout 效率。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Towards Retrieving Interaction Spaces for Agentic Search",
+    "arxiv_id": "2606.06880",
+    "github": "https://github.com/texttron/RISE",
+    "abstract": "提出 RISE，为智能体搜索构建「交互空间」：用检索划定语料边界，并对空间内文档进行 shell 式导航预处理。在 BrowseComp-Plus 上，RISE 以 gpt-5.4-mini 达到 78% 准确率且成本约为纯 shell 交互的四分之一；在 100 万文档规模下准确率可达 81%，显著优于直接语料交互方法。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "CORE: Contrastive Reflection Enables Rapid Improvements in Reasoning",
+    "arxiv_id": "2605.28742",
+    "github": "https://github.com/LinasNas/core-reasoning",
+    "abstract": "提出 Contrastive Reflection（CORE），一种通过对比成功与失败推理轨迹生成自然语言洞察的非参数学习算法。在四项推理任务上，CORE 在少量样本和有限 rollout 预算下即可实现快速性能提升，且比 GRPO、GEPA 等方法更上下文高效，为模型自改进提供了一种可解释的无权重更新路径。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
+    "arxiv_id": "2606.05152",
+    "github": "https://github.com/rishabh-1086/distIL",
+    "abstract": "提出 DistIL，基于分布化 DAgger 利用丰富反馈（执行轨迹、工具输出、专家修正等）进行强化学习。通过前向交叉熵目标将未来专家-学生分歧反向传播到早期决策，理论上保证策略单调改进。实验表明，DistIL 在科学推理、编程和数学难题上均优于 RLVR 与自蒸馏基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "When Gradients Collide: Failure Modes of Multi-Objective Prompt Optimization for LLM Judges",
+    "arxiv_id": "2605.26046",
+    "github": "https://github.com/adivekar-utexas/when-gradients-collide",
+    "abstract": "研究多目标文本梯度优化在 LLM Judge 定制中的失效模式，发现当梯度 LLM 联合处理多标准时梯度特异性下降 59%，且简单拼接任务指令会降低 Spearman 相关系数 5.3%。文章识别出优化时梯度稀释与推理时指令干扰两类失效模式，为设计更可靠的多目标 judge 提示优化方法提供了指导。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "LayerRoute: Input-Conditioned Adaptive Layer Skipping via LoRA Fine-Tuning for Agentic Language Models",
+    "arxiv_id": "2606.01838",
+    "github": "https://github.com/hackie123/layerroute",
+    "abstract": "提出 LayerRoute，通过 LoRA 微调为智能体语言模型学习输入条件化的自适应层跳过策略。在 Qwen2.5-0.5B 上为每层添加轻量路由器与 LoRA 适配器，仅训练约 110 万参数，工具调用步骤可跳过 15.25% 的 FLOPs，同时困惑度分别降低 1.29 和 1.30，实现推理加速与质量提升。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Critic-R: Improving Agentic Search using Instruction-tuned Retrievers with Natural Language Introspective Feedback",
+    "arxiv_id": "2606.00590",
+    "github": "https://github.com/zarif98sjs/Critic-R",
+    "abstract": "提出 Critic-R，通过自然语言自省反馈对检索器进行指令微调以提升智能体搜索效果。Critic-R-Zero 在推理时迭代改写查询，Critic-Embed 利用成功与失败的改写轨迹作为自动监督优化嵌入模型。在 HotpotQA、2WikiMultihopQA、MuSiQue 和 Bamboogle 上，检索质量与回答准确率均显著提升。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Augmenting Attention with Exponentially Decaying Memory Improves Query-Aware KV Sparsity",
+    "arxiv_id": "2605.28640",
+    "github": "https://github.com/wimh966/rat-plus",
+    "abstract": "针对长上下文语言模型的高效推理，研究指数衰减记忆对 Quest、MoBA、SnapKV 等查询感知 KV 稀疏方法的提升。在多个「大海捞针」任务上，RAT+ 一致提高稀疏注意力预算下的准确率，并在 OLMo2-7B 上继续预训练 10B token 验证效果，揭示记忆模块改善稀疏推理的两方面机制。",
+    "tags": ["长文本"]
+  }
+]

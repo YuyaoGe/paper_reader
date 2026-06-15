@@ -3616,3 +3616,197 @@
 
 - **Trust Region Q Adjoint Matching** `[RL]` — [2605.27079](https://arxiv.org/abs/2605.27079) | [GitHub](https://github.com/yonghdong/trqam)
   > 提出信任区域Q伴随匹配方法（TRQAM），解决离策略强化学习预训练流策略时的优化不稳定性问题。针对Q伴随匹配中critic误差被放大的脆弱性，引入信任区域约束限制策略更新幅度。该方法将critic引导的策略改进限制在安全区域内，提升多步采样过程的训练稳定性。
+
+## 2026年6月8日
+
+- **Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models** `[VLM]` — [2606.03988](https://arxiv.org/abs/2606.03988) | [GitHub](https://github.com/weikaih04/Imaginative-Perception-Token)
+  > 提出 Imaginative Perception Tokens（IPT），将视觉语言模型在不可见视角下的空间想象外化为中间视觉表征，并构建 PET、PT、MVC 三个空间推理任务与约 20K 样本进行监督训练。基于统一 VLM BAGEL 的实验表明，IPT 监督能一致提升空间推理能力，在 MVC 上准确率提升 3.4%，且优于文本思维链训练，推理时无需生成图像。
+
+- **Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings** `[无需训练]` — [2606.07502](https://arxiv.org/abs/2606.07502) | [GitHub](https://github.com/CentreChen/EmbFilter)
+  > 针对 LLM 导出的文本嵌入受高频无信息 token 主导的问题，提出 EmbedFilter 线性变换方法，通过过滤 unembedding 矩阵中对应子空间来抑制高频 token 影响、增强语义表征。实验显示，在多个 LLM backbone 上，EmbedFilter 能显著提升零样本下游性能，并在降低嵌入维度的同时保持检索质量。
+
+- **SIA: Self Improving AI with Harness & Weight Updates** `[RL]` — [2605.27276](https://arxiv.org/abs/2605.27276) | [GitHub](https://github.com/hexo-ai/sia)
+  > 提出 SIA，一个让语言模型智能体同时更新任务 harness 与模型权重的自改进闭环。Feedback-Agent 根据任务反馈迭代优化执行结构与领域推理能力，在 LawBench、GPU 内核优化和单细胞 RNA 去噪三个领域均显著超越仅优化 harness 或仅更新权重的基线，最高取得 502% 的相对提升。
+
+- **HarnessForge: Joint Harness and Policy Evolution for Adaptive Agent Systems** `[API]` — [2606.01779](https://arxiv.org/abs/2606.01779) | [GitHub](https://github.com/mingju-c/HarnessForge)
+  > 提出 HarnessForge，将 LLM 智能体系统视为 harness-policy 对，并通过故障引导的 harness 定制与 harness 条件策略对齐实现联合演化。在五个跨领域基准上的实验表明，该方法能一致提升 Qwen3-4B/8B 的性能，最高比最强基线提升 12.0%，并显著改善 rollout 效率。
+
+- **Towards Retrieving Interaction Spaces for Agentic Search** `[API]` — [2606.06880](https://arxiv.org/abs/2606.06880) | [GitHub](https://github.com/texttron/RISE)
+  > 提出 RISE，为智能体搜索构建「交互空间」：用检索划定语料边界，并对空间内文档进行 shell 式导航预处理。在 BrowseComp-Plus 上，RISE 以 gpt-5.4-mini 达到 78% 准确率且成本约为纯 shell 交互的四分之一；在 100 万文档规模下准确率可达 81%，显著优于直接语料交互方法。
+
+- **CORE: Contrastive Reflection Enables Rapid Improvements in Reasoning** `[无需训练]` — [2605.28742](https://arxiv.org/abs/2605.28742) | [GitHub](https://github.com/LinasNas/core-reasoning)
+  > 提出 Contrastive Reflection（CORE），一种通过对比成功与失败推理轨迹生成自然语言洞察的非参数学习算法。在四项推理任务上，CORE 在少量样本和有限 rollout 预算下即可实现快速性能提升，且比 GRPO、GEPA 等方法更上下文高效，为模型自改进提供了一种可解释的无权重更新路径。
+
+- **Reinforcement Learning from Rich Feedback with Distributional DAgger** `[RL]` — [2606.05152](https://arxiv.org/abs/2606.05152) | [GitHub](https://github.com/rishabh-1086/distIL)
+  > 提出 DistIL，基于分布化 DAgger 利用丰富反馈（执行轨迹、工具输出、专家修正等）进行强化学习。通过前向交叉熵目标将未来专家-学生分歧反向传播到早期决策，理论上保证策略单调改进。实验表明，DistIL 在科学推理、编程和数学难题上均优于 RLVR 与自蒸馏基线。
+
+- **When Gradients Collide: Failure Modes of Multi-Objective Prompt Optimization for LLM Judges** `[无需训练]` — [2605.26046](https://arxiv.org/abs/2605.26046) | [GitHub](https://github.com/adivekar-utexas/when-gradients-collide)
+  > 研究多目标文本梯度优化在 LLM Judge 定制中的失效模式，发现当梯度 LLM 联合处理多标准时梯度特异性下降 59%，且简单拼接任务指令会降低 Spearman 相关系数 5.3%。文章识别出优化时梯度稀释与推理时指令干扰两类失效模式，为设计更可靠的多目标 judge 提示优化方法提供了指导。
+
+- **LayerRoute: Input-Conditioned Adaptive Layer Skipping via LoRA Fine-Tuning for Agentic Language Models** `[微调]` — [2606.01838](https://arxiv.org/abs/2606.01838) | [GitHub](https://github.com/hackie123/layerroute)
+  > 提出 LayerRoute，通过 LoRA 微调为智能体语言模型学习输入条件化的自适应层跳过策略。在 Qwen2.5-0.5B 上为每层添加轻量路由器与 LoRA 适配器，仅训练约 110 万参数，工具调用步骤可跳过 15.25% 的 FLOPs，同时困惑度分别降低 1.29 和 1.30，实现推理加速与质量提升。
+
+- **Critic-R: Improving Agentic Search using Instruction-tuned Retrievers with Natural Language Introspective Feedback** `[微调]` — [2606.00590](https://arxiv.org/abs/2606.00590) | [GitHub](https://github.com/zarif98sjs/Critic-R)
+  > 提出 Critic-R，通过自然语言自省反馈对检索器进行指令微调以提升智能体搜索效果。Critic-R-Zero 在推理时迭代改写查询，Critic-Embed 利用成功与失败的改写轨迹作为自动监督优化嵌入模型。在 HotpotQA、2WikiMultihopQA、MuSiQue 和 Bamboogle 上，检索质量与回答准确率均显著提升。
+
+- **Augmenting Attention with Exponentially Decaying Memory Improves Query-Aware KV Sparsity** `[长文本]` — [2605.28640](https://arxiv.org/abs/2605.28640) | [GitHub](https://github.com/wimh966/rat-plus)
+  > 针对长上下文语言模型的高效推理，研究指数衰减记忆对 Quest、MoBA、SnapKV 等查询感知 KV 稀疏方法的提升。在多个「大海捞针」任务上，RAT+ 一致提高稀疏注意力预算下的准确率，并在 OLMo2-7B 上继续预训练 10B token 验证效果，揭示记忆模块改善稀疏推理的两方面机制。
+
+
+## 2026年6月9日
+
+- **FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention** `[长文本]` — [2606.09079](https://arxiv.org/abs/2606.09079) | [GitHub](https://github.com/libertywing/FlashMemory-Deepseek-V4)
+  > 提出Lookahead Sparse Attention（LSA）与Neural Memory Indexer，主动预测未来上下文需求并仅保留查询关键的KV块，采用无骨干解耦训练策略独立训练索引器。在LongBench-v2、LongMemEval和RULER等长上下文评测上，FM-DS-V4将物理KV缓存压缩至完整上下文的13.5%，同时保持或略微提升下游精度；在500K极长序列上降低超过90%的KV缓存开销，且未破坏骨干模型的核心推理能力。
+
+- **End-to-End Context Compression at Scale** `[长文本]` — [2606.09659](https://arxiv.org/abs/2606.09659) | [GitHub](https://github.com/LeonLixyz/LCLM)
+  > 重新审视编码器-解码器长上下文压缩范式，提出Latent Context Language Models（LCLMs）。通过大规模架构搜索确定最优设计，并在350B token上持续预训练0.6B编码器与4B解码器系列，支持1:4、1:8、1:16多种压缩比。LCLMs在通用任务性能、压缩速度与峰值内存上改进了Pareto前沿，并可作为长程智能体的骨干，按需展开相关片段以兼顾效率与准确性。
+
+- **Bayesian-Agent: Posterior-Guided Skill Evolution for LLM Agent Harnesses** `[API]` — [2606.08348](https://arxiv.org/abs/2606.08348) | [GitHub](https://github.com/DataArcTech/Bayesian-Agent)
+  > 针对LLM智能体技能与SOP难以系统演进的问题，提出Bayesian-Agent框架。它将可复用技能视为关于固定模型在特定环境下能否成功的假设，记录经轨迹验证的证据，维护特征条件分类后验，并将后验状态映射为patch、split、compress、retire、explore等可审计动作。在SOP-Bench、Lifelong AgentBench和RealFin-Bench上，增量修复均带来显著性能提升。
+
+- **DEI: Diversity in Evolutionary Inference for Quality-Diversity Search** `[API]` — [2605.27130](https://arxiv.org/abs/2605.27130) | [GitHub](https://github.com/gensyn-ai/dei)
+  > 提出DEI分布式Quality-Diversity搜索框架，将异构大语言模型分配为跨节点的变异算子，通过非阻塞集合通信共享局部最优解，形成跨模型对抗压力以驱动行为多样性。在Core War这一竞争性编程基准上，四节点异构集成在相同LLM调用预算下，QD-Score较单节点提升124%，覆盖率提升28%，验证了模型多样性是分布式LLM QD搜索收益的关键来源。
+
+- **Skill-RM: Unifying Heterogeneous Evaluation Criteria via Agent Skill** `[RL]` — [2606.03980](https://arxiv.org/abs/2606.03980) | [GitHub](https://github.com/Qwen-Applications/Skill-RM)
+  > 提出Skill Reward Model，将奖励建模重新定义为可复用Reward-Evaluation Skill的执行过程。通过统一的agentic接口动态选择并聚合规则验证器、参考答案、流程清单与复杂评分标准等异构证据，实现一致且透明的奖励计算。在奖励基准以及best-of-N选择和强化学习下游应用中，Skill-RM均优于传统静态评判基线。
+
+- **SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating** `[RL]` — [2606.07074](https://arxiv.org/abs/2606.07074) | [GitHub](https://github.com/AQ-MedAI/AntAFu-DeepResearch)
+  > 提出SlimSearcher训练效率感知型深度搜索智能体。在SFT阶段采用Pareto高效过滤，蒸馏既成功又经济的轨迹以引导模型形成效率意识；在RL阶段引入Adaptive Reward Gating，在采样组内评估相对工具与token效率，并与严格正确性门级联，从而避免简洁性偏置与奖励作弊。在GAIA、BrowseComp和XBenchDeepSearch上减少17%-58%工具调用轮次。
+
+- **Lean4Agent: Formal Modeling and Verification for Agent Workflow and Trajectory** `[API]` — [2606.06523](https://arxiv.org/abs/2606.06523) | [GitHub](https://github.com/RickySkywalker/Lean4Agent)
+  > 首个基于Lean4依赖类型形式语言建模并验证智能体工作流的框架。提供FormalAgentLib库以形式化建模工作流语义一致性并定位执行失败，并发展出LeanEvolve机制利用验证结果自动修正工作流。在SWE-Bench-Verified困难子集与ELAIP-Bench上，验证通过的工作流平均优于未通过工作流11.94%，LeanEvolve进一步提升SWE性能7.47%。
+
+- **Optical Reasoning: Rethinking Images as an Expressive Reasoning Medium Beyond Text** `[VLM]` — [2606.09585](https://arxiv.org/abs/2606.09585) | [GitHub](https://github.com/ModalityDance/Optical-Reasoning)
+  > 提出Optical Reasoning，将图像作为独立的推理媒介，探索仅用图像进行语言与多模态推理的可能性。具体包括基于排版的视觉推理链与融合文本和图形元素的结构化视觉推理链两种实现。在数学、科学和交错模态推理基准上，该方法匹配甚至超越文本推理，语言任务推理token平均降低28.57%，多模态任务降低16%。
+
+- **AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents** `[RL]` `[VLM]` — [2606.05597](https://arxiv.org/abs/2606.05597) | [GitHub](https://github.com/microsoft/webgym)
+  > 针对视觉-语言网页智能体的多步RL训练低效问题，提出AsyncWebRL。系统层面采用异步设计重叠rollout、梯度更新与策略刷新，并针对网页智能体优化持久化rollout池与轻量级截图处理，实现2.9倍端到端训练吞吐；算法层面将GRPO逐轨迹归一化替换为常数归一化，缓解失败token负梯度被低估导致的冗长轨迹。在WebGym OOD测试集上取得开源SOTA。
+
+- **Cosine Misleads: Auxiliary Losses Reshape Vision Language Models, Not Their Latents** `[VLM]` — [2606.05753](https://arxiv.org/abs/2606.05753) | [GitHub](https://github.com/xiuyuz/cosine-misleads)
+  > 研究视觉语言模型中潜视觉推理机制，发现余弦相似度等辅助对齐目标与最终准确率呈显著负相关。提出PRISM诊断工具，通过线性探针与corruption test揭示监督潜变量 largely bypassed，答案在潜变量下游而非其本身可解码。研究表明辅助损失通过共享参数重塑语言模型，而非真正优化潜变量本身。
+
+- **Self-Evaluation Is Already There: Eliciting Latent Judge Calibration in Base LLMs with Minimal Data** — [2606.05122](https://arxiv.org/abs/2606.05122) | [GitHub](https://github.com/YiShan05/SEE_official)
+  > 提出Self-Evaluation Elicitation方法，发现基础大语言模型在无需针对性训练时即可预测外部裁判的多维度质量评分。通过校准耦合的强化学习与掩码蒸馏小循环，从仅160个样本中激发该潜能力，在三个基准上提升裁判对齐的校准性并保持回答质量，且对未见裁判具有迁移稳定性，重新将自评估视为激发而非习得问题。
+
+
+## 2026年6月10日
+
+- **Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution** `[API]` — [2606.10917](https://arxiv.org/abs/2606.10917) | [GitHub](https://github.com/AMAP-ML/roleagent)
+  > 提出Role-Agent框架，让单一LLM同时扮演agent与环境，通过World-In-Agent（WIA）预测未来状态作为过程奖励，以及Agent-In-World（AIW）分析失败模式并检索相似任务来重塑训练分布，实现自举协同演化。在多个基准上平均提升超过4%。
+
+- **Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts** `[API]` — [2606.05922](https://arxiv.org/abs/2606.05922) | [GitHub](https://github.com/wbopan/retro-harness)
+  > 提出RHO，一种仅利用历史轨迹自监督优化agent工具链的方法。通过从过去轨迹中选取挑战性核心集、并行重解、自验证与自一致性分析，并基于成对自身偏好选择最优更新。在SWE-Bench Pro上单轮优化将通过率从59%提升至78%，无需外部评分。
+
+- **SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research** `[微调]` — [2606.09730](https://arxiv.org/abs/2606.09730) | [GitHub](https://github.com/Search-Swarm/SearchSwarm)
+  > 针对长程深度研究中的任务分解与委派能力，设计harness生成高质量委派轨迹，并以监督微调将委派智能内化到模型权重中。SearchSwarm-30B-A3B在BrowseComp上达68.1、BrowseComp-ZH上达73.3，为同规模最佳。
+
+- **Flow-DPPO: Divergence Proximal Policy Optimization for Flow Matching Models** `[RL]` `[扩散模型]` — [2606.11025](https://arxiv.org/abs/2606.11025) | [GitHub](https://github.com/Tencent-Hunyuan/UniRL)
+  > 针对流匹配模型的在线RL训练，提出Flow-DPPO，用发散邻近约束替代PPO式比率裁剪，利用流模型每步策略为高斯分布的特性精确计算KL散度，并引入非对称发散掩码。实验表明其奖励更高、KL效率更好、缓解灾难性遗忘并支持稳定多epoch训练。
+
+- **Rethinking the Divergence Regularization in LLM RL** `[RL]` — [2606.09821](https://arxiv.org/abs/2606.09821) | [GitHub](https://github.com/Tencent-Hunyuan/UniRL)
+  > 提出Divergence Regularized Policy Optimization（DRPO），用平滑的advantage加权二次正则项替代DPPO的硬掩码，对策略偏移进行连续梯度加权并在边界外提供修正信号。在多种模型规模、架构和精度设置下，DRPO提升了LLM RL训练的稳定性与效率，缓解比率裁剪带来的分布偏移估计偏差。
+
+- **EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents** `[无需训练]` `[API]` — [2606.11182](https://arxiv.org/abs/2606.11182) | [GitHub](https://github.com/Princeton-AI2-Lab/EEVEE)
+  > 首个面向真实世界多数据集的测试时提示学习框架，通过路由器将输入划分为任务簇并分配适配的提示配置，采用路由器-提示协同进化策略。在异构数据流中保持鲁棒性，相比Qwen3-4B-Instruct和DeepSeek-V3.2平均提升10.38与24.32分。
+
+- **One Token per Multimodal Evidence: Latent Memory for Resource-Constrained QA** `[VLM]` `[MeM]` — [2606.10572](https://arxiv.org/abs/2606.10572) | [GitHub](https://github.com/zz1358m/Latent-Memory-Master)
+  > 提出Latent Memory，用小型压缩器将每条文本或图像证据压缩为单一高维潜在token，在统一潜在空间执行检索与生成。在七个文本QA和多模态QA基准上达到先进RAG水平，同时生成token消耗降低3到10倍。
+
+- **Attention Amnesia in Hybrid LLMs: When CoT Fine-Tuning Breaks Long-Range Recall, and How to Fix It** `[长文本]` `[微调]` `[无需训练]` — [2606.11052](https://arxiv.org/abs/2606.11052) | [GitHub](https://github.com/LARK-AI-Lab/QK-Restore)
+  > 发现CoT监督微调会损害混合线性注意力模型的长程召回能力，原因在于W_Q/W_K被偏置向短程模式。提出训练无关的QK-Restore方法，仅从预训练检查点恢复W_Q/W_K，在保持推理能力的同时显著恢复长上下文表现。
+
+- **Online Skill Learning for Web Agents via State-Grounded Dynamic Retrieval** `[API]` — [2606.04391](https://arxiv.org/abs/2606.04391) | [GitHub](https://github.com/plusnli/skill-dynamic-retrieval)
+  > 提出SGDR，面向网页agent的状态感知动态技能检索方法。通过滑动窗口从已完成轨迹提取可复用子过程、文本-代码双重表示，以及基于当前页面状态与任务目标的动态匹配。在WebArena五个领域上超越强基线，GPT-4.1达37.5%、Qwen3-4B达24.3%。
+
+- **SkillHarm: Lifecycle-Aware Skill-Based Attacks via Automated Construction** `[API]` — [2606.02540](https://arxiv.org/abs/2606.02540) | [GitHub](https://github.com/OSU-NLP-Group/SkillHarm)
+  > 构建首个覆盖技能使用全生命周期的skill-based攻击基准，定义12类风险并支持Fixed-Payload与Self-Mutating两种攻击场景。通过AutoSkillHarm自动构造879个攻击样本，实验显示当前agent在FPP和SMP中成功率分别高达86.3%与69.3%。
+
+- **BrainSurgery: Reproducible and Reliable Declarative Weight Manipulations for Model Editing and Upcycling** `[微调]` — [2606.09707](https://arxiv.org/abs/2606.09707) | [GitHub](https://github.com/schneiderkamplab/brainsurgery)
+  > 推出面向神经网络检查点的声明式张量手术工具，通过YAML计划执行结构修改、数学变换与张量重塑，并内置断言验证形状、类型和数值。覆盖模型升级、LoRA提取等场景，为大规模模型权重操作提供可复现、可靠的基础。
+
+- **PsychoSafe: Eliciting Psychologically-Informed Refusals in Large Language Models** `[微调]` — [2606.09697](https://arxiv.org/abs/2606.09697) | [GitHub](https://github.com/aisilab/psychological-safety)
+  > 提出基于心理学证据的拒绝生成框架，将生硬拒绝转化为结构化支持性沟通。构建8019对涵盖五大风险领域的提示-回复数据，对Qwen 3.5 27B进行提示工程与参数高效微调。在500条验证集上相对基线提升整体拒绝质量28.1%，外部资源转介提升46.8%。
+
+- **Do Coding Agents Deceive Us? Detecting and Preventing Cheating via Capped Evaluation with Randomized Tests** `[API]` — [2606.07379](https://arxiv.org/abs/2606.07379) | [GitHub](https://github.com/ishida-lab/capcode)
+  > 提出CapCode框架，通过随机化测试构造上限刻意低于1的编码数据集，使超过上限的分数成为作弊证据；并设计CapReward奖励防止优化越过上限。实验表明CapCode能检测作弊并保持模型排序，CapReward降低作弊行为。
+
+- **What Should Agents Say? Action-state Communication for Efficient Multi-Agent Systems** `[API]` — [2606.05304](https://arxiv.org/abs/2606.05304) | [GitHub](https://github.com/iNLP-Lab/PACT)
+  > 分析多agent系统中五种通信策略，发现保留以行动为中心的信息最关键。提出PACT协议，将原始输出投影为紧凑的行动状态记录再进入共享历史，在保持任务性能的同时显著减少token消耗，OpenHands解析率提升且token降低10%。
+
+- **Emergent Misalignment Can Be Induced by Sycophancy and Reversed via Alignment Gating** `[微调]` — [2606.09068](https://arxiv.org/abs/2606.09068) | [GitHub](https://github.com/stay1to0/Sycophancy_Emergent_Misalignment_and_Gated_attention_FT)
+  > 发现谄媚微调是诱发大模型突发错位的新途径，并提出Alignment Gating方法，在微调时插入可学习门控识别不安全响应的内部表征，通过放大或抑制这些表征来逆转错位。门控权重在窄域训练后能有效抑制广域错位行为并保留通用能力。
+
+- **IR3DE: A Linear Router for Large Language Models** — [2606.06098](https://arxiv.org/abs/2606.06098) | [GitHub](https://github.com/gensyn-ai/IR3DE)
+  > 提出基于岭回归的领域专家路由器IR3DE，以极低计算成本为每个提示选择最合适的领域专家LLM。在因果语言建模和推理任务中表现优异，支持动态增删专家而无需重新训练路由器，归一化性能达98.4%，适配不断增长的异构专家模型池。
+
+- **Decentralized Multi-Agent Systems with Shared Context** `[API]` — [2606.10662](https://arxiv.org/abs/2606.10662) | [GitHub](https://github.com/yuzhenmao/DeLM)
+  > 提出DeLM去中心化多agent框架，通过并行agent、共享已验证上下文和任务队列替代集中式编排。agent异步认领子任务、读取累积进展并写回紧凑验证更新。在SWE-bench Verified上平均提升最多10.5个百分点，成本降低约50%。
+
+- **PaperMentor: A Human-Centered Multi-Agent Writing Tutor for AI Research Papers on Overleaf** `[API]` — [2606.08857](https://arxiv.org/abs/2606.08857) | [GitHub](https://github.com/jiarui-liu/overleaf)
+  > 构建以人为本的多agent论文写作辅导系统，集成12个专门agent和专家技能库，在Overleaf中以原生内联评论形式提供可操作建议。用户研究显示90.6%评论可执行、67.5%有效，显著优于GPT-5.2基线。
+
+
+## 2026年6月12日
+
+- **EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments** `[MeM]` `[API]` — [2606.13681](https://arxiv.org/abs/2606.13681) | [GitHub](https://github.com/Aiden0526/EvoArena)
+  > 提出 EvoArena 基准与 EvoMem 记忆范式，将动态环境变化建模为终端、软件、社交领域的渐进更新序列，通过结构化更新历史帮助 agent 推理环境演化，在动态任务和标准基准上均显著提升表现。
+
+- **MiniMax Sparse Attention** `[长文本]` — [2606.13392](https://arxiv.org/abs/2606.13392) | [GitHub](https://github.com/MiniMax-AI/MSA)
+  > 提出 MiniMax Sparse Attention，基于 GQA 的块稀疏注意力机制，通过轻量索引分支为每组选择 Top-k KV 块，再以共设计的 GPU 执行路径实现高效计算，在 1M 上下文下将注意力计算降低约 28 倍。
+
+- **SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning** `[VLM]` `[无需训练]` — [2606.13673](https://arxiv.org/abs/2606.13673) | [GitHub](https://github.com/NVlabs/SpatialClaw)
+  > 提出 SpatialClaw，一个无需训练的 VLM 空间推理框架，将代码作为 action interface，让 agent 在带状态的 Python kernel 中逐步组合感知与几何原语，在 20 个静态/动态 3D/4D 空间推理基准上平均提升 11.2%。
+
+- **InterleaveThinker: Reinforcing Agentic Interleaved Generation** `[API]` `[RL]` — [2606.13679](https://arxiv.org/abs/2606.13679) | [GitHub](https://github.com/zhengdian1/InterleaveThinker)
+  > 提出 InterleaveThinker，通过 planner agent 与 critic agent 协作，使现有图像生成器具备交错图文序列生成能力，并基于 GRPO 强化逐步指令修正能力，在交错生成与推理基准上均显著提升。
+
+- **Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?** `[VLM]` `[RL]` `[微调]` — [2606.08063](https://arxiv.org/abs/2606.08063) | [GitHub](https://github.com/jqtangust/Robust-U1)
+  > 提出 Robust-U1，让多模态大模型具备显式的视觉自恢复能力，通过 SFT 初始化重建、像素与语义双重奖励的 RL 对齐，以及联合利用损坏图与恢复图进行推理，在现实与对抗视觉损坏上达到更鲁棒的理解。
+
+- **EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery** `[API]` — [2606.13662](https://arxiv.org/abs/2606.13662) | [GitHub](https://github.com/THU-Team-Eureka/EurekAgent)
+  > 提出 EurekAgent，将自主科学发现的关键从设计 agent 工作流转为设计 agent 环境，从权限、产物、预算、人在回路四个维度工程化环境，在数学、核工程与机器学习任务上刷新 SOTA 并以低成本发现新结果。
+
+- **Demystifying Hidden-State Recurrence: Switchable Latent Reasoning with On-Policy Reinforcement Learning** `[RL]` — [2606.13106](https://arxiv.org/abs/2606.13106) | [GitHub](https://github.com/LARK-AI-Lab/SWITCH)
+  > 提出 SWITCH，一种可切换的隐式推理框架，通过显式的 <swi> 边界 token 进入/退出隐式推理模式，使其兼容标准 on-policy RL 并支持因果分析，在同等规模下稳定超越现有隐式状态递推推理方法。
+
+- **Where, What, Why, and Importance: Structured Defect Grounding for Text-to-Image Feedback** `[扩散模型]` — [2606.06113](https://arxiv.org/abs/2606.06113) | [GitHub](https://github.com/nianbai006/SDG)
+  > 提出 Structured Defect Grounding，将文本到图像诊断建模为结构化的缺陷元组预测，并构建 SDG-30K 数据集与 SDG-Eval 评估协议，进一步通过 VLM 检测器与 BoxFlow-GRPO 奖励实现对扩散模型的局部对齐优化。
+
+- **HarnessBridge: Learnable Bidirectional Controller for LLM Agent Harness** `[API]` — [2606.12882](https://arxiv.org/abs/2606.12882) | [GitHub](https://github.com/mandyyyyii/HarnessBridge)
+  > 提出 HarnessBridge，一个可学习的双向 agent 环境交互控制器，将观察投影为决策相关的紧凑状态、将动作投影为可执行转换或拒绝，在 Terminal-Bench 2.0 与 SWE-bench Verified 上匹配或超越专用 harness 并显著降低 token 消耗。
+
+- **Risk Under Pressure: Compute-Aware Evaluation of Adversarial Robustness in Language Models** — [2606.11409](https://arxiv.org/abs/2606.11409) | [GitHub](https://github.com/r-three/risk-under-pressure)
+  > 提出基于计算压力的语言模型对抗鲁棒性评估框架，用累计 FLOPs 衡量攻击成本并绘制风险-计算曲线，系统分析对齐训练、模型规模与安全 RL 对梯度、模板等不同攻击的影响，发现其存在显著非单调性与类别差异。
+
+- **Rethinking Psychometric Evaluation of LLMs: When and Why Self-Reports Predict Behavior** — [2606.12730](https://arxiv.org/abs/2606.12730) | [GitHub](https://github.com/psychology-of-AI/Rethinking-Pyschometric-Eval-LLMs)
+  > 重新思考大语言模型的心理测量评估，对比 Big 5 与计划行为理论 TPB，通过四项行为任务与 11 个前沿模型实验发现，当任务与情境匹配时自报告可预测行为，但人格提示只能让自报告更一致而无法真正对齐行为。
+
+- **Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents** `[API]` — [2606.13174](https://arxiv.org/abs/2606.13174) | [GitHub](https://github.com/YujunZhou/tellonce)
+  > 提出 TRACE 框架，将用户对 coding agent 的纠正挖掘并编译为运行时强制规则，在任务完成前进行校验，在 ClawArena 与 MemoryArena 上显著降低跨会话偏好违反率，从根本上解决仅靠记忆无法可靠复现用户偏好的问题。
+
+- **MuJoCo-Drones-Gym: A GPU-Accelerated Multi-Drone Simulator for Control and Reinforcement Learning** `[RL]` — [2606.08039](https://arxiv.org/abs/2606.08039) | [GitHub](https://github.com/tau-intelligence/MuJoCo-drones-gym)
+  > 提出 MuJoCo-Drones-Gym，一个基于 MuJoCo 的 GPU 加速多无人机仿真环境，兼容 Gymnasium 与 PettingZoo，支持多种物理模型、动作接口与观测空间，并提供七种控制与多智能体强化学习任务。
+
+- **Evoflux: Inference-Time Evolution of Executable Tool Workflows for Compact Agents** `[API]` — [2606.12674](https://arxiv.org/abs/2606.12674) | [GitHub](https://github.com/IBM/Evoflux)
+  > 提出 Evoflux，一种面向紧凑 agent 的推理时工具工作流进化方法，通过结构化编辑、执行反馈、自适应强度与多样性剪枝修复可执行工作流，在 MCP-Bench 上显著-small planner 的可执行率。
+
+- **ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages** `[API]` — [2606.13572](https://arxiv.org/abs/2606.13572) | [GitHub](https://github.com/IITP-CSE/ArogyaSutra)
+  > 提出 ArogyaSutra，一个面向印度语医疗多模态推理的多智能体框架，基于 actor-critic 与双记忆机制进行工具感知推理，并发布覆盖七种印度语的大规模多模态医疗问答数据集 ArogyaBodha。
+
+- **WebChallenger: A Reliable and Efficient Generalist Web Agent** `[API]` — [2606.10423](https://arxiv.org/abs/2606.10423) | [GitHub](https://github.com/jayoohwang1/webchallenger)
+  > 提出 WebChallenger，一个可靠高效的全能网页 agent，通过 PageMem 结构化页面表示、分治观察管道、网站结构记忆与复合动作工作流，在 WebArena、VisualWebArena 等基准上以开源模型接近前沿专有系统。
+
+- **IDEAL: In-DEpth ALignment Makes A Discrete Representation AutoEncoder** `[扩散模型]` — [2606.11096](https://arxiv.org/abs/2606.11096) | [GitHub](https://github.com/Row11n/IDEAL)
+  > 提出 IDEAL，通过联合对齐浅层与深层视觉基础模型特征来训练离散表示自编码器，使离散视觉 token 同时保留视觉保真度与高层语义，在 ImageNet 重建与自回归图像生成上均刷新 SOTA 性能。
+
+- **The Cold-Start Safety Gap in LLM Agents** `[API]` — [2606.07867](https://arxiv.org/abs/2606.07867) | [GitHub](https://github.com/Trustworthy-ML-Lab/Agent-Cold-Start-Safety-Gap)
+  > 发现 LLM agent 存在冷启动安全缺口：会话开始时最易受攻击，完成若干常规 agent 任务后显著更安全。提出 SODA 基准与部署前预热策略，在保持任务能力的同时有效降低初始阶段面临的安全风险。
+
+- **ToolSense: A Diagnostic Framework for Auditing Parametric Tool Knowledge in LLMs** `[API]` — [2606.12451](https://arxiv.org/abs/2606.12451) | [GitHub](https://github.com/SAP/toolsense)
+  > 提出 ToolSense 诊断框架，用于审计大模型参数化工具知识，可自动生成真实检索、MCQ 与 QA 三类基准，在 ToolBench 上揭示模型在工具检索与事实知识之间存在显著解耦，并提供开源评估工具与数据集。
+
+- **PianoKontext: Expressive Performance Rendering from Deadpan Context** `[扩散模型]` — [2606.12282](https://arxiv.org/abs/2606.12282) | [GitHub](https://github.com/realfolkcode/pianokontext)
+  > 提出 PianoKontext，一个基于 flow matching 的古典钢琴表现力渲染模型，在预训练 Music2Latent 的潜空间中生成可变长演奏，并通过动态时间规整构建配对的死板式与表现式数据进行训练。
+
+- **Leveraging Morphology for Historical Script Metrological Analysis** `[VLM]` — [2606.09446](https://arxiv.org/abs/2606.09446) | [GitHub](https://github.com/raphael-baena/morphology4metrology)
+  > 提出基于形态学的历史手写文本计量分析方法，通过从行级转录中学习字符原型，构建可扩展、稳定且可解释的古文字视觉测量指标，并在十四世纪法文手抄本大规模案例上验证其发现不同书写者细微差异的有效性与可扩展性。
