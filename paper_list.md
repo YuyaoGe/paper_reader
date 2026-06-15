@@ -3810,3 +3810,41 @@
 
 - **Leveraging Morphology for Historical Script Metrological Analysis** `[VLM]` — [2606.09446](https://arxiv.org/abs/2606.09446) | [GitHub](https://github.com/raphael-baena/morphology4metrology)
   > 提出基于形态学的历史手写文本计量分析方法，通过从行级转录中学习字符原型，构建可扩展、稳定且可解释的古文字视觉测量指标，并在十四世纪法文手抄本大规模案例上验证其发现不同书写者细微差异的有效性与可扩展性。
+
+## 2026年6月11日
+
+- **Toward Generalist Autonomous Research via Hypothesis-Tree Refinement** `[API]` — [2606.11926](https://arxiv.org/abs/2606.11926) | [GitHub](https://github.com/RUC-NLPIR/Arbor)
+  > 提出Arbor自主研究智能体框架，通过长期协调器、短期执行器和假设树细化机制，将自主研究从局部尝试转化为跨时间累积的过程。在六项真实研究任务和MLE-Bench Lite上取得最优结果，平均相对收益超Codex和Claude Code达2.5倍以上。
+
+- **Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models** `[VLM]` `[无需训练]` — [2606.12412](https://arxiv.org/abs/2606.12412) | [GitHub](https://github.com/elmma/mllm-reroute)
+  > 提出Reroute可恢复视觉token路由方法，以可恢复路由替代传统的不可逆剪枝，解决视觉token重要性随深度变化导致的grounding敏感查询失败问题。在LLaVA-1.5和Qwen上结合FastV等方法，在保持计算和KV缓存预算的同时提升grounding性能。
+
+- **Grammar-Constrained Decoding Can Jailbreak LLMs into Generating Malicious Code** — [2606.11817](https://arxiv.org/abs/2606.11817) | [GitHub](https://github.com/TsinghuaISE/CodeSpear-CodeShield)
+  > 研究语法约束解码可被利用来诱导大语言模型生成恶意代码的安全问题，提出CodeSpear攻击与CodeShield防御框架。实验表明语法约束在特定条件下会成为jailbreak漏洞，并给出相应的检测与缓解方法，代码已开源。
+
+- **DyCo-RL: Dynamic Cross-Modal Coordination for Visual Reasoning** `[RL]` `[VLM]` — [2606.08035](https://arxiv.org/abs/2606.08035) | [GitHub](https://github.com/Sammy20207109/DyCo-RL)
+  > 提出DyCo-RL动态跨模态协调强化学习方法，通过Fisher-Rao距离度量模态内注意力转移，为token分配视觉或文本角色，并基于对齐度进行优势重加权。在Qwen2.5-VL上使四种RLVR算法在七个视觉与数学推理基准上均获得提升。
+
+- **ICA Lens: Interpreting Language Models Without Training Another Dictionary** — [2606.11722](https://arxiv.org/abs/2606.11722) | [GitHub](https://github.com/liusida/ica-lens-paper)
+  > 提出ICALens工作流，将独立成分分析作为大语言模型可解释性的轻量透镜，无需逐层训练稀疏自编码器即可发现可解释方向。在GPT-2、Gemma 2和Qwen 3.5上验证，ICA在稀疏探测和目标扰动任务上与公开SAE相当或更优。
+
+- **i1: A Simple and Fully Open Recipe for Strong Text-to-Image Models** `[扩散模型]` — [2606.11289](https://arxiv.org/abs/2606.11289) | [GitHub](https://github.com/zlab-princeton/i1)
+  > 提出i1文本到图像扩散模型训练配方，通过300多个受控实验和70万TPU v6e小时训练出30亿参数模型，仅使用公开数据集。i1在五个基准上达到领先水平，超越现有最佳全开源模型29.5个百分点，并开放权重、代码和数据处理流程。
+
+- **Breaking the Bubble: Asynchronous Pipeline Parallel Training with Bounded Weight Inconsistency** — [2606.07881](https://arxiv.org/abs/2606.07881) | [GitHub](https://github.com/ItayElam/PACI)
+  > 提出PACI异步流水线并行训练方法，通过局部梯度累积控制前向/反向权重版本漂移，无需权重缓存、预测或全局同步即可消除流水线气泡。在GPT风格预训练中保持与1F1B-flush相当的稳定性和困惑度，训练效率提升最高达1.69倍。
+
+- **POISE: Position-Aware Undetectable Skill Injection on LLM Agents** `[API]` — [2606.07943](https://arxiv.org/abs/2606.07943) | [GitHub](https://github.com/liofoil/SkillSafety)
+  > 提出POISE位置感知技能注入攻击，针对LLM Agent的技能文件将触发指令伪装成benign的body指令并放在合适位置，在保持隐蔽性的同时实现高攻击成功率。在Skill-Inject上ASR达89.3%，远超基线，并揭示现有静态防御易被绕过。
+
+- **Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs** `[API]` — [2606.12385](https://arxiv.org/abs/2606.12385) | [GitHub](https://github.com/cal-data-audit/modsleuth)
+  > 提出ModSleuth智能审计系统，递归重建现代LLM开发中的依赖图，区分直接和间接依赖，解决跨版本、跨仓库的artifact引用不一致问题。应用于四个公开模型发布，恢复1060个有源验证依赖，揭示许可证义务和训练-评估耦合等问题。
+
+- **SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference** `[长文本]` — [2606.04511](https://arxiv.org/abs/2606.04511) | [GitHub](https://github.com/NVlabs/SparDA)
+  > 提出SparDA稀疏解耦注意力架构，引入Forecast投影预测下一层所需KV块，实现lookahead选择并与当前层执行重叠CPU到GPU预取。在80亿参数稀疏预训练模型上，预填充加速1.25倍、解码加速1.7倍，解码吞吐量最高提升5.3倍。
+
+- **Adaptive Multi-Resolution Procedural Knowledge Compression for Large Language Models** — [2606.12203](https://arxiv.org/abs/2606.12203) | [GitHub](https://github.com/bebr2/SKIM)
+  > 提出SKIM自适应多分辨率过程性知识压缩框架，针对LLM Agent技能文本中的工作流和工具协议依赖，生成不同数量的软token进行压缩。在保持任务性能的同时将技能压缩至原始长度的30%-60%，优于现有面向事实知识的压缩方法。
+
+- **Can Generalist Agents Automate Data Curation?** `[API]` — [2606.04261](https://arxiv.org/abs/2606.04261) | [GitHub](https://github.com/feiyang-k/curation-bench)
+  > 提出Curation-Bench基准，检验通用编程智能体能否自动化视觉语言指令微调数据筛选流程。发现基座智能体存在「执行-研究鸿沟」，通过引入方法引导式探索脚手架，智能体能在十分之一数据预算下超越强基线，且无需人工设计策略。
