@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-06-16",
+    "title": "Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories",
+    "arxiv_id": "2606.11176",
+    "github": "https://github.com/QinghongLin/data2story-skill",
+    "abstract": "提出端到端数据新闻智能体Data2Story，通过多智能体协作将原始数据转化为可验证的多模态报道。Inspector模块把每个数字、角度和素材关联到数据、代码或外部引用；多模态生成模块根据读者需求动态选择交互地图、音频等呈现形式。在18篇真实报道上的评估显示，系统在透明度和可审计性方面表现突出，可作为记者的协作者提升证据驱动的新闻生产。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-16",
+    "title": "FastContext: Training Efficient Repository Explorer for Coding Agents",
+    "arxiv_id": "2606.14066",
+    "github": "https://github.com/microsoft/fastcontext",
+    "abstract": "提出FastContext，一个专门用于代码仓库探索的子智能体，将仓库探索与问题解决解耦。通过4B到30B参数的探索专用模型，基于强参考模型轨迹启动，并用任务导向奖励微调多轮证据收集和精确引用生成。在SWE-bench多语言、Pro和SWE-QA上，集成FastContext使Mini-SWE-Agent端到端解决率提升最高5.5%，同时降低60%的token消耗。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-06-16",
+    "title": "VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models",
+    "arxiv_id": "2606.16140",
+    "github": "https://github.com/WeiboAI/VibeThinker",
+    "abstract": "提出VibeThinker-3B，一个30亿参数的小型密集模型，探索小模型中可验证推理的能力边界。基于课程化监督微调、多领域强化学习和离线自蒸馏的后训练流程，在AIME26达到94.3分、LiveCodeBench v6达80.2 Pass@1，性能媲美DeepSeek V3.2等旗舰模型，同时IFEval得分93.4保持指令可控性。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-06-16",
+    "title": "GD^2PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization",
+    "arxiv_id": "2606.16771",
+    "github": "https://github.com/Qwen-Applications/GD2PO",
+    "abstract": "提出GD^2PO，一种缓解多奖励冲突的群体动态奖励解耦策略优化方法。通过冲突感知过滤机制屏蔽奖励维度严重不一致的rollout，防止相反信号在聚合时相互抵消；并引入查询级重加权根据整体奖励共识动态调整更新强度。在工具调用和人类偏好对齐等多奖励场景下显著优于现有基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-16",
+    "title": "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
+    "arxiv_id": "2606.14832",
+    "github": "https://github.com/PhoneHarness/PhoneHarness",
+    "abstract": "提出PhoneHarness，一个面向真实手机工作流的混合动作执行框架与评测基准。支持GUI、CLI和主机端工具动作，通过确定性动作路由、有界GUI委托和可审计执行轨迹，评估智能体是否完成可观察副作用的真实任务。在标注测试集上达到75.0%通过率，超越最强对比设置12.9个百分点。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-06-16",
+    "title": "ExpRL: Exploratory RL for LLM Mid-Training",
+    "arxiv_id": "2606.17024",
+    "github": "https://github.com/violetxi/ExpRL",
+    "abstract": "提出ExpRL，一种基于探索性强化学习的大语言模型中训练方法。将人工撰写的问答数据中的参考答案隐藏起来，仅用于构建问题特定的评分标准，由LLM裁判对采样推理轨迹给出结果级或过程级稠密奖励，从而强化稀疏终局奖励难以覆盖的部分进展和有用中间步骤。在数学推理上，ExpRL优于SFT、稀疏奖励GRPO和自蒸馏，并为后续稀疏奖励RL提供更好的初始化。",
+    "tags": ["RL"]
+  }
+]

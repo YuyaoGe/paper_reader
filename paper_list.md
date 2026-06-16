@@ -3889,3 +3889,23 @@
 
 - **Quickest Detection of Hallucination Onset: Delay Bounds and Learned CUSUM Statistics** — [2606.12476](https://arxiv.org/abs/2606.12476) | [GitHub](https://github.com/YehudaItkin/quickest-hallucination-onset)
   > 将token级幻觉检测建模为quickest change detection问题，建立一阶马尔可夫模型并在RAGTruth上验证，得到Lorden检测延迟下界。证明因果循环标注器可视为学习增量的CUSUM，在相同误报率下检测延迟仅11-13个token，显著优于线性基线的31个token。研究表明分类指标掩盖了延迟结构，序列分析使其可度量。
+
+## 2026年6月16日
+
+- **Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories** `[API]` — [2606.11176](https://arxiv.org/abs/2606.11176) | [GitHub](https://github.com/QinghongLin/data2story-skill)
+  > 提出端到端数据新闻智能体Data2Story，通过多智能体协作将原始数据转化为可验证的多模态报道。Inspector模块把每个数字、角度和素材关联到数据、代码或外部引用；多模态生成模块根据读者需求动态选择交互地图、音频等呈现形式。在18篇真实报道上的评估显示，系统在透明度和可审计性方面表现突出，可作为记者的协作者提升证据驱动的新闻生产。
+
+- **FastContext: Training Efficient Repository Explorer for Coding Agents** `[微调]` — [2606.14066](https://arxiv.org/abs/2606.14066) | [GitHub](https://github.com/microsoft/fastcontext)
+  > 提出FastContext，一个专门用于代码仓库探索的子智能体，将仓库探索与问题解决解耦。通过4B到30B参数的探索专用模型，基于强参考模型轨迹启动，并用任务导向奖励微调多轮证据收集和精确引用生成。在SWE-bench多语言、Pro和SWE-QA上，集成FastContext使Mini-SWE-Agent端到端解决率提升最高5.5%，同时降低60%的token消耗。
+
+- **VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models** `[RL]` `[微调]` — [2606.16140](https://arxiv.org/abs/2606.16140) | [GitHub](https://github.com/WeiboAI/VibeThinker)
+  > 提出VibeThinker-3B，一个30亿参数的小型密集模型，探索小模型中可验证推理的能力边界。基于课程化监督微调、多领域强化学习和离线自蒸馏的后训练流程，在AIME26达到94.3分、LiveCodeBench v6达80.2 Pass@1，性能媲美DeepSeek V3.2等旗舰模型，同时IFEval得分93.4保持指令可控性。
+
+- **GD^2PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization** `[RL]` — [2606.16771](https://arxiv.org/abs/2606.16771) | [GitHub](https://github.com/Qwen-Applications/GD2PO)
+  > 提出GD^2PO，一种缓解多奖励冲突的群体动态奖励解耦策略优化方法。通过冲突感知过滤机制屏蔽奖励维度严重不一致的rollout，防止相反信号在聚合时相互抵消；并引入查询级重加权根据整体奖励共识动态调整更新强度。在工具调用和人类偏好对齐等多奖励场景下显著优于现有基线。
+
+- **PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions** `[API]` — [2606.14832](https://arxiv.org/abs/2606.14832) | [GitHub](https://github.com/PhoneHarness/PhoneHarness)
+  > 提出PhoneHarness，一个面向真实手机工作流的混合动作执行框架与评测基准。支持GUI、CLI和主机端工具动作，通过确定性动作路由、有界GUI委托和可审计执行轨迹，评估智能体是否完成可观察副作用的真实任务。在标注测试集上达到75.0%通过率，超越最强对比设置12.9个百分点。
+
+- **ExpRL: Exploratory RL for LLM Mid-Training** `[RL]` — [2606.17024](https://arxiv.org/abs/2606.17024) | [GitHub](https://github.com/violetxi/ExpRL)
+  > 提出ExpRL，一种基于探索性强化学习的大语言模型中训练方法。将人工撰写的问答数据中的参考答案隐藏起来，仅用于构建问题特定的评分标准，由LLM裁判对采样推理轨迹给出结果级或过程级稠密奖励，从而强化稀疏终局奖励难以覆盖的部分进展和有用中间步骤。在数学推理上，ExpRL优于SFT、稀疏奖励GRPO和自蒸馏，并为后续稀疏奖励RL提供更好的初始化。
