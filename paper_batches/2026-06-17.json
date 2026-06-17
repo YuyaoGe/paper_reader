@@ -1,0 +1,106 @@
+[
+  {
+    "date": "2026-06-17",
+    "title": "TRIAGE: Dialectical Reasoning for Explainable Risk Prediction on Irregularly Sampled Medical Time Series with LLMs",
+    "arxiv_id": "2606.09030",
+    "github": "https://github.com/HyeongWon-Jang/TRIAGE",
+    "abstract": "针对电子健康记录中不规则采样医学时间序列的早期风险预警，提出 TRIAGE 框架。该框架训练大语言模型针对竞争临床结局生成辩证推理，通过显式的 outcome-specific 论据缓解风险极化问题，输出连续且可校准的风险分数。在三个 ISMTS 基准上，AUPRC 平均提升 3.3%，校准误差降低 81%；LLM-as-a-judge 评估显示其临床推理质量比基线事后解释高 20%。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Show the Signal, Hide the Noise: Spectral Forcing for Pixel-Space Diffusion",
+    "arxiv_id": "2606.15236",
+    "github": "https://github.com/WeichenFan/Spectral_Forcing",
+    "abstract": "针对像素空间扩散模型在完整带宽噪声图像上训练、高频区域多为噪声的问题，提出 Spectral Forcing 方法。该方法基于 rectified-flow 和自然图像幂律谱，设计随扩散时间单调扩展的 2D-DCT 低通算子，在 patch embedder 前显式分离信号主导的低频区域与噪声主导的高频区域。在 ImageNet-256 上，Spectral Forcing 持续提升 FID 与 Inception Score；将其接入 SenseNova-U1 文本到图像模型后，DPG-Bench 与 GenEval 也得到改善。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Rethinking the Role of Efficient Attention in Hybrid Architectures",
+    "arxiv_id": "2606.15378",
+    "github": "https://github.com/thunlp/rethinking-hybrid-attention",
+    "abstract": "系统分析混合架构中高效注意力模块（如滑动窗口注意力、循环序列混合器）对模型能力的影响。研究发现，高效注意力设计主要影响长上下文能力涌现速度，不同混合架构在充分训练后最终收敛到相近的长上下文性能；长程检索主要由全注意力承载，而高效注意力塑造其优化轨迹。据此揭示「大窗口惰性」现象，并提出仅对全注意力层应用 NoPE，可在几乎不影响短文本性能的前提下显著提升长上下文表现。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Text-Vision Co-Instructed Image Editing",
+    "arxiv_id": "2606.16767",
+    "github": "https://github.com/PolyU-VCLab/TVEdit",
+    "abstract": "提出 Text-Vision Co-Instructed Image Editing 框架，统一文本指令的语义表达力与视觉提示（拖拽、点选）的精确空间控制。构建 23K 文本-视觉指令配对数据集，提出 TV-Edit 模型，将稀疏视觉指令与图像-文本语义上下文化，并提升为语义感知的控制表示，注入预训练图像编辑骨干网络。实验表明，TV-Edit 在空间控制精度、指令歧义消除和结构一致性上均优于纯文本或纯拖拽基线，并在 TV-Edit-Bench 上取得领先。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Self-Evolving Visual Questioner",
+    "arxiv_id": "2606.13929",
+    "github": "https://github.com/tianyi-lab/SeeQ",
+    "abstract": "提出 Self-Evolving Visual Questioner 框架，使视觉语言模型无需外部监督即可持续自我进化为主动提问者。该框架让 VLM 同时充当问题提议器与过滤器，自动生成更难、更具信息量和视觉中心的问题，并保持探索多样性以避免训练崩溃；生成的数据用于同时训练问题生成与回答模式。在多种 VLM 骨干上的实验表明，该方法显著提升了自主视觉问题生成的质量与难度边界，且同预算下优于静态源数据监督。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Unified Multimodal Autoregressive Modeling with Shared Context-Visual Tokenizer is Key to Unification",
+    "arxiv_id": "2606.18249",
+    "github": "https://github.com/ShareLab-SII/UniAR",
+    "abstract": "提出 UniAR，一种统一多模态自回归建模框架。不同于现有方法使用两个不同的视觉 tokenizer，UniAR 采用单一离散视觉 tokenizer 作为理解与生成之间的共享桥梁，使模型可直接解释自身生成的视觉 token 而无需重新编码。通过多级特征融合与 lookup-free bitwise 量化扩展视觉词表，并采用并行 bitwise 预测降低视觉序列长度、加速生成。经大规模预训练、SFT 与 RL 后，UniAR 在图像生成与编辑上达到最先进，同时在多模态理解基准上保持竞争力。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "ChLogic: Evaluating Robustness of Logical Reasoning in Chinese Expressions",
+    "arxiv_id": "2606.17905",
+    "github": "https://github.com/0328zpx/ChLogic",
+    "abstract": "提出 ChLogic 英汉对齐的逻辑推理鲁棒性评测基准，检验大语言模型在相同潜在逻辑结构以英语和多样汉语表面形式表达时是否保持推理性能。基准基于形式逻辑模板构建，包括 General aligned、Difficult aligned 和 Chinese-only 三个子集。对 Qwen3、Ministral 和 GLM 模型的实验揭示持续的英汉性能差距，并表明回译对简单集合有效但在难题集合上可能产生负面影响，说明汉语表面实现、翻译伪影与模型特异性行为共同影响多语言逻辑推理。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-17",
+    "title": "A Gradient Perspective on RLVR Stability and Winner Advantage Policy Optimization",
+    "arxiv_id": "2606.16154",
+    "github": "https://github.com/layer6ai-labs/wapo",
+    "abstract": "从 token 级梯度动态角度分析带可验证奖励强化学习（RLVR）的不稳定性，提出分类法预测策略梯度更新如何影响下一 token 概率与熵，发现稳定性取决于优势符号与当前策略下的 token 分布。基于此提出 Winner Advantage Policy Optimization（WAPO），一种仅对正优势完成进行更新的在线裁剪策略梯度目标。在数学推理与多跳 QA 基准上，WAPO 提升训练稳定性，并在多个模型家族上匹配或超越 GRPO 等基线。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Dr-DCI: Scaling Direct Corpus Interaction via Dynamic Workspace Expansion",
+    "arxiv_id": "2606.14885",
+    "github": "https://github.com/EigenTom/DR-DCI",
+    "abstract": "提出 DR-DCI，一种检索器引导的直接语料交互框架，解决大规模语料上全量终端命令随语料增长变慢失稳的问题。DR-DCI 将检索视为可调用动作，动态把相关文档拉入局部工作区并在其中执行 DCI 操作，兼顾检索的召回能力与 DCI 的精确证据解析。在 Browsecomp-Plus 上达到 71.2% 准确率，较原始 DCI 提升最多 8.3 点；配合工作区保留的上下文重置进一步提升至 73.3%。在 10M 乃至 20M 文档规模的实验中都保持有效。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Variable-Width Transformers",
+    "arxiv_id": "2606.18246",
+    "github": "https://github.com/ZhaofengWu/variable-width-transformers",
+    "abstract": "提出 Variable-Width Transformer（又称 > <former），探索 Transformer 深度方向上的非均匀容量分配。该架构让首尾层更宽、中间层更窄，通过无参残差缩放机制连接不同宽度层。在 200M 到 2B 参数密集模型及 3B 参数 MoE 上的实验表明，> <former 在参数匹配设定下持续优于均匀基线，降低 22% FLOPs 与 15% KV cache 和 I/O 开销。分析显示瓶颈结构会在残差流中产生质性不同的表示，证明非均匀宽度分配可实现更资源最优的语言模型缩放。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-17",
+    "title": "RepSelect: Robust LLM Unlearning via Representation Selectivity",
+    "arxiv_id": "2606.17168",
+    "github": "https://github.com/filyp/RepSelect",
+    "abstract": "提出 RepSelect（Representation Selectivity），解决大语言模型知识遗忘易被微调或 few-shot 提示恢复的浅层遗忘问题。该方法在每次更新前坍塌权重梯度的顶部主成分，隔离遗忘集特有的表示，同时保留通用能力并限制微调攻击者可恢复的信息。在生物危害知识与滥用倾向两类遗忘任务、覆盖 Llama 3、Qwen 3.5、Gemma 4 E4B 和 DeepSeek V2 Lite 四个模型家族的实验中，RepSelect 较最强基线将再学习后答案准确率降低 4-50 倍，并对 few-shot 提示攻击近乎完全鲁棒。",
+    "tags": [
+      "微调"
+    ]
+  }
+]
