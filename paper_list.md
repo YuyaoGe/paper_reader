@@ -3944,3 +3944,38 @@
 
 - **RepSelect: Robust LLM Unlearning via Representation Selectivity** `[微调]` — [2606.17168](https://arxiv.org/abs/2606.17168) | [GitHub](https://github.com/filyp/RepSelect)
   > 提出 RepSelect（Representation Selectivity），解决大语言模型知识遗忘易被微调或 few-shot 提示恢复的浅层遗忘问题。该方法在每次更新前坍塌权重梯度的顶部主成分，隔离遗忘集特有的表示，同时保留通用能力并限制微调攻击者可恢复的信息。在生物危害知识与滥用倾向两类遗忘任务、覆盖 Llama 3、Qwen 3.5、Gemma 4 E4B 和 DeepSeek V2 Lite 四个模型家族的实验中，RepSelect 较最强基线将再学习后答案准确率降低 4-50 倍，并对 few-shot 提示攻击近乎完全鲁棒。
+
+## 2026年6月18日
+
+- **EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts** `[RL]` — [2606.18967](https://arxiv.org/abs/2606.18967) | [GitHub](https://github.com/furiosa-ai/EfficientRollout)
+  > 提出系统感知自推测解码框架EfficientRollout，针对RL rollout生成延迟瓶颈，从目标模型诱导量化draft模型并配合自适应投机切换与接受感知的draft长度策略。在保持模型质量的同时，rollout端到端延迟最高降低19.6%，端到端训练延迟降低12.7%。
+
+- **Reinforcing Dual-Path Reasoning in Spatial Vision Language Models** `[RL]` `[VLM]` — [2606.17539](https://arxiv.org/abs/2606.17539) | [GitHub](https://github.com/jiyt17/SR-REAL)
+  > 提出SR-REAL框架，通过强化学习为空间视觉语言模型构建语言-only推理与先检测后推理的双路径机制。利用区域token进行3D几何定位，并设计离散中心检测奖励优化几何对齐，在多项空间推理基准上显著超越现有基线。
+
+- **From Trainee to Trainer: LLM-Designed Training Environment for RL with Multi-Agent Reasoning** `[RL]` — [2606.17682](https://arxiv.org/abs/2606.17682) | [GitHub](https://github.com/LARK-AI-Lab/Trainee-to-Trainer)
+  > 提出LLM作为环境工程师的框架，让当前策略模型分析失败轨迹并自动生成下一阶段训练环境配置。在MAPF-FrozenLake可控测试床上，Qwen3-4B backbone超越固定环境训练基线及更大 proprietary 模型。
+
+- **Native Active Perception as Reasoning for Omni-Modal Understanding** `[VLM]` `[RL]` — [2606.19341](https://arxiv.org/abs/2606.19341) | [GitHub](https://github.com/harryhsing/OmniAgent)
+  > 提出首个原生全模态智能体OmniAgent，将视频理解建模为POMDP迭代观察-思考-行动循环，按需蒸馏音视觉线索到持久文本记忆。通过智能体SFT与TAURA强化学习，在VideoMME、LVBench等十个基准达到开源最优。
+
+- **STARE: Surprisal-Guided Token-Level Advantage Reweighting for Policy Entropy Stability** `[RL]` — [2606.19236](https://arxiv.org/abs/2606.19236) | [GitHub](https://github.com/hp-luo/STARE)
+  > 提出STARE方法，通过困惑度引导的token级优势重加权解决GRPO训练中的策略熵崩溃问题。识别熵临界token子集并闭环调节目标熵，在1.5B到32B模型及短CoT、长CoT、多轮工具使用任务上稳定训练，AIME24/25提升4%-8%。
+
+- **Sumi: Open Uniform Diffusion Language Model from Scratch** `[扩散模型]` — [2606.19005](https://arxiv.org/abs/2606.19005) | [GitHub](https://github.com/tohoku-nlp/sumi)
+  > 发布首个从头预训练的大规模开放统一扩散语言模型Sumi-7B，基于1.5T token训练。在知识、推理和编程基准上与同等数据量的自回归模型相当，并开源模型权重、检查点及完整训练配方，推动统一扩散建模研究。
+
+- **Beyond Alignment: Value Diversity as a Collective Property in Multicultural Agent Systems** — [2606.05985](https://arxiv.org/abs/2606.05985) | [GitHub](https://github.com/iNLP-Lab/MultiAgent-Diversity)
+  > 提出价值多样性作为多文化多智能体系统的系统级评估维度，衡量不同文化背景智能体在共同价值观调查上的响应差异。对19种文化和18个骨干模型评估发现，现有系统多样性显著低于人类社会，且社会交互会进一步削弱多样性。
+
+- **SciOrch: Learning to Orchestrate Expert LLMs for Solving Frontier Multimodal Scientific Reasoning Tasks** `[API]` — [2606.15872](https://arxiv.org/abs/2606.15872) | [GitHub](https://github.com/llexieguo/SciOrch)
+  > 提出SciOrch框架，训练8B编排器模型分解科学问题并调度调用前沿LLM API解决多模态科学推理任务。采用MCTS生成多样化编排轨迹并用GRPO风格训练，在SGI-Reasoning和Scientists' First Exam上超越最强单模型与多智能体基线。
+
+- **RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents** `[RL]` — [2606.19047](https://arxiv.org/abs/2606.19047) | [GitHub](https://github.com/inclusionAI/AWorld-RL/tree/main/RODS)
+  > 提出RODS奖励驱动在线数据合成方法，解决多轮工具使用RL中静态数据信息样本耗尽问题。利用进度奖励方差作为零成本能力边界检测器，合成结构复杂度匹配的新样本并维护动态回放缓冲区，以约20倍更少轨迹达到可比性能。
+
+- **Learning User Simulators with Turing Rewards** `[RL]` — [2606.19336](https://arxiv.org/abs/2606.19336) | [GitHub](https://github.com/SusanWYS/turing-rl)
+  > 提出Turing-RL方法，基于图灵测试的强化学习训练用户模拟器。使用判别式图灵奖励和LLM裁判评估生成回复与用户历史的不可区分性，在对话聊天和Reddit论坛两个领域均优于基于相似度奖励的基线方法。
+
+- **Externalizing Research Synthesis and Validation in AI Scientists through a Research Harness** — [2606.18874](https://arxiv.org/abs/2606.18874) | [GitHub](https://github.com/OpenDFM/Xcientist)
+  > 提出Xcientist研究框架，将文献综合与实验验证外部化为可检查、合约约束的过程。通过持久化研究工件组织证据、想法、实现与消融记录，在无需训练的记忆系统、交通预测和物理信息神经网络等任务上保持可追溯的科学问责。
