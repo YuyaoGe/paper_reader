@@ -3979,3 +3979,17 @@
 
 - **Externalizing Research Synthesis and Validation in AI Scientists through a Research Harness** — [2606.18874](https://arxiv.org/abs/2606.18874) | [GitHub](https://github.com/OpenDFM/Xcientist)
   > 提出Xcientist研究框架，将文献综合与实验验证外部化为可检查、合约约束的过程。通过持久化研究工件组织证据、想法、实现与消融记录，在无需训练的记忆系统、交通预测和物理信息神经网络等任务上保持可追溯的科学问责。
+
+## 2026年6月19日
+
+- **FAPO: Fully Autonomous Prompt Optimization of Multi-Step LLM Pipelines** `[API]` — [2606.19605](https://arxiv.org/abs/2606.19605) | [GitHub](https://github.com/cisco-foundation-ai/fully-automated-prompt-optimization)
+  > 针对多步 LLM 流程中检索、推理与格式化步骤交织导致的失败，提出全自主提示优化框架 FAPO。该框架调用 Claude Code 在标准化代码库中对 pipeline 进行评估、诊断、局部修改与反复验证，优先尝试提示编辑，仅在结构性瓶颈时才调整链式结构。在 6 个基准和 3 个任务模型上，18 组对比中 15 次超过基线 GEPA，并在安全 CVE-to-CWE 任务中展现优化能力。代码已开源。
+
+- **Understanding the Behaviors of Environment-aware Information Retrieval** `[RL]` — [2606.16817](https://arxiv.org/abs/2606.16817) | [GitHub](https://github.com/LCO-Embedding/Envs-aware-Information-Retrieval)
+  > 针对检索增强生成中不同检索器需要截然不同查询形式的问题，首次系统研究如何用强化学习让 LLM 学习适配不同检索器的查询策略。实证发现 RL 能有效教会 LLM 针对检索器特性调整查询，不同检索器的最优查询风格差异显著，如描述式与疑问式，且为一个检索器学到的策略难以迁移到另一个。进一步提出检索器特定指导等提升方法，并揭示模型规模与策略学习效果之间的关系。代码已开源。
+
+- **Thinking with Visual Grounding** `[VLM]` — [2606.16122](https://arxiv.org/abs/2606.16122) | [GitHub](https://github.com/Jun-Kai-Zhang/visually_grounded_thinking)
+  > 提出视觉 grounded thinking，让视觉语言模型生成自然语言推理轨迹的同时，用点或框显式标注每一步依据的视觉证据，提升可验证性。设计可扩展合成 pipeline，蒸馏正确视觉推理轨迹，并用 SAM3 智能体提取与 grounding 关键对象；引入 grounding-aware RL 奖励强化该行为。在视觉计数与空间推理基准上，grounded 推理优于纯语言推理基线。代码已开源。
+
+- **Context-Aware RL for Agentic and Multimodal LLMs** `[RL]` — [2606.17053](https://arxiv.org/abs/2606.17053) | [GitHub](https://github.com/xupy2003/ContextAwareRL)
+  > 提出 ContextRL，一种上下文感知的强化学习方法，通过间接辅助目标提升长程推理与多模态能力。该方法让模型在高度相似的对比上下文之间，选择能够支持查询-答案对的上下文，从而奖励细粒度证据定位。在代码智能体轨迹和多模态问答两类场景中构建对比上下文数据，ContextRL 在 long-horizon reasoning 与视觉问答基准上均优于标准方法与数据增强基线。代码已开源。
