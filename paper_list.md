@@ -3993,3 +3993,17 @@
 
 - **Context-Aware RL for Agentic and Multimodal LLMs** `[RL]` — [2606.17053](https://arxiv.org/abs/2606.17053) | [GitHub](https://github.com/xupy2003/ContextAwareRL)
   > 提出 ContextRL，一种上下文感知的强化学习方法，通过间接辅助目标提升长程推理与多模态能力。该方法让模型在高度相似的对比上下文之间，选择能够支持查询-答案对的上下文，从而奖励细粒度证据定位。在代码智能体轨迹和多模态问答两类场景中构建对比上下文数据，ContextRL 在 long-horizon reasoning 与视觉问答基准上均优于标准方法与数据增强基线。代码已开源。
+
+## 2026年6月22日
+
+- **PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models** `[VLM]` `[扩散模型]` — [2606.19534](https://arxiv.org/abs/2606.19534) | [GitHub](https://github.com/MSALab-PKU/PerceptionDLM)
+  > 提出 PerceptionDLM，一种面向高效并行区域感知的多模态扩散语言模型。基于 PerceptionDLM-Base 强基线，利用扩散语言模型的并行解码特性，通过高效提示与结构化注意力掩码，使模型同时感知多个掩码区域并生成描述。实验表明该方法显著提升多区域感知推理效率，同时保持区域描述性能竞争力，并构建 ParaDLC-Bench 进行质量与效率联合评估。
+
+- **MemSlides: A Hierarchical Memory Driven Agent Framework for Personalized Slide Generation with Multi-turn Local Revision** `[MeM]` — [2606.17162](https://arxiv.org/abs/2606.17162) | [GitHub](https://github.com/huohua325/Memslides)
+  > 提出 MemSlides，一种层次化记忆驱动的个性化幻灯片生成 Agent 框架，支持多轮局部修订。框架区分长时记忆与工作记忆，长时记忆进一步划分为用户画像记忆和工具记忆，分别用于首轮个性化、维护会话约束与积累可复用执行经验。该设计将用户反馈投影到最小受影响区域进行局部修补，避免重复生成整个幻灯片，并开源代码与演示网站。
+
+- **Multi-Turn Reflective Masking Elicits Reasoning in Mask Diffusion Models** `[扩散模型]` `[微调]` — [2606.16700](https://arxiv.org/abs/2606.16700) | [GitHub](https://github.com/tianyi-lab/Reflective_Masking)
+  > 提出 Reflective Masking，通过后训练激发掩码扩散模型的多轮反思式推理能力。针对掩码扩散模型一次性预测难以修订的问题，设计 reveal、reflectively mask、keep 三种 token 级动作，并引入无参数的 History Reference 机制将历史去噪状态反馈到修订中。该方法为扩散模型提供原生测试时扩展能力，在图像编辑和数学推理任务上验证有效。
+
+- **StylisticBias: A Few Human Visual Cues Drive Most Social Biases in MLLMs** `[VLM]` — [2606.20527](https://arxiv.org/abs/2606.20527) | [GitHub](https://github.com/timo-cavelius/StylisticBias)
+  > 研究多模态大语言模型社会偏见的视觉驱动因素，提出 StylisticBias 受控评估框架。生成 500 张真实感基准人脸及约 2.5 万张单属性变体图像，在固定身份下每次改变一个视觉属性。在 25 个二元社会判断场景中评估 6 个 MLLM，发现约 15 个视觉属性可解释近 80% 的偏见变异，为细粒度多模态偏见评估提供开源基准。
