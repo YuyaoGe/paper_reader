@@ -4007,3 +4007,32 @@
 
 - **StylisticBias: A Few Human Visual Cues Drive Most Social Biases in MLLMs** `[VLM]` — [2606.20527](https://arxiv.org/abs/2606.20527) | [GitHub](https://github.com/timo-cavelius/StylisticBias)
   > 研究多模态大语言模型社会偏见的视觉驱动因素，提出 StylisticBias 受控评估框架。生成 500 张真实感基准人脸及约 2.5 万张单属性变体图像，在固定身份下每次改变一个视觉属性。在 25 个二元社会判断场景中评估 6 个 MLLM，发现约 15 个视觉属性可解释近 80% 的偏见变异，为细粒度多模态偏见评估提供开源基准。
+
+## 2026年6月23日
+
+- **CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents** `[微调]` — [2606.22883](https://arxiv.org/abs/2606.22883) | [GitHub](https://github.com/google-gemini/gemini-cli)
+  > 提出面向终端 agent 的可验证任务合成引擎 CLI-Universe，通过多维能力分类采样、证据引导的深度研究以及多阶段可执行验证，构建高质量终端任务数据集 CLI-Universe-6K；在 Terminal-Bench 2.0 上，仅用 9B 规模的 Qwen3-32B 微调模型取得 33.4% 的 SOTA。
+
+- **Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding** `[无需训练]` — [2606.21906](https://arxiv.org/abs/2606.21906) | [GitHub](https://github.com/QwenLM/Confident-Decoding)
+  > 提出无需训练的置信层解码策略，揭示自回归语言模型中深层可能扰动推理的 Guess-Refine-Perturb 动态，通过熵引导的逆向保守搜索动态选择最可靠的近末层；在 GPQA-Diamond、Omni-MATH 和 HLE 等推理基准上稳定提升，几乎不增加显存与延迟。
+
+- **Tmax: A simple recipe for terminal agents** `[RL]` — [2606.23321](https://arxiv.org/abs/2606.23321) | [GitHub](https://github.com/hamishivi/tmax)
+  > 提出当前最强的终端 agent 开源 RL 训练方案 Tmax，通过新颖的任务分类法结合难度控制、人格化与验证器多样化生成大规模终端环境，并开源超过此前 2.5 倍的终端 agent 数据集；9B 模型在 Terminal-Bench 2.0 上达到 27%。
+
+- **Training Open Models for Agentic Phone Use** `[RL]` `[微调]` — [2606.23049](https://arxiv.org/abs/2606.23049) | [GitHub](https://github.com/PhoneBuddyAI/phonebuddy)
+  > 提出面向手机使用的 agent 训练方案 PhoneBuddy，结合真实应用环境与基于真实 GUI 结构重建的可运行模拟应用环境 PhoneWorld，先进行跨环境 SFT，再比较真实应用 RL 与混合 RL；在 150 项真实手机任务上成功率从 36.67% 提升至 45.33%，AndroidWorld 上达 83.2%。
+
+- **Connect the Dots: Training LLMs for Long-Lifecycle Agents with Cross-Domain Generalization Via Reinforcement Learning** `[RL]` — [2606.20002](https://arxiv.org/abs/2606.20002) | [GitHub](https://github.com/agentscope-ai/Trinity-RFT)
+  > 提出训练大语言模型获得长生命周期 agent 元能力的 CoD 框架，通过端到端强化学习在交错的任务求解与上下文更新情节上进行长程 rollout，并设计 GRPO 风格细粒度信用分配；实验验证了同域、跨域及 Ralph-loop 场景下的泛化能力。
+
+- **FastMix: Fast Data Mixture Optimization via Gradient Descent** — [2606.14971](https://arxiv.org/abs/2606.14971) | [GitHub](https://github.com/hrtan/fastmix)
+  > 提出仅训练一个代理模型即可自动发现最优数据配比的 FastMix 框架，将数据混合建模为双层优化问题，证明其等价于均匀采样下的可微损失加权，并通过交替更新模型参数与验证反馈优化混合系数；在预训练和后训练上均显著降低搜索成本并提升性能。
+
+- **Manifold Bandits: Bayesian Curriculum Learning over the Latent Geometry of Large Language Models** `[RL]` — [2606.19750](https://arxiv.org/abs/2606.19750) | [GitHub](https://github.com/DarrienMcKenzie/manifold-bandits)
+  > 提出贝叶斯流形课程 BMC，将 LLM 推理训练中的问题采样建模为具有内生非平稳性的流形 bandit 问题，通过层次任务树组织问题并利用贝叶斯学习引导采样；实验表明仅关注难度不足，引入问题结构与类型意识能显著提升下游性能。
+
+- **Demystifying Training-Time Augmentation for Data-Constrained Language Model Pretraining** — [2606.16246](https://arxiv.org/abs/2606.16246) | [GitHub](https://github.com/michaelchen-lab/data-augmentations-for-pretraining)
+  > 系统研究数据受限场景下语言模型预训练时的训练时数据增强，提出 token 级噪声、序列排列与目标偏移预测三类正交增强方法；实验表明随机 token 替换等增强可降低验证损失、延缓过拟合，使固定语料上的多轮训练更有效。
+
+- **AC-ODM: Actor--Critic Online Data Mixing for Sample-Efficient LLM Pretraining** `[RL]` — [2505.23878](https://arxiv.org/abs/2505.23878) | [GitHub](https://github.com/DANG-ai/AC-ODM)
+  > 提出 Actor-Critic Online Data Mixing (AC-ODM)，从强化学习视角在线优化预训练数据组成，参数化策略被证明可最大化梯度建设性干涉；支持代理模式与非代理模式，在 Pythia-1B 上以更少训练步数达到更优困惑度和下游准确率。
