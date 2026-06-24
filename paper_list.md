@@ -4036,3 +4036,26 @@
 
 - **AC-ODM: Actor--Critic Online Data Mixing for Sample-Efficient LLM Pretraining** `[RL]` — [2505.23878](https://arxiv.org/abs/2505.23878) | [GitHub](https://github.com/DANG-ai/AC-ODM)
   > 提出 Actor-Critic Online Data Mixing (AC-ODM)，从强化学习视角在线优化预训练数据组成，参数化策略被证明可最大化梯度建设性干涉；支持代理模式与非代理模式，在 Pythia-1B 上以更少训练步数达到更优困惑度和下游准确率。
+
+## 2026年6月24日
+
+- **MobileForge: Annotation-Free Adaptation for Mobile GUI Agents with Hierarchical Feedback-Guided Policy Optimization** `[RL]` `[VLM]` — [2606.19930](https://arxiv.org/abs/2606.19930) | [GitHub](https://github.com/kwai/MobileForge)
+  > 提出MobileForge，一种面向移动GUI智能体的无标注自适应系统。通过MobileGym在真实应用交互中生成任务与评估轨迹，并设计层次化反馈引导策略优化（HiFPO），将结果反馈、过程反馈与修正提示转化为逐步GRPO更新。在AndroidWorld上使Qwen3-VL-8B达到67.2% Pass@3，ForgeOwl-8B进一步达到77.6%。
+
+- **MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management** `[VLM]` `[微调]` — [2606.19926](https://arxiv.org/abs/2606.19926) | [GitHub](https://github.com/kwai/MemGUI-Agent)
+  > 提出MemGUI-Agent，一种具有主动上下文管理能力的端到端长程移动GUI智能体。核心为Context-as-Action（ConAct）机制，将上下文管理视为与UI动作同等重要的动作类型，维护折叠动作历史、折叠UI状态与近期步骤记录。基于2,956条ConAct标注轨迹训练出MemGUI-8B-SFT，在MemGUI-Bench与MobileWorld上取得领先性能。
+
+- **AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction** — [2606.23449](https://arxiv.org/abs/2606.23449) | [GitHub](https://github.com/aohp-os/aohp)
+  > 提出AOHP（Android Open Harness Project），一个基于AOSP的开源操作系统级智能体Harness。将智能体视为操作系统一等公民，支持自适应用户界面与智能体友好的运行时环境，并引入个性化服务组合、高效智能体接口与安全信息流三种机制。在覆盖OS智能体关键能力的任务上，任务完成率提升21.12%，token成本降低51.55%。
+
+- **OpenThoughts-Agent: Data Recipes for Agentic Models** `[微调]` — [2606.24855](https://arxiv.org/abs/2606.24855) | [GitHub](https://github.com/open-thoughts/OpenThoughts-Agent)
+  > 提出OpenThoughts-Agent项目，构建面向通用智能体模型的完全开放数据整理流程。通过100余项控制实验系统研究数据pipeline各阶段，整合10万条训练样本对Qwen3-32B进行微调，在七个智能体基准上平均准确率达44.8%，超越现有最强开放数据智能体模型3.9个百分点，并展现出良好的数据缩放特性。
+
+- **Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning** `[RL]` — [2606.24133](https://arxiv.org/abs/2606.24133) | [GitHub](https://github.com/DANG-ai/LLM-Training-Holistic-Data-Schedule)
+  > 提出Holistic Data Scheduler（HDS），一种面向LLM预训练的多目标强化学习在线数据混合框架。将数据调度建模为连续控制空间的强化学习问题，采用SAC算法优化，并设计融合数据质量、领域间影响与权重范数的多目标奖励函数。在The Pile上以最先进方法56%的训练步数达到相同验证困惑度，MMLU 0-shot提升7.2%。
+
+- **DREAM: Dense Retrieval Embeddings via Autoregressive Modeling** — [2606.24667](https://arxiv.org/abs/2606.24667) | [GitHub](https://github.com/yixuantt/DREAM)
+  > 提出DREAM，一种利用自回归大语言模型监督信号训练稠密检索嵌入模型的新方法。将检索器生成的查询-文档相似度分数注入冻结LLM的特定注意力头，使文档在目标输出预测中获得差异化关注，并通过注意力机制反向传播梯度以训练检索器。在BEIR与RTEB基准上，0.5B至3B参数模型均稳定超越现有基线。
+
+- **ReMMD: Realistic Multilingual Multi-Image Agentic Verification for Multimodal Misinformation Detection** `[VLM]` `[API]` — [2606.24112](https://arxiv.org/abs/2606.24112) | [GitHub](https://github.com/DANG-ai/ReMMDBench-Agent)
+  > 提出ReMMD，一个面向多模态虚假信息检测的真实多语言多图像智能体验证框架。包含ReMMDBench基准（500样本、五语言、多图像、五分类）与ReMMD-Agent持久化记忆验证器，将帖子分解为原子要点并构建可复用证据集。在GPT-5.2支持下取得41.80%准确率与39.12%宏F1，相比基线显著降低成本。
