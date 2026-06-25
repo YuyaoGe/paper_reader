@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-06-25",
+    "title": "Are We Ready For An Agent-Native Memory System?",
+    "arxiv_id": "2606.24775",
+    "github": "https://github.com/OpenDataBox/MemoryData",
+    "abstract": "本文从数据管理视角系统评估了LLM Agent记忆系统，将其拆解为表示存储、抽取、检索路由与维护四大模块。作者在5个benchmark工作负载、11个数据集上对比了12种代表性记忆系统，通过细粒度消融实验量化了各模块对表示保真度、检索精度、更新正确性与长期稳定性的影响，并揭示了局部维护比全局重构更具成本效益的结论，为构建真正面向Agent的原生记忆系统指明了方向。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-06-25",
+    "title": "ShutterMuse: Capture-Time Photography Guidance with MLLMs",
+    "arxiv_id": "2606.25763",
+    "github": "https://github.com/lijayuTnT/ShutterMuse",
+    "abstract": "本文提出了CaptureGuide-Bench与CaptureGuide-Dataset，用于评估MLLM在拍摄时刻的构图与姿态指导能力，并开发了统一的ShutterMuse模型。该模型结合监督微调与强化学习进行训练，在摄影师侧构图决策与优化以及被摄者姿态推荐任务上均取得了领先性能，同时推理成本显著低于基线，展示了MLLM作为实时摄影助手的潜力。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-06-25",
+    "title": "Improved Large Language Diffusion Models",
+    "arxiv_id": "2606.25331",
+    "github": "https://github.com/ML-GSAI/LLaDA",
+    "abstract": "本文提出了iLLaDA，一个从头训练的80亿参数掩码扩散语言模型，采用全双向注意力与掩码扩散目标贯穿预训练和SFT阶段。模型在12T token上预训练、25B token指令数据上微调，并引入变长生成与基于置信度的多选评分。实验表明iLLaDA在BBH、ARC-Challenge、MATH和HumanEval等基准上较LLaDA有显著提升，证明全双向扩散训练是构建强语言模型的有效路径。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-06-25",
+    "title": "RL-Index: Reinforcement Learning for Retrieval Index Reasoning",
+    "arxiv_id": "2606.16316",
+    "github": "https://github.com/Yoega/RL-Index",
+    "abstract": "本文提出RL-Index，一种将检索索引推理建模为强化学习问题的Agent式索引框架。该方法在索引阶段利用LLM生成显式推理过程来增强文档，并通过GRPO以检索相似度作为可验证奖励信号来优化推理质量，从而将复杂推理从查询时转移到索引时。在BRIGHT基准上的实验表明，RL-Index能显著提升检索与下游问答性能，并降低在线推理延迟。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-06-25",
+    "title": "Advancing WordArt-Oriented Scene Text Recognition: Datasets and Methods",
+    "arxiv_id": "2606.24484",
+    "github": "https://github.com/YesianRohn/WATER",
+    "abstract": "本文针对艺术字场景文本识别（WATER）任务，构建了200万规模的WATER-S合成数据集，并提出了WATERec模型。该模型采用支持任意形状输入的视觉编码器与自回归解码器，突破了固定模板STR方法在WordArt上的瓶颈。结合重新组织的真实数据WATER-R，该方法在WordArt-Bench上达到90.40%的准确率，显著优于通用OCR模型与专用场景文本识别方法。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-25",
+    "title": "CAVEWOMAN: How Large Language Models Behave Under Linguistic Input and Output Compression",
+    "arxiv_id": "2606.24083",
+    "github": "https://github.com/danielle34/cavewoman",
+    "abstract": "本文提出了Cavewoman双通道评估协议，系统研究LLM在用户提示压缩与模型输出压缩下的行为、成本与语义一致性。作者在8个模型、5个数据集、5种压缩比例上进行实验，发现输出压缩可降低API模型与开源模型的实际成本，而输入压缩则普遍导致成本上升且准确率下降。该工作为LLM推理时的语言压缩策略选择提供了实证依据与关键洞察。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-25",
+    "title": "When Lower Privileges Suffice: Investigating Over-Privileged Tool Selection in LLM Agents",
+    "arxiv_id": "2606.20023",
+    "github": "https://github.com/AISafetyHub/agent-tool-selection-bias",
+    "abstract": "本文研究了LLM Agent中的权限过高工具选择问题，即Agent在存在足够低权限工具时仍选择或升级到高权限工具的现象。作者构建了ToolPrivBench，在8个领域和5类风险模式下评估主流Agent，发现该问题普遍存在且会因工具临时失败而加剧。进一步提出权限感知的后训练防御方法，使Agent优先选择足够的低权限工具，实验表明其能在保持通用能力的同时显著减少不必要的高权限调用。",
+    "tags": []
+  },
+  {
+    "date": "2026-06-25",
+    "title": "What Intermediate Layers Know: Detecting Jailbreaks from Entropy Dynamics",
+    "arxiv_id": "2606.25182",
+    "github": "https://github.com/ssophiee/entropy-jailbreak-detection",
+    "abstract": "本文通过logit lens分析冻结LLM在token级别预测熵随层数变化的轨迹，研究越狱攻击在模型内部表征中的编码方式。作者发现静态聚合熵统计区分能力有限，而基于单调排序的趋势分数等动态特征在中层表征中蕴含显著信号。在Llama、Qwen、Gemma等多个模型与对抗基准上的实验表明，无需额外训练即可有效分离越狱样本，揭示了越狱行为与中间层不确定性动态之间的结构关联。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-06-25",
+    "title": "Lite Any Stereo V2: Faster and Stronger Efficient Zero-Shot Stereo Matching",
+    "arxiv_id": "2606.24457",
+    "github": "https://github.com/TomTomTommi/LiteAnyStereo",
+    "abstract": "本文提出了Lite Any Stereo V2（LAS2），一个面向资源受限平台的高效零样本立体匹配模型系列。该方法从架构与训练两方面进行优化：架构上采用纯2D代价聚合框架以降低实际推理延迟；训练上结合合成监督、自蒸馏与真实世界知识蒸馏，并引入伪标签过滤与误差截断操作以提升合成到真实的迁移稳定性。实验显示LAS2在保持超低延迟的同时达到了高效立体匹配方法中的最优精度。",
+    "tags": []
+  }
+]
