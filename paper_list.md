@@ -4088,3 +4088,20 @@
 
 - **Lite Any Stereo V2: Faster and Stronger Efficient Zero-Shot Stereo Matching** — [2606.24457](https://arxiv.org/abs/2606.24457) | [GitHub](https://github.com/TomTomTommi/LiteAnyStereo)
   > 本文提出了Lite Any Stereo V2（LAS2），一个面向资源受限平台的高效零样本立体匹配模型系列。该方法从架构与训练两方面进行优化：架构上采用纯2D代价聚合框架以降低实际推理延迟；训练上结合合成监督、自蒸馏与真实世界知识蒸馏，并引入伪标签过滤与误差截断操作以提升合成到真实的迁移稳定性。实验显示LAS2在保持超低延迟的同时达到了高效立体匹配方法中的最优精度。
+
+## 2026年6月26日
+
+- **JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting** — [2606.18394](https://arxiv.org/abs/2606.18394) | [GitHub](https://github.com/hao-ai-lab/JetSpec)
+  > 提出 JetSpec，一种面向大语言模型的推测解码框架，通过因果并行 draft head 在冻结目标模型的融合隐状态上单次前向生成候选树，使 draft 分数与目标模型的自回归分解对齐。在数学、代码和对话基准上，JetSpec 一致优于双向头和树基线，在 H100 上 MATH-500 最高达 9.64 倍加速，并完成 vLLM 集成验证。
+
+- **Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It** `[RL]` — [2606.26027](https://arxiv.org/abs/2606.26027) | [GitHub](https://github.com/hypasd-art/Tool-RL-Box)
+  > 发现多步工具调用场景下的强化学习存在崩溃现象：稀疏的轨迹级奖励难以为中间决策提供有效监督，导致策略优化不稳定。本文系统分析崩溃原因，并提出利用监督信号修复的方法，通过引入密集监督改善多步工具使用策略的样本效率与稳定性。在相关多步工具推理任务上的实验表明，所提方法能显著提升智能体完成复杂工具调用任务的性能与鲁棒性。
+
+- **LISA: Likelihood Score Alignment for Visual-condition Controllable Generation** `[扩散模型]` — [2606.27192](https://arxiv.org/abs/2606.27192) | [GitHub](https://github.com/HKUST-LongGroup/LISA)
+  > 提出 LISA，一种面向视觉条件可控生成的方法，通过似然分数对齐机制在生成过程中注入细粒度的视觉条件控制。该方法在保持生成质量的同时增强对视觉条件的响应能力，支持更灵活的图像编辑与生成引导。在多个视觉条件生成基准上的实验表明，LISA 取得了有竞争力的结果，并开源了模型训练与推理代码。
+
+- **GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents** `[API]` — [2606.24551](https://arxiv.org/abs/2606.24551) | [GitHub](https://github.com/rebeccaz4/gui-vs-cli)
+  > 系统比较了仅基于屏幕的 GUI 智能体与基于技能媒介的 CLI 智能体在计算机使用任务中的执行瓶颈，从环境交互、动作空间、错误传播与可解释性等维度分析两类范式的优劣。实验覆盖多个真实计算机使用场景，结果表明 CLI 智能体在长程复杂任务中具有更高的执行效率与可控性，相关评估框架与代码已开源。
+
+- **How Post-Training Shapes Biological Reasoning Models** `[微调]` — [2606.16517](https://arxiv.org/abs/2606.16517) | [GitHub](https://github.com/mims-harvard/bio-posttrain)
+  > 研究后训练如何塑造生物领域推理模型，系统分析监督微调、强化学习等后训练策略对模型生物医学推理能力的影响。实验表明，针对性的后训练能显著提升模型在生物问答、文献理解和假设生成等任务上的表现，并揭示了训练数据分布、后训练目标与评估指标之间的关键关系，相关数据与代码已公开。
