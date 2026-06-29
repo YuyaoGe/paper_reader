@@ -4105,3 +4105,29 @@
 
 - **How Post-Training Shapes Biological Reasoning Models** `[微调]` — [2606.16517](https://arxiv.org/abs/2606.16517) | [GitHub](https://github.com/mims-harvard/bio-posttrain)
   > 研究后训练如何塑造生物领域推理模型，系统分析监督微调、强化学习等后训练策略对模型生物医学推理能力的影响。实验表明，针对性的后训练能显著提升模型在生物问答、文献理解和假设生成等任务上的表现，并揭示了训练数据分布、后训练目标与评估指标之间的关键关系，相关数据与代码已公开。
+
+## 2026年6月29日
+
+- **Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs** — [2606.27378](https://arxiv.org/abs/2606.27378) | [GitHub](https://github.com/fard-lab/formalize-thoughts)
+  > 提出一套公理化评估框架，用于刻画大语言模型中隐式思维表示的质量。形式化因果性、最小性、可分离性与稳定性四条公理，并定义独立于下游准确率的定量指标。在23项推理任务上审计发现，现有模型表示无法区分同任务内不同问题，且编码信息主要来自输入嵌入。
+
+- **MultiHashFormer: Hash-based Generative Language Models** — [2606.28057](https://arxiv.org/abs/2606.28057) | [GitHub](https://github.com/HUIYINXUE/MHF)
+  > 提出基于哈希的生成式语言模型MultiHashFormer，将每个token表示为多个独立哈希函数生成的离散签名序列，再通过Hash Encoder压缩为单一向量供Transformer解码器处理。在100M到3B参数规模上均优于标准Transformer，并能在多语言词汇扩展时保持恒定参数开销。
+
+- **ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering** `[VLM]` `[RL]` — [2606.27974](https://arxiv.org/abs/2606.27974) | [GitHub](https://github.com/DingWu1021/Promsa)
+  > 面向知识型视觉问答提出渐进式多模态搜索智能体ProMSA，根据图像-问题迭代选择图像搜索、文本搜索或停止，并引入去重与显式工具调用预算。训练上先通过拒绝采样SFT学习工具格式，再用TN-GSPO序列级强化学习优化。在E-VQA和InfoSeek上取得一致提升。
+
+- **Parallel Rollout Approximation for Pixel-Space Autoregressive Image Generation** — [2606.27978](https://arxiv.org/abs/2606.27978) | [GitHub](https://github.com/MangataX/PRA)
+  > 面向像素空间连续token自回归图像生成提出并行rollout近似PRA。通过生成低维中间状态再由像素解码器映射回像素空间，同时以推理时的像素反馈路径构造训练输入，弥合训练-推理差距。在ImageNet-256×256上，PRA-S（135M）FID达2.58，PRA-L（511M）达1.94，创像素空间AR模型新SOTA。
+
+- **GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems** — [2606.28187](https://arxiv.org/abs/2606.28187) | [GitHub](https://github.com/yxc-cyber/AgentChord)
+  > 提出基于梯度的多智能体系统优化方法GBC，将多智能体系统建模为计算图，引入梯度连接权重量化各智能体输出对下游智能体在token级的影响。通过构建归因图并反向传播任务损失，实现错误源精准定位与提示词优化。在MultiWOZ和τ-bench上性能优于强基线。
+
+- **Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)** `[RL]` — [2606.27163](https://arxiv.org/abs/2606.27163) | [GitHub](https://github.com/IliaLarchenko/lehome_solution)
+  > 介绍LeHome Challenge 2026双手服装折叠竞赛冠军方案。通过强化学习循环改进视觉-语言-动作策略，使同一网络同时预测动作与成功概率、进度等未来量，用于优势估计、实时失败检测与候选选择。结合AWR+RECAP流匹配VLA、异步分布式训练与sim-to-real数据收集策略。
+
+- **Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents** `[API]` `[无需训练]` — [2511.07397](https://arxiv.org/abs/2511.07397) | [GitHub](https://github.com/vysri/conversational-infill)
+  > 提出对话填充conversational infill，让小规模实时talker模型在毫秒级首响应的同时，边生成边流畅整合外部推理模型的流式知识。构建29万样本跨六域合成数据集，在135M到1.7B参数的七个语言模型上验证。系统ConvFill在Apple M2上运行，用户研究显示其在检索密集型任务上接近前沿模型且响应更快。
+
+- **Boundary-Aware Context Grounding for A Low-Channel EEG Agent** — [2606.26519](https://arxiv.org/abs/2606.26519) | [GitHub](https://github.com/Neuradock/eeg-workstation-agent)
+  > 提出NeuraDock Agent，面向低通道脑电信号处理的开源智能体架构。将确定性本地EEG数值引擎与硬件感知的语言层解耦，LLM仅接收经审核的上下文包而非原始数据，以明确实现边界、科学限制与参考案例约束其可回答范围。在重复性、边界保持与对抗性问题上进行系统评估，支持硬件感知的知识grounding。
