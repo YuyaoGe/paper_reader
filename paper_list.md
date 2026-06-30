@@ -4131,3 +4131,17 @@
 
 - **Boundary-Aware Context Grounding for A Low-Channel EEG Agent** — [2606.26519](https://arxiv.org/abs/2606.26519) | [GitHub](https://github.com/Neuradock/eeg-workstation-agent)
   > 提出NeuraDock Agent，面向低通道脑电信号处理的开源智能体架构。将确定性本地EEG数值引擎与硬件感知的语言层解耦，LLM仅接收经审核的上下文包而非原始数据，以明确实现边界、科学限制与参考案例约束其可回答范围。在重复性、边界保持与对抗性问题上进行系统评估，支持硬件感知的知识grounding。
+
+## 2026年6月30日
+
+- **Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent** `[微调]` — [2606.30616](https://arxiv.org/abs/2606.30616) | [GitHub](https://github.com/InternScience/Agents-A1)
+  > 提出 Agents-A1，一个 350 亿参数的混合专家智能体模型，通过扩展智能体视界而非单纯堆参数量达到万亿参数级性能。研究从长程轨迹扩展与异构智能体能力扩展两个维度展开，构建连接外部知识、动作、观测与验证器结果的知识-行动基础设施，并设计三阶段训练流程：全领域监督微调、领域级教师模型训练以及多教师领域路由的在线策略蒸馏。在 SEAL-0、IFBench、HiPhO 等多个长程智能体基准上达到或超越 1T 参数模型。
+
+- **ReFreeKV: Towards Threshold-Free KV Cache Compression** `[无需训练]` — [2502.16886](https://arxiv.org/abs/2502.16886) | [GitHub](https://github.com/Patrick-Ni/ReFreeKV)
+  > 针对大语言模型推理中 KV 缓存压缩方法依赖输入相关阈值的问题，提出无阈值压缩目标及首个实例化方法 ReFreeKV。该方法能够根据输入自适应分配压缩预算，在保持全缓存性能的同时消除对预定义阈值的依赖。在 13 个覆盖不同上下文长度、任务类型和模型尺寸的实验上验证了有效性与效率，为开放域场景下的 KV 缓存压缩提供了更鲁棒的解决方案。
+
+- **Cognitive Episodes in LLM Reasoning Traces Enable Interpretable Human Item Difficulty Prediction** `[API]` — [2606.28186](https://arxiv.org/abs/2606.28186) | [GitHub](https://github.com/c-steve-wang/Epi2Diff)
+  > 提出 Epi2Diff 框架，将大型推理模型的推理轨迹映射为具有认知基础的 episode 序列，用于可解释的人类题目难度预测。通过从推理规模、努力分配和状态转移等维度提取 episode 动态特征，并结合题目语义表示，在四个人类难度数据集上持续超越微调小模型、LLM 上下文学习和监督微调等强基线。研究表明较难题目会诱导更费力、更迭代且更偏向实现的推理过程。
+
+- **ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models** `[API]` — [2606.23404](https://arxiv.org/abs/2606.23404) | [GitHub](https://github.com/icip-cas/ReasoningLens)
+  > 提出 ReasoningLens 开源框架，用于对大型推理模型超长思维链进行层次化可视化与诊断审计。该框架将非结构化推理轨迹组织为可交互的层级结构，区分高层策略与低层执行；通过智能体审计器实现自动错误检测与工具增强验证，并合成系统性推理画像以揭示模型特定盲点。为理解、调试和优化下一代推理型 AI 提供了模块化基础。
