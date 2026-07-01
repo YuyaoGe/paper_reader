@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-07-01",
+    "title": "BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
+    "arxiv_id": "2606.31315",
+    "github": "https://github.com/AMAP-ML/BlockPilot",
+    "abstract": "提出BlockPilot，一种面向扩散模型投机解码的实例自适应策略学习方法。针对现有方法固定块大小假设次优的问题，从预填充表示中预测最优块大小，实现样本级自适应决策。在Qwen3-4B上接受长度达5.92、加速比达4.20倍，且开销极小、即插即用。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Multi-Block Diffusion Language Models",
+    "arxiv_id": "2606.29215",
+    "github": "https://github.com/SJTU-DENG-Lab/mbd-lms",
+    "abstract": "提出多块扩散语言模型，通过并行生成多个token块提升扩散语言模型的生成效率与质量。核心方法是将序列划分为多块并联合去噪，缓解单步生成中的依赖断裂问题。实验在多项文本生成基准上验证了方法的有效性，实现了更快的采样速度与更好的生成质量。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
+    "arxiv_id": "2606.29082",
+    "github": "https://github.com/Open-Galapagos/evolution-fine-tuning",
+    "abstract": "提出Evolution Fine-Tuning，一种跨371个优化任务学习发现能力的新型微调范式。将进化搜索策略蒸馏到语言模型中，使其能够自动设计优化算法。在广泛优化任务上超越了传统启发式方法和通用大模型基线，展现出强大的跨任务泛化能力。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "SkillHone: A Harness for Continual Agent Skill Evolution Through Persistent Decision History",
+    "arxiv_id": "2606.08671",
+    "github": "https://github.com/Tencent/SkillHone",
+    "abstract": "提出SkillHone框架，通过持久化决策历史实现智能体技能的持续进化。设计了一套harness来管理智能体的经验回放、技能评估与迭代优化，支持在开放环境中持续提升任务解决能力。实验表明该方法能有效促进智能体技能的累积学习与迁移。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+    "arxiv_id": "2606.23127",
+    "github": "https://github.com/DavydenkoGr/AFTER",
+    "abstract": "研究LLM智能体中的程序性记忆管理，提出控制、适应与评估程序性记忆的系统方法。通过结构化记忆表示和动态更新机制，使智能体能够将任务执行经验转化为可复用的程序知识。在多个智能体基准上验证了记忆管理对长期任务执行效率的提升效果。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "DataEvolver: Self-Evolving Multi-Agent Data Construction for Text-Rich Image Generation",
+    "arxiv_id": "2606.31537",
+    "github": "https://github.com/CSU-JPG/DataEvolver",
+    "abstract": "提出DataEvolver，一种自进化的多智能体数据构建框架，用于生成富含文本的图像。通过多智能体协作不断迭代优化合成数据质量，并利用反馈机制自动修正数据缺陷。实验表明生成的数据能有效提升视觉语言模型在文本渲染和图文对齐任务上的性能。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+    "arxiv_id": "2606.32032",
+    "github": "https://github.com/yale-nlp/RLMF",
+    "abstract": "提出利用元认知反馈进行强化学习的方法，使大语言模型能够真实表达不确定性。通过设计元认知奖励信号，引导模型在回答问题同时给出校准良好的置信度估计。实验显示该方法显著提升了LLM不确定性校准水平，同时保持或提升了任务准确率。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Little Brains, Big Feats: Exploring Compact Language Models",
+    "arxiv_id": "2606.30062",
+    "github": "https://github.com/SibNN/SLM-RAG-EVAL",
+    "abstract": "系统探索小型语言模型在复杂任务上的能力边界，分析模型规模、架构设计与训练数据对压缩模型性能的影响。通过大量实验揭示了小模型在推理、知识和多任务学习中的涌现特性，为开发高效轻量级的语言模型提供了实证指导和设计洞见。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-01",
+    "title": "QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents",
+    "arxiv_id": "2606.32034",
+    "github": "https://github.com/bethgelab/qval",
+    "abstract": "提出QVal方法，以低成本评估长程LLM智能体的稠密监督信号。通过设计高效的中间步骤评估指标，减少了对昂贵环境交互或人工标注的依赖。在多个长程任务上验证了QVal能有效识别高质量轨迹，为智能体训练提供更可靠的反馈信号。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-01",
+    "title": "BrainJanus: A Unified Model for Understanding and Generation across Brain, Vision, and Language",
+    "arxiv_id": "2606.30319",
+    "github": "https://github.com/HaitaoWuTJU/BrainJanus",
+    "abstract": "提出BrainJanus统一模型，实现脑信号、视觉与语言三种模态的理解与生成。通过共享表示空间对齐神经影像、图像和文本，支持跨模态推理与生成任务。实验表明该模型在神经-视觉-语言联合任务上取得了领先性能，展现了多模态融合的新可能。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "LUMOS: A Semantic Operating-System Layer for Accessibility-Grounded AI Agents",
+    "arxiv_id": "2606.30697",
+    "github": "https://github.com/thotayogeswarreddy/Lumos",
+    "abstract": "提出LUMOS，一种面向无障碍场景的语义操作系统层，为AI智能体提供可访问性驱动的环境交互接口。通过将GUI元素语义化并构建统一的行动空间，使智能体能够理解并操作复杂的用户界面。实验验证了该方法在无障碍任务中提升了智能体的执行成功率与可解释性。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Lexical Consensus: Grounded Word Learning and Shared Meaning in Artificial Agents",
+    "arxiv_id": "2606.22207",
+    "github": "https://github.com/patriciomvera/lexical-consensus",
+    "abstract": "提出Lexical Consensus框架，研究人工智能体中的接地词汇学习与共享语义形成。通过多智能体交互机制，使智能体能够在开放环境中协商并建立共同的词义表示。实验表明该方法促进了智能体的符号接地能力和协作通信效率，为多智能体语言涌现提供了新思路。",
+    "tags": []
+  }
+]
