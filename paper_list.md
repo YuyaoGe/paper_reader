@@ -4183,3 +4183,20 @@
 
 - **Lexical Consensus: Grounded Word Learning and Shared Meaning in Artificial Agents** — [2606.22207](https://arxiv.org/abs/2606.22207) | [GitHub](https://github.com/patriciomvera/lexical-consensus)
   > 提出Lexical Consensus框架，研究人工智能体中的接地词汇学习与共享语义形成。通过多智能体交互机制，使智能体能够在开放环境中协商并建立共同的词义表示。实验表明该方法促进了智能体的符号接地能力和协作通信效率，为多智能体语言涌现提供了新思路。
+
+## 2026年7月2日
+
+- **Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning** `[VLM]` `[RL]` — [2607.01191](https://arxiv.org/abs/2607.01191) | [GitHub](https://github.com/ZJU-REAL/Perceive-to-Reason)
+  > 提出Perceive-to-Reason框架，将细粒度视觉推理解耦为感知与推理两阶段：先定位问题相关视觉证据，再基于标注图像与裁剪区域作答。进一步提出PRA-GRPO角色感知强化学习策略，在仅使用最终答案监督下交替优化感知与推理。基于Qwen3-VL构建的P2R在V-Star与HR-Bench上显著超越基线，证明显式解耦感知与推理能有效提升细粒度视觉推理能力。
+
+- **AutoTrainess: Teaching Language Models to Improve Language Models Autonomously** `[API]` — [2606.31551](https://arxiv.org/abs/2606.31551) | [GitHub](https://github.com/simple-agent-lab/AutoTrainess)
+  > 提出AutoTrainess智能体，将语言模型后训练中的规划、数据准备、训练、评估与日志记录封装为agent-computer接口库，把人类经验外化为工作流与执行约束。在PostTrainBench上，AutoTrainess配合GPT-5.4取得26.94分，显著优于CLI-only基线，并能跨模型泛化，将DeepSeek-V4-Flash从12.13提升至19.58。
+
+- **Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination** `[RL]` — [2607.00924](https://arxiv.org/abs/2607.00924) | [GitHub](https://github.com/lamm-mit/graph-preflexor-grpo)
+  > 提出Graph-PRefLexOR图原生推理模型族，使用GRPO将科学假设生成组织为机制探索、图构建、模式提取与假设综合四阶段，把神经语言生成与符号关系结构结合，使推理过程可追踪、可复用。在材料科学与力学开放问题上的实验表明，相比基线提升40%-65%，推理可解释性显著增强，语义探索范围与多样性也大幅提升。
+
+- **When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors** `[微调]` — [2606.32029](https://arxiv.org/abs/2606.32029) | [GitHub](https://github.com/ayyyq/table-referencing)
+  > 首次系统评估大语言模型在表格任务中的数据引用错误（DRE），发现该错误普遍存在于1.7B到20B参数的模型中。研究将数据引用作为critic引入推理流程，通过critic-based filtering与rejection sampling将答案准确率最高提升12.0%。此外训练了一个4B参数的轻量critic模型，在分布内与分布外DRE检测上平均F1达78.2%，可有效辅助更大模型的推理。
+
+- **PixelEyes: Decoupling Perception and Reasoning for Pinpoint Visual Evidence Seeking** `[VLM]` — [2607.00115](https://arxiv.org/abs/2607.00115) | [GitHub](https://github.com/godx-7/PixelEyes-train-infer-eval)
+  > 提出PixelEyes多轮视觉推理智能体，将推理与感知显式解耦：reasoner决定寻找什么目标，专用感知工具负责精确定位。引入mask-guided视觉搜索与语义区域BFS探索机制，避免反复裁剪错误子区域导致的冗长轨迹。通过重合成专家轨迹构建PixelEyes-6K数据集内化上述能力，并在零提示视觉搜索基准Pinpoint-Bench上验证了pinpoint定位与推理的分离效果。
