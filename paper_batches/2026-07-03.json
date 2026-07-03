@@ -1,0 +1,108 @@
+[
+  {
+    "date": "2026-07-03",
+    "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+    "arxiv_id": "2607.02512",
+    "github": "https://github.com/programasweights/programasweights-python",
+    "abstract": "提出模糊函数编程范式Program-as-Weights（PAW），将自然语言规范编译为本地可执行的小型神经工件。40亿参数编译器在自建FuzzyBench数据集上训练，生成参数高效适配器并注入冻结的轻量解释器。0.6B Qwen3解释器即可达到直接提示Qwen3-32B的性能，推理内存降至约五十分之一，在MacBook M3上达30 tokens/s，将基础模型从「求解器」转为「工具构建器」。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-03",
+    "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+    "arxiv_id": "2607.02255",
+    "github": "https://github.com/AlayaLab/AgenticSTS",
+    "abstract": "提出一种有界记忆的长期LLM Agent契约：每次决策都从按类型检索组装的新用户消息出发，不追加原始跨决策转录，使提示长度始终有界且可独立消融。作者在《Slay the Spire 2》中实例化该契约，通过298条轨迹与冻结记忆快照，研究显式记忆层如何影响长期决策。实验显示启用策略性技能层后胜率从3/10提升至6/10，为长期Agent的记忆系统设计提供了可复现的测试平台与方法论。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
+    "arxiv_id": "2607.01642",
+    "github": "https://github.com/Xingyu-Zheng/MrFlow",
+    "abstract": "提出无需训练的多分辨率流匹配扩散加速策略MrFlow。先在低分辨率快速生成主体结构，再用轻量GAN在像素空间上采样，注入低强度噪声进行高频重采样，最后在高分辨率精修细节。在FLUX.1-dev和Qwen-Image上实现10倍端到端加速，OneIG差距控制在1%以内，与timestep distillation联用可达25倍加速。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning",
+    "arxiv_id": "2606.31825",
+    "github": "https://github.com/dmis-lab/MRPO",
+    "abstract": "提出医学推理感知策略优化MRPO，针对医疗多模态推理中早期错误引发的级联失败问题。当最终答案错误时，对早期无效推理步骤施加指数级更大惩罚，在保留成功路径的同时打断失败级联。在三种多模态LLM骨干上均优于标准GRPO；在Qwen3-VL-8B-Instruct上超过HuatuoGPT-Vision-34B达2.79分，早期失败率从64.0%降至13.0%。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads",
+    "arxiv_id": "2607.01002",
+    "github": "https://github.com/aryopg/locos",
+    "abstract": "提出Logit-Contribution Scoring（LOCOS），识别长上下文LLM中执行非字面综合的检索头。不同于只奖励字面复制的方法，LOCOS通过OV电路输出在答案token反嵌入方向上的投影打分。在Qwen3、Gemma-3、OLMo-3.1上，消融前50个LOCOS头即可将Qwen3-8B在NoLiMa上的ROUGE-L从0.401压至0.000，对参数化回忆与算术推理影响甚微。",
+    "tags": [
+      "长文本"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "From SRA to Self-Flow: Data Augmentation or Self-Supervision?",
+    "arxiv_id": "2607.02508",
+    "github": "https://github.com/vvvvvjdy/SRA",
+    "abstract": "重新审视从SRA到Self-Flow的性能提升来源。通过Attention Separation保留双时间步输入但阻断不同噪声层级token间注意力，作者发现移除交互并未降低性能甚至略有提升，说明增益主要来自噪声维度的数据增强。Attention Separation将单张图像拆为多个有效训练片段实现增强。基于这些观察，作者在ImageNet上验证了结合自表示对齐与注意力分离增强的有效性。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "InstanceControl: Controllable Complex Image Generation without Instance Labeling",
+    "arxiv_id": "2606.31924",
+    "github": "https://github.com/liuxiaoyu1104/InstanceControl",
+    "abstract": "提出InstanceControl，一种无需实例标注的多实例可控图像生成方法。针对现有方法难以将实例描述与视觉条件中对应区域准确关联的瓶颈，作者利用视觉语言模型自动从文本提示解析实例描述，并基于视觉条件预测实例掩码；同时引入自适应掩码精化策略，在生成过程中动态去噪。实验表明，该方法在多实例复杂场景生成中达到了更高的保真度和实例级控制精度，优于现有最先进方法。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "Representation Distribution Matching for One-Step Visual Generation",
+    "arxiv_id": "2607.02375",
+    "github": "https://github.com/vita-epfl/RDM",
+    "abstract": "系统研究Representation Distribution Matching（RDM）范式，在冻结预训练编码器下匹配特征分布训练一步图像生成器。实验发现正确估计MMD、更大批次与多编码器组合是关键，提出SW_r14指标。iRDM在ImageNet一步生成达SW_r14 1.30，用90 H200 GPU小时将四步FLUX.2蒸馏为一步生成器，在GenEval与PickScore优于原四步模型。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
+    "arxiv_id": "2607.01224",
+    "github": "https://github.com/autoLearnMem/AutoMem",
+    "abstract": "将记忆管理视为LLM Agent可学习的认知技能，提出AutoMem框架。作者把文件系统操作提升为与任务动作同级的记忆动作，让模型自主管理记忆。框架包含两个循环：强LLM回顾完整轨迹并迭代优化记忆结构；从多轮片段中识别良好的记忆决策作为训练信号以提升模型记忆能力。在Crafter、MiniHack和NetHack三个长期任务中，仅优化记忆即可使32B开源模型性能提升约2至4倍，接近前沿系统水平。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR",
+    "arxiv_id": "2606.25178",
+    "github": "https://github.com/YangYongJin/transfer-aware-curriculum",
+    "abstract": "提出Transfer-Aware Curriculum（TAC），一种面向多领域RLVR的在线课程方法。TAC利用GRPO训练中的优势与投影梯度信号，估计更新对各领域的跨域迁移收益，优先采样能带来广泛收益的域，额外开销不到1%。在六个推理域上，TAC在Qwen3-1.7B和Llama3.2-3B均取得最佳宏平均准确率，相比仅考虑可学习性的课程提升最多2.8分，并避免主导域过度采样。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-07-03",
+    "title": "WARP: Weight-Space Analysis for Recovering Training Data Portfolios",
+    "arxiv_id": "2607.01686",
+    "github": "https://github.com/SprocketLab/WARP",
+    "abstract": "提出WARP框架，仅利用发布的基础模型与微调后权重恢复微调模型的训练数据域比例。通过对基础模型与微调模型进行模型合并插值，生成近似缺失训练轨迹的伪检查点，从而在权重空间暴露训练数据的几何足迹；再提取几何特征并映射到域比例。在BERT与GPT-2上的受控实验中，WARP平均MAE分别低至0.046与0.104，优于成员推断及使用真实训练轨迹的变体，为理解训练数据组成提供了新的权重空间视角。",
+    "tags": []
+  }
+]
