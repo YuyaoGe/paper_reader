@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "date": "2026-07-06",
+    "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
+    "arxiv_id": "2606.31227",
+    "github": "https://github.com/Tencent/AI-Infra-Guard",
+    "abstract": "该工作提出AI-Infra-Guard开源框架，针对AI Agent在基础设施、协议/工具、智能体行为和模型四个层面的攻击面进行分层红队测试。框架融合了确定性规则匹配、LLM驱动的MCP服务器审计、多轮黑盒Agent红队测试以及26种以上攻击算子的越狱测试，覆盖75个以上AI组件与1400余条漏洞规则，为Agent安全提供统一评估基础。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-07-06",
+    "title": "Interpretation-Oriented Cloud Removal via Observation-Anchored Residual Flow with Geo-Contextual Alignment",
+    "arxiv_id": "2607.02471",
+    "github": "https://github.com/wzy6055/GACR",
+    "abstract": "本文提出GACR框架用于遥感图像去云，强调下游解释任务的语义一致性。核心OAR-Flow将去云建模为基于物理的残差反演过程，以含云观测为锚点实现快速稳定重建；GCPA利用视觉基础模型约束语义流形。在6个数据集和12个下游任务上验证有效。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-07-06",
+    "title": "Measuring the Gap Between Human and LLM Research Ideas",
+    "arxiv_id": "2607.01233",
+    "github": "https://github.com/ziyuuc/TasteGap",
+    "abstract": "该研究构建大规模评估框架，衡量大型语言模型生成的研究想法与人类研究者之间的差距。作者从高质量人类论文中逆向工程出核心想法的灵感来源，让模型基于相关前期工作生成新想法，并引入机会模式与研究范式双轴研究品味分类法。实验发现，LLM想法一致地集中于桥接式机会与综合方法，而人类分布更广，揭示出当前LLM在创新品味上的系统性偏差。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-07-06",
+    "title": "Generated Contents Enrichment",
+    "arxiv_id": "2405.03650",
+    "github": "https://github.com/Mahdi-Naseri/GCE",
+    "abstract": "本文研究生成内容增强（GCE）任务，将稀疏场景描述显式扩充为场景图再渲染为语义更丰富的图像。方法采用联合训练的对抗框架，使用图卷积网络预测额外物体及其关系，扩展输入场景图，再通过图像生成管线输出结果。在Visual Genome数据集上的实验表明，该框架在场景图增强指标、图像质量、定性样例和用户研究中均取得更好表现，生成的内容视觉合理且结构连贯。",
+    "tags": []
+  }
+]

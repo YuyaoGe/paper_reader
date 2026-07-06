@@ -4235,3 +4235,17 @@
 
 - **WARP: Weight-Space Analysis for Recovering Training Data Portfolios** — [2607.01686](https://arxiv.org/abs/2607.01686) | [GitHub](https://github.com/SprocketLab/WARP)
   > 提出WARP框架，仅利用发布的基础模型与微调后权重恢复微调模型的训练数据域比例。通过对基础模型与微调模型进行模型合并插值，生成近似缺失训练轨迹的伪检查点，从而在权重空间暴露训练数据的几何足迹；再提取几何特征并映射到域比例。在BERT与GPT-2上的受控实验中，WARP平均MAE分别低至0.046与0.104，优于成员推断及使用真实训练轨迹的变体，为理解训练数据组成提供了新的权重空间视角。
+
+## 2026年7月6日
+
+- **Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming** `[API]` — [2606.31227](https://arxiv.org/abs/2606.31227) | [GitHub](https://github.com/Tencent/AI-Infra-Guard)
+  > 该工作提出AI-Infra-Guard开源框架，针对AI Agent在基础设施、协议/工具、智能体行为和模型四个层面的攻击面进行分层红队测试。框架融合了确定性规则匹配、LLM驱动的MCP服务器审计、多轮黑盒Agent红队测试以及26种以上攻击算子的越狱测试，覆盖75个以上AI组件与1400余条漏洞规则，为Agent安全提供统一评估基础。
+
+- **Interpretation-Oriented Cloud Removal via Observation-Anchored Residual Flow with Geo-Contextual Alignment** `[扩散模型]` — [2607.02471](https://arxiv.org/abs/2607.02471) | [GitHub](https://github.com/wzy6055/GACR)
+  > 本文提出GACR框架用于遥感图像去云，强调下游解释任务的语义一致性。核心OAR-Flow将去云建模为基于物理的残差反演过程，以含云观测为锚点实现快速稳定重建；GCPA利用视觉基础模型约束语义流形。在6个数据集和12个下游任务上验证有效。
+
+- **Measuring the Gap Between Human and LLM Research Ideas** `[无需训练]` — [2607.01233](https://arxiv.org/abs/2607.01233) | [GitHub](https://github.com/ziyuuc/TasteGap)
+  > 该研究构建大规模评估框架，衡量大型语言模型生成的研究想法与人类研究者之间的差距。作者从高质量人类论文中逆向工程出核心想法的灵感来源，让模型基于相关前期工作生成新想法，并引入机会模式与研究范式双轴研究品味分类法。实验发现，LLM想法一致地集中于桥接式机会与综合方法，而人类分布更广，揭示出当前LLM在创新品味上的系统性偏差。
+
+- **Generated Contents Enrichment** — [2405.03650](https://arxiv.org/abs/2405.03650) | [GitHub](https://github.com/Mahdi-Naseri/GCE)
+  > 本文研究生成内容增强（GCE）任务，将稀疏场景描述显式扩充为场景图再渲染为语义更丰富的图像。方法采用联合训练的对抗框架，使用图卷积网络预测额外物体及其关系，扩展输入场景图，再通过图像生成管线输出结果。在Visual Genome数据集上的实验表明，该框架在场景图增强指标、图像质量、定性样例和用户研究中均取得更好表现，生成的内容视觉合理且结构连贯。
