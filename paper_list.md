@@ -4249,3 +4249,17 @@
 
 - **Generated Contents Enrichment** — [2405.03650](https://arxiv.org/abs/2405.03650) | [GitHub](https://github.com/Mahdi-Naseri/GCE)
   > 本文研究生成内容增强（GCE）任务，将稀疏场景描述显式扩充为场景图再渲染为语义更丰富的图像。方法采用联合训练的对抗框架，使用图卷积网络预测额外物体及其关系，扩展输入场景图，再通过图像生成管线输出结果。在Visual Genome数据集上的实验表明，该框架在场景图增强指标、图像质量、定性样例和用户研究中均取得更好表现，生成的内容视觉合理且结构连贯。
+
+## 2026年7月7日
+
+- **MANCE: Manifold Aware Concept Erasure** — [2607.03973](https://arxiv.org/abs/2607.03973) | [GitHub](https://github.com/MatanAvitan/mance)
+  > 本文提出基于流形约束假设的概念擦除方法 MANCE。该假设认为自然表示集中于低维流形，干预应限制在流形上以保留其他信息。MANCE 利用目标概念分类器信号迭代更新表示，并将更新投影到估计流形。在 119 项文本与视觉设定中，MANCE 持续降低概念泄漏；MANCE++ 通过预置闭式擦除算法取得非线性概念擦除的最先进结果。
+
+- **Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval** `[VLM]` — [2607.04605](https://arxiv.org/abs/2607.04605) | [GitHub](https://github.com/dmis-lab/SaMer)
+  > 针对多向量视觉-语言检索中图像侧 token 稠密问题，本文提出对象感知 token 合并框架 SaMer。训练时利用对象标注作为合并先验以避免跨实例混合，推理无需检测器，仅适配共享投影层并冻结骨干。在 ColPali 上，SaMer 以 K=64 移除 93% 以上图像 token，存储降低 16.09 倍，并在 Flickr30K 与 MSCOCO 的 R@1 上取得提升。
+
+- **LLM-as-a-Verifier: A General-Purpose Verification Framework** `[无需训练]` `[API]` — [2607.05391](https://arxiv.org/abs/2607.05391) | [GitHub](https://github.com/llm-as-a-verifier/llm-as-a-verifier)
+  > 本文将验证视为大语言模型的新扩展维度，提出通用验证框架 LLM-as-a-Verifier。不同于输出离散分数的评判器，它基于评分 token 的 logit 分布计算期望以生成连续分数，支持细粒度、重复评估与标准分解。在 Terminal-Bench V2、SWE-Bench Verified 等多个 Agent 基准上取得最先进性能，并能为 RL 提供稠密反馈。
+
+- **Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification** `[API]` — [2607.01793](https://arxiv.org/abs/2607.01793) | [GitHub](https://github.com/Yunhao-Feng/Vera)
+  > 本文提出端到端自动化安全测试框架 Vera，将软件工程测试原则应用于非确定性 LLM Agent。它通过文献驱动探索构建风险分类体系，组合生成可执行安全用例，并在隔离沙箱中自适应执行，由基于证据的验证器判定结果。在 OpenClaw、Hermes、Codex 与 Claude Code 上的评估显示多通道攻击平均成功率达 93.9%，并发布 1600 用例的 Vera-Bench。

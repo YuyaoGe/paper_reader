@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-07-07",
+    "title": "MANCE: Manifold Aware Concept Erasure",
+    "arxiv_id": "2607.03973",
+    "github": "https://github.com/MatanAvitan/mance",
+    "abstract": "本文提出基于流形约束假设的概念擦除方法 MANCE。该假设认为自然表示集中于低维流形，干预应限制在流形上以保留其他信息。MANCE 利用目标概念分类器信号迭代更新表示，并将更新投影到估计流形。在 119 项文本与视觉设定中，MANCE 持续降低概念泄漏；MANCE++ 通过预置闭式擦除算法取得非线性概念擦除的最先进结果。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-07",
+    "title": "Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval",
+    "arxiv_id": "2607.04605",
+    "github": "https://github.com/dmis-lab/SaMer",
+    "abstract": "针对多向量视觉-语言检索中图像侧 token 稠密问题，本文提出对象感知 token 合并框架 SaMer。训练时利用对象标注作为合并先验以避免跨实例混合，推理无需检测器，仅适配共享投影层并冻结骨干。在 ColPali 上，SaMer 以 K=64 移除 93% 以上图像 token，存储降低 16.09 倍，并在 Flickr30K 与 MSCOCO 的 R@1 上取得提升。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-07-07",
+    "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+    "arxiv_id": "2607.05391",
+    "github": "https://github.com/llm-as-a-verifier/llm-as-a-verifier",
+    "abstract": "本文将验证视为大语言模型的新扩展维度，提出通用验证框架 LLM-as-a-Verifier。不同于输出离散分数的评判器，它基于评分 token 的 logit 分布计算期望以生成连续分数，支持细粒度、重复评估与标准分解。在 Terminal-Bench V2、SWE-Bench Verified 等多个 Agent 基准上取得最先进性能，并能为 RL 提供稠密反馈。",
+    "tags": ["无需训练", "API"]
+  },
+  {
+    "date": "2026-07-07",
+    "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
+    "arxiv_id": "2607.01793",
+    "github": "https://github.com/Yunhao-Feng/Vera",
+    "abstract": "本文提出端到端自动化安全测试框架 Vera，将软件工程测试原则应用于非确定性 LLM Agent。它通过文献驱动探索构建风险分类体系，组合生成可执行安全用例，并在隔离沙箱中自适应执行，由基于证据的验证器判定结果。在 OpenClaw、Hermes、Codex 与 Claude Code 上的评估显示多通道攻击平均成功率达 93.9%，并发布 1600 用例的 Vera-Bench。",
+    "tags": ["API"]
+  }
+]
