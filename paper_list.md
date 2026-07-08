@@ -4263,3 +4263,47 @@
 
 - **Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification** `[API]` — [2607.01793](https://arxiv.org/abs/2607.01793) | [GitHub](https://github.com/Yunhao-Feng/Vera)
   > 本文提出端到端自动化安全测试框架 Vera，将软件工程测试原则应用于非确定性 LLM Agent。它通过文献驱动探索构建风险分类体系，组合生成可执行安全用例，并在隔离沙箱中自适应执行，由基于证据的验证器判定结果。在 OpenClaw、Hermes、Codex 与 Claude Code 上的评估显示多通道攻击平均成功率达 93.9%，并发布 1600 用例的 Vera-Bench。
+
+## 2026年7月8日
+
+- **Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling** `[长文本]` — [2607.02980](https://arxiv.org/abs/2607.02980) | [GitHub](https://github.com/Tencent-Hunyuan/HiLS-Attention)
+  > 提出HiLS-Attention层次化地标稀疏注意力机制，通过端到端语言建模损失学习块选择，将查询与检索到的块独立做注意力并按块得分融合，实现原生稀疏训练与超长上下文外推。实验表明，在超长序列建模任务上HiLS-Attention可媲美甚至超越全注意力，同时显著降低二次计算开销。
+
+- **Vision as Unified Multimodal Generation** `[VLM]` `[微调]` — [2607.06560](https://arxiv.org/abs/2607.06560) | [GitHub](https://github.com/OpenSenseNova/SenseNova-Vision)
+  > 将计算机视觉统一为multimodal generation任务，SenseNova-Vision通过自然语言指令与视觉提示指定任务，并以文本、图像或图文混合形式输出结果。作者构建了覆盖文本、图像与混合目标的大规模视觉指令-回复语料，基于预训练统一多模态模型进一步训练，在多种视觉任务上实现统一生成范式。
+
+- **SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe** `[API]` — [2607.03451](https://arxiv.org/abs/2607.03451) | [GitHub](https://github.com/EvolvingLMMs-Lab/SkillOpt-Lite)
+  > 提出SkillOpt-Lite极简agent技能优化流程，基于零阶优化将中心差分、信任域等经典方法映射到技能轨迹优化，通过文件系统探索、共识属性挖掘与独立验证门控实现收敛。实验在LiveMath等任务上较完整SkillOpt大幅提升，同时显著加速收敛，展示了轻量agent自进化的可行路径。
+
+- **DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation** `[无需训练]` — [2607.05147](https://arxiv.org/abs/2607.05147) | [GitHub](https://github.com/deepseek-ai/DeepSpec)
+  > 提出DSpark推测解码框架，通过半自回归架构将并行骨干与轻量序列模块结合，建模块内依赖以缓解后缀接受率衰减；并引入置信度调度验证，根据前缀存活概率与引擎负载动态调整验证长度。在DeepSeek-V4在线服务中，DSpark较MTP-1提速60%至85%，扩展serving Pareto前沿。
+
+- **Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding** `[扩散模型]` — [2607.05722](https://arxiv.org/abs/2607.05722) | [GitHub](https://github.com/NVIDIA-NeMo/Megatron-Bridge)
+  > 提出Nemotron-Labs-Diffusion三模态语言模型，在同一架构内统一自回归、扩散与自推测解码，通过联合AR-扩散目标训练。扩散提供前瞻规划能力，AR提供左到右语言先验；自推测模式下扩散起草、AR验证，接受率与设备效率均优于MTP。模型缩放至3B/8B/14B并在多设置下超越SOTA。
+
+- **PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation** `[扩散模型]` — [2607.02515](https://arxiv.org/abs/2607.02515) | [GitHub](https://github.com/apple/ml-hypersim)
+  > 提出基于普通ViT的像素空间Diffusion Transformer，直接在原始3D点图块上建模，并以DINOv3图像token为条件，无需点图tokenizer即可从头训练扩散骨干。在单目几何估计任务上，该方法超越复杂的latent diffusion与混合方法，生成更清晰几何结构并提升透明与高度歧义区域的鲁棒性。
+
+- **Rank-Then-Act: Reward-Free Control from Frame-Order Progress** `[RL]` `[VLM]` — [2607.01897](https://arxiv.org/abs/2607.01897) | [GitHub](https://github.com/corl-team/rank-then-act)
+  > 提出Rank-Then-Act框架，从专家视频演示中学习奖励无关的控制策略。将VLM离线训练为基于进度的序数打分器，通过GRPO目标对乱序帧序列排序；并提出Spearman秩相关奖励函数，为RL提供有界、尺度不变的信号。在PyBoy离散控制与MetaWorld连续控制任务上验证了有效迁移。
+
+- **When Classic Cache Policies Fail: Learning-Augmented Replacement for Semantic Retrieval Buffers** — [2607.00394](https://arxiv.org/abs/2607.00394) | [GitHub](https://github.com/langchain-ai/langchain)
+  > 将LLM agent的语义检索缓冲区管理形式化为带切换成本的在线语义缓存替换问题，发现LRU/LFU等经典启发式在语义负载上持续弱于FIFO。提出SOLAR学习增强框架，通过后悔累积决定修改时机、贝叶斯在线学习选择内容，并证明其竞争比不超过3，在DialSim与LoCoMo上显著超越经典策略。
+
+- **SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review** `[微调]` — [2607.06065](https://arxiv.org/abs/2607.06065) | [GitHub](https://github.com/SWE-Lego/SWE-Review)
+  > 提出SWE-Review框架，将AI生成PR的一次性生成转变为agentic代码审查闭环：审查agent探索仓库、决策是否接受并提供结构化反馈以迭代修订。构建SWE-Review-Bench与SWE-Review-Traj数据集，实验显示生成-审查-修订循环在审查准确率与修订后问题解决率上超越单轮固定上下文审查，并可迁移提升issue解决。
+
+- **PluraMath: Extending Mathematical Reasoning Evaluation Beyond High-Resource Languages** — [2607.05992](https://arxiv.org/abs/2607.05992) | [GitHub](https://github.com/TUM-NLP/pluramath)
+  > 将数学推理评测扩展到18种代表性不足的语言，覆盖6个语系。通过人工校验的翻译流程构建PluraMath数据集，并对27个推理LLM（从小规模到闭源集成）进行系统评测，揭示当前模型在多语言数学推理上的性能差距与资源偏见，为低资源语言推理研究提供基准。
+
+- **HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better** `[VLM]` — [2607.04884](https://arxiv.org/abs/2607.04884) | [GitHub](https://github.com/Tencent-Hunyuan/HunyuanOCR)
+  > 提出轻量化端到端OCR专用视觉语言模型HunyuanOCR-1.5，统一文档解析、文本检测、信息抽取、图文翻译与多图理解。引入DFlash加速OCR长结构化输出解码，实现6.37倍Transformer推理加速；并通过Agentic Data Flow将模型弱点自动转化为数据需求，在多项OCR基准上取得速度与精度领先。
+
+- **Where to cut, how deep: BPE and Unigram-LM on chemistry SMILES** — [2607.05691](https://arxiv.org/abs/2607.05691) | [GitHub](https://github.com/hunter-heidenreich/smiles-subword-vocabularies)
+  > 系统比较化学SMILES上的BPE与Unigram-LM分词器，在固定165词表、小词表可学习嵌入场景下评估22种匹配条件。发现两种算法构建的子词表几乎互不相交，Unigram-LM将分子切分为更多token；研究为化学语言模型的tokenizer选择与分子表示提供了实证依据。
+
+- **RuleChef: Grounding LLM Task Knowledge in Human-Editable Rules** — [2607.01293](https://arxiv.org/abs/2607.01293) | [GitHub](https://github.com/KRLabsOrg/rulechef)
+  > 提出RuleChef框架，利用大语言模型根据任务描述与少量标注示例生成可解释、可人工编辑的规则，并基于额外样本与人类反馈迭代修复错误。学习完成后即可脱离LLM，得到快速且确定性的NLP规则系统，在文本分类与NER等任务上兼具高精度与可解释性。
+
+- **SiamJEPA: On the Role of Siamese Student Encoders in JEPA** — [2607.04044](https://arxiv.org/abs/2607.04044) | [GitHub](https://github.com/facebookresearch/mae)
+  > 研究JEPA自监督表示学习中Siamese学生编码器的作用，提出SiamJEPA：将掩码Siamese学生编码器与EMA教师网络结合，从脑启发表示学习角度统一预测与对比目标。实验表明双学生编码器可提升表示质量，为JEPA架构设计与自监督视觉学习提供了新视角。
