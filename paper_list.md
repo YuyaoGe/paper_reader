@@ -4307,3 +4307,14 @@
 
 - **SiamJEPA: On the Role of Siamese Student Encoders in JEPA** — [2607.04044](https://arxiv.org/abs/2607.04044) | [GitHub](https://github.com/facebookresearch/mae)
   > 研究JEPA自监督表示学习中Siamese学生编码器的作用，提出SiamJEPA：将掩码Siamese学生编码器与EMA教师网络结合，从脑启发表示学习角度统一预测与对比目标。实验表明双学生编码器可提升表示质量，为JEPA架构设计与自监督视觉学习提供了新视角。
+
+## 2026年7月9日
+
+- **Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity** `[长文本]` — [2607.07386](https://arxiv.org/abs/2607.07386) | [GitHub](https://github.com/facebookresearch/sparse-delta-memory)
+  > 提出Sparse Delta Memory（SDM），通过稀疏寻址机制大幅扩展门控线性RNN的隐状态容量，在等FLOP约束下显著提升长上下文回忆与上下文学习能力。该方法基于Gated DeltaNet架构，将稠密键值外积替换为对大型显式记忆的稀疏读写，并进一步将初始状态学习为参数化记忆。实验表明，SDM在多种长程检索与常识推理任务上均取得性能提升。
+
+- **Teaching LLMs a Low-Resource Language: Enhancing Code Completion in Pharo** `[微调]` — [2607.04939](https://arxiv.org/abs/2607.04939) | [GitHub](https://github.com/kilian-kier/pharo-llm-completion)
+  > 针对Pharo等低资源编程语言代码补全数据稀缺的问题，构建端到端的数据整理、持续预训练与微调流程，在保持模型轻量的同时显著提升Pharo代码补全准确率。研究还设计了评估Pharo语法学习与真实代码补全能力的基准，实验表明专用模型不仅大幅超越基础检查点，还能超过规模更大的通用代码大模型，证明在低资源语言上部署实时LLM代码补全的可行性。
+
+- **Wake up for Touch! Mask-isolated Tactile Alignment Learning in MLLMs** `[VLM]` — [2607.00302](https://arxiv.org/abs/2607.00302) | [GitHub](https://github.com/ewha-mmai/splash)
+  > 提出Splash，一种面向多模态大语言模型的掩码隔离触觉对齐学习框架。通过量化各参数重要性并将参数空间划分为关键子空间与休眠子空间，仅更新休眠部分来学习触觉对齐，从而避免灾难性遗忘并保护既有视觉语言推理能力。实验表明Splash在SSVTP、TVL、TacQuad等视觉触觉基准上达到领先性能，且不增加LLM推理开销。

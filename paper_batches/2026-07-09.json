@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-07-09",
+    "title": "Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity",
+    "arxiv_id": "2607.07386",
+    "github": "https://github.com/facebookresearch/sparse-delta-memory",
+    "abstract": "提出Sparse Delta Memory（SDM），通过稀疏寻址机制大幅扩展门控线性RNN的隐状态容量，在等FLOP约束下显著提升长上下文回忆与上下文学习能力。该方法基于Gated DeltaNet架构，将稠密键值外积替换为对大型显式记忆的稀疏读写，并进一步将初始状态学习为参数化记忆。实验表明，SDM在多种长程检索与常识推理任务上均取得性能提升。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-07-09",
+    "title": "Teaching LLMs a Low-Resource Language: Enhancing Code Completion in Pharo",
+    "arxiv_id": "2607.04939",
+    "github": "https://github.com/kilian-kier/pharo-llm-completion",
+    "abstract": "针对Pharo等低资源编程语言代码补全数据稀缺的问题，构建端到端的数据整理、持续预训练与微调流程，在保持模型轻量的同时显著提升Pharo代码补全准确率。研究还设计了评估Pharo语法学习与真实代码补全能力的基准，实验表明专用模型不仅大幅超越基础检查点，还能超过规模更大的通用代码大模型，证明在低资源语言上部署实时LLM代码补全的可行性。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-07-09",
+    "title": "Wake up for Touch! Mask-isolated Tactile Alignment Learning in MLLMs",
+    "arxiv_id": "2607.00302",
+    "github": "https://github.com/ewha-mmai/splash",
+    "abstract": "提出Splash，一种面向多模态大语言模型的掩码隔离触觉对齐学习框架。通过量化各参数重要性并将参数空间划分为关键子空间与休眠子空间，仅更新休眠部分来学习触觉对齐，从而避免灾难性遗忘并保护既有视觉语言推理能力。实验表明Splash在SSVTP、TVL、TacQuad等视觉触觉基准上达到领先性能，且不增加LLM推理开销。",
+    "tags": ["VLM"]
+  }
+]
