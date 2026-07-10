@@ -4318,3 +4318,29 @@
 
 - **Wake up for Touch! Mask-isolated Tactile Alignment Learning in MLLMs** `[VLM]` — [2607.00302](https://arxiv.org/abs/2607.00302) | [GitHub](https://github.com/ewha-mmai/splash)
   > 提出Splash，一种面向多模态大语言模型的掩码隔离触觉对齐学习框架。通过量化各参数重要性并将参数空间划分为关键子空间与休眠子空间，仅更新休眠部分来学习触觉对齐，从而避免灾难性遗忘并保护既有视觉语言推理能力。实验表明Splash在SSVTP、TVL、TacQuad等视觉触觉基准上达到领先性能，且不增加LLM推理开销。
+
+## 2026年7月10日
+
+- **Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition** — [2601.16211](https://arxiv.org/abs/2601.16211) | [GitHub](https://github.com/KHU-VLL/RCORE)
+  > 本文针对零样本组合动作识别中模型依赖物体捷径而非时序线索的问题，提出RCORE方法。通过共现先验正则化将频繁共现视为硬负例以抑制捷径，并使用时序顺序正则化学习与时序grounded的动词表示。在Sth-com与EK100-com基准上的诊断指标与组合泛化性能均显著提升，验证了缓解物体驱动捷径的有效性。
+
+- **Enhancing In-context Panoramic Generation via Geometric-aware Pretraining** — [2607.08765](https://arxiv.org/abs/2607.08765) | [GitHub](https://github.com/Insta360-Research-Team/Canvas360)
+  > 本文提出Canvas360框架，通过几何感知预训练实现上下文全景图像生成。构建100万高质量成对全景数据集Canvas360Dataset，支持风格迁移、修复、补全与编辑等任务。建模上引入并行深度生成、速度循环填充与相似度损失，提升几何一致性与全局连贯性。实验在全景FAED等指标上取得领先性能，展现出统一的上下文全景生成能力。
+
+- **Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE** `[长文本]` `[无需训练]` — [2607.07740](https://arxiv.org/abs/2607.07740) | [GitHub](https://github.com/jet-ai-projects/jet-long)
+  > 本文提出Jet-Long，一种无需微调的长上下文扩展方法，通过动态双焦RoPE在短文本保持原模型保真度、长文本实现干净外推。融合注意力合并与即时RoPE校正，推理开销低于4%，H100上可达1.39倍FA2吞吐。在Qwen3 1.7B/4B/8B上至128K的RULER中领先最强基线4.79/2.18/2.03个百分点，并在HELMET-RAG与PG-19上取得最佳。
+
+- **DrugGen 2: A disease-aware language model for enhancing drug discovery** `[RL]` `[微调]` — [2607.08404](https://arxiv.org/abs/2607.08404) | [GitHub](https://github.com/alimotahharynia/DrugGen-2)
+  > 本文提出DrugGen-2，一种面向药物发现、融合疾病本体与靶蛋白序列的疾病感知分子生成模型。基于整理后的批准药物数据，对预训练GPT-2执行监督微调与GRPO强化学习，奖励函数兼顾化学有效性、新颖性、多样性与预测结合亲和力。在糖尿病肾病相关五个蛋白靶点上，生成分子在独特性、结构相似性与结合亲和力上均优于DrugGPT与DrugGen基线。
+
+- **Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing** `[长文本]` — [2607.07953](https://arxiv.org/abs/2607.07953) | [GitHub](https://github.com/tommasocerruti/linear-attention-architectures)
+  > 本文统一对比softmax与DeltaNet、Gated DeltaNet、Kimi Delta Attention等循环线性注意力架构，建立共同循环记忆表示并提出轻量跨层路由CLVR。基于350M参数、15B token的实验显示，Kimi Delta Attention加Muon验证损失最低，Gated DeltaNet加AdamW吞吐最高，混合栈损失更优，CLVR进一步提升两类架构最终损失。
+
+- **Flash-BoN: Instant Drafts for Inference-Time Scaling in Diffusion Models** `[无需训练]` `[扩散模型]` — [2607.04461](https://arxiv.org/abs/2607.04461) | [GitHub](https://github.com/flash-bon/flash-bon)
+  > 本文提出Flash-BoN，面向扩散模型推理时扩展的即时草稿生成方法。通过timestep截断、层跳过与激活代理三种互补加速策略生成大量低成本候选草稿，再经多阶段验证筛选并精修为高质量输出。在固定墙钟预算下，Flash-BoN在三个基准与三种模型尺度上持续优于基线，大模型增益达8% AUC，且可与反思式提示优化等正交技术结合再提升16% AUC。
+
+- **A Sparse and Truncated State Vector Simulator for Peaked Circuits** — [2607.07816](https://arxiv.org/abs/2607.07816) | [GitHub](https://github.com/diogoff/qstvec)
+  > 本文提出面向peaked量子电路的稀疏截断态矢量模拟器。利用输出分布尖锐峰值特性，以稀疏表示仅存储非零振幅的截断态矢量，在经典计算机上高效近似模拟。所有操作向量化并可利用硬件加速，在开源实现中讨论了性能与局限，为特定量子电路的经典模拟提供了更高效的工具。
+
+- **ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation** `[扩散模型]` — [2607.08741](https://arxiv.org/abs/2607.08741) | [GitHub](https://github.com/nv-tlabs/ardy)
+  > 本文提出ARDY，一种支持在线文本提示与灵活运动学约束的实时三维人体动作流式生成框架。采用显式根特征与隐式身体嵌入的混合表示，以及可变历史上下文的两阶段自回归Transformer去噪器，在HumanML3D与Bones Rigplay数据集上验证了高动作质量与约束遵循性，并展示了交互式文本、关键帧与路径跟随等演示。
