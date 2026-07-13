@@ -4344,3 +4344,17 @@
 
 - **ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation** `[扩散模型]` — [2607.08741](https://arxiv.org/abs/2607.08741) | [GitHub](https://github.com/nv-tlabs/ardy)
   > 本文提出ARDY，一种支持在线文本提示与灵活运动学约束的实时三维人体动作流式生成框架。采用显式根特征与隐式身体嵌入的混合表示，以及可变历史上下文的两阶段自回归Transformer去噪器，在HumanML3D与Bones Rigplay数据集上验证了高动作质量与约束遵循性，并展示了交互式文本、关键帧与路径跟随等演示。
+
+## 2026年7月13日
+
+- **From RGB Generation to Dense Field Readout: Pixel-Space Dense Prediction with Text-to-Image Models** `[扩散模型]` — [2607.06553](https://arxiv.org/abs/2607.06553) | [GitHub](https://github.com/xmz111/ReChannel)
+  > 提出 ReChannel，将预训练文本到图像 DiT 的生成能力迁移到像素空间密集预测任务。核心思路是保留 VAE 编码器输入分布，去掉目标侧解码器，在冻结 DiT 上加任务 LoRA，并用共享的 token-local 线性头将每个 token 映射到 p×p×K_t 的像素空间 patch，仅约 33K 参数且无需空间混合。在 FLUX-Klein 上于六项密集预测任务和十余个基准测试表明，该方法在 trimap-free matting、KITTI 深度和指代分割上取得 SOTA，且在 4B 规模下比编辑+隐式解码方案精度更高、速度快 2.48 倍。
+
+- **PanoWorld: Real-World Panoramic Generation** `[扩散模型]` — [2607.09661](https://arxiv.org/abs/2607.09661) | [GitHub](https://github.com/Insta360-Research-Team/PanoWorld)
+  > 提出 PanoWorld，一种真实世界全景生成模型，利用全向表示的旋转等变性质将旋转视为隐式几何变换，把相机轨迹简化为固定朝向的平移。通过 Dense Panoramic Ray-Conditioning（DPRC）和 Geometry-aware Memory Augmentation（GMA）分别建模当前动作与长程记忆，并采用三阶段训练流程逐步优化各组件。为评估大尺度空间变化与多样光照下的物理一致性，构建 World360 数据集（含全景无人机实拍与 AirSim360 合成片段）。实验表明 PanoWorld 显著优于对比方法，模型、训练代码与数据将开源。
+
+- **A Sovereign, Open-Source Foundation Model for German and English** — [2607.09424](https://arxiv.org/abs/2607.09424) | [GitHub](https://github.com/soofi-project/Soofi-Pretraining)
+  > 发布 Soofi S 30B-A3B，一个面向德语和英语的主权开源混合 Mamba-Transformer MoE 基础模型。每 token 仅激活 3B 参数，推理缓存随上下文增长近乎恒定，在长上下文高并发场景较稠密模型具吞吐量优势。模型在德国工业 AI 云（慕尼黑 Deutsche Telekom 运营）上完成端到端预训练，约 27 万亿 token 并故意上采样德语数据。在英德综合基准上追平 14-27B 稠密模型，代码任务在 17 个开源基线中最佳，且超越所有欧洲主权基线。权重、中间检查点、完整数据来源、超参数及训练评估代码将以宽松许可开源。
+
+- **VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery** `[VLM]` `[无需训练]` `[API]` — [2607.06374](https://arxiv.org/abs/2607.06374) | [GitHub](https://github.com/AIGeeksGroup/VaseMuseum)
+  > 提出 VaseMuseum，一个面向古希腊陶器的轻量级模块化多模态智能数字博物馆框架。VaseAgent 支持 2D 图像与 3D 文物，通过多模态感知、3D 感知推理、外部知识检索和推理时可靠性控制回答开放性问题。具体地，source-level 控制从权威网络与博物馆来源检索并选择多样可验证证据；response-level 控制将生成声明与证据池核对，在支持不足或冲突时给出中性、有证据边界的回答。此外，采用无需训练、类似 GRPO 的选择机制，偏爱引用有效且置信度校准的回复。模拟实验显示其在引用有效性、减少幻觉和模糊场景中性回答上优于搜索增强 VLM 基线。
