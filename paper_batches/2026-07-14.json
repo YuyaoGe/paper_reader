@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-07-14",
+    "title": "LightMem-Ego: Your AI Memory for Everyday Life",
+    "arxiv_id": "2607.11487",
+    "github": "https://github.com/zjunlp/LightMem-Ego",
+    "abstract": "LightMem-Ego 是面向日常生活辅助的轻量级流式多模态记忆系统，可部署于智能手机与 AI 眼镜。系统持续捕获第一人称视觉与音频流，按时间轴对齐并组织为当前、短期与长期三级层次化记忆。查询时动态路由到合适层级，检索带时间戳的多模态证据后生成答案。演示涵盖寻物、对话回忆与生活摘要等场景，后端采用 FastAPI，前端支持 Web 与 Rokid 眼镜，仓库含前后端及 Android 应用实现。",
+    "tags": [
+      "MeM",
+      "API",
+      "VLM"
+    ]
+  }
+]

@@ -4358,3 +4358,8 @@
 
 - **VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery** `[VLM]` `[无需训练]` `[API]` — [2607.06374](https://arxiv.org/abs/2607.06374) | [GitHub](https://github.com/AIGeeksGroup/VaseMuseum)
   > 提出 VaseMuseum，一个面向古希腊陶器的轻量级模块化多模态智能数字博物馆框架。VaseAgent 支持 2D 图像与 3D 文物，通过多模态感知、3D 感知推理、外部知识检索和推理时可靠性控制回答开放性问题。具体地，source-level 控制从权威网络与博物馆来源检索并选择多样可验证证据；response-level 控制将生成声明与证据池核对，在支持不足或冲突时给出中性、有证据边界的回答。此外，采用无需训练、类似 GRPO 的选择机制，偏爱引用有效且置信度校准的回复。模拟实验显示其在引用有效性、减少幻觉和模糊场景中性回答上优于搜索增强 VLM 基线。
+
+## 2026年7月14日
+
+- **LightMem-Ego: Your AI Memory for Everyday Life** `[MeM]` `[API]` `[VLM]` — [2607.11487](https://arxiv.org/abs/2607.11487) | [GitHub](https://github.com/zjunlp/LightMem-Ego)
+  > LightMem-Ego 是面向日常生活辅助的轻量级流式多模态记忆系统，可部署于智能手机与 AI 眼镜。系统持续捕获第一人称视觉与音频流，按时间轴对齐并组织为当前、短期与长期三级层次化记忆。查询时动态路由到合适层级，检索带时间戳的多模态证据后生成答案。演示涵盖寻物、对话回忆与生活摘要等场景，后端采用 FastAPI，前端支持 Web 与 Rokid 眼镜，仓库含前后端及 Android 应用实现。
