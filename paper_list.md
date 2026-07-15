@@ -4363,3 +4363,14 @@
 
 - **LightMem-Ego: Your AI Memory for Everyday Life** `[MeM]` `[API]` `[VLM]` — [2607.11487](https://arxiv.org/abs/2607.11487) | [GitHub](https://github.com/zjunlp/LightMem-Ego)
   > LightMem-Ego 是面向日常生活辅助的轻量级流式多模态记忆系统，可部署于智能手机与 AI 眼镜。系统持续捕获第一人称视觉与音频流，按时间轴对齐并组织为当前、短期与长期三级层次化记忆。查询时动态路由到合适层级，检索带时间戳的多模态证据后生成答案。演示涵盖寻物、对话回忆与生活摘要等场景，后端采用 FastAPI，前端支持 Web 与 Rokid 眼镜，仓库含前后端及 Android 应用实现。
+
+## 2026年7月15日
+
+- **Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation** `[VLM]` — [2607.05382](https://arxiv.org/abs/2607.05382) | [GitHub](https://github.com/HaozheH3/SearchGen)
+  > 针对视觉生成器在开放世界知识上的瓶颈，提出 SearchGen 框架，将搜索工具引入智能视觉生成。构建 SearchGen-20K 与 SearchGen-Bench（20,839 条跨 12 类失败模式、22 个领域的提示），发现前沿开放生成器仅得 21~28 分。通过 teach-then-search 协同训练动态发现生成器知识边界，实现单调递进的自我改进，并开源完整数据集与可复现 harness。
+
+- **Let RGB Be the Language of Vision** `[VLM]` — [2607.12450](https://arxiv.org/abs/2607.12450) | [GitHub](https://github.com/yangtiming/RINO)
+  > 提出 RGB In and RGB Out（RINO）统一视觉建模范式：将掩码、深度图等结构化视觉信号编码为 RGB 图像，把各类视觉任务统一为 RGB-to-RGB 图像编辑问题。不同视觉信息共享同一编解码架构与参数，使单一模型通过统一视觉接口跨任务迁移。基于通用图像编辑骨干网络，RINO 在无需任务特定微调的情况下，在分割、深度估计与姿态到图像生成等任务上均展现出有竞争力的零样本性能。
+
+- **MonkeyOCRv2: A Visual-Text Foundation Model for Document AI** `[VLM]` — [2607.11562](https://arxiv.org/abs/2607.11562) | [GitHub](https://github.com/Yuliang-Liu/MonkeyOCRv2)
+  > 提出面向文档 AI 的视觉-文本基础模型 MonkeyOCRv2。构建最大文档图像预训练语料 MonkeyDoc v2（1.13 亿张图像、17 种语言），联合学习图像到文本生成与像素级文档重建：前者对齐视觉表征与文本内容，后者保留字符笔画与版面细节。在文本识别、公式识别、文本检测等五项任务上性能一致提升；作为多模态大模型视觉编码器，0.7B 文档解析模型在 MDPBench 上超越此前最佳 3B 模型 2.8 个百分点。
