@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-07-16",
+    "title": "Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation",
+    "arxiv_id": "2607.13125",
+    "github": "https://github.com/boogu-project/Boogu-Image",
+    "abstract": "提出 Boogu-Image-0.1 开源统一多模态理解与生成模型家族，包含 Base、Turbo、Edit 与 Edit-Turbo 四个变体，支持高质量文生图、快速推理、指令编辑与中英双语文本渲染。通过改进模型理解、数据质量与训练流程，并结合 agentic 推理时扩展，在仅 2.09 亿张独特图像、约 40 万美元理论训练成本下达到接近闭源系统的性能，在标准 benchmark 上超越其他开源模型。",
+    "tags": ["VLM", "扩散模型"]
+  },
+  {
+    "date": "2026-07-16",
+    "title": "KnowAct-GUIClaw: Know Deeply, Act Perfectly, Personal GUI Assistant with Self-Evolving Memory and Skill",
+    "arxiv_id": "2607.12625",
+    "github": "https://github.com/HITsz-TMG/KnowAct",
+    "abstract": "提出 Know Deeply, Act Perfectly 范式与 KnowAct-GUIClaw 框架，针对 OpenClaw 在跨平台 GUI 交互与自我进化机制方面的不足进行改进。框架采用 Know-Route-Act-Reflect 四阶段流程：主机 agent 基于累积的交互经验与任务相关知识进行长程任务分解与分配；可插拔的 GUI 子 agent 配备经验归因记忆系统与自进化技能库，实现跨平台迁移与快速路径集成。实验覆盖 Android、iOS、HarmonyOS 与 Windows，在 MobileWorld 长程 benchmark 上以 64.1% 取得最佳性能，超越 Seed-2.0-Pro 与 GPT-5.5。",
+    "tags": ["API", "MeM"]
+  },
+  {
+    "date": "2026-07-16",
+    "title": "Registers Matter for Pixel-Space Diffusion Transformers",
+    "arxiv_id": "2605.16147",
+    "github": "https://github.com/quickjkee/register-guidance",
+    "abstract": "研究 register token 在扩散 Transformer（DiT）中的作用机制。与 ViT 不同，DiT 不存在显著的 patch-token outlier，但 register token 仍能提升生成质量，且在 pixel-space DiT 中效果优于 latent-space DiT。通过分析中间表征发现，register token 能在高噪声水平下产生更清晰的特征图，从而改善视觉结构与 coherence。基于这些观察，提出 Register Guidance 技术，显式增强对视觉结构和一致性改善负责的 register token 的贡献。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-07-16",
+    "title": "AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities",
+    "arxiv_id": "2607.13705",
+    "github": "https://github.com/open-compass/agentcompass",
+    "abstract": "提出 AgentCompass，一个开源、轻量且可扩展的 LLM-based agent 统一评估基础设施。当前 agent 评估流程高度碎片化且紧耦合，导致可复现性差与工程冗余。AgentCompass 将评估流程解耦为 Benchmark、Harness 与 Environment 三个独立组件，支持灵活配置而无需重复实现复杂执行逻辑。同时具备容错异步运行时和全面的轨迹分析工具，可透明诊断 reward-hacking 等细微失败模式。原生支持 20 多个 benchmark，覆盖推理、规划、工具使用等五个能力维度。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-16",
+    "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+    "arxiv_id": "2607.07702",
+    "github": "https://github.com/moomight/STRACE",
+    "abstract": "提出 STRACE 框架，通过结构化的轨迹分析与因果抽取构建高信噪比的优化上下文，解决长程 agent 基于反思的优化中轨迹冗余和无关步骤干扰的问题。在批次层面挖掘失败模式过滤冗余轨迹，在单条轨迹内基于文本依赖图进行因果定位，识别真正的根因模块。在 VeruSAGE-Bench 形式化验证任务上将成功率从 42.5% 提升至 58.5%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-07-16",
+    "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+    "arxiv_id": "2607.13027",
+    "github": "https://github.com/ModalityDance/PalmClaw",
+    "abstract": "提出 PalmClaw，一个开源的原生移动端 agent 框架，直接在手机上管理会话、记忆、技能、工具与 agent 循环。通过将设备能力封装为具有明确参数、结构化结果和清晰执行边界的设备工具，使 agent 能够直接调用移动设备能力，避免传统 GUI 操作序列长、依赖界面、边界模糊的问题。实验显示任务成功率相对提升 11.5%，完成时间减少 94.9%。",
+    "tags": ["API"]
+  }
+]
