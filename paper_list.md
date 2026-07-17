@@ -4394,3 +4394,29 @@
 
 - **PalmClaw: A Native On-Device Agent Framework for Mobile Phones** `[API]` — [2607.13027](https://arxiv.org/abs/2607.13027) | [GitHub](https://github.com/ModalityDance/PalmClaw)
   > 提出 PalmClaw，一个开源的原生移动端 agent 框架，直接在手机上管理会话、记忆、技能、工具与 agent 循环。通过将设备能力封装为具有明确参数、结构化结果和清晰执行边界的设备工具，使 agent 能够直接调用移动设备能力，避免传统 GUI 操作序列长、依赖界面、边界模糊的问题。实验显示任务成功率相对提升 11.5%，完成时间减少 94.9%。
+
+## 2026年7月17日
+
+- **SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration** `[API]` — [2607.15257](https://arxiv.org/abs/2607.15257) | [GitHub](https://github.com/antins-labs/SearchOS)
+  > 提出SearchOS多智能体开放域信息检索框架，将隐式搜索进度外化为可共享的状态（前沿任务、证据图、覆盖图、失败记忆），通过搜索导向上下文管理与流水线并行调度提升利用率。在WideSearch和GISA基准上超越单/多智能体基线。
+
+- **BadWAM: When World-Action Models Dream Right but Act Wrong** `[VLM]` — [2607.15207](https://arxiv.org/abs/2607.15207) | [GitHub](https://github.com/LiQiiiii/BadWAM)
+  > 针对世界-动作模型（WAM）提出World-Action Drift Attack统一框架，利用微小视觉扰动破坏模型想象与执行的alignment，包含动作攻击和想象保持攻击。在闭环执行下将任务成功率从96.5%降至43.1%，揭示WAM的安全隐患。
+
+- **LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget** `[RL]` `[长文本]` — [2607.14952](https://arxiv.org/abs/2607.14952) | [GitHub](https://github.com/MindLab-Research/longstraw)
+  > 提出面向固定GPU预算的百万token长上下文RL后训练执行栈，基于GRPO实现无autograd的共享提示评估、状态保留与短响应分支重放。在8张H20上完成210万位置的Qwen分组打分，32张H20上验证GLM-5.2的210万token端到端路径。
+
+- **UniVR: Thinking in Visual Space for Unified Visual Reasoning** `[RL]` `[VLM]` — [2607.12800](https://arxiv.org/abs/2607.12800) | [GitHub](https://github.com/bytedance/UniVR)
+  > 提出首个在纯视觉演示中同时学习复杂推理、细粒度物理动态与长期规划的UniVR框架，核心VR-GRPO通过全局与步骤级奖励保证逻辑一致性与物理一致性。在VR-X基准上提升达25%，并增强多模态理解能力。
+
+- **MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators** `[RL]` `[扩散模型]` — [2607.15273](https://arxiv.org/abs/2607.15273) | [GitHub](https://github.com/Harahan/MeanFlowNFT)
+  > 将DiffusionNFT前向过程RL扩展到MeanFlow生成器，通过诱导瞬时速度预测器使奖励优化适用于平均速度采样，保持少步采样优势。在SD3.5-M上8项指标中6项超越SOTA少步RL生成器，Wan 2.1上4步VBench达84.33。
+
+- **Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models** `[无需训练]` — [2607.15277](https://arxiv.org/abs/2607.15277) | [GitHub](https://github.com/patrikwolf/statistical_self_consistency)
+  > 研究大语言模型估计是否满足概率自一致性，通过二叉树递归划分群体并聚合条件估计，系统评估不同粒度划分下的一致性。实验发现前沿模型普遍存在自一致性违反，且细粒度子群体估计往往比直接总体估计更准确（宏观谬误），为无参考评估提供新准则。
+
+- **SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment** — [2607.15058](https://arxiv.org/abs/2607.15058) | [GitHub](https://github.com/snt-arg/SUFLECA)
+  > 提出弱监督零样本CAD-to-Image对齐框架SUFLECA，通过67.4万张图像上的NOCs监督学习几何感知特征，并设计几何一致匹配算法实现单张RGB图像的9D位姿估计。在ScanNet25k上首次超越全监督方法，类别/实例精度达33.4%/42.3%。
+
+- **Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving** `[API]` — [2607.14387](https://arxiv.org/abs/2607.14387) | [GitHub](https://github.com/TUM-AVS/Chat2scenic)
+  > 提出首个迭代RAG框架Chat2Scenic，将法规描述生成自动驾驶场景DSL脚本，支持交互式场景细化并grounded法规知识与DSL语法。构建含123个法规场景的开放基准，编译成功率76.42%、框架准确率58.17%，显著优于现有方法。
