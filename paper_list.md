@@ -4420,3 +4420,17 @@
 
 - **Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving** `[API]` — [2607.14387](https://arxiv.org/abs/2607.14387) | [GitHub](https://github.com/TUM-AVS/Chat2scenic)
   > 提出首个迭代RAG框架Chat2Scenic，将法规描述生成自动驾驶场景DSL脚本，支持交互式场景细化并grounded法规知识与DSL语法。构建含123个法规场景的开放基准，编译成功率76.42%、框架准确率58.17%，显著优于现有方法。
+
+## 2026年7月20日
+
+- **RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM** — [2607.11683](https://arxiv.org/abs/2607.11683) | [GitHub](https://github.com/RaguTeam/RAGU)
+  > RAGU 是开源模块化的 GraphRAG 引擎，将知识图谱抽取与整合解耦，通过两阶段类型化抽取、DBSCAN 去重、LLM 摘要和 Leiden 社区检测提升质量。团队训练了专注语言技能的 7B 模型 Meno-Lite-0.1，在知识图谱构建上超过 Qwen2.5-32B。在 GraphRAG-Bench（医疗）上证据召回率达 0.84，综合任务超过 HippoRAG2，可在单 GPU 运行。
+
+- **Cura 1T: Specialized Model for Agentic Healthcare** — [2607.15314](https://arxiv.org/abs/2607.15314) | [GitHub](https://github.com/actava-ai/Cura)
+  > Cura 1T 是面向医疗场景的专业化大语言模型，通过人类门控自进化循环训练，每轮由训练 agent 规划目标能力、训练模型、评估轨迹并根据失败调整数据配比。模型覆盖患者咨询、图文临床推理、交互式诊断和电子健康记录工具使用等任务。在医疗评测套件中达到或接近前沿基线最优水平，同时在域外推理和 agent 基准上保持竞争力。
+
+- **Understanding Reasoning from Pretraining to Post-Training** `[RL]` — [2607.16097](https://arxiv.org/abs/2607.16097) | [GitHub](https://github.com/pavelslab-nyu/pre2post-chess)
+  > 该研究以国际象棋为可控测试平台，系统研究从预训练到 RL 后训练全链路对推理的影响。团队预训练 5M 到 1B 参数语言模型，再进行 SFT 和可验证奖励的 RL。发现给定 RL 算力下的后 RL 性能可由预训练损失预测，奖励曲线斜率随预训练 token 数线性提升。RL 在简单题放大 SFT 偏好的正确走法，在难题则能激发出 SFT 下几乎不存在的正确走法；该规律在数学 1B 模型上同样成立。
+
+- **S1-Omni: A Unified Multimodal Reasoning Model for Scientific Understanding, Prediction, and Generation** `[VLM]` — [2607.15686](https://arxiv.org/abs/2607.15686) | [GitHub](https://github.com/ScienceOne-AI/S1-Omni)
+  > S1-Omni 是面向科学理解、预测与生成的统一多模态推理模型，将 CIF、SMILES、蛋白质序列、光谱和科学图像等映射到统一表示空间，并在数据构建与训练中融入科学定律和专家知识。模型基于 S1-Omni-Corpus 训练，覆盖 200 个科学任务、数百万推理样本，在 60 余项科学基准上评测，多数超过 GPT-5.5 和 Gemini-3.1-Pro，部分任务匹敌或超越领域专用模型。
