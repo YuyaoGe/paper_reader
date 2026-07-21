@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2026-07-21",
+    "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+    "arxiv_id": "2607.18213",
+    "github": "https://github.com/Ayanami1314/swe-pruner-pro",
+    "abstract": "提出SWE-Pruner Pro，让编码智能体直接利用自身内部表征判断工具输出中每行代码的相关性，从而在原代理内部完成上下文剪枝，无需外挂独立分类器。通过小型预测头与长度感知嵌入，在四个多轮基准上节省最多39%的prompt与completion token，并在MiMo-V2-Flash上提升SWE-Bench Verified解决率3.8%和长上下文Oolong准确率2.2个百分点。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-07-21",
+    "title": "Distilled Reinforcement Learning for LLM Post-training",
+    "arxiv_id": "2607.17247",
+    "github": "https://github.com/597358816/Distilled-RL",
+    "abstract": "提出Distilled RL，将教师监督融入RL目标函数以提供细粒度指导，避免传统on-policy distillation无条件模仿导致的知识迁移困境。通过反向重要性采样裁剪、负样本重置与序列级几何归一化，实现跨模型族知识迁移。实验表明在within-family与cross-family设置下，pass@1和pass@k均显著优于标准RL与OPD。",
+    "tags": ["RL"]
+  }
+]

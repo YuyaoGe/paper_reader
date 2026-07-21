@@ -4434,3 +4434,11 @@
 
 - **S1-Omni: A Unified Multimodal Reasoning Model for Scientific Understanding, Prediction, and Generation** `[VLM]` — [2607.15686](https://arxiv.org/abs/2607.15686) | [GitHub](https://github.com/ScienceOne-AI/S1-Omni)
   > S1-Omni 是面向科学理解、预测与生成的统一多模态推理模型，将 CIF、SMILES、蛋白质序列、光谱和科学图像等映射到统一表示空间，并在数据构建与训练中融入科学定律和专家知识。模型基于 S1-Omni-Corpus 训练，覆盖 200 个科学任务、数百万推理样本，在 60 余项科学基准上评测，多数超过 GPT-5.5 和 Gemini-3.1-Pro，部分任务匹敌或超越领域专用模型。
+
+## 2026年7月21日
+
+- **SWE-Pruner Pro: The Coder LLM Already Knows What to Prune** `[无需训练]` — [2607.18213](https://arxiv.org/abs/2607.18213) | [GitHub](https://github.com/Ayanami1314/swe-pruner-pro)
+  > 提出SWE-Pruner Pro，让编码智能体直接利用自身内部表征判断工具输出中每行代码的相关性，从而在原代理内部完成上下文剪枝，无需外挂独立分类器。通过小型预测头与长度感知嵌入，在四个多轮基准上节省最多39%的prompt与completion token，并在MiMo-V2-Flash上提升SWE-Bench Verified解决率3.8%和长上下文Oolong准确率2.2个百分点。
+
+- **Distilled Reinforcement Learning for LLM Post-training** `[RL]` — [2607.17247](https://arxiv.org/abs/2607.17247) | [GitHub](https://github.com/597358816/Distilled-RL)
+  > 提出Distilled RL，将教师监督融入RL目标函数以提供细粒度指导，避免传统on-policy distillation无条件模仿导致的知识迁移困境。通过反向重要性采样裁剪、负样本重置与序列级几何归一化，实现跨模型族知识迁移。实验表明在within-family与cross-family设置下，pass@1和pass@k均显著优于标准RL与OPD。
