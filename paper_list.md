@@ -4442,3 +4442,17 @@
 
 - **Distilled Reinforcement Learning for LLM Post-training** `[RL]` — [2607.17247](https://arxiv.org/abs/2607.17247) | [GitHub](https://github.com/597358816/Distilled-RL)
   > 提出Distilled RL，将教师监督融入RL目标函数以提供细粒度指导，避免传统on-policy distillation无条件模仿导致的知识迁移困境。通过反向重要性采样裁剪、负样本重置与序列级几何归一化，实现跨模型族知识迁移。实验表明在within-family与cross-family设置下，pass@1和pass@k均显著优于标准RL与OPD。
+
+## 2026年7月22日
+
+- **DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines** `[API]` — [2607.16617](https://arxiv.org/abs/2607.16617) | [GitHub](https://github.com/OpenDCAI/DataFlow-WebUI)
+  > 提出DataFlow-Harness平台，弥合NL2Pipeline鸿沟。通过DataFlow-Skills过程引导、MCP协议暴露实时算子与状态，以及DataFlow-WebUI可视化编辑器，让LLM Agent以类型化增量修改生成可持久、可编辑的平台原生DAG。在12项数据工程任务上实现93.3%通过率，相较Vanilla Claude Code降低72.5%成本和49.9%延迟。
+
+- **Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning** `[RL]` — [2607.18722](https://arxiv.org/abs/2607.18722) | [GitHub](https://github.com/jyyang26/SAT)
+  > 针对异步强化学习中的陈旧性问题，提出Staleness-Adaptive Trust Region（SAT）。利用分离采样log-ratio作为陈旧度代理，识别批次内高不匹配尾部并收缩PPO区间端点，在保留普通token基线的同时约束高陈旧度更新。在Qwen3-30B-A3B-Base上，SAT-GSPO w/ R3在lag 1和lag 8分别取得AIME24 avg@8 35.83与34.79。
+
+- **AgentDebugX: An Open-Source Toolkit for Failure Observability, Attribution, and Recovery in LLM Agents** `[API]` — [2607.18754](https://arxiv.org/abs/2607.18754) | [GitHub](https://github.com/AgentDebugX/AgentDebugX)
+  > 开源LLM Agent调试框架AgentDebugX，将调试组织为检测、归因、恢复与重运行的闭环。核心模块DeepDebug通过全局轨迹理解、结构引导调查与交叉审问进行多轮根因诊断。在Who and When基准上，于qwen3.5-9b取得28.8%的严格归因准确率；在GAIA上通过单次重运行修复13个失败任务，将整体准确率从55.8%提升至63.6%。
+
+- **ISO: An RLVR-Native Optimization Stack** `[RL]` — [2607.19331](https://arxiv.org/abs/2607.19331) | [GitHub](https://github.com/zhuhanqing/ISO)
+  > 从权重奇异结构研究RLVR优化层，提出谱继承现象：RLVR可复用基础模型权重谱，并通过改变输入/输出奇异框架获得新行为。据此提出Isospectral Optimization框架，含无需后合并数据的ISO-Merger与固定谱的ISO-Optimizer。在Qwen3-8B-Base上，ISO-AdamW仅用100步即达AdamW 270步的准确率，并进一步提升至0.509。
