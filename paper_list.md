@@ -4456,3 +4456,14 @@
 
 - **ISO: An RLVR-Native Optimization Stack** `[RL]` — [2607.19331](https://arxiv.org/abs/2607.19331) | [GitHub](https://github.com/zhuhanqing/ISO)
   > 从权重奇异结构研究RLVR优化层，提出谱继承现象：RLVR可复用基础模型权重谱，并通过改变输入/输出奇异框架获得新行为。据此提出Isospectral Optimization框架，含无需后合并数据的ISO-Merger与固定谱的ISO-Optimizer。在Qwen3-8B-Base上，ISO-AdamW仅用100步即达AdamW 270步的准确率，并进一步提升至0.509。
+
+## 2026年7月23日
+
+- **Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking** `[无需训练]` — [2607.19747](https://arxiv.org/abs/2607.19747) | [GitHub](https://github.com/Rubric4Setwise/Rubric4Setwise)
+  > 针对LLM与AI Agent对文档集质量的需求，提出面向评分标准的文档集选择与排序框架。首先构建SetwiseEvalKit三层次九维度评估基准（约2.8万条评分标准），系统评估12个重排序器；进而提出无需训练的Rubric4Setwise方法，将评分标准转化为文档集选择信号，在短文本与长文本场景均取得最优下游生成性能，且只需更少文档与搜索轮次。
+
+- **Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization** `[RL]` — [2607.10169](https://arxiv.org/abs/2607.10169) | [GitHub](https://github.com/Aiolus-X/RIPO)
+  > 揭示PPO-Clip在LLM强化学习中的根本缺陷：其隐式使用欧氏距离度量策略差异，与策略黎曼流形的内在几何不一致，导致低概率区域更新过保守、高概率区域过激进，最终引发探索崩溃。提出黎曼等距策略优化RIPO，保证在黎曼流形上的等距策略更新，平衡探索与利用，并取得更优的偏差-方差权衡。在7个竞赛级基准上显著超越现有LLM RL算法，AIME24上较GRPO提升最高达60%。
+
+- **SLPO: Scaling Latent Reasoning via a Surrogate Policy** `[RL]` — [2607.19691](https://arxiv.org/abs/2607.19691) | [GitHub](https://github.com/ModalityDance/SLPO)
+  > 为自回归隐式推理模型引入基于结果奖励的强化学习，提出Surrogate Latent Policy Optimization（SLPO）。通过构建隐式转移的经验替代策略密度实现轨迹级信用分配，并训练由正确性监督的停止头，使模型能在固定思考预算下自适应调整推理长度。在连续与软思考设置中，SLPO在并行采样下提升Pass@k，并为更难样本分配更长的隐式计算，获得更高确定性准确率。

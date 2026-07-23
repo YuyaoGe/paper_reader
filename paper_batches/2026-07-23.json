@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-07-23",
+    "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
+    "arxiv_id": "2607.19747",
+    "github": "https://github.com/Rubric4Setwise/Rubric4Setwise",
+    "abstract": "针对LLM与AI Agent对文档集质量的需求，提出面向评分标准的文档集选择与排序框架。首先构建SetwiseEvalKit三层次九维度评估基准（约2.8万条评分标准），系统评估12个重排序器；进而提出无需训练的Rubric4Setwise方法，将评分标准转化为文档集选择信号，在短文本与长文本场景均取得最优下游生成性能，且只需更少文档与搜索轮次。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-07-23",
+    "title": "Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization",
+    "arxiv_id": "2607.10169",
+    "github": "https://github.com/Aiolus-X/RIPO",
+    "abstract": "揭示PPO-Clip在LLM强化学习中的根本缺陷：其隐式使用欧氏距离度量策略差异，与策略黎曼流形的内在几何不一致，导致低概率区域更新过保守、高概率区域过激进，最终引发探索崩溃。提出黎曼等距策略优化RIPO，保证在黎曼流形上的等距策略更新，平衡探索与利用，并取得更优的偏差-方差权衡。在7个竞赛级基准上显著超越现有LLM RL算法，AIME24上较GRPO提升最高达60%。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-07-23",
+    "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+    "arxiv_id": "2607.19691",
+    "github": "https://github.com/ModalityDance/SLPO",
+    "abstract": "为自回归隐式推理模型引入基于结果奖励的强化学习，提出Surrogate Latent Policy Optimization（SLPO）。通过构建隐式转移的经验替代策略密度实现轨迹级信用分配，并训练由正确性监督的停止头，使模型能在固定思考预算下自适应调整推理长度。在连续与软思考设置中，SLPO在并行采样下提升Pass@k，并为更难样本分配更长的隐式计算，获得更高确定性准确率。",
+    "tags": ["RL"]
+  }
+]
