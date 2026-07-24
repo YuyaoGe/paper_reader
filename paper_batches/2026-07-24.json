@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-07-24",
+    "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+    "arxiv_id": "2607.21461",
+    "github": "https://github.com/VectorSpaceLab/arex-model",
+    "abstract": "提出 AREX，一种递归自改进的深度研究智能体。它交替执行内部研究循环与外部自改进循环，前者收集证据构建临时答案，后者按约束审计并触发后续研究。为维持长程改进，AREX 学习上下文更新工具，将交互历史压缩为保留已验证证据与未解决约束的紧凑状态。通过 agentic mid-training 与长程 RL 训练出 4B 稠密和 122B-A10B MoE 模型，在多项推理与工具使用基准上显著超越同规模基线。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-07-24",
+    "title": "Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text",
+    "arxiv_id": "2607.21072",
+    "github": "https://github.com/ZJU-OmniAI/ProVisE",
+    "abstract": "提出 ProVisE，一个与基准无关的协议化视觉评估框架。它让图像生成模型在像素空间直接外化空间判断，解析为与原指标兼容的结构化预测，从而与文本输出 VLM 在统一语义下比较。框架配备 Agentic 协议构建器，可为新基准生成并验证任务专用协议。研究者还构建 SpatialGen-Bench，含 470 个样本、14 项空间子任务和四类能力层级。实验揭示像素空间表达与文本推理的互补优势。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-07-24",
+    "title": "NVIDIA-labs OO Agents: Native Python Object-Oriented Agents",
+    "arxiv_id": "2607.20709",
+    "github": "https://github.com/NVIDIA-NeMo/labs-OO-Agents",
+    "abstract": "提出 NVIDIA Object-Oriented Agents（NOOA），一个模型无关的 Python 智能体框架。它将智能体抽象为 Python 对象：方法为可执行动作、字段为状态、docstrings 为提示、类型注解为契约。省略号方法体由 LLM 驱动循环在运行时补全，普通方法保持确定性 Python 行为，使智能体代码可测试与重构。在 SWE-bench Verified、Terminal-Bench 2.0 与 ARC-AGI-3 等智能体与推理基准上验证有效。",
+    "tags": ["API"]
+  }
+]

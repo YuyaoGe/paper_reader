@@ -4467,3 +4467,14 @@
 
 - **SLPO: Scaling Latent Reasoning via a Surrogate Policy** `[RL]` — [2607.19691](https://arxiv.org/abs/2607.19691) | [GitHub](https://github.com/ModalityDance/SLPO)
   > 为自回归隐式推理模型引入基于结果奖励的强化学习，提出Surrogate Latent Policy Optimization（SLPO）。通过构建隐式转移的经验替代策略密度实现轨迹级信用分配，并训练由正确性监督的停止头，使模型能在固定思考预算下自适应调整推理长度。在连续与软思考设置中，SLPO在并行采样下提升Pass@k，并为更难样本分配更长的隐式计算，获得更高确定性准确率。
+
+## 2026年7月24日
+
+- **AREX: Towards a Recursively Self-Improving Agent for Deep Research** `[RL]` `[MeM]` — [2607.21461](https://arxiv.org/abs/2607.21461) | [GitHub](https://github.com/VectorSpaceLab/arex-model)
+  > 提出 AREX，一种递归自改进的深度研究智能体。它交替执行内部研究循环与外部自改进循环，前者收集证据构建临时答案，后者按约束审计并触发后续研究。为维持长程改进，AREX 学习上下文更新工具，将交互历史压缩为保留已验证证据与未解决约束的紧凑状态。通过 agentic mid-training 与长程 RL 训练出 4B 稠密和 122B-A10B MoE 模型，在多项推理与工具使用基准上显著超越同规模基线。
+
+- **Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text** `[VLM]` — [2607.21072](https://arxiv.org/abs/2607.21072) | [GitHub](https://github.com/ZJU-OmniAI/ProVisE)
+  > 提出 ProVisE，一个与基准无关的协议化视觉评估框架。它让图像生成模型在像素空间直接外化空间判断，解析为与原指标兼容的结构化预测，从而与文本输出 VLM 在统一语义下比较。框架配备 Agentic 协议构建器，可为新基准生成并验证任务专用协议。研究者还构建 SpatialGen-Bench，含 470 个样本、14 项空间子任务和四类能力层级。实验揭示像素空间表达与文本推理的互补优势。
+
+- **NVIDIA-labs OO Agents: Native Python Object-Oriented Agents** `[API]` — [2607.20709](https://arxiv.org/abs/2607.20709) | [GitHub](https://github.com/NVIDIA-NeMo/labs-OO-Agents)
+  > 提出 NVIDIA Object-Oriented Agents（NOOA），一个模型无关的 Python 智能体框架。它将智能体抽象为 Python 对象：方法为可执行动作、字段为状态、docstrings 为提示、类型注解为契约。省略号方法体由 LLM 驱动循环在运行时补全，普通方法保持确定性 Python 行为，使智能体代码可测试与重构。在 SWE-bench Verified、Terminal-Bench 2.0 与 ARC-AGI-3 等智能体与推理基准上验证有效。
