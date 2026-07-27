@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-07-27",
+    "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+    "arxiv_id": "2607.22529",
+    "github": "https://github.com/Qwen-Applications/skill-self-play",
+    "abstract": "提出 Skill Self-Play（Skill-SP）框架，通过共同进化的技能库平衡自进化方法中任务多样性与验证可靠性的矛盾。框架包含任务提出器、求解器和动态技能控制器，在强化学习循环中协同进化：提出器基于采样技能生成任务，求解器探索解，控制器根据执行反馈更新技能库。在工具使用和推理基准上验证，Skill-SP 能持续提升模型能力并修正初始错位模型。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+    "arxiv_id": "2607.21653",
+    "github": "https://github.com/NVIDIA-NeMo/labs-molt",
+    "abstract": "提出面向 Agentic 强化学习的 PyTorch 原生训练框架 Molt，专为降低算法迭代中的研究者负担而设计。框架以 Agent 为核心程序，通过单一异步循环训练多模态和混合专家策略，并保证训练数据与生成 token 在 token、策略版本和模型语义上的一致性。实验表明，在匹配的完全异步协议下，Molt 与最先进的 Megatron 方案统计可比，同时代码更简洁、易于 AI 辅助修改。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
+    "arxiv_id": "2607.21503",
+    "github": "https://github.com/maximem-ai/maximem_synap_sdk",
+    "abstract": "提出 Agentic Context Management（ACM）框架，将生产级 Agent 的上下文管理视为生命周期问题而非单纯存储检索问题。论文将其分解为架构、摄取、范围、预测、压缩与整合五个原语，并给出参考实现 Maximem Synap。实验显示，该实现 LongMemEval 上达到 92%、LoCoMo 上达到 93.2%；同时论证了经验证的上下文压缩可在控制成本线性增长的同时保持信息保真度。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
+    "arxiv_id": "2607.14277",
+    "github": "https://github.com/Amirhosein-gh98/Multi-Head-Latent-Control",
+    "abstract": "提出 Multi-Head Latent Control 方法，在冻结的 LLM/VLM 上添加轻量级控制头，从隐藏状态轨迹推断部署时的控制信号。能力头判断当前模型能否解决问题或应转交更强模型，分辨率头决定澄清、工具使用、弃权或直接回答。在 AndroidWorld 等基准上可减少大模型调用高达 90.7%，同时保留大部分性能。",
+    "tags": ["无需训练", "VLM"]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "IDEAgent: Agentic Quality-Diversity Search for Research Idea Generation",
+    "arxiv_id": "2607.22375",
+    "github": "https://github.com/declare-lab/IDEAgent",
+    "abstract": "提出 IDEAgent 多智能体框架，将研究想法生成建模为质量-多样性（QD）搜索问题。通过谱系管理想法演化，联合质量反馈进行修复与精炼，并通过序列记忆和与历史祖先及被拒绝提案的显式比较来保证多样性。在 8 个计算机科学领域的 32 个主题上，IDEAgent 在 Yield 指标上比最佳基线提升 3.89 倍。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "Spectral Prior for Reducing Exposure Bias in Diffusion Models",
+    "arxiv_id": "2607.22091",
+    "github": "https://github.com/SonyResearch/SPA",
+    "abstract": "提出 Spectral Alignment（SPA）方法，用于缓解扩散模型迭代采样中的曝光偏差问题。研究揭示训练与推理之间存在系统性的频率相关差异，可解释为频率相关的信噪比误差，且不同模型和时间步的误差方向各异。SPA 通过离线拟合参数化谱模型和基于 FFT 梯度计算的推理时引导来校准中间预测功率谱，计算开销仅 3-4%，并在多种像素空间、潜空间和流匹配模型上取得一致提升。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "VisCo: Leveraging Large Language Models as Intrinsic Encoders for Visual Token Compression",
+    "arxiv_id": "2607.12756",
+    "github": "https://github.com/Zyvpeng/VisCo",
+    "abstract": "提出 VisCo 训练高效的视觉 token 自压缩框架，将预训练 VLM 本身作为内在编码器复用，避免引入外部压缩模块带来的高昂重训练成本。通过参数共享的自编码器和记忆 token 压缩视觉信息，并在编码与解码间传递层次化信息。实验表明 VisCo 在各种压缩比下均优于先前方法，在极端单 token 设置下仍保持稳定。",
+    "tags": ["VLM"]
+  }
+]
