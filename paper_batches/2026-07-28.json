@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-07-28",
+    "title": "JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents",
+    "arxiv_id": "2607.23588",
+    "github": "https://github.com/LYL1015/JarvisHub",
+    "abstract": "提出面向画布原生多模态创意智能体的开放评测与开发框架JarvisHub，支持交互式视觉创作任务中的工具调用、状态追踪与多轮规划。通过统一的Canvas接口与Agent协议，降低复杂创意工作流的构建门槛，并提供可复现的基准、数据集与参考实现。",
+    "tags": ["API", "VLM"]
+  },
+  {
+    "date": "2026-07-28",
+    "title": "dRAE: Representation Autoencoder with Hyper-Spherical Codes",
+    "arxiv_id": "2607.22148",
+    "github": "https://github.com/martian422/dRAE",
+    "abstract": "针对视觉表征与语言模型之间的离散化鸿沟，提出超球面量化HSQ与离散表征自编码器dRAE。通过角度路由解耦语义内容与特征幅度，解决传统欧氏码本崩溃问题，在13.1万码本规模下实现100%利用率，并在理解与生成任务上取得一致提升。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-07-28",
+    "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+    "arxiv_id": "2607.24743",
+    "github": "https://github.com/alibaba-damo-academy/ClinFusion",
+    "abstract": "提出以视觉为中心的医疗多模态大语言模型ClinFusion，采用级联空间感知局部融合编码器统一2D与3D医学影像理解。构建MedIF-Bench与RoI grounded评估体系，在24项医疗基准中的20项超越开源医学MLLM，并在16项中的13项超过GPT-5.2等专有模型。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-07-28",
+    "title": "Leveraging External Knowledge for Historical Document Restoration via Retrieval-Augmented Large Language Models",
+    "arxiv_id": "2607.21936",
+    "github": "https://github.com/EvelynKimm/ARI",
+    "abstract": "提出ARI框架，利用检索增强大语言模型修复历史文献。通过外部知识检索与生成式修复相结合，解决古文献中的残缺、模糊与字迹退化问题，在多个历史文档数据集上验证了修复质量与可读性的显著提升，为数字化人文研究提供可复现的技术方案。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-28",
+    "title": "A Vocabulary for Multi-Agent Automated Research Systems",
+    "arxiv_id": "2607.22682",
+    "github": "https://github.com/BardiyaAk/multi-agent-research-vocabulary",
+    "abstract": "为自动科研多智能体系统提出一套结构化词汇表，统一描述智能体身份、可执行操作、通信方式、信息可见性与评估机制。通过将设计选择转化为可比较、可测试的维度，帮助研究者更清晰地分析现有系统并指导未来架构设计。",
+    "tags": []
+  },
+  {
+    "date": "2026-07-28",
+    "title": "Evidence Attribution in Visual Document Understanding without Coordinates or Region Labels",
+    "arxiv_id": "2607.24651",
+    "github": "https://github.com/Ryenhails/quote-and-retrieve",
+    "abstract": "提出无需坐标或区域标签的视觉文档证据归因方法，让模型直接引用原文作为证据并由检索器定位页面区域。在双语CiteVQA上证据召回率从8%提升至26%-47%，并设计基于GRPO的训练方案，将8B模型的严格归因准确率从22.4提升至33.8。",
+    "tags": ["RL", "VLM"]
+  }
+]

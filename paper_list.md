@@ -4501,3 +4501,23 @@
 
 - **VisCo: Leveraging Large Language Models as Intrinsic Encoders for Visual Token Compression** `[VLM]` — [2607.12756](https://arxiv.org/abs/2607.12756) | [GitHub](https://github.com/Zyvpeng/VisCo)
   > 提出 VisCo 训练高效的视觉 token 自压缩框架，将预训练 VLM 本身作为内在编码器复用，避免引入外部压缩模块带来的高昂重训练成本。通过参数共享的自编码器和记忆 token 压缩视觉信息，并在编码与解码间传递层次化信息。实验表明 VisCo 在各种压缩比下均优于先前方法，在极端单 token 设置下仍保持稳定。
+
+## 2026年7月28日
+
+- **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** `[API]` `[VLM]` — [2607.23588](https://arxiv.org/abs/2607.23588) | [GitHub](https://github.com/LYL1015/JarvisHub)
+  > 提出面向画布原生多模态创意智能体的开放评测与开发框架JarvisHub，支持交互式视觉创作任务中的工具调用、状态追踪与多轮规划。通过统一的Canvas接口与Agent协议，降低复杂创意工作流的构建门槛，并提供可复现的基准、数据集与参考实现。
+
+- **dRAE: Representation Autoencoder with Hyper-Spherical Codes** `[VLM]` — [2607.22148](https://arxiv.org/abs/2607.22148) | [GitHub](https://github.com/martian422/dRAE)
+  > 针对视觉表征与语言模型之间的离散化鸿沟，提出超球面量化HSQ与离散表征自编码器dRAE。通过角度路由解耦语义内容与特征幅度，解决传统欧氏码本崩溃问题，在13.1万码本规模下实现100%利用率，并在理解与生成任务上取得一致提升。
+
+- **ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding** `[VLM]` — [2607.24743](https://arxiv.org/abs/2607.24743) | [GitHub](https://github.com/alibaba-damo-academy/ClinFusion)
+  > 提出以视觉为中心的医疗多模态大语言模型ClinFusion，采用级联空间感知局部融合编码器统一2D与3D医学影像理解。构建MedIF-Bench与RoI grounded评估体系，在24项医疗基准中的20项超越开源医学MLLM，并在16项中的13项超过GPT-5.2等专有模型。
+
+- **Leveraging External Knowledge for Historical Document Restoration via Retrieval-Augmented Large Language Models** — [2607.21936](https://arxiv.org/abs/2607.21936) | [GitHub](https://github.com/EvelynKimm/ARI)
+  > 提出ARI框架，利用检索增强大语言模型修复历史文献。通过外部知识检索与生成式修复相结合，解决古文献中的残缺、模糊与字迹退化问题，在多个历史文档数据集上验证了修复质量与可读性的显著提升，为数字化人文研究提供可复现的技术方案。
+
+- **A Vocabulary for Multi-Agent Automated Research Systems** — [2607.22682](https://arxiv.org/abs/2607.22682) | [GitHub](https://github.com/BardiyaAk/multi-agent-research-vocabulary)
+  > 为自动科研多智能体系统提出一套结构化词汇表，统一描述智能体身份、可执行操作、通信方式、信息可见性与评估机制。通过将设计选择转化为可比较、可测试的维度，帮助研究者更清晰地分析现有系统并指导未来架构设计。
+
+- **Evidence Attribution in Visual Document Understanding without Coordinates or Region Labels** `[RL]` `[VLM]` — [2607.24651](https://arxiv.org/abs/2607.24651) | [GitHub](https://github.com/Ryenhails/quote-and-retrieve)
+  > 提出无需坐标或区域标签的视觉文档证据归因方法，让模型直接引用原文作为证据并由检索器定位页面区域。在双语CiteVQA上证据召回率从8%提升至26%-47%，并设计基于GRPO的训练方案，将8B模型的严格归因准确率从22.4提升至33.8。
