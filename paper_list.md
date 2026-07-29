@@ -4521,3 +4521,29 @@
 
 - **Evidence Attribution in Visual Document Understanding without Coordinates or Region Labels** `[RL]` `[VLM]` — [2607.24651](https://arxiv.org/abs/2607.24651) | [GitHub](https://github.com/Ryenhails/quote-and-retrieve)
   > 提出无需坐标或区域标签的视觉文档证据归因方法，让模型直接引用原文作为证据并由检索器定位页面区域。在双语CiteVQA上证据召回率从8%提升至26%-47%，并设计基于GRPO的训练方案，将8B模型的严格归因准确率从22.4提升至33.8。
+
+## 2026年7月29日
+
+- **A New Role for Relevance: Guiding Corpus Interaction in Agentic Search** `[API]` — [2607.24223](https://arxiv.org/abs/2607.24223) | [GitHub](https://github.com/LeqsNaN/RARG)
+  > 提出RARG智能体，将相关性估计转化为语料库交互的执行先验。通过粗到细的相关性引导，为ripgrep遍历排序文档、初始化查询相关段落入口、重排匹配片段，使大模型更早看到全局相关线索。在浏览式问答和推理密集型检索任务上，相比纯检索和直接交互基线提升了准确率-效率前沿。
+
+- **ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition** `[API]` — [2607.25565](https://arxiv.org/abs/2607.25565) | [GitHub](https://github.com/jintae-00/ReDesign)
+  > 提出ReDesign智能体框架，从栅格图像恢复可编辑的设计文件结构。通过跨模态选择和组合专业工具，并逐步引入局部接受、剪枝或重试的优雅验证机制，防止错误累积。在Figma Edit Replay Benchmark和常规重建指标上，ReDesign在布局、颜色和文本编辑中取得最高可编辑性，同时保持较强的视觉保真度。
+
+- **CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents** — [2607.25431](https://arxiv.org/abs/2607.25431) | [GitHub](https://github.com/sysevol-ai/CodeNib)
+  > 提出CodeNib多视图数据系统，为编码智能体提供可复用的仓库上下文服务。针对每次提交构建词法、稠密和结构视图，将输出映射到仓库相对源码范围，并在编辑间维护选定视图。实验表明，图和向量更新中位数分别快8.7倍和25.4倍，上下文策略可在保留定位能力的同时将轨迹token减少50%-87%。
+
+- **Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model** `[VLM]` — [2607.24904](https://arxiv.org/abs/2607.24904) | [GitHub](https://github.com/microsoft/Mage)
+  > 提出Mage-VL编解码器原生流式多模态基础模型。定制分词器Mage-VT利用运动矢量和残差能量，对稀疏锚帧与预测帧中的动态高熵区域选择性编码，视觉token消耗降低75%以上。双系统架构支持主动流式感知，Mage-VL-4B在静态任务上匹敌Qwen3-VL-4B，视频理解和空间推理显著提升，推理速度最高提升3.5倍。
+
+- **Novel Claim or Déjà Vu? Rethinking "Contamination-Free'' Dynamic Evaluation for Multimodal Automated Fact-Checking** — [2607.23514](https://arxiv.org/abs/2607.23514) | [GitHub](https://github.com/TrustworthyComp/Rethink-MAFC-Eval)
+  > 重新审视多模态自动事实核查（MAFC）中动态评估的污染风险。通过构建ClaimReview2025Q4动态基准并对比AVeriTeC静态基准，发现17.09%-29.30%的截断后声明仍可能被污染，污染可使Macro-F1虚高最多11.34分并扭曲系统排名。研究在严格控制污染的设置下重新评估SOTA大模型，并给出可信MAFC评估的实践指南。
+
+- **Towards Robust Reinforcement Learning for Small-Scale Language Model Agents** `[RL]` — [2607.25091](https://arxiv.org/abs/2607.25091) | [GitHub](https://github.com/rezwanh001/SLM-RL-Agents)
+  > 系统研究70M-500M参数小型语言模型在RL对齐中的不稳定机制，识别出LoRA参数静默冻结、bfloat16重要性比率溢出、奖励模型误差导致策略崩溃三种失效模式。提出合并-重初始化适配器、PPO更新用float32精度以及奖励白化、重要性比率保护和权重回滚的三层安全机制，实验在所有配置中稳定收敛并超越SFT基线。
+
+- **Mapping CVEs to MITRE ATT&CK Techniques: A Curated Gold-Set Classifier and the Limits of LLM-Assisted Label Expansion** — [2607.25572](https://arxiv.org/abs/2607.25572) | [GitHub](https://github.com/vulnerability-lookup/cve-attack-mapping-paper)
+  > 提出将常见漏洞与暴露（CVE）映射到MITRE ATT&CK技术的可复现流程。基于1,207条专家标注的CVE构建多标签分类器，recall@5较零样本嵌入相似度基线提升约一倍。研究发现LLM辅助标注与专家标注一致性仅约0.39，扩大标注无法可靠提升性能，反而降低罕见技术覆盖率；而额外专家标注数据能持续提升模型表现，说明瓶颈在于标签质量而非数据规模。
+
+- **GLI-AL: A Multi-Modal Glioma MRI Label Resource with Unified Anatomy-Lesion Labels** — [2607.22135](https://arxiv.org/abs/2607.22135) | [GitHub](https://github.com/xyx200/brats-gli-anatomy-lesion-code)
+  > 提出BraTS-GLI Anatomy-Lesion标签资源，在BraTS 2023-GLI训练队列上为1,251例成人胶质瘤MRI构建统一的八类解剖-病变标签，包括白质高信号等既往未标注的共存异常。资源包含394例纯净子集和857例扩展子集，以及修复标签和质量控制元数据。验证实验表明，WMH感知监督可在保持域内和外部WMH数据集健康组织分割性能的同时，提高对共存病变的敏感性。
