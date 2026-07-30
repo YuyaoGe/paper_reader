@@ -4547,3 +4547,14 @@
 
 - **GLI-AL: A Multi-Modal Glioma MRI Label Resource with Unified Anatomy-Lesion Labels** — [2607.22135](https://arxiv.org/abs/2607.22135) | [GitHub](https://github.com/xyx200/brats-gli-anatomy-lesion-code)
   > 提出BraTS-GLI Anatomy-Lesion标签资源，在BraTS 2023-GLI训练队列上为1,251例成人胶质瘤MRI构建统一的八类解剖-病变标签，包括白质高信号等既往未标注的共存异常。资源包含394例纯净子集和857例扩展子集，以及修复标签和质量控制元数据。验证实验表明，WMH感知监督可在保持域内和外部WMH数据集健康组织分割性能的同时，提高对共存病变的敏感性。
+
+## 2026年7月30日
+
+- **CAST: Game Solvers as Turn-Level Teachers for LLM Agents** `[RL]` — [2607.25308](https://arxiv.org/abs/2607.25308) | [GitHub](https://github.com/Wloner0809/CAST)
+  > 提出CAST方法，利用游戏求解器的状态值变化生成回合级优势信号，注入RLVR训练过程，为稀疏终局奖励提供密集的过程监督。在Sokoban、Minesweeper、Rush Hour等任务上超越所有训练基线，并在ALFWorld和WebShop取得最佳零样本性能。
+
+- **SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution** `[RL]` — [2607.26784](https://arxiv.org/abs/2607.26784) | [GitHub](https://github.com/Within-yao/SkillRise)
+  > 提出SkillRise统一强化学习框架，通过将相关任务组织成渐进难度序列，使单一策略在任务求解与技能文档整理之间交替，实现跨任务技能抽取、精炼与复用。在ALFWorld、WebShop和ScienceWorld上Pass@1性能较最强基线提升2.3至8.5个百分点，并降低多阶段技能学习管道的运行开销。
+
+- **Grading the Narrators: An Isnad-Rijal Framework for Claim-Level Provenance in Multi-Agent Knowledge Systems** — [2607.24117](https://arxiv.org/abs/2607.24117) | [GitHub](https://github.com/alizahidraja/isnad)
+  > 借鉴伊斯兰圣训学的传承链与传述人评级思想，提出多智能体知识系统的逐条声明溯源框架，将链式可信度评级与内容批评解耦，并设计最弱链隔离与独立链互证机制。在2万条真实物理教材声明上验证，能有效识别低可信传述路径并支持跨链验证。

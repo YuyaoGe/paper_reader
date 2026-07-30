@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-07-30",
+    "title": "CAST: Game Solvers as Turn-Level Teachers for LLM Agents",
+    "arxiv_id": "2607.25308",
+    "github": "https://github.com/Wloner0809/CAST",
+    "abstract": "提出CAST方法，利用游戏求解器的状态值变化生成回合级优势信号，注入RLVR训练过程，为稀疏终局奖励提供密集的过程监督。在Sokoban、Minesweeper、Rush Hour等任务上超越所有训练基线，并在ALFWorld和WebShop取得最佳零样本性能。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-07-30",
+    "title": "SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution",
+    "arxiv_id": "2607.26784",
+    "github": "https://github.com/Within-yao/SkillRise",
+    "abstract": "提出SkillRise统一强化学习框架，通过将相关任务组织成渐进难度序列，使单一策略在任务求解与技能文档整理之间交替，实现跨任务技能抽取、精炼与复用。在ALFWorld、WebShop和ScienceWorld上Pass@1性能较最强基线提升2.3至8.5个百分点，并降低多阶段技能学习管道的运行开销。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-07-30",
+    "title": "Grading the Narrators: An Isnad-Rijal Framework for Claim-Level Provenance in Multi-Agent Knowledge Systems",
+    "arxiv_id": "2607.24117",
+    "github": "https://github.com/alizahidraja/isnad",
+    "abstract": "借鉴伊斯兰圣训学的传承链与传述人评级思想，提出多智能体知识系统的逐条声明溯源框架，将链式可信度评级与内容批评解耦，并设计最弱链隔离与独立链互证机制。在2万条真实物理教材声明上验证，能有效识别低可信传述路径并支持跨链验证。",
+    "tags": []
+  }
+]
