@@ -4558,3 +4558,56 @@
 
 - **Grading the Narrators: An Isnad-Rijal Framework for Claim-Level Provenance in Multi-Agent Knowledge Systems** — [2607.24117](https://arxiv.org/abs/2607.24117) | [GitHub](https://github.com/alizahidraja/isnad)
   > 借鉴伊斯兰圣训学的传承链与传述人评级思想，提出多智能体知识系统的逐条声明溯源框架，将链式可信度评级与内容批评解耦，并设计最弱链隔离与独立链互证机制。在2万条真实物理教材声明上验证，能有效识别低可信传述路径并支持跨链验证。
+
+## 2026年7月31日
+
+- **Metis: Memory Foundation Model** `[MeM]` — [2607.26760](https://arxiv.org/abs/2607.26760) | [GitHub](https://github.com/MemTensor/Metis)
+  > 提出记忆基础模型（Memory Foundation Model），将记忆能力原生内化到基础模型中，通过持久动态的记忆状态和自主存取程序实现端到端优化。相比外挂记忆模块，原生记忆在架构、优化和泛化上更具优势，为构建具备长期记忆的智能体开辟了新方向。
+
+- **AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis** `[API]` — [2607.28618](https://arxiv.org/abs/2607.28618) | [GitHub](https://github.com/bingyan4science/askchem)
+  > 提出面向化学文献合成的声明中心检索基础设施AskChem，将检索单元从论文转为带出处声明，支持跨文献答案组装。系统包含层级化分类法和合成接口，已构建超240万条声明的数据集，帮助科学家和AI agent高效获取并验证化学发现。
+
+- **Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering** `[RL]` `[微调]` — [2607.28568](https://arxiv.org/abs/2607.28568) | [GitHub](https://github.com/FrontisAI/OpenRSI)
+  > 构建面向机器学习工程的递归自改进全栈系统OpenMLE，包含可执行任务环境、操作符学习和长程搜索三层。通过后训练35B模型作为元进化智能体，结合SFT与RL学习Draft/Improve/Debug/Crossover四种程序进化操作，实现AI4AI的初步闭环。
+
+- **Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory** `[MeM]` — [2607.27919](https://arxiv.org/abs/2607.27919) | [GitHub](https://github.com/LUMIA-Group/MemoryDecoder-at-Scale)
+  > 将Memory Decoder参数化长期记忆模块扩展到6.9B参数并在300B token上预训练，提出分布式Faiss索引与kNN分布稀疏加载方案解决大规模索引瓶颈。实验表明，把更多参数分配给记忆可获得优于单纯扩大基座模型的性价比。
+
+- **Beyond Borrowed Histories: Person-Aligned User Simulation for Interactive Role-Playing Evaluation** — [2607.27816](https://arxiv.org/abs/2607.27816) | [GitHub](https://github.com/Zhuyh1139/PALATE)
+  > 提出面向角色扮演智能体（RPA）的以用户为中心交互式评估框架PALATE，通过构建真实多轮对话中的个性化用户模拟器，克服固定对话历史和固定评分表的局限。在主流RPA系统上的实验显示，该方法能更准确反映不同用户在实际使用中的体验差异与能力边界。
+
+- **SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them** `[VLM]` `[微调]` — [2607.27703](https://arxiv.org/abs/2607.27703) | [GitHub](https://github.com/IANNXANG/SpatialCLI)
+  > 提出SpatialCLI框架，通过调用专业视觉模型作为空间工具增强VLM感知，再用Cold-Start SFT逐步内化专家能力，实现先用工具再不用工具的渐进式学习。在具身视觉推理任务中弥补了通用VLM与专业视觉模型之间的能力鸿沟。
+
+- **See2Think: Do Multimodal Models Really Use Intermediate Visual States?** `[VLM]` — [2607.26769](https://arxiv.org/abs/2607.26769) | [GitHub](https://github.com/CSU-JPG/See2Think)
+  > 提出See2Think统一评估框架，包含涵盖12类任务、1200道视觉依赖问题的See2ThinkBench，以及记录文本思考、视觉动作和渲染状态的VAoT协议。通过细粒度诊断揭示多模态模型在生成、渲染和使用中间视觉状态时的真实依赖程度。
+
+- **MemHarness: Memory Is Reconstructed, Not Replayed** `[MeM]` — [2607.28272](https://arxiv.org/abs/2607.28272) | [GitHub](https://github.com/KnowledgeXLab/MemHarness)
+  > 提出MemHarness框架，让LLM智能体在检索到过去经验后不是机械回放原始记录，而是根据当前情境主动重建和适配记忆内容。通过弥合抽象经验与具体状态之间的鸿沟、减少负迁移，在多个决策与规划任务中显著提升了记忆增强智能体的表现。
+
+- **Echoverse: Deep, Evolving Environments for Training Computer-Use Agents at Scale** — [2607.28074](https://arxiv.org/abs/2607.28074) | [GitHub](https://github.com/microsoft/Echoverse)
+  > 提出Echoverse环境工厂，通过将规格编译为可状态化、可评分的合成应用，为计算机使用智能体提供具备行为深度、针对失败交互并随模型共同进化的训练环境。实验表明其在任务多样性和智能体训练效果上优于现有合成环境。
+
+- **Multi-Head Attention Residuals** — [2607.27230](https://arxiv.org/abs/2607.27230) | [GitHub](https://github.com/wdlctc/multi-head-attention-residuals)
+  > 提出Multi-Head Attention Residuals（MHAR），将Transformer单层共享的深度历史路由查询拆分为多个子空间头，每个头独立对历史层做softmax选择。该操作零额外参数、计算开销可忽略，并在宽模型上缓解了子空间对历史层偏好不一致带来的信息传播损失。
+
+- **Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes** — [2607.26627](https://arxiv.org/abs/2607.26627) | [GitHub](https://github.com/ZhouYuxuanYX/Fast-HSD)
+  > 系统分析投机解码中损失性验证机制导致的分布偏移，将现有方法归为截断验证和协作验证两类，并揭示其在生成质量上的不稳定与退化模式。理论刻画与实验验证了损失性加速的隐式分布重写效应，为设计更安全的加速策略提供依据。
+
+- **Harness-G: A Graph-Structured Harness for Search Agents** `[RL]` — [2607.27652](https://arxiv.org/abs/2607.27652) | [GitHub](https://github.com/7HHHHH/Harness-G)
+  > 提出Harness-G图结构约束，用于解决RL搜索智能体中的检索等价坍缩问题。通过将检索建模为图结构Harness而非自由文本查询，增强检索决策的有效对比，在Search-R1训练中获得更稳定的检索策略和更高的最终答案准确率。
+
+- **Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation** — [2607.27372](https://arxiv.org/abs/2607.27372) | [GitHub](https://github.com/alexiglad/XM)
+  > 提出Explorative Modeling新范式，将生成建模的训练循环分解为探索K个候选生成-数据匹配并训练最优匹配，使模型直接承诺模式而非模糊混合。实验表明该方法实现了真正的端到端生成，在图像和语言建模任务上展现出更好的模式覆盖与样本质量。
+
+- **AI Tour Meeting: Group Travel Planning by LLM Agents** `[API]` — [2607.18806](https://arxiv.org/abs/2607.18806) | [GitHub](https://github.com/ntt-dkiku/ai-tour-meeting)
+  > 提出AI Tour Meeting多智能体旅行规划框架，为不同角色的大语言模型智能体提供自然语言协商机制，支持可配置的persona、讨论流程和监控接口。实验展示了该系统作为分析多智能体讨论行为的仿真工具的可用性。
+
+- **ReToken: One Token to Improve Vision-Language Models for Visual Retrieval** `[VLM]` — [2607.28627](https://arxiv.org/abs/2607.28627) | [GitHub](https://github.com/avaxiao/ReToken)
+  > 提出ReToken可学习嵌入，作为显式检索目标从预填充的视觉KV缓存中稀疏选取与查询相关的视觉token。仅在小规模图像问答数据上训练即可在Visual Haystacks和LVBench长视频任务上显著提升Qwen3VL与InternVL的性能，并可在单卡H100上完成训练与推理。
+
+- **Is Deep Research Reliable? Misleading Knowledge Induces False Conclusions** `[API]` — [2607.20891](https://arxiv.org/abs/2607.20891) | [GitHub](https://github.com/whfeLingYu/MisKnow-Agent)
+  > 提出MisKnow-Agent可控评估框架，构建支持人工审计错误结论的误导性文档，并测量Deep Research智能体在迭代检索与报告生成中采纳错误结论的比例。对DeerFlow、WebThinker和Gemini Deep Research的实验揭示了当前长程研究智能体在抵抗误导性知识方面的脆弱性。
+
+- **Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations** — [2607.28319](https://arxiv.org/abs/2607.28319) | [GitHub](https://github.com/peremartra/optipfair)
+  > 提出Fairness Pruning方法，通过最小对比提示对和推理时激活捕获，定位GLU架构中对人口属性差异响应的神经元，并在down_proj输入处评估信号。在Llama-3.2和Salamandra-2B上的实验表明，清零这些神经元可改变模型处理人口属性的方式，为轻量化偏见干预提供了因果定位基础。
