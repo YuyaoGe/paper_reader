@@ -1,0 +1,102 @@
+[
+  {
+    "date": "2026-08-04",
+    "title": "LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks",
+    "arxiv_id": "2608.01964",
+    "github": "https://github.com/AMAP-ML/LongHorizon-Harness",
+    "abstract": "提出 LongHorizon-Harness，将长程任务执行建模为显式任务状态管理问题。其 Manage-Execute-Audit 循环让 manager 维护状态、executor 在新鲜上下文中执行子任务、auditor 独立验证环境状态，避免错误自我评估传播。AgentAdapter 支持多种模型与 harness 后端即插即用。在 WeaveBench、Terminal-Bench 2.1 和 OSWorld 2.0 上均显著提升 Qwen3.7-Plus 与 Claude Opus 4.7 的表现。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Progressive Agent Skill Generation via Reinforcement Learning",
+    "arxiv_id": "2608.01678",
+    "github": "https://github.com/ejhshen/skill-alpha",
+    "abstract": "提出 Skill-α，基于强化学习渐进生成高质量 agent 技能。将技能构建视为序列编辑过程，每次编辑可单独评估，并引入 rollback reward 衡量编辑价值。在 GPT-4o worker 上的实验显示，Skill-α 在 CL-Bench 和 tau2-bench 上分别超越最强基线 3.3 与 6.7 个百分点，验证了 rollback reward 与渐进生成的有效性。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "UEmbed: Unified Sparse and Dense Multimodal Embeddings",
+    "arxiv_id": "2608.02583",
+    "github": "https://github.com/Alibaba-NLP/UEmbed",
+    "abstract": "提出 UEmbed，一种 decoder-only 多模态嵌入模型，可在单次前向传播中同时产出稀疏词法与稠密表示。通过追加可学习特殊 token 并将词表划分为不相交子集，各 token 的因果隐状态预测对应子集稀疏权重。公开数据上训练的 2B/4B/9B 模型中，UEmbed-9B 在 MMEB-v2 分别达到 71.8 与 71.0，在 BEIR 上亦具竞争力。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Deferred Exposure of Future Trajectories for Verifiable Reasoning in Autonomous Driving VLMs",
+    "arxiv_id": "2608.01755",
+    "github": "https://github.com/hzx122/DEFT-RLVR",
+    "abstract": "提出 DEFT-RLVR，解决自动驾驶 VLM 思维链监督中的轨迹锚定偏差。现有方法暴露真实未来轨迹，使教师模型为已揭示结果辩解而非从场景证据推理。DEFT-RLVR 将未来轨迹转为决策后验证目标，并引入 AD-MCQ 把规划变为轨迹候选选择，使轨迹级决策可验证。实验在提升 AD 推理的同时保持了通用视觉能力。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "GradCuit: Credit-Assigned Gradient Flow Enables Robust and Interpretable Test-Time Latent Reasoning",
+    "arxiv_id": "2608.02585",
+    "github": "https://github.com/Yuzhaoxin946/GradCuit",
+    "abstract": "提出 GradCuit，一种基于梯度的测试时隐式推理方法。在 Transformer 中间层插入可优化隐状态，因果自注意力使续写 token 的对数概率可微地依赖这些隐状态，从而将整条续写的奖励梯度直接分配给隐状态。在多个骨干与推理基准上，GradCuit 平均准确率达 64.5%，超越思维链提示 6.6 个百分点，且对学习率更稳健。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "DeepVoyager-VL: Incentivizing Vision-in-the-Loop Search for Long-Horizon Multimodal Agents",
+    "arxiv_id": "2608.01827",
+    "github": "https://github.com/Halcyon-Zhang/DeepVoyager-VL",
+    "abstract": "提出 DeepVoyager-VL，面向长程多模态 agent 的 vision-in-the-loop 深度搜索框架。通过多模态事件图驱动数据合成，生成带中间视觉依赖与长推理链的问题；并设计主动视觉获取与按需加载的 agent 框架，直接在合成数据上微调模型。在十个多模态搜索基准上的实验验证了其在长程视觉驱动检索中的有效性。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Relax Within, Balance Across: Geometry-Guided Load Balancing for Vision-Language Mixture-of-Experts",
+    "arxiv_id": "2608.00574",
+    "github": "https://github.com/ZiangWu-77/ReBA",
+    "abstract": "提出 ReBA，面向视觉语言混合专家模型的几何引导负载均衡方法。现有 token 级辅助损失只平衡混合负载，导致图像与文本负载误差相互抵消。ReBA 按模态边界拆分图像和文本路由项，并为每张图像赋予等权重路由实例，实现内部松弛、跨模态平衡。实验表明其在保持准确率的同时显著降低负载不平衡。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Loud or Silent? A Reusable Framework for Per-Modality Failure Analysis in Multimodal Clinical AI",
+    "arxiv_id": "2608.01462",
+    "github": "https://github.com/criticaldata/PRIMED-AI",
+    "abstract": "提出模型无关的多模态失败分析框架，用于判断临床 AI 中各模态贡献及模态缺失时模型是「大声失败」还是「静默失败」。给定多模态嵌入、掩码感知探针和标签，框架返回逐样本失败分类、逐模态互补性矩阵与 loud-vs-silent 轮廓。在 MIMIC-IV 心脏数据上的实验显示丢弃超声心动图几乎使误差翻倍。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV",
+    "arxiv_id": "2607.23693",
+    "github": "https://github.com/oklen/Compute-Globally-Materialize-Locally",
+    "abstract": "研究长程 agent 将 KV cache 用作记忆时的语义物化现象。当早期观察被省略后，后续事件缓存的行仍能独立携带被省略信息，使答案遵循不可见的值。通过在 Qwen3-8B 上设计不含答案的事件，可将 donor-aligned recovery 从 6% 提升至 51%。研究为稀疏 event-KV 服务建立了记忆契约，指导 eviction 与记忆设计。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "A Frozen Pixel-Space Diffusion Model Can Guide Itself with Its Own Samples",
+    "arxiv_id": "2607.29122",
+    "github": "https://github.com/zfu006/SSG",
+    "abstract": "提出 Synthetic Self-Guidance（SSG），让冻结的预训练像素空间扩散模型利用自身样本自我引导。在 Transformer 中间层附加轻量预测头，利用中间预测与最终预测的差异作为采样自引导方向，且无需真实图像、用模型生成样本训练即可。在 ImageNet 上多个像素扩散模型中，SSG 将 FID 降低超过 50%，训练开销不到完整模型 1%。",
+    "tags": [
+      "扩散模型"
+    ]
+  }
+]
