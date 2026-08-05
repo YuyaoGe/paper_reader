@@ -4663,3 +4663,20 @@
 
 - **A Frozen Pixel-Space Diffusion Model Can Guide Itself with Its Own Samples** `[扩散模型]` — [2607.29122](https://arxiv.org/abs/2607.29122) | [GitHub](https://github.com/zfu006/SSG)
   > 提出 Synthetic Self-Guidance（SSG），让冻结的预训练像素空间扩散模型利用自身样本自我引导。在 Transformer 中间层附加轻量预测头，利用中间预测与最终预测的差异作为采样自引导方向，且无需真实图像、用模型生成样本训练即可。在 ImageNet 上多个像素扩散模型中，SSG 将 FID 降低超过 50%，训练开销不到完整模型 1%。
+
+## 2026年8月5日
+
+- **PosterMELD: Multi-Agent Paper-to-Poster Generation for Controllable Design Diversity with Editable Print-Ready Outputs** `[API]` — [2608.02218](https://arxiv.org/abs/2608.02218) | [GitHub](https://github.com/Shannon4Science/PosterMELD)
+  > PosterMELD 提出模板条件化的多智能体流水线，将学术论文自动转换为可编辑海报。系统通过容量感知插槽规划内容、确定性门控与视觉语言模型评审进行失败修复，输出 PPTX 与 PNG 两种可编辑格式。在 621 篇论文上评估，Print-Ready 率达 81.3%，分别是 P2P 的 3.4 倍与 PosterGen 的 5.2 倍，条件 CHE 评分最高，单次请求成本仅 0.38 美元。
+
+- **Better, Stronger, Faster, and Broader: Structured All-Mask Prediction for MLLM-Based Segmentation** `[VLM]` — [2608.02791](https://arxiv.org/abs/2608.02791) | [GitHub](https://github.com/HKUST-LongGroup/STAMP)
+  > 本文提出 All-Mask Prediction 框架，将自回归对话与非自回归掩码预测解耦，解决 MLLM 分割的性能、对话能力与速度三难困境。二值版本 STAMP 通过 <SEG> 触发词与混合注意力一次性分类所有前景背景 token；进一步提出 STAMPlus，通过显式目标 ID 与多类别掩码空间，扩展到开放词汇语义、实例与遥感小目标分割，12 类延迟从 13.50 秒降至 5.16 秒。
+
+- **CURV: Enhancing Chart Understanding Through Curriculum Visual Grounded Reasoning** `[VLM]` — [2608.02833](https://arxiv.org/abs/2608.02833) | [GitHub](https://github.com/xhguo7/CURV)
+  > 针对图表问答中多模态大模型视觉定位不准与推理链脱离视觉证据的问题，本文提出 CURV 课程学习框架。该框架将图表问答重构为多步视觉接地推理，每一步通过空间注意力集中实现逻辑推理与动态视觉接地的协同。同时构建三级课程数据集 CCQA，从单步推理到多图组合任务渐进训练。实验显示 CURV 在多个基准上提升最高达 20.50%，并具备良好的真实场景与跨域泛化能力。
+
+- **SkillJack: Persistent Skill Backdoors in Self-Evolving Agents** — [2608.03509](https://arxiv.org/abs/2608.03509) | [GitHub](https://github.com/Tencent/AI-Infra-Guard/research/skilljack)
+  > 针对自进化智能体将交互历史沉淀为可复用技能的趋势，本文提出 SkillJack 攻击：通过污染经验并利用智能体自身的技能提取流程，将恶意行为植入持久化技能库。作者识别净化漂白、跨层提升与持久隔离三大机制，在 SkillX 与 Anything2Skill 上验证：技能提取后安全检测率从 98.5% 降至 11.4%，攻击成功率分别达 56.2% 与 89.2%，80% 攻击在删除原始记录后仍持续。
+
+- **ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning** `[RL]` — [2608.03972](https://arxiv.org/abs/2608.03972) | [GitHub](https://github.com/bibisbar/ReflectRL)
+  > 本文提出 ReflectRL，一种利用「黄金负样本轨迹」提升大语言模型推理能力的 on-policy 训练框架。作者发现，对于难题，反思有缺陷的专家轨迹比从头求解更有效。ReflectRL 先用失败轨迹激发反思推理，再通过策略迁移将获得的推理行为转移到直接推理模式。在 9 个基准、4 个骨干模型与 4 种 on-policy 方法上的实验一致表明，ReflectRL 以极小开销显著提升推理性能。
