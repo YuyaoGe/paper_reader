@@ -4680,3 +4680,8 @@
 
 - **ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning** `[RL]` — [2608.03972](https://arxiv.org/abs/2608.03972) | [GitHub](https://github.com/bibisbar/ReflectRL)
   > 本文提出 ReflectRL，一种利用「黄金负样本轨迹」提升大语言模型推理能力的 on-policy 训练框架。作者发现，对于难题，反思有缺陷的专家轨迹比从头求解更有效。ReflectRL 先用失败轨迹激发反思推理，再通过策略迁移将获得的推理行为转移到直接推理模式。在 9 个基准、4 个骨干模型与 4 种 on-policy 方法上的实验一致表明，ReflectRL 以极小开销显著提升推理性能。
+
+## 2026年8月6日
+
+- **Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming** `[API]` — [2608.05108](https://arxiv.org/abs/2608.05108) | [GitHub](https://github.com/wang-yanting/PIMiner)
+  > 提出PIMiner，一个面向大模型智能体提示注入攻击的自动化红队系统。训练阶段在多个（数据集，目标模型）组合上从零构建可迁移的策略库；测试阶段无需额外训练即可直接作用于未见过的目标大模型，每样本仅需约10次查询。在IPIArena和AgentDojo基准上，对Gemini-2.5-Pro、GPT-5.1和Claude-Sonnet-4.5均取得高攻击成功率，有效解决了现有强化学习方法在新目标模型上泛化差的问题。
