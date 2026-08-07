@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-08-07",
+    "title": "Learning from Failures: Retrieval-Centric CoT via Hard Negatives for Unified Multimodal Retrieval",
+    "arxiv_id": "2608.06060",
+    "github": "https://github.com/deepglint/UniME-R1",
+    "abstract": "提出UniME-R1嵌入器-建议器框架，针对统一多模态检索中原始输入编码丢失细粒度判别线索的问题，通过挖掘难负样本来模拟真实检索失败，生成以检索为中心的链式思维（RC-CoT）。建议器基于初始检索结果分析嵌入器的混淆点，目标命中时直接重排序，否则生成RC-CoT并执行全库再检索。在MMEB-V2及多个通用多模态检索基准上，UniME-R1持续超越强基线。",
+    "tags": ["VLM", "RL", "微调"]
+  },
+  {
+    "date": "2026-08-07",
+    "title": "EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning",
+    "arxiv_id": "2608.06197",
+    "github": "https://github.com/Within-yao/EnvACE",
+    "abstract": "提出EnvACE智能体强化学习方法，通过「世界彩排」机制将外部环境与策略的交互内化为模型参数，使大语言模型智能体无需昂贵的外部模拟器即可学习动作-环境响应关系。策略在生成工具调用与扮演环境生成响应之间交替，并以任务成功奖励进行端到端联合优化。在BFCL-v4、tau^2-Bench、VitaBench和FinMCP-Bench上，EnvACE整体超越环境扩展基线，测试时私有彩排可进一步提升性能。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-08-07",
+    "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
+    "arxiv_id": "2608.06352",
+    "github": "https://github.com/AweAI-Team/CalibForge",
+    "abstract": "提出CalibForge自主终端任务合成系统，用于解决终端智能体训练中任务既要可执行又要对学习难度适中的问题。系统通过对抗式求解器校准，利用多求解器之间的分歧信号迭代修正候选任务，从而规模化生成可学习的高质量终端任务。实验表明，CalibForge能够为终端智能体训练提供稳定且具挑战性的任务来源，有效扩展可学习终端任务规模。",
+    "tags": []
+  },
+  {
+    "date": "2026-08-07",
+    "title": "PaDoc: Layout-Grounded Parallel Decoding for Document Parsing",
+    "arxiv_id": "2608.06146",
+    "github": "https://github.com/Longin-Yu/Padoc",
+    "abstract": "提出PaDoc布局引导并行解码文档解析器，针对端到端文档解析器将页面布局与区域内容序列化为单一自回归序列、导致解码路径过长的问题，在保留全页上下文的同时消除区域间依赖，实现区域级并行解码。该方法避免了两阶段裁剪解析器重复视觉预填充和上下文碎片化的问题，在文档理解任务上提升了解析效率与结构还原能力。",
+    "tags": ["VLM"]
+  }
+]

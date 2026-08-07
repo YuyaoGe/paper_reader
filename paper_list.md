@@ -4685,3 +4685,17 @@
 
 - **Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming** `[API]` — [2608.05108](https://arxiv.org/abs/2608.05108) | [GitHub](https://github.com/wang-yanting/PIMiner)
   > 提出PIMiner，一个面向大模型智能体提示注入攻击的自动化红队系统。训练阶段在多个（数据集，目标模型）组合上从零构建可迁移的策略库；测试阶段无需额外训练即可直接作用于未见过的目标大模型，每样本仅需约10次查询。在IPIArena和AgentDojo基准上，对Gemini-2.5-Pro、GPT-5.1和Claude-Sonnet-4.5均取得高攻击成功率，有效解决了现有强化学习方法在新目标模型上泛化差的问题。
+
+## 2026年8月7日
+
+- **Learning from Failures: Retrieval-Centric CoT via Hard Negatives for Unified Multimodal Retrieval** `[VLM]` `[RL]` `[微调]` — [2608.06060](https://arxiv.org/abs/2608.06060) | [GitHub](https://github.com/deepglint/UniME-R1)
+  > 提出UniME-R1嵌入器-建议器框架，针对统一多模态检索中原始输入编码丢失细粒度判别线索的问题，通过挖掘难负样本来模拟真实检索失败，生成以检索为中心的链式思维（RC-CoT）。建议器基于初始检索结果分析嵌入器的混淆点，目标命中时直接重排序，否则生成RC-CoT并执行全库再检索。在MMEB-V2及多个通用多模态检索基准上，UniME-R1持续超越强基线。
+
+- **EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning** `[RL]` — [2608.06197](https://arxiv.org/abs/2608.06197) | [GitHub](https://github.com/Within-yao/EnvACE)
+  > 提出EnvACE智能体强化学习方法，通过「世界彩排」机制将外部环境与策略的交互内化为模型参数，使大语言模型智能体无需昂贵的外部模拟器即可学习动作-环境响应关系。策略在生成工具调用与扮演环境生成响应之间交替，并以任务成功奖励进行端到端联合优化。在BFCL-v4、tau^2-Bench、VitaBench和FinMCP-Bench上，EnvACE整体超越环境扩展基线，测试时私有彩排可进一步提升性能。
+
+- **CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks** — [2608.06352](https://arxiv.org/abs/2608.06352) | [GitHub](https://github.com/AweAI-Team/CalibForge)
+  > 提出CalibForge自主终端任务合成系统，用于解决终端智能体训练中任务既要可执行又要对学习难度适中的问题。系统通过对抗式求解器校准，利用多求解器之间的分歧信号迭代修正候选任务，从而规模化生成可学习的高质量终端任务。实验表明，CalibForge能够为终端智能体训练提供稳定且具挑战性的任务来源，有效扩展可学习终端任务规模。
+
+- **PaDoc: Layout-Grounded Parallel Decoding for Document Parsing** `[VLM]` — [2608.06146](https://arxiv.org/abs/2608.06146) | [GitHub](https://github.com/Longin-Yu/Padoc)
+  > 提出PaDoc布局引导并行解码文档解析器，针对端到端文档解析器将页面布局与区域内容序列化为单一自回归序列、导致解码路径过长的问题，在保留全页上下文的同时消除区域间依赖，实现区域级并行解码。该方法避免了两阶段裁剪解析器重复视觉预填充和上下文碎片化的问题，在文档理解任务上提升了解析效率与结构还原能力。
