@@ -4699,3 +4699,32 @@
 
 - **PaDoc: Layout-Grounded Parallel Decoding for Document Parsing** `[VLM]` — [2608.06146](https://arxiv.org/abs/2608.06146) | [GitHub](https://github.com/Longin-Yu/Padoc)
   > 提出PaDoc布局引导并行解码文档解析器，针对端到端文档解析器将页面布局与区域内容序列化为单一自回归序列、导致解码路径过长的问题，在保留全页上下文的同时消除区域间依赖，实现区域级并行解码。该方法避免了两阶段裁剪解析器重复视觉预填充和上下文碎片化的问题，在文档理解任务上提升了解析效率与结构还原能力。
+
+## 2026年8月10日
+
+- **Beyond Simply Environment Scaling: Designing Effective Environment Distributions for Multimodal Agent Learning** — [2608.03571](https://arxiv.org/abs/2608.03571) | [GitHub](https://github.com/GaryStack/Beyond-MMEnv-Scaling)
+  > 现有研究通过构建大规模多模态环境池来训练智能体，但单纯增加环境数量并不总是有效。本文从多样性和难度结构两个维度研究如何设计更有效的训练环境分布，提出能力感知环境选择（AES）获取多样化环境集合，以及分层难度课程（HDC）通过削弱约束和状态规模推进组织课程学习。实验表明AES和HDC能有效提升多模态智能体训练效果。
+
+- **SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs** `[RL]` — [2608.03573](https://arxiv.org/abs/2608.03573) | [GitHub](https://github.com/GaryStack/Parallel-RL)
+  > 本文从理论和实证角度分析SFT与RL在LLM多任务推理中的不同行为，发现SFT在多阶段训练中存在严重任务冲突，而RL能实现多任务稳定共存。进一步从参数层面观察到RL产生稀疏且近似正交的跨任务更新，理论解释表明RL的干扰受梯度方差限制。基于此提出Parallel-RL范式，解耦多任务训练并显著提升效率和灵活性。
+
+- **SimWAM: A Simple World Action Model for End-to-End Autonomous Driving** `[RL]` — [2608.07468](https://arxiv.org/abs/2608.07468) | [GitHub](https://github.com/H-EmbodVis/SimWAM)
+  > 本文提出SimWAM，一种面向端到端自动驾驶的简单世界动作模型。该方法将视频生成仅作为训练信号，通过联合流匹配协同训练预训练视频专家和轻量动作专家，并在推理时丢弃视频分支以获得低延迟的规划器。进一步应用强化学习优化组合式驾驶奖励，在NAVSIM上达到91.5 PDMS，并零样本迁移到nuScenes。
+
+- **Relevant but Incomplete: Referential Dangling as a Paradigm-Level Failure Mode in Hard Prompt Compression** — [2608.04569](https://arxiv.org/abs/2608.04569) | [GitHub](https://github.com/JusperLee/Referential-Dangling)
+  > 本文指出硬提示压缩中存在指代悬置这一范式级失效：独立选择可能保留答案却删除解释答案所需的实体。实验显示现有硬压缩器在多跳QA中悬置率高达60%。作者进一步训练紧凑分类器对省略句按解释需求排序，并在推理时自动恢复高排名句子，在HotpotQA上将Qwen3-8B准确率提升4.7个百分点。
+
+- **Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors** `[扩散模型]` — [2608.00675](https://arxiv.org/abs/2608.00675) | [GitHub](https://github.com/alexscheinker/round-trip-consistency)
+  > 本文训练单一条件潜扩散模型，通过方向标志实现动力系统前向或后向推演，利用往返一致性discrepancy作为无监督的rollout误差代理。在可压缩磁流体动力学、湍流辐射混合层和人脸视频上验证，往返误差与真实rollout误差高度相关，并能标记分布外样本，在80%覆盖率下将incurred error降低15%。
+
+- **Small Foundation Models of Human Cognition and Behaviour** `[微调]` — [2608.05224](https://arxiv.org/abs/2608.05224) | [GitHub](https://github.com/socius-org/Centauri)
+  > 本文在Psych-101数据集上训练从135M到14B参数的14个模型，研究小规模认知微调模型对人类行为和认知任务的拟合能力。发现分布内性能随规模变化很小，0.6B到1B参数即可匹配70B基线；而分布外泛化对模型规模更敏感。消融实验表明刺激和反馈内容对模型表现至关重要，提示其可作为心理实验的噪声上限估计器。
+
+- **PrivacyPeek: Auditing What LLM-Based Agents Acquire, Not Just What They Say** — [2606.00152](https://arxiv.org/abs/2606.00152) | [GitHub](https://github.com/Xuan269/PrivacyPeek-Resource)
+  > 本文提出PrivacyPeek基准，用于评估LLM智能体在获取阶段而非仅输出阶段的隐私泄露。该基准包含1182个案例，涵盖7种获取行为和16个应用领域。实验表明10个LLM智能体普遍存在过度获取敏感信息的问题，且任务完成能力与获取阶段泄露正相关；提示级防御只能缓解少部分泄露，凸显了审计获取阶段隐私的必要性。
+
+- **OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction** `[VLM]` `[RL]` `[微调]` — [2608.06013](https://arxiv.org/abs/2608.06013) | [GitHub](https://github.com/waHAHJIAHAO/OneEmo)
+  > 本文提出OneEmo，一个统一的多模态情感推理模型，能够同时处理情感感知、理解和交互任务。作者构建EmoWorld-130K数据集，通过人在回路将专门情感知识蒸馏为显式推理轨迹，并设计Emo-Chord强化学习策略稳定多任务优化。实验表明OneEmo在多数基准上达到同规模最优，并以更少参数取得接近商用模型的性能。
+
+- **Towards Interpretable Foundation Models for Retinal Fundus Images** — [2603.18846](https://arxiv.org/abs/2603.18846) | [GitHub](https://github.com/berenslab/interpretable_FM)
+  > 本文提出DualIFM，一种面向视网膜眼底图像的可解释基础模型，采用BagNet骨干生成与决策过程一致的类别证据图，并通过2D投影层在预训练期间实现表示空间可视化。在超过80万张眼底照片上训练后，模型性能与参数量16倍的RETFound相当，同时能提供可解释的分布外预测。
