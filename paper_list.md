@@ -4728,3 +4728,29 @@
 
 - **Towards Interpretable Foundation Models for Retinal Fundus Images** — [2603.18846](https://arxiv.org/abs/2603.18846) | [GitHub](https://github.com/berenslab/interpretable_FM)
   > 本文提出DualIFM，一种面向视网膜眼底图像的可解释基础模型，采用BagNet骨干生成与决策过程一致的类别证据图，并通过2D投影层在预训练期间实现表示空间可视化。在超过80万张眼底照片上训练后，模型性能与参数量16倍的RETFound相当，同时能提供可解释的分布外预测。
+
+## 2026年8月11日
+
+- **RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States** `[MeM]` `[RL]` — [2608.02508](https://arxiv.org/abs/2608.02508) | [GitHub](https://github.com/YOUNG-fnxm/RoMeRL)
+  > 针对自进化 LLM Agent 记忆的反馈稀释与记忆-奖励陷阱问题，提出基于降阶效用状态的记忆强化学习方法 RoMeRL。将随轨迹增长的效用空间压缩为固定维度的任务级记忆状态，通过有限语义坐标集中反馈。在 ALFWorld 与 LifelongAgentBench 上，Cold-Q 比率降低 80.0%，反馈密度提升约 6 倍，记忆规模减少 84.4%，LLM 调用减少 21.1%。
+
+- **BDH-CQ: In-Context Learning with Recurrent Latent Reasoning** `[无需训练]` — [2608.09888](https://arxiv.org/abs/2608.09888) | [GitHub](https://github.com/pathwaycom/arc-task-gen)
+  > 提出结合上下文学习与循环隐式推理的推理模型 BDH-CQ。推理时输入持续更新模型循环记忆，模型在高维隐空间中迭代计算求解查询，不显式 verbalize 中间推理过程。在 ARC-AGI-1 评测集上，1.5 亿参数配置达到 29.5% pass@2，单次任务推理成本仅 0.0007 美元，突破了该基准此前报道的成本-准确率帕累托前沿。
+
+- **Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution** `[API]` — [2608.08311](https://arxiv.org/abs/2608.08311) | [GitHub](https://github.com/razzant/ouroboros)
+  > 提出自进化的前沿编程 Agent 框架 Ouroboros，其工具、提示、上下文组装与核心实现通过受审提交持续改进，并作为后续运行的运行时。核心进化包含递归自由进化与经验驱动进化两种模式。在 Terminal-Bench 2.1 上 Opus 5 运行达 86.74%，OSWorld-Verified 达 90.69%，CL-Bench 五轮战役归一化奖励 0.2301，均取得最佳成绩。
+
+- **Scaling Inherently Interpretable Language Models** — [2608.07594](https://arxiv.org/abs/2608.07594) | [GitHub](https://github.com/guidelabs/steerling)
+  > 将可解释性作为训练约束与语言建模目标联合优化，挑战「可解释性以能力为代价」的假设。在自回归与扩散语言模型上跨越三个数量级算力验证，可解释性随规模提升而非下降。提出 Steerling-8B 扩散语言模型，可对生成结果进行输入 token、概念与训练数据归因，并通过概念 steering 进行闭环干预，无需重训练即可修正行为。
+
+- **Intent Speaks Louder: Controllable User Simulation Beyond Response Imitation** `[微调]` `[RL]` — [2608.09420](https://arxiv.org/abs/2608.09420) | [GitHub](https://github.com/ptwang773/UserIDA)
+  > 提出可控用户模拟方法 UserIDA，将下一轮用户交互意图与语言表达方式解耦。定义六类交互意图接口，通过监督微调学习指令条件生成，并在分组强化学习中采用意图校准策略优化。在 LMSYS-USP 上意图准确率达 86.6%，超越最强基线 24.3 个百分点；在上下文干预中至少实现四类目标意图的比例达 91.7%。
+
+- **A Hybrid Nested Harness for Decoupling Structure and Parameters in LLM-Driven Optimization** `[API]` — [2608.08156](https://arxiv.org/abs/2608.08156) | [GitHub](https://github.com/vicgalle/hybrid-nested-search)
+  > 提出混合嵌套搜索框架，将 LLM 驱动的演化算法中结构组件与连续参数解耦。外层循环由 LLM 提出带数值缺口的结构草图，内层数值优化器负责调参，内外求解器均可插拔。在闭式测试函数元优化、代码策略与近似贝叶斯推断三类科学任务上验证，混合优化器均优于纯 LLM 搜索与纯数值优化基线。
+
+- **Vision-Language Grounding as Bidirectional Concept Correspondence** `[VLM]` — [2608.07886](https://arxiv.org/abs/2608.07886) | [GitHub](https://github.com/RAIVNLab/ConCor)
+  > 将视觉-语言 grounding 重新定义为双向概念对应问题，同时恢复图像-文本对中所有视觉可指代文本片段与实例级图像区域的对应关系，无需预先指定相关文本。提出 ConCor-1 模型，基于预训练 VLM 使用可学习桥接 token 表示候选对应，预测文本掩码、图像掩码与对应存在分数。在多种 grounding 数据集上，长标题对应 F1 提升 48%，零样本 LVIS 提升 29%。
+
+- **The Loss Does Not See the Basis, but Adam Does** — [2608.05136](https://arxiv.org/abs/2608.05136) | [GitHub](https://github.com/idevender/loss-basis-adam)
+  > 从规范对称性角度解释因子化模型 W=UV^T 上梯度下降隐式偏向低秩解而 Adam 不偏向的现象。证明优化器需满足规范等变才能继承梯度流的低秩机制，梯度下降、动量、shared-scalar Adam、Muon 和 Shampoo 满足，而 Adam、RMSProp 等逐坐标方法不满足。在欠定矩阵感知与 Transformer 实验上验证，揭示了初始化与优化器选择如何共同决定模型学到的插值函数。
