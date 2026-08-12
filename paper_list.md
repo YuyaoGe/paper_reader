@@ -4754,3 +4754,17 @@
 
 - **The Loss Does Not See the Basis, but Adam Does** — [2608.05136](https://arxiv.org/abs/2608.05136) | [GitHub](https://github.com/idevender/loss-basis-adam)
   > 从规范对称性角度解释因子化模型 W=UV^T 上梯度下降隐式偏向低秩解而 Adam 不偏向的现象。证明优化器需满足规范等变才能继承梯度流的低秩机制，梯度下降、动量、shared-scalar Adam、Muon 和 Shampoo 满足，而 Adam、RMSProp 等逐坐标方法不满足。在欠定矩阵感知与 Transformer 实验上验证，揭示了初始化与优化器选择如何共同决定模型学到的插值函数。
+
+## 2026年8月12日
+
+- **Mendel Gödel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution** `[API]` — [2608.07645](https://arxiv.org/abs/2608.07645) | [GitHub](https://github.com/RealLcz/MGM)
+  > 提出Mendel Gödel Machine（MGM），受孟德尔遗传启发的自改进编码智能体。现有方法多从单条失败轨迹克隆变异，忽略过往尝试中的比较信号。MGM新增反应规范变异与跨谱系杂交两种自修改机制，前者利用多条任务轨迹，后者借鉴其他谱系在同任务上的轨迹。理论与代理仿真均表明新策略收敛更快更优，在SWE-bench和Polyglot上验证了性能与泛化性的持续提升。
+
+- **InSight-doc: Agentic Visual Perception for Long-Document Understanding** `[VLM]` `[微调]` — [2608.10628](https://arxiv.org/abs/2608.10628) | [GitHub](https://github.com/m-Just/InSight-doc)
+  > 提出InSight-doc，面向长文档理解的智能体视觉感知框架。该框架将视觉分辨率视为推理时可自适应调用的资源，从低分辨率出发，主动选择高分辨率区域获取更细粒度证据，无需外部检索器。为训练该智能体，作者构建了包含17.9K条SFT示例与19.2K条RL示例的语料。InSight-doc-8B在多个文档VQA基准上提升4.3至16.4个百分点，在长文档上降低逾40%幻觉并将延迟减少41%至68%。
+
+- **Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation** `[微调]` — [2608.10812](https://arxiv.org/abs/2608.10812) | [GitHub](https://github.com/xiaomi-research/gemmax)
+  > 针对开放大语言模型的多语言机器翻译后训练问题，提出无需参考译文的训练方法并开源GemMax。传统方法依赖高质量平行语料与参考译文，成本高昂且难以扩展。该工作在公开LLM基础上通过参考自由的后训练策略提升多语言翻译能力，缓解数据稀缺语言的性能瓶颈。实验表明GemMax在多个多语言翻译基准上取得竞争性或更优表现，为构建低成本、可扩展的多语言翻译系统提供了开源方案与完整代码。
+
+- **Power law graph attention: exact generalization of scaled dot-product attention, empirical collapse at inference** — [2608.10288](https://arxiv.org/abs/2608.10288) | [GitHub](https://github.com/burcgokden/PLDR-LLM-Math-Foundations)
+  > 提出幂律图注意力（PLGA），将缩放点积注意力推广为输入生成的双线性算子。论文完整规范了PLDR-LLM架构，证明PLGA在特定条件下精确包含SDPA，并建立Perron-Frobenius结构与DAG正则化等理论性质。推理坍缩定理表明，当演绎输出输入不变时，推理可退化为常数算子的广义SDPA。相关核心证明已在Lean 4中机器验证，代码与检查点已开源。
