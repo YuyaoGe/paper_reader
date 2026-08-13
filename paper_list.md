@@ -4768,3 +4768,29 @@
 
 - **Power law graph attention: exact generalization of scaled dot-product attention, empirical collapse at inference** — [2608.10288](https://arxiv.org/abs/2608.10288) | [GitHub](https://github.com/burcgokden/PLDR-LLM-Math-Foundations)
   > 提出幂律图注意力（PLGA），将缩放点积注意力推广为输入生成的双线性算子。论文完整规范了PLDR-LLM架构，证明PLGA在特定条件下精确包含SDPA，并建立Perron-Frobenius结构与DAG正则化等理论性质。推理坍缩定理表明，当演绎输出输入不变时，推理可退化为常数算子的广义SDPA。相关核心证明已在Lean 4中机器验证，代码与检查点已开源。
+
+## 2026年8月13日
+
+- **Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill** `[API]` — [2608.11924](https://arxiv.org/abs/2608.11924) | [GitHub](https://github.com/Spark-To-Paper-Skills/spark-to-paper-skills)
+  > 提出Spark-to-Paper端到端论文生成系统，将文献检索、实验设计、图表生成与一致性校验封装为13个可组合技能，集成在现有编程助手中。通过分离模型判断与确定性操作、实验规划与报告撰写，并引入自反证循环检测，在8个研究主题上实现99.5%引用有效性与96.4%图表可编辑性，单篇成本仅8.1美元。
+
+- **OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution** `[API]` — [2608.00677](https://arxiv.org/abs/2608.00677) | [GitHub](https://github.com/AI45Lab/OpenART)
+  > 提出OpenART开放端环境演化框架，用于规模化智能体红队测试。通过Environment Simulator、Attacker Agent与User Simulator协同生成有状态可执行环境、发现注入点并构造长程任务，覆盖50个领域超1万个场景。EMHA策略在75种智能体配置下达到85.0%攻击成功率，复杂环境优势较指令级演化提升17%。
+
+- **Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence** `[API]` — [2608.12036](https://arxiv.org/abs/2608.12036) | [GitHub](https://github.com/zjunlp/Mechanist)
+  > 提出Mechanist智能体科学仪器系统，用于自主发现AI能力背后的机制。整合约1.3万篇可解释性论文知识图谱与4300万篇多学科文献库，构建32种机制分析、因果干预与验证方法库。实验表明其在生成高价值机制假设与可靠执行实验方面优于Claude Code，并揭示信念表征、跨模态安全迁移等机制。
+
+- **ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents** `[API]` — [2608.11878](https://arxiv.org/abs/2608.11878) | [GitHub](https://github.com/MurrayTom/ToolHazard)
+  > 提出ToolHazard可扩展对抗环境合成框架，用于评估与对齐基于LLM的智能体安全。通过环境模拟器、攻击者智能体与用户模拟器自动生成有状态环境、发现注入点并生成环境专属载荷，构建ToolHazard-Bench。实验显示智能体存在显著漏洞，注入时机与位置显著影响攻击效果，生成的对齐数据可提升AgentDojo安全性。
+
+- **The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images** `[VLM]` `[无需训练]` — [2608.06270](https://arxiv.org/abs/2608.06270) | [GitHub](https://github.com/OpenCausaLab/CauAudit)
+  > 对多模态LLM的视觉工具使用进行因果审计，提出Visual Evidence Gain指标分离每个返回观察对答案的真实贡献。在6个模型与5个细粒度感知基准上发现两类失效模式：Call Without Looking（观察无因果效应）与Looking Without Planning（调用计划不连贯）。轨迹级诊断显示整体收益集中在少数Calibrated样本上，揭示视觉工具使用的幻觉。
+
+- **Persistent Recursive Worlds Enable Autonomous Software Evolution** `[API]` — [2608.10450](https://arxiv.org/abs/2608.10450) | [GitHub](https://github.com/EMI-Group/genesis)
+  > 提出EvoX Genesis，将软件项目本身持久化而非依赖持久化智能体，实现自主软件演化。通过持久递归世界组织局部世界、有限寿命智能体与递归委托，仅接受后果推进版本历史。实验从空仓库构建出通过c-testsuite的Rust C编译器（约25万行），并实现13个MESA模块的Fortran到Rust重写，获得1.55–6.87倍加速。
+
+- **Parameter Exploration for RLVR via Variational Learning** `[RL]` — [2608.09805](https://arxiv.org/abs/2608.09805) | [GitHub](https://github.com/insait-institute/C3PO)
+  > 提出Perturbed Parameter Policy Optimization（3PO）系列方法，通过变分学习在参数空间而非动作空间进行探索。从策略后验采样不同策略生成rollout，并设计多种采样策略与奖励估计分组方式。在OLMo-3-1025-7B与Qwen2.5-Math-7B上的数学推理与代码生成任务中，3PO以相近FLOPs成本持续优于GRPO，并减少零优势组与畸形rollout。
+
+- **Poor Man's Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop** `[API]` — [2608.11215](https://arxiv.org/abs/2608.11215) | [GitHub](https://github.com/YehudaItkin/poor-mans-agentic-modeling)
+  > 提出低成本智能体社会模拟方法，用少量LLM查询拟合低参数替代模型，在笔记本上模拟任意规模N的智能体社会。引入「交互阶数×记忆」分类法，将感知与记忆映射到有效理论并预测替代误差随N的变化趋势。在EconAgent等8个LLM模拟复现中，预测趋势与观测定量匹配，为大规模智能体社会研究提供可扩展方案。
