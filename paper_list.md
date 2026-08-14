@@ -4794,3 +4794,32 @@
 
 - **Poor Man's Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop** `[API]` — [2608.11215](https://arxiv.org/abs/2608.11215) | [GitHub](https://github.com/YehudaItkin/poor-mans-agentic-modeling)
   > 提出低成本智能体社会模拟方法，用少量LLM查询拟合低参数替代模型，在笔记本上模拟任意规模N的智能体社会。引入「交互阶数×记忆」分类法，将感知与记忆映射到有效理论并预测替代误差随N的变化趋势。在EconAgent等8个LLM模拟复现中，预测趋势与观测定量匹配，为大规模智能体社会研究提供可扩展方案。
+
+## 2026年8月14日
+
+- **DarwinX: Evolving Agent Harnesses Through Natural Selection** `[API]` — [2608.07545](https://arxiv.org/abs/2608.07545) | [GitHub](https://github.com/browser-use/browsercode)
+  > 提出DarwinX，将LLM智能体的自我演化视为对harness种群的自然选择，模型权重保持冻结。通过保留-扩展契约与档案库保存备选谱系用于重组，避免单线搜索的路径依赖与任务回归。在Terminal-Bench 2.1、WebArena-Infinity和SWE-bench Verified上验证，平均提升约17分，展现出跨任务、验证器和基模型的通用能力迁移。
+
+- **How Can Rhetoric Reward-Hack AI Reviewers? Dissecting Rhetorical Sensitivity in AI-Based Peer Review** `[API]` — [2608.08975](https://arxiv.org/abs/2608.08975) | [GitHub](https://github.com/MingLiiii/Dissecting_AI_Reviews)
+  > 研究科学评审中修辞选择对AI审稿判断的影响，构建由120篇ICLR 2026投稿衍生的4200份全文手稿对照语料。用LLM改写器在六个修辞维度上双向变换，并由LLM审稿人在标准/严格协议下评分。发现证据框架与新颖性立场对总体评估影响最大，低分稿件倾向上升、高分倾向下降，严格评审仅降低均值而不改变修辞敏感性结构，为构建对内容保留式修辞变化鲁棒的评审系统提供依据。
+
+- **AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design** `[API]` — [2608.13560](https://arxiv.org/abs/2608.13560) | [GitHub](https://github.com/Yaxin9Luo/AutoDesign)
+  > 提出AutoDesign，一个面向长程agentic设计的元harness优化框架。元harness优化器引导代码智能体基于rollout反馈递归改进设计harness，PosterBench主赛道得分78.32，超越Claude Design 7.45分；在七个配置中平均提升PosterBench分数12.4%。全自主循环可在40分钟内、低于3美元成本生成达到会议海报质量的结果。
+
+- **LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation** `[MeM]` — [2608.12990](https://arxiv.org/abs/2608.12990) | [GitHub](https://github.com/LycheeMem/LycheeMem)
+  > 提出LycheeMemory V2，基于语义片段级整合的高效长期记忆框架。不同于每次交互后即时整合，该方法将多轮对话分批为语义片段，仅在片段结束时编码为上下文无关的类型化记忆记录，并辅以轻量结构化索引实现查询式证据检索。在GPT-4.1-Mini上达到LoCoMo 89.22%与LongMemEval-S 92.20%的最优水平，同时相比A-Mem降低86.0%的记忆构建token开销。
+
+- **SKILLER: Language-Level Reinforcement Learning for Reusable Skill Extraction in Small Language Models** `[RL]` — [2608.10538](https://arxiv.org/abs/2608.10538) | [GitHub](https://github.com/DANG-ai/SKILLER)
+  > 提出SKILLER，一种面向小语言模型的自然语言驱动强化学习框架，用于自动生成执行器专属的可复用技能。以强模型作为actor和critic、将小模型智能体系统作为环境，所有RL信号完全通过自然语言传播。在Qwen3.5-9B/4B上的五个基准实验中，SKILLER在9B模型上取得4.3–20.4个百分点的绝对提升，在单技能任务上可媲美强闭源模型，且无需昂贵推理成本。
+
+- **Knowing When to Quit: Diagnosing and Training LLMs to Abort Futile Reasoning** `[RL]` — [2607.29211](https://arxiv.org/abs/2607.29211) | [GitHub](https://github.com/icip-cas/Knowing-When-to-Quit)
+  > 提出CaRL（Capability-aligned Reinforcement Learning），诊断并缓解LLM在超出能力范围任务上产生昂贵却语义空洞的徒劳推理问题。通过奖励塑形激励模型拒绝而非徒劳推理，并结合事后拒绝增强将失败样本转化为拒绝监督，使模型行为与能力边界对齐。实验表明该方法显著减少虚假推理，同时保留各难度任务上的性能，实现能力对齐且不牺牲效用。
+
+- **Intern-S2-Preview: Scientific Agentic Foundation Model** `[VLM]` `[RL]` — [2608.13505](https://arxiv.org/abs/2608.13505) | [GitHub](https://github.com/InternLM/xtuner)
+  > 发布Intern-S2-Preview智能体基础模型，支持多模态科学理解、推理与长程任务。训练流程包括科学多模态预训练、SFT、多任务RL、agentic RL及on-policy蒸馏，并引入rollout离线修正与在线投机解码等技术。397B模型在多个科学、多模态与通用基准上取得领先，4B Memory Decoder将Biology-Instructions均分从56.92提升至60.32。
+
+- **Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus** — [2608.12149](https://arxiv.org/abs/2608.12149) | [GitHub](https://github.com/StartluxLabs/Massive-Activations-HLA)
+  > 首次系统研究混合线性注意力LLM中的Massive Activations现象，发现两种架构对齐形态：在全注意力层前出现pre-attention spikes（PAS），并在线性注意力层间形成inter-spike plateaus（ISP）。随着全注意力变密，PAS通过ISP连接并恢复全注意力LLM的稳定MA形态。跨多种HLA架构、混合配置及1.2B–397B模型验证支持统一MA生命周期解释。
+
+- **Hybrid-Policy Self-Editing for Composable Unstructured Knowledge Editing** — [2608.11660](https://arxiv.org/abs/2608.11660) | [GitHub](https://github.com/lliutianc/hpse)
+  > 提出HPSE，用于可组合非结构化知识编辑。将编辑视为对同模型特权上下文状态的主动自蒸馏，无需外部监督；通过构建混合rollout，在学生轨迹覆盖不足处补全缺失事实，其余位置保持on-policy。理论分析证明其优于纯on-policy蒸馏，并在四种LLM骨干与两种KE编辑器上取得即插即用的提升，使编辑后的模型能回答原子问题并进行多跳推理组合。
