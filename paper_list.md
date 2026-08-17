@@ -4823,3 +4823,26 @@
 
 - **Hybrid-Policy Self-Editing for Composable Unstructured Knowledge Editing** — [2608.11660](https://arxiv.org/abs/2608.11660) | [GitHub](https://github.com/lliutianc/hpse)
   > 提出HPSE，用于可组合非结构化知识编辑。将编辑视为对同模型特权上下文状态的主动自蒸馏，无需外部监督；通过构建混合rollout，在学生轨迹覆盖不足处补全缺失事实，其余位置保持on-policy。理论分析证明其优于纯on-policy蒸馏，并在四种LLM骨干与两种KE编辑器上取得即插即用的提升，使编辑后的模型能回答原子问题并进行多跳推理组合。
+
+## 2026年8月17日
+
+- **MobileMem: Learning from a Year of Mobile Experiences** `[MeM]` `[VLM]` — [2608.13606](https://arxiv.org/abs/2608.13606) | [GitHub](https://github.com/zjunlp/MobileMem)
+  > 提出 MobileMem 基准与框架，用于研究移动设备上的长期记忆。基于一年尺度的移动体验收集，通过知识 grounded 合成管线构建连贯且时间一致的长程轨迹，覆盖多跳与时序推理、知识更新和隐式偏好推断。支持文本与多模态设置，推动智能体从信息检索走向体验式智能，实现持续个人学习。
+
+- **DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data** `[微调]` — [2608.13517](https://arxiv.org/abs/2608.13517) | [GitHub](https://github.com/schneiderkamplab/HRM-Text)
+  > 提出 Mimir v1，一个基于 HRM 架构的 10 亿参数语言模型，仅使用可许可的后训练数据从头训练。在英语、数学与代码以及丹麦语等 20 个基准上，Mimir v1 超越原始 HRM-Text 1B，并与更大规模前沿模型竞争，为开源且合乎伦理的数据模型开发提供新路径。
+
+- **Claim-Level Reliability Assessment for Efficient Test-Time Reasoning** `[无需训练]` — [2608.11994](https://arxiv.org/abs/2608.11994) | [GitHub](https://github.com/WeiboAI/CLR)
+  > 提出 Claim-Level Reliability Assessment（CLR），一种无需训练的测试时扩展框架。将推理轨迹压缩为关键主张集合，通过语义证伪识别单个决定性缺陷，利用「构建有效解」与「反驳错误主张」之间的不对称性压缩高置信度错误轨迹的生存空间。在多个 LLM 和推理基准上，CLR 在同等预算下提升 pass@1 与自一致性并减少 token 消耗。
+
+- **Modular Cognitive Architecture Emerges in Large Language Models** — [2608.13567](https://arxiv.org/abs/2608.13567) | [GitHub](https://github.com/Pengrui-Han/LLM_Modularity)
+  > 通过电路分析研究大型语言模型是否涌现模块化认知架构。在跨越语言、形式推理、社会推理和物理推理的 46 项任务中发现，LLM 会形成类似人脑的模块化组织：相同认知域的任务招募重叠神经元，不同域的任务招募不同神经元。这表明模块化可能是智能系统的基本属性，而非生物大脑的偶然产物。
+
+- **Verifier-Induced Support Reshaping in On-Policy Optimization** `[RL]` — [2608.00220](https://arxiv.org/abs/2608.00220) | [GitHub](https://github.com/sylvain-wei/verifier-induced-support-reshaping)
+  > 揭示基于可验证奖励的 on-policy 强化学习（RLVR）会改善当前目标，但使后续目标的成功行为变得过于罕见而无法采样和强化，即验证器诱导的支持重塑。通过数学推理与受限指令遵循的序列训练实验，发现 RLVR 主要对基础策略中已有的开场进行重排序，并因果影响后续任务的搜索能力。
+
+- **A Pathway to General-Purpose Scientific AI: Multimodal Comprehension of Scientific Images** `[VLM]` — [2608.14075](https://arxiv.org/abs/2608.14075) | [GitHub](https://github.com/sciknoworg/sci-imageminer)
+  > 提出 ALD/E-ImageMiner 基准与 ICDAR 2026 科学图信息抽取竞赛，包含 1951 幅图和 205 篇出版物的专家标注，覆盖分类、数据表抽取、摘要和视觉问答。从视觉与定量阅读到领域推理和证据论证，探讨科学图像理解的长期目标，推动可验证的多模态科学 AI。
+
+- **Who Speaks Matters: Authority-Aware Multi-View RAG over Italian Parliamentary Proceedings** — [2608.13410](https://arxiv.org/abs/2608.13410) | [GitHub](https://github.com/Emeierkeio/ParliamentRAG)
+  > 提出 ParliamentRAG，面向意大利众议院议事录的检索增强生成系统。核心贡献是主题相关权威模型，根据当前查询估计每位发言者的权威度，结合职业、教育和既往发言等可解释因素。系统检索相关发言片段，识别跨党派的议题专家，并生成附带引用的摘要，在覆盖率和引用忠实度上优于 NotebookLM。
