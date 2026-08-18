@@ -1,0 +1,94 @@
+[
+  {
+    "date": "2026-08-18",
+    "title": "HarnessEval-W: Agentifying the Evaluation of Visual Worlds",
+    "arxiv_id": "2608.16859",
+    "github": "https://github.com/MirroS-Lab/HarnessEval-W",
+    "abstract": "针对世界模型评估缺乏可验证推理链的问题，提出 HarnessEval-W，一套 agentified 评估流水线。该框架借鉴 LLM 领域的 harness 范式，为每个评估用例动态分解问题、派生子代理并收集证据，最终由父代理汇总成透明的证据树并给出裁决。在 18 个世界模型、330 个评估案例上，其判断与人类偏好高度一致，并能提供细粒度诊断。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
+    "arxiv_id": "2608.16798",
+    "github": "https://github.com/ClawGym/ClawGym-Agents",
+    "abstract": "提出统一的黑盒强化学习框架，用于在复杂 agent harness 上稳定可扩展地训练通用 agent。通过沙箱隔离环境与 harness、在模型边界设置服务代理捕获调用，并将多轮交互组织成前缀树，实现对复杂 harness 内轨迹的重构；同时适配 PPO 与 GRPO 以在该树结构上进行优化。实验显示，Qwen3-30A3B 在 ClawGym-Bench 上经 OpenClaw 与 Claude Code 分别提升 9.98 与 14.81 点，在 JobBench 和 OfficeQA 等更难任务上也有稳定增益。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "UI-Mate: Advancing Open-Weight Foundation GUI Agents with In-Context Demonstrations",
+    "arxiv_id": "2608.15930",
+    "github": "https://github.com/Tencent/UI-Mate",
+    "abstract": "提出 UI-Mate，一个基于上下文演示学习的开源基础 GUI Agent。通过闭环数据引擎自动生成任务、构建环境、执行 rollout、过滤与能力平衡，并结合 SFT 与在线 RL 训练；同时引入将多模态演示转化为子任务级工作流的机制，支持根据实时界面重规划。在 OSWorld-Verified 上达到 77.0%，在 WindowsAgentArena 上达到 66.2%，并在新提出的 OSWorkerBench 上显著超越基座模型。",
+    "tags": [
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "Agentic Transaction: Towards ACID-Compliant Agent Systems",
+    "arxiv_id": "2608.13900",
+    "github": "https://github.com/TsinghuaDatabaseGroup/ACID-Agent",
+    "abstract": "将数据库 ACID 语义迁移到自主 Agent 系统，提出 Agentic Transaction 概念及 ACID-compliant agent 框架。通过语义原子性、一致性、隔离性与持久性四项保证，使 Agent 在不确定模型与动态环境中仍能可靠执行长程任务。具体实现包括事务式探索-执行-验证循环、事务型技能中心、基于置信度分歧的验证与语义依赖感知隔离。在多个基准上较 Claude Code 等 SOTA Agent 提升 10.6%。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "GenRouter: Unified Workflow Routing for Agentic Image Generation",
+    "arxiv_id": "2608.16721",
+    "github": "https://github.com/EnVision-Research/GenRouter",
+    "abstract": "提出首个面向 agentic 图像生成的统一工作流路由框架 GenRouter。通过 GenCanvas 将多样 agentic 文生图流程标准化为基础原语与可执行模板，再依据需求画像、经验匹配与帕累托过滤自适应地为异构提示选择最优工作流。实验表明，相比重量级静态流水线，GenRouter 在保持视觉对齐的同时可降低 95% 以上执行成本、减少 65% 延迟，并随经验积累持续自我进化。",
+    "tags": [
+      "扩散模型",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents",
+    "arxiv_id": "2608.12898",
+    "github": "https://github.com/caipeng328/NaviDC-OCR",
+    "abstract": "提出 NaviDC-OCR，一个面向数字文档与相机拍摄文档的统一解析框架。引入形变感知学习以增强 VLM 的几何感知能力，设计自适应采样机制表示复杂版式，并提出内容与结构解耦学习策略来显式建模公式语法与表格结构。在 OmniDocBench v1.6、Wild-OmniDocBench 和 PureDocBench 上分别达到 96.87、88.53 与 78.41，并在 ICDAR 2026 Sci-ImageMiner Challenge 中排名第一。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "ConceptFormer: Learning Adaptive Latent Concepts for Query-Document Alignment in Visual Document Retrieval",
+    "arxiv_id": "2608.15698",
+    "github": "https://github.com/NEUIR/ConceptFormer",
+    "abstract": "提出 ConceptFormer，一种面向视觉文档检索的隐式概念表示学习方法。将查询相关证据建模为连续、查询条件的隐式概念 token，桥接局部视觉证据与语义相关性，无需文本中间表示或原始视觉标注。训练时由强 VLM 动态决定概念 token 数量，并以其引导嵌入空间学习。在多个视觉文档检索基准上平均 NDCG@10 相对最强视觉基线提升 16.7%，相对最强 OCR 文本基线提升 22.1%。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "Prior Audit-Repair Context Shifts LLM Verifier Thresholds Toward Leniency",
+    "arxiv_id": "2608.16003",
+    "github": "https://github.com/parsa-mz/crtitxer",
+    "abstract": "研究审计-修复流程如何改变 LLM 验证器的判断阈值。在保持任务完全一致的条件下，当模型上下文中存在已完成的审计-修复记录时，15 组模型与措辞组合中的误报率均下降 2.8 至 11.5 个百分点。信号检测分析表明，这种变化主要源自判断阈值的放宽而非辨别力变化，且推理模式下效应依然存在。该发现对设计自动检查-修复流水线具有重要启示。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-08-18",
+    "title": "Gathered, Not Admitted: How Attention Brings a Latent Variable into Verbalizable Form",
+    "arxiv_id": "2608.15022",
+    "github": "https://github.com/parsa-mz/innerj",
+    "abstract": "探究语言模型中的潜在变量何时进入可言语化形式。通过 Jacobian 分析，发现并没有类似「门控」的准入机制将变量写入工作空间；相反，需求会提升概念在表征中的可见性，而真正使其在查询位置可读的是中层注意力窗口内的聚集过程。该效应具有需求特异性，并在 64 层混合模型与 62 层密集模型中出现在相似的相对深度，为理解 Transformer 内部信息流动提供了新视角。",
+    "tags": [
+      "无需训练"
+    ]
+  }
+]
