@@ -1,0 +1,69 @@
+[
+  {
+    "date": "2026-08-19",
+    "title": "Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements",
+    "arxiv_id": "2608.17310",
+    "github": "https://github.com/zz1358m/Agentic-ESOpt",
+    "abstract": "提出Agentic ESOpt，用进化策略（ES）替代反向传播来微调长程LLM Agent。通过轨迹级参数归因实现在线奖励加权更新，并引入扰动尺度余弦衰减改善探索与适应的权衡。在WebArena-Lite上将Qwen-3.5-27B的No Skill基线提升6.69%，在36个测试时启发式设置中有28个超越对应基线。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "title": "Demystifying Agent Skills: Why They Work-Until They Don't",
+    "arxiv_id": "2608.14036",
+    "github": "https://github.com/zhiyuanjiang04/demystify-agent-skills",
+    "abstract": "系统剖析LLM Agent中skills何时有效、为何有效、何时失效。通过对照实验与配对轨迹分析，将8,135条实验记录归纳为三级分类和12种skill使用模式，发现65.7%的情况下skills通过「过程锚定」稳定执行而非注入新知识，且检索池扩大时实际使用精确率显著下降，为构建可靠自演进Agent提供实证指导。",
+    "tags": []
+  },
+  {
+    "date": "2026-08-19",
+    "title": "Energy-Guided Flow Matching",
+    "arxiv_id": "2608.05811",
+    "github": "https://github.com/ysng123/EG-FM",
+    "abstract": "提出Energy-Guided Flow Matching（EG-FM），用热核滤波的可移动端点替代流匹配中的固定干净图像端点，实现由能量引导调度控制的从粗到细生成轨迹。无需改动骨干网络与训练数据，在ImageNet 256×256条件生成上600 epoch达FID 1.45，512×512仅需40个适配epoch即获FID 1.58，并在文本到图像生成上取得优异结果。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "title": "From Sequence to Structure: Relational Uncertainty Propagation for LLM Agents",
+    "arxiv_id": "2608.16002",
+    "github": "https://github.com/icip-cas/RUPA",
+    "abstract": "提出RUPA，一种面向LLM Agent的轨迹级不确定性量化框架。将执行历史建模为包含推理状态、工具交互和环境反馈的有向轨迹图，通过关系不确定性传播捕捉风险在交互步骤间的累积与转移，并结合行为特征与目标对齐信息生成整条轨迹的置信度。在τ-2、Terminal-Bench-2和GAIA等基准上，RUPA在失败检测和不确定性引导执行方面持续超越现有方法。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "title": "Dynamic Multi-Byte Prediction With Hierarchical Language Models",
+    "arxiv_id": "2608.15454",
+    "github": "https://github.com/skai-research/lca-multibyte",
+    "abstract": "提出multi-byte prediction（MBP），在层级化语言模型上并行生成多个字节以加速推理。引入与层级LM隐式token段对齐的可变长度预测窗口，以及保证因果性的新型attention masking机制，使并行字节预测不违反自回归约束。在生成任务、指令遵循、问答、摘要和机器翻译中，MBP在性能与推理吞吐之间取得Pareto最优权衡。",
+    "tags": []
+  },
+  {
+    "date": "2026-08-19",
+    "title": "MathForm: Scaling Mathematical Autoformalization with Knowledge Retrieval and Verification-Guided Refinement",
+    "arxiv_id": "2608.14221",
+    "github": "https://github.com/OpenBMB/MathForm",
+    "abstract": "提出MathForm，一个面向数学自动形式化的数据构建与模型训练框架。通过Mathlib知识检索为形式化生成提供相关定义，并利用编译器诊断和语义一致性反馈进行验证引导的迭代精炼，构建367K条Lean 4验证样本的FormalVerse数据集。基于该数据对8B模型进行SFT与RL训练，在六个基准上平均Pass@8达88.06%（语法检查）和72.37%（一致性检查），超越多个专用32B形式化模型。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "title": "Cross-Model Memory Transfer via Target-Side Reader Adaptation",
+    "arxiv_id": "2608.17050",
+    "github": "https://github.com/OLAResearch/XMemTransfer",
+    "abstract": "研究Engram风格哈希记忆在跨模型迁移时的关键因素。通过冻结源模型训练的记忆表并仅在目标模型上训练轻量级reader，发现记忆内容与寻址都重要，但只有在reader与目标模型对齐后迁移表才有效。在问答任务中，双层四分支reader将跨模型复用差距几乎弥合，平均得分达38.8；当源reader与目标接口兼容时甚至无需训练即可提供显著效用，为构建可复用外部知识工件提供新思路。",
+    "tags": [
+      "MeM"
+    ]
+  }
+]
