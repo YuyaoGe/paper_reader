@@ -4898,3 +4898,20 @@
 
 - **Cross-Model Memory Transfer via Target-Side Reader Adaptation** `[MeM]` — [2608.17050](https://arxiv.org/abs/2608.17050) | [GitHub](https://github.com/OLAResearch/XMemTransfer)
   > 研究Engram风格哈希记忆在跨模型迁移时的关键因素。通过冻结源模型训练的记忆表并仅在目标模型上训练轻量级reader，发现记忆内容与寻址都重要，但只有在reader与目标模型对齐后迁移表才有效。在问答任务中，双层四分支reader将跨模型复用差距几乎弥合，平均得分达38.8；当源reader与目标接口兼容时甚至无需训练即可提供显著效用，为构建可复用外部知识工件提供新思路。
+
+## 2026年8月20日
+
+- **SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation** `[API]` — [2608.18565](https://arxiv.org/abs/2608.18565) | [GitHub](https://github.com/midea-ai/SemaPLC)
+  > 提出一种面向可编程逻辑控制器（PLC）代码生成的项目级验证门控智能体框架SemaPLC。该框架不依赖模型自评，而是通过规格说明、编译检查与真实PLC运行时行为三类外部日志验证任务完成度。在117个独立POU任务和65个项目上下文任务上，SemaPLC在动态行为指标上以52.2分显著超越基线（22.4–31.4），证明执行层面的验证比静态评分更能反映生成控制逻辑的真实可靠性。
+
+- **OmniScientist: An Omni-Modal Omni-Discipline AI Scientist** `[API]` — [2608.13558](https://arxiv.org/abs/2608.13558) | [GitHub](https://github.com/Omni-Scientist/OmniScientist)
+  > 提出端到端全模态AI科学家系统OmniScientist，可直接从图像、信号、音频、视频、3D结构等多种原始证据开展跨学科研究。系统包含感知层与构思、实验、写作三个自主智能体，通过代码化检查保证新颖性、统计有效性与数值可追溯性。在36个真实数据案例上均完成从原始数据到成稿的流程，直接感知相比仅使用预计算标量特征的盲版在7个维度上全面提升并赢得85%的成对比较。
+
+- **Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL** `[RL]` — [2608.17253](https://arxiv.org/abs/2608.17253) | [GitHub](https://github.com/DrStranded/Co-RL)
+  > 提出Co-RL框架，通过多智能体协作强化学习实现无需地面真值标签的推理能力提升。多个不共享参数的异构模型同时接受优化，奖励信号来自同伴生成结果，借助模型家族、规模和重述样本的多样性降低相关错误，缓解自奖励训练中的同质化与崩溃问题。在7个纯文本基准上平均提升3.0–8.6%，在4个多模态基准上提升2.3–7.2%，表现持平或超过有监督方法。
+
+- **SPADE: Self-Play in Adaptive Synthetic Executable Environments** `[RL]` — [2608.19197](https://arxiv.org/abs/2608.19197) | [GitHub](https://github.com/spade-rl/spade)
+  > 提出SPADE自博弈强化学习框架，让单个LLM同时扮演环境设计器和推理智能体：设计器生成可执行的长程训练环境，智能体在其中学习。通过带特权提示与无提示的奖励差距估计遗憾，设计器可持续生成位于智能体能力边界且仍可行的任务。在30B参数模型上，SPADE在8个推理基准上平均提升+5.3，工具使用场景提升+5.7（BFCL-v4）和+13.9（ACEBench-Agent）。
+
+- **SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents** `[RL]` — [2608.18852](https://arxiv.org/abs/2608.18852) | [GitHub](https://github.com/DeepExperience/SkillGate)
+  > 提出SkillGate方法，解决长程智能体中策略内技能选择的选择器信用饥饿问题。基于序列级优势的结局奖励RL无法有效训练技能选择令牌，因为正确选择常被后续执行失败惩罚。SkillGate将令牌支持划分为两个不相交的信用通道：结局信用仅作用于执行令牌，动作局部优势仅作用于命中的技能命名令牌且仅在读取正确时为正。在5个智能体基准上，SkillGate将9B策略的成功率从40.8%提升至53.2%。
