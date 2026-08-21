@@ -4915,3 +4915,23 @@
 
 - **SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents** `[RL]` — [2608.18852](https://arxiv.org/abs/2608.18852) | [GitHub](https://github.com/DeepExperience/SkillGate)
   > 提出SkillGate方法，解决长程智能体中策略内技能选择的选择器信用饥饿问题。基于序列级优势的结局奖励RL无法有效训练技能选择令牌，因为正确选择常被后续执行失败惩罚。SkillGate将令牌支持划分为两个不相交的信用通道：结局信用仅作用于执行令牌，动作局部优势仅作用于命中的技能命名令牌且仅在读取正确时为正。在5个智能体基准上，SkillGate将9B策略的成功率从40.8%提升至53.2%。
+
+## 2026年8月21日
+
+- **DarwinX: Evolving Agent Harnesses Through Natural Selection** `[无需训练]` — [2608.07545](https://arxiv.org/abs/2608.07545) | [GitHub](https://github.com/browser-use/browsercode)
+  > 提出DarwinX，一种将Agent harness自进化视为种群自然选择的框架，基础模型保持冻结。通过保留-扩展契约与谱系归档，仅保留不回归且扩展能力的harness变体。在Terminal-Bench 2.1、TerminalWorld、WebArena-Infinity与SWE-bench上，单次进化循环平均提升约17分，WebArena真实任务pass@1从43.5%升至93.0%。
+
+- **Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL** `[RL]` — [2608.17253](https://arxiv.org/abs/2608.17253) | [GitHub](https://github.com/DrStranded/Co-RL)
+  > 提出Co-RL，一种无监督多智能体强化学习框架，通过同时训练多个互不共享参数的异构模型，并让彼此生成奖励信号来摆脱对人工标注的依赖。研究表明，增加群体多样性（不同模型族、尺寸与重述样本）可避免自奖励学习中的同质化崩溃，在7个文本和4个多模态推理基准上分别取得3.0%-8.6%和2.3%-7.2%的提升，且无需真实标签。
+
+- **LEGO-RL: Harness-Native Reinforcement Learning for Coding Agents** `[RL]` — [2608.17393](https://arxiv.org/abs/2608.17393) | [GitHub](https://github.com/LegoX/Lego-RL)
+  > 提出LEGO-RL，面向编程智能体的Harness原生强化学习框架，通过进程内LLM代理、可扩展沙箱编排与可观测训练插件，将原生编程Agent执行环境与策略梯度优化对齐。在OpenHands SDK、Claude Code、OpenCode三个Harness上训练Qwen3.5-35B-A3B，SWE-bench Verified分别提升至70.4%、68.2%、66.6%。
+
+- **Agent Lightning v1.0: Towards Harnessed Agentic RL** `[RL]` — [2608.17528](https://arxiv.org/abs/2608.17528) | [GitHub](https://github.com/microsoft/agent-lightning)
+  > 提出Agent Lightning v1.0，一个轻量级的Harnessed Agentic RL框架，让部署时Agent harness拥有环境交互循环，训练器仅观察LLM请求-响应序列。框架解决了retokenization、样本合并与优势计算等关键问题。仅用6K样本即可将Qwen3.5-9B在SWE-bench Verified上从41.8%提升至56.4%。
+
+- **SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation** — [2608.18565](https://arxiv.org/abs/2608.18565) | [GitHub](https://github.com/midea-ai/SemaPLC)
+  > 提出SemaPLC，面向工业PLC代码生成的项目级验证门控Agent框架。该框架以「仅在日志记录的外部检查确认通过时才完成任务」为严格完成规则，覆盖需求规格、编译以及真实PLC运行时行为三层验证。在117个独立POU任务上取得所有7个模型中最高的严格验证通过率（均值72.6%），在65个项目上下文任务上也领先于基线。
+
+- **SPADE: Self-Play in Adaptive Synthetic Executable Environments** `[RL]` — [2608.19197](https://arxiv.org/abs/2608.19197) | [GitHub](https://github.com/spade-rl/spade)
+  > 提出SPADE，一种自博弈强化学习框架，让单个LLM同时扮演环境设计者与推理智能体，前者以可执行代码生成带reset/step的长时程训练环境，后者在其中学习。通过「有/无特权提示」的奖励差距估计遗憾信号，环境可动态瞄准智能体能力边界。在30B模型上，8个数学、科学、代码与推理基准平均比最强固定环境基线高5.3分，BFCL-v4多轮提升5.7、ACEBench-Agent提升13.9。
