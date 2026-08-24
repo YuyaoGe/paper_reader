@@ -4935,3 +4935,14 @@
 
 - **SPADE: Self-Play in Adaptive Synthetic Executable Environments** `[RL]` — [2608.19197](https://arxiv.org/abs/2608.19197) | [GitHub](https://github.com/spade-rl/spade)
   > 提出SPADE，一种自博弈强化学习框架，让单个LLM同时扮演环境设计者与推理智能体，前者以可执行代码生成带reset/step的长时程训练环境，后者在其中学习。通过「有/无特权提示」的奖励差距估计遗憾信号，环境可动态瞄准智能体能力边界。在30B模型上，8个数学、科学、代码与推理基准平均比最强固定环境基线高5.3分，BFCL-v4多轮提升5.7、ACEBench-Agent提升13.9。
+
+## 2026年8月24日
+
+- **Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts** — [2608.20061](https://arxiv.org/abs/2608.20061) | [GitHub](https://github.com/Tencent-Hunyuan/Hunyuan-A13B)
+  > 针对大规模 MoE 模型超参数调优成本高昂的问题，提出了一种计算高效的两步超参数迁移框架。首先在宽度缩放的小模型上基于 μP 适配确定最优学习率，然后利用线性回归建立学习率在 token 维度上的预测缩放律，从而外推到万亿 token 训练场景。实验表明该方法能够以高保真度（R²=0.95）预测大规模 MoE 的最优学习率，并以极小消融成本完成了 155B 总参数 MoE 模型的预训练验证。
+
+- **ParaTempo: Efficient Parallel Reasoning via Temporal Confidence** `[无需训练]` — [2608.16425](https://arxiv.org/abs/2608.16425) | [GitHub](https://github.com/ScottZhang812/ParaTempo)
+  > 针对并行推理中路径控制信号延迟、噪声大等问题，提出无需训练的异步并行推理框架 ParaTempo。其核心是时间置信度：通过周期性探测每个分支的答案概率分布，衡量近期中间探测在主导答案上的集中程度，并据此完成剪枝、早停、重新分叉和全局停止等全部控制。在数学与科学推理基准上，ParaTempo 在保持准确率的同时降低平均延迟 21.8%~32.2%，减少总 token 消耗 18.1%~30.3%。
+
+- **UniSpace: Unified Visual Representation and Scalable Multimodal Modeling** `[VLM]` — [2608.08676](https://arxiv.org/abs/2608.08676) | [GitHub](https://github.com/yjb6/UniSpace)
+  > 针对现有语义视觉编码器在图像重建与编辑中丢失细粒度细节的问题，提出 Patch 重参数化方法，在保持原语义通路的同时增加重建感知的 patch 嵌入，使冻结的 ViT 模块同时保留多模态理解与高质量重建能力。基于该统一表征构建 8B 参数的 UniSpace 模型，实现理解、生成与编辑任务的统一视觉空间建模，无需单独的 VAE 通路，在文本到图像生成和指令图像编辑任务上取得实用性能。
