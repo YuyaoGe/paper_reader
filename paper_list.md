@@ -4946,3 +4946,17 @@
 
 - **UniSpace: Unified Visual Representation and Scalable Multimodal Modeling** `[VLM]` — [2608.08676](https://arxiv.org/abs/2608.08676) | [GitHub](https://github.com/yjb6/UniSpace)
   > 针对现有语义视觉编码器在图像重建与编辑中丢失细粒度细节的问题，提出 Patch 重参数化方法，在保持原语义通路的同时增加重建感知的 patch 嵌入，使冻结的 ViT 模块同时保留多模态理解与高质量重建能力。基于该统一表征构建 8B 参数的 UniSpace 模型，实现理解、生成与编辑任务的统一视觉空间建模，无需单独的 VAE 通路，在文本到图像生成和指令图像编辑任务上取得实用性能。
+
+## 2026年8月25日
+
+- **ARC: Fair Relative Advantage Comparison in Open-Ended Real-World Interaction** — [2608.13622](https://arxiv.org/abs/2608.13622) | [GitHub](https://github.com/ant-intl/asri)
+  > 
+
+- **AutoResearch: Insight In, Hallucination Out** `[API]` — [2608.17906](https://arxiv.org/abs/2608.17906) | [GitHub](https://github.com/EvoMap/AutoResearch)
+  > AutoResearch 是一个两阶段自主研究系统，将 Idea Generation 与 Idea Execution 相连。在想法生成阶段持续整合研究信号与领域知识，通过多模型生成与交叉评审产生可验证的研究计划；在执行阶段由协调智能体将计划分解为实验并迭代实现、诊断，经独立证据审查后接受结论。在跨模态检索、系统优化和基准驱动机器学习等场景中均能检测并纠正不可靠实验结果。
+
+- **The Laws of Context Allocation: Causal Measurement and Closed-Loop Orchestration in Generative Search** `[无需训练]` — [2608.23252](https://arxiv.org/abs/2608.23252) | [GitHub](https://github.com/PeiYangLiu/ascp)
+  > 该研究针对生成式搜索中的证据利用测量失真和上下文预算分配不足两个问题，提出因果留一探测来准确隔离生成依赖并校准注意力结构稀释，进而证明单次上下文扩展是架构陷阱，而将计算迭代分配到多次顺序生成可带来 16.7-20.5 个百分点的 portfolio recall 提升。最终形成一个可部署的闭环子模调度器，并配备归因引导对比解码来强制整合新证据，在多项设置中优于传统开环基线。
+
+- **Apodex 1.1: Scaling Agentic Intelligence for Complex Work** — [2608.23283](https://arxiv.org/abs/2608.23283) | [GitHub](https://github.com/ApodexAI/FrontierAgent)
+  > Apodex 1.1 面向复杂工作的 agentic 智能体，通过环境扩展提升可执行文件、搜索和代码环境的多样性与可验证性，并通过 agentic 协调扩展训练智能体分解长程任务、并行委派、整合异步结果并重新规划。AgentOS 维护任务状态与来源，在财务、科研、数学、编码和搜索等复杂专业任务中达到领先性能，35B 参数的 Mini 版本也可本地部署。
