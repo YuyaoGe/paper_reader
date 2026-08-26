@@ -4960,3 +4960,14 @@
 
 - **Apodex 1.1: Scaling Agentic Intelligence for Complex Work** — [2608.23283](https://arxiv.org/abs/2608.23283) | [GitHub](https://github.com/ApodexAI/FrontierAgent)
   > Apodex 1.1 面向复杂工作的 agentic 智能体，通过环境扩展提升可执行文件、搜索和代码环境的多样性与可验证性，并通过 agentic 协调扩展训练智能体分解长程任务、并行委派、整合异步结果并重新规划。AgentOS 维护任务状态与来源，在财务、科研、数学、编码和搜索等复杂专业任务中达到领先性能，35B 参数的 Mini 版本也可本地部署。
+
+## 2026年8月26日
+
+- **Best Practice Critic Optimization** `[RL]` — [2608.23566](https://arxiv.org/abs/2608.23566) | [GitHub](https://github.com/QPHutu/golden_critic)
+  > 针对 GRPO 组采样低效问题，本文提出 Best Practice Critic Optimization（BPCO），通过稳定的 token-level critic 用单条回复估计优势。方法融合 DPPO、奖励范围约束的价值预测、蒙特卡洛目标与长度自适应 GAE。在 1.5B 至 30B-A3B MoE 模型数学推理上，BPCO 超越 baseline 并与 GRPO 持平或更优。
+
+- **Length-Adaptive Decoding for Masked Diffusion Machine Translation** `[无需训练]` `[扩散模型]` — [2608.22274](https://arxiv.org/abs/2608.22274) | [GitHub](https://github.com/Entropy-Valley/Entropy-Valley)
+  > 针对掩码扩散语言模型在机器翻译中需预设目标长度的问题，本文提出 Entropy-Valley（EV），一种无需训练的长度选择器。EV 通过全掩码前向传播计算候选画布的平均预测熵，选择模型最易于填充的长度。在英中、中英、英德翻译上，EV 相较语料长度统计基线分别恢复 64.9%、65.3% 和 33.0% 的参考长度 COMET-22 增益，并与 LLaMA-3-8B 自回归模型互有胜负。
+
+- **Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses** `[MeM]` `[API]` — [2608.24876](https://arxiv.org/abs/2608.24876) | [GitHub](https://github.com/Gen-Verse/Recuris)
+  > 针对长时程任务历史膨胀导致状态模糊的问题，本文提出 Recuris，一种递归经验-工作记忆架构。工作记忆跟踪进度、选择当前所需技能，避免被历史淹没；执行证据经 Meta-Agent 验证后更新技能记忆，形成递归进化循环。在 4 个长时程基准和 10 个模型上，Recuris 在 35/37 对提升成功率，tau-bench 上 Claude Opus 5 达 87.9%，长任务提升 32.2 分。
