@@ -4971,3 +4971,26 @@
 
 - **Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses** `[MeM]` `[API]` — [2608.24876](https://arxiv.org/abs/2608.24876) | [GitHub](https://github.com/Gen-Verse/Recuris)
   > 针对长时程任务历史膨胀导致状态模糊的问题，本文提出 Recuris，一种递归经验-工作记忆架构。工作记忆跟踪进度、选择当前所需技能，避免被历史淹没；执行证据经 Meta-Agent 验证后更新技能记忆，形成递归进化循环。在 4 个长时程基准和 10 个模型上，Recuris 在 35/37 对提升成功率，tau-bench 上 Claude Opus 5 达 87.9%，长任务提升 32.2 分。
+
+## 2026年8月27日
+
+- **VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction** `[MeM]` — [2608.26005](https://arxiv.org/abs/2608.26005) | [GitHub](https://github.com/xzf-thu/VoiceMem)
+  > 针对双工语音语言模型缺乏流式记忆的问题，提出 VoiceMem 双脑记忆架构，并行维护信息左脑与情感右脑，并配备流式记忆输入输出机制。实验显示，左脑 top-5 检索比 Mem0 top-200 高出近 30 分；右脑在三个个性化基准上达到最佳，总分提升 4.29 分；检索延迟仅 134 毫秒。
+
+- **WarpSAC: Towards the Pinnacle of Scalable Off-policy RL by Rethinking Exploration and Exploitation** `[RL]` — [2608.24479](https://arxiv.org/abs/2608.24479) | [GitHub](https://github.com/wzhhasadream/warprl)
+  > 针对大规模并行仿真改变离轨强化学习数据 regime，控制实验发现参数归一化、clip 双 Q 等稳定器效果具有 regime 依赖性。提出 WarpSAC 算法族：WarpSAC-L 面向 CPU 数据受限场景，WarpSAC-A 面向 GPU 并行数据丰裕场景。实验表明，CPU 环境较 FlashSAC 提升 4.5%，GPU 并行提升 23.1%，UnitreeG1 部署提速 36.4%。
+
+- **VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning** `[VLM]` — [2608.26105](https://arxiv.org/abs/2608.26105) | [GitHub](https://github.com/Video-Reason/VBVR-Pro)
+  > 提出 VBVR-Pro，一个可扩展、可验证的 native visual reasoning 闭环测试平台。包含 300 个程序化可控任务、基于确定性规则的可验证奖励评分器，以及跨 30 余种生成器的机制研究工具。实验表明，在该平台上训练的多任务 RL 模型在 RISE-Video、MME-CoF-Pro 等七个外部视觉推理基准上具有强迁移能力，视频生成器在持久时空跟踪任务上表现最强。
+
+- **Agent-G^2: Gaussian Guidance for Agentic Reinforcement Learning** `[RL]` — [2608.23318](https://arxiv.org/abs/2608.23318) | [GitHub](https://github.com/ZJU-REAL/Agent-G2)
+  > 针对长程 agentic 任务奖励稀疏，提出 Agent-G² 高斯引导强化学习框架。发现有效引导深度呈高斯分布，在线估计其中心与宽度并按任务采样，无需额外探测 rollout。在 ALFWorld 与 WebShop 上，基于 Qwen2.5 的实验显示，较 hint-based、hint-free 与 Aux-RL 基线分别提升 2.3/3.9/7.4 分，成本不到逐样本探测三分之一。
+
+- **Gated Recurrent Transformers: Expressive Depth through Recurrent Modulation** — [2608.15062](https://arxiv.org/abs/2608.15062) | [GitHub](https://github.com/Amr-Hegazy1/gated-recurrent-transformer)
+  > 针对 Transformer 扩展中表达力与内存效率矛盾，提出 Gated Recurrent Transformer。固定深度 prelude 与 coda 夹住共享核心层，门控循环调节更新，少量层多次循环实现功能多样性。isoFLOPS 下 3 层可达 12 层 GPT-2 Small 精度；isoPARAMS 下损失从 2.84 降至 2.76，大尺度减少 63% 参数与 59% 解码内存。
+
+- **Skill Issue: Are Skills Language-Invariant in LLMs?** — [2608.25832](https://arxiv.org/abs/2608.25832) | [GitHub](https://github.com/TextArena/TextArena)
+  > 研究大语言模型的技能是否具有跨语言不变性。通过 TextArena 多语言扩展让同一模型的两个实例以不同语言接口对战，孤立语言对行为的影响。在八种语言、六个覆盖空间推理与资源分配等游戏上评估发现，同一模型在不同语言下的对弈强度与策略倾向差异显著，仅改变中间推理语言即可恢复部分性能，揭示了多语言模型的技能不一致性瓶颈。
+
+- **Prefix Sliding for efficient test-time scaling** `[无需训练]` — [2608.26070](https://arxiv.org/abs/2608.26070) | [GitHub](https://github.com/Muennighoff/prefix-sliding)
+  > 针对测试时扩展保留完整推理轨迹导致内存与计算成本高的问题，提出 Prefix Sliding。发现大部分中间 token 在后续推理中重要性下降，于是仅保留前缀指令与最近几千个 token 的滑动窗口，将内存上限与推理长度解耦。无需训练即可让模型提速约 3 倍并保持性能；结合 RL 训练可将推理轨迹扩展到十万 token 以上，表现优于普通滑动窗口基线。
