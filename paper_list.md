@@ -4994,3 +4994,14 @@
 
 - **Prefix Sliding for efficient test-time scaling** `[无需训练]` — [2608.26070](https://arxiv.org/abs/2608.26070) | [GitHub](https://github.com/Muennighoff/prefix-sliding)
   > 针对测试时扩展保留完整推理轨迹导致内存与计算成本高的问题，提出 Prefix Sliding。发现大部分中间 token 在后续推理中重要性下降，于是仅保留前缀指令与最近几千个 token 的滑动窗口，将内存上限与推理长度解耦。无需训练即可让模型提速约 3 倍并保持性能；结合 RL 训练可将推理轨迹扩展到十万 token 以上，表现优于普通滑动窗口基线。
+
+## 2026年8月28日
+
+- **UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City** `[VLM]` — [2608.27456](https://arxiv.org/abs/2608.27456) | [GitHub](https://github.com/UrbanGround/UrbanGround)
+  > 提出UrbanGround沙盒，基于香港全域3D地理数据构建真实尺度城市复刻，支持第一人称闭环交互与导航地图，系统评估当前MLLM智能体在开放城市环境中的局部感知、远距离导航与动态行人感知能力，揭示其在长程探索中错误累积、目标导向行为不稳定的瓶颈。
+
+- **TTPO: Test-Time Policy Optimization** `[RL]` `[无需训练]` — [2608.27448](https://arxiv.org/abs/2608.27448) | [GitHub](https://github.com/ZJU-REAL/TTPO)
+  > 提出测试时策略优化TTPO，在无需标签的情况下用多数投票伪标签进行非对称蒸馏与分组强化学习：一致rollout蒸馏、不一致rollout惩罚，并加入token级选择。在五个竞赛级数学推理基准上追平有监督OPSD，TTT设置下将Qwen3-1.7B从38.0%提升至45.2%。
+
+- **CaRGo-T: Causal Reasoning Graph-of-Thought improves Multimodal Humor Comprehension** `[VLM]` `[API]` — [2608.23172](https://arxiv.org/abs/2608.23172) | [GitHub](https://github.com/abhi1nandy2/CaRGo-T)
+  > 提出CaRGo-T因果推理图思维框架，将多模态幽默理解中的实体、事件与隐式关系建模为轻量级图结构，并以代码形式序列化后由VLM解释完成零样本或上下文学习预测。在讽刺、反讽与网络梗图等四类数据集上，humor理解提升约1-20%、检测提升1-3%。
