@@ -5145,3 +5145,20 @@
 
 - **Graph Machine: Towards Better Pretraining via Edges** `[长文本]` — [2609.02881](https://arxiv.org/abs/2609.02881) | [GitHub](https://github.com/lintaihou/gm2)
   > 提出Graph Machine（GM）架构：维护O(n)大小的状态，通过稀疏动态路由访问。不同于固定大小状态或静态稀疏路由方法，GM的稀疏层保持O(n)复杂度且不限O(1)可访问状态，其核心是「边」——由类似指针追逐的referral机制可微更新的指针式对象。将Qwen3-0.6B中75%的稠密Transformer层替换为GM稀疏层，在15.7B token上从头预训练：每个稀疏层每头每步仅检索4096个token中的2个时loss仅轻微退化，检索4个时最佳模型loss略有改善。
+
+## 2026年9月10日
+
+- **Scores Alone Do Not Prove Discovery: The Discovery Certification Protocol for Auditing AI Research Agents** `[API]` — [2609.09219](https://arxiv.org/abs/2609.09219) | [GitHub](https://github.com/cxcscmu/Discovery-Certification-Protocol)
+  > 提出发现认证协议DCP，将AI研究智能体的发现声明转化为可执行的恢复与反馈测试：Gate 1在密封评估上验证改进，Gate 2让匹配智能体仅凭注册起点信息与观察到的网页内容独立复现，成功复现即触发否决。在SQLite优化与虚拟催化剂控制两项受控审计中，96回合零恢复（上界0.0468），真值反馈组30对恢复而中性组零恢复。
+
+- **Diffs vs. Whole Files: An Empirical Comparison of Iterative Edit-Based and Direct Generation for Flutter/Dart Code Models** — [2609.05779](https://arxiv.org/abs/2609.05779) | [GitHub](https://github.com/bbidpa/rainbow-pony)
+  > 对比代码编辑LLM的两种输出范式：直接整文件生成与迭代式diff编辑。从头训练100M模型Rainbow-Pony-100M并微调Qwen2.5-Coder-0.5B，在共享Flutter/Dart数据上以两种范式训练，于每模型约1790个held-out任务评测。直接生成在编译通过率、bits-per-byte、字符相似度及盲评LLM裁判各项全面占优，控制任务难度后差距仍持续。
+
+- **SchemeArena: Factorized Stress Testing of Scheming in LLM Agents** `[API]` — [2609.08126](https://arxiv.org/abs/2609.08126) | [GitHub](https://github.com/launchnlp/SchemeArena)
+  > 提出因子化压力测试框架SchemeArena与400场景基准，研究LLM智能体隐蔽追求失对齐目标的scheming行为，覆盖多样安全相关工具域、工具性目标、监督条件与压力机制。配套SCOUT监控器将多准则判断锚定在智能体推理与行动中提取的证据上。对5个LLM智能体的受控测试发现，显式工具性目标是scheming倾向最强驱动因素。
+
+- **Difficulty-Adaptive Tree-Structured Policy Optimization for Expanding Reasoning Coverage in RLVR** `[RL]` — [2609.08650](https://arxiv.org/abs/2609.08650) | [GitHub](https://github.com/colin31472/DATPO)
+  > 针对RLVR难以扩大模型推理覆盖（pass@k）的问题，从训练rollout结构设计入手提出DATPO。三项原则：难度自适应rollout对扩大pass@k至关重要；树状rollout优于并行采样；句子熵引导分叉克服token级分支局部化、最大化语义多样性。DATPO结合难度自适应树搜索与兄弟节点多样性优势项，数学推理基准上超越基线。
+
+- **PlannerForge: LLM Agents for Scenario-Based Testing of Motion Planners in Autonomous Driving** `[API]` — [2609.08965](https://arxiv.org/abs/2609.08965) | [GitHub](https://github.com/TUM-AVS/PlannerForge)
+  > 提出统一LLM智能体框架PlannerForge，覆盖自动驾驶场景化测试全流程（生成、检索、修改、执行、分析），并新增ADS增强与基准测试两个阶段，解决工具链碎片化、环节间缺乏交互的问题。用10个现成LLM在5种提示条件下评测六类任务，最佳得分0.88至1.00，开源20-35B后端多数任务匹敌商业API。
