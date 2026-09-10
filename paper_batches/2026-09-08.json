@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-09-08",
+    "title": "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+    "arxiv_id": "2609.04010",
+    "github": "https://github.com/ifm-ai/uno",
+    "abstract": "提出扩散增强LLM（Uno），将模型参数解耦为标准NTP训练的AR权重与轻量扩散权重，通过几乎零开销的扩散蒸馏阶段学习多token并行生成，无需独立草稿模型即可无损加速自回归解码；并提出Ψ-Spec采样器族支持推理时扩展。可直接增强现有开源AR模型，吞吐率在各batch size下均超越主流投机解码，最高提速3倍；8B Uno性能超过26B的开源扩散LLM DiffusionGemma。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-09-08",
+    "title": "FlowBalance: Verifier-Grounded Self-Improvement from On-Policy Reasoning Experience",
+    "arxiv_id": "2609.03241",
+    "github": "https://github.com/alexhuang13/FlowBalance",
+    "abstract": "提出FlowBalance验证器校准的推理模型自我改进方法。策略的冻结副本利用特权上下文产生token级log-prob增益，聚合为轨迹级自引导分数，再与验证器组优势校准：正优势保留、负优势反转、无偏好时禁用；能量重加权参考策略后用trajectory balance拟合归一化目标，无需token级模仿损失。理论分析给出逆KL刻画与假阳性纠正；数学推理上Qwen3-4B等模型平均超过FlowRL。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Causal Foundation Models",
+    "arxiv_id": "2609.03003",
+    "github": "https://github.com/layer6ai-labs/cfms",
+    "abstract": "提出因果基础模型（CFM）范式：预训练神经网络通过上下文学习在全新数据集上直接估计平均处理效应等因果量，摆脱逐问题定制因果机制、估计器选择与模型更新的传统流水线。论文系统梳理因果推断与机器学习背景，给出CFM的问题定义、代表性方法分类与评估方式，并全程配套示例代码和Jupyter notebook（含causal_bench），兼具教程性与实践参考价值，为该新兴方向提供入门蓝图。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Unifying Conformal Language Tasks with In-Context Ensembles",
+    "arxiv_id": "2609.03005",
+    "github": "https://github.com/layer6ai-labs/conformal-relevance",
+    "abstract": "提出Conformal Relevance框架，用上下文学习示例筛选与模型集成替代人工设计的LLM重要性打分提示，自动构建同时满足覆盖率与简洁性的保形预测得分函数。在摘要、抽取式问答等7个NLP任务上验证，仅需极少人工投入即在保持覆盖保证的同时显著提升简洁性；理论部分给出集成改善最差句子得分的互补性条件与收益饱和上界。仓库含完整实现与数据。",
+    "tags": ["无需训练", "API"]
+  },
+  {
+    "date": "2026-09-08",
+    "title": "What Else Needs Fixing? Exploring Cost-Effective Test-Time Compute for Revision Propagation in Artifacts Generated Through Conversation",
+    "arxiv_id": "2609.03254",
+    "github": "https://github.com/ntt-dkiku/llm-revision-propagation",
+    "abstract": "研究对话生成工件的修订传播问题：当用户只提出局部修改时，LLM需从对话历史中识别相关依赖并将修改传播到工件所有受影响部分。提出该设定下的新基准，在gpt-oss、gpt-5.4-mini、qwen3.5等模型上评估9种修订方法（含顺序反思与并行采样变体）。结果表明基线准确率为68.3~93%，最具成本效益的方法是从三个并行样本中用LLM或medoid选择，可提升2.2~9.7%。",
+    "tags": ["无需训练"]
+  }
+]

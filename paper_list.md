@@ -5005,3 +5005,143 @@
 
 - **CaRGo-T: Causal Reasoning Graph-of-Thought improves Multimodal Humor Comprehension** `[VLM]` `[API]` — [2608.23172](https://arxiv.org/abs/2608.23172) | [GitHub](https://github.com/abhi1nandy2/CaRGo-T)
   > 提出CaRGo-T因果推理图思维框架，将多模态幽默理解中的实体、事件与隐式关系建模为轻量级图结构，并以代码形式序列化后由VLM解释完成零样本或上下文学习预测。在讽刺、反讽与网络梗图等四类数据集上，humor理解提升约1-20%、检测提升1-3%。
+
+## 2026年9月3日
+
+- **Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills** `[API]` — [2609.02749](https://arxiv.org/abs/2609.02749) | [GitHub](https://github.com/VectorSpaceLab/AREX-Skill)
+  > 提出技能驱动的科研智能体DisCo，将代码仓库中的操作性知识蒸馏为紧凑且经验证的技能供智能体复用，含任务无关与任务定向两种蒸馏形式，并构建AREX-Skill技能库（从1000个常用ML仓库蒸馏5000+技能）。固定GPT-5.5骨干与预算时，配技能的智能体在MLE-bench得分提升134.3%，PaperBench提升34.4%。
+
+- **EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction** — [2609.02783](https://arxiv.org/abs/2609.02783) | [GitHub](https://github.com/inphotoo/earlyeval)
+  > 针对LLM智能体评估昂贵的问题，提出早期结果预测框架EarlyEval：智能体最终结果常在中途行为中已显露，据此训练一对LightGBM成功/失败分类器，在置信度越过校准阈值时立即终止运行，几乎无额外开销。在SWE-bench Verified等基准上减少13%-26%的步数与最多44.1%的输入token，预测准确率89%-97%，resolve rate仅波动1-2个百分点。
+
+- **On the Design Fundamentals of Pixel Text Representation Learning** `[VLM]` — [2609.01147](https://arxiv.org/abs/2609.01147) | [GitHub](https://github.com/Pixel-Linguist/Pixel-Linguist-2)
+  > 系统研究像素级文本表示学习的设计原则，受控消融识别出四要素：可变分辨率与渲染字号支撑高分辨率泛化；自然图文对防止文本坍缩并实现视觉接地；布局感知渲染抑制像素捷径；两阶段多语言课程实现跨语言对齐。据此训练原生分辨率视觉编码器Pixel Linguist II，在英文、跨语言及多语言Visual STS和ViDoRe上取得SOTA，80%视觉token压缩下仍鲁棒。
+
+- **WHALE: A Simple Recipe for Joint Harness-Weight Optimization** `[RL]` — [2609.00196](https://arxiv.org/abs/2609.00196) | [GitHub](https://github.com/krafton-ai/WHALE)
+  > 提出WHALE配方，交替优化智能体的模型权重与harness代码：先在当前harness下用在线拒绝采样微调更新模型，再在新模型下用Meta-Harness搜索更优harness，切换时机用固定时长或自适应耐心规则。基于Qwen3.5-2B/4B在搜索问答、数学推理、国际象棋三领域上，best mean@8准确率较各单组件优化及Fast-Slow Training提升4.15-24.38个百分点。
+
+- **A Glance Is All You Need: Single-Pass Fine-Grained Image Captioning with SimLoss** `[VLM]` `[RL]` — [2609.00591](https://arxiv.org/abs/2609.00591) | [GitHub](https://github.com/srynsh/SimLoss-Image-Captioning)
+  > 提出SimLoss，一种无需参考标注的嵌入空间目标，实现单遍前向的细粒度图像描述。通过InfoNCE对比损失将VLM投影隐状态与冻结图像嵌入对齐，在解码前提供稠密视觉监督，无需人工细粒度标注或伪标注。含可微分的SimLoss FFT与黑盒奖励式SimLoss GRPO两变体，FFT在保持单遍推理的同时取得最高精度，速度约为多阶段流水线的20倍。
+
+- **Replacing Training with Memory: Listwise Selection for Text-to-SQL** `[无需训练]` `[MeM]` — [2609.00834](https://arxiv.org/abs/2609.00834) | [GitHub](https://github.com/ldilab/MAP-SQL)
+  > 提出免微调的listwise候选选择器MaP-SQL：以结构化记忆替代学习到的选择行为，从训练数据蒸馏自然语言到schema元素、SQL操作与预期输出的映射记忆作为显式决策准则；聚合多次输入排列的排名缓解位置偏差，并用执行结果与pointwise打分优化推理开销。在BIRD-dev上相同候选集下超过SOTA方法R³-SQL平均2.02个执行准确率点，token消耗减少2.92倍。
+
+- **Sparse Readout Prism: Explaining Logit-Lens Scores in Features Instead of Tokens** `[无需训练]` — [2609.01936](https://arxiv.org/abs/2609.01936) | [GitHub](https://github.com/hematteo/sparse-readout-prism)
+  > 指出lens读数同时反映隐状态与解码用的unembedding矩阵，拟合语料不同的lens对同一隐状态可给出不同token（语料条件性）。提出Sparse Readout Prism（SRP），仅用readout权重做稀疏分解，将任意logit或logit差表示为稀疏特征贡献之和，比六个几何关系基线多重建8.9-17.3个百分点的logit差，且不依赖语料，为lens分析提供独立控制。
+
+- **Beyond Visual Similarity: Entity-Aligned Retrieval for Knowledge-Based Visual Question Answering** `[VLM]` — [2608.21450](https://arxiv.org/abs/2608.21450) | [GitHub](https://github.com/realHarryX/KBMR)
+  > 针对KB-VQA中CLIP式检索偏重表层视觉相似、忽视实体语义对齐的问题，提出首个面向KB-VQA的MLLM嵌入检索器KBMR，利用MLLM自回归能力将图像映射到更保持概念身份的语义空间。为应对大规模检索的噪声监督，引入语义判别器生成连续实体一致性权重，驱动连续语义蒸馏目标实现难负例采样与软监督，较CLIP基线检索Recall@1最高提升14.7%，端到端VQA准确率提升9.4%。
+
+- **Debias-SparseGPT: Bias-Aware Pruning for Large Language Models** — [2609.02496](https://arxiv.org/abs/2609.02496) | [GitHub](https://github.com/upunaprosk/debias-llm-compressor)
+  > 发现SparseGPT等权重稀疏化方法会放大模型已有偏见，输出随提示中persona线索显著变化。提出Debias-SparseGPT后训练剪枝方法，在基于人口统计学对比输入的二阶项中引入表示去偏。多种生成式LLM及25%、50%、结构化2:4稀疏度下，在保持困惑度与零样本准确率的同时持续降低剪枝偏见；2:4稀疏下用长上下文样本扩充校准集可进一步兼顾下游性能与公平性。
+
+- **Post-Training Language Models for Gold-Medal Performance in Coding Competitions** `[RL]` — [2609.02849](https://arxiv.org/abs/2609.02849) | [GitHub](https://github.com/NVIDIA-NeMo/Skills)
+  > 提出端到端竞赛编程专门化流水线，结合题目筛选、合成推理轨迹、SFT与RL训练Nano-CC与Ultra-CC，并提出测试时策略GenCorrect迭代生成、修正解法。IOI 2025上Nano-CC经后训练与GenCorrect从130分提至468分，超过金牌线；面向IOI 2026的Ultra-CC在与人类同约束下获535.4/600，超越金牌线与最高人类选手，首次在IOI超过人类最高分。
+
+
+## 2026年9月4日
+
+- **Compile by Training: Turning Natural-Language Specifications into Local Neural Functions** `[微调]` — [2609.04199](https://arxiv.org/abs/2609.04199) | [GitHub](https://github.com/programasweights/compile-by-training)
+  > 提出「编译即训练」方法：将自然语言规格说明编译为可复用的本地神经函数。编译阶段由教师模型生成任务样例，训练紧凑解释器上的小适配器；所得函数运行时无需教师模型，可像软件一样存储、版本化和组合。在快速编译器零精确匹配的 FuzzyBench-Hard 子集上达 83.6% 语义准确率，代价是编译约一分钟；已部署为公开交互服务。
+
+- **Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning** `[无需训练]` `[长文本]` — [2609.03430](https://arxiv.org/abs/2609.03430) | [GitHub](https://github.com/SalesforceAIResearch/Random-Attention)
+  > 重新审视 KV 缓存淘汰范式：现有方法均为缓存 token 打分再保留高分者，而本文证明选择信号几乎不贡献性能。Random Attention 保留 prompt，仅在每个注意力头内均匀随机淘汰、完全不打分；在 4 个模型 6 个推理任务上匹配最强已有淘汰器，vLLM 部署吞吐高 32-43%。机制分析表明 prompt 才是缓存的脆弱部分，推理轨迹自带冗余，prompt 安全后随机淘汰即足够。
+
+- **LatentPress: Context Compression Beyond Text and Vision** `[长文本]` `[微调]` — [2609.01507](https://arxiv.org/abs/2609.01507) | [GitHub](https://github.com/HJSang/LatentPress)
+  > 提出 LatentPress，将对话历史和长文档压缩为连续记忆 token，冻结解码器直接通过输入嵌入接口读取，推理时无需重建文本。小型写入器实现 4-16 倍压缩，仅训练适配器（4.2M-26.2M 参数）。LongMemEval 上 7.7 倍压缩准确率达 0.504，超过文本摘要（0.184）和 OCR 压缩（0.426）；写入每轮仅 43ms，读取比原始上下文快 5-9 倍。
+
+- **DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training** `[RL]` — [2609.04094](https://arxiv.org/abs/2609.04094) | [GitHub](https://github.com/IBM/draco)
+  > 针对长程智能体训练缺乏可验证奖励、标量评分难以覆盖数十步轨迹的问题，提出 DRACO：训练中动态生成评分量规跟踪策略演化，对完整轨迹评分后以闭式解将判断重新分配到负责各量规的步骤，在 GRPO 中产生差异化的逐步优势，无需可训练归因模块。AppWorld 上较基座提升 15.9 分、较稀疏真值奖励 GRPO 提升 5.3 分；域外 Tau-Bench 无需前沿评判模型仍提升 5.3 分。
+
+- **Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments** `[API]` — [2609.04148](https://arxiv.org/abs/2609.04148) | [GitHub](https://github.com/harbor-framework/terminal-bench-2)
+  > 终端代码智能体轨迹大规模积累，但可执行环境稀缺，而后者才是智能体后训练真正需要的。Terminal-Universe 观察到轨迹中的工具执行历史暴露了运行环境的结构与内容，可从轨迹本身重建环境：重放记录的文件操作将文件恢复到被修改前得到部分工作区，再由补全智能体补齐缺失文件与依赖。在恢复的工作区上可重建原始任务、合成全新任务并扩展规模，将静态轨迹转化为可复用的训练环境。
+
+- **PACE: Towards Surfacing Hidden Conflicts in User Requests** `[API]` — [2609.03293](https://arxiv.org/abs/2609.03293) | [GitHub](https://github.com/p2chp2t/pacemaker)
+  > 指出个性化助手不仅要执行请求，还应结合上下文评估请求是否恰当，而现有工作只关注准确执行，忽略了基于冲突的拒绝；且现有冲突检测依赖显式因素，现实中隐性因素需从知识库检索。提出 PACE 数据集：将用户请求与定义良好的人设配对，结合第一视角知识库事实，要求模型整合上下文证据判断请求是否冲突。隐式检索设定使现有模型难以识别相关的用户专属事实，配套代码实现了检索、融合、回答与评判的完整流程。
+
+- **Locked at the Entrance, Open Inside: Where RLVR Narrows the Solution Space** `[RL]` — [2608.29188](https://arxiv.org/abs/2608.29188) | [GitHub](https://github.com/ershiyidian/early-branch-locking)
+  > RLVR 显著提升 pass@1，但导致策略解空间收缩，削弱测试时扩展收益。本文以 Countdown 任务定位收缩：解空间可穷举为以首个操作数和运算符定义的「入口家族」。跨 PPO 与 GRPO 验证，解覆盖率最多下降 67%；收缩高度集中于入口——首个算术运算前的似然位移是后续的 11-16 倍。仅提供一个未选中的入口前缀，即可将低访问家族完成率提升一个数量级（0.018 升至 0.212）。
+
+
+## 2026年9月7日
+
+- **Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems** `[API]` — [2609.02750](https://arxiv.org/abs/2609.02750) | [GitHub](https://github.com/YihangChen9/Bilevel-Coordinated-Reflection)
+  > 针对多智能体LLM系统缺乏统一协调理论的问题，本文将编排器-工作者交互建模为双层协调博弈，证明有界耦合下工作者局部更新博弈近似为势博弈。将反思过程建模为语义记忆状态上的随机移动，推导有限时间上界并证明紧性，给出仅观察文本的门控无法统一改进的信息论不可能性结果。据此提出SRMA方法，仅在 grounding 评估风险严格下降时接受记忆更新，并证明收敛速率。在500个SWE-bench实例上，基于Kimi的完整系统解决率达72.2%。
+
+- **Dr. Claw: An AI Scientist Workspace for Vibe Research** `[API]` — [2609.00365](https://arxiv.org/abs/2609.00365) | [GitHub](https://github.com/OpenLAIR/dr-claw)
+  > 现有命令行编程智能体（如Claude Code、Gemini CLI）虽已能读写文件并维持长会话，但端到端研究流程仍分散在聊天工具、IDE和终端之间，关键决策难以留存审计。本文提出开源工作空间Dr. Claw，不另造自主智能体，而是将现有编程智能体执行器包裹在可控、可审计的人机协同工作流中，通过持久状态对象、可复用技能库与多执行器协调，把规划、执行与写作连成可追溯、可恢复的闭环。在与同等后端裸命令行智能体的对比中，Dr. Claw在研究完整性上得分更高，并保留了完整的可审计过程轨迹。
+
+- **Iris: Climbing to the Search Frontier** `[RL]` — [2609.04304](https://arxiv.org/abs/2609.04304) | [GitHub](https://github.com/AllSpark-Research/Iris)
+  > 本文发布Iris-mini与Iris-pro两个搜索智能体（35B-A3B与397B-A17B）及完整数据流水线与训练配方。任务从网页语料超链接结构反向构造：在实体图上编写多跳链并改写非答案实体以防字符串匹配，只保留闭卷失败但提供证据可解的问题。训练采用「SFT-RL攀爬」交替：先SFT过滤轨迹，再对真实搜索做RL，超长rollout在请求级中断并从前缀恢复。开启上下文管理后，两模型在BrowseComp、HLE等基准上达82.2~92.9与52.3~56.4，为同量级开源搜索智能体最强。
+
+- **Enoki: Efficient Multi-Level Hallucination Detection** — [2609.00581](https://arxiv.org/abs/2609.00581) | [GitHub](https://github.com/s-nlp/Enoki)
+  > 现有幻觉检测器通常在单一粒度工作：claim级方法提供可解释的事实单元，span级方法定位无依据文本，桥接两者代价高昂。本文提出Enoki，一个基于开放信息抽取的多粒度幻觉检测框架：抽取文本锚定的关系事实、对照证据验证，再将不受支持的事实投影回幻觉span，使claim级验证与span级定位无需额外对齐。框架统一支持LLM、编码器与规则三种抽取范式，平衡精度与成本。实验显示Enoki以更少的资源与强claim级系统竞争，并在细粒度span与实体定位上更优，同时发布双粒度标注数据集EnokiQA。
+
+- **Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization** `[API]` — [2609.05258](https://arxiv.org/abs/2609.05258) | [GitHub](https://github.com/AIOR-Research/InterOpt)
+  > LLM increasingly被用于从自然语言描述构建优化模型，但真实运筹请求常不完整，缺失的目标、约束或业务规则会改变最终数学规划，现有评测大多假设规格完整，忽略了智能体是否知道建模前需要澄清。本文提出OR-Clarify基准，通过部分公开描述与隐藏的槽位结构，在有限交互下评测智能体的槽位恢复、停止行为、沉默假设与交互成本。并提出两阶段框架InterOPT，识别影响建模的关键缺口并决定继续提问还是停止。选择式实验中InterOPT在精确槽位恢复上大幅超越所有基线，开放式设定下与强方法持平。
+
+- **Unfold The World: Factorize 4D Properties in Reinforcing Spatial Reasoning** `[RL]` `[VLM]` — [2609.03729](https://arxiv.org/abs/2609.03729) | [GitHub](https://github.com/ZimaBlue-WAM/FactoSR)
+  > VLM在物理世界推理上仍是「扁平」的：其被训练解读2D投影，而真正的空间推理需要恢复潜在的3D几何与时间连续性。本文提出FactoSR分解式强化学习框架，将世界一致性推理显式分解为三个正交几何子目标：平面对应（XY）、深度一致性（Z）与时间可逆性（T），在统一策略学习机制内优化这些可验证约束，把病态的投影恢复问题转化为可解的推理步骤。多视角与视频基准实验表明，该分解在3D与4D推理上显著提升，VSI-Bench提高5.9%，All-Angles-Bench提高4.5%。
+
+- **When Models Edit Too Much: On the Fidelity of Minimal Code Edits** `[RL]` — [2609.04061](https://arxiv.org/abs/2609.04061) | [GitHub](https://github.com/nreHieW/over-editing)
+  > LLM increasingly被用于修改现有代码，但仅有正确性还不够：有用的修复还应最小化、可审查并忠于原实现。本文研究「过度编辑」现象——模型重写超出修复所需范围的代码。基于400个BigCodeBench问题构建评测框架，向参考解注入可控AST级损坏，使每个任务都有已知最小补丁。评测显示过度编辑普遍存在：高Pass@1常与不必要的过大编辑并存；加入保持性指令可将冗余Levenshtein距离从0.195降至0.131，认知复杂度降26.6%，Pass@1提升2.3点。后训练实验表明SFT会过拟合见过的损坏模式，而RL在域外编辑保真度上取得最佳权衡。
+
+- **Group Adaptive Clipping Policy Optimization** `[RL]` — [2609.00444](https://arxiv.org/abs/2609.00444) | [GitHub](https://github.com/Sheng-J/GAPO)
+  > RLVR中GRPO类方法通常对所有rollout使用固定重要性采样比裁剪边界，本文发现：难题上的稀有正确rollout与易题上的大量正确rollout被以相近比例裁剪，但二者学习信号差异巨大；低成功率组的rollout具有更大IS比、承载更强探索梯度，却被固定裁剪不成比例地压制。为此提出GAPO，一种即插即用的自适应裁剪修改：从逆KL信赖域视角出发，让学习信号更大的rollout获得更大更新空间，无需奖励塑形，仅调整裁剪阈值而保持标准PPO/GSPO代理目标。在Qwen与Llama上，GAPO在数学与编程基准上持续提升Pass@1与Pass@k。
+
+- **Refuse without Refusal: A Structural Analysis of Safety-Tuning Responses for Reducing False Refusals in Language Models** `[微调]` — [2609.04714](https://arxiv.org/abs/2609.04714) | [GitHub](https://github.com/mz-kim/Refuse-without-Refusal)
+  > 对齐LLM需拒绝有害查询，同时对表面相似的无害查询保持响应，但模型常因依赖表面风险措辞而无法区分二者，产生「错误拒绝」。本文将安全微调数据集中的响应分解为套话式拒绝声明与解释拒绝的理由两部分，实验表明拒绝声明会阻碍对有害与无害查询的准确判别，而仅用理由训练可在保持相当安全水平的同时减少错误拒绝。该收益在ICL配置中同样出现，且与多种推理时缓解方法兼容。结果强调了精确策划细粒度安全监督数据集的必要性，为兼顾有用性与安全性的对齐指明方向。
+
+- **Knowing What Not to Answer: Selective Non-Compliance in Vision-Language Models** `[VLM]` `[微调]` — [2609.04720](https://arxiv.org/abs/2609.04720) | [GitHub](https://github.com/mz-kim/KoNA)
+  > VLM应对适当请求作出有帮助的响应，同时拒绝不正确、不安全、不可行或无法回答的部分，但现有基准大多在整句查询层面评测非遵从。真实查询往往混合了可回答内容与应拒绝的成分。本文提出KoNA基准，从错误前提、视觉不可达、普遍未知、任务可行性与安全性五类评测VLM的选择性非遵从能力，区分查询级与成分级两种粒度。评测显示模型常无法恰当拒绝、纠正或弃权，需选择性非遵从时失败更显著。用KoNA示例配合完全可回答集微调VLM后，非遵从准确率大幅提升，同时基本保持可回答任务上的表现。
+
+
+## 2026年9月8日
+
+- **Unlocking Lossless Speedups in LLMs via Discrete Diffusion** `[扩散模型]` — [2609.04010](https://arxiv.org/abs/2609.04010) | [GitHub](https://github.com/ifm-ai/uno)
+  > 提出扩散增强LLM（Uno），将模型参数解耦为标准NTP训练的AR权重与轻量扩散权重，通过几乎零开销的扩散蒸馏阶段学习多token并行生成，无需独立草稿模型即可无损加速自回归解码；并提出Ψ-Spec采样器族支持推理时扩展。可直接增强现有开源AR模型，吞吐率在各batch size下均超越主流投机解码，最高提速3倍；8B Uno性能超过26B的开源扩散LLM DiffusionGemma。
+
+- **FlowBalance: Verifier-Grounded Self-Improvement from On-Policy Reasoning Experience** `[RL]` — [2609.03241](https://arxiv.org/abs/2609.03241) | [GitHub](https://github.com/alexhuang13/FlowBalance)
+  > 提出FlowBalance验证器校准的推理模型自我改进方法。策略的冻结副本利用特权上下文产生token级log-prob增益，聚合为轨迹级自引导分数，再与验证器组优势校准：正优势保留、负优势反转、无偏好时禁用；能量重加权参考策略后用trajectory balance拟合归一化目标，无需token级模仿损失。理论分析给出逆KL刻画与假阳性纠正；数学推理上Qwen3-4B等模型平均超过FlowRL。
+
+- **Causal Foundation Models** — [2609.03003](https://arxiv.org/abs/2609.03003) | [GitHub](https://github.com/layer6ai-labs/cfms)
+  > 提出因果基础模型（CFM）范式：预训练神经网络通过上下文学习在全新数据集上直接估计平均处理效应等因果量，摆脱逐问题定制因果机制、估计器选择与模型更新的传统流水线。论文系统梳理因果推断与机器学习背景，给出CFM的问题定义、代表性方法分类与评估方式，并全程配套示例代码和Jupyter notebook（含causal_bench），兼具教程性与实践参考价值，为该新兴方向提供入门蓝图。
+
+- **Unifying Conformal Language Tasks with In-Context Ensembles** `[无需训练]` `[API]` — [2609.03005](https://arxiv.org/abs/2609.03005) | [GitHub](https://github.com/layer6ai-labs/conformal-relevance)
+  > 提出Conformal Relevance框架，用上下文学习示例筛选与模型集成替代人工设计的LLM重要性打分提示，自动构建同时满足覆盖率与简洁性的保形预测得分函数。在摘要、抽取式问答等7个NLP任务上验证，仅需极少人工投入即在保持覆盖保证的同时显著提升简洁性；理论部分给出集成改善最差句子得分的互补性条件与收益饱和上界。仓库含完整实现与数据。
+
+- **What Else Needs Fixing? Exploring Cost-Effective Test-Time Compute for Revision Propagation in Artifacts Generated Through Conversation** `[无需训练]` — [2609.03254](https://arxiv.org/abs/2609.03254) | [GitHub](https://github.com/ntt-dkiku/llm-revision-propagation)
+  > 研究对话生成工件的修订传播问题：当用户只提出局部修改时，LLM需从对话历史中识别相关依赖并将修改传播到工件所有受影响部分。提出该设定下的新基准，在gpt-oss、gpt-5.4-mini、qwen3.5等模型上评估9种修订方法（含顺序反思与并行采样变体）。结果表明基线准确率为68.3~93%，最具成本效益的方法是从三个并行样本中用LLM或medoid选择，可提升2.2~9.7%。
+
+
+## 2026年9月9日
+
+- **NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness** `[RL]` — [2609.08183](https://arxiv.org/abs/2609.08183) | [GitHub](https://github.com/TokenRhythm/NeoHorse)
+  > 探索递归自我改进（RSI）的具体机制：NeoHorse-1通过异构模型池与智能路由记录每轮对话的能力需求、服务层级与交互轨迹，经结构校验、六维语义评估转化为训练样本，组织成三阶段SFT课程，并扩展为路由引导的在线策略蒸馏；能力导向分配再将评估反馈转化为下一轮训练数据混合，形成「评估-选择-更新」闭环。11个benchmark上4B模型宏平均从58.94提升至64.87，9B从65.60提升至69.04。
+
+- **Miles v0.1: Production-Level Post-Training** `[RL]` — [2609.08368](https://arxiv.org/abs/2609.08368) | [GitHub](https://github.com/radixark/miles)
+  > 面向前沿后训练的全栈生产级系统Miles v0.1，构建于slime的简洁设计之上。rollout引擎基于SGLang，训练器支持Megatron-LM与PyTorch FSDP双后端，提供三种权重同步传输适配不同部署拓扑；除全参数RL外还支持LoRA RL、在线策略蒸馏、SFT及真在线rollout-训练对齐，并扩展到扩散模型。案例研究：在64块GB300 GPU上对GLM-5.2 744B-A40B执行全异步智能体RL（终端编码任务），前30步中位步耗时263秒。
+
+- **Reason Through the Latent! Making Latent Visual Reasoning Necessary** `[VLM]` — [2609.06746](https://arxiv.org/abs/2609.06746) | [GitHub](https://github.com/dmis-lab/CVRR)
+  > 指出潜在视觉推理的隐患：视觉信息存在于隐状态不代表模型预测时真正依赖它。提出因果视觉循环推理（CVRR），在VLM吸收图像后从问题隐状态初始化循环，反复重读固定视觉证据更新状态，解码前移除视觉状态与多模态KV缓存，使循环状态成为唯一携带图像信息的通路。在V*、MMVP、BLINK、MME-RealWorld-Lite上保持强劲性能，而其他潜在推理器在同等约束下无法恢复视觉能力；因果干预证实循环内容对预测有真实因果影响。
+
+- **BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference** `[无需训练]` — [2609.04971](https://arxiv.org/abs/2609.04971) | [GitHub](https://github.com/aiha-lab/BeaconKV)
+  > 针对大型推理模型长思维链导致的KV缓存内存瓶颈，发现现有方法依赖近期查询预测未来token重要性的假设在长程推理中失效：某些解码步产生「思维回溯token」（TRT）重新关注远处上下文，且对应查询在嵌入空间聚成少数相似组。据此提出无需训练的BeaconKV，维护代表各全局查询簇的beacon查询以预判哪些KV将被回访。在4个开源推理模型上多数优于现有压缩方法，最高实现5.8倍显存压缩且几乎不损失精度，吞吐提升超4.3倍。
+
+- **Steering Geometry: Validating Human Value Geometry in LLM Steering Space** `[无需训练]` — [2609.06289](https://arxiv.org/abs/2609.06289) | [GitHub](https://github.com/DeepRCL/Steering_Geometry)
+  > 研究LLM激活引导向量是否编码连贯的语义结构。以Schwartz人类基本价值理论为框架，构建覆盖20种人类价值的26K样本benchmark，系统比较分布驱动方法（CAA、SphericalSteer、ODESteer）与行为中心方法（COLD-Steer、BiPO）。发现分布驱动方法恢复出与理论预测一致的价值拓扑（Spearman ρ最高0.51），行为中心方法引导性能相当但几何相关性微弱；几何保真度随模型规模提升、指令微调后下降，且几何对齐更好的引导能更一致地迁移到兼容或对立价值上。
+
+- **Kalman Delta Networks: Uncertainty-aware Associative Memory** `[长文本]` — [2609.07816](https://arxiv.org/abs/2609.07816) | [GitHub](https://github.com/ngocbh/kalman-delta-networks)
+  > 将循环关联记忆重构为线性-高斯状态空间模型，利用卡尔曼滤波作为最优递归估计器，提出Kalman Delta Networks（KDN）：状态转移同时传播记忆状态与其不确定性，卡尔曼增益按累积证据与观测可靠性加权每次残差写入，Delta规则仅是忽略协方差追踪的特例。精确追踪需稠密Riccati递归，不适合GPU并行扫描，故提出两种兼容扫描的近似：对角KDN（在线平均场变分推断）与各向同性KDN。750M与1.3B受控预训练上，KDN在困惑度与下游平均准确率上一致优于现有线性注意力模型。
+
+- **Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks** `[RL]` — [2609.08404](https://arxiv.org/abs/2609.08404) | [GitHub](https://github.com/HongbangYuan/EnvAsScaffold)
+  > 针对长程任务中智能体RL奖励稀疏的问题，提出从环境侧适应的范式转变：构建反馈增强环境（FEE），在episode内探索后期与episode间进化后期从动作指导转向观察丰富化。在SciWorld与BFCL上，Qwen3多种规模配合GRPO、GSPO、DAPO均一致提升。分析表明FEE能稳定训练动态（降低熵波动）、促进困难任务的状态空间探索、确保环境指导内化进策略权重而非仅作推理时先验，并揭示组内反馈一致性是稳定优化的关键边界。
+
+- **MOLE: Detecting Insider Threats in AI Agents** — [2609.06966](https://arxiv.org/abs/2609.06966) | [GitHub](https://github.com/aashiqmuhamed/mole)
+  > 针对前沿实验室账户上AI智能体可能因模型失齐、提示注入或操作员滥用而窃取权重、污染训练数据的风险，现有benchmark不检验有限审查预算下能否在日常工作中检出威胁。MOLE开放benchmark包含150个AI操作账户、9个有状态服务、30个工作日、12类威胁，覆盖4个模型约200亿token。39个智能体模型中72%能完成大部分有害目标，拒绝行为不能预测完成度；最优监控器在单日审计事件比较中仍漏检近半已完成危害；benchmark引导的搜索可将中游监控器提升49-64%。
+
+- **Recognition-Refusal Misalignment in LLMs: Why Models Answer Structurally Unanswerable Questions** `[无需训练]` — [2608.29109](https://arxiv.org/abs/2608.29109) | [GitHub](https://github.com/yucheng-du/recognition-refusal-misalignment)
+  > 探究LLM为何回答结构性不可回答问题（如计算cot(-540°)）而非弃权：是缺乏识别能力还是识别到弃权的通路失效。在1.7B到70B指令模型上发现，隐藏状态中单个线性方向即可区分可答与结构不可能的数学/代码提示，说明模型在生成前已表征「不可能性」；但该识别方向与介导安全拒绝的经典方向近乎正交。沿识别方向做生成时引导可双向、剂量响应式地改变无效性感知行为，随机方向则无效。结论：该失败是路由失败而非编码失败——模型拥有可用的「无可行答案」信号，但安全拒绝通路未与之对齐。
+
+- **Graph Machine: Towards Better Pretraining via Edges** `[长文本]` — [2609.02881](https://arxiv.org/abs/2609.02881) | [GitHub](https://github.com/lintaihou/gm2)
+  > 提出Graph Machine（GM）架构：维护O(n)大小的状态，通过稀疏动态路由访问。不同于固定大小状态或静态稀疏路由方法，GM的稀疏层保持O(n)复杂度且不限O(1)可访问状态，其核心是「边」——由类似指针追逐的referral机制可微更新的指针式对象。将Qwen3-0.6B中75%的稠密Transformer层替换为GM稀疏层，在15.7B token上从头预训练：每个稀疏层每头每步仅检索4096个token中的2个时loss仅轻微退化，检索4个时最佳模型loss略有改善。

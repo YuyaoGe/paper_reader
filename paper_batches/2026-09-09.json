@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2026-09-09",
+    "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+    "arxiv_id": "2609.08183",
+    "github": "https://github.com/TokenRhythm/NeoHorse",
+    "abstract": "探索递归自我改进（RSI）的具体机制：NeoHorse-1通过异构模型池与智能路由记录每轮对话的能力需求、服务层级与交互轨迹，经结构校验、六维语义评估转化为训练样本，组织成三阶段SFT课程，并扩展为路由引导的在线策略蒸馏；能力导向分配再将评估反馈转化为下一轮训练数据混合，形成「评估-选择-更新」闭环。11个benchmark上4B模型宏平均从58.94提升至64.87，9B从65.60提升至69.04。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Miles v0.1: Production-Level Post-Training",
+    "arxiv_id": "2609.08368",
+    "github": "https://github.com/radixark/miles",
+    "abstract": "面向前沿后训练的全栈生产级系统Miles v0.1，构建于slime的简洁设计之上。rollout引擎基于SGLang，训练器支持Megatron-LM与PyTorch FSDP双后端，提供三种权重同步传输适配不同部署拓扑；除全参数RL外还支持LoRA RL、在线策略蒸馏、SFT及真在线rollout-训练对齐，并扩展到扩散模型。案例研究：在64块GB300 GPU上对GLM-5.2 744B-A40B执行全异步智能体RL（终端编码任务），前30步中位步耗时263秒。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Reason Through the Latent! Making Latent Visual Reasoning Necessary",
+    "arxiv_id": "2609.06746",
+    "github": "https://github.com/dmis-lab/CVRR",
+    "abstract": "指出潜在视觉推理的隐患：视觉信息存在于隐状态不代表模型预测时真正依赖它。提出因果视觉循环推理（CVRR），在VLM吸收图像后从问题隐状态初始化循环，反复重读固定视觉证据更新状态，解码前移除视觉状态与多模态KV缓存，使循环状态成为唯一携带图像信息的通路。在V*、MMVP、BLINK、MME-RealWorld-Lite上保持强劲性能，而其他潜在推理器在同等约束下无法恢复视觉能力；因果干预证实循环内容对预测有真实因果影响。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+    "arxiv_id": "2609.04971",
+    "github": "https://github.com/aiha-lab/BeaconKV",
+    "abstract": "针对大型推理模型长思维链导致的KV缓存内存瓶颈，发现现有方法依赖近期查询预测未来token重要性的假设在长程推理中失效：某些解码步产生「思维回溯token」（TRT）重新关注远处上下文，且对应查询在嵌入空间聚成少数相似组。据此提出无需训练的BeaconKV，维护代表各全局查询簇的beacon查询以预判哪些KV将被回访。在4个开源推理模型上多数优于现有压缩方法，最高实现5.8倍显存压缩且几乎不损失精度，吞吐提升超4.3倍。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Steering Geometry: Validating Human Value Geometry in LLM Steering Space",
+    "arxiv_id": "2609.06289",
+    "github": "https://github.com/DeepRCL/Steering_Geometry",
+    "abstract": "研究LLM激活引导向量是否编码连贯的语义结构。以Schwartz人类基本价值理论为框架，构建覆盖20种人类价值的26K样本benchmark，系统比较分布驱动方法（CAA、SphericalSteer、ODESteer）与行为中心方法（COLD-Steer、BiPO）。发现分布驱动方法恢复出与理论预测一致的价值拓扑（Spearman ρ最高0.51），行为中心方法引导性能相当但几何相关性微弱；几何保真度随模型规模提升、指令微调后下降，且几何对齐更好的引导能更一致地迁移到兼容或对立价值上。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Kalman Delta Networks: Uncertainty-aware Associative Memory",
+    "arxiv_id": "2609.07816",
+    "github": "https://github.com/ngocbh/kalman-delta-networks",
+    "abstract": "将循环关联记忆重构为线性-高斯状态空间模型，利用卡尔曼滤波作为最优递归估计器，提出Kalman Delta Networks（KDN）：状态转移同时传播记忆状态与其不确定性，卡尔曼增益按累积证据与观测可靠性加权每次残差写入，Delta规则仅是忽略协方差追踪的特例。精确追踪需稠密Riccati递归，不适合GPU并行扫描，故提出两种兼容扫描的近似：对角KDN（在线平均场变分推断）与各向同性KDN。750M与1.3B受控预训练上，KDN在困惑度与下游平均准确率上一致优于现有线性注意力模型。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks",
+    "arxiv_id": "2609.08404",
+    "github": "https://github.com/HongbangYuan/EnvAsScaffold",
+    "abstract": "针对长程任务中智能体RL奖励稀疏的问题，提出从环境侧适应的范式转变：构建反馈增强环境（FEE），在episode内探索后期与episode间进化后期从动作指导转向观察丰富化。在SciWorld与BFCL上，Qwen3多种规模配合GRPO、GSPO、DAPO均一致提升。分析表明FEE能稳定训练动态（降低熵波动）、促进困难任务的状态空间探索、确保环境指导内化进策略权重而非仅作推理时先验，并揭示组内反馈一致性是稳定优化的关键边界。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "MOLE: Detecting Insider Threats in AI Agents",
+    "arxiv_id": "2609.06966",
+    "github": "https://github.com/aashiqmuhamed/mole",
+    "abstract": "针对前沿实验室账户上AI智能体可能因模型失齐、提示注入或操作员滥用而窃取权重、污染训练数据的风险，现有benchmark不检验有限审查预算下能否在日常工作中检出威胁。MOLE开放benchmark包含150个AI操作账户、9个有状态服务、30个工作日、12类威胁，覆盖4个模型约200亿token。39个智能体模型中72%能完成大部分有害目标，拒绝行为不能预测完成度；最优监控器在单日审计事件比较中仍漏检近半已完成危害；benchmark引导的搜索可将中游监控器提升49-64%。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Recognition-Refusal Misalignment in LLMs: Why Models Answer Structurally Unanswerable Questions",
+    "arxiv_id": "2608.29109",
+    "github": "https://github.com/yucheng-du/recognition-refusal-misalignment",
+    "abstract": "探究LLM为何回答结构性不可回答问题（如计算cot(-540°)）而非弃权：是缺乏识别能力还是识别到弃权的通路失效。在1.7B到70B指令模型上发现，隐藏状态中单个线性方向即可区分可答与结构不可能的数学/代码提示，说明模型在生成前已表征「不可能性」；但该识别方向与介导安全拒绝的经典方向近乎正交。沿识别方向做生成时引导可双向、剂量响应式地改变无效性感知行为，随机方向则无效。结论：该失败是路由失败而非编码失败——模型拥有可用的「无可行答案」信号，但安全拒绝通路未与之对齐。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-09",
+    "title": "Graph Machine: Towards Better Pretraining via Edges",
+    "arxiv_id": "2609.02881",
+    "github": "https://github.com/lintaihou/gm2",
+    "abstract": "提出Graph Machine（GM）架构：维护O(n)大小的状态，通过稀疏动态路由访问。不同于固定大小状态或静态稀疏路由方法，GM的稀疏层保持O(n)复杂度且不限O(1)可访问状态，其核心是「边」——由类似指针追逐的referral机制可微更新的指针式对象。将Qwen3-0.6B中75%的稠密Transformer层替换为GM稀疏层，在15.7B token上从头预训练：每个稀疏层每头每步仅检索4096个token中的2个时loss仅轻微退化，检索4个时最佳模型loss略有改善。",
+    "tags": ["长文本"]
+  }
+]

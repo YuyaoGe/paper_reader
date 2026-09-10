@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2026-09-07",
+    "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+    "arxiv_id": "2609.02750",
+    "github": "https://github.com/YihangChen9/Bilevel-Coordinated-Reflection",
+    "abstract": "针对多智能体LLM系统缺乏统一协调理论的问题，本文将编排器-工作者交互建模为双层协调博弈，证明有界耦合下工作者局部更新博弈近似为势博弈。将反思过程建模为语义记忆状态上的随机移动，推导有限时间上界并证明紧性，给出仅观察文本的门控无法统一改进的信息论不可能性结果。据此提出SRMA方法，仅在 grounding 评估风险严格下降时接受记忆更新，并证明收敛速率。在500个SWE-bench实例上，基于Kimi的完整系统解决率达72.2%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+    "arxiv_id": "2609.00365",
+    "github": "https://github.com/OpenLAIR/dr-claw",
+    "abstract": "现有命令行编程智能体（如Claude Code、Gemini CLI）虽已能读写文件并维持长会话，但端到端研究流程仍分散在聊天工具、IDE和终端之间，关键决策难以留存审计。本文提出开源工作空间Dr. Claw，不另造自主智能体，而是将现有编程智能体执行器包裹在可控、可审计的人机协同工作流中，通过持久状态对象、可复用技能库与多执行器协调，把规划、执行与写作连成可追溯、可恢复的闭环。在与同等后端裸命令行智能体的对比中，Dr. Claw在研究完整性上得分更高，并保留了完整的可审计过程轨迹。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Iris: Climbing to the Search Frontier",
+    "arxiv_id": "2609.04304",
+    "github": "https://github.com/AllSpark-Research/Iris",
+    "abstract": "本文发布Iris-mini与Iris-pro两个搜索智能体（35B-A3B与397B-A17B）及完整数据流水线与训练配方。任务从网页语料超链接结构反向构造：在实体图上编写多跳链并改写非答案实体以防字符串匹配，只保留闭卷失败但提供证据可解的问题。训练采用「SFT-RL攀爬」交替：先SFT过滤轨迹，再对真实搜索做RL，超长rollout在请求级中断并从前缀恢复。开启上下文管理后，两模型在BrowseComp、HLE等基准上达82.2~92.9与52.3~56.4，为同量级开源搜索智能体最强。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Enoki: Efficient Multi-Level Hallucination Detection",
+    "arxiv_id": "2609.00581",
+    "github": "https://github.com/s-nlp/Enoki",
+    "abstract": "现有幻觉检测器通常在单一粒度工作：claim级方法提供可解释的事实单元，span级方法定位无依据文本，桥接两者代价高昂。本文提出Enoki，一个基于开放信息抽取的多粒度幻觉检测框架：抽取文本锚定的关系事实、对照证据验证，再将不受支持的事实投影回幻觉span，使claim级验证与span级定位无需额外对齐。框架统一支持LLM、编码器与规则三种抽取范式，平衡精度与成本。实验显示Enoki以更少的资源与强claim级系统竞争，并在细粒度span与实体定位上更优，同时发布双粒度标注数据集EnokiQA。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization",
+    "arxiv_id": "2609.05258",
+    "github": "https://github.com/AIOR-Research/InterOpt",
+    "abstract": "LLM increasingly被用于从自然语言描述构建优化模型，但真实运筹请求常不完整，缺失的目标、约束或业务规则会改变最终数学规划，现有评测大多假设规格完整，忽略了智能体是否知道建模前需要澄清。本文提出OR-Clarify基准，通过部分公开描述与隐藏的槽位结构，在有限交互下评测智能体的槽位恢复、停止行为、沉默假设与交互成本。并提出两阶段框架InterOPT，识别影响建模的关键缺口并决定继续提问还是停止。选择式实验中InterOPT在精确槽位恢复上大幅超越所有基线，开放式设定下与强方法持平。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Unfold The World: Factorize 4D Properties in Reinforcing Spatial Reasoning",
+    "arxiv_id": "2609.03729",
+    "github": "https://github.com/ZimaBlue-WAM/FactoSR",
+    "abstract": "VLM在物理世界推理上仍是「扁平」的：其被训练解读2D投影，而真正的空间推理需要恢复潜在的3D几何与时间连续性。本文提出FactoSR分解式强化学习框架，将世界一致性推理显式分解为三个正交几何子目标：平面对应（XY）、深度一致性（Z）与时间可逆性（T），在统一策略学习机制内优化这些可验证约束，把病态的投影恢复问题转化为可解的推理步骤。多视角与视频基准实验表明，该分解在3D与4D推理上显著提升，VSI-Bench提高5.9%，All-Angles-Bench提高4.5%。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "When Models Edit Too Much: On the Fidelity of Minimal Code Edits",
+    "arxiv_id": "2609.04061",
+    "github": "https://github.com/nreHieW/over-editing",
+    "abstract": "LLM increasingly被用于修改现有代码，但仅有正确性还不够：有用的修复还应最小化、可审查并忠于原实现。本文研究「过度编辑」现象——模型重写超出修复所需范围的代码。基于400个BigCodeBench问题构建评测框架，向参考解注入可控AST级损坏，使每个任务都有已知最小补丁。评测显示过度编辑普遍存在：高Pass@1常与不必要的过大编辑并存；加入保持性指令可将冗余Levenshtein距离从0.195降至0.131，认知复杂度降26.6%，Pass@1提升2.3点。后训练实验表明SFT会过拟合见过的损坏模式，而RL在域外编辑保真度上取得最佳权衡。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Group Adaptive Clipping Policy Optimization",
+    "arxiv_id": "2609.00444",
+    "github": "https://github.com/Sheng-J/GAPO",
+    "abstract": "RLVR中GRPO类方法通常对所有rollout使用固定重要性采样比裁剪边界，本文发现：难题上的稀有正确rollout与易题上的大量正确rollout被以相近比例裁剪，但二者学习信号差异巨大；低成功率组的rollout具有更大IS比、承载更强探索梯度，却被固定裁剪不成比例地压制。为此提出GAPO，一种即插即用的自适应裁剪修改：从逆KL信赖域视角出发，让学习信号更大的rollout获得更大更新空间，无需奖励塑形，仅调整裁剪阈值而保持标准PPO/GSPO代理目标。在Qwen与Llama上，GAPO在数学与编程基准上持续提升Pass@1与Pass@k。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Refuse without Refusal: A Structural Analysis of Safety-Tuning Responses for Reducing False Refusals in Language Models",
+    "arxiv_id": "2609.04714",
+    "github": "https://github.com/mz-kim/Refuse-without-Refusal",
+    "abstract": "对齐LLM需拒绝有害查询，同时对表面相似的无害查询保持响应，但模型常因依赖表面风险措辞而无法区分二者，产生「错误拒绝」。本文将安全微调数据集中的响应分解为套话式拒绝声明与解释拒绝的理由两部分，实验表明拒绝声明会阻碍对有害与无害查询的准确判别，而仅用理由训练可在保持相当安全水平的同时减少错误拒绝。该收益在ICL配置中同样出现，且与多种推理时缓解方法兼容。结果强调了精确策划细粒度安全监督数据集的必要性，为兼顾有用性与安全性的对齐指明方向。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-09-07",
+    "title": "Knowing What Not to Answer: Selective Non-Compliance in Vision-Language Models",
+    "arxiv_id": "2609.04720",
+    "github": "https://github.com/mz-kim/KoNA",
+    "abstract": "VLM应对适当请求作出有帮助的响应，同时拒绝不正确、不安全、不可行或无法回答的部分，但现有基准大多在整句查询层面评测非遵从。真实查询往往混合了可回答内容与应拒绝的成分。本文提出KoNA基准，从错误前提、视觉不可达、普遍未知、任务可行性与安全性五类评测VLM的选择性非遵从能力，区分查询级与成分级两种粒度。评测显示模型常无法恰当拒绝、纠正或弃权，需选择性非遵从时失败更显著。用KoNA示例配合完全可回答集微调VLM后，非遵从准确率大幅提升，同时基本保持可回答任务上的表现。",
+    "tags": ["VLM", "微调"]
+  }
+]

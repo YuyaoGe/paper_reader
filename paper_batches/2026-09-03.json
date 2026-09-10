@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2026-09-03",
+    "title": "Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills",
+    "arxiv_id": "2609.02749",
+    "github": "https://github.com/VectorSpaceLab/AREX-Skill",
+    "abstract": "提出技能驱动的科研智能体DisCo，将代码仓库中的操作性知识蒸馏为紧凑且经验证的技能供智能体复用，含任务无关与任务定向两种蒸馏形式，并构建AREX-Skill技能库（从1000个常用ML仓库蒸馏5000+技能）。固定GPT-5.5骨干与预算时，配技能的智能体在MLE-bench得分提升134.3%，PaperBench提升34.4%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
+    "arxiv_id": "2609.02783",
+    "github": "https://github.com/inphotoo/earlyeval",
+    "abstract": "针对LLM智能体评估昂贵的问题，提出早期结果预测框架EarlyEval：智能体最终结果常在中途行为中已显露，据此训练一对LightGBM成功/失败分类器，在置信度越过校准阈值时立即终止运行，几乎无额外开销。在SWE-bench Verified等基准上减少13%-26%的步数与最多44.1%的输入token，预测准确率89%-97%，resolve rate仅波动1-2个百分点。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-03",
+    "title": "On the Design Fundamentals of Pixel Text Representation Learning",
+    "arxiv_id": "2609.01147",
+    "github": "https://github.com/Pixel-Linguist/Pixel-Linguist-2",
+    "abstract": "系统研究像素级文本表示学习的设计原则，受控消融识别出四要素：可变分辨率与渲染字号支撑高分辨率泛化；自然图文对防止文本坍缩并实现视觉接地；布局感知渲染抑制像素捷径；两阶段多语言课程实现跨语言对齐。据此训练原生分辨率视觉编码器Pixel Linguist II，在英文、跨语言及多语言Visual STS和ViDoRe上取得SOTA，80%视觉token压缩下仍鲁棒。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "WHALE: A Simple Recipe for Joint Harness-Weight Optimization",
+    "arxiv_id": "2609.00196",
+    "github": "https://github.com/krafton-ai/WHALE",
+    "abstract": "提出WHALE配方，交替优化智能体的模型权重与harness代码：先在当前harness下用在线拒绝采样微调更新模型，再在新模型下用Meta-Harness搜索更优harness，切换时机用固定时长或自适应耐心规则。基于Qwen3.5-2B/4B在搜索问答、数学推理、国际象棋三领域上，best mean@8准确率较各单组件优化及Fast-Slow Training提升4.15-24.38个百分点。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "A Glance Is All You Need: Single-Pass Fine-Grained Image Captioning with SimLoss",
+    "arxiv_id": "2609.00591",
+    "github": "https://github.com/srynsh/SimLoss-Image-Captioning",
+    "abstract": "提出SimLoss，一种无需参考标注的嵌入空间目标，实现单遍前向的细粒度图像描述。通过InfoNCE对比损失将VLM投影隐状态与冻结图像嵌入对齐，在解码前提供稠密视觉监督，无需人工细粒度标注或伪标注。含可微分的SimLoss FFT与黑盒奖励式SimLoss GRPO两变体，FFT在保持单遍推理的同时取得最高精度，速度约为多阶段流水线的20倍。",
+    "tags": ["VLM", "RL"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Replacing Training with Memory: Listwise Selection for Text-to-SQL",
+    "arxiv_id": "2609.00834",
+    "github": "https://github.com/ldilab/MAP-SQL",
+    "abstract": "提出免微调的listwise候选选择器MaP-SQL：以结构化记忆替代学习到的选择行为，从训练数据蒸馏自然语言到schema元素、SQL操作与预期输出的映射记忆作为显式决策准则；聚合多次输入排列的排名缓解位置偏差，并用执行结果与pointwise打分优化推理开销。在BIRD-dev上相同候选集下超过SOTA方法R³-SQL平均2.02个执行准确率点，token消耗减少2.92倍。",
+    "tags": ["无需训练", "MeM"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Sparse Readout Prism: Explaining Logit-Lens Scores in Features Instead of Tokens",
+    "arxiv_id": "2609.01936",
+    "github": "https://github.com/hematteo/sparse-readout-prism",
+    "abstract": "指出lens读数同时反映隐状态与解码用的unembedding矩阵，拟合语料不同的lens对同一隐状态可给出不同token（语料条件性）。提出Sparse Readout Prism（SRP），仅用readout权重做稀疏分解，将任意logit或logit差表示为稀疏特征贡献之和，比六个几何关系基线多重建8.9-17.3个百分点的logit差，且不依赖语料，为lens分析提供独立控制。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Beyond Visual Similarity: Entity-Aligned Retrieval for Knowledge-Based Visual Question Answering",
+    "arxiv_id": "2608.21450",
+    "github": "https://github.com/realHarryX/KBMR",
+    "abstract": "针对KB-VQA中CLIP式检索偏重表层视觉相似、忽视实体语义对齐的问题，提出首个面向KB-VQA的MLLM嵌入检索器KBMR，利用MLLM自回归能力将图像映射到更保持概念身份的语义空间。为应对大规模检索的噪声监督，引入语义判别器生成连续实体一致性权重，驱动连续语义蒸馏目标实现难负例采样与软监督，较CLIP基线检索Recall@1最高提升14.7%，端到端VQA准确率提升9.4%。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Debias-SparseGPT: Bias-Aware Pruning for Large Language Models",
+    "arxiv_id": "2609.02496",
+    "github": "https://github.com/upunaprosk/debias-llm-compressor",
+    "abstract": "发现SparseGPT等权重稀疏化方法会放大模型已有偏见，输出随提示中persona线索显著变化。提出Debias-SparseGPT后训练剪枝方法，在基于人口统计学对比输入的二阶项中引入表示去偏。多种生成式LLM及25%、50%、结构化2:4稀疏度下，在保持困惑度与零样本准确率的同时持续降低剪枝偏见；2:4稀疏下用长上下文样本扩充校准集可进一步兼顾下游性能与公平性。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-03",
+    "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+    "arxiv_id": "2609.02849",
+    "github": "https://github.com/NVIDIA-NeMo/Skills",
+    "abstract": "提出端到端竞赛编程专门化流水线，结合题目筛选、合成推理轨迹、SFT与RL训练Nano-CC与Ultra-CC，并提出测试时策略GenCorrect迭代生成、修正解法。IOI 2025上Nano-CC经后训练与GenCorrect从130分提至468分，超过金牌线；面向IOI 2026的Ultra-CC在与人类同约束下获535.4/600，超越金牌线与最高人类选手，首次在IOI超过人类最高分。",
+    "tags": ["RL"]
+  }
+]
