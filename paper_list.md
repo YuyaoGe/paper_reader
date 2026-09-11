@@ -5162,3 +5162,26 @@
 
 - **PlannerForge: LLM Agents for Scenario-Based Testing of Motion Planners in Autonomous Driving** `[API]` — [2609.08965](https://arxiv.org/abs/2609.08965) | [GitHub](https://github.com/TUM-AVS/PlannerForge)
   > 提出统一LLM智能体框架PlannerForge，覆盖自动驾驶场景化测试全流程（生成、检索、修改、执行、分析），并新增ADS增强与基准测试两个阶段，解决工具链碎片化、环节间缺乏交互的问题。用10个现成LLM在5种提示条件下评测六类任务，最佳得分0.88至1.00，开源20-35B后端多数任务匹敌商业API。
+
+## 2026年9月11日
+
+- **SenseNova-U1.5: Towards Native Unified Visual Intelligence** `[VLM]` — [2609.11929](https://arxiv.org/abs/2609.11929) | [GitHub](https://github.com/OpenSenseNova/SenseNova-U1)
+  > 商汤发布SenseNova-U1.5统一多模态模型，采用无视觉编码器、无VAE的NEO-unify架构，以8B-MoT单模型同时完成视觉理解、推理与生成。通过空间一致的patch重建强化视觉接口，并针对美学、双语文字渲染、信息图、图像编辑训练专项专家，再经多专家在线策略蒸馏整合能力。模型支持原生4K生成，在图像保真度、文字渲染、多参考编辑等评测上领先开源模型，并将开源SFT、RL与蒸馏训练代码。
+
+- **SpatialBlock: Enhancing Spatial Intelligence in LVLMs via Synthetic Block-Stacking Problem** `[VLM]` `[微调]` `[RL]` — [2609.07064](https://arxiv.org/abs/2609.07064) | [GitHub](https://github.com/rsoohyun/SpatialBlock)
+  > 针对LVLM重建与推理图像三维结构能力不足的问题，借鉴人类认知中的积木游戏，提出SpatialBlock范式：构建1.5万道合成积木堆叠题目SpatialBlock-15k，涵盖3D到2D投影、视角变换与结构组合三类任务，并以受控颜色调制作为视觉锚点。提供直接作答与先推理后作答两种训练策略，后者采用LoRA初始化并经GRPO强化学习。仅用小型合成数据训练的模型即超越基线，并能泛化到真实空间任务。
+
+- **EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents** `[API]` — [2609.05903](https://arxiv.org/abs/2609.05903) | [GitHub](https://github.com/SaFo-Lab/EvoSafeHarness)
+  > 提出面向LLM Agent的安全防护框架EvoSafeHarness：保持模型冻结，围绕模型与域联合搜索自然语言策略和可执行代码逻辑（工具调用钩子），由编码智能体驱动设计、对抗评审、级联打分的进化循环。在DecodingTrust-Agent上攻击成功率从45.6%降至10.0%，仅损失3.3点效用；在AgentDojo上实现82.8%效用、0.0%攻击成功率，优于固定专家防御与CaMeL等基线。
+
+- **Negative Self-Distillation: Learning to Reason by Avoiding Flaws** `[微调]` `[RL]` — [2609.11699](https://arxiv.org/abs/2609.11699) | [GitHub](https://github.com/Prongcan/NSD)
+  > 针对在线策略自蒸馏迫使模型模仿基于特权信息的自信推理轨迹、抑制不确定性表达并损害复杂推理的问题，提出负向自蒸馏NSD：由模型自身生成「粗心推理者」等负向条件充当负教师，通过发散门控的unlikelihood目标将学生分布推离缺陷推理，并以动态门控隔离推理关键token，避免语言基础能力崩塌。无需标准答案，支持GRPO策略梯度与监督蒸馏两种模式，显著提升数学推理的鲁棒性。
+
+- **An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics** `[RL]` `[微调]` — [2609.10712](https://arxiv.org/abs/2609.10712) | [GitHub](https://github.com/NVIDIA-NeMo/Skills)
+  > NVIDIA公开训练Nemotron夺得IMO 2026金牌的配方：从Nemotron 3 Ultra出发，经监督微调与强化学习训练两个奥数专家检查点，构建全自然语言的测试时计算流水线——三个检查点迭代生成、验证、精炼候选证明，最后按IMO风格评分选出提交。系统不用形式化证明器与外部工具，以42分中30分达到金牌线，开源检查点、训练数据、推理代码及200题的Nemotron-IMO-Bench。
+
+- **CARDEA: Auditable Reasoning Grounded in Spatial Evidence for End-to-End Coronary Angiography Interpretation** `[VLM]` `[RL]` — [2609.06931](https://arxiv.org/abs/2609.06931) | [GitHub](https://github.com/benbayibaurba/cardea)
+  > 提出大视觉语言模型CARDEA，端到端解读冠脉造影：先筛选关键帧并分类视图，再基于多视角关键帧执行Chain-of-Box推理，在推理轨迹中嵌入边界框作为可审计的空间证据，输出优势分型、SYNTAX复杂度评估与报告。仅用公开数据经视觉对齐、自蒸馏冷启动、带CoB奖励的RLVR三阶段训练。域偏移下分型准确率0.91，复杂度评估0.90，RLVR将报告生成macro-F1从0.513提升至0.686。
+
+- **ActReview: Rebuttal-Guided Training Data and Rubric Rewards for Actionable Peer Review Generation** `[微调]` `[RL]` — [2609.09076](https://arxiv.org/abs/2609.09076) | [GitHub](https://github.com/Yiling-Ma/ActReview)
+  > 研究可执行同行评审生成：不止指出弱点，还要给出可落地的修改建议。提出rebuttal引导的后训练框架ActReview，利用OpenReview中作者rebuttal隐含的修改动作作为潜在监督，构建ActReview-40K并对齐诊断声明与论文证据。以Qwen3-8B-Base多任务SFT后接GRPO，奖励为弱点特定评分细则。在其基准上，可执行性与证据锚定超越专用模型，媲美强提示LLM。
