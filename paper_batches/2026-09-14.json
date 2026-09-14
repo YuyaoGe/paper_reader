@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-09-14",
+    "title": "DataFlex-RL: An Evaluation Platform for RLVR Data Policies",
+    "arxiv_id": "2609.06107",
+    "github": "https://github.com/haolpku/DataFlex-RL",
+    "abstract": "提出面向 RLVR 数据策略评测的开源平台 DataFlex-RL，在统一 GRPO 配方下公平比较不同的 rollout 选择与重加权方法。主实验用 Qwen2.5-7B-Base 在 12 个数学、逻辑、科学基准上跑 13 种配置×12 个配对种子。结果显示均匀 GRPO 较未训练基线提升 7.76 个百分点，但八种 rollout 选择或重加权方法均无一项以 95% 置信区间显著优于均匀采样，三种自适应混合也未超过固定等比混合。还量化发现仅保留数学类基准的重评分会使排名负相关（-0.33），说明评测摘要构成会改变结论。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-14",
+    "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+    "arxiv_id": "2609.13141",
+    "github": "https://github.com/Tencent-Hunyuan/Simple-Attention-Sparsification",
+    "abstract": "针对可训练注意力稀疏化中 Top-K 硬选择阻断梯度、导致选择器排名与固定注意力预算下的实际预测影响不一致的问题，提出 SAS：一种带门控的稀疏注意力机制，将选择器的连续分数注入注意力 logits，使语言建模损失能通过标准反向传播端到端优化上下文排序。关键设计包括对数空间 softmax 门控、归一化门控校准历史上下文，以及保留连续分数学习相对优先级；并实现了集成进 FlashAttention 式计算的省显存 Triton kernel 支持长序列训练。在推理、长上下文理解和 agentic 任务上，SAS 在各注意力预算下一致优于可训练稀疏注意力基线，预算越紧增益越大。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-09-14",
+    "title": "COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization",
+    "arxiv_id": "2609.11682",
+    "github": "https://github.com/Jerry-LuP/COBRA-Skills",
+    "abstract": "提出高效框架 COBRA-Skills，将 LLM Agent 的技能优化形式化为动态候选空间上的预算受限序贯优化，把上下文 bandit 优先排序与基于执行证据的技能进化相结合：选择性把评估预算分配给有前景或信息量大的候选，同时从执行反馈中持续精炼技能种群，避免现有方法依赖昂贵执行评估和大量任务数据的问题。在六个异构 agent 基准和三个目标模型上，COBRA-Skills 取得最强平均性能，优化成本较 SkillOpt 降低 55-58%，且每个基准仅用 50 个优化样本；分析还表明其对 agent harness 变化鲁棒，目标模型自身即可用于技能生成与精炼。",
+    "tags": ["MeM", "API"]
+  },
+  {
+    "date": "2026-09-14",
+    "title": "PLC-DPO: Posterior Label Correction in Noisy and Ambiguous Preference Optimization",
+    "arxiv_id": "2608.30597",
+    "github": "https://github.com/VennTum99/PLC-DPO",
+    "abstract": "DPO 假设所有偏好标注可靠，但真实数据常含反转、弱偏好或模糊标注，导致有害的策略更新。提出 PLC-DPO，用校准后的策略-参考 margin 作为在线证据，将每对训练样本路由为干净、翻转或平局三种情形并施加相应修正，把噪声偏好学习从简单过滤可疑样本重构为主动纠正监督方向与强度。在 57 个数据集-模型-基准组合上，PLC-DPO 对 DPO 的平均胜率达 60.5，优于次优方法的 55.5；注入噪声与平局压力测试、人类分歧分析和自我确认诊断均表明该路由稳定，且能区分翻转对与弱方向性配对。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-09-14",
+    "title": "Ambient @ EgoProactive 2026 : Proactive Egocentric Assistance with Visually Grounded Supervision",
+    "arxiv_id": "2609.07099",
+    "github": "https://github.com/ambient-intelligence-hq/egoproactive-verbalizer",
+    "abstract": "ECCV 2026 Wearable AI Challenge EgoProactive 赛道方案，大模型组第一、2B 及以下组第二。任务要求可穿戴助手在每段 8 秒第一人称视频后决定是否介入。方法第一组件把介入时机判断重构为单 token 分类：不让模型自由生成回复文本，而是预测 yes/no 并从重归一化概率导出决策，使 macro-F1 提升 0.249、G-mean 提升 0.30。第二组件针对标注数据有限的困境，用工具调用式视频 agent 检查每个片段并标注介入时间戳生成额外监督；对照实验显示仅旁白标注虽量大四倍、便宜十倍，迁移效果却更差，说明视觉 grounding 比标注规模对该任务更关键。",
+    "tags": ["VLM"]
+  }
+]
