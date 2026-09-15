@@ -5202,3 +5202,26 @@
 
 - **Ambient @ EgoProactive 2026 : Proactive Egocentric Assistance with Visually Grounded Supervision** `[VLM]` — [2609.07099](https://arxiv.org/abs/2609.07099) | [GitHub](https://github.com/ambient-intelligence-hq/egoproactive-verbalizer)
   > ECCV 2026 Wearable AI Challenge EgoProactive 赛道方案，大模型组第一、2B 及以下组第二。任务要求可穿戴助手在每段 8 秒第一人称视频后决定是否介入。方法第一组件把介入时机判断重构为单 token 分类：不让模型自由生成回复文本，而是预测 yes/no 并从重归一化概率导出决策，使 macro-F1 提升 0.249、G-mean 提升 0.30。第二组件针对标注数据有限的困境，用工具调用式视频 agent 检查每个片段并标注介入时间戳生成额外监督；对照实验显示仅旁白标注虽量大四倍、便宜十倍，迁移效果却更差，说明视觉 grounding 比标注规模对该任务更关键。
+
+## 2026年9月15日
+
+- **ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search** `[RL]` `[微调]` `[长文本]` — [2609.13356](https://arxiv.org/abs/2609.13356) | [GitHub](https://github.com/zgcagi/ZGCM-1)
+  > 提出全开源7B稠密基础模型ZGCM-1，从头训练且追求极致的数据、系统与算法效率。核心思路是让紧凑模型通过内在思考与外部工具使用突破参数容量限制：架构上采用门控滑窗与全注意力交错设计及稳定的FP8 Muon优化器；训练上采用16K/64K/256K渐进课程，并将交互轨迹重构为马尔可夫决策过程进行中训练。在多个数学推理与agentic搜索测试集上可与Qwen3-235B-A22B等大一至两个数量级的前沿模型竞争，16K预训练时间-损失效率提升约4.2倍，并提炼出八条可复用经验发现。
+
+- **RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments** `[无需训练]` `[MeM]` `[API]` — [2609.15364](https://arxiv.org/abs/2609.15364) | [GitHub](https://github.com/AetherLabsAI/RSIAgent)
+  > 提出免训练多智能体框架RSIAgent，通过自主构建记忆实现递归自我改进。课程、执行、验证三类agent协同持续探索环境、验证结果并沉淀环境特定知识，包括动作-条件-后果之间可复用的因果关系；采用先广后深探索策略，先并行发现多样环境结构，再聚焦深挖难例、隐藏约束与边界条件。所得记忆冻结后可直接复用于下游任务而无需更新参数。在OSWorld-v2与Agent's Last Exam上，使Kimi-K3、GLM-5.3等开源模型超越GPT-6等闭源前沿模型。
+
+- **HazardAuditor: From Executable Threats to Safer Computer-Use Agents** `[RL]` — [2609.15134](https://arxiv.org/abs/2609.15134) | [GitHub](https://github.com/Yunhao-Feng/HazardAuditor)
+  > 针对电脑使用agent在运行时的安全风险，提出执行导向的防护框架HazardAuditor。其基础设施在受控环境中运行Claude Code、Codex、Hermes、OpenClaw等异构agent，将交互归一化为统一事件表示以支持跨框架监督训练；进一步提出GuardPO，将确定性安全结果转化为序列级优势并归一化推理与判定区域，解决token级后训练目标中长推理主导梯度更新的结构性失配。在多个基准与异构电脑使用系统上，防护准确率较最强现有防护模型提升最高16.5个百分点。
+
+- **LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents** `[VLM]` `[扩散模型]` `[微调]` — [2609.13287](https://arxiv.org/abs/2609.13287) | [GitHub](https://github.com/inclusionAI/LLaDA-UI)
+  > 将块式扩散语言模型扩展到多模态GUI agent场景，提出16.7B参数MoE架构的LLaDA-UI。采用两阶段训练：先用通用多模态预训练将原生分辨率视觉编码器与LLaDA2.0-mini-base扩散语言骨干对齐，再在覆盖移动端、桌面端、网页及定位数据的GUI agent数据上监督微调。在多个广泛采用的定位与导航基准上显著超越Qwen2.5-VL-7B，并在报告的六项GUI基准中的四项超过Qwen3-VL-8B，验证了块并行解码作为多模态GUI agent生成范式的实用性。
+
+- **Pick Your Poison: Learning to Select Poison Sets for Stronger LLM Backdoor Attacks** `[微调]` — [2609.15029](https://arxiv.org/abs/2609.15029) | [GitHub](https://github.com/aashiqmuhamed/poison-set-selection)
+  > 揭示后门攻击评估中长期被忽视的关键因素：在模型、干净数据与投毒数量全部固定时，仅改变投毒样本集合的选择，攻击成功率即可在3%到80%之间大幅波动。据此将投毒选择形式化为oracle预算下的集合优化问题，提出SAILS方法，从数百次微调-评估运行中学习集合评分器，对数百万候选集合排序并仅审计少量短名单。SAILS较最强影响函数基线在held-out攻击成功率上平均提升30个百分点，可从小规模迁移到全规模微调，并扩展到代码生成、agent及纯API场景的后门。
+
+- **Expert-Space Exploration in MoE Reinforcement Learning** `[RL]` — [2609.13058](https://arxiv.org/abs/2609.13058) | [GitHub](https://github.com/strawberrymaster111/ESRL-Release)
+  > 针对MoE模型的RL后训练，提出专家空间探索强化学习框架ESRL。实证发现扰动专家路由能有效改变模型输出并提升rollout多样性，效果类似提高解码温度，但直接扰动会激活不合适专家、显著降低rollout质量。ESRL保留高置信专家作为锚点，将随机路由限制在合理候选池内，并按router熵自适应调节扰动强度以避免过度扰动；为缓解扰动引入的路由失配，记录rollout实际使用的专家路径并在策略优化时回放。实验在top-K、top-1及共享专家路由的多种MoE骨干上均取得最佳性能。
+
+- **Thought without systematicity? Evaluating reasoning models on rule induction tasks** `[API]` — [2609.13948](https://arxiv.org/abs/2609.13948) | [GitHub](https://github.com/smonsays/systematicity-eval)
+  > 借鉴认知科学中的系统性原则——理解一个概念必然关联理解其近邻变体——扩展经典规则归纳任务以评估当前推理模型。利用任务的组合式结构，通过重组、替换等任务同构变换构造结构等价的任务变体。实验发现，尽管模型能正确解决原始任务，却常在结构等价的变体上失败，表明其表现出的许多能力并不具备系统性，难以稳健地确立超越特定评测语境的认知能力。该结果对推理模型认知能力的结论提出警示。
