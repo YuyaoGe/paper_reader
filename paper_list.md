@@ -5225,3 +5225,29 @@
 
 - **Thought without systematicity? Evaluating reasoning models on rule induction tasks** `[API]` — [2609.13948](https://arxiv.org/abs/2609.13948) | [GitHub](https://github.com/smonsays/systematicity-eval)
   > 借鉴认知科学中的系统性原则——理解一个概念必然关联理解其近邻变体——扩展经典规则归纳任务以评估当前推理模型。利用任务的组合式结构，通过重组、替换等任务同构变换构造结构等价的任务变体。实验发现，尽管模型能正确解决原始任务，却常在结构等价的变体上失败，表明其表现出的许多能力并不具备系统性，难以稳健地确立超越特定评测语境的认知能力。该结果对推理模型认知能力的结论提出警示。
+
+## 2026年9月16日
+
+- **Continual Learning Mechanisms Compose for Long-Horizon Memorization** `[微调]` — [2609.06986](https://arxiv.org/abs/2609.06986) | [GitHub](https://github.com/cozheyuanzhangde/compose-cl)
+  > 研究长周期记忆场景下的持续学习：模型需通过持续监督微调依次学习100个问答任务，且推理时不保留旧样本、不给任务标识。作者发现单一持续学习机制均无法在此尺度上避免灾难性遗忘，提出沿「锚点类型」与「低秩分配规则」两个维度组合机制，用连续减半搜索与析因实验系统地评估。最优组合（数据/函数/权重三锚点+merged LoRA）平均最终保留率从朴素顺序微调的1.2%提升至34.9%，提升28倍。
+
+- **ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents** `[API]` `[RL]` — [2609.17523](https://arxiv.org/abs/2609.17523) | [GitHub](https://github.com/Gen-Verse/ScienceBuddy)
+  > 推出交互式科研工作平台ScienceBuddy，将「递归中的递归」自我改进范式落地：内层递归在模型固定时进化agent harness，外层递归在改进的harness下对模型做强化学习，两者互相塑造。平台把研究者的请求、反馈与执行证据转化为持续学习的任务与评估rubric，覆盖四类科学任务族，并以案例研究展示交互、harness精炼与模型学习的完整闭环，向科学社区开放。
+
+- **Mind2Dialogue: Training Human-Aware Language Models by Simulating User Mental States** `[微调]` — [2609.15972](https://arxiv.org/abs/2609.15972) | [GitHub](https://github.com/wannabeyourfriend/mind2dialogue)
+  > 针对「人类感知」语言模型训练中的监督缺口（用户潜在信念与目标不可直接观测），提出Mind2Dialogue框架：用心理学引导的模拟器生成连贯对话，维护一个随交互演化的共享心理状态，同时驱动用户行为并指导「先知」助手回答；再通过特权蒸馏让部署时的模型在无心理状态访问权的条件下模仿先知回答。结合个性化与心理理论的评测显示，在完整语料上训练后所有个性化指标均超越Qwen、Llama、OLMo同规模指令基线。
+
+- **ModularRSI: Modular and Generalizable Recursive Harness Self-Improvement** `[API]` — [2609.14857](https://arxiv.org/abs/2609.14857) | [GitHub](https://github.com/IQuestLab/ModularRSI)
+  > 针对agent harness递归自我改进（RSI）泛化性差的问题，提出ModularRSI框架：与评测基准脱钩的进化协议避免基准过拟合；对比同一任务的成功与失败轨迹并跨任务聚合证据，定位反复出现的行为缺陷；将单体harness解耦为Agent Loop、工具使用、观测管理、上下文管理、任务完成检测五个可独立进化的模块，再经集成阶段合并并消解冲突。团队还构建了2000个可执行任务支持脱钩进化，提升harness改进在未见任务上的迁移能力。
+
+- **Disentangling Representation Evolution in Transformers through Directional Decomposition** — [2609.15975](https://arxiv.org/abs/2609.15975) | [GitHub](https://github.com/Shwai-He/Transformer-Geometry)
+  > 将Transformer表征的演化视为功能几何问题，把学到的加性更新分解为平行与垂直于当前方向的两个分量，在残差空间与注意力值聚合空间分别分析。定向干预实验揭示强烈的空间不对称性：排除自身的值空间平行操作远更稳健；该分解还能更清晰地区分不同压缩方法引起的误差；从头预训练时抑制全聚合平行分量可降低验证损失并改善下游平均性能，其中值空间变体效果最好，将表征几何与编辑稳健性、压缩诊断和训练时干预联系起来。
+
+- **ImpossibleRubrics: Stress-Testing Generated Rubrics as Reward Signals** — [2609.16816](https://arxiv.org/abs/2609.16816) | [GitHub](https://github.com/impossiblerubrics/impossible_rubrics)
+  > LLM生成的rubric被越来越多地用作RL奖励信号、LLM-as-judge评测和自动评分，但其对抗鲁棒性尚不清楚。作者聚焦最难情形——不可能任务（唯一诚实回答是承认不可解），构建含169个不可能任务（六类）加48个可解对照的ImpossibleRubrics基准，每个任务配可验证的oracle证书，对11种rubric生成器做对抗测试：无偏设置下被利用率达8%~26%，精选压力切分下最强生成器仍被利用36%，而忠实于证书的rubric被利用率为0%；通用rubric「果断作答、惩罚含糊」被利用率高达64%。
+
+- **Decoy Direction Optimization: A Post-Hoc Defense Against LLM Abliteration** `[无需训练]` — [2609.16204](https://arxiv.org/abs/2609.16204) | [GitHub](https://github.com/aashiqmuhamed/defending-against-abliteration)
+  > 针对拒绝特征消融（RFA）攻击可轻易绕过开源模型安全护栏的问题，提出事后权重编辑防御DDO，无需微调基座模型。核心机理：消融攻击依赖对比估计器定位拒绝方向，DDO主动向MLP神经元注入高幅值非线性诱饵信号，腐蚀攻击者的估计器，诱使其消融无害的正交特征而真正安全机制完好；并给出谱范数上界形式化该效果。跨六个模型族评估，标准RFA下ASR降至10%以下；Llama-3-8B上对抗多阶段攻击与训练式防御相当，Heretic权重攻击ASR从88.7%降至18%，优化成本低30~450倍。
+
+- **Training Specialist Models without Reasoning Trajectories for Domain Expert Distillation** `[微调]` — [2609.13770](https://arxiv.org/abs/2609.13770) | [GitHub](https://github.com/CONE-MT/DCO)
+  > 领域专家蒸馏通常依赖教师生成的推理轨迹，但当专家仅在问答对上训练、无显式推理监督时，其生成轨迹由什么决定？作者用学生蒸馏作为无关探针隔离观察隐式轨迹分布，发现27组专家-学生对的专精-泛化画像相关性极强；显式控制专家的分布漂移可沿「领域精度-通用能力」权衡轴系统性移动教师与其蒸馏学生。在化学、物理、多语设置下该规律跨模型族成立，确立了无金标准推理时专家训练的新视角：调参选择直接控制传给下游的隐式监督。
