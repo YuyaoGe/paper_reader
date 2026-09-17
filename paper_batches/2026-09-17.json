@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-09-17",
+    "title": "LimiX-2: A Contextual Mechanism Network Towards General Structured-Data Intelligence",
+    "arxiv_id": "2609.17488",
+    "github": "https://github.com/limix-ldm-ai/LimiX",
+    "abstract": "LimiX-2 是新一代结构化数据基础模型，采用情境机制网络（CMN）范式，通过上下文条件掩码建模（CCMM）预训练，直接学习上下文条件下数据生成的联合机制，而非传统条件预测目标。预训练数据由结构因果模型合成，覆盖多样图结构与函数机制。在 TabArena、TALENT、BCCO 等评测上超过专用表格模型与已有表格基础模型，其特征注意力还能编码直接因果关系，准确恢复因果骨架。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-17",
+    "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
+    "arxiv_id": "2609.19134",
+    "github": "https://github.com/aitofound/ScienceIDE",
+    "abstract": "针对科学经验瓶颈，ScienceIDE 构建基础设施将全球科学代码库转化为智能体可学习环境：在专家定义的案例与验收标准下，智能体把代码仓库改造为可执行环境，支持任务生成、执行与科学验证，为 SFT、RL 与评测提供统一基础。基于验证后的交互轨迹训练出 PhAI-IDE-72B/9B/4B 模型族，在科学代码修复及代码、推理等通用基准上均有提升，显示科学经验可向更广能力正向迁移。",
+    "tags": ["RL", "微调"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Rethinking Critic Learning in PPO: Understanding and Mitigating Value Flattening",
+    "arxiv_id": "2609.18708",
+    "github": "https://github.com/Dodojordi/SP3O",
+    "abstract": "本文揭示大模型 PPO 训练中 Critic 的系统性失效模式——价值平坦化：多条蒙特卡洛续写估计的状态价值在中间状态急剧变化，而 Critic 预测却过于平坦。理论分析归因于损失中的隐式方差惩罚与高度相关状态的冗余更新。据此提出 SP3O，仅对每条回复中少量间隔充分的状态施加价值监督。Qwen3-Base 上实验表明每条回复仅监督三个状态即可缓解该问题，并跨模型规模稳定提升策略质量。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Confidence Comes from Experience: Experiential Confidence Estimation from Reasoning to Agents",
+    "arxiv_id": "2609.17708",
+    "github": "https://github.com/caiqizh/xconf",
+    "abstract": "现有置信度估计器只读取当前推理过程，本文提出 XConf：结合模型自身积累的经验记录（任务、反思、置信度、结果与教训）估计置信度，通过召回相似历史案例的成功率并反思自身失败模式来校准。方法无需 logits 访问与权重更新，每题仅多生成一次答案。在九个推理、编程、多模态与智能体基准、四个模型上，其 AUROC 在 24 项对比中 23 项达到或超过十次采样自一致性，ECE 更低而成本仅十分之一。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Zing-0.5: Toward Playable Worlds with Real-Time Joint Action and Text Control",
+    "arxiv_id": "2609.17909",
+    "github": "https://github.com/seedleap/zing-world-model",
+    "abstract": "Zing-0.5 是 5B 自回归世界模型，主打可玩性：用户可探索生成世界、影响事件，并以键盘加在线文本联合控制交互。核心包括统一动作与文本条件机制；事件级增量监督，用片段级教师经分布匹配蒸馏指导块级学生；低成本实时交互，四步生成加流式推理达 832x480 下 24 FPS。WBench 导航取得 81.0 总分，并开放权重、推理代码与 Zing-SGLang 服务实现。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTask and MUNDEX",
+    "arxiv_id": "2609.18011",
+    "github": "https://github.com/chnln/gaze-as-grounding-evidence",
+    "abstract": "本文研究协作任务中注视行为能否为共同地基提供证据。作者将 MapTask 与 MUNDEX 两个语料映射到统一注视词汇表，围绕任务相关对话单元计算注视特征。两个语料中，已对齐的指称与被理解判断均与更多任务指向注视、更少伙伴注视、更低注视熵相关，且在主导任务的参与者身上最明显；分组交叉验证下最优特征组仅小幅优于对照。结论是将注视视为共同地基的辅助线索，需结合任务与对话语境解读。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-17",
+    "title": "SpectralShift: Effective Context Window Extension of Gated DeltaNet via Spectral Reparameterization",
+    "arxiv_id": "2609.14320",
+    "github": "https://github.com/RUCAIBox/GDN-SpectralShift",
+    "abstract": "现有线性注意力上下文扩展直接继续预训练而不改网络层，忽视状态动力学谱特性。本文从转移矩阵谱视角研究 Gated DeltaNet 扩展，指出长程检索需足够宽的慢谱带与用于上下文切换的快衰减模式，据此提出 SpectralShift：重参数化 alpha 投影初始化重塑衰减谱，并对 alpha 投影做学习率缩放促进长上下文训练。实验显示可持续提升线性注意力模型的长上下文能力。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "PANORAMA: Panoptic Grounded Captioning via Mask Proposal Selection",
+    "arxiv_id": "2609.19143",
+    "github": "https://github.com/sarapieri/panorama_grounding",
+    "abstract": "本文研究全景接地图像描述：要求 VLM 同时描述前景与背景并把每个短语像素级接地。贡献包括：构建人工标注的 PanoCaps 基准，提供近完整像素覆盖的稠密描述与实体级对齐，并提出短语-掩码匹配协议与 gPQ 指标；将短语接地形式化为掩码提议选择，提出 PANORAMA——以短语表示条件化预训练分割器生成候选掩码并学习选择，与描述生成联合训练，支持单短语指向多实例；实验取得最优整体接地铁指标。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+    "arxiv_id": "2609.18063",
+    "github": "https://github.com/Edge0-AI/edge0",
+    "abstract": "消费级硬件跑 35B MoE 受权重内存限制，且下层专家须在上层输出前选定，SSD 卸载无法隐藏读取延迟。Edge0 提出带预路由器的流式推理引擎：每层头部提前一个 token 预测下层路由并直接采用，使预取专家集等于实际路由集，再训练恢复 LoRA 补偿 int4 量化损失。单张 24GB 显卡以 20 tok/s 服务 35B MoE，峰值显存仅 3GiB，基准分接近 fp16 教师，已开源。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-17",
+    "title": "CERA-MoA: Co-Evolving Routing Mechanisms with Continually Learning LLM Agents",
+    "arxiv_id": "2609.18779",
+    "github": "https://github.com/michaeljiang0530/CERA-MoA",
+    "abstract": "现有 Mixture-of-Agents 将路由与智能体微调分离，路由无法随能力进化调整。CERA-MoA 提出迭代强化学习框架让路由器与智能体策略共同进化：用中间层隐状态构建熟悉度估计器评估各智能体胜任度，避免完整 rollout 开销；按熟悉度分数的累积阈值自适应路由激活最小智能体子集；并定向分配训练样本促进能力分化。多领域实验优于静态路由与固定工作流微调基线。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Fathom: Per-Query Read Depth for Sparse Decoding over Offloaded KV Caches",
+    "arxiv_id": "2609.17652",
+    "github": "https://github.com/vivekkalyanarangan30/fathom",
+    "abstract": "百万 token 智能体会话下 KV 缓存索引驻留内存，top-k 全量扫描成为解码瓶颈。Fathom 让每次查询自行决定每个键通道读取位数：4-bit K 缓存按通道位平面存储，前 t 平面即 t-bit 量化器，查询按通道重要性反向注水分配比特预算。在 Qwen3-8B 上单步 GPU 时间快 1.67 倍，RULER 任务与精确 top-k 一致，真实会话以更少字节达最准扫描的一致度。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Assessing nnU-Net Generalization across Brain Tumor Populations in BraTS-GoAT 2026",
+    "arxiv_id": "2609.15524",
+    "github": "https://github.com/Kirscher/BraTS2026",
+    "abstract": "BraTS-GoAT 评测跨异质人群脑肿瘤分割。作者用 3D nnU-Net 在 1351 例标注数据上五折交叉验证训练并平均各折、施加测试时镜像。官方验证集上增强肿瘤、肿瘤核心、全肿瘤全局 Dice 分别为 0.7805、0.8288、0.8854；源域留出案例平均区域 Dice 0.9058，汇总验证降至 0.8310。镜像仅单折小增益；失败案例与小体积增强肿瘤及破碎连通成分相关。",
+    "tags": []
+  }
+]
