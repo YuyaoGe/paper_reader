@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-09-18",
+    "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+    "arxiv_id": "2609.20519",
+    "github": "https://github.com/NVlabs/SoL-Pi",
+    "abstract": "受递归自我改进（RSI）启发，在 agent harness 层面扩展自动化研究循环：让编码 agent 在数量更多、更多样化的环境中自主运行 harness rollout，从中筛选出可迁移的改进。最终形成 SoL-Pi 的四个核心机制，覆盖动作执行、上下文压缩、观测处理和委托阅读。在 51 项任务的 EdgeBench 上，SoL-Pi 以 GPT-5.6 Sol 和 Opus 5 达到与 Pi 相当的性能，同时减少 44.7-49.0% 的 token 流量和约三分之一的 API 成本。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-09-18",
+    "title": "JEPA-Anything: Learning Predictive Models across Different Worlds",
+    "arxiv_id": "2609.20800",
+    "github": "https://github.com/Gen-Verse/JEPA-Anything",
+    "abstract": "提出领域无关的预测建模框架 JEPA-Anything，基于正交预测分解（OPF）：将潜在目标分解为互补因子，通过专用通路学习后在共享预测结构中重组。在视觉、生物、临床轨迹、控制、分子动力学、物理场、天气七个领域评估，涵盖 10 组动力学任务、千例临床事件预测和四体系百步分子 rollout。相比匹配的 JEPA 基线，10 项动力学任务指标全面提升，Interventional Pong 单干预预测误差降低 34.8%，并在四体系分子预测中取得最低误差。",
+    "tags": []
+  },
+  {
+    "date": "2026-09-18",
+    "title": "Reflect, Revise, Reuse: Training-Free Skill Evolution for GUI Agents",
+    "arxiv_id": "2609.17653",
+    "github": "https://github.com/ZJU-REAL/EvoSkill-GUI",
+    "abstract": "针对 GUI agent 长程任务中弹窗、加载延迟、控件位移导致预置计划失效的问题，提出免训练的技能进化框架 EvoSkill-GUI。每个技能是包含检索元数据、可执行计划、备用定位、失败恢复规则与失败案例的结构化多文件包，通过「反思-修订-复用」循环在部署时从执行反馈中改进：执行器即时修订、隔离评审员诊断失败轨迹、执行器经受限工具接口编辑技能文件。在 MobileWorld、AndroidWorld、OSWorld 三个基准上无需训练即提升多个基座模型，最高增益分别为 +16.2%、+6.0%、+10.5%。",
+    "tags": ["无需训练", "API"]
+  },
+  {
+    "date": "2026-09-18",
+    "title": "WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing",
+    "arxiv_id": "2609.20423",
+    "github": "https://github.com/Tencent/WeVisDoc",
+    "abstract": "提出以数据为中心的两阶段端到端文档解析框架 WeVisDoc。阶段一通过异构数据与保结构退化合成，扩展语义、结构与外观覆盖；阶段二用留出探针在固定视觉-结构簇内度量解析器残余错误，据此定向构建数据并重分配目标 token 预算。WeVisDoc-4B 在 OmniDocBench v1.6 获 95.38 总分，在 PureDocBench 三个赛道平均 75.54 分，全部四个设置中均排名第一；阶段二使 4B 模型在 Real Degraded 赛道提升 4.03 分。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-09-18",
+    "title": "Region-Level Policy Optimization for Fine-grained MLLM Perception",
+    "arxiv_id": "2609.19745",
+    "github": "https://github.com/YuHengsss/VisionRL2",
+    "abstract": "指出 MLLM 细粒度视觉感知中定位与识别对分辨率需求不同：定位可容忍约 3-4 倍更强的 token 压缩，据此应从粗视图定位、再把分辨率集中于选中证据。为此提出 Vision-RL2：将连贯区域视为动作，冻结的 MLLM 阅读器按「移除该区域后答案似然的变化」打分，以互补的减性/加性目标分别抑制干扰提案、找回缺失证据，仅更新提案网络，无需区域标注、响应采样或推理轨迹。精炼提案还可实现稀疏编码，显著降低视觉 token 的编码与预填充开销。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-09-18",
+    "title": "PACT: Can Enterprise AI Assistants Be Trusted Under Pressure?",
+    "arxiv_id": "2609.18605",
+    "github": "https://github.com/trace-ai-labs/pact",
+    "abstract": "针对企业级 LLM agent 在招聘、医疗、金融等敏感场景中的合规风险，提出压力下的合规测试基准 PACT：覆盖 12 个受监管企业领域、48 个真实多轮对话场景，每条样本将持久规则与违规捷径配对，并以多种措辞和系统提示模式施加压力。构建全程经 LLM-as-judge 严格审计，保证样本无歧义、不可钻空子且不诱发评估感知行为。基于六个互补指标刻画模型的抗压力、多轮稳健性、透明度和规则适用范围判别力，并聚合为可靠性加权的 PACTScore。",
+    "tags": ["API"]
+  }
+]
