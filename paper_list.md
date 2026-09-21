@@ -5309,3 +5309,26 @@
 
 - **PACT: Can Enterprise AI Assistants Be Trusted Under Pressure?** `[API]` — [2609.18605](https://arxiv.org/abs/2609.18605) | [GitHub](https://github.com/trace-ai-labs/pact)
   > 针对企业级 LLM agent 在招聘、医疗、金融等敏感场景中的合规风险，提出压力下的合规测试基准 PACT：覆盖 12 个受监管企业领域、48 个真实多轮对话场景，每条样本将持久规则与违规捷径配对，并以多种措辞和系统提示模式施加压力。构建全程经 LLM-as-judge 严格审计，保证样本无歧义、不可钻空子且不诱发评估感知行为。基于六个互补指标刻画模型的抗压力、多轮稳健性、透明度和规则适用范围判别力，并聚合为可靠性加权的 PACTScore。
+
+## 2026年9月21日
+
+- **Grounded Skill Synthesis from Code at Scale for Agentic Intelligence** `[API]` — [2609.05571](https://arxiv.org/abs/2609.05571) | [GitHub](https://github.com/ant-intl/Code2Skill)
+  > 提出Code2Skill全自动流水线，从源代码中挖掘可复用的智能体技能。该方法将代码单元转化为带实现锚定的原子操作、复合工作流与 recurring 模式记录，并通过「源码盲重构+源码感知比对」双重验证保证质量。在19,769个活跃GitHub仓库上构建出含100万+条记录的CodeSkillBank，在72组协议对齐评测中平均提升11.7%，并在7个共享基准上全面超越基于轨迹的技能库。
+
+- **EvoOntology: A Self-Evolving Ontology Layer for Data Agents** `[API]` — [2609.15779](https://arxiv.org/abs/2609.15779) | [GitHub](https://github.com/ruc-datalab/EvoOntology)
+  > 针对数据智能体面临的数据-语义鸿沟，提出自演化本体层EvoOntology。将本体封装为MCP服务器，包含模式层、内容层与工具层，使智能体可在运行时主动查询交互；通过构建者智能体实现本体自动构建，并以归因引导的类型化编辑配合主干条件成对评估构成自演化闭环。在三个主流数据智能体基准、四个LLM主干上均稳定超越强基线与现有语义层方法。
+
+- **RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents** `[RL]` — [2609.22000](https://arxiv.org/abs/2609.22000) | [GitHub](https://github.com/QwenLM/RecreationWorld)
+  > 提出面向混合计算机使用智能体（CUA）的可验证环境框架RecreationWorld，覆盖Ubuntu、macOS、Windows、Android、Web五大平台。给定可运行的参考应用，智能体需自主发现其行为并复现实现，参考实现作为oracle提供奖励信号。基于开源应用规模化生成训练轨迹后，模型在5个分布外基准上均获提升；并发布250任务的RecreationBench，最强模型得分仅58.1%。
+
+- **GraphSkillEvo: Evolutionary Optimization of Graph-Structured Agent Skills** `[API]` — [2609.21749](https://arxiv.org/abs/2609.21749) | [GitHub](https://github.com/ruisun7/GraphSkillEvo)
+  > 将智能体技能从非结构化自然语言指令重新表示为图结构工件：节点承载执行步骤及操作指引，有向边编码上下文相关的步骤转移，提供清晰的工作流级指导并压缩搜索空间。在此基础上提出GraphSkillEvo群体进化优化框架，设计面向图结构技能的变异与交叉算子，通过维护多个候选技能并重组有效组件实现更广的技能空间探索。在五个智能体基准上稳定超越SkillOpt基线，GPT-5.4-nano上平均提升4.01%。
+
+- **MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup** — [2609.15126](https://arxiv.org/abs/2609.15126) | [GitHub](https://github.com/jojo23333/Mixutre-Of-Memory-Embedding)
+  > 针对条件记忆按词表表面形式检索导致的一词多义坍缩问题，提出MoME上下文感知记忆机制：将每个token的单一记忆行替换为M个槽位的混合，用基于隐状态的学习门控选择读取槽位。在nanochat、Llama-3/MobileLLM、Qwen3等主干的受控预训练中，等参数与等FLOPs设置下均优于Value Embedding等基线，亚十亿规模下展现更优的容量扩展趋势，路由分析显示门控具有语义可解释性。
+
+- **Refinement Is Inherently Editable: Training-Free Prompt-to-Prompt Image Editing with Generative Refinement Network** `[无需训练]` `[扩散模型]` — [2609.20633](https://arxiv.org/abs/2609.20633) | [GitHub](https://github.com/mura1n/RefineEdit)
+  > 提出免训练的prompt-to-prompt图像编辑框架RefineEdit，基于生成式精炼网络（GRN）构建。核心思想是将编辑定位与内容生成耦合，通过对二进制图像码的全局精炼，使编辑证据随图像生成被反复重估。方法从中间源状态初始化编辑分支复用其布局，比较两分支对同源采样比特的概率并以有符号差值选择可编辑位置。在PIE-Bench九类编辑上取得最佳背景保持与最高CLIP分数。
+
+- **Geometry of Values: Task Vector Composition for Ethical Preference Alignment in Language Models** `[微调]` — [2609.21094](https://arxiv.org/abs/2609.21094) | [GitHub](https://github.com/mbzuai-nlp/geometry-of-values-task-vectors)
+  > 构建12,000实例的两难选择数据集，覆盖诚实-公正、公正-自主、自主-诚实三组价值冲突及其印地语、阿拉伯语、西语、中文翻译，探测LLM跨语言道德倾向。发现GPT-5-mini无策略时偏向诚实；Llama-3.2-1/3B存在明显首选项偏差，SFT与DPO微调可消除并将准确率提升至98%以上。通过对价值偏好任务向量相对指令遵循向量正交化，可分离出抽象价值方向并用任务算术组合出持相反立场的模型。
