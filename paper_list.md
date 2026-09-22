@@ -5332,3 +5332,26 @@
 
 - **Geometry of Values: Task Vector Composition for Ethical Preference Alignment in Language Models** `[微调]` — [2609.21094](https://arxiv.org/abs/2609.21094) | [GitHub](https://github.com/mbzuai-nlp/geometry-of-values-task-vectors)
   > 构建12,000实例的两难选择数据集，覆盖诚实-公正、公正-自主、自主-诚实三组价值冲突及其印地语、阿拉伯语、西语、中文翻译，探测LLM跨语言道德倾向。发现GPT-5-mini无策略时偏向诚实；Llama-3.2-1/3B存在明显首选项偏差，SFT与DPO微调可消除并将准确率提升至98%以上。通过对价值偏好任务向量相对指令遵循向量正交化，可分离出抽象价值方向并用任务算术组合出持相反立场的模型。
+
+## 2026年9月22日
+
+- **RRSI: Regularized Recursive Self-Improvement of Agent Harnesses** `[API]` — [2609.24972](https://arxiv.org/abs/2609.24972) | [GitHub](https://github.com/google-research/rrsi)
+  > 针对Agent框架递归自我改进（RSI）中过拟合训练任务、分布外性能缩水的问题，提出正则化递归自我改进方法RRSI。提议器采用时间退火预算限制候选编辑的打包数量，并基于演化历史鼓励探索未走过的轨迹；选择器配备批评器与剪枝器：批评器筛除针对特定基准的提议，剪枝器剔除过小、过贵或已失效的改动。在涵盖编码、智能体工作区与工程设计的8个基准上，演化分布内提升最高14.1分，5个分布外基准提升最高4.7分。
+
+- **onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction** `[微调]` — [2609.24983](https://arxiv.org/abs/2609.24983) | [GitHub](https://github.com/on-panda/on-panda)
+  > 提出高效的LLM对齐数据标注工具onPanda，核心交互为token级纠正：标注者定位首个不当token，从候选token中选取替代或自由编辑，系统截断后续内容并从纠正前缀继续生成，循环直至满意。对照研究显示中位标注时间较人工后编辑降低52%。因最终回复绝大多数token由模型自身生成，数据保持模型采样分布，适合构建on-policy SFT与偏好数据；同时发布Panda-CVL数据集。
+
+- **Harness-Zero: Harness Distillation via Agent-as-Harness** `[微调]` — [2609.24974](https://arxiv.org/abs/2609.24974) | [GitHub](https://github.com/metaevo-ai/harness-zero)
+  > 研究Agent框架蒸馏：以优化框架作训练时指导，将其诱导的行为迁移进模型权重，使收益在移除专用框架后仍保留。因两框架动作空间与信息不同，指导无法直接作监督。Harness-Zero的agent-as-harness机制：驾驭Agent在目标框架内执行前纠正学生回复，将框架指导转为训练示范再微调内化。在知识工作、工具使用与科学领域，同等条件下优于code-as-harness，移除专用框架仍有增益。
+
+- **Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents** `[MeM]` — [2609.23986](https://arxiv.org/abs/2609.23986) | [GitHub](https://github.com/libingzheren/Jev-Mem)
+  > 受System-One/System-Two认知分工启发，提出Agent记忆架构Jev-Mem，将耗时的自回归生成移出记忆关键路径。System-One控制平面以轻量决策管理记忆构建与检索，执行查询路由、预算分配、图遍历、打分与自适应停止；System-Two平面仅处理复杂推理与答案合成。LoCoMo上总分0.777，较最强基线提升11%；记忆构建158秒（6.6倍加速），查询延迟降低36.7%。
+
+- **Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention** `[长文本]` — [2609.24797](https://arxiv.org/abs/2609.24797) | [GitHub](https://github.com/OpenEuroLLM/ComplexKDA)
+  > 揭示Kimi Delta Attention单次delta-rule变换结合通道门控的二次反射即可实现2D旋转，门控扩展到[-1,1]、系数β扩展到[0,2]即得Complex KDA。其保持对角加秩一的稳定高效形式，单层可追踪SO(3)子群同构的有限群，较同类线性RNN少用一层。S_3、S_4状态追踪与周期音频延续中取得最强长度外推，语言建模超越Transformer与其他线性RNN。
+
+- **SkillSpec: Intent-Masked Specification Reasoning for Agent Skill Correctness** `[API]` — [2609.06052](https://arxiv.org/abs/2609.06052) | [GitHub](https://github.com/IainZhang/SkillSpec)
+  > 提出Hoare式框架SkillSpec，将Agent技能正确性形式化为规约推理问题。方法将异构技能仓库（描述、指令、代码）统一为图表示；为每个节点由声明意图推导ExpectSpec、由部分披露意图下的行为推断FactSpec；意图掩码调节全局、谱系、邻域与局部视图的访问，平衡上下文偏差与无据推理；联合推理标记缺陷并在隔离沙箱自动验证。在515个真实技能上识别763个人工确认缺陷，精度61.2%。
+
+- **The Functionalizer: Lossless Functional Decomposition for Subword Tokenization** — [2609.15991](https://arxiv.org/abs/2609.15991) | [GitHub](https://github.com/connor-makowski/functionalizer)
+  > 提出无损预分词框架Functionalizer：分词前将词形与结构变化分解为可组合的opcode/operand前缀流，基础词元加以Unicode私用区编码的参数化变换算子，覆盖大小写、变音符与字符重复且完全可逆，避免词形变体碎片化嵌入空间或有损归一化。自然语言与代码语料上以小词表实现全语料覆盖，词表槽位最高减少19.7%；98M GPT-2评测Python语法有效率达9.12%（基线7.7%）。
