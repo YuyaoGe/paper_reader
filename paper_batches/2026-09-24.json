@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-09-24",
+    "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
+    "arxiv_id": "2609.26780",
+    "github": "https://github.com/2022hpsk/SpeakerMemR1",
+    "abstract": "针对多方对话记忆的消息归属与状态重建难题，提出SpeakerMem-R1双轨记忆：说话人标注的原文轨与派生状态轨按人物、群体视图组织，查询时融合双轨证据。以SpeakerLevenshtein奖励与说话人条件GRPO训练Writer-R1。三个基准上准确率达47.9%至69.2%，EverMemBench榜62.33%为最新SOTA；RL使SFT版准确率由57.38%提至68.20%。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-09-24",
+    "title": "Spatial-Interactor: Learning Spatial Reasoning through Interaction with the Observable Physical World",
+    "arxiv_id": "2609.23038",
+    "github": "https://github.com/ZJU-OmniAI/Spatial-Interactor",
+    "abstract": "现有VLM空间训练多聚焦静态物体关系，缺乏对物体运动等局部状态转移的监督。Spatial-Interactor以交互轨迹训练VLM建模物理世界状态转移，课程分被动世界、主动自我、长程交互三级，构建LSI-108K仿真与真实交互数据集。训练分SFT局部建模与On-Policy Distillation两阶段，特权教师分支监督学生的在线CoT以整合连续转移，在多个VLM与空间基准上取得一致提升。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-09-24",
+    "title": "Knowledge Pull Requests for Continual Document Authoring",
+    "arxiv_id": "2609.26634",
+    "github": "https://github.com/alexmartin1722/kpr",
+    "abstract": "提出Knowledge Pull Requests框架，使持续文档撰写中的每次修改可解释。KPR抽取新知识的声明、路由到对应章节并标记与既有内容的冲突，产出ChangeLog将「知识如何变」与「文本如何变」分离。跨语言修订Wikipedia与更新RAGTIME报告的评测显示：KPR比从源重写或从头再生整合更多信息且更好保留原有内容；其修订文章的问答grounding也优于带搜索的前沿模型。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-09-24",
+    "title": "FLEET: From Logits Entropy to Enhanced Trajectories in Text Generation",
+    "arxiv_id": "2609.27657",
+    "github": "https://github.com/Alexiush/fleet",
+    "abstract": "temperature采样多次取样缺乏对历史生成的感知，语义重复答案比例随采样数上升，收益递减。FLEET将每次生成表示为熵超阈值的稀疏状态轨迹，推断逐token效用分数调整logits，将记忆机制引入生成过程。基准评测同等准确率下实现3倍加速；同等预算下LiveCodeBench Pass@32从59.9%提升至66.2%。贪心解码下完全确定，仅需单次校准，对现有LLM流水线改动极小。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-09-24",
+    "title": "MemoryAthena: Adaptive Routing over Latent and Generated Memories",
+    "arxiv_id": "2609.25853",
+    "github": "https://github.com/OLAResearch/ATHENA",
+    "abstract": "研究记忆能否以生成而非仅检索方式产生效用。MemoryAthena设Engram直接检索（E）、线索生成（GE）、骨干状态生成（GH）三条通路。骨干、记忆、生成器、读取器全部冻结，仅训练轻量因果路由头，以GE、GH相对E的反事实似然优势为监督；采纳的候选经有界插值修改E残差，拒绝时精确回退。问答五任务均值37.65升至39.28，通用NLP六任务均值76.73升至79.13，记忆侧约201M参数。",
+    "tags": ["MeM"]
+  }
+]
