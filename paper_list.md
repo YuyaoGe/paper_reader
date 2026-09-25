@@ -5404,3 +5404,17 @@
 
 - **MemoryAthena: Adaptive Routing over Latent and Generated Memories** `[MeM]` — [2609.25853](https://arxiv.org/abs/2609.25853) | [GitHub](https://github.com/OLAResearch/ATHENA)
   > 研究记忆能否以生成而非仅检索方式产生效用。MemoryAthena设Engram直接检索（E）、线索生成（GE）、骨干状态生成（GH）三条通路。骨干、记忆、生成器、读取器全部冻结，仅训练轻量因果路由头，以GE、GH相对E的反事实似然优势为监督；采纳的候选经有界插值修改E残差，拒绝时精确回退。问答五任务均值37.65升至39.28，通用NLP六任务均值76.73升至79.13，记忆侧约201M参数。
+
+## 2026年9月25日
+
+- **Parts-of-Speech as Emergent Categories in SAE Latent Space** — [2609.29362](https://arxiv.org/abs/2609.29362) | [GitHub](https://github.com/colinglab/pos-sae-latents)
+  > 以词性（PoS）类别为受控测试案例，研究稀疏自编码器（SAE）隐变量暴露何种语言学结构。发现词性区别可从SAE激活中高度恢复，但并不对应「一个隐变量对应一个类别」的原子映射；该可恢复性不可归约为词汇记忆，开放类与封闭类词性差异显著。类别由紧凑的稀疏隐变量群组支持，在 held-out 数据上保持稳定，且相关类别之间存在重叠，表明SAE以分布式、类别依赖的方式定位形态句法信息。
+
+- **IterSynth: Rethinking Deep Search Agents via Role-Decoupled Iterative Synthesis** `[RL]` — [2609.29444](https://arxiv.org/abs/2609.29444) | [GitHub](https://github.com/Tencent/IterSynth)
+  > 针对深度搜索代理角色耦合与上下文噪声，提出角色解耦迭代合成范式IterSynth：Planner识别信息需求，Synthesizer将证据整合入演化摘要，以摘要作为搜索持久状态；配套RDPO强化学习算法实现角色级信用分配。在BrowseComp等五个长程搜索基准上，IterSynth-8B均分50.7，超越最强同规模代理+4.2%；作为prompting范式在前沿模型上零样本显著优于ReAct。
+
+- **Neural Spectral Capacity: Measuring and Designing Architectures from Network Specification Alone** `[无需训练]` — [2609.23087](https://arxiv.org/abs/2609.23087) | [GitHub](https://github.com/Optima-CityU/neural-spectral-capacity)
+  > 参数量与FLOPs无法刻画架构结构差异，提出神经谱容量NSC：基于权重矩阵奇异值谱的闭式标量，凭架构规格即可计算，无需模型、数据或梯度；配动态规划求解器NSC-DP秒级给出资源约束下最优架构。在七个模型族上架构排序超越参数量、FLOPs及现有training-free代理；两秒发现优于人工设计的Transformer-XL；无校准剪枝LLaMA-7B至5.7B，速度快5900倍。
+
+- **Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures** `[RL]` — [2609.29429](https://arxiv.org/abs/2609.29429) | [GitHub](https://github.com/sumleo/RLCDAlignBench)
+  > 提出RLCDAlignBench，评测经RLCD强化学习训练的Jev作为对齐失败零样本检测器，覆盖谄媚、越狱、欺骗、提示注入、幻觉等十类失败，横跨44个基准与五个目标模型。核心是将「问什么」与「看什么」解耦：提问措辞与输入字段分开变化。单个通用提问即达0.886中位AUROC，多数基准超越监督基线，人工标注一致性同参考评分器相当，并暴露现有基准标签缺陷，成本比LLM-judge低63倍。
