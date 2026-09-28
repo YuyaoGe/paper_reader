@@ -5418,3 +5418,20 @@
 
 - **Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures** `[RL]` — [2609.29429](https://arxiv.org/abs/2609.29429) | [GitHub](https://github.com/sumleo/RLCDAlignBench)
   > 提出RLCDAlignBench，评测经RLCD强化学习训练的Jev作为对齐失败零样本检测器，覆盖谄媚、越狱、欺骗、提示注入、幻觉等十类失败，横跨44个基准与五个目标模型。核心是将「问什么」与「看什么」解耦：提问措辞与输入字段分开变化。单个通用提问即达0.886中位AUROC，多数基准超越监督基线，人工标注一致性同参考评分器相当，并暴露现有基准标签缺陷，成本比LLM-judge低63倍。
+
+## 2026年9月28日
+
+- **FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders** `[扩散模型]` — [2609.31620](https://arxiv.org/abs/2609.31620) | [GitHub](https://github.com/Hongyang-Du/FuseReg)
+  > 表征自编码器（RAE）复用预训练视觉编码器特征作为重建与扩散隐变量，但固定的启发式层融合将重建与生成两个受益于不同信息的阶段耦合。FuseReg 改用对编码器层随机子集的训练替代启发式选择，子集采样可显式惩罚对跨层差异的敏感性。ImageNet-256 上单一解码器无需重训即可适配多种融合方式，仅替换解码器使无引导 gFID 降 27%；联合正则化扩散训练两阶段，DiT-Base 上再降 29%。
+
+- **SAGE: Mitigating Long-Horizon Reasoning Biases via Topological Guidance** `[RL]` — [2609.30192](https://arxiv.org/abs/2609.30192) | [GitHub](https://github.com/Susan571/SAGE-NeurIPS2026)
+  > 针对稀疏奖励下长程推理的脆弱性，论文以符号闭包分析（SCA）刻画两种偏差：探索偏差使模型偏向局部合理但结构不稳定的分支，复合偏差使局部偏差沿深度累积抑制稀有奖励。据此提出 SAGE 框架：代数稀疏化将候选投影到算子索引的子空间抑制伪分支；双曲结构引导将推理状态嵌入负曲率空间提供稠密深度信号。在 12 个基准、7 个模型家族上优于基线，在开放的 Andrews-Curtis 难题上最高提升 8 倍。
+
+- **SLCA-GRPO: Resolving Cross-Segment Credit Misattribution in Tool-Calling RL** `[RL]` — [2609.29050](https://arxiv.org/abs/2609.29050) | [GitHub](https://github.com/SLCA-GRPO/SLCA-GRPO)
+  > 工具调用 agent 的工具调用与用户摘要交织，GRPO 把轨迹级优势广播到所有 token，摘要梯度噪声泄漏进工具决策 token，造成跨片段信用错配。该框架以 Schema 引导的 LLM 模拟器支撑探索，单组 rollout 内按片段解耦优势，层次化奖励把两类优势路由给工具与摘要 token。7B 骨干同预算下超 GRPO 等基线：BFCL +1.36pp、τ²-Bench +9.15pp。
+
+- **Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching** `[无需训练]` — [2608.09444](https://arxiv.org/abs/2608.09444) | [GitHub](https://github.com/kschwethelm/continuous-depth-batching)
+  > 循环语言模型以共享层块变次数循环实现深度自适应推理——简单 token 少用算力、困难 token 多用，但循环次数不同的 token 无法共享前向传播，vLLM 等无法批处理。论文提出首个连续深度批处理（CDB）：循环步间组建新批次，管理循环 KV 缓存并预判退出 token 异步备批。Ouro 1.4B 与 Huginn 3.5B 上，全循环架构最适合该方式，CDB 实现最大加速比的 99%。
+
+- **Paragraph Boundaries Are Not White Space: Compression Depth as the Signature of Hierarchical Structure** — [2609.23551](https://arxiv.org/abs/2609.23551) | [GitHub](https://github.com/ShuyangenFrance/hrope)
+  > 标准位置编码将位置表示为一维阅读顺序坐标，但阅读顺序并不决定文本层次结构。论文用层次化 RoPE（hRoPE）将段落、句子、token 索引表示为独立通道，固定 token 序列并干预段落坐标，以 token 距离精确估计器测量跨段落注意力。注意力虽普遍被压缩，但随机标签对照同样被压缩（只是更浅）；真正区分真实结构的是压缩深度——更深且随语料变化。压缩深度而非压缩位置，才是段落结构的可复现签名。
