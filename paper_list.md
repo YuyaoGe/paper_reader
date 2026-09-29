@@ -5435,3 +5435,50 @@
 
 - **Paragraph Boundaries Are Not White Space: Compression Depth as the Signature of Hierarchical Structure** — [2609.23551](https://arxiv.org/abs/2609.23551) | [GitHub](https://github.com/ShuyangenFrance/hrope)
   > 标准位置编码将位置表示为一维阅读顺序坐标，但阅读顺序并不决定文本层次结构。论文用层次化 RoPE（hRoPE）将段落、句子、token 索引表示为独立通道，固定 token 序列并干预段落坐标，以 token 距离精确估计器测量跨段落注意力。注意力虽普遍被压缩，但随机标签对照同样被压缩（只是更浅）；真正区分真实结构的是压缩深度——更深且随语料变化。压缩深度而非压缩位置，才是段落结构的可复现签名。
+
+## 2026年9月29日
+
+- **Post-Training Leaves Behavioral Shadows on Unrelated Decisions** `[微调]` — [2609.29233](https://arxiv.org/abs/2609.29233) | [GitHub](https://github.com/myboker/ATD)
+  > 提出主动无任务蒸馏（ATD），揭示后训练会在无关文本中留下「行为阴影」：仅需教师模型对每个提示输出一个词，学生即可从公共祖先初始化并仅凭提示-词对学到教师后训练获得的能力，无需目标任务样本、教师 logits 或教师参数。以 Qwen2.5-1.5B 的编程实验为例，5664 个样本使 HumanEval+ 提升 5.34 个百分点；该能力迁移在科学知识、常识推理和阅读理解上同样成立，且迁移强度随教师更新强度变化。
+
+- **MassAlloc Attention: Let Attention Allocate Its Own Compute** — [2609.32712](https://arxiv.org/abs/2609.32712) | [GitHub](https://github.com/HKUSTDial/flash-sparse-attention)
+  > 提出 MALA（MassAlloc Attention），一种融合注意力原语：全注意力对大量因果得分空间分配了可忽略的归一化质量，而稠密 kernel 仍执行完整后处理路径；MALA 用归一化贡献度分配后得分计算，前向用在线 softmax 归一化器，反向复用最终归一化器推导嵌套保留支撑，训练与推理共用同一容差。8K 等算力对照下平均遗漏质量仅 0.0188%（接近 oracle 的 0.0182%）；1K 至 32K 上下文保持低输出与梯度误差；128K 张量并行下训练前向/反向加速 2.2x/3.0x，推理解码加速 1.6x，0.6B 到 14B 扩展训练密切跟踪全注意力。
+
+- **Improving Test-Time Scaling with Adaptive Looped Transformers** `[无需训练]` `[RL]` — [2609.35748](https://arxiv.org/abs/2609.35748) | [GitHub](https://github.com/thu-nics/TaH)
+  > 研究循环 Transformer 的测试时扩展（准确率随解码 FLOPs 翻倍的增益斜率），发现固定深度循环把额外迭代浪费在每个 token 上，而多数 token 并不受益。提出 TaH2：通过后训练联合优化主干网络与迭代决策器，以前瞻深度监督（在线标注继续迭代能否改善预测）让模型只对有收益的 token 加深循环。AIME 基准上准确率-计算斜率较非循环基线提升 53%（2.74 对 1.79），同测试时算力下超越基线峰值约 3.4 分；随最大迭代深度增加，既有循环模型趋于平台而 TaH2 增益持续扩大。
+
+- **Learning Native Reflection in Unified Multimodal Models with Interleaved Reinforcement Learning** `[RL]` `[扩散模型]` — [2609.35767](https://arxiv.org/abs/2609.35767) | [GitHub](https://github.com/waltstephen/UMM-Reflection)
+  > 针对统一多模态模型「看图并生图」可自我修正的潜力，提出 UMM-Reflection：对完整反思-修正轨迹做强化学习——兄弟轨迹共享初始图像，用组相对优势比较不同反思策略，单条轨迹级优势同时更新反思 token 与 flow-based 图像修正，信用跨轮次流动且推理时无需外部验证器，克服逐轮信用分配的指数爆炸。BAGEL 上 GenEval 较 SFT 提升 12.05 分，并迁移到 WISE（+10.97）、OneIG-Bench（+3.48）、T2I-CompBench++（+4.63）等未参与训练的基准。
+
+- **Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge** `[RL]` `[API]` — [2609.34327](https://arxiv.org/abs/2609.34327) | [GitHub](https://github.com/tally0818/FlyBy)
+  > 通过干预中间推理态发现：自我精炼只是将概率质量收敛到当前状态可达的解，存在「执行瓶颈」与「知识瓶颈」两种失败模式。据此提出选择性查询框架 FlyBy：先让模型自行推理并诊断未决问题，在知识瓶颈处才查询更强的外部模型。用 SFT 引导多深度查询动作，再以成本感知强化学习校准「是否查询、问什么、花多少」。6 个基准 1158 道难题上，FlyBy-4B 以 45.96% pass@8 超越 Qwen3-14B（41.64%）且服务成本低 2.7 倍；FlyBy-8B 进一步提升至 51.81%。
+
+- **Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning** `[RL]` — [2609.33781](https://arxiv.org/abs/2609.33781) | [GitHub](https://github.com/wgcyeo/EAPO)
+  > 提出熵引导信用分配方法 EAPO，基于「不确定下的成功难以复现、自信失败容易重现」的观察，对成功与失败非对称处理：成功响应中高熵决策获得更强强化，失败响应中低熵决策受到更强惩罚，同时减弱不确定位置的惩罚以保留恢复机会。EAPO 直接复用现有 rollout 信号重分配响应优势，得到 token 级信用，无需辅助模型、额外采样或特权信息。在多个推理任务及基座、推理两类骨干模型上验证一致有效，代码完全开源。
+
+- **Diffusion Reward Models** `[扩散模型]` — [2609.33803](https://arxiv.org/abs/2609.33803) | [GitHub](https://github.com/thunlp/DRM)
+  > 提出扩散奖励模型（DRM），将奖励建模重构为条件密度估计：在冻结的 LLM 编码器之上，轻量级 Diffusion Transformer 将高斯噪声去噪为奖励向量，不对输出分布做参数假设，天然刻画人类偏好的多峰结构。单一架构同时处理多属性回归与成对偏好数据，推理时以 N 个采样形成经验奖励分布，可聚合为标量、方差或分位数。5 个基准上匹配或超越同数据同骨干的基线，并可与规模大得多的判别式、分布式、生成式 RM 竞争；不确定性拒绝采样与下置信界聚合进一步利用分布信息改进奖励决策，下游 RLHF 实验同样验证有效。
+
+- **Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It** `[RL]` — [2609.32444](https://arxiv.org/abs/2609.32444) | [GitHub](https://github.com/kzhao5/CIS-RL)
+  > 研究 RLVR 中 rollout 由推理引擎采样而梯度由训练引擎计算导致的训练-推理失配，提出校准重要性采样（CIS）：以 logit 位移表征失配（softmax 前的可加扰动，分布近似与 token 置信度无关），据此做置信度感知截断——大正位移按单一阈值截断，映射回随置信度收紧的重要性比率上界；理论上有界二阶矩被常数界项替代，偏差由截断超额控制。3 个 MoE 模型、5 个数学推理基准上 CIS 全部取得最高平均分；诊断显示其对低置信 token 施加的截断偏差更小。
+
+- **An RL View of OPD: Least Square Policy Distillation for Sample-Efficient LLM Reasoning** `[RL]` — [2609.35505](https://arxiv.org/abs/2609.35505) | [GitHub](https://github.com/UNCSciML/LSPD)
+  > 从强化学习视角研究在策略蒸馏（OPD），建立 OPD 的反向 KL 目标与 KL 正则化策略优化的联系，提出最小二乘策略蒸馏（LSPD）：将值式 RL 的乐观探索与非同策略数据复用引入蒸馏，既保留策略多样性又反复利用已收集轨迹提升 rollout 效率；理论分析给出理想化形式 O(log K) 的遗憾界。6 个数学推理基准上 LSPD 一致超越既有蒸馏基线，Avg@16 平均提升 +1.59；Pass@k（k 至 64）显示其更好地保持了策略多样性；全离线变体仅用前 25% rollout 批次即达到与标准 OPD 相当的性能。
+
+- **Program-Verified Self-Evolution for Vision-Language Models** `[VLM]` — [2609.33855](https://arxiv.org/abs/2609.33855) | [GitHub](https://github.com/ahmedheakl/VQS)
+  > 发现自进化 VLM 中多数投票与模型裁判标注的错误率分别高达 24% 和 18%。提出 VQS（可验证 QA 生成）：模型先将图像解析为结构化记录（场景图、图表表、图结构），固定程序据此写出问题并计算答案，模型仅逐条确认程序读取的短事实，声明级校验同时筛选解析器训练目标使其无标注自我改进。人工评估 VQS 答案正确率 94%（多数投票仅 76%）；10 个基准上 2B/4B/8B 的 Qwen3-VL 最高提升 3.18 分并超越各尺度最强自进化基线，三轮训练增益持续扩大（2B 达 3.84 分）。
+
+- **Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models** `[VLM]` — [2609.34972](https://arxiv.org/abs/2609.34972) | [GitHub](https://github.com/declare-lab/delta-Vision)
+  > 针对多模态大模型中视觉 token 序列的计算开销，通过低秩干预发现：阻断视觉到文本注意力后，仅恢复少量方向即可挽回大部分精度，说明相关视觉影响集中在低维子空间；且逐层视觉状态高度可预测，轻量 MLP 可以高余弦相似度、低重建误差近似。据此提出 δ-Vision：以低秩适配器构建逐层视觉记忆，替代视觉 token 的重复 Transformer 演化，同时保留全部视觉 token 供文本检索。图像与视频基准上，δ-Vision 以相当或更低的计算取得高于视觉 token 剪枝基线的准确率，且不像剪枝那样永久丢弃视觉证据。
+
+- **WideSWE: Can Coding Agents Coordinate Changes Across Repositories?** `[API]` — [2609.33382](https://arxiv.org/abs/2609.33382) | [GitHub](https://github.com/ZJU-ACES-ISE/WideSWE)
+  > 指出现有编码代理评估局限于单一代码库，而真实软件生态中许多功能与修复需要跨仓库协调变更。构建 WideSWE 评估基准：挖掘并审查 103 个软件生态得到 120 个真实任务（60 修复 + 60 特性），从关联 issue 与 PR 生成提示，并系统改写隐藏测试以兼容多种正确实现。7 种代理配置的全任务成功率仅 10.83% 至 42.50%（Codex CLI + GPT-5.6-sol 最高）。轨迹分析显示代理常遗漏必要变更或半途而废；对比逐仓库独立执行与联合执行，发现独立执行主要补回遗漏工作，联合执行则能利用跨仓库信息指导实现与验证。
+
+- **BaRe-Mem: Bayesian Reliability Memory for Robust and Adaptive Agent Consultation** `[MeM]` — [2609.35551](https://arxiv.org/abs/2609.35551) | [GitHub](https://github.com/declare-lab/BaRe-Mem)
+  > 针对多代理系统中顾问能力随任务变化、误导信息反使咨询不如自主推理的问题，提出 BaRe-Mem：基于中心模型内部信念表征在线估计顾问可靠性，从历史交互持续更新，用可靠性估计调节顾问回复影响并指导「咨询还是自主推理」的抉择。9 个基准、6 个中心模型上，BaRe-Mem 对误导性顾问信息比辩论与多数投票更鲁棒，困难任务上在所有误导水平下均不低于自主推理。机制还可扩展到团队工人分配：MuSiQue 上优于按历史成功数路由，并更早识别出能干的工人。
+
+- **Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction** `[VLM]` — [2609.32353](https://arxiv.org/abs/2609.32353) | [GitHub](https://github.com/Yrxxxxxxxx1007/LT-OPD)
+  > 面向极低视觉 token 预算下的多模态大模型加速，提出 LT-OPD 训练框架：学生仅用极少视觉 token 进行响应 rollout，同模型的冻结全 token 副本在学生自生成轨迹上提供分布监督，实现自然契合的在策略自蒸馏；并引入预算级课程，训练中逐步压低 token 预算以稳定在策略学习。9 个基准上，Qwen3.5-4B 在 5% 视觉 token 保留率下平均性能保持率从 68.6% 提升至 82.3%，同预算下超越无需训练、基于训练与强化学习基线；增益稳定迁移到 Qwen3.5-9B、GLM-4.6V-9B 与 LLaVA-OV-1.5-4B；KV cache 与 prefill FLOPs 均降约 85%。
+
+- **Imprint Reader: From Weight-Update Readout to Behavioral Intervention** — [2609.35261](https://arxiv.org/abs/2609.35261) | [GitHub](https://github.com/biuboomc/SMaRT-Vibe-Alignment)
+  > 提出 Imprint Reader，让模型通过语义挂载-读取微调（SaRT）将冻结权重更新「读取」为自然语言描述：把更新挂载到 Reader 上，用免锚点 meta-query 引出描述，并以无变化与随机扰动对照抑制无据陈述。留出更新上联合 Reader 的裁判 Pass@100 达知识 2%、行为 16%，证明可行性并指出跨更新可靠性是下一步。Reader 还可作为目标行为与候选更新差距的可微代理：0.5% 剪枝率下 Reader 引导选择将有害提示拒答率从 57.9% 提升至 64.1%；MetaEdit 仅用行为描述即提升目标行为频率。
