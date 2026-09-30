@@ -5482,3 +5482,56 @@
 
 - **Imprint Reader: From Weight-Update Readout to Behavioral Intervention** — [2609.35261](https://arxiv.org/abs/2609.35261) | [GitHub](https://github.com/biuboomc/SMaRT-Vibe-Alignment)
   > 提出 Imprint Reader，让模型通过语义挂载-读取微调（SaRT）将冻结权重更新「读取」为自然语言描述：把更新挂载到 Reader 上，用免锚点 meta-query 引出描述，并以无变化与随机扰动对照抑制无据陈述。留出更新上联合 Reader 的裁判 Pass@100 达知识 2%、行为 16%，证明可行性并指出跨更新可靠性是下一步。Reader 还可作为目标行为与候选更新差距的可微代理：0.5% 剪枝率下 Reader 引导选择将有害提示拒答率从 57.9% 提升至 64.1%；MetaEdit 仅用行为描述即提升目标行为频率。
+
+## 2026年9月30日
+
+- **Raven: The Harness of Harnesses for Composable Agentic Intelligence** `[API]` — [2609.33439](https://arxiv.org/abs/2609.33439) | [GitHub](https://github.com/EverMind-AI/Raven)
+  > 本文提出 Raven，一个「harness 的 harness」开源多智能体生态系统，自动为特定模型和领域构建并演化模块化 harness，把可执行的模型-harness 对视为可组合的智能单元。其 Host Agent 分解目标、匹配子任务、协调依赖并整合结果，Skill Forge 把经验沉淀为可复用流程。理论给出组合扩大可靠任务覆盖的充分条件，长程复杂任务上显著优于现有智能体系统。
+
+- **Omni-IO Skills: Harnessing Your Agent Omni-Native** `[API]` — [2609.31847](https://arxiv.org/abs/2609.31847) | [GitHub](https://github.com/any2any-mllm/Omni-IO-Skill)
+  > 本文提出即插即用的 Agent Harness Omni-IO Skills，通过分层 Skills、标准多模态执行接口、依赖感知编排与持久化 Asset Registry，让现有智能体不改模型即具备全模态能力。27 个 Skills 覆盖 38 个任务，在 UniM-90 上把 GPT-5.6 与 Claude Sonnet 5 的输入支持率从约 40% 提至 100%，耦合分数大幅跃升。
+
+- **What Makes World Action Models Generalize? An Empirical Study of Test-Time Future Modeling** `[扩散模型]` `[无需训练]` — [2609.34981](https://arxiv.org/abs/2609.34981) | [GitHub](https://github.com/LeapLabTHU/Simple-WAM)
+  > 本文研究世界动作模型（WAM）的泛化来源，发现隐式 WAM 虽在分布内任务上匹配显式 WAM，却丧失了其泛化优势；沿环境扰动、数据效率、任务泛化三轴的对照实验表明差距几乎完全来自第一个去噪步。据此提出 Simple-WAM，把未来建模简化为一次全噪声视频 token 前向传播，并调整训练噪声日程匹配该推理行为，在仿真与真实任务上同时取得显式 WAM 的泛化性能与隐式 WAM 的效率。
+
+- **Think Before You Score: Thinking Reward Model for Visual Generation** `[RL]` `[扩散模型]` — [2609.37372](https://arxiv.org/abs/2609.37372) | [GitHub](https://github.com/bxhsort/Thinking_Reward_Model)
+  > 本文提出 Thinking Reward Model（TRM）：先为每个样本制定自适应评分细则，再按细则评估并输出细粒度逐点奖励。针对成对偏好优化导致的分数极化，提出 PD-GRPO，用成对监督提升奖励区分度同时保留逐点打分。实验显示 TRM 在图像生成与编辑奖励建模基准上达开源最优、媲美专有模型，作为 RL 奖励还能持续提升多种视觉生成模型。
+
+- **LLMs are General Asynchronous Agents** `[无需训练]` — [2609.35427](https://arxiv.org/abs/2609.35427) | [GitHub](https://github.com/dvmazur/async_llm)
+  > 现代 LLM 智能体遵循「读-想-回复/调工具」的串行循环，无法处理语音助手、监控系统等非顺序输入场景。本文将其泛化为通用异步智能体，提出异步 LLM 框架，允许用户或智能体自身定义具有交叠内存状态、可并发执行的推理协程。实验证明 Qwen 3.x 模型无需任何任务特定训练，即可在该框架下同时处理流式视频理解、电子游戏和监控等多种并发异步任务。
+
+- **EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments?** `[API]` — [2609.37686](https://arxiv.org/abs/2609.37686) | [GitHub](https://github.com/Hongcheng-Gao/EngiWorld)
+  > 本文推出 EngiWorld，首个围绕完整工程设计闭环构建的基准：1301 个专家任务覆盖 CAD、CAE、CAM、BIM、EDA 等六大领域、26 个专业软件平台，含 GUI 与 CLI 双接口。配套产物中心化评估，用统一验证器程序化检查几何有效性与物理可行性，按规格达成度连续打分。七个前沿模型差距显著：最强 EngiScore 仅 44.3，跨软件任务成功率仅 3.6%。
+
+- **OmniTaskonomy: When Does Visual Generation Improve Visual Understanding?** `[VLM]` — [2609.38079](https://arxiv.org/abs/2609.38079) | [GitHub](https://github.com/para-lost/OmniTaskonomy)
+  > 本文回答「视觉生成监督何时、如何提升视觉理解」。控制配对的图生图（I2I）与图生文（I2T）任务发现，正确配方下 I2I 训练能提升 I2T 性能且随数据量增大收益更大。进一步构建 OmniTaskonomy 分类法，涵盖 19 个 I2I 任务与 25 个 I2T 能力，绘制出选择性、任务依赖的迁移图谱，并发现梯度对齐强度与下游迁移收益正相关。
+
+- **Asking for What Was Never Requested: Horizontal and Vertical Proactivity in Agents** `[微调]` — [2609.37236](https://arxiv.org/abs/2609.37236) | [GitHub](https://github.com/dolev31/ProactiveInquirer)
+  > 本文研究智能体主动性的内容维度：横向主动性追问上下文已隐含的信息，纵向主动性追溯早期证据揭示的需求。作者从基准自身任务分解恢复需求图，无需模型裁判即可从对话记录评分。提出 Q&D 训练提问器偏好「续写能检索更多所需证据」的问题。三个多跳问答基准上，同等检索开销下训练后的提问器超越同模型 prompting 版本，两项任务上胜过 15 倍大的模型，迁移到客服与零售场景同样有效。
+
+- **HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents** `[RL]` `[微调]` — [2609.38008](https://arxiv.org/abs/2609.38008) | [GitHub](https://github.com/ZJU-REAL/HybridCUA)
+  > 本文主张下一代计算机使用智能体应结合 GUI 的通用性与 CLI 的效率。构建数据管线生成 GUI 单用、CLI 单用与交错三类轨迹，得到含 5K 混合轨迹和 3K 验证 RLVR 任务的 HybridCUA-8K 数据集，训练先 SFT 再用 CLI 感知奖励做 RL。HybridCUA-9B 在 OSWorld 上达 53.6% 准确率，较基座提升 14.8 个百分点，并跨平台泛化。
+
+- **FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution** `[长文本]` `[VLM]` `[RL]` — [2609.36651](https://arxiv.org/abs/2609.36651) | [GitHub](https://github.com/fangzhi-zhong/FoucsVTC)
+  > 视觉文本压缩把文本渲染为图像以降低长上下文成本，但固定分辨率造成压缩率与可读性的两难。FocusVTC 用低 DPI 全局视图叠加选择性区域增强并融入推理，构建 29.4K 条关联页码与包围盒的 REL-CoT 数据，先多分辨率 REL-SFT 教模型定位相关区域，再用 GRPO 学习何时增强。RULER v1 上以 2.9 倍压缩取得 87.4 分，端到端延迟加速 2.79 倍。
+
+- **EasyPPO: Stabilizing the Critic Is Key** `[RL]` — [2609.36802](https://arxiv.org/abs/2609.36802) | [GitHub](https://github.com/EasyPPO/EasyPPO)
+  > 本文发现 critic 是 LLM 强化学习中 PPO 不稳定的主要来源，识别两种失效模式：过滤截断 rollout 使目标变成以完成为条件的奖励；异质回报噪声使高方差 prompt 主导更新。EasyPPO 提出 actor-only 超长过滤、回报噪声加权回归与更小的 critic 批次，在 FrontierCS、AIME24 等任务上全程稳定，全面优于 PPO、VAPO 等基线。
+
+- **Context Language Models** `[MeM]` `[RL]` — [2609.37725](https://arxiv.org/abs/2609.37725) | [GitHub](https://github.com/facebookresearch/context-language-models)
+  > 本文提出 Context Language Models（CLM），让语言模型原生管理自身上下文：把上下文视为文件并允许无限制更新，自主学习应保留哪些信息。零样本构建的 CLM 已超越 SOTA 上下文管理策略：BrowseComp-Plus 准确率升 11.4% 且 FLOPs 减 21.5%；还支持指令引导与在线强化学习（升 47.6%），并配套推理加速方案。
+
+- **AutoRef: Harness Optimization for Agentic Multi-Reference Image Generation** `[API]` — [2609.35530](https://arxiv.org/abs/2609.35530) | [GitHub](https://github.com/KuOnoda/AutoRef)
+  > 多参考图像生成中，模型常遗漏或重复参考主体、画面生硬拼贴，而手工设计生成 harness 性能差异大且难以预测改进。本文提出 AutoRef：在冻结所有模型的前提下，由编码智能体迭代重写 harness 代码，自动优化参考图像解读、生成与诊断输出的全流程；它将反馈任务与候选选择任务分离，并从选择任务排名前列的 harness 束继续搜索，发现了明显优于人工设计的 AutoRef-Harness。
+
+- **Selecting The Most Informative Tokens in Natural Language Autoencoders** — [2609.37040](https://arxiv.org/abs/2609.37040) | [GitHub](https://github.com/federicotorrielli/nla-token-selector)
+  > 自然语言自编码器能把语言模型内部激活翻译为可读解释，但逐 token 解释成本高昂。本文基于 470 万条关于提示注入与隐瞒行为的解释，比较模型计算信号与仅依赖对话结构训练的排序器：后者通常选出更相关的解释位置且无需额外前向传播。四个数据集中三个只需解释 5% 的位置即可保留几乎全部成功率；预训练 verbalizer 还能无额外训练恢复模型经微调学会隐瞒的词。
+
+- **Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing** — [2609.37402](https://arxiv.org/abs/2609.37402) | [GitHub](https://github.com/LAMDA-Model-Reuse/SaveRouter)
+  > LLM 路由需在部署前执行多个候选模型收集质量反馈，监督成本高。本文发现路由质量远早于收集完全部反馈就已饱和，提出 SaveRouter：选择性获取有信息量的模型反馈、在相关查询间共享能力信息并保留查询级细化。联合计入监督开销与服务节省的评估下，仅用约 33-41% 的训练反馈即保持甚至更优的路由质量，盈亏平衡部署量较最快传统路由器降低约 1.9-9.5 倍，且更多监督并非总是经济最优。
+
+- **Chinese-Jev: Bringing System One Model to Chinese-Language Tasks** `[微调]` — [2609.36965](https://arxiv.org/abs/2609.36965) | [GitHub](https://github.com/gulucaptain/Chinese-Jev)
+  > System One 模型为重决策任务提供了高效替代，但现有 Jev 中文决策能力有限。本文推出 Chinese-Jev：统一数据管线把异构中文标注转为候选选项上的概率目标，采用轻量仅编码器骨干与决策导向训练，先在千万级通用语料上预训练，再针对医疗、法律、金融微调，并发布基准 CJ-Bench。预训练后通用任务准确率超闭源 Jev 1.24%，推理加速 20.3 倍；领域微调再提升 4.0%。
+
+- **TGRL: Temperature-Grouped Reinforcement Learning for Efficient Exploration in LLMs** `[RL]` — [2609.33589](https://arxiv.org/abs/2609.33589) | [GitHub](https://github.com/1229095296/TGRL)
+  > 本文提出温度分组强化学习 TGRL，把温度诱导的 rollout 多样性转化为训练信号：对每个 prompt 将采样组分为低温与高温子集，用奖励对比估计探索收益，再借两温度缩放 next-token 分布的 JS 散度把组级信号分配为 token 级信用。不扩大采样预算即可最高提速 36%；11 个基准上数学均分提升 1.6%，CodeForces 评分提升 196.7。
