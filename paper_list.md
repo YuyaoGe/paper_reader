@@ -5535,3 +5535,47 @@
 
 - **TGRL: Temperature-Grouped Reinforcement Learning for Efficient Exploration in LLMs** `[RL]` — [2609.33589](https://arxiv.org/abs/2609.33589) | [GitHub](https://github.com/1229095296/TGRL)
   > 本文提出温度分组强化学习 TGRL，把温度诱导的 rollout 多样性转化为训练信号：对每个 prompt 将采样组分为低温与高温子集，用奖励对比估计探索收益，再借两温度缩放 next-token 分布的 JS 散度把组级信号分配为 token 级信用。不扩大采样预算即可最高提速 36%；11 个基准上数学均分提升 1.6%，CodeForces 评分提升 196.7。
+
+## 2026年10月1日
+
+- **AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks** — [2609.38288](https://arxiv.org/abs/2609.38288) | [GitHub](https://github.com/VectorSpaceLab/AREX-2)
+  > 提出AREX-2，将LLM智能体的自改进能力分解为反思与长程执行两个域无关的互补能力，可在监督充分场景习得。研究者在机器学习与算法编程任务上合成带可验证反馈的长程改进轨迹，训练基于Qwen3.8-27B的智能体，MLE-bench Lite达81.8、Frontier-CS达70.7，并迁移到深度研究任务（BrowseComp 84.0、GAIA 92.2），且随迭代轮数持续提升。
+
+- **EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery** `[无需训练]` `[API]` — [2609.40340](https://arxiv.org/abs/2609.40340) | [GitHub](https://github.com/Open-Galapagos/EvoDuet)
+  > 提出EvoDuet双层优化方法，在模型参数固定下共同进化解决方案与搜索查询，解决LLM进化搜索因知识缺口停滞的问题。检索门控评估知识缺口并选择检索、复用或跳过；内层优化查询并排序文档，外层并行生成候选并记录结果。21个任务上，OpenEvolve归一化增益在GPT-5.6-Luna下从74.1%升至78.0%，Gemini-3.8-Flash下从61.3%升至82.3%，8个任务超越此前最佳。
+
+- **Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI** `[无需训练]` `[API]` — [2609.38143](https://arxiv.org/abs/2609.38143) | [GitHub](https://github.com/qiancheng-apodex/MetaSkill-AI4AI)
+  > 研究测试时AI4AI：Builder在权重固定下学习为Target构建更优执行环境。提出Meta-Skill原则，规定何时需要支持及提供何种资源；Builder从Target开发集反馈学习原则，再用冻结技能库为未见任务构建harness。在Harness-Bench和NewtonBench上，完整技能库比无技能构建提升8.95个百分点，比直接交给Target提升12.02个百分点。
+
+- **EVOKE: Eliciting World Knowledge in Agents for Transferable Decision-Making** `[微调]` — [2609.38334](https://arxiv.org/abs/2609.38334) | [GitHub](https://github.com/Gnonymous/EVOKE)
+  > 指出LLM智能体在数字环境中已内化大量世界知识，问题从获取知识转为激发知识，而常规后训练在单一目标监督下助长依赖表层上下文习惯的策略。提出EVOKE后训练方法：固定环境状态与交互历史，让策略在替代目标下对相同候选动作排序，以目标多样性迫使策略编码可恢复的世界模型。理论证明跨多样目标均胜任的策略必编码可恢复世界模型，实验中agent在未见环境的决策迁移显著提升。
+
+- **More Choices, Fewer Decisions: Ordinal-Scale Bias in JEV-like Direct-Decision Models** `[微调]` — [2609.38827](https://arxiv.org/abs/2609.38827) | [GitHub](https://github.com/Glax147/jev_ordinal_scale_bia)
+  > 分析JEV等直接决策模型对序数尺度的使用偏差：ANLI中JEV将38.8%预测归入Neutral（占其错误51.3%）；36个序数数据集上决策仅利用67-76%的有效gold支持（标称任务87-102%），尺度细化至K=14后利用率降至26-75%。关键发现是该压缩是习得的——BA-LoRA后训练将8个监督尺度上gold相对利用率从约47%提至86%，模型可学会忠实使用序数尺度。
+
+- **RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement** `[API]` — [2609.39045](https://arxiv.org/abs/2609.39045) | [GitHub](https://github.com/WenyiWU0111/RSIGame)
+  > 提出RSIGame自主agent化游戏开发框架，通过递归自改进突破可玩但质量停滞的瓶颈。局部循环采用探索-诊断-改进范式：广泛探索游戏、排序诊断问题、基于证据修复，演化式清单持续积累测试指引；全局循环跟踪质量、保存最优检查点并检测饱和回退。在140个GameCraft-Bench任务、两种引擎和五种生成器上持续提升游戏质量，并可将成功经验训练内化到生成器。
+
+- **DC-SAE: Deep Compression Semantic Autoencoder for Faster Diffusion Convergence** `[扩散模型]` — [2609.39222](https://arxiv.org/abs/2609.39222) | [GitHub](https://github.com/DAGroup-PKU/DCSAE)
+  > 针对高压缩tokenizer加剧扩散训练收敛慢的问题，提出解耦紧凑语义自编码器DC-SAE：宏观上用语义编码器实现更高压缩率，另配像素级编码器保留低层细节保证高保真重建，兼顾高压缩与扩散快速收敛，克服现有表征自编码器压缩率有限且丢失像素细节的不足。图像生成实验表明DC-SAE性能强劲，为高压缩潜空间生成模型提供效率与保真兼顾的方案。
+
+- **LoopVL: Recurrent Visual Intelligence** `[VLM]` — [2609.38426](https://arxiv.org/abs/2609.38426) | [GitHub](https://github.com/Tier-Flow/LoopVL)
+  > 探索Loop Transformer向视觉语言模型的扩展。LoopVL结合模块循环与模型循环计算，通过共享模块迭代更新统一的视觉-语言状态，从零经语言预训练、多模态训练和后训练三阶段训练。在同规模及更大非循环模型对比中，LoopVL在多模态理解与视觉推理基准上更优，并观察到跨循环轮次视觉注意力的显著转移——视觉顿悟时刻，为循环式视觉-语言建模提供实践证据。
+
+- **CUA-SWE: When Computer-Use Agents Meet Visual Software Engineering** — [2609.32600](https://arxiv.org/abs/2609.32600) | [GitHub](https://github.com/kingofspace0wzz/cua-swe)
+  > 提出CUA-SWE基准、环境与评测流程，研究计算机操作agent与软件工程结合的完整开发过程：真实开发需运行软件、操作界面、视觉检查并据此决定修改，而编码agent与计算机使用agent多被孤立研究。任务覆盖四个软件工程领域，要求agent在同一任务中修改代码配置、执行命令、操作运行中软件并检查视觉反馈，还考察规格仅能通过应用视觉界面获取时agent能否完成，每个任务含确定性专用测试验证结果。
+
+- **Synthetic Pre-pretraining Survives Scale, but Not as a Grammatical Prior** — [2609.39827](https://arxiv.org/abs/2609.39827) | [GitHub](https://github.com/gucci-j/verify-ppt-at-scale)
+  > 系统检验预预训练（PPT）在更大规模下的有效性与机理。此前认为PPT收益源于语法先验，但仅在不超过1B参数、2B token预算验证。本工作在5个PPT任务、4种数据混合、500M至7B规模及最高100B token预算上研究，发现下游性能与token效率收益规模化后依然存在（3B节省至少21B PT token），但无一致证据支持语法先验解释，收益实际来自改善长程检索的PPT任务。
+
+- **Not Every Token Is Worth Distilling: Selective Supervision for Direct-OPD** `[RL]` — [2609.29142](https://arxiv.org/abs/2609.29142) | [GitHub](https://github.com/Luli3220/S2D-OPD)
+  > 揭示直接在线策略蒸馏（Direct-OPD）的缺陷：token级log-ratio奖励只度量相对变化，教师两检查点对学生token的概率质量同时消失时奖励仍可不变——构造证明奖励与更新不变而JSD及双向KL趋零。提出S2D-OPD：按教师-参考JSD排序学生状态，仅保留每回复top 10%高散度状态的监督。两组教师、1.7B至8B四个学生上准确率一致超越稠密Direct-OPD。
+
+- **Rubric Rewards from Item Response Theory** `[RL]` — [2609.35646](https://arxiv.org/abs/2609.35646) | [GitHub](https://github.com/milad1378yz/rrt)
+  > 针对rubric评判聚合为标量奖励的缺陷（不同判定模式得相同奖励、固定分值不反映区分力），提出Rubric Response Theory：当准则是共享目标的单调指标时，用双参数项目反应模型将判定模式视为标量质量的证据，似然得分最大化局部信噪比；RPN网络读取提示与准则文本预测难度与区分度，随策略分布在线适配，同时减少judge请求数，提升RLVR奖励信号质量。
+
+- **Rethinking Latent Visual Reasoning: Grounding Latent Reasoning in Visual Evidence** `[VLM]` `[RL]` — [2609.34563](https://arxiv.org/abs/2609.34563) | [GitHub](https://github.com/xixiaouab/ReaLVR-code)
+  > 针对多模态大模型潜视觉推理（LVR）的「潜证据-信用鸿沟」：分析发现潜token对改变答案的图像扰动响应微弱，根源是GRPO只有最终答案奖励，无法指导保留哪些视觉证据。提出ReaLVR：将视觉证据监督引入模型自身自由运行的潜轨迹，对比正确与错误答案定位需加强监督处，对比相关与不匹配证据明确应保留内容。三个模型家族上一致超越现有LVR基线。
+
+- **How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text** — [2609.40295](https://arxiv.org/abs/2609.40295) | [GitHub](https://github.com/pangramlabs/WildAI)
+  > 研究野外AI生成文本对预训练的影响：FineWeb过滤后2026年6月网页数据仍有27.5% token为AI生成，多源、面向人类、无标签混入语料。预训练800个模型拟合scaling law：数据受限模型初期加AI token降低人文本loss但很快反转为损害，高预算模型几乎立即受损；经典scaling law无法预测，提出含收益与损害项的新law刻画AI token价值随规模变号。
