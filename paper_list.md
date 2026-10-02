@@ -5579,3 +5579,32 @@
 
 - **How Much Is an AI Token Worth? Scaling Laws for Wild AI-Generated Web Text** — [2609.40295](https://arxiv.org/abs/2609.40295) | [GitHub](https://github.com/pangramlabs/WildAI)
   > 研究野外AI生成文本对预训练的影响：FineWeb过滤后2026年6月网页数据仍有27.5% token为AI生成，多源、面向人类、无标签混入语料。预训练800个模型拟合scaling law：数据受限模型初期加AI token降低人文本loss但很快反转为损害，高预算模型几乎立即受损；经典scaling law无法预测，提出含收益与损害项的新law刻画AI token价值随规模变号。
+
+## 2026年10月2日
+
+- **Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States** `[MeM]` `[无需训练]` `[API]` — [2610.01415](https://arxiv.org/abs/2610.01415) | [GitHub](https://github.com/luoyu100/PoS)
+  > 提出推理时智能体框架PoS：构建并持续维护显式信念状态作为决策上下文，每个信念融合当前世界状态估计与未解决任务需求；通过一致性验证与任务进度监控检测「信念陷阱」，并按陷阱模式定制恢复策略。在四个执行与诊断基准、三种LLM骨干上均取得最高整体性能，消融验证了各组件作用，且对上下文增长表现出韧性。
+
+- **Sharpening Tax in Post-Training** `[RL]` — [2610.01509](https://arxiv.org/abs/2610.01509) | [GitHub](https://github.com/changdaeoh/sharpening-tax)
+  > 提出Sharpening Tax诊断指标，量化LLM后训练损失的测试时扩展性。研究发现预训练LLM搭配轻量推理框架即可胜任智能体任务：单次准确率虽低，但充足采样预算下pass@K覆盖率常超后训练模型。在4个家族14对模型、3个智能体基准上验证该税普遍存在，并提出即插即用的贝叶斯采样器PTGS按题目难度自适应温度，训练中支付更少的锐化税。
+
+- **Make Sparse Rewards Count: Density-Aware Reward Aggregation for Multi-Reward RL** `[RL]` — [2610.00574](https://arxiv.org/abs/2610.00574) | [GitHub](https://github.com/zhaihaotian/DARA)
+  > 研究多奖励RL中的批次级信号失衡：定义优势能量并证明理想GDPO归一化下其与奖励活跃组密度成正比，据此推导逆平方根密度校正，提出密度感知奖励聚合DARA，为活跃频率低的奖励信号赋予更大权重，且不改变底层策略优化目标。在工具调用与数学推理上，DARA比GDPO更快学习目标行为：格式合规最多节省26%训练步数，长度合规最多节省65%步数，最终性能保持竞争力。
+
+- **CorrGRPO: Correlation-Normalized GRPO for Multi-Reward Learning** `[RL]` — [2609.36820](https://arxiv.org/abs/2609.36820) | [GitHub](https://github.com/HKUST-KnowComp/CorrGRPO)
+  > 指出GRPO多奖励归一化中，总奖励方差等于所有奖励两两协方差之和，大尺度相关奖励会主导归一化、压制小尺度奖励信号。提出CorrGRPO，将成对协方差归一化为皮尔逊相关系数，在保持中心化总奖励不变的同时，平衡不同尺度奖励对归一化的影响，使优势幅度自适应奖励相关性。在代码生成、工具调用与智能体安全三个多奖励任务、0.5B至8B参数模型上均优于GRPO及其他变体。
+
+- **Multimodal Flow: Unified Flow Modeling of Language and Vision in Embedding Spaces** `[扩散模型]` `[VLM]` — [2609.40362](https://arxiv.org/abs/2609.40362) | [GitHub](https://github.com/hustvl/Multimodal-Flow)
+  > 提出全连续多模态生成模型Multimodal Flow：将文本块与图像组织为有序连续超块，以共享块因果流骨干通过Flow Matching学习单一向量场，联合注意力实现跨模态交互，避免视觉量化瓶颈与模态特定目标。MF-1仅用150B预训练token，GenEval与DPG-Bench平均82.8分，VQAv2、MMBench与POPE达75.3分，与训练数据多得多的统一模型相当。
+
+- **Pretrain Once, Route Anywhere: Towards a Foundation Model for LLM Routing** — [2609.37362](https://arxiv.org/abs/2609.37362) | [GitHub](https://github.com/LAMDA-Model-Reuse/RouteFM)
+  > 从基础模型视角研究LLM路由：RouteFM通过学习刻画匿名候选模型的行为上下文、推断其面向目标的能力，将路由决策与固定模型身份及单一环境解耦。经异构路由环境上的情景式预训练后，冻结的路由器仅凭少量行为证据即可泛化到新领域、新模态、新候选池与新上下文预算。在预训练未覆盖的MMR-Bench上，仅以每候选8次观测即超越最强基线2.23个质量点，行为证据越受限时优势越大。
+
+- **Removing the NEEDLE in the Haystack: Backdoor Removal in LLMs via Weight Orthogonalisation** `[无需训练]` — [2610.00348](https://arxiv.org/abs/2610.00348) | [GitHub](https://github.com/LocaiLabs/NEEDLE)
+  > 提出无需训练的后门移除方法NEEDLE：识别触发词后，利用激活向量估计后门方向与拒绝子空间，对权重依次做正交化，在抑制后门行为的同时避免拒绝相关表示偏移，无需干净参考模型与原始投毒训练数据。跨多个模型家族与攻击类型的实验显示，NEEDLE取得最低平均攻击成功率（代码注入攻击上为0%），KL散度最低，模型能力与安全性几乎不受影响。
+
+- **ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization** `[API]` — [2610.00906](https://arxiv.org/abs/2610.00906) | [GitHub](https://github.com/krafton-ai/kira)
+  > 将智能体harness优化中固定的训练场景选择形式化为自动课程学习问题，提出ActiveSaddler：把反复出现的失败抽象为可复用的失败模式臂，估计各臂的潜在学习进度，自适应平衡巩固已知弱点与探索未见场景，使课程随harness共同演化。在GAIA2与Terminal-Bench 2.0上，测试Pass@1较固定场景顺序的同一优化器分别提升4.4与7.5个百分点。
+
+- **Generalization Is Stability, Not Accuracy: Multi-Axis Evaluation of LLMs** — [2610.01428](https://arxiv.org/abs/2610.01428) | [GitHub](https://github.com/Mahmoudbj48/SAGO)
+  > 提出稳定性感知泛化目标SAGO：在单样本层面、跨输入变体与多个行为轴上测量模型对同一输入的行为变化，覆盖生成一致性、内部激活、置信度与响应镜像等维度，避免将泛化简化为可被窄化训练操纵的单一分数。对常用模型的测量显示普遍存在统计显著的泛化不稳定性：没有模型在所有轴上均匀泛化，各行为轴捕捉独立的失效模式，跨数据集变化甚至可以逆转模型排名。
