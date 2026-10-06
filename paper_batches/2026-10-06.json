@@ -1,0 +1,189 @@
+[
+  {
+    "date": "2026-10-06",
+    "title": "ALoDLM: Adaptively Looped Diffusion Language Models",
+    "arxiv_id": "2610.04198",
+    "github": "https://github.com/amazon-science/ALoDLM",
+    "abstract": "扩散语言模型并行生成快但质量落后于同尺寸自回归模型，本文归因于计算量与 token 难度不匹配。提出 ALoDLM：以 token 自适应的潜变量循环替代统一计算深度，每个去噪步按难度分配计算，可提交的 token 反馈为离散上下文，未解决 token 保留潜状态继续精炼。将计算调度视为潜变量并推导条件 NELBO 联合学习。1.7B 与 8B 规模训练，11 项基准超越同类 DLM。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Memadapter: Counterfactual Adaptation Against Memory-induced Sycophancy",
+    "arxiv_id": "2610.05162",
+    "github": "https://github.com/DEEP-JLU/MemAdapter",
+    "abstract": "长期记忆会使 LLM agent 过度迎合用户的历史观点，且正确的记忆同样可能诱发这种谄媚。提出 MemAdapter 框架自适应整合检索记忆：反事实归纳揭示记忆风险，上下文感知反思按当前任务校准每条记忆的推断影响力，再自适应整合以支持客观推理。实验表明其能有效抵御记忆诱导的谄媚，提升推理的客观性与可靠性。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "LMBuild: Evaluating LLM Agents for Generating Buildable and Functional Structures",
+    "arxiv_id": "2610.04292",
+    "github": "https://github.com/Lumos-Jiateng/LMBuild",
+    "abstract": "现有评估只关注 LLM 生成 3D 结构的几何质量，忽视物理可建造性。提出 LMBuild 基准：将物体表示为含部件分解、关节、材料与装配序列的组合结构，提供交互式构建环境、改造自建 CAD 数据集并融合维基百科知识的 benchmark，及覆盖结构合理性、功能可供性、设计质量与物理实现的评估框架。对 30 个系统的评测揭示了合理性与对齐方面的新发现。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Self-Generated Feedback Destabilizes Test-Time Training: A Causal Decomposition of Long-Horizon Adaptation",
+    "arxiv_id": "2610.05076",
+    "github": "https://github.com/lingjivoo/ttt-ouroboros",
+    "abstract": "测试时训练（TTT）让模型在推理时把信息存入权重，但当模型从自身输出学习时，每次更新也改变了生成下一个训练样本的模型本身。本文在 128K token 流上证明自生成反馈会使 TTT 失稳：保留生成文本更新会恶化对独立人类文本的预测，三种配置与更新 Qwen3-4B 均如此，而同一机制在真实文本上有效。通过固定生成、记录回放等对照完成因果分解，并提出提交前在真实文本上评估候选状态的机制。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Optimizing the Optimizer: Language Models Discover Faster Molecular Relaxation",
+    "arxiv_id": "2610.06577",
+    "github": "https://github.com/vdeshchenya/autosella",
+    "abstract": "几何优化是量子化学工作流的主要耗时环节。本文让语言模型智能体自动改写优化器本身，以最小化力调用次数为目标，并设两道门控：拒绝过早停止与不能泛化到未见分子的改进。从最快开源优化器 Sella 出发得到 AutoSella 两个变体，在留出基准上均减少力调用；r2SCAN-3c DFT 级别下仅用 Sella 40.2–77.2% 的力调用即达相同能量下降，且全程未用 DFT 梯度。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+    "arxiv_id": "2610.06833",
+    "github": "https://github.com/ifm-ai/xllm-loop",
+    "abstract": "循环语言模型每次递归都增加训练、解码、预填充与 RL 开销，而当循环状态接近不动点时，到达路径不再重要。据此实现截断反向传播、终端 KV 共享解码、蒸馏学生预填充提速 1.79 倍、RL 更新提速 2 倍。并改进塑造不动点的组件：用带熵项的预测反馈学习深度先验，以正交注入消除输入方向分量干扰。100M 到 1.6B 各规模困惑度均低于 Huginn 先验与现有方案。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Representation-Space MMD for Diffusion Language Models",
+    "arxiv_id": "2610.06648",
+    "github": "https://github.com/yandex-research/dlm-mmd",
+    "abstract": "本文提出扩散语言模型的后训练方法：在冻结预训练 DLM 的特征空间中最小化生成分布与参考分布的 MMD。利用单次提取器前向中各 token 位置的上下文特征获得多个观测来估计 MMD；离散模型用策略梯度优化，连续模型直接对潜变量求导，无需完整采样轨迹或辅助模型。实验在 OpenWebText 上同等熵下降低生成困惑度，GSM8K 上取得更优精度-计算权衡，16B DLM 上提升并行度且精度不降。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "SearchJev: A Fast and Calibrated System-1 Model for Search Agents",
+    "arxiv_id": "2610.05107",
+    "github": "https://github.com/EvoScientist/SearchJev",
+    "abstract": "搜索智能体需频繁做出相关性、证据充分性等短决策，用生成式 LLM 处理既慢又校准差。提出 SearchJev——快速且校准的 System-1 决策模型，直接对合法选项打分而不自回归生成，并用软标签学习校准决策概率。双系统 agent 中它处理短决策，不确定判断委托 System-2。配套基准统一六类搜索决策：质量超同尺寸 Qwen3.5，速度快 5 倍以上，校准误差降 41–74%。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Noise Out, Bias In: Targeted Bias Injection in Diffusion Language Models via Closed-Loop Activation Steering",
+    "arxiv_id": "2610.05894",
+    "github": "https://github.com/Sarim-MBZUAI/dlm_bias",
+    "abstract": "掩码扩散语言模型在提交前的每个去噪步都暴露答案分布， adversary 可利用这一弱点。本文研究定向偏见注入攻击：用比例-积分控制器在去噪中跟踪目标答案概率，实时闭环调节激活引导向量强度，将冻结 dLLM 引向选定的人口学答案。BBQ 模糊问题上把 LLaDA-8B 对目标群体的偏好从 1.8 提升到 16.7 个百分点，三倍于最强固定强度基线，揭示 dLLM 多步暴露带来的新攻击面。",
+    "tags": [
+      "扩散模型",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Base Models Can Reason By Taking a Cue From Training Data",
+    "arxiv_id": "2610.06851",
+    "github": "https://github.com/sophicle/cues",
+    "abstract": "本文研究训练数据如何在基座模型响应起始 token 与后续推理行为之间建立关联。首先证明固定起始 token 线索即可让基座模型在数学和代码上媲美 RL 模型：如「.\\n\\nOkay」把 Olmo-3-7B 的 MATH-500 准确率从 42% 提升到 78%。其次 RL 使这些线索更常出现，固定线索可恢复其大部分增益。最后因果干预能把任意词变成有效推理线索，各线索隐状态对应训练集不同文档类型。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "How to Loop MoE: Flatten the Experts, Untie the Attention",
+    "arxiv_id": "2609.35751",
+    "github": "https://github.com/SR-A-W/how-to-loop-moe",
+    "abstract": "循环 Transformer 以固定尺寸复用计算块，MoE 每 token 只激活少数专家，Looped MoE 如何结合是开放问题。本文给出 Foil：参数与算力固定下，（1）扁平化专家——层数减半、每层专家数与循环数加倍，路由从更大池选择；（2）解绑注意力——每轮循环有独立注意力参数。20B token 时 Foil 模型损失低于基线；100B 时最扁平模型低 0.012 nat，精度更好。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-06",
+    "title": "From Knowledge Access to Source Learning: Developing Source-Specific Competence",
+    "arxiv_id": "2610.02150",
+    "github": "https://github.com/luchengfu6/SourceLearn",
+    "abstract": "LLM agent 日益依赖持久外部源解决知识密集任务序列，但重复用同一源仍被视为重复访问，而非逐步加深理解的机会。本文研究「源学习」：用持久源模型表示对源的可复用理解。提出 SourceLearn，通过两种机制精炼源模型：自导向源学习主动识别理解缺口并自适应重访源；任务引导源学习利用下游经验揭示知识组织中的缺口与 recurring 需求。实验证明源特定能力可持续积累并提升后续任务表现。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Learning to Learn a Language",
+    "arxiv_id": "2610.05879",
+    "github": "https://github.com/cbl/prior-fitted-language-model",
+    "abstract": "本文提出先验拟合语言模型（PFLM）——300M 参数字节级 Transformer，仅在合成非语言先验样本上预训练。给定真实文本前缀，它以冻结权重即时学习预测该语言，训练从不重复同一语言，唯一办法是从前缀推断语言。先验样本具 Zipf 频率、慢熵收敛、长程依赖等自然文本特征。六种语言 Wikipedia 上每字节比特从 8 降至 0.9–2.4；给数字能学会计数、加法，非文本域压缩胜 gzip。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Periscope: Extending Frozen Language Models Beyond Their Context Window",
+    "arxiv_id": "2610.04047",
+    "github": "https://github.com/mohammad2012191/Periscope",
+    "abstract": "语言模型以二次复杂度前向读长文，受上下文窗口限制且随长度掉精度。提出 Periscope——免训练推理方法：把文本块排成网格，向冻结模型询问局部连续 span 与跨全文采样 span 上的同一问题，单 token 读出各答案得分；每个答案取局部与跨步最优，全部块的得分免费构成证据图定位证据块。LongBench v2 上只读证据图排名前 9k token 即匹配 32k–1M 各窗口最佳表现。",
+    "tags": [
+      "长文本",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "Code2Games: Enabling Coding Agents for Gaming World Generation",
+    "arxiv_id": "2610.05033",
+    "github": "https://github.com/AIGeeksGroup/Code2Games",
+    "abstract": "从自然语言游戏意图生成高质量游戏世界需联合推理场景结构、布局、玩法目标、交互实体与可执行逻辑，现有 coding agent 难以维持跨组件一致性。提出 Code2Games 框架：基于同一意图生成的 Blender 基础世界，以共享场景-玩法表示协调场景分析、玩法规划、世界生成与引擎定制；再适配到 Unreal Engine 5，并以执行引导重建借助编译诊断与玩法测试消解不一致。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "The Missing Primitive: Diagnosing and Repairing Mathematical Reasoning in Large Language Models",
+    "arxiv_id": "2610.02191",
+    "github": "https://github.com/taco-group/Math-Primitive",
+    "abstract": "LLM 在 frontier 数学问题上表现出色，但其是否具备结构化的数学理解仍不清楚。本文提出「数学原语」概念与基准，从发现、生成、消化、执行四个维度探测数学理解。诊断发现解题准确率掩盖了差异巨大的能力画像，原语可解锁大量潜在执行能力，发现（Discovery）是数学推理的主导瓶颈，且发现受限的失败尤其容易修复。据此提出原语特权自蒸馏框架，将原语引导的推理选择性迁移进学生模型并验证有效。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "PaLoRA: Paced Low-Rank Adaptation for Continual Learning",
+    "arxiv_id": "2610.04226",
+    "github": "https://github.com/liyuxuan-github/PaLoRA",
+    "abstract": "LoRA 持续学习方法普遍用小学习率启发式限制梯度幅度，但缺乏理论指导。本文揭示：即使零空间投影等方向约束下，有限精度更新仍沿多方向泄漏进累积先验子空间；小学习率无法阻止遗忘随历史知识有效秩增长而加剧。在各向异性泄漏模型下导出 pacing law，刻画最优幅度限制应随有效秩自适应增长以平衡稳定性与可塑性。据此提出 PaLoRA：压缩历史更新并自适应调节缩放幅度，多个持续学习基准上验证有效。",
+    "tags": [
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "TextReg: Mitigating Prompt Distributional Overfitting via Regularized Text-Space Optimization",
+    "arxiv_id": "2605.21318",
+    "github": "https://github.com/luchengfu6/TextReg",
+    "abstract": "提示优化方法用 LLM 反馈迭代改写提示，但结果往往变长、累积窄化的样本特定规则，超出训练分布后泛化差。本文将该失败形式化为提示分布过拟合，提出表示低效性双因子度量，把低效分解为容量成本与范围窄化并归因于二者耦合增长。提出 TextReg 框架，以正则化文本梯度实现软惩罚，结合梯度净化、语义编辑正则与正则化引导更新。多个推理基准上 OOD 泛化显著提升，较 TextGrad 最高 +11.8%。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "title": "OmniConfess: Eliciting Token Confessions to Mitigate Omni-Modal Hallucination",
+    "arxiv_id": "2610.02999",
+    "github": "https://github.com/RongHuiQiang/OmniConfess",
+    "abstract": "全模态大模型统一处理文本、图像、音频、视频，但生成依赖错误证据时会产生幻觉，现有免训练方法很少揭示哪个证据支撑了生成承诺。提出 OmniConfess：固定候选回答，在受控通道级证据干预下以 token 分辨率重新打分，产生逐 token 逐通道「自白」揭示证据依赖，据此保留有依据内容、纠正错误承诺。配套基准含 3540 例、六个数据集，覆盖四种模态与判断/自由生成任务，均有效缓解幻觉。",
+    "tags": [
+      "VLM",
+      "无需训练"
+    ]
+  }
+]
