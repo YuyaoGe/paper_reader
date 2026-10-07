@@ -5711,3 +5711,41 @@
 
 - **OmniConfess: Eliciting Token Confessions to Mitigate Omni-Modal Hallucination** `[VLM]` `[无需训练]` — [2610.02999](https://arxiv.org/abs/2610.02999) | [GitHub](https://github.com/RongHuiQiang/OmniConfess)
   > 全模态大模型统一处理文本、图像、音频、视频，但生成依赖错误证据时会产生幻觉，现有免训练方法很少揭示哪个证据支撑了生成承诺。提出 OmniConfess：固定候选回答，在受控通道级证据干预下以 token 分辨率重新打分，产生逐 token 逐通道「自白」揭示证据依赖，据此保留有依据内容、纠正错误承诺。配套基准含 3540 例、六个数据集，覆盖四种模态与判断/自由生成任务，均有效缓解幻觉。
+
+## 2026年10月7日
+
+- **EVISKILL: Grounding Skill Evolution in Replayable Evidence** `[API]` `[MeM]` — [2610.05030](https://arxiv.org/abs/2610.05030) | [GitHub](https://github.com/Zhouyaner/Eviskill)
+  > 现有经验驱动的智能体技能演化方法容易丢失支撑技能修改的行为证据与任务上下文，且全局验证结果无法细粒度判断局部改动的合理性。本文提出EVISKILL框架，将技能演化建立在可重放的证据之上：记录支持每次修改的行为轨迹与任务上下文，并支持基于证据的局部验证与增量持久化，使局部有依据的修正不会因整体回滚而被丢弃。实验表明，该方法在多个智能体任务上提升了技能积累效率与任务成功率，减少了重复犯错。
+
+- **From Evidence to Action: How Tool-Using Agents Fail** `[API]` — [2610.07753](https://arxiv.org/abs/2610.07753) | [GitHub](https://github.com/caoshidong66/safeact)
+  > 工具使用型智能体会对外部状态产生实际影响，但结果正确并不保证其行动有事先建立的证据支撑。本文系统研究证据到行动链条在何处断裂，覆盖从决策、单步执行到多步依赖工作流的各个环节，并在十种模型与执行框架组合上进行实验。发现静态行动评估能力强不代表交互执行可靠：失败常始于执行前的不完整调查或未建立证据就行动；单步执行较可靠，多步工作流则暴露出额外的级联失败。开源了safeact测试环境与分析代码。
+
+- **HuatuoGPT-3: RL-Only Domain Adaptation from Base Models** `[RL]` — [2610.05966](https://arxiv.org/abs/2610.05966) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT-3)
+  > 领域适配的主流做法是SFT加RL多阶段管线，但SFT冷启动可能降低探索多样性并引入额外复杂度。本文提出仅依赖RL的领域适配方法OnePO，从基座模型直接出发，针对纯在策略RL的冷启动困难与混合策略RL中教师信息学习慢、陈旧教师输出阻碍后期提升两大失败模式，分别设计了解决方案。在医疗领域评测上，OnePO从基座模型直接训练达到甚至超过SFT加RL管线的水平，验证了RL-only适配的可行性。
+
+- **Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents** `[VLM]` — [2610.01892](https://arxiv.org/abs/2610.01892) | [GitHub](https://github.com/zfy0314/ssr-unofficial)
+  > 多模态智能体常在每步行动前生成自由文本推理，小模型推理冗长且对行动生成指导有限，推理开销大。本文提出基于选择的结构化推理框架SSR，将开放式生成式推理重构为从预定义的可复用自然语言推理候选中进行选择，按当前上下文似然选择候选，无需辅助任务头。该方法显著降低了推理时的生成开销，同时在多模态搜索智能体任务上保持了与生成式推理相当甚至更优的任务成功率，让小模型也能高效完成多步搜索。
+
+- **GUI-HARVEST: Self-Improving GUI Agents through Evidence-Driven Harness Evolution** `[API]` — [2610.00948](https://arxiv.org/abs/2610.00948) | [GitHub](https://github.com/GaryYang12345/GUI-HARVEST)
+  > 围绕GUI模型的可执行harness决定了观测如何组装、动作如何执行以及验证恢复与终止如何控制，但自动优化GUI harness面临模型意图与视觉效应对齐、可变执行结果下诊断失败、跨任务提炼复发失败模式三重耦合挑战。本文提出GUI-HARVEST自动harness优化器，使冻结骨干模型的GUI智能体能够自我改进：将诊断建立在观测到的动作效果之上，自动识别复发失败并转化为可复用的运行时修改。实验表明该方法在多个GUI任务集上持续提升任务成功率。
+
+- **Making LLMs Say What They Think: Measuring and Improving CoT-Interpretability Alignment** — [2609.38972](https://arxiv.org/abs/2609.38972) | [GitHub](https://github.com/yihuaihong/CIA-minimal-repro)
+  > 思维链常被当作大模型推理过程的代理，但越来越多的证据表明CoT往往不能反映模型内部计算，且改动CoT可能不影响最终答案。本文提出CoT可解释性对齐指标CIA，用可解释性工具检测到的内部推理策略与CoT文本之间的一致程度来衡量这种对齐，并在两跳问答、提示干预、整数乘法三类任务上评估了多个开源模型。分析揭示了CoT与实际计算错位的系统性模式，并给出了改进对齐的方向与最小复现代码。
+
+- **Understanding and Enhancing Backdoor Persistency in LLM Agent Post-Training** `[微调]` `[RL]` — [2610.07510](https://arxiv.org/abs/2610.07510) | [GitHub](https://github.com/uiuc-kang-lab/PersistBD)
+  > 开发者通过良性后训练适配第三方模型构建智能体，本文研究供应链威胁：攻击者提供带隐藏后门的模型，特定输入模式触发恶意输出，聚焦于软件工程智能体，考察后门能否在开发者的SFT与后续任务级RL中存活。实验发现良性SFT会显著降低攻击成功率，但随后的RL常保留残余行为甚至提升攻击成功率。本文分析了SFT期间后门侵蚀的两个关键因素，并提出增强后门的训练策略，系统刻画了智能体后训练中的后门持久性。
+
+- **Rationale-Guided Policy Optimization: Learning to Reason with Adaptive Rationale Scaffolding** `[RL]` — [2610.07342](https://arxiv.org/abs/2610.07342) | [GitHub](https://github.com/VietHoang1512/rgpo)
+  > 在策略RL是提升大模型推理能力的核心范式，但受奖励稀疏限制：模型在难题上找不到正确轨迹时优化缺乏信号而停滞。已有方法引入离策略示范或强模型拒绝采样轨迹，但要求辅助数据与RL任务格式匹配。本文提出理性引导的策略优化RGPO，用自适应的推理依据脚手架为模型提供推理层面的引导信号，缓解奖励稀疏问题。基于veRL框架实现，在数学与推理基准上相比PPO等基线取得了更高的 pass@1 与收敛效率。
+
+- **DAEDALUS: Bootstrapping Agent Memory from Self-Generated Tasks** `[API]` `[MeM]` — [2610.08048](https://arxiv.org/abs/2610.08048) | [GitHub](https://github.com/illuin-tech/daedalus)
+  > 大模型智能体进入新环境时缺乏操作知识，没有过去尝试的记忆就会重复犯错，导致任务失败率升高、轨迹变长。现有方案依赖人工编写的指南或基于训练任务与oracle验证器构建的程序性记忆，都需要环境先验知识。本文提出DAEDALUS，通过自我生成的练习任务自举可复用的智能体记忆：由探索者智能体在环境中自主发现行为约定，将成功经验固化为记忆供后续任务复用。在多个智能体基准上，该方法无需现成任务与验证器即显著降低了任务失败率与执行步数。
+
+- **Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions** `[API]` — [2610.06191](https://arxiv.org/abs/2610.06191) | [GitHub](https://github.com/bennidict23/judged-useless-queried-anyway)
+  > 当工具持续返回无用结果时，智能体应当停止依赖它。本文在可控的检索环境中分离智能体对结果的判断与其实际行动，通过对比相同步数下长短无用结果序列后的停止行为来识别证据驱动的停止。实验覆盖七个主流智能体：它们对失效来源的结果给出无用判断的比例高达97%到100%，却很少基于该判断停止调用；提示语线索改变停止时机而非停止依据，允许凭记忆回答或开启特定推理模式可带来与证据无关的提前停止。代码与数据已开源。
+
+- **MEND: RL For Flow Models via Proximal Velocity Matching** `[RL]` `[扩散模型]` — [2610.05954](https://arxiv.org/abs/2610.05954) | [GitHub](https://github.com/shreshthsaini/MEND-RL)
+  > 流模型的奖励后训练要么在KL惩罚或冻结参考模型下对模型自身样本重新加权、需数千步更新，要么反向传播奖励移动所有样本而不考虑移动是否值得。本文提出MEND，一种建立在近端速度匹配上的强化学习方法：在每个提示组内设置奖励上限使已高分样本不再移动，对低于上限的样本沿奖励梯度提议移动，仅当奖励增益超过二次位移代价时才接受，再回归到所得速度目标，全程无KL项与冻结参考模型。实验表明MEND在文本与图像奖励后训练上样本效率与最终奖励均优于基线。
+
+- **Cross-Lingual Alignment for Decoder-Only Models using MoE Routers** `[微调]` — [2610.01921](https://arxiv.org/abs/2610.01921) | [GitHub](https://github.com/lucasbandarkar/xl_moe_alignment)
+  > 跨语言对比学习是多语编码器训练的核心组件，但解码器-only大模型因多语分词不一致而无法在隐状态上施加辅助对齐损失。本文提出利用MoE路由器输出作为跨语言对齐目标的新方法：在对比学习框架下用路由器输出的分布相似性替代隐状态对齐，规避分词差异问题。在多语理解与跨语言迁移评测上，该方法提升了 decoder-only 模型的跨语言表示对齐度与下游任务迁移性能，并开源了对比训练、路由分析与语言评测的完整代码。
