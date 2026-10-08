@@ -5749,3 +5749,38 @@
 
 - **Cross-Lingual Alignment for Decoder-Only Models using MoE Routers** `[微调]` — [2610.01921](https://arxiv.org/abs/2610.01921) | [GitHub](https://github.com/lucasbandarkar/xl_moe_alignment)
   > 跨语言对比学习是多语编码器训练的核心组件，但解码器-only大模型因多语分词不一致而无法在隐状态上施加辅助对齐损失。本文提出利用MoE路由器输出作为跨语言对齐目标的新方法：在对比学习框架下用路由器输出的分布相似性替代隐状态对齐，规避分词差异问题。在多语理解与跨语言迁移评测上，该方法提升了 decoder-only 模型的跨语言表示对齐度与下游任务迁移性能，并开源了对比训练、路由分析与语言评测的完整代码。
+
+## 2026年10月8日
+
+- **nanoMuse: An Open-Source Personal Agent for Every Device You Own** `[API]` — [2610.08699](https://arxiv.org/abs/2610.08699) | [GitHub](https://github.com/nano-muse/nanoMuse)
+  > 提出nanoMuse——Meta Muse的开源对应物，以GPL-3.0协议开源，将个人智能体部署到用户拥有的每台设备（手机、电脑）上，跨设备共享一段持续数周的对话，支持主动发言并记录行为以便追责。论文用五个问题和三个展望界定「个人智能体」这一软件形态，并基于公开资料与生产级prompt副本解析Muse的架构设计，为个人智能体研究提供了首个完整开源实现。
+
+- **Recursive Game Creator: An Agentic Product-Level Experience-Oriented Game Harness** `[API]` — [2610.08621](https://arxiv.org/abs/2610.08621) | [GitHub](https://github.com/IMBALDY/RecursiveGameCreator)
+  > 提出面向玩家体验的游戏开发harness，把agentic游戏开发从「能运行」推进到「好玩」。框架含Designer、Builder、Player、Reviewer四组件：Designer把指令与反馈转为计划，Builder生成候选游戏，Player经程序化接口创建可复用策略、收集多样游戏轨迹以规避GUI采样偏差，Reviewer用轨迹级指标诱导玩家偏好，实验表明该流程能持续提升游戏娱乐性。
+
+- **Semifactual Credit-Augmented Policy Optimization** `[RL]` — [2609.40360](https://arxiv.org/abs/2609.40360) | [GitHub](https://github.com/DtYXs/SCAPO)
+  > 针对GRPO为响应内每个token分配相同outcome advantage、可能强化对任务无关prompt特征的虚假依赖这一问题，提出因果启发的SCAPO算法。通过半事实prompt干预实验揭示token级敏感性的显著差异，据此给高漂移token分配抑制性信用、低漂移token保留标准信用。实验显示仅解码时抑制高漂移token即可不更新权重提升推理准确率，SCAPO进一步提升GRPO训练效果。
+
+- **VIEScore2: Unified Image Evaluation with Spatially Grounded Explanations** `[VLM]` `[RL]` — [2610.00994](https://arxiv.org/abs/2610.00994) | [GitHub](https://github.com/TIGER-AI-Lab/VIEScore2)
+  > 提出统一图像生成与编辑评估的模型VIEScore2，单次前向同时输出质量分数与缺陷位置。该方法将图像表示为NxN网格，文本原生的网格表示为异质空间监督提供统一接口，并支持直接可验证的后训练目标；基于Qwen3-VL在38K条分数、定位及联合监督数据上SFT，再用GRPO结合单元级Dice重叠、分数精度和格式合法性奖励优化缺陷定位。评估器在多个生成与编辑基准上取得领先，且空间定位结果具备可解释性。
+
+- **On KL-Regularized Policy Optimization** `[RL]` — [2610.08963](https://arxiv.org/abs/2610.08963) | [GitHub](https://github.com/yifanzhang-pro/KLPO)
+  > 研究异步RL中LLM agent训练易被忽视的问题：rollout来自陈旧checkpoint、推理引擎概率与训练器不一致。提出KLPO框架，将KL正则锚定在采样器上，正则化改进步骤有闭式Gibbs解，再用最小二乘在采样器自身轨迹上拟合log-ratio最优条件，绕过重要性权重，并对回归截距做profile消去难解的配分函数。长episode场景下避免了GRPO逐prompt组采样的高昂开销。
+
+- **Minimal Witness Reinforcement Learning** `[RL]` — [2610.07226](https://arxiv.org/abs/2610.07226) | [GitHub](https://github.com/TSUITUENYUE/MWRL)
+  > 将「产生某一结果的最小充分条件集合」这一跨计算与科学的常见问题形式化为最小见证识别，并提出MWRL方法。标准RL往往只找到一个解或冗余解，MWRL取成功提案所认证集合的并集，按「若移除该提案组并集将损失的覆盖」为每个提案分配信用，该信用直接导出问题定义，仅用单个黑盒验证比特就统一了对最小性和备选解恢复的要求。实验验证了该方法在发现多样最小 witnessing 条件上的有效性。
+
+- **WebFovea: When the Model Is Right but the Click Is Wrong -- Reliable Round Trips for Vision-Based Web Agents on Live Websites** `[VLM]` `[API]` — [2610.03036](https://arxiv.org/abs/2610.03036) | [GitHub](https://github.com/jianganghan/WebFovea)
+  > 提出视觉网页agent WebFovea，在WebRetriever Challenge 2026中以57.0分获第二名。论文指出强多模态LLM是必要非充分条件：模型决策经harness到达浏览器，每步须做好四件事——回复解析为动作、动作在页面生效、结果准确回报、模型看到所需信息，真实网站上大量失败发生在其中某一环节。WebFovea围绕这四个环节设计可靠往返机制，系统提升端到端网页任务完成率。
+
+- **From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery** `[无需训练]` `[API]` — [2610.09684](https://arxiv.org/abs/2610.09684) | [GitHub](https://github.com/WangXinglin/PersonTTS)
+  > 将个性化测试时扩展（TTS）形式化为发现可执行控制器以最大化用户特定需求（准确率、延迟、成本联合约束）的满足率，而非只推进单维Pareto前沿。提出摊销式agent策略发现框架PersonTTS：通过需求匹配的控制器初始化和搜索经验复用，把为新用户画像做策略发现的昂贵过程摊销掉，避免每次从头搜索。实验证明该框架能以更低开销为不同用户画像生成高满足率的推理策略。
+
+- **Internalizing Agent Experience into Diffusion Model Weights via On-Policy Context Distillation** `[扩散模型]` `[API]` — [2610.07250](https://arxiv.org/abs/2610.07250) | [GitHub](https://github.com/Yummytanmo/D-OPCD-CoEvolution)
+  > 将包裹图像生成模型的agent harness（记忆、技能、工作流编排、结果验证、迭代改写prompt）的增益，通过On-Policy Context Distillation蒸馏进扩散模型权重（D-OPCD），使模型仅凭原始query即可保留部分harness收益，无需运行时维护完整harness。实验表明该方法能把harness的提示工程能力内化到权重中，提升文生图质量。
+
+- **UniSkill: Learning Actor-Aligned Skill Proposals for an Evolving Policy** `[MeM]` `[API]` — [2610.10164](https://arxiv.org/abs/2610.10164) | [GitHub](https://github.com/LimOkii/UniSKill)
+  > 针对LLM agent中技能库与策略共同演化时，用「技能在后续训练步被复用」奖励技能提案会混淆技能收益与actor自身进步的问题，提出UniSkill。该方法让共享策略在与环境交互的同时提出技能库编辑（新增、更新或不改），并用对比动作反馈——衡量把检索技能替换为提案动作的策略概率变化——提供actor对齐信号，解耦两者。ALFWorld和WebShop实验表明技能库随策略演化持续改进任务表现。
+
+- **EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory** `[微调]` — [2610.10533](https://arxiv.org/abs/2610.10533) | [GitHub](https://github.com/ModalityDance/EngramEdit)
+  > 利用DeepSeek Engram等条件记忆架构以输入n-gram查找学到的嵌入、实现知识存储与通用计算解耦的特性，提出EngramEdit实现LLM事后知识更新而冻结Transformer主干。方法先计算目标记忆表示，使模型在事实的多种表述下都预测更新后的事实，再联合更新相关n-gram嵌入并施加约束避免干扰其他事实。实验表明其能有效注入新知识且副作用小，为模型知识维护提供免重训的新途径。
