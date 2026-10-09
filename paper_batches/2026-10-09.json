@@ -1,0 +1,106 @@
+[
+  {
+    "date": "2026-10-09",
+    "title": "AgentGarten: Code Worlds for Evolving Agents",
+    "arxiv_id": "2610.12374",
+    "github": "https://github.com/MirroS-Lab/AgentGarten",
+    "abstract": "提出AgentGarten框架，将模拟器与游戏引擎通过共享神经渲染器耦合，构建实时交互式智能体训练环境。模拟后端维护持久世界状态并执行程序定义的交互规则；渲染器将预训练视频模型适配到几何条件，提出Adversarial Forcing蒸馏方法：通过精确重放使历史预填充可微，让后续预测的损失反向更新渲染器对历史观测的编码，并加入真实数据对抗监督提升视觉质量，同时优化推理实现实时交互。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "MC-Sparse: Deconstructing and Closing the Dense-Sparse Attention Gap in Diffusion Transformers",
+    "arxiv_id": "2610.06801",
+    "github": "https://github.com/dodododddo/mcsparse",
+    "abstract": "针对扩散Transformer稀疏注意力高稀疏度下质量退化的问题，通过oracle对照实验将退化归因于token分组约束、交互选择不准、被丢弃token的注意力贡献。提出免训练MC-Sparse框架：按精确注意力概率选取KV token，相似query组织为瓦片对齐组高效执行，缓存query分组、KV索引与稠密-稀疏残差跨去噪步复用。在视频与3D生成上保真度和加速均优于现有基线，无可视质量损失。",
+    "tags": ["扩散模型", "无需训练"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "U-Space: Uncovering When and Why Uncertainty Arises in Language Models",
+    "arxiv_id": "2610.09087",
+    "github": "https://github.com/s2labres/U-Space",
+    "abstract": "提出U-Space低维子空间方法，利用机制可解释性刻画语言模型在推理过程中不确定性的产生位置与演化轨迹，克服了现有不确定性量化方法只能输出标量估计、需多次重复生成或额外训练组件的局限。针对生成长度与不确定性和正确性强相关、可能混淆估计器预测力的问题，U-Space能分离长度效应与真正的不确定性特异信息，揭示模型从何时开始、因何变得不可靠，为高风险决策场景下判断何时信任模型回答提供可解释依据。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Post-Training Frontier Text-to-Image Models by Composing Preference and Rubric Rewards",
+    "arxiv_id": "2610.02967",
+    "github": "https://github.com/ideogram-oss/ideogram4",
+    "abstract": "提出文生图模型后训练方法，将互补奖励信号组合优化：偏好奖励基于大规模人类偏好数据以Bradley-Terry目标训练，捕捉整体美学与感知偏好；细则奖励显式评估提示忠实度等属性并防止奖励黑客。针对异质奖励组合，证明朴素加权平均导致次优优化，给出更有效的组合策略平衡偏好优化与细则满足。RL训练的Flux2dev在Arena文生图榜单Elo较基座提升69分，后训练的Ideogram模型亦显著提升。",
+    "tags": ["扩散模型", "RL"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "What Did the Agent Actually Do? Evidence-Grounded Oversight for Long-Horizon Agents",
+    "arxiv_id": "2610.06406",
+    "github": "https://github.com/zhk-lab/EBG",
+    "abstract": "针对长程智能体自主执行中用户难以判断哪些决策需核验的问题，提出免训练的证据锚定行为图（EBG）：将带来源链接的证据聚合为「行为」并组织成图，向监督者提供面向任务的视图以理解智能体行为。构建软件工程基准AgentMonBench，覆盖需求-行为对齐与关键决策感知两个维度。八个模型的实验表明，EBG在多数设定下改进决策识别与证据定位，增益随输入规模扩大保持稳定。",
+    "tags": ["API", "无需训练"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "ViSkill: Reinforcing VLM Agents with Evolving Visual-Native Skills",
+    "arxiv_id": "2610.12403",
+    "github": "https://github.com/ZJU-REAL/ViSkill",
+    "abstract": "提出视觉原生技能学习框架ViSkill，将成功交互编码为复合视觉技能卡片供VLM智能体直接检索，避免文本化丢失几何结构。检索技能同时引导推理与奖励塑造，新成功轨迹再蒸馏回技能库，形成技能积累与策略改进相互促进的闭环，并设冷启动机制加速早期学习。在Sokoban、FrozenLake和PrimitiveSkill上总体成功率0.89，冷启动升至0.91，超越所有闭源开源基线，收敛快于标准PPO。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "SanSi: A Looped Typed Decision Model for System 1.5 Thinking",
+    "arxiv_id": "2610.07730",
+    "github": "https://github.com/minnesotanlp/Sansi",
+    "abstract": "研究介于单次前向类型化决策与生成式推理之间的「循环」机制：同一组层递归应用多次后再读出答案，每次循环可修订隐状态，称为System 1.5思考。提出SanSi，将预训练循环语言模型转化为类型化决策模型，每次循环后读取选项概率并以严格评分规则训练，单一模型适配一至八次循环的任意预算。在10027个测试决策上达72.0%准确率，较同尺寸非循环模型高13.5个百分点，且可泛化到更深的推理深度。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-09",
+    "title": "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
+    "arxiv_id": "2609.35433",
+    "github": "https://github.com/yhangchen/ReSPO-code",
+    "abstract": "指出RLVR中rollout复用带来的off-policy偏差会诱发裁剪策略优化的梯度饥饿问题：裁剪抑制低权重尾部的欠生成正响应，却让高权重尾部的过生成负响应主导梯度。提出ReSPO，以α散度变分目标导出的双分支序列级核替代硬裁剪，正分支保留欠生成正响应梯度，负分支抑制过生成负响应。在稠密与MoE Qwen3模型上加速早期优化、提升最终分数，能有效利用因策略漂移落入低权重尾部的长正向推理轨迹。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Retrieval-Centric Deep Learning in Growing Nonparametric Neural Networks",
+    "arxiv_id": "2610.03858",
+    "github": "https://github.com/paradigms-of-intelligence/rcdl",
+    "abstract": "研究以增长式非参数神经网络替代固定权重矩阵的通用学习层：训练时为每个数据点存储键值表示，推理时经注意力检索重组，网络随数据增长。针对将线性注意力学习规则朴素套用到高级核会导致优化失去原则性的问题，基于RBF与softmax类核推导函数梯度学习规则，建立「以检索为中心」的RCDL范式，并在图像分类与合成教师任务上验证其性能与学习高效性。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-09",
+    "title": "REMORY: Learning Residual Memory for Context Compaction",
+    "arxiv_id": "2610.11287",
+    "github": "https://github.com/1ring2rta/Remory",
+    "abstract": "提出REMORY神经记忆网络，为长程智能体的上下文压缩补充有界软记忆token序列：网络学习生成记忆token，使冻结LLM仅凭摘要加记忆token即可逼近使用完整历史的续写效果，记忆token以摘要为条件追加其后，类似序列维度的残差连接。在SummHay上仅用5.2%输入位置即接近全上下文联合得分；多个长程智能体基准上Qwen与GLM系列模型一致受益，工具重复输出与错误大幅减少。",
+    "tags": ["MeM", "微调"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals",
+    "arxiv_id": "2610.11570",
+    "github": "https://github.com/pixeli99/InfiLoop",
+    "abstract": "指出循环Transformer迭代次数增加时推理准确率反而下降：噪声状态更新覆盖正确的中间推理、甚至破坏已完成解，后续循环难以从退化表示中恢复。提出循环原生残差连接InfiLoop，结合内容加权与可学习时间衰减对循环状态维持运行摘要，精确流式递推使聚合内存不随循环数增长，自适应更新抑制不可靠提议、保留有用中间状态。7M模型在多项推理任务上超越现有递归架构，数独准确率达97.9%。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Can AI Agents Make Open-Ended Scientific Discovery? Evidence from Station",
+    "arxiv_id": "2610.08927",
+    "github": "https://github.com/dualverse-ai/station-open-reseach",
+    "abstract": "构建开放世界科研生态模拟环境Station，考察AI智能体能否自主开展开放式科学发现，针对开放任务缺少中间指标的问题，提出监督者机制与周期性元反思维持持续探索。以三篇ICLR口头报告的研究问题构造任务（隐藏结论、禁用网络），衡量智能体重新发现成果的比例。Station平均重新发现62.7%的论文判据，远超Codex多智能体（15.4%）与AI Scientist-v2（14.4%-20.6%）。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Investigating the Role of Reasoning-Language Alignment in Monolingual Retrieval-Augmented Generation",
+    "arxiv_id": "2610.03136",
+    "github": "https://github.com/soliver1/reasoning-language-alignment",
+    "abstract": "研究RAG场景下推理语言对齐的作用：已有工作表明强制模型用非英语推理会降低准确率，但该结论仅适用于短提示场景，在需阅读整合大量目标语言检索证据的RAG中是否成立尚不明确。构建全单语德语RAG问答测试台，改变智能体RAG系统的强制推理语言后发现：推理语言与查询及检索文档语言对齐有收益，强制德语推理优于强制法语（尽管模型法语基准更高），说明收益来自语言对齐而非语言能力，且证据越长优势越明显。",
+    "tags": ["API"]
+  }
+]
