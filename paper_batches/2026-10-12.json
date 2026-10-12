@@ -1,0 +1,114 @@
+[
+  {
+    "date": "2026-10-12",
+    "title": "DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models",
+    "arxiv_id": "2610.12572",
+    "github": "https://github.com/vanzll/DiffusionART",
+    "abstract": "针对扩散模型在线RL微调效率低、不稳定的问题，提出DiffusionART：将每个prompt的奖励聚合为共享的奖励改进方向，消除前向-反向一致性力，并以信任域掩蔽的二次更新替代需调参的EMA离策略训练，无需可微奖励模型。在HunyuanVideo-13B上以少12倍GPU时长达标DiffusionNFT与Flow-GRPO-Fast的晚期奖励，训练奖励分别高出28.8%和53.0%。",
+    "tags": ["RL", "扩散模型"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "S-Space: Exploring Spatial Workspace in Multimodal Language Models",
+    "arxiv_id": "2610.13527",
+    "github": "https://github.com/mirros-lab/s-space",
+    "abstract": "揭示多模态大语言模型内部存在一个线性子空间S-Space：物体token的表示沿水平、垂直与距离轴编码连续坐标，构成模型的内部空间工作区。感知将物体位置写入其中以支持空间判断，内部推理会对其进行视角变换，语言回答则选择性读取；因果干预可改变空间判断而基本不影响非空间回答。诊断实验进一步发现：MLLM能形成良好的空间表示，但空间变换能力存在瓶颈。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "SoftwareGym: Scaling Computer-Use Agent Training with Diverse Synthesized Software Environments",
+    "arxiv_id": "2610.12611",
+    "github": "https://github.com/MrKiing-Jin/SoftwareGym",
+    "abstract": "提出自动化合成GUI软件环境的流水线SoftwareGym：生成结构多样的界面设计并落地为可运行应用，通过GUI评估与迭代修复保证可靠性，合成12大类共182个应用，平均GUI任务通过率91.5%。据此构建120任务的SoftwareGym-Bench，用采集的轨迹训练computer-use agent，使其在分布外的OSWorld基准上Pass@3从41.39%提升至56.97%。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs",
+    "arxiv_id": "2610.07987",
+    "github": "https://github.com/FFY0/VisionWeave",
+    "abstract": "提出弹性视觉表示编织能力：门控空间池化器在共享MRoPE坐标内构建与细粒度并存的粗粒度表示，粒度路由器学习内容自适应分配，让多模态大模型端到端学习在何处、以何粒度分配视觉表示。仅用自蒸馏在Qwen3.5-4B验证后，以超3万A100 GPU时扩展至Qwen3.8-27B，平均节省43.0%视觉token，八个基准保留98.9%原生性能，优于固定50%节省目标的剪枝基线（88%）。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "Work2Skill: Capturing Human GUI Experience for Reusable Agent Skill Induction",
+    "arxiv_id": "2610.12984",
+    "github": "https://github.com/china-qijizhifeng/Work2Skill",
+    "abstract": "提出从人类GUI演示归纳可复用agent技能的框架Work2Skill。基础设施WorkRecorder对齐录屏、键鼠事件与无障碍树，构建GUI演示数据集WorkDemo-350；技能归纳方法按需检视证据，产出含工作流规则与步骤依赖的可复用技能。为四个执行模型装配技能后，较无技能基线在MyPCBench上提升4.67–10.54分，在OSWorld-Verified子集上提升3.11–7.50分。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+    "arxiv_id": "2610.12341",
+    "github": "https://github.com/THU-CST-SAST/AAArena",
+    "abstract": "提出对抗式启发式学习范式AHL：模型权重固定，由AI agent充当学习引擎，从有限对局经验中迭代改进可执行的游戏策略。基准AAArena含12个真实对抗游戏与1920个人类程序，agent需在固定预算内解读规则、选择对手、分析复盘并提升排名。Opus5.5配Claude Code获6枚金牌；对手选择与密集反馈有助于策略改进，但规则复杂的游戏仍无人登顶，暴露游戏理解、策略实现与长程开发的挑战。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "PolyOCR-Venus: Unified OCR Foundation Models for Text-Centric Visual Intelligence",
+    "arxiv_id": "2609.37712",
+    "github": "https://github.com/inclusionAI/PolyOCR-Venus",
+    "abstract": "提出统一OCR基础模型家族PolyOCR。共享的指令遵循框架配合大规模数据引擎，将异构视觉资源转化为质量校验的OCR监督；提出能力引导的策略优化CGPO，结合验证器GRPO与按教师可靠性、师生能力差距做样本路由的on-policy蒸馏。同时发布修正标注与任务对齐评分的OCRBench v2.1，在CC-OCR、OmniDocBench等多个基准上达到SOTA或高度竞争力的性能。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "Contextual Correction of Parallel Draftsfor Speculative Decoding",
+    "arxiv_id": "2610.12570",
+    "github": "https://github.com/two-delta/DCOCO",
+    "abstract": "针对并行推测解码中草稿块内token无法访问前序草稿结果的问题，提出DCOCO：不急于提交各位置的top预测，而是保留多个候选token，跨相邻草稿位置并行评估上下文兼容性，低开销实现上下文感知的token选择。四种验证器骨干、十个基准的所有配置均取得最高平均吞吐，最高较原生解码加速6.6倍；4–32并发请求下仍领先最强对手6–23%，其他串行校正器在高负载下反而不如未校正的DFlash。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "SWE-Duel: Towards a Self-Scaling Arena for Coding Agents",
+    "arxiv_id": "2610.12569",
+    "github": "https://github.com/sweduel/SWE-Duel",
+    "abstract": "提出自扩展的编程agent竞技场SWE-Duel：任务评测时即时生成、无内容可泄露。红方实现新功能并植入隐蔽bug，PR须通过全部既有与特性测试且恰好失败于bug测试，同agent新会话盲修成功才被采纳；蓝方不知情评审后双方交换角色。11个组合在15仓库五种语言对战1500回合：GPT-5.5配Codex以98.3%修复率居首，Claude Opus 4.8以27.3%红方胜率成最强命题者。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators",
+    "arxiv_id": "2610.13944",
+    "github": "https://github.com/InternLM/InstantFusion",
+    "abstract": "发现独立训练的扩散/流图像生成器具有相似的隐空间组织结构，直接交接中间状态也能保留粗粒度视觉内容，据此提出共享隐接口InstantFusion：模型专属隐自编码器将各生成器中间状态投影到共享隐空间再解码到目标生成器，以同图同噪声水平的中间状态对齐与局部去噪速度同步约束。训练后去噪可在冻结生成器间无缝切换，无需逐对模型训练专用映射，在加速、多偏好组合、跨架构on-policy蒸馏等任务上展示通用性。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "Judging in Latent Space: Efficient Generative Reward Modeling via Semantics-Preserving Compression",
+    "arxiv_id": "2610.09788",
+    "github": "https://github.com/EADMO/LatentGRM",
+    "abstract": "提出潜空间生成式奖励建模框架LatentGRM：利用rubric引导评估的结构，将评估轨迹语义分块、压缩为紧凑连续表示，无需生成文本评估即可完成成对偏好判断；另设解释器从轨迹重建评估文本，离线检视压缩保留的信息。同等训练数据与骨干下，4B/8B规模的偏好聚合准确率与显式SFT评审相当；8B版将评估轨迹压缩8.9–9.2倍，vote@5下评审推理总时长降低6.1–7.0倍。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "From Given to Gathered Evidence: Agentic Learning for Longitudinal Medical Reasoning",
+    "arxiv_id": "2609.39566",
+    "github": "https://github.com/VinyehShaw/CASE",
+    "abstract": "提出临床证据搜寻agent系列CASE及后训练框架，基于UK Biobank构建基准：4739名参与者、50401个问题，agent自主选择访视、器官、模态与工具。以14734条前沿模型轨迹SFT迁移证据搜寻工作流，再做自身交互上的强化学习，辅以自蒸馏与rubric反馈。基于Qwen3-VL-8B的agent较GPT-5.4与Claude Opus 4.8分别取得超16%与10%的相对提升。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "MixTok: Adaptive Visual Tokenization with Global 1D Tokens and Sparse 2D Refinement",
+    "arxiv_id": "2610.13181",
+    "github": "https://github.com/LCGLiChenge/MixTok",
+    "abstract": "提出混合视觉tokenizer MixTok：以紧凑1D全局表示聚合全局信息，路由器按精修优先级对候选位置排序，在目标预算内决定每张图的稀疏2D token数，高分位置用2D token特征替换1D表示恢复的空间特征，共享解码器重建图像。在ImageNet 256×256上取得有竞争力的重建与生成性能：约128 token时rFID达1.195，约131 token时gFID达1.95。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-10-12",
+    "title": "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation",
+    "arxiv_id": "2610.00423",
+    "github": "https://github.com/apd-smcclendon/massive_activations_2",
+    "abstract": "系统追踪transformer中巨激活的生命周期：sink承载通道随种子不同但训练早期即稳定，长训练中sink集中到少数冗余载体，梯度衰减跟随sink token的集体RMS幅度。核心发现是权重衰减因果性控制全局激活尺度：受控继续训练中移除衰减则尺度持续上升，保留衰减即使学习率不变也下降。平衡模型显示峰值时间随衰减系数近似对数线性移动，峰值幅度按λ的-1/2次幂缩放。",
+    "tags": []
+  }
+]
