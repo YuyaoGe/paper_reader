@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-10-13",
+    "title": "GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives",
+    "arxiv_id": "2609.39601",
+    "github": "https://github.com/groundingpi/GroundingPI",
+    "abstract": "提出4B视觉定位基础模型GroundingPI，将点与框表示为共享词汇表中的量化坐标统一生成，结合多模态与空间预训练、监督微调和GRPO强化学习训练。在覆盖11种感知能力的34个定位基准上与44个基线对比取得平均73.68%的新SOTA，超越更大的GPT-6 Astra（71.54%）。作为视觉骨干还能提升机器人操作与自动驾驶性能，RoboTwin 2.0四种分布外设定下相对最强骨干提升最高达24.8%。",
+    "tags": ["RL", "VLM"]
+  },
+  {
+    "date": "2026-10-13",
+    "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To",
+    "arxiv_id": "2610.11765",
+    "github": "https://github.com/thinking-inertia/code",
+    "abstract": "研究大语言模型的「不思考」行为。提出三层评估体系：空思考率衡量纯答案遵从度、问题与答案前文本的相关性衡量指令感知、LLM评审显式推理率，从而区分仅输出答案、相关但无推理、显式推理三种模式。在六种提示干预、六个模型与布尔/选择/开放式三类题型上实验发现：显式禁止思考仍无法可靠消除可见推理，模型存在「思维惯性」，答案空间越开放推理越普遍；布尔与选择题精度保持稳定，开放式任务则呈现精度与简洁性的权衡。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-10-13",
+    "title": "GroundAnything: Reconciling Parallel Decoding with Precise Visual Grounding at Flash Speed",
+    "arxiv_id": "2609.39600",
+    "github": "https://github.com/groundingpi/GroundAnything",
+    "abstract": "提出4B定位基础模型GroundAnything，将视觉定位视为视觉证据提取，用双向扩散块去噪替代自回归串行解码，使空间假设并行涌现并迭代精化。训练结合公开数据定位预训练、AR到扩散的直接转换与联合目标、监督微调及GRPO强化后训练。30个定位基准上其自回归版本以72.42%创下同规模模型新SOTA；扩散版本平均61.75%，超越快速MTP方法LocateAnything的53.32%；自投机解码较AR提速4.51倍且COCO F1仅降0.74个百分点。",
+    "tags": ["RL", "VLM", "扩散模型"]
+  },
+  {
+    "date": "2026-10-13",
+    "title": "Relevance Does Not Imply Applicability: Experience Activation for Personal GUI Agents",
+    "arxiv_id": "2609.33304",
+    "github": "https://github.com/fyzhang1/ExpActivator",
+    "abstract": "面向个人GUI智能体，发现检索到的相关历史经验主要在回合第一步有帮助，对其余90%以上步骤增益有限，指出「相关不等于适用」：相关性在任务层判定，适用性取决于决策时刻的情境。提出免训练框架ExpActivator，将个性化重构为经验激活：执行时在冻结GUI骨干的隐空间匹配当前屏幕与历史状态并供给对应动作作参考；执行前仅当时间与情境充分支持时才激活周期性意图，否则弃权。在四个GUI骨干上均取得一致性能提升。",
+    "tags": ["无需训练", "MeM"]
+  },
+  {
+    "date": "2026-10-13",
+    "title": "SpatialASM: Internalizing Active Mentalization for Spatial Reasoning",
+    "arxiv_id": "2610.13832",
+    "github": "https://github.com/InternLM/SpatialASM",
+    "abstract": "提出SpatialASM框架，通过训练时空间模拟将主动空间心理化能力内化到大视觉语言模型中。利用以观察者为中心的新视角生成器把假设视角锚定在视觉证据上，构造两类互补监督：显式ASM轨迹教会模型何时、如何自适应调用视角规划与想象；自动构建的视角采择任务进一步强化条件化场景想象。在七个从基础感知到跨视角、多图与视角变换推理的空间基准上，四种LVLM骨干均获得提升且保持原有通用视觉能力，ASM轨迹合成提供了可扩展的数据路径。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-10-13",
+    "title": "ARCS: Towards Precise Text-to-SQL via Structured Disambiguation",
+    "arxiv_id": "2610.09396",
+    "github": "https://github.com/megagonlabs/tabulaflow",
+    "abstract": "提出结构化消歧新范式，以显式、受约束的交互替代自由式对话澄清，解决真实部署中文本到SQL系统因用户提问歧义而偏离真实意图的问题。构建首个包含自然产生、无约束歧义的文本到SQL基准ARCS，基于真实数据库完整标注全部歧义点、解释与对应SQL。实验表明歧义存在时该任务仍极具挑战：gpt-6-sol端到端执行准确率仅51%，无任何开源模型超过27%，凸显结构化消歧交互与模型能力的双重改进空间。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-13",
+    "title": "Initialization Improves LLM-Driven Discovery",
+    "arxiv_id": "2610.00707",
+    "github": "https://github.com/msakarvadia/llm_optimizer",
+    "abstract": "研究LLM迭代优化式自动发现（算法、定理、药物等）中历史迭代种群与最终发现成功的关系。推广既有harness设计，提出含12个harness的「Modular」套件并在5类发现任务上评测，发现发现成功率对harness设计高度敏感，且普遍存在多样性骤降的模式坍塌失败。揭示早期发现性能可预测最终成功，据此提出通用干预：先并行探索以初始化后续迭代优化。该方法跨多种harness与目标应用带来一致提升，证实了初始化对LLM驱动发现的关键作用。",
+    "tags": ["API"]
+  }
+]
