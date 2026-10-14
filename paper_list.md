@@ -5892,3 +5892,47 @@
 
 - **Initialization Improves LLM-Driven Discovery** `[API]` — [2610.00707](https://arxiv.org/abs/2610.00707) | [GitHub](https://github.com/msakarvadia/llm_optimizer)
   > 研究LLM迭代优化式自动发现（算法、定理、药物等）中历史迭代种群与最终发现成功的关系。推广既有harness设计，提出含12个harness的「Modular」套件并在5类发现任务上评测，发现发现成功率对harness设计高度敏感，且普遍存在多样性骤降的模式坍塌失败。揭示早期发现性能可预测最终成功，据此提出通用干预：先并行探索以初始化后续迭代优化。该方法跨多种harness与目标应用带来一致提升，证实了初始化对LLM驱动发现的关键作用。
+
+## 2026年10月14日
+
+- **Agent-Reflex: Teaching Language Agents to Act Reflectively** `[RL]` — [2610.17953](https://arxiv.org/abs/2610.17953) | [GitHub](https://github.com/RUC-NLPIR/Agent-Reflex)
+  > 提出Agent-Reflex三阶段框架，激励语言智能体主动反思与故障恢复：先经反思技能发现（RSD）注入工具反馈扰动、挖掘成败样本对并总结可复用反思元技能；再经反思监督微调（ReSFT）强化自我反思与纠错；最后用ORPO结合噪声交互下的agentic RL与在线蒸馏。基于Qwen3-8B在五个长程工具使用基准达58.6分、AgentNoiseBench达29.1，超越环境扩展与反思基线。
+
+- **Jeva: System One Models from First Principles** — [2610.18773](https://arxiv.org/abs/2610.18773) | [GitHub](https://github.com/LiQiiiii/Jeva)
+  > 指出System One模型直接预测答案的设计忽视了决策问题的结构需求：区分无答案与不确定、排列不变、候选集可扩展、请求无关计算可缓存。提出决策原生架构Jeva：共享编码器独立表示请求与各选项，决策栈仅在不可变选项记忆上精炼请求状态；对称聚合实现排列等变，共享评分支持可变候选集，独立覆盖率估计给出显式空结果，统一Choice、Noul、Score输出，决策与空答案检测表现优异。
+
+- **AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards** `[RL]` `[VLM]` — [2610.18860](https://arxiv.org/abs/2610.18860) | [GitHub](https://github.com/microsoft/AesCode)
+  > 针对代码模型无法感知渲染效果导致视觉制品审美欠佳的问题，提出AesCode：以同提示生成的图像作美学引导，将目标表示为属性可归属的设计图，并导出解耦跨模态奖励——确定性验证器给可解析属性打分，VLM评委按与图元素绑定的量规评估其余属性，经逐通道归一化的强化学习联合优化空间规划、审美与可验证正确性。配套基准将正确性与视觉质量分开评分，视觉分与人工判断高度一致。
+
+- **TPPO: Tracking-Value PPO For Language Model Reasoning** `[RL]` — [2610.16794](https://arxiv.org/abs/2610.16794) | [GitHub](https://github.com/LINs-lab/TPPO)
+  > 指出标准critic在稀疏终端奖励下难以追踪前缀价值的演化，而相邻前缀价值存在对数几率空间的加性分解。据此提出TPPO：以累积价值参数化将逐位置标量求和为价值logits，并以重建价值的终端结果监督学习。在Qwen3-4B-Base和Qwen3-8B-Base上数学推理较PPO提升7.0和8.4分，泛化亦改善，收益还扩展到Qwen2.5-Math等模型及countdown任务，价值追踪更准确。
+
+- **Harness^2: Recursive Agent Harnessing for an Open World** `[API]` — [2610.14224](https://arxiv.org/abs/2610.14224) | [GitHub](https://github.com/google-research/harness2)
+  > 面向开放世界递归自我改进中无真值验证器、且过程高度任务特定的挑战，提出即插即用的Harness^2双层递归框架：任务级递归以对比式「提出-探测-组合」在无真值下引导harness修改，harness级递归提炼修改经验以持续改进、适应新任务。在三个专业基准上，单步即在GLM-5与Gemini 3.5 Flash上带来最高11.5分、4.5分与11.8个百分点提升，随递归预算增加收益继续增长。
+
+- **Scoring Higher, Answering Worse: Mitigating Reward Hacking in Rubric-Based RL via Protocol-Level Rubrics** `[RL]` — [2609.38847](https://arxiv.org/abs/2609.38847) | [GitHub](https://github.com/Estrellajer/ProRubric)
+  > 揭示Rubric-RL中加权求和聚合的结构性弱点：各项标准相互补偿，策略可堆砌无关内容换分，临床咨询中出现「得分更高、回答更差」的奖励作弊。提出ProRubric：保持标准内容不变，仅将其离线分组为协议级维度，仅当维度内全部标准成立且失败条款未触发才计分，优化器无需改动。结果适当性提升10.8分且不损覆盖率，在两个规模上取得七基准最佳平均成绩，证明奖励有效性由聚合方式而非仅验证内容决定。
+
+- **APEX: Asynchronous Prefix Denoising for Extreme Compression** `[扩散模型]` — [2610.12843](https://arxiv.org/abs/2610.12843) | [GitHub](https://github.com/DavidDinkevich/APEX)
+  > 针对潜变量激进压缩的「重建-生成」两难，提出APEX：分层潜空间配合跨通道组异步去噪。自编码器将通道前缀从结构到细节排序，共享去噪器以交错时间步生成各组且不增加token数。在ImageNet-512上，64倍与128倍压缩下所有评估通道数均优于现有方法；训练与采样算力对齐时，在各预算下均胜过256-token模型，低算力优势更大。
+
+- **Learning How to Remember: Memory Modality Selection for GUI Agents** `[MeM]` `[VLM]` — [2610.17928](https://arxiv.org/abs/2610.17928) | [GitHub](https://github.com/dmis-lab/SwitchMem)
+  > 系统研究VLM GUI智能体的记忆模态，发现偏好的记忆表示（文本或视觉）随交互步骤强烈变化，单一静态模态并非最优。据此提出SwitchMem路由框架，在每一步动态选择文本或视觉记忆表示。在三个GUI基准上均超过静态记忆增强基线，验证「记忆模态是逐步依赖的决策而非固定设计」这一论断，仓库含完整训练与多基准推理代码。
+
+- **AReA: Adaptive Receptive-Field Attention for Efficient High-Resolution Diffusion Transformers** `[扩散模型]` `[无需训练]` — [2610.17227](https://arxiv.org/abs/2610.17227) | [GitHub](https://github.com/KooroshRH/AReA)
+  > 指出DiT高分辨率生成中均匀全注意力既是二次成本来源也是分布外失真来源，且注意力感受野在去噪中由全局收窄为局部。提出免训练的AReA：早期对下采样键值做跨尺度粗注意力捕捉全局上下文，后期在逐步缩小的窗口内做局部注意力，感受野随去噪由粗到细。无需额外参数与训练，在多分辨率、多模型上稳定超越最优免训练基线，且更快更省。
+
+- **DeltaTTG: Training Multi-Turn Agents with a Token-to-Go Progress Meter** `[RL]` — [2610.17666](https://arxiv.org/abs/2610.17666) | [GitHub](https://github.com/Xuyan923r/DeltaTTG)
+  > 多轮智能体RLVR依赖稀疏终端奖励，逐步打分又需昂贵外部评估。提出DeltaTTG：以共享进度计量器学习可复用进度信号，监督目标Token-to-Go（距完成剩余token数）可从多样策略轨迹低成本获得；训练时冻结计量器估计的变化在保持轨迹优势符号与尺度的前提下重分配逐步优势。在ALFWorld等三个基准上较GRPO提升5.7和7.2分，GPU时长与GRPO相当，样本效率与域外表现亦改善。
+
+- **A Decade in a Day: Synthesizing Agent-Native Interfaces from Human-Oriented Software Evolution** `[API]` — [2610.15765](https://arxiv.org/abs/2610.15765) | [GitHub](https://github.com/co-evolve-lab/ANIS)
+  > 将软件版本演化作为界面变化来源，构建DeskIF-Bench（6应用255个任务），固定任务与验证器仅变软件版本，量化界面对智能体性能的影响，提炼出可发现性、粒度、可观察性三属性。据此开发ANIS框架合成智能体原生界面：原子界面使DeepSeek V4 Flash与Claude Haiku 4.5成功率分别提升3.8和3.5个百分点，在线token降低约73%，目标级命令进一步提升成功率。
+
+- **ReTerm: Recovery Training for Self-Improving Terminal Agents** `[RL]` — [2610.18484](https://arxiv.org/abs/2610.18484) | [GitHub](https://github.com/twothsnd/ReTerm)
+  > 终端智能体长程执行常因命令错误陷入不可恢复失败。提出ReTerm：构建数据管线产出含恢复演示的ReTerm-10K用于SFT冷启动；ReTerm-GRPO从自身失败状态分叉多个自恢复尝试，按任务成功与否自我改进。ReTerm-9B（Qwen3.5-9B）在Terminal-Bench 2.0达34.8% Pass@1，较基模提升14.6分；各错误类别恢复率均高于GRPO，代码开源。
+
+- **VIEWCRAFT: Evolving What Multimodal Agents See and How They Read It** — [2610.15915](https://arxiv.org/abs/2610.15915) | [GitHub](https://github.com/Little-Fridge/ViewCraft)
+  > 提出ViewCraft，联合进化多模态智能体的可执行证据界面及其阅读程序：界面选择、变换并组织观测，阅读器解读视图；失败轨迹引导修订，回放与配对评估保留有用改动。八个基准上平均较直接执行提升6.1分且逐基准均有收益，同等输入token预算下优势依旧；五个多源任务上比初始技能少用8%-15%输入token，学到的技能可跨执行器迁移并保持优势。
+
+- **AutoEnvScaling: Automating the Data Flywheel with Terminal Agents** `[RL]` `[API]` — [2610.14163](https://arxiv.org/abs/2610.14163) | [GitHub](https://github.com/MSR-Orchard/AutoEnvScaling)
+  > 将环境设计本身视为终端任务，提出AutoEnvScaling用智能体自动化RL数据飞轮：提出者从被训练求解者的rollout构建新环境，新rollout再引导下一轮。有效环境生成率较纯提示最高提升25倍、成本降低75%；GPT-5.6-sol生成的环境使Qwen3.5-35B-A3B在Terminal-Bench 2.1提升4.3分，单模型兼任两角色时提升12.2分，并可推广至软件工程等领域。
