@@ -5936,3 +5936,50 @@
 
 - **AutoEnvScaling: Automating the Data Flywheel with Terminal Agents** `[RL]` `[API]` — [2610.14163](https://arxiv.org/abs/2610.14163) | [GitHub](https://github.com/MSR-Orchard/AutoEnvScaling)
   > 将环境设计本身视为终端任务，提出AutoEnvScaling用智能体自动化RL数据飞轮：提出者从被训练求解者的rollout构建新环境，新rollout再引导下一轮。有效环境生成率较纯提示最高提升25倍、成本降低75%；GPT-5.6-sol生成的环境使Qwen3.5-35B-A3B在Terminal-Bench 2.1提升4.3分，单模型兼任两角色时提升12.2分，并可推广至软件工程等领域。
+
+## 2026年10月15日
+
+- **LatentLoop: Scaling Looped MoE Models with Asymmetric Compute Allocation** — [2610.19975](https://arxiv.org/abs/2610.19975) | [GitHub](https://github.com/lcqysl/LatentLoop)
+  > 循环 MoE 模型通过参数复用提升计算效率，但不同循环访问的贡献并不对称。本文发现首次访问可降低计算尺度而不损伤性能，提出 LatentLoop：压缩首次访问的序列表示、第二次保持全分辨率，省下的预算用于扩大隐层，两次访问共享 MoE 权重但使用独立注意力参数。在 1.3B 至 7B 共 15 组配置、最大预算超 10^21 FLOPs 下，验证集 NLL 一致降低。
+
+- **Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory** `[MeM]` `[VLM]` — [2610.19366](https://arxiv.org/abs/2610.19366) | [GitHub](https://github.com/Seeing-Maintaining-Learning/multimodal-agent-memory-evolution)
+  > 多模态智能体要在长周期与终身学习场景中持续从异构多模态数据获取信息，亟需有效的记忆机制。本文提出双轴分析框架：轴一刻画多模态信息如何形成与表示（模态嵌入、文本结构化记录、隐式参数化表示等），轴二刻画记忆管理策略如何随经验积累自适应演化，系统梳理跨会话连续性、环境自适应、记忆策略强化等核心问题，为多模态智能体记忆系统设计提供统一分类视角并指出未来方向。
+
+- **Hybrid Reasoning Agents** `[RL]` — [2610.18861](https://arxiv.org/abs/2610.18861) | [GitHub](https://github.com/togethercomputer/HybridAgent)
+  > LLM 智能体完全依赖文本推理，隐空间推理高效却缺乏工具调用且不可解释。本文提出 Hybrid Reasoning Agents：轻量 HybridLink 在同一生成中实现隐空间推理与文本交互的无缝切换，连续工作记忆跨多轮保持混合上下文；配套 HybridSFT 稳定工具集成混合生成，HybridRL 学习何时隐式思考、何时文本行动。在 3 个模型规模、11 个数学与智能体基准上验证有效。
+
+- **The Thinking Leakage in Reinforcement Learning for LLMs** `[RL]` — [2610.14270](https://arxiv.org/abs/2610.14270) | [GitHub](https://github.com/WenxuanZhu1103/think-leakage)
+  > Qwen3 等混合推理模型可在思考与不思考模式间切换，流行的做法是在不思考模式下做 RL 并报告推理提升。本文揭示该提升很大程度源于「思考泄漏」：RL 只是部分重新激活原模型思考模式的推理能力，而非学到新行为。用 GRPO 训练 Qwen3-1.7B/4B/8B 验证：扩大 RL 更新只逼近思考模式精度，替换其低维激活子空间即可消除大部分增益，对混合推理模型的 RL 范式提出警示。
+
+- **ProgAgent: Learning Tool Orchestration through Programmatic Training** `[RL]` — [2610.14774](https://arxiv.org/abs/2610.14774) | [GitHub](https://github.com/hkust-nlp/ProgAgent)
+  > 长周期任务中直接工具调用会让工具响应堆积上下文导致腐化。本文提出 ProgAgent，将程序化工具调用扩展为训练范式：用可执行代码调用工具，中间结果存入运行时变量而非上下文，配合可验证长周期任务合成管线与两阶段训练配方。仅用 215 个任务训练就在四个基准上以同规模取得更高通过率；LOCA-bench 上 14B 模型在 64k token 环境状态下达 30.7% 通过率，基线为 0。
+
+- **APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces** `[API]` — [2610.13623](https://arxiv.org/abs/2610.13623) | [GitHub](https://github.com/echo-yiyiyi/apex-harm)
+  > 专业智能体在含文件、消息与业务应用的共享工作区中通过多工具作业，单点注入难以刻画其安全风险。本文提出 APEX-Harm 基准：智能体在 115 至 328 个文件的大型工作区执行金融、咨询、法律任务，环境暴露邮件、日历、文档、表格、PDF 及代码执行等 MCP 工具，涵盖六类注入攻击。对 12 个前沿模型评测显示，任务特定脚本替换攻击成功率高达 81-84%，揭示模型对脚本类攻击的普遍脆弱性。
+
+- **Joint Subspace Sparse Attention for Efficient Long-Context Decoding** `[长文本]` — [2610.19026](https://arxiv.org/abs/2610.19026) | [GitHub](https://github.com/jiwonsong-dev/JSSA)
+  > 稀疏注意力可降低长上下文解码中占主导的 KV 缓存访存，但现有方法粒度过粗。token 级选择面临两难：低维打分易丢失 query-key 结构，gather 又抵消收益。本文提出 JSSA：学习共享低维 query-key 子空间并以边际目标上界逼近非凸优化得闭式谱解；设计免 gather 的索引注意力核，支持 GQA 下不同 KV 头独立选择，在多种注意力架构上均接近全 KV 精度并提速。
+
+- **Share the Symbol, Not the Vector: Training-Free Fact Communication Across Language Models** `[无需训练]` — [2610.19696](https://arxiv.org/abs/2610.19696) | [GitHub](https://github.com/LiXin97/SYNC)
+  > 多智能体协作常需交换内部模型状态，但跨架构共享通常需要学习翻译器或兼容性假设。本文提出 SYNC 符号索引神经通信：发送方仅根据可见描述从共享词表选词并发送索引，接收方用自己拟合的词方向向量将事实写入隐状态，无需微调或翻译器即可连接异构模型。在三个发送方与五个家族九个接收方上测试，新场景四问成功率达 72.0% 以上，且所有接收方共用同一写入层，展现训练-free 跨模型通信的实用潜力。
+
+- **From Failures to Learnable Worlds: Policy-Conditioned Environment Generation for Navigation Agents** `[RL]` — [2610.19420](https://arxiv.org/abs/2610.19420) | [GitHub](https://github.com/zhangyuejoslin/WEDGE)
+  > 仿真环境可为具身智能体规模化生成训练数据，但更多数据未必是特定智能体所需。本文提出 WEDGE：以策略失败模式引导环境生成，用 LLM 对比成功与失败轨迹提出可执行的弱点特征，在诊断集自动验证并选出成功率差距最大的弱点，映射到可控环境因素，在策略最困难区间构造训练环境。三种适应机制不同的导航智能体展现出各自特异的弱点，验证了弱点引导生成的针对性。
+
+- **Rethinking Projector Training in Multimodal LLMs** `[VLM]` `[无需训练]` — [2610.18598](https://arxiv.org/abs/2610.18598) | [GitHub](https://github.com/mlbio-epfl/PORTAL)
+  > 多模态 LLM 通常先在图文对上训练投影器再联合训练，但投影器训练的作用一直不清楚。本文发现仅用 10-20% 数据训练投影器即可恢复大部分下游收益，且不同数据集的投影器可线性插值且性能保持，说明其只是多种实现等价的粗对齐。据此提出 PORTAL：基于最优传输的训练-free 投影器初始化，仅用各模态特征分布统计量建立共享主子空间的高斯映射，完全跳过投影器训练，无需配对数据即可达到常规范式水平。
+
+- **StartLux-Decision: AutoThink Decision Models with Reinforcement Learning for Calibrated Deliberative Decisions** `[RL]` — [2610.17309](https://arxiv.org/abs/2610.17309) | [GitHub](https://github.com/StartLuxLabs/StartLux-Decision)
+  > 本文推出 StartLux-Decision 决策模型系列（0.8B 至 27B），Instant 变体用双向注意力提升单遍决策精度，AutoThink 对不确定决策调用显式推理、高置信直接作答。三阶段训练建立共享决策能力后，以推理监督与强化学习赋予 AutoThink 推理能力。RLCD^2 以冻结模型加评分规则奖励决策质量并软惩罚超长推理，限长内终止比例提升 48 个百分点、长度缩短 65%。
+
+- **Glance Forcing: Making Bidirectional Diffusion Autoregressive at a Glance** `[扩散模型]` — [2610.20220](https://arxiv.org/abs/2610.20220) | [GitHub](https://github.com/CSU-JPG/Glance-Forcing)
+  > 将双向扩散模型蒸馏为因果少步学生是实时视频生成的主流路线，但现有管线需离线 PF-ODE 轨迹，动辄数万 GPU 小时。本文将轨迹监督压到极限的单个样本并发现严重崩溃，根源是教师轨迹几何：高噪声区主导语义与运动、低噪声区主导纹理，曲率迥异，单一学生无法同时拟合。据此提出 Glance Forcing：将去噪轨迹解耦为快慢双专家，各配阶段特定目标实现高效蒸馏，大幅降低双向扩散转自回归的成本。
+
+- **VITAL: From Visual Motion to Precise Action** `[RL]` — [2610.20604](https://arxiv.org/abs/2610.20604) | [GitHub](https://github.com/worldbench/VITAL)
+  > 世界-动作模型旨在将视觉预期转化为驾驶决策，但动作专家通常在独立于视觉动态的轨迹表示上训练。本文提出直接从视觉运动导出动作目标：VITAL 动作分词器将视觉导出的运动骨架与紧凑残差耦合，残差编码骨架未覆盖的厘米级轨迹误差，使视觉运动成为主要预测目标。动作专家以流匹配方式从当前图像、自车状态与导航指令联合预测两分量，推理无需生成未来图像；残差坐标还支持有界 RL 后训练精化执行。
+
+- **Acting Through Registers** — [2610.17638](https://arxiv.org/abs/2610.17638) | [GitHub](https://github.com/Z1zyw/RegisterWAM)
+  > 世界动作模型用生成式视觉表示条件化机器人动作，但这些表示如何组织动作信息尚不清楚。本文发现其中持续存在高范数空间离群点，其动作相关性在归一化与 K/V 投影后仍存在。据此提出 RegisterWAM：加入可学习的非空间寄存器用于动作条件化，配合观测流匹配损失将高范数响应集中到寄存器，该监督也改善动作学习。最终在 LIBERO-Plus 达 81.64% 成功率、RoboTwin 达 93%。
+
+- **Latent Compaction with Test-Time Training** `[长文本]` `[无需训练]` — [2610.20582](https://arxiv.org/abs/2610.20582) | [GitHub](https://github.com/thunlp/latent-compaction)
+  > 长上下文使 KV 缓存膨胀，压缩缓存又必须为未见问题保留信息。本文提出 Latent Compaction：通过测试时训练学习文档专属的紧凑缓存，初始化综合重建重要性、教师注意力与键空间多样性；训练先拟合全缓存的注意力输出再端到端蒸馏联合优化整个缓存，全程冻结权重且不接触下游问答。RULER 上 32 倍压缩达 96.7% 精度（KVZip+ 仅 40.0%），并可在不同模型规模与家族间迁移。
