@@ -5983,3 +5983,56 @@
 
 - **Latent Compaction with Test-Time Training** `[长文本]` `[无需训练]` — [2610.20582](https://arxiv.org/abs/2610.20582) | [GitHub](https://github.com/thunlp/latent-compaction)
   > 长上下文使 KV 缓存膨胀，压缩缓存又必须为未见问题保留信息。本文提出 Latent Compaction：通过测试时训练学习文档专属的紧凑缓存，初始化综合重建重要性、教师注意力与键空间多样性；训练先拟合全缓存的注意力输出再端到端蒸馏联合优化整个缓存，全程冻结权重且不接触下游问答。RULER 上 32 倍压缩达 96.7% 精度（KVZip+ 仅 40.0%），并可在不同模型规模与家族间迁移。
+
+## 2026年10月16日
+
+- **OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use** `[API]` — [2610.22200](https://arxiv.org/abs/2610.22200) | [GitHub](https://github.com/Tongyi-MAI/OpenGCUA)
+  > 提出开放的通才计算机使用智能体（GCUA）全栈OpenGCUA，对标GPT-6 Astra等闭源方案。核心设计是将代码执行作为agent动作，让中间结果直接驱动后续操作；并提出harness-to-model决策迁移，将部分观测与任务状态决策从固定规则移交模型。在OSWorld-v2上，全配置使八个受测模型的平均部分得分提升19.6分、步数平均减少53.0%，并开源实现、提示词与评估轨迹。
+
+- **Self-Evolving Agent Harness** `[API]` — [2610.18813](https://arxiv.org/abs/2610.18813) | [GitHub](https://github.com/zgcagi/Harness-RSI)
+  > 形式化agent harness自进化（Harness RSI）框架：在固定模型权重的前提下，通过反馈驱动流程持续修订提示、记忆、工作流与可执行组件，被接受的修订可跨运行持久保留。框架区分解释状态修改与工具、代码、插件组合层面的修订，从进化优化与持续PAC学习角度刻画其可靠性，给出期望泛化界、保留界与基于独立验证数据的高概率准入规则，并讨论对科学可靠性、物理安全与机构问责的影响。
+
+- **MJev-Spatial: System One Spatial Intelligence via Native Attention Matching** `[VLM]` — [2610.22276](https://arxiv.org/abs/2610.22276) | [GitHub](https://github.com/Fr0zenCrane/MJev-Spatial)
+  > 提出System 1空间智能多模态决策模型MJev-Spatial。针对空间关系、距离估计和位置放置三类任务，将候选视为类别，直接利用主干预训练的query/key投影打分，不新增参数；数值与点预测通过粗到细分类完成，单次前向即出决策。基于Qwen3.5-4B、用1230万对空间问答训练，联合监督与负载均衡使训练吞吐提升30.8%，在相关基准上取得最高性能。
+
+- **MAI-Gym: An Open All-in-One Platform for GUI Agent Evaluation and RL Training across Mobile and Computer Environments** `[RL]` — [2610.20939](https://arxiv.org/abs/2610.20939) | [GitHub](https://github.com/Tongyi-MAI/MAI-Gym)
+  > 开源一体化GUI agent平台MAI-Gym，统一移动端、电脑与网页环境的评估、数据采集与在线RL训练，共享rollout管线接入10个基准、支持2万并行环境，并能自动合成可重置mock应用与验证任务。训练出的MAI-Gym-9B在MobileWorld达78.4%、OSWorld-Verified达76.2%，为10B以下开源GUI agent最优；mock应用上训练的RL可迁移到真实手机。
+
+- **SCOPE: Semantic Bounded Credit Optimization for Prompt Engineering in Text-to-image Generation** `[RL]` — [2610.22264](https://arxiv.org/abs/2610.22264) | [GitHub](https://github.com/MAC-AutoML/SCOPE)
+  > 针对冻结图像生成器重写提示的RL场景，提出基于GRPO的SCOPE目标：重写模型联合生成增强提示及其语义划分，在每个语义跨度内汇集策略对数概率漂移得到共享损失系数，让信用分配对齐语义结构，无需额外跨度奖励或渲染。较朴素GRPO在GeneVal平均相对提升9.48%、T2I-CompBench提升7.62%，消融验证其有效性。
+
+- **Mosaic: Multi-Session Agentic Reinforcement Learning** `[RL]` — [2610.22174](https://arxiv.org/abs/2610.22174) | [GitHub](https://github.com/LARK-AI-Lab/Mosaic)
+  > 提出多会话agent强化学习设定：轨迹可包含任意数量会话（由上下文压缩、子agent分叉等产生），突破单会话训练假设。方法Mosaic采用无critic分层优化：轨迹层将会话使用信号纳入优势估计，会话层按估计的边际贡献塑造各会话优势，解决优势广播无法区分各会话贡献的问题。在BrowseComp上以Qwen3.5-4B实验，Mosaic在压缩与分叉场景均优于广播基线且平均使用更少会话。
+
+- **Intern Lumina U2: A Multi-Codebook Diffusion Large Language Model for Omni-Visual Understanding and Image Generation** `[扩散模型]` `[VLM]` — [2610.20818](https://arxiv.org/abs/2610.20818) | [GitHub](https://github.com/InternLM/InternLumina-U2)
+  > 提出首个在全离散空间表示多码本视觉token的扩散语言模型。每个视觉位置由来自互补码本的一组码字表示，提升表示能力且与离散文本建模天然兼容；输入端按位置拼接嵌入，输出端用轻量多码本自回归头逐个预测码，扩散主干并行处理全部位置。基于AToken统一4D表示，单一主干支持图像、视频与3D输入，在视觉理解、图像生成与图像编辑上取得统一模型中的领先性能，代码与训练脚本完整开源。
+
+- **MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering** `[RL]` — [2610.22344](https://arxiv.org/abs/2610.22344) | [GitHub](https://github.com/InternScience/MLExpert)
+  > 提出机器学习工程（MLE）长程优化的后训练方法。构建Kaggle-MLE Factory生成可执行MLE任务和harness；分层agentic SFT以结果引导监督迁移通用工具与编码能力到MLE；Windowed Interaction RL把相邻实验间的多轮决策视为执行窗口并给予共享结果奖励。训练出35B MoE的MLExpert模型，长程MLE任务超越既有基线。
+
+- **Data World: Scaling Data Environments from Scratch** `[RL]` — [2610.21656](https://arxiv.org/abs/2610.21656) | [GitHub](https://github.com/Zhanli-Li/Data-World)
+  > 提出扩展数据agent训练环境的多智能体引擎：先生成文件背后的「世界机制」再生成文件，合成环境、任务与评分标准；独立审计检查目标可恢复性，rubric支持评估与RL奖励。构建DataWorld-Bench（100任务）及2135个训练任务；RL-zero训练得到DataWorld-35B-A3B，较基座提升7.06分，在DAComp、DABstep-Hard、JobBench上再提升12至21分。
+
+- **Intern-Decision: Efficient Multimodal Decision Making with Autoregressive Masked Language Modeling** `[VLM]` — [2610.22131](https://arxiv.org/abs/2610.22131) | [GitHub](https://github.com/InternLM/Intern-Decision)
+  > 提出0.8B/2B/4B多模态决策模型Intern-Decision，面向agent的有限选择场景。自回归掩码目标在JSON骨架的每个字段放一个决策占位符，真值仅在监督中出现，单次因果前向即用原生LM头输出全部字段的结构化选择与概率。4B模型在七个评测套件上取得90.02%平均准确率（Jev v1.13.0为88.74%），RTX 4090上延迟44.16ms，温度缩放显著改善校准。
+
+- **Each Reward to Its Relevant Tokens: Reward-Specific Token-Level Credit Assignment for Multi-Reward RL** `[RL]` — [2610.21439](https://arxiv.org/abs/2610.21439) | [GitHub](https://github.com/zhaihaotian/MRTPO)
+  > 多奖励RL中每个验证器只检查少数位置，但现有方法仍将每个奖励优势均匀摊到整个序列。MRTPO无需辅助模型或token标注：策略对每个奖励分别重放带与不带该奖励验证器信息的回复，用两种下一token分布的逐token Jensen-Shannon距离衡量相关性并重分配优势。在text-to-SQL、多约束指令遵循和工具调用上，MRTPO收敛更快、性能更好，实现奖励级token信用分配。
+
+- **SWE-at-Scale: Scalable Issue Synthesis from Historical Bug Fixes** — [2610.21359](https://arxiv.org/abs/2610.21359) | [GitHub](https://github.com/cslsolow/SWE-at-scale)
+  > 提出从真实历史bug修复逆向合成SWE任务的框架SWE-at-Scale：修复提交蕴含bug形成的机理知识，反转修复即可把修复监督转化为有真实场景依据的「造虫」监督，再将bug模式迁移到新代码上下文，反复采样构造可执行任务。实验表明其生成任务比现有基线更多样、更真实，对最强coding agent挑战更大；单一上下文可生成多种bug，200次生成下多样性仍稳健，把有限的真实修复变为可复用监督。
+
+- **Trajectory-Level Speculation with Semantic Verification for Tool-Using Agents** — [2610.21463](https://arxiv.org/abs/2610.21463) | [GitHub](https://github.com/LARK-AI-Lab/SpecAgent)
+  > 提出强弱模型协作协议SpecAgent：弱模型执行只读工具调用起草轨迹片段（每步有真实观测支撑），暂停在首个写操作前；强模型在单次prefill中语义验证整段草稿，提交最长有效前缀并修复首个被拒步骤。验证取代逐token解码，强模型只输出短判定与少量修复。在τ²-Bench上成功率接近强模型且内存与耗时约减半；在另两个基准上弥合44-75%质量差距。
+
+- **Learning Self-Orchestration in Decentralized Agent Swarms** `[RL]` — [2610.22322](https://arxiv.org/abs/2610.22322) | [GitHub](https://github.com/Embodied-Minds-Lab/MPT)
+  > 提出基于市场的后训练框架MPT，在去中心化agent集群中联合学习动作策略与自组织：agent通过出价表达参与意愿，出价决定谁行动以及集体结果如何折算为本地训练信用，无需中央协调器。在具身制作、机器人导航与深度研究上均优于单体后训练；学到的自组织优于其他协调策略，参与度随学习进化。训练后的群体迁移更快、扩大规模性能更好、agent掉线时损失更小。
+
+- **Calibrated Typed Decisions for Entity, Relation, and Event Extraction** — [2610.17113](https://arxiv.org/abs/2610.17113) | [GitHub](https://github.com/extraordinarylab/calon)
+  > 提出统一的0.6B参数编码器CalOn，跨数据集与schema执行实体、关系与事件抽取。模型联合编码文本与类型定义，抽取决策综合考虑所请求类型的组合证据后再分配类型，三类任务共享概率化形式且每个提及锚定原文；监督学习之外加入奖励项鼓励正确抽取、惩罚错误。在40个基准上多数优于基线：关系抽取全部领先，事件触发与论元平均F1最高；校准纠正后置信度明显改善而F1几乎不变。
+
+- **Virtual Head Attention** `[长文本]` — [2610.17959](https://arxiv.org/abs/2610.17959) | [GitHub](https://github.com/PaddlePaddle/VHA)
+  > 提出Virtual Head Attention，以两个轻量线性算子改善注意力的KV cache、算力与质量三角：Q Premix在KV组内以近恒等变换恢复虚拟头多样性，Linear Postmix以低秩残差融合头间特征。两算子均无非线性，推理时可折叠进投影，等价于标准GQA-2并复用现有推理优化。多规模预训练均超GQA基线，KV cache较GQA-8减半，训练FLOPs降7.9%。
+
+- **OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling** `[RL]` `[VLM]` — [2610.22355](https://arxiv.org/abs/2610.22355) | [GitHub](https://github.com/Cominclip/OmniVerifier)
+  > 提出分解式分级验证器，超越传统True/False二值判断：自动将复杂提示或环境规则分解为细粒度组件并给出逐点分数，提供更连续、可解释的批评信号，并提升验证器在域外多模态批评任务上的泛化。训练采用解耦RL策略，联合优化子问题级二值判断与全局对齐打分。在文生图场景显著优于二值验证器，并扩展到规则约束的生成式世界建模；理论上证明成对验证范式更准确。
