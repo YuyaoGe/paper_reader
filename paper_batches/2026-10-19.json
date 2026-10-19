@@ -1,0 +1,122 @@
+[
+  {
+    "date": "2026-10-19",
+    "title": "OpenMobile-2: Building Versatile Mobile Agents with Scalable Environments and App-Native Tools",
+    "arxiv_id": "2610.14157",
+    "github": "https://github.com/OpenMobile2/OpenMobile2-Code",
+    "abstract": "提出近前沿水平的开源移动智能体OpenMobile-2，完整开放训练环境与配方。三大贡献：构建MobileGym++仿真环境，包含35个功能丰富的商用风格App并支持跨App工作流，结合安卓模拟器配置共覆盖110+应用；基于该环境整理近1.2万条移动端交互轨迹作为开源训练数据；提供从环境、数据到训练配方的全流程开放方案，推动移动Agent研究的复现与扩展。",
+    "tags": ["微调"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "Lexical Reference Frames: Interpreting LM Residual Streams in Native Semantics",
+    "arxiv_id": "2610.22169",
+    "github": "https://github.com/jianguda/lexframe",
+    "abstract": "提出词元参考框架（Lexical Reference Frames）方法，以模型的原生语义解读残差流隐藏状态。与复用固定透镜或将状态视为点云不同，该方法通过模型自身剩余层、以指定轮数的位置间注意力来读取状态，得到由后续读取层诱导、随上下文自适应的参考系。提供更贴近模型「视角」的可解释性工具，并配套开源Python实现与实验示例。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars",
+    "arxiv_id": "2610.23230",
+    "github": "https://github.com/VincentHancoder/RAP",
+    "abstract": "提出RAP数据集，将会议海报生成形式化为声明式标记的视觉编程任务。通过解析人工制作的海报范例构建标注，支持客观的「渲染-比对」评测而非依赖VLM-as-judge；数据集使人类海报可直接复用为布局先验，配套PosterRAG检索增强生成方法与推理代码。为统一多模态模型的长文档排版、摘要与代码生成能力提供可控测试载体。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "DLite: History-free Speculative Decoding for Agentic AI",
+    "arxiv_id": "2610.23787",
+    "github": "https://github.com/SJTU-DAI-Sys/DLite",
+    "abstract": "针对Agentic负载下投机解码草稿模型接受长度下降高达80%、历史KV缓存带来沉重系统开销的问题，提出DLite——无历史状态的投机解码方法。识别出持续增长的历史上下文是草稿模型失准的关键原因，设计免历史的草稿机制与配套系统优化。在Agentic工作负载上显著提升接受长度与端到端推理吞吐，降低长上下文多轮场景下的推理延迟。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-19",
+    "title": "Can Visual Generation Expand What Unified Multimodal Models Know?",
+    "arxiv_id": "2610.21459",
+    "github": "https://github.com/kevinlllee/Knowledge-Transfer-Probing",
+    "abstract": "提出知识迁移探测协议KTP，系统检验统一多模态模型（UMM）的图像生成监督能否扩展其知识。通过图像生成训练注入新知识，再以纯文本问答测试其可及性。在三个UMM、七类知识上的实验表明视觉监督到语言存在直接但不均衡的迁移；据此提出文本对齐等后续干预方法改善知识可及性，为生成式监督的价值提供首个受控实证分析。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+    "arxiv_id": "2610.23839",
+    "github": "https://github.com/Gen-Verse/DiscoveryRSI",
+    "abstract": "为科学发现提出有价值且可检验假设的操作化定义：基于证据、针对重要不确定性、附带可行研究方案与明确判定标准。DiscoveryRSI框架通过多智能体进化搜索展开假设树，将选中的研究方案编译为可执行的Harbor任务，并通过三种机制递归学习整个研究过程，从不断演进的研究轨迹中持续改进假设生成质量，实现自动化科学发现的闭环。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "Stuck on Shuffle: On Attribute-Object Binding in Vision-Language Models",
+    "arxiv_id": "2610.22602",
+    "github": "https://github.com/Netanel-Tamir/Stuck-On-Shuffle",
+    "abstract": "系统研究视觉语言模型中的属性-对象绑定能力：检索等任务要求嵌入不仅编码概念，还要编码组合方式。指出现有基准只覆盖部分模态配对、简单双对象交换或少量属性的局限，构建更全面的绑定评测协议并在多个VLM上实验。结果显示主流VLM在属性归属判别上表现脆弱，为理解多模态嵌入的组合性短板提供诊断工具与实证。",
+    "tags": ["VLM"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "PRISM: PRIvileged Sibling-guided Multi-Agent Topology Design",
+    "arxiv_id": "2610.20628",
+    "github": "https://github.com/tuandattt/PRISM",
+    "abstract": "针对多智能体系统协作拓扑生成器的后训练问题，提出PRISM方法。现有执行验证语料只记录解出任务的拓扑图而从不排序，导致SFT缺乏逐查询偏好信号；PRISM利用特权兄弟智能体（privileged sibling）提供逐查询的相对偏好监督来训练拓扑生成器。实验证明该方法能学习出更有效的智能体协作结构，提升多智能体系统在复杂任务上的协作效率与成功率。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "Dream2Discern: Learning from Hard Latent Variants for Runtime Failure Prediction in Multi-Agent Systems",
+    "arxiv_id": "2610.16071",
+    "github": "https://github.com/ZBox1005/Dream2Discern",
+    "abstract": "提出运行时审计器Dream2Discern，从执行前缀预测多智能体系统的最终失败。针对验证过轨迹语料有限、扩充成本高且缺少「当前审计器难分类样本」显式标准的问题，设计Dream阶段隐式增广：由审计器自身预测损失引导选取困难前缀，构造潜在变体样本进行训练。开源完整训练与推理代码，在多个多智能体任务上提升失败预测精度与校准性。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-19",
+    "title": "PremiseCheck: Efficient Fact-Checking of Human and AI Peer Reviews",
+    "arxiv_id": "2610.21046",
+    "github": "https://github.com/OpenLAIR/PremiseCheck",
+    "abstract": "针对同行评审意见（无论人写还是AI写）中普遍存在的对论文内容的事实性误述，提出PremiseCheck高效核查方法。构建ReviewFact基准，在NLP、机器学习与自然科学三个领域统一标注评审意见中的事实错误，并同时衡量成本与延迟。方法在准确性、速度和成本间取得更好平衡，远优于廉价决策模型，且避免了前沿LLM逐条通读全文的高昂开销。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-19",
+    "title": "LEV: Thinking Fast and Deep with Looped Decision Models",
+    "arxiv_id": "2610.20951",
+    "github": "https://github.com/OpenLAIR/lev",
+    "abstract": "提出决策模型LEV：像双系统理论中的快系统一样单次前向回答，但可通过循环重跑自身层来加深思考，无需生成任何token。基于预训练为循环形式的语言模型构建，可按问题难度自适应分配计算量，兼得文本推理模型的深度与决策模型的速度。配套开源训练、评估与校准代码，在需要快速深度判断的任务上验证了其效率与准确率优势。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-19",
+    "title": "DAGFormer: Global Topology Prediction for Transformer Cross-Layer Connections",
+    "arxiv_id": "2610.19625",
+    "github": "https://github.com/AI-Interpretability-Illinois/Dagformer",
+    "abstract": "提出DAGFormer：由联合训练的拓扑预测器为Transformer规划跨层连接。在标准残差连接之外，增加从前层到后层的直连边，预测器依据输入token控制每条连接的强度；与逐层独立路由的现有架构不同，它一次性规划整个模型的路由结构。在75M到1B参数的OLMo-2配对实验中，WikiText-2困惑度降低17%至2个百分点以上，验证全局拓扑规划的有效性。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-19",
+    "title": "Resisting Harmful Instructions through Training-Free Weight Editing",
+    "arxiv_id": "2610.21189",
+    "github": "https://github.com/AI-Interpretability-Illinois/Resisting-Harmful-Instruction",
+    "abstract": "提出免训练的权重编辑方法，降低指令模型对目标不良指令的服从。仅需在少量提示词对上做前向传播即可完成编辑；且修改存储在权重中，提示词中的指令变更或删除无法撤销权重层面的改动。在五个指令微调模型、两类目标有害行为（指令性说谎与指令性不当行为）上评估，证明其在保持通用能力的同时显著降低目标行为服从率，开源全部实验代码。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-10-19",
+    "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
+    "arxiv_id": "2610.20503",
+    "github": "https://github.com/StartLuxLabs/ReaDy",
+    "abstract": "提出首个利用混合线性注意力（HLA）循环状态进行投机解码的方法ReaDy。HLA模型维护紧凑的循环状态积累历史关联，可为投机草稿提供与目标模型隐藏特征互补的位置相关上下文。针对后续草稿位置的特定需求，在解码过程中动态检索循环状态辅助草稿生成，提升草稿接受率。开源推理与评估代码，在HLA模型上取得端到端解码加速。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-19",
+    "title": "Towards Looped Models Done Right, Part I: Topology, Input Injection, Recurrent-State Design",
+    "arxiv_id": "2610.23036",
+    "github": "https://github.com/ifm-ai/xllm-loop",
+    "abstract": "系统拆解循环语言模型的三大纠缠设计轴：循环位置、输入注入与循环状态组织，在参数规模、逻辑深度与token预算均匹配的从头训练模型上独立检验各轴，并验证设计原则能否迁移到驻留/激活参数匹配的MoE模型。结果表明前奏-循环-尾声三明治结构在上下文抽取与推理密集型任务上稳定提升；输入注入主要增强知识检索与上下文利用；随机初始化及分离H/L循环状态收益混合甚至为负。",
+    "tags": []
+  }
+]
