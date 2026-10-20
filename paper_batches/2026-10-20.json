@@ -1,0 +1,138 @@
+[
+  {
+    "date": "2026-10-20",
+    "title": "MemT-1.0: Towards Memory-Native Evolution",
+    "arxiv_id": "2610.26825",
+    "github": "https://github.com/MemTensor/MemT-1.0",
+    "abstract": "提出记忆基础模型MemT-1.0，将记忆内化为模型计算：基于Metis，轮内采用Gated DeltaNet-2稳定token级记忆更新，以Mixture-of-Storage扩展记忆容量，经34B token两阶段训练发布Nano/Flash系列。记忆评测超越参数化记忆基线、与检索增强持平且保持通用能力；128K历史下Nano推理加速1.86倍、存储降66倍，agent任务成功率进一步提升。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "SpecMRL: Redesign Matryoshka Representation Learning within Parametric Spectrum",
+    "arxiv_id": "2610.26824",
+    "github": "https://github.com/CentreChen/Spec-MRL",
+    "abstract": "针对Matryoshka表示学习（MRL）缺乏显式约束保证前缀提供紧凑有效编码的问题，提出SpecMRL：以参数导出的、按特征重要性组织的谱基扩展MRL，在学习的谱空间中执行前缀读取，其余流程与标准MRL一致。MTEB实验表明SpecMRL在所有降维维度上均优于MRL，压缩越激进增益越大；仅用一半嵌入维度即超越全维MRL，拓展了MRL的性能边界。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-20",
+    "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
+    "arxiv_id": "2610.26860",
+    "github": "https://github.com/uclanlp/OpenVLHarness",
+    "abstract": "针对多模态大模型仅靠内部推理难以获得grounded感知、外部知识与数值测量证据的问题，提出多模态推理harness OpenVLHarness：能力层将任务级工具接口与证据渲染结合，把异构后端输出转为模型可读观测；持久多模态记忆把图像、结构化数据与网页引用保留为可寻址工件；编程接口可在存储数据上执行生成程序。22个基准、8个骨干上较无工具基线平均提升9.7~12.6分。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners",
+    "arxiv_id": "2610.24087",
+    "github": "https://github.com/NineAbyss/OR-License",
+    "abstract": "现有运筹学基准缺少从原始客户材料到专业方案的真实转化。OR-License构建覆盖10个工业场景、31个实例（来自368万美元付费项目）的端到端基准，保留原始需求、数据与信息边界；配套ORSim客户模拟器只披露业务事实，隐藏评测以专家方案为参照。11个前沿LLM经编码agent测试：条件目标质量上多个模型超过专家，但部署调整质量（DAQ）均不及，最强配置达88.39%可行性与0.87的DAQ。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
+    "arxiv_id": "2610.22791",
+    "github": "https://github.com/MSR-Orchard/Self-HPO",
+    "abstract": "指出编码agent性能由策略模型与harness共同决定，二者相互强化，只优化其一并非最优。提出Self-HPO：每轮中当前策略先分析自身失败并提出新harness候选（H步），再在所选harness下经RL更新策略（P步），困难任务构成下一轮搜索集，让优化始终对准策略的失败模式。三个编码基准上超越单优化基线，将Qwen3.5-35B-A3B平均resolve rate从57.8%提至64.8%。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "CoworkEnv: Synthesizing Training Environments for Long-Horizon Cowork Agents",
+    "arxiv_id": "2610.24960",
+    "github": "https://github.com/HKUST-KnowComp/CoworkEnv",
+    "abstract": "针对AI同事训练经验难构建的问题，提出能力引导的训练环境合成框架CoworkEnv：工作流需求指导任务构建，程序化校验与反馈修复检查评分行为；教师执行产生SFT演示，学生交互提供RL rollout与奖励。Qwen3-VL-8B-Instruct经SFT后Claw-Eval均分从46.6升至64.1（多轮+31.9分），并迁移至ClawMark；RL比较验证环境可支撑策略优化。",
+    "tags": ["微调", "RL"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "MT Forcing: Towards Stable and Consistent Multi-Turn Image Editing with Autoregressive Diffusion",
+    "arxiv_id": "2610.25404",
+    "github": "https://github.com/houyuanchen111/MT-Forcing",
+    "abstract": "多轮图像编辑中现有方法几轮后即漂移：视觉质量不稳定与内容不一致。提出基于自回归扩散的统一多模态模型训练范式MT Forcing：Single-Turn DMD让教师单轮完成累积编辑、监督学生自展开，避免递归误差积累；Teacher-Forcing Guidance在预热期监督历史依赖转移并在蒸馏期作正则，增强跨轮一致性。实验表明该方法显著提升多轮编辑能力，质量更稳定、跨轮一致性更强。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+    "arxiv_id": "2610.26770",
+    "github": "https://github.com/pzs19/HarnessPro",
+    "abstract": "RSI进化harness常带来更高成本，HarnessPro以无标签方式同时提升性能并降本：候选harness仅由LLM生成的测试评估，agent诊断轨迹后按性能-成本优先级更新，输出lite/medium/heavy三档。在Terminal-Bench 2、SWE-Bench Pro与ProgramBench上，heavy模式较RHO平均pass-rate提升2.0个百分点、成本降26.1%。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+    "arxiv_id": "2610.06830",
+    "github": "https://github.com/ViktorAxelsen/MemPilot",
+    "abstract": "现有agent记忆多以查询无关方式构建，带来不必要开销并丢弃事后关键的细节。提出MemPilot：用强化学习优化多步LLM策略，在「检索查询无关记忆」与「委派对原始多模态历史的查询专属整理」间迭代选择，可调用异构LLM与VLM，联合控制证据数量、整理指令、模型选择与视觉访问；采用目标维度优势解耦与前缀边际效用估计分配信用。五个多模态agent记忆基准上性能领先，灵活折中性能-成本-延迟。",
+    "tags": ["RL", "MeM"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Evidence-First Agentic Verification",
+    "arxiv_id": "2610.17724",
+    "github": "https://github.com/rsanayei/Sauron",
+    "abstract": "长程agent任务依赖rubric评测，但证据分散在状态与轨迹中，评审可能轻信agent的自我成功报告，作为RL奖励将强化不良行为。提出Sauron证据优先验证器：论断须经溯源核验方可采信，有界查询与联合调查降低上下文消耗，裁决附带可审计证据凭据。2586条人工标注准则上八个骨干F1均居五种验证器之首且成本更低（GPT-5.6 Sol达0.96 F1）；故障注入以97%检出失败、仅2%误报。",
+    "tags": ["API"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Harnessing Textual Refusal Directions for Multimodal Safety",
+    "arxiv_id": "2606.31876",
+    "github": "https://github.com/Moreno98/MARS",
+    "abstract": "多模态大模型安全对齐依赖不安全多模态数据，难收集且有伦理法律风险。本工作验证LLM骨干的文本拒绝方向可跨模态（图像、视频）泛化，但受层选择、转向强度与跨模态对齐影响。据此提出MARS：无需多模态安全数据的免训练方法，以激活中心化纠正模态错配，在几何信任域内自适应缩放转向强度并选取最优干预层，仅在首个生成token介入。五个SOTA MLLM上安全、效用与视频越狱评测中一致提升安全性且基本不损效用。",
+    "tags": ["VLM", "无需训练"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Self-Evaluating Recursive Agents",
+    "arxiv_id": "2610.04902",
+    "github": "https://github.com/OliverLeeXZ/SERA",
+    "abstract": "递归agent把任务委派给同策略子实例，但中间自造子任务众多且无真值，外部验证器打分成本高且无法评估分解质量。提出SERA将评估内化为策略能力：父节点委派前为子任务撰写带权成功准则rubric，通过与已验证结果的排序目标训练rubric生成，辅以叶覆盖信号奖励任务分解。核心发现：同一权重既评估又执行时，学会评判同时锐化求解；求解用自身rubric分数（优于直接调用评审），大幅减少外部监督。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Remembering Has a Price: Learning Memory Worth under Resource Constraints",
+    "arxiv_id": "2610.26453",
+    "github": "https://github.com/AIGNLAI/TokenWorth",
+    "abstract": "终身agent在生成、交互与记忆预算紧张时，现有终身记忆方法可能失效，甚至不敌简单检索。关键不是检索相关经验，而是判断哪些值得保留复用——无效记忆浪费稀缺上下文。提出TokenWorth在线记忆框架：从稀疏执行反馈学习查询依赖的记忆价值，一致用于检索与有界记忆管理。三个环境、本地与API部署下均取得最高成功率且输出token最少，表明「学会什么值得记住」比记住更多更重要。",
+    "tags": ["MeM"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction",
+    "arxiv_id": "2610.24766",
+    "github": "https://github.com/ernie-research/ECHO",
+    "abstract": "现有MTP方法是辅助性的：多视野损失训练挂在骨干上的附加模块，每加一个视野就多一次前向。提出ECHO高效因果自递归消除两项开销：骨干末层预测所有视野，监督直接落在生成参数上；动态深度采样按随深度衰减的概率抽取训练深度，使深视野可负担。预训练增益集中于推理与代码任务，以一半MTP开销超越辅助模块饱和点；推理时模型即自身草稿器，可在高熵生成上保持草稿对齐，优势在重复预训练与SFT后仍存在。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Competing Learning in Hybrid Architectures",
+    "arxiv_id": "2610.26830",
+    "github": "https://github.com/thunlp/competing-learning",
+    "abstract": "混合架构同时包含线性递归与softmax注意力，递归层吞吐高但检索能力不及注意力。揭示「竞争学习」现象：不同混合器竞争学习同一函数，某层学会后抑制其他层的学习信号；层归因显示典型数据下递归比注意力更快学会检索，导致注意力大多学不到检索。训练中冻结递归层权重可帮助注意力学会检索，据此提出混合架构预训练的分阶段训练流程。最高1B参数模型上显著改善语言建模损失、常识推理及多长度上下文的检索任务。",
+    "tags": []
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Co-Evolving Acting and Forecasting for Language Agents",
+    "arxiv_id": "2610.20597",
+    "github": "https://github.com/ulab-uiuc/CoPE",
+    "abstract": "语言agent训练受长程rollout成本制约，agentic RL只用终端标量奖励，中间监督被浪费。提出CoPE新增多步动作目标：在成功on-policy轨迹上训练骨干生成历史之后的动作序列，动作也可从前序历史前瞻预测，形成时序集成供骨干吸收，行动与预测共同演化；推理仍逐token行动、零额外开销。五个基准上超越GRPO及预测辅助目标基线，样本效率较ECHO与GRPO最高提升1.9倍与2.0倍。",
+    "tags": ["RL"]
+  },
+  {
+    "date": "2026-10-20",
+    "title": "A Conditional No-Hair Theorem for Transformers: How Language Models Forget Their Prompt",
+    "arxiv_id": "2610.24133",
+    "github": "https://github.com/ShuyangenFrance/no-hair-transformers",
+    "abstract": "研究transformer生成t个token后保留多少prompt信息：不同prompt接相同续写时隐状态距离按幂律t^-α衰减，训练模型α≈0.55~0.7，未训练α≈0.2~0.5。证明偏移率为O(P(log t)^(L-1)/t)，即「条件无毛定理」：prompt影响被上下文稀释，幸存属性须由生成文本自身携带。线性relay模型证明该界不可改进；logit偏置可抵消稀释阻止遗忘。",
+    "tags": ["无需训练", "长文本"]
+  }
+]
