@@ -6136,3 +6136,44 @@
 
 - **A Conditional No-Hair Theorem for Transformers: How Language Models Forget Their Prompt** `[无需训练]` `[长文本]` — [2610.24133](https://arxiv.org/abs/2610.24133) | [GitHub](https://github.com/ShuyangenFrance/no-hair-transformers)
   > 研究transformer生成t个token后保留多少prompt信息：不同prompt接相同续写时隐状态距离按幂律t^-α衰减，训练模型α≈0.55~0.7，未训练α≈0.2~0.5。证明偏移率为O(P(log t)^(L-1)/t)，即「条件无毛定理」：prompt影响被上下文稀释，幸存属性须由生成文本自身携带。线性relay模型证明该界不可改进；logit偏置可抵消稀释阻止遗忘。
+
+## 2026年10月21日
+
+- **Focused Omni-Modal GUI Agents** `[VLM]` — [2610.26203](https://arxiv.org/abs/2610.26203) | [GitHub](https://github.com/fyzhang1/FocusGUI)
+  > 针对GUI智能体在全模态流式观测下的「顺序干扰」问题，提出Focused Perception范式与轻量适配器FocusGUI：按当前步骤的决策参考动态为各模态通道分配优先级，将最相关证据压缩为紧凑潜变量注入冻结解码器嵌入，仅用动作监督训练、无需模态相关性标签。四个全模态骨干上平均Type Match提升33.2、Exact Match达3.0倍，较最强增强方法再提升30.1。
+
+- **S-Agent 2.0: Spatial Reasoning with a General Coding Agent** `[API]` — [2610.28354](https://arxiv.org/abs/2610.28354) | [GitHub](https://github.com/Ropedia/S-Agent-2.0)
+  > 为通用编程智能体配备命令行3D感知工具包进行空间推理，遵循「闭合证据环」设计：获取场景证据、写入持久场景记忆、用平实空间语言解读每次读数，兼顾编程智能体灵活性与工具几何grounding。在MMSI-Bench和ReVSI上使Qwen3.8-27B较无工具版本提升13.9与20.5分，以66.5/82.3超过同骨干专用系统SpatialClaw，且适配Codex、Claude Code等框架。
+
+- **Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition** — [2610.28578](https://arxiv.org/abs/2610.28578) | [GitHub](https://github.com/InternScience/Agents-A1)
+  > 提出35B MoE智能体模型Sage-A1.5，在A1基础上以自适应能力组合推进长程问题求解，既能解决单个任务，也能组织工作并在执行中修正路线。三大改进：智能体编排，通过任务委派与隔离上下文的子智能体并行协作分解复杂任务；智能体验证，以进度检查、证据验证与反思式修正识别无效路径；开放科学发现，扩展到探索性研究并产出可检查的科研工件，并在多学科科学应用中展示能力。
+
+- **CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?** `[微调]` — [2610.25078](https://arxiv.org/abs/2610.25078) | [GitHub](https://github.com/SuJQ0722/CoEvo-RSI)
+  > 研究模型-框架共同演化（RSI）中「脑-体失配」：演化的执行框架要求模型未学过的行为，或限制其已有能力。提出CoEvo-RSI：元智能体基于共享演化档案与执行反馈，协调框架设计复用、模型检查点选择/合并与适配。仅用自身拒绝采样轨迹做SFT，使Qwen3.5-9B在故障归因、角色感知Text-to-SQL等任务媲美更大模型，TraceElephant上超DeepSeek-V4-Pro 14.16分。
+
+- **Correction Training for Diffusion Models** `[扩散模型]` — [2610.14136](https://arxiv.org/abs/2610.14136) | [GitHub](https://github.com/sunovivid/correction-training)
+  > 针对扩散模型迭代采样中暴露偏差导致的误差积累，提出校正训练：训练校正器以基础去噪器的预测为输入、对齐真实目标，缩小训练-推理差距；采样时每步迭代精炼干净样本预测，阻止早期伪影传播，且校正器可反复作用于自身输出。在DiT、SiT、JiT上大幅刷新无引导与无条件生成FID，质量比肩CFG，结合CFG可缓解过饱和，还可蒸馏回基础模型消除额外推理开销。
+
+- **Evolving Agent Interfaces** — [2610.28601](https://arxiv.org/abs/2610.28601) | [GitHub](https://github.com/simular-ai/agent-s)
+  > 主张界面设计本身应成为智能体能力。提出Agent S4：元智能体在无成功标签的合成任务轨迹上构建并修订接口与用法知识库，再基于种群的演化按验证任务表现筛选可泛化的改动。OSWorld V2上，Qwen3.8-27B配演化接口取得21.3%二值分数，达固定接口的3.8倍，超过GPT-5.5与Claude Opus 4.8，成本仅其数十分之一；ScienceBoard成功率从41.4%升至58.6%。
+
+- **Good Judgment, Bad Advice: Decision-Model Controllers Raise Agent Cost Without Improving Success** `[API]` — [2610.24649](https://arxiv.org/abs/2610.24649) | [GitHub](https://github.com/namanvats/decision-model-controllers)
+  > 预注册研究：固定Claude Sonnet 5.5终端智能体循环，仅替换控制器——无、确定性规则、小LLM（Haiku 5.5）、类型化决策模型Jev或安慰剂，检验委托小决策能否降本不降噪。Terminal-Bench 2.1上21个留出任务315次试验显示：Jev使每次尝试成本升高19%（几何均值比1.19）且未改善成功率。负结果表明盲目叠加决策控制器可能得不偿失。
+
+- **HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL** `[RL]` — [2610.26426](https://arxiv.org/abs/2610.26426) | [GitHub](https://github.com/Tongyi-ConvAI/Qwen-Character)
+  > 针对基于评分标准的开放式RL中奖励随训练失效的问题，识别两种失败模式：非区分性奖励与虚假奖励（高分≠好回答），根源是训练配置固定不变。提出HarnessRL：与策略共演的训练时框架，检索训练记忆归因失败，经提议-批评循环更新任务采样、rollout引导与评分标准接口，实测通过才接受。在五领域Rubric-Mix-10k上，4B/9B均超最强基线2.8~3.1分，达最优检查点步数近乎减半。
+
+- **Large Flow Language Models** `[扩散模型]` — [2610.28559](https://arxiv.org/abs/2610.28559) | [GitHub](https://github.com/lafa-gh/large-flow-lms)
+  > 提出Lafa——数据高效扩展到8B参数的连续流语言模型：块wise流设计，前缀因果注意力加块内双向异步流，可从预训练AR模型适配迁移，支持前缀缓存与块wise并行解码。不足30B token训练0.5B/7B/8B，指令遵循、推理与编码质量匹配或超越AR基线，学到的流可蒸馏为流图实现少步生成。流训练的多token预测效应还支持自投机解码——同一模型验证流草稿，质量相当下吞吐达AR的2.54倍。
+
+- **On the Fragility of Tasks under Composition: Implicit Budgeting in Language Models** `[API]` — [2610.27190](https://arxiv.org/abs/2610.27190) | [GitHub](https://github.com/chenpanli/fragility)
+  > 发现LLM在单一提示内组合多个任务时存在根本性退化：即使每个子任务单独都能可靠解决，组合后错误显著增多，且不能由独立误差累积完全解释。跨开源模型与Claude Opus 5的实验指向「隐性思考预算」机制——组合情境下模型对每个子任务的思考被重新分配与压缩。该发现揭示任务组合脆弱性的成因，对多任务提示设计与智能体工作流编排有直接警示意义，代码与复现脚本已开源。
+
+- **WinARDet: Compressed Window Auto-Regression for Long-Horizon Vision-Language Grounding** `[VLM]` — [2610.19419](https://arxiv.org/abs/2610.19419) | [GitHub](https://github.com/facias914/WinARDet)
+  > MLLM检测器以自回归坐标生成做视觉grounding，稠密场景中常陷入「框重复循环」。根因是全历史自回归中重复坐标token抢占注意力，挤占对新视觉证据的关注。提出压缩窗口自回归（WinAR）：长答案序列分窗，全自回归仅限当前窗，历史窗压缩为少量潜token参与解码。在RSDense上RexOmni的F1从32.16提至39.36，冗余率从35.48%降至13.00%，支持并行解码与多边形生成。
+
+- **Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization** `[API]` — [2606.31002](https://arxiv.org/abs/2606.31002) | [GitHub](https://github.com/grenadeComing/beyond-compilation)
+  > 指出Lean编译只能验证类型合法，无法检验声明是否表达用户意图，导致autoformalization评估中「编译即正确」的高估。提出结合Lean编译与两个不同模型家族LLM评审一致性的忠实性判据，随机审计中与人类判断一致率达91.5%。在227条大学级语句上评估8个系统，可编译与可接受输出差距达1.3~29.5个百分点；其工具增强智能体编译率87.2%且忠实性更高，为忠实评估建立新范式。
+
+- **Multimodal Reranking Is a System One Decision** `[VLM]` — [2610.28435](https://arxiv.org/abs/2610.28435) | [GitHub](https://github.com/Ryenhails/rerank-as-decision)
+  > 主张多模态重排序本质是「系统一决策」：通用VLM无需专门重排训练，只需把query与候选视作状态、以选择问句输出各选项概率即可充当重排器，轻量决策微调还能进一步提升。该方法将重排序从专门训练的评分模型重新定位为通用决策能力的复用，在多个多模态检索基准上以极少训练成本达到有竞争力的性能，为通用模型能力复用与智能体化检索链路提供新思路，代码已开源。
