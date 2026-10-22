@@ -6177,3 +6177,38 @@
 
 - **Multimodal Reranking Is a System One Decision** `[VLM]` — [2610.28435](https://arxiv.org/abs/2610.28435) | [GitHub](https://github.com/Ryenhails/rerank-as-decision)
   > 主张多模态重排序本质是「系统一决策」：通用VLM无需专门重排训练，只需把query与候选视作状态、以选择问句输出各选项概率即可充当重排器，轻量决策微调还能进一步提升。该方法将重排序从专门训练的评分模型重新定位为通用决策能力的复用，在多个多模态检索基准上以极少训练成本达到有竞争力的性能，为通用模型能力复用与智能体化检索链路提供新思路，代码已开源。
+
+## 2026年10月22日
+
+- **Cache Engineering for Agents** `[无需训练]` — [2610.28577](https://arxiv.org/abs/2610.28577) | [GitHub](https://github.com/thu-nics/AKV)
+  > 提出面向LLM智能体的缓存工程新范式：智能体无需修改轨迹或重填前缀，即可通过drop与repose操作直接控制活跃KV缓存；并设计AKV serving引擎，解决历史依赖导致的缓存复用难题。实验显示，滚动丢弃工具响应的缓存策略较传统阈值摘要平均提升基准得分1.7分、降低平均成本27.7%；AKV带来最高1.2倍输出吞吐与1.5倍P95延迟加速，缓存策略递归自我进化可再降成本7.1%。
+
+- **PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis** `[RL]` `[VLM]` — [2610.20538](https://arxiv.org/abs/2610.20538) | [GitHub](https://github.com/QiushiSun/PrismaCoder)
+  > 提出PrismaForge分层数据流水线，用可合成的分解评分标准把多模态代码样本的程序正确性、构建质量与视觉还原度拆解为可检查指标，同一rubric既做数据过滤又作强化学习奖励；据此构建目前最大最多样的开源多模态代码智能数据集PrismaCoder-2M，并训练PrismaCoder-9B与35B。模型大幅领先开源SOTA并媲美头部闭源系统，rubric流水线对多种模型骨干均有效，代码与数据全部开源。
+
+- **Socratic Skill Learning: Interleaving Teaching and Practice for Transferable Agent Skills** `[MeM]` — [2610.17860](https://arxiv.org/abs/2610.17860) | [GitHub](https://github.com/NJU-LINK/Socratic-Skill-Learning)
+  > 提出Socratic Skill Learning，将专家教学与智能体实践交错进行：Educator引导调查，Student作为唯一环境操作者与Skill作者，可质疑、测试并改写建议。构建含35个任务族、408个可执行用例的SkillTransferBench评估跨任务复用。固定窗口SSL在主队列155用例上达0.801效用，超过无Skill的0.723及两种蒸馏基线；Issue-Guided变体以更少的教育者token（少61.7%）达到0.805效用。
+
+- **Retrieval Augmented Generation Compositionality** — [2610.29722](https://arxiv.org/abs/2610.29722) | [GitHub](https://github.com/dolev31/lasagna)
+  > 提出开源RAG受控评估框架LASAGNA，预先声明三个假设，在8个基准、5K至20万文档语料上测试450种配置。三大发现：不同阶段的强项技术组合后增益大幅缩水（预测+47%实际仅+17%）；检索质量与答案忠实度的优化方向可能互相伤害；最优组合随语料规模变化。说明孤立测量的增益不可靠，新RAG技术应在完整管线中验证。
+
+- **Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?** `[API]` — [2610.28763](https://arxiv.org/abs/2610.28763) | [GitHub](https://github.com/maszhongming/agent4sci)
+  > 提出长周期测试平台Agent4Sci，考察前沿编码智能体在20个科学ML基准（11个领域）上改进已发表最优模型的能力。结果显示前沿智能体在所有基准上均有提升，Claude Opus平均相对改进10.4%，但增益几乎全部来自ML工程技巧而非研究洞察；轨迹分析揭示新颖性误判、资源利用不足、陷入局部工程搜索三类局限。加入研究构想、实验管理等轻量插件技能后，Claude Opus提升至20.1%、Codex从4.4%升至8.1%。
+
+- **Which Agent's Skill Should Change? Group-Relative Credit Assignment for Evolving Multi-Agent Teams** `[MeM]` — [2610.27227](https://arxiv.org/abs/2610.27227) | [GitHub](https://github.com/yananma1029/GRSE-Skills)
+  > 提出GRSE（Group-Relative Skill Evolution），受GRPO启发对同一问题在相同技能库下重复执行并对比，将行为信用分配给真正负责的「智能体—技能」对，并附结构化失败诊断。在HotpotQA和LoCoMo上超过最接近的MASkills方法，多跳问题F1最高提升+6.7与+3.2，改进源于更有依据的检索。面对植入恶意技能库的污染场景，GRSE能以正确符号识别全部恶意技能并恢复干净库得分（+6.3分）。
+
+- **Entertain, then Cancel: How Thinking Makes Reasoning Models Read Some and Or Literally** `[无需训练]` — [2610.21204](https://arxiv.org/abs/2610.21204) | [GitHub](https://github.com/kouzhizhuo/entertain-then-cancel)
+  > 研究推理时长如何改变推理模型对日常语言的理解：固定模型权重只改变思考量，发现在多数开源推理模型及GPT-5中，更多思考会取消some（并非全部）与or（不可兼得）的会话含义，使模型按纯逻辑解读，而间接回答等语境推理反而改善。推理轨迹显示模型先「接纳」强化解读再于后续将其「取消」；从早期解读作答的推理时补救，可在不损失字面准确率的情况下恢复会话含义。
+
+- **Answering in the User's Variety: Calibrated Accommodation Pairs for Post-Training** `[微调]` — [2610.28474](https://arxiv.org/abs/2610.28474) | [GitHub](https://github.com/kouzhizhuo/cap-accommodation)
+  > 研究后训练各阶段（SFT、DPO、RL）如何改变模型对用户语言变体（方言、拼写）的匹配倾向：跨10个开源模型谱系，后训练将回复标准化，DPO在内容匹配对照下仍偏好英式/澳式拼写而非AAE与Singlish。提出校准匹配对（CAP）偏好数据，奖励匹配用户方言密度的同时为标准英语用户保留标准英语。在全开源模型上，CAP在未训练过的特征上提升匹配度，且不增加标准英语用户的方言输出、不损失指令遵循，而单边数据只能靠过度强加方言达到类似增益。
+
+- **Hidden Messages Between Diffusion Language Model Agents: Causal Evidence for Latent Communication** `[扩散模型]` — [2610.28905](https://arxiv.org/abs/2610.28905) | [GitHub](https://github.com/alanrbtx/hidden-messages-diffusion-agents)
+  > 研究扩散语言模型智能体之间能否通过连续潜状态传递隐藏信息：发送者将去噪状态压缩为四个有符号稠密向量，接收者在保留自身上下文的同时消费该消息。因果干预显示，打乱消息消除了Tiny-A2D上+63.6分与Dream-7B上+100.0分的优势；QASC上将两条支撑事实分给两个智能体，匹配通信达80.8%，错误消息则跌至46.8%。时间上单次晚期传输（87.8%）超过四次循环交换（+7.0分），说明「何时传」比「传几次」更重要。
+
+- **DiffResearch: Accelerating Deep Research with Diffusion Language Models** `[扩散模型]` — [2610.28909](https://arxiv.org/abs/2610.28909) | [GitHub](https://github.com/alanrbtx/DiffResearch)
+  > 提出开源多智能体深度研究框架DiffResearch，将扩散语言模型置于规划、证据综合与长文写作各阶段的核心。在固定智能体脚手架、检索代码与评测的前提下对比同规模自回归模型，扩散骨干端到端延迟约快6倍；提出dFast分解模式，从未完成生成的中间去噪状态提前提取子查询，分解环节提速1.99倍且不损失报告质量，在RACE评分上取得三种配置中的最佳成绩，系统级榜单快照超过多个商用系统。
+
+- **ToM2Vec: Continuous Theory-of-Mind Tokens for Multi-Agent Coordination** `[微调]` — [2610.29934](https://arxiv.org/abs/2610.29934) | [GitHub](https://github.com/nsivaku/tom2vec)
+  > 提出ToM2Vec，用固定预算的连续推理token在潜空间学习抽象心智理论：训练时token以搭档的真实想法为监督信号学习抽象与匹配，测试时各智能体生成ToM token作为自身思考与动作的条件。在Overcooked-AI、多方谈判、Decrypto、Hanabi等协作、竞争与混合动机环境中一致优于基座模型及多种训练/提示基线；潜空间推理至关重要，改用文本表达则性能下降；训练可泛化到未见过的搭档模型家族（含GPT-5.4），分析表明token编码的是关于搭档信念与行动的理论而非任务信息。
