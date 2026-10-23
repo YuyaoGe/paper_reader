@@ -6212,3 +6212,35 @@
 
 - **ToM2Vec: Continuous Theory-of-Mind Tokens for Multi-Agent Coordination** `[微调]` — [2610.29934](https://arxiv.org/abs/2610.29934) | [GitHub](https://github.com/nsivaku/tom2vec)
   > 提出ToM2Vec，用固定预算的连续推理token在潜空间学习抽象心智理论：训练时token以搭档的真实想法为监督信号学习抽象与匹配，测试时各智能体生成ToM token作为自身思考与动作的条件。在Overcooked-AI、多方谈判、Decrypto、Hanabi等协作、竞争与混合动机环境中一致优于基座模型及多种训练/提示基线；潜空间推理至关重要，改用文本表达则性能下降；训练可泛化到未见过的搭档模型家族（含GPT-5.4），分析表明token编码的是关于搭档信念与行动的理论而非任务信息。
+
+## 2026年10月23日
+
+- **WeVisOne-VL: Unified Visual Perception from Objects to Pixels** `[VLM]` `[RL]` — [2610.31329](https://arxiv.org/abs/2610.31329) | [GitHub](https://github.com/Tencent/WeVisOne-VL)
+  > 提出WeVisOne-VL视觉语言模型，通过结构化next-token prediction统一物体级与像素级感知，支持检测、指代定位、计数、OCR、分割和抠图等任务。架构上将轻量像素解码器通过特殊OBJ token集成进VLM生成实例级像素输出，采用三阶段课程式SFT加混合任务RL训练。在30多个benchmark上取得物体级和像素级任务的领先性能。
+
+- **Deep Search in Real-World Web Environments** `[API]` — [2610.30181](https://arxiv.org/abs/2610.30181) | [GitHub](https://github.com/Yu-xm/OpenDS)
+  > 提出OpenDS任务与OpenDS-World基准，评估深度搜索agent在真实开放互联网环境中的端到端多步研究能力：agent需自主探索真实网页、通过搜索与浏览器交互发现并串联多源证据得出唯一事实答案。200个任务涵盖多模态信息与异构交互访问，经人工独立验证。12个前沿模型评测中最佳仅39.0%准确率，并揭示工具协调与长程搜索管理的持续挑战。
+
+- **What Generation Knows: Unlocking Fine-Grained Understanding in Unified Multimodal Models** `[VLM]` `[微调]` — [2610.23987](https://arxiv.org/abs/2610.23987) | [GitHub](https://github.com/LRuca/GAFU)
+  > 系统分析统一多模态模型生成侧表征对细粒度理解的价值，发现其对细粒度语义变化更敏感且能捕捉理解侧遗漏的任务相关信息。据此设计GAFU后训练框架：将生成侧视觉表征压缩为紧凑的G token，供理解通路按任务条件检索。在多种视觉理解任务和UMM架构上一致超越同等数据训练的SFT基线，在VStar-Bench等三个基准上取得最高20.00%的相对提升。
+
+- **RouteWeaver: Weaving Mode Selection and Execution into Unified LLM Routing** `[RL]` — [2610.19705](https://arxiv.org/abs/2610.19705) | [GitHub](https://github.com/LaughKing/RouteWeaver)
+  > 提出RouteWeaver统一路由框架，将单轮、多轮与agentic三种路由模式整合进单一LLM策略，联合学习用哪种模式及模式内如何选模型。提出COMET-GRPO将轨迹级优势解耦为模式选择与模式内执行两个独立信号，实现更精准的信用分配，并以渐进式探索从外部指定过渡到自主选择。在数学、代码、知识、逻辑、事实记忆五类任务上平均准确率达61.4%，相对最强基线提升11.03%，五个领域全面领先。
+
+- **Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought** `[MeM]` — [2610.30755](https://arxiv.org/abs/2610.30755) | [GitHub](https://github.com/Litmeb/RAW-RAG)
+  > 质疑复杂agentic记忆系统的必要性，研究朴素Raw-RAG基线：仅用稠密检索加重排从原始对话历史中为reader LLM提供证据。在LoCoMo、LongMemEval等四个基准上，Raw-RAG在七组设定中六组排名第一，超出最强agentic记忆系统0.13-5.53分。证据分析表明其更高的必要证据覆盖率可弥补利用率不足，完整访问变换后的记忆库仍有准确率差距，凸显保留原始信息的重要性。
+
+- **Rethinking Sequence Compression with Test-time Regression** `[VLM]` — [2610.31574](https://arxiv.org/abs/2610.31574) | [GitHub](https://github.com/Sphere-AI-Lab/ttr-compressor)
+  > 从测试时回归视角重新审视序列压缩：输入token定义回归问题，其拟合系数即压缩表征；回归问题端到端学习，系数在前向传播中以闭式解高效计算。所得TTR-Compressor是池化与投影式压缩的通用替代。在块稀疏注意力上大幅超越基于注意力的压缩器；用于多模态大模型视觉token合并时一致优于标准MLP merger，仅用44.4%的视觉token即可达到同等性能。
+
+- **RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention** `[API]` — [2610.31372](https://arxiv.org/abs/2610.31372) | [GitHub](https://github.com/THU-KEG/RIDAR)
+  > 针对自主科研agent的科研诚信违规（RIV）问题，提出RIVt分类法涵盖全研究生命周期14类RIV，并构建RIDAR框架实现自动检测与运行时干预。后验检测在专家标注的RIV-Gold基准上取得85.2% F1；在50个研究任务的300条真实轨迹上检出3964个违规实例（99.7%轨迹存在）。运行时动态检测纠正使任务完成时残留RIV减少36.8%，代码与数据将开源。
+
+- **Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models** `[RL]` — [2610.30882](https://arxiv.org/abs/2610.30882) | [GitHub](https://github.com/kouzhizhuo/wait-provenance)
+  > 追溯推理模型中wait标记的真正来源，发现RL并非其发明者：在不含该词的基础模型上，RL能大幅提升MATH-500准确率而wait几乎不出现；该词随训练数据到来——OLMo-3中期训练即出现，推理轨迹微调会将其植入缺失该词的基础模型。基础模型已含该词时，RL-Zero配方会放大其使用，KL-free GRPO不会。研究警示标记频率不能指示RL诱导的推理能力，LLM评审指标可能颠倒人工标注的趋势。
+
+- **F2G-Pose: Geometry-Aware Foundation Feature Lifting for Direct RGB-D Category-Level Object Pose Estimation** — [2610.31623](https://arxiv.org/abs/2610.31623) | [GitHub](https://github.com/jrryzh/F2G-Pose)
+  > 提出F2G-Pose实时单阶段RGB-D类别级物体位姿估计框架，单次前馈同时预测位姿、度量尺寸和相机坐标系补全形状。方法将稠密视觉基础特征提升到部分点云，用DGCNN编码局部几何，以混合专家Transformer融合物体级结构，尺寸预测与形状补全通过稠密几何监督保证度量一致性。仅在合成SOPE数据上训练即达SOTA精度，纯位姿推理28 FPS，并在真实数据集上展现强泛化与部署潜力。
+
+- **Realism VS Accuracy: Event Sequence Forecasting from a Generative Modeling Perspective** `[扩散模型]` — [2610.12586](https://arxiv.org/abs/2610.12586) | [GitHub](https://github.com/xaosina/event-sequence-forecasting)
+  > 将事件序列多步预测建模为条件生成问题，同时从预测精度与分布真实性两个维度评估。构建包含双方面指标、统计基线、邻近领域改编模型与真实数据集的评测体系，揭示不存在同时精度和真实性兼优的方法，二者存在根本性权衡。进一步提出Wasserstein BaryBooster算法，将真实性强的扩散模型采样聚合为SOTA预测器，证明分布真实性可以转化为预测精度。
