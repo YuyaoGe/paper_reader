@@ -6244,3 +6244,32 @@
 
 - **Realism VS Accuracy: Event Sequence Forecasting from a Generative Modeling Perspective** `[扩散模型]` — [2610.12586](https://arxiv.org/abs/2610.12586) | [GitHub](https://github.com/xaosina/event-sequence-forecasting)
   > 将事件序列多步预测建模为条件生成问题，同时从预测精度与分布真实性两个维度评估。构建包含双方面指标、统计基线、邻近领域改编模型与真实数据集的评测体系，揭示不存在同时精度和真实性兼优的方法，二者存在根本性权衡。进一步提出Wasserstein BaryBooster算法，将真实性强的扩散模型采样聚合为SOTA预测器，证明分布真实性可以转化为预测精度。
+
+## 2026年10月26日
+
+- **RSIHub: A Composable Framework for Agent-Evolution Methods** `[API]` — [2610.32253](https://arxiv.org/abs/2610.32253) | [GitHub](https://github.com/simple-agent-lab/RSIHub)
+  > 提出开源框架RSIHub，为智能体进化方法（用执行反馈改进提示、技能、工具与编排）提供共享基础设施。配方通过组合可复用算子并声明可变资源来定义方法，框架统一负责执行、评估、恢复与血缘追踪。已在AHE、Hyperagents、A-Evolve、GEPA上零改动核心完成实例化，在Terminal Bench 2等基准上最高带来13.5个百分点的pass@1提升，为比较不同进化策略提供统一协议。
+
+- **Omni-Woodpecker: Hallucination Correction via Evidence-Prior Rebalancing for Omni LLMs** `[无需训练]` `[VLM]` — [2610.27103](https://arxiv.org/abs/2610.27103) | [GitHub](https://github.com/ZiiJianLiu/Omni-Woodpecker)
+  > 针对全模态大模型的跨模态幻觉，提出免训练框架OWP：先从互补的模态专属视角识别跨模态冲突，再用正交分解在隐藏状态中分离grounding证据与误导性先验，解码前自适应抑制先验、恢复被忽略的证据。以Qwen2.5-Omni-7B为骨干，CMM和AVHBench分别提升12.9和8.6分，并能跨架构泛化到VideoLLaMA2-AV。
+
+- **Every Weight Is a Path of Shared Discrete Decisions** — [2610.31931](https://arxiv.org/abs/2610.31931) | [GitHub](https://github.com/ammarali32/StateTree-Representation)
+  > 提出TWIG权重表示：每个权重都是一串离散决策（符号、2的幂次位移、零门控、共享表索引）路径的终点，相关权重共享路径上部，每个决策只存一次、应用一次。任意训练好的网络都可写成TWIG，权重层可化为近纯连线与加法器的电路；剪枝、量化、低秩分解、码本与权重共享统一为对同一对象的编辑，由单一优化器选择，决策选择可建模为Boltzmann机基态问题用退火器求解。
+
+- **Building Auditable AI Text Detectors with Sparse Autoencoders** — [2610.30006](https://arxiv.org/abs/2610.30006) | [GitHub](https://github.com/google-deepmind/detectorscope)
+  > 提出可审计AI文本检测器构建流程：在微调神经检测器的残差流上训练稀疏自编码器（SAE），为每个特征自动赋予人类可读语义标签，仅保留通过全局保真度阈值的特征，再训练轻量分类器。SAE能还原出对应AI文本语言「破绽」的潜在概念，所得分类器既高度可解释，分布外文本上的检测性能也优于神经检测器与文体特征基线。
+
+- **MMVistaReason: Toward Open-Data and Post-Training Recipes for Multimodal Reasoning** `[VLM]` `[微调]` `[RL]` — [2610.01352](https://arxiv.org/abs/2610.01352) | [GitHub](https://github.com/JackieForest/MMVistaReason)
+  > 提出开放数据后训练配方MMVistaReason：覆盖分析与真实世界两类推理能力；经分阶段清洗、难度感知级联教师蒸馏与轨迹筛选构建MVR-SFT-528K，分规模前沿过滤构建MVR-RL-63K；先训练互补RL专家再经多教师在线策略蒸馏整合。MVR-4B在15个多模态基准平均72.8分，超越Qwen3.5-9B（Instruct）。
+
+- **Generalized CycleGRPO for Fine-Grained Multimodal Understanding and Grounding** `[RL]` `[VLM]` — [2610.29552](https://arxiv.org/abs/2610.29552) | [GitHub](https://github.com/devinxzhang/CycleGRPO)
+  > 提出统一区域理解-定位的强化学习框架CycleGRPO：给定区域，多模态大模型先生成候选描述再定位回原区域，重建重叠度作为可验证奖励，无需参考caption或外部LM评判，统一形式化覆盖图像、视频时空任务。GroundingSuite上gIoU从57.5%升至68.2%，GRES上71.2%升至78.7%，Charades tIoU达51.9%。
+
+- **DraMaze: A Multi-Agent Pipeline with Future-Aware Memory for Diverse Microdrama Script Generation** `[MeM]` `[API]` — [2610.32002](https://arxiv.org/abs/2610.32002) | [GitHub](https://github.com/rimory6/DraMaze)
+  > 提出多智能体微短剧剧本生成流水线DraMaze：以类型记忆引导的进化树搜索与变异探索多样因果路径，并以反向叙事依赖树按未来叙事目标组织与检索历史记忆；同时发布双语基准MiDramaBench。三种骨干LLM上均稳定提升：60集（约6万字）剧本因果模式重复率降低32.1%，逻辑得分82.5，超最优基线8.5分。
+
+- **PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean** `[API]` — [2610.31810](https://arxiv.org/abs/2610.31810) | [GitHub](https://github.com/Jiyuan-Tan/PaperFormalizer)
+  > 提出基于Lean的作者在环自动形式化流水线：从LaTeX源码转录出陈述依赖图，审计各陈述的忠实性、歧义与正确性，再在Mathlib及作者工具库支持下于Lean中形式化并证明；陈述有多种解读或修复会改变论断时暂停并请作者裁决。输出带修订标注的论文、变更报告及与陈述逐一链接的Lean代码。
+
+- **Co-adaptive Rule Routing and Constraining for Structured Knowledge Retrieval** `[RL]` — [2610.14465](https://arxiv.org/abs/2610.14465) | [GitHub](https://github.com/charlieqi02/Co-Adaptive-Rule-Routing-and-Constraining-Retrieval-)
+  > 提出CoRE框架，在无预定义查询-规则监督下联合学习为每个查询选择推理规则及在规则约束下检索证据：路由智能体选规则，对应检索器遍历知识库排序满足约束的证据；二者在路由策略强化学习与检索器对比学习间交替迭代形成闭环协同。在STaRK-QA的科学发现、生物医学与电商数据集上验证有效，生成式路由可跨数据集迁移。
