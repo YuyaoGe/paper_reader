@@ -6273,3 +6273,41 @@
 
 - **Co-adaptive Rule Routing and Constraining for Structured Knowledge Retrieval** `[RL]` — [2610.14465](https://arxiv.org/abs/2610.14465) | [GitHub](https://github.com/charlieqi02/Co-Adaptive-Rule-Routing-and-Constraining-Retrieval-)
   > 提出CoRE框架，在无预定义查询-规则监督下联合学习为每个查询选择推理规则及在规则约束下检索证据：路由智能体选规则，对应检索器遍历知识库排序满足约束的证据；二者在路由策略强化学习与检索器对比学习间交替迭代形成闭环协同。在STaRK-QA的科学发现、生物医学与电商数据集上验证有效，生成式路由可跨数据集迁移。
+
+## 2026年10月27日
+
+- **Trajectory2Gym: Decision-Grounded Compositional Interaction Synthesis for Tool-Use Agents** `[微调]` — [2610.33568](https://arxiv.org/abs/2610.33568) | [GitHub](https://github.com/yihaohu0118/Trajectory2Gym)
+  > 指出成功的工具调用轨迹未必是有用的监督信号，提出Trajectory2Gym框架：围绕欠支撑的组合结构构建可执行交互，并仅从有依据的决策中提取监督。通过结构支撑选择分配经验、父节点归一化SFT保持语义交互的训练权重。在五个规模的Qwen3上全面提升Tau1、Tau2和BFCL，三基准等权均值提升16.9~29.8个百分点，有状态多轮交互场景增益最大。
+
+- **DynaFlow: Learning Free-Form Multi-Agent Orchestration** `[微调]` — [2610.34467](https://arxiv.org/abs/2610.34467) | [GitHub](https://github.com/amiya-special/Dynaflow)
+  > 提出DynaFlow多智能体编排框架，将自由形式的可执行工作流合成纳入主智能体的动作空间：主智能体自主判断协作时机并生成任务程序，以顺序/并行执行、结构化信息交换与验证协调子智能体。仅通过蒸馏轨迹SFT训练主智能体并过滤缺陷样本，子智能体保持固定。六个基准上Forced模式准确率达88.08%，同Qwen3.5-27B骨干下超越最强基线10.90个百分点。
+
+- **Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL** `[RL]` — [2610.33512](https://arxiv.org/abs/2610.33512) | [GitHub](https://github.com/JHKim631/FORK)
+  > 针对基于评分细则的RL奖励只优化召回导致模型冗长、混入事实错误内容的问题，提出FORK奖励：联合优化召回与新型精确率目标，要求响应每个单元既必要又事实正确，分别由细则必要性评分与事实性评分器衡量。实验表明FORK在覆盖率和响应质量间取得帕累托最优，显著提升对基座模型的胜率（RubricHub-Medical从10.6%升至68.0%，HealthBench从22.1%升至74.1%）。
+
+- **S3AC: Stabilized, Selective, and Scalable Actor-Critic for LLM Reasoning** `[RL]` — [2610.35518](https://arxiv.org/abs/2610.35518) | [GitHub](https://github.com/InternLM/xtuner)
+  > 针对长思维链推理中critic训练受轨迹长度覆盖不足、新初始化value head梯度主导两大阻碍，提出S3AC演员-评论家方法：critic提供token级优势和prompt级基线，并提出DAPS难度感知采样，在生成前选题减少rollout浪费。在1.5B到397B稠密与MoE模型上超越GRPO-X等基线；35B下可维持单rollout训练，而critic-free基线在初期提升后退化。
+
+- **Evolving to Match Capabilities: Improving Harness Self-Evolution via Skill Adaptation** `[API]` `[无需训练]` — [2610.33024](https://arxiv.org/abs/2610.33024) | [GitHub](https://github.com/zhihaoyang30/skill-adaptation-code)
+  > 发现harness自进化中技能收益随执行模型能力变化：同一组技能对强模型提升31.1分却削弱弱模型8.8分，86%的失败中违反的要求早已写在技能里。提出技能适配：诊断工具执行、上下文管理、指令遵循与验证四类失败并蒸馏为固定元技能，指导Kimi-K3将技能改写为更易执行的版本，无需执行证据即可将弱执行者提升5.1~14.1分；融入五轮自进化循环后七种执行者再提升2.0~5.1分。
+
+- **ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning** `[RL]` — [2610.18683](https://arxiv.org/abs/2610.18683) | [GitHub](https://github.com/LINs-lab/ProAS)
+  > 指出GRPO等多轮智能体RL把轨迹级优势均匀分配给所有动作，会强化优选轨迹中的不合理动作。提出即插即用的ProAS框架：利用动态演化的智能体参考图实现细粒度信用分配，通过屏蔽不合理激励与非对称惩罚再分配修正优势。在Qwen2.5-1.5B/7B上ALFWorld成功率峰值达91.9%/94.3%，WebShop达66.7%/70.8%，收敛加速至2.44倍，且对不完美参考图保持鲁棒。
+
+- **Build, Don't Play: Self-Improving LLM Research Agents Develop a Hearthstone Battlegrounds AI That Rivals Top Players** `[RL]` `[API]` — [2610.33845](https://arxiv.org/abs/2610.33845) | [GitHub](https://github.com/MCG-NJU/AutoTavern)
+  > 构建AutoTavern自进化研究系统：专门的LLM研究智能体共享类型化研究记忆，论断需过验证门，真实对局闭环驱动其持续改进模拟器、对手、策略及自身流程。20天内建成首个完整复刻炉石酒馆战棋的TavernGym，交付23版经PPO训练的TavernAgent：天梯分从6000升至约15000，近20场平均排名1.60、80%夺冠，优于服务器前十玩家；决策仅0.03秒，远超前沿LLM。
+
+- **Novel or Not? PatEx-Gym: Agentic Prior-Art Search for Novelty Assessment in Patent Examination** `[微调]` — [2610.33503](https://arxiv.org/abs/2610.33503) | [GitHub](https://github.com/AIforIP/PatEx-Gym)
+  > 提出首个专利审查智能体框架PatEx-Gym：PatEx-Bench提供1K真实审查任务、超百万专利与5.2万论文检索库及迭代搜索、证据查阅、审查意见生成的运行环境；提出无标注先例检索轨迹合成方法PASS，利用文档访问行为建模查询与证据质量并生成合成数据；在其上以SFT训练4B的PatEx-Agent。实验显示最终决策准确率不足以反映审查质量，4B小模型经训练后可与更大通用智能体竞争。
+
+- **Joint or Per-Option? Compact Encoders for Closed-Set Decisions from 17 Million to 1 Billion Parameters** — [2610.30970](https://arxiv.org/abs/2610.30970) | [GitHub](https://github.com/tardellirs/crivo-decision-encoders)
+  > 研究闭集决策（如工具选择）的最小编码器尺寸与读入选项方式。3200万参数三种子研究显示：逐选项打分在37基准决策套件上比联合打分高5.8分，优势依赖reranker式初始化，但需更多编码器通过次数。发布17M~1B六个联合编码器：68M/150M模型在209个任务上超435M的DeBERTa-v3零样本分类器4.9/5.9分，最小模型延迟仅14毫秒；联合模型对选项顺序敏感，逐选项打分则不受影响。
+
+- **Nested Sparsity for Scalable Pretraining and Continual Learning** — [2610.31818](https://arxiv.org/abs/2610.31818) | [GitHub](https://github.com/Ma-Lab-Berkeley/Nestor)
+  > 提出Nestor：将MoE式条件计算从FFN推广到注意力算子，其诱导的稀疏性与MoE稀疏性天然层级嵌套组合。实验表明，在同等算力和稀疏度下Nestor的语言模型预训练性能优于常规MoE Transformer；它也更适合持续预训练——能更高效地适配更长上下文、更高效迁移到新领域且对旧领域遗忘更少，并且这些收益随模型规模、数据规模和上下文长度增长而保持。代码与模型checkpoint均已开源。
+
+- **Mycelium: A Meta-Study of Hallucination Detection Across Provenance, Typology, and Granularities** — [2610.33608](https://arxiv.org/abs/2610.33608) | [GitHub](https://github.com/lmeribal/mycelium)
+  > 将幻觉检测视为受基准条件约束的测量问题，沿来源（输出与证据如何获得）、类型（事实性与忠实性失败）、粒度（标注与预测单元）三轴组织现有基准，分析基准构建、标注与评估选择如何塑造预测任务，并将检测器机制对应到适用场景。针对span级评估中标注边界差异影响结果的问题，提出互补指标Span Coverage F1。研究澄清了检测器分数的含义，揭示了跨基准比较的局限。
+
+- **OBB-PBD: Extending Parallel Box Decoding to Oriented Bounding Boxes for Referring Expression Grounding in Aerial Imagery** `[VLM]` `[微调]` — [2610.35450](https://arxiv.org/abs/2610.35450) | [GitHub](https://github.com/ce-dric/OBB-PBD)
+  > 将Parallel Box Decoding从四坐标水平框扩展到六槽位有向框表示（双角度参数化），用于航空影像指代表达定位。不凭下降loss假设正确性，而通过图像/prompt打乱对照与泄漏探针验证模型确实依赖图像与prompt。在AVVG基准完整测试集上rotIoU从零样本的0.1253提升至0.303；相比外接矩形对照，学习有向框本身额外增益0.055，而仅扩展block无显著收益。
