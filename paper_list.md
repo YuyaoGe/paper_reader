@@ -6311,3 +6311,47 @@
 
 - **OBB-PBD: Extending Parallel Box Decoding to Oriented Bounding Boxes for Referring Expression Grounding in Aerial Imagery** `[VLM]` `[微调]` — [2610.35450](https://arxiv.org/abs/2610.35450) | [GitHub](https://github.com/ce-dric/OBB-PBD)
   > 将Parallel Box Decoding从四坐标水平框扩展到六槽位有向框表示（双角度参数化），用于航空影像指代表达定位。不凭下降loss假设正确性，而通过图像/prompt打乱对照与泄漏探针验证模型确实依赖图像与prompt。在AVVG基准完整测试集上rotIoU从零样本的0.1253提升至0.303；相比外接矩形对照，学习有向框本身额外增益0.055，而仅扩展block无显著收益。
+
+## 2026年10月28日
+
+- **ChronoReplay: One Answer Interface Is Not Enough for Streaming Spatial Intelligence** `[VLM]` `[微调]` — [2610.34283](https://arxiv.org/abs/2610.34283) | [GitHub](https://github.com/yihaohu0118/ChronoReplay)
+  > 发现空间VLM后训练存在「接口锁定」现象：针对单一答案接口的后训练强化该接口，却难迁移甚至损害其他空间能力。提出ChronoReplay，将异构空间监督按时间顺序重放为连续episode、保留原始目标并平衡各监督族。同一checkpoint在OVO-S-Bench、OST-Bench、UCS-Bench上同时提升，OST-Bench提高13.41分，取得三项最高均分。
+
+- **Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?** `[VLM]` — [2610.37662](https://arxiv.org/abs/2610.37662) | [GitHub](https://github.com/hustvl/FVQ)
+  > 重新审视「离散视觉token因量化误差必然产生语义损失」的假设，发现量化误差并非语义保真度的可靠指标，离散索引的有效比特预算才是下游性能的关键。提出分解式向量量化FVQ，用对称并行的多codebook分别量化视觉特征的互补视图，缓解传统量化器随codebook增多而饱和的问题，在大比特预算下持续改进，最终在多模态理解任务上追平连续视觉表示。
+
+- **Memory Tax: Dissecting the Net Value of Agent Memory** `[MeM]` — [2610.34073](https://arxiv.org/abs/2610.34073) | [GitHub](https://github.com/hexuan21/MemoryTax)
+  > 针对「长期agent的记忆系统相比直接检索原始历史有多少净价值」这一被忽视的问题，在多个benchmark与模型骨干上大规模评估，发现许多专用记忆系统常不如朴素RAG，净价值为负。以RAG为参照将净价值拆解为记忆收益与记忆税：记忆对原始信息的重组既带来收益，也可能移除或遮蔽证据造成损失。研究分析了记忆税从系统设计与评估方式两方面的成因，并推广至更多记忆应用场景，附13个记忆系统复现代码。
+
+- **Can Test-Time Memory Evolution Outperform Test-Time Training for Scientific Discovery?** `[MeM]` `[无需训练]` — [2610.32046](https://arxiv.org/abs/2610.32046) | [GitHub](https://github.com/yepengliu/TTME)
+  > 测试时训练（TTT）能让开源LLM在科学发现任务上超越前沿模型推理框架，但在线更新权重计算成本高。提出即插即用的测试时记忆进化TTME：不更新模型权重，而是持续演化外部记忆、蒸馏过往发现经验指导后续探索。在统一发现框架下仅替换适配方法公平对比，TTME在全部五项数学任务上超越TTT，同时FLOPs降低82.8%~84.6%、运行时间降低47.7%~58.4%。
+
+- **Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception** `[VLM]` `[RL]` — [2610.37037](https://arxiv.org/abs/2610.37037) | [GitHub](https://github.com/inclusionAI/Zooming-without-Zooming-v2)
+  > 指出空间感知与多模态长上下文共享底层能力「连接证据」：定位相关视觉事实、绑定实体、恢复关系并组合成答案，且针对该能力合成训练数据远比直接合成任务数据容易。提出EvidenceConnect数据合成框架，用单图相关区域的放大视图生成需比较、聚合或链式推理的问题，经独立VLM答案一致性与区域消融筛选保证质量，再用RLVR训练基座VLM，显著增强空间感知与长上下文理解。
+
+- **Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data** `[无需训练]` — [2610.37386](https://arxiv.org/abs/2610.37386) | [GitHub](https://github.com/AidenGeunGeun/calibration-free-moe)
+  > MoE模型小批量交互解码受限于从内存加载路由专家权重，通道选择器通常依赖离线数据校准阈值。本文证明校准并非必要：校准阈值无法保证读取预算（标称18%实际平均仅12.9%），而无需校准的top-k选择只保留每token得分最高的k个通道，在13%与18%预算共43组对比中有40组匹配或超过阈值版本，并避免校准阈值在Gemma 4上导致的重复循环崩溃。
+
+- **What Effort Level Should I Choose? On the Economics of Reasoning Effort in LLM Agents** `[API]` — [2610.34491](https://arxiv.org/abs/2610.34491) | [GitHub](https://github.com/KaiserWhoLearns/ReasoningEffortLLM)
+  > 将LLM推理effort设置视为「信任品」：用户须在购买前选择档位，且任务成功也无法揭示所购算力的边际价值。在四个benchmark（单次推理与长程agent任务）上对闭源与开源模型测量effort的反事实效应：更高effort虽总体提升准确率，却常搞砸低effort能解的任务；全体effort均可解的易任务上最高档成本高达最低档42倍；effort还改变agent轨迹行为而非仅增减token。
+
+- **Cross-modal Steering Vectors Exist Across Both Image and Text Generation** `[无需训练]` — [2610.36269](https://arxiv.org/abs/2610.36269) | [GitHub](https://github.com/saintsauceee/cross-modal-steering)
+  > 通过跨模态转向研究AI模型的概念机制是否跨模态统一：一个模态token上学到的转向向量能否零样本迁移到另一模态。在多个共享参数的统一多模态模型上，跨越情绪、物体大小等概念，证明转向向量在文本到图像、图像到文本双向零样本迁移；即使高度模态特有的概念（如正式vs口语），其向量也能在另一模态引发一致可解释的效果，几何分析亦显示模态间隔之下仍存在共享机制结构。
+
+- **The Lexical Imprint of Pre-training Data** — [2602.10657](https://arxiv.org/abs/2602.10657) | [GitHub](https://github.com/penpaperkeycode/lexical-imprint)
+  > 研究零样本benchmark准确率有多少可被预训练语料与benchmark的词级对齐解释。提出词级unigram交叉熵UCE，一种tokenizer无关、模型无关的词汇对齐度量，并在固定配方的受控从头预训练中扫描语料。横跨10个benchmark、4种语料、3个模型规模的实验表明UCE稳定追踪零样本准确率；该信号还可从测量扩展到控制，在文档粒度选择性增强词汇印记以提升下游表现。
+
+- **Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces** — [2610.37255](https://arxiv.org/abs/2610.37255) | [GitHub](https://github.com/2020-qqtcg/HRP)
+  > LLM agent在harness（提示、工具与控制逻辑）中后训练与部署，但常假设模型在一个harness学到的能力可迁移到下一个。在KL正则化控制下证明：最优策略的对数几率复现其harness的动作偏好，训练后的策略携带harness偏好；部署回报等于harness上限减去策略不匹配损失，训练只改后者而换harness同时移动两项。MiniWoB++实验显示颠倒观察字段顺序即降低训练后模型表现。
+
+- **On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction** `[扩散模型]` — [2610.22543](https://arxiv.org/abs/2610.22543) | [GitHub](https://github.com/Eliezer318/SPOT-dLLM)
+  > 扩散语言模型承诺并行生成，但精确解码每次前向只填一个掩码位置，快速多token解码又有损。关键缺失是「顺序」：目标模型上一轮预测在90%以上位置已给出正确token，缺的只是下一个提交哪个位置。提出SPOT：仅0.62M参数的草稿模型，只读目标输出分布即预测提交顺序并构建候选续写树，目标单次验证，coupled-noise保证任意温度下验证精确；SPOT-Sets进一步实现动态阈值整组提交解码。
+
+- **Learning and Reasoning with Geometry: How Generation Helps Spatial Understanding** `[VLM]` `[RL]` — [2610.36022](https://arxiv.org/abs/2610.36022) | [GitHub](https://github.com/hku-sail/GeoUG)
+  > 提出统一几何理解与生成模型GeoUG：设计多尺度深度codec，在预训练视觉自编码器上实现度量深度生成，联合训练带来任务相关的空间理解收益；引入3DCueBench控制几何难度并平衡二维线索，发现生成深度在细粒度几何判别问题上收益更大。据此提出自适应交错推理——先草拟答案，再决定是否生成几何证据确认或修正，该决策用强化学习训练，权衡准确率增益与生成成本。
+
+- **Truncate or Not? A Scaling Study of Looped Transformers with Truncated Backpropagation** — [2610.26030](https://arxiv.org/abs/2610.26030) | [GitHub](https://github.com/xjxyys/Truncate-or-Not)
+  > 循环transformer复用共享层块以增加计算深度而不增参数，常用截断BPTT节省算力，但有偏梯度可能削弱循环收益。系统考察截断价值：联合变化模型规模、训练token数与前反向循环次数完成近600组训练，拟合出以「等效参数」统一刻画循环与截断的scaling law。结果显示联合优化时全量BPTT优于截断；同算力下更少循环的全量BPTT一致胜过截断设置；模型规模自由时最优为完全训练两个循环。
+
+- **PhysEvolve: Verifier-grounded Self-evolution for Physical Reasoning with Executable Worlds** `[VLM]` `[RL]` — [2610.34921](https://arxiv.org/abs/2610.34921) | [GitHub](https://github.com/yelonhu/PhysEvolve)
+  > VLM在动力学与物理因果问题上不可靠，且观测视频只记录事实轨迹，反事实训练数据稀缺。提出PhysEvolve验证器grounded自进化框架：每轮由共享VLM提出可执行世界程序，确定性物理引擎模拟基线与去体反事实分支并合成答案明确的视觉任务，精确验证反馈经GRPO更新共享策略，使模型从自建可执行世界持续构造训练问题，突破固定数据限制，提升因果物理推理。
