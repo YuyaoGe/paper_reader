@@ -6355,3 +6355,14 @@
 
 - **PhysEvolve: Verifier-grounded Self-evolution for Physical Reasoning with Executable Worlds** `[VLM]` `[RL]` — [2610.34921](https://arxiv.org/abs/2610.34921) | [GitHub](https://github.com/yelonhu/PhysEvolve)
   > VLM在动力学与物理因果问题上不可靠，且观测视频只记录事实轨迹，反事实训练数据稀缺。提出PhysEvolve验证器grounded自进化框架：每轮由共享VLM提出可执行世界程序，确定性物理引擎模拟基线与去体反事实分支并合成答案明确的视觉任务，精确验证反馈经GRPO更新共享策略，使模型从自建可执行世界持续构造训练问题，突破固定数据限制，提升因果物理推理。
+
+## 2026年10月29日
+
+- **DTCA: Denoising Token Credit Assignment for Reinforcement Learning in Diffusion Language Models** `[RL]` `[扩散模型]` — [2610.35201](https://arxiv.org/abs/2610.35201) | [GitHub](https://github.com/ZJU-OmniAI/DTCA)
+  > 针对扩散语言模型（DLM）迭代去噪带来的RL信用分配难题，提出DTCA框架：度量token提交后对剩余掩码位置预测置信度的提升以估计token贡献，按词性分组；用贡献权重选择信息量大的去噪时间步并分配token级学习信号，再按策略更新引起的token级熵变化校准。在LLaDA-8B-Instruct上MATH500最高提升9.0分、GSM8K提升5.3分，不同生成预算下数学推理均稳定提升。
+
+- **Amortizing Sequential Experimental Design in Reasoning LLMs** `[RL]` — [2610.20832](https://arxiv.org/abs/2610.20832) | [GitHub](https://github.com/anitakriz/ar-bed)
+  > 研究如何将序贯贝叶斯实验设计（BED）摊销进LLM推理：将实验生成模型与LLM自身信念解耦，用信息增益奖励显式训练指导动作选择的推理，并考察生成模型构造、奖励估计、假设空间等设计。在Twenty Questions上，所得策略以远低于训练和推理时BED基线的成本获得更优的信息获取与任务表现，并泛化到未见类别；还能正向迁移到临床对话基准Medi-Q，表明信息收集可作为LLM中可泛化的推理技能。
+
+- **LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data** `[RL]` `[长文本]` — [2610.30132](https://arxiv.org/abs/2610.30132) | [GitHub](https://github.com/zhennan1/LongZero)
+  > 针对长上下文RL训练数据稀缺、现有零数据方法只覆盖短文本的问题，提出LongZero：让模型先以紧凑结构化形式自合成多跳推理任务的问题、答案与支撑证据，再将证据扩展为长多文档上下文，无需任何外部数据或更强教师模型；结合自合成的多轮检索任务用GRPO训练。在两种LLM、五个长上下文基准上，LongZero能泛化到真实任务并超越基于外部语料合成数据的基线，为提升LLM长上下文推理提供了自举可行的路径。
