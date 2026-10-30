@@ -6366,3 +6366,44 @@
 
 - **LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data** `[RL]` `[长文本]` — [2610.30132](https://arxiv.org/abs/2610.30132) | [GitHub](https://github.com/zhennan1/LongZero)
   > 针对长上下文RL训练数据稀缺、现有零数据方法只覆盖短文本的问题，提出LongZero：让模型先以紧凑结构化形式自合成多跳推理任务的问题、答案与支撑证据，再将证据扩展为长多文档上下文，无需任何外部数据或更强教师模型；结合自合成的多轮检索任务用GRPO训练。在两种LLM、五个长上下文基准上，LongZero能泛化到真实任务并超越基于外部语料合成数据的基线，为提升LLM长上下文推理提供了自举可行的路径。
+
+## 2026年10月30日
+
+- **Intrinsic Distribution Matching** `[扩散模型]` — [2610.39633](https://arxiv.org/abs/2610.39633) | [GitHub](https://github.com/inclusionAI/IDM)
+  > 提出IDM，改进单步/少步文生图的分布匹配蒸馏（DMD）。将reverse-KL场分解为高斯矩与非高斯残差，在保留完整DMD修正的同时，用生成器自身EMA特征空间的均值与标准差匹配作为显式矩约束，无需外部特征编码器。在Z-Image-Turbo 6B与Qwen-Image 20B上验证，2次网络评估下LongText中英文渲染达94.25%与90.20%，为同预算最高。
+
+- **Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs** `[扩散模型]` `[VLM]` `[无需训练]` — [2610.36671](https://arxiv.org/abs/2610.36671) | [GitHub](https://github.com/hyeon9698/LOWN)
+  > 针对扩散视觉语言模型每步解码重复处理整幅图像的浪费（视觉token占输入89-97%），提出免训练的证书引导视觉路由方法LOWN。分析发现平均仅22.8%的解码步骤真正需要图像；LOWN先在无图像条件下预测掩码token，仅当与上次图像条件预测不一致时才引入图像，一致部分作为可复用证书并决定该步解掩码数量，可自适应不同benchmark的图像依赖程度。
+
+- **Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers** `[扩散模型]` — [2610.40647](https://arxiv.org/abs/2610.40647) | [GitHub](https://github.com/JiongfanYang/SpecSlot)
+  > 提出SpecSlot，一种像素空间整流流生成Transformer，将输出细节与全局注意力序列长度解耦。核心观察是低频结构需要全局交换而高频细节可局部建模：每个空间锚点扩展为多个slot并分配不相交的DCT频带，仅最低频slot参与全局注意力，其余仅局部交互，辅以空间头局部修正。ImageNet-256上收敛更快且FID相当，ImageNet-512上FID改善2.8。
+
+- **VibeGame: Prompt-to-Game Development with AI-Native Engine and Self-Evolving Adversarial Agent Team** `[API]` — [2610.33106](https://arxiv.org/abs/2610.33106) | [GitHub](https://github.com/tettethu/VibeGame)
+  > 提出VibeGame框架，从自然语言提示端到端生成完整可玩的2D游戏项目。其AI原生引擎将项目状态表示为schema校验的结构化文本，提供帧同步运行时控制，使agent能自主检查状态、执行动作并验证行为；其上构建8个专职agent组成的对抗团队，实现与审查分离的多轮修复闭环，并将验收项目蒸馏为可复用的骨架与模块。评测显示其在prompt-assets-to-game任务上优于现有方法。
+
+- **HairDeck: Animation-Ready Stylized Hair Cards from a Single Image** `[扩散模型]` — [2610.40599](https://arxiv.org/abs/2610.40599) | [GitHub](https://github.com/hyz317/HairDeck)
+  > 提出HairDeck，从单张图片直接生成动漫风格、可动画化的发片资产。将发片发型视为无序原语集合，用集合扩散Transformer对所有发片联合去噪（每张发片为单个token），同时生成驱动发片的弹簧骨骼链，可导出为即用格式。在CHARM测试集上Chamfer距离降低44%、发片方向误差减半以上，速度快33倍，单图生成质量超过CHARM与图生3D管线。
+
+- **WebAnything: From the Wild Web to Scalable Agent Environments** — [2610.37786](https://arxiv.org/abs/2610.37786) | [GitHub](https://github.com/china-qijizhifeng/Web-Anything)
+  > 提出WebAnything全自动框架，从真实URL重建有源可依、可复用的网站环境，无需逐站人工实现。Explorer-Builder采集浏览器可观测的结构、资源与交互结果，独立验证器检验候选并引导本地修复或定向重采。构建244个站点工件（14领域53类），支持12984个验收任务；保真度指标优于WebHarbor，用5856条轨迹微调Qwen3.5-9B使REAL成功率提升9.9个百分点。
+
+- **Investor's Last Exam: Can AI Agents Do Equity Investment Without Seeing the Future?** `[API]` — [2610.38342](https://arxiv.org/abs/2610.38342) | [GitHub](https://github.com/Prophetlab/Investor-Last-Exam)
+  > 提出Investor's Last Exam，由资深买方投资人主导的股票研究评测，要求严格冻结信息集合。三大组件：覆盖343万文档版本的版本化金融数据库，以时间戳约束检索；围绕分析师交付物的任务体系；通过金融依赖图将评分标准链接到来源与计算的专家评估框架。覆盖86个任务，联合评估研究质量、预测准确率与投资表现。GPT-6 Astra领先（68.1），但预测建模仅52.5分。
+
+- **Multi-Token Prediction Done Right** — [2610.38331](https://arxiv.org/abs/2610.38331) | [GitHub](https://github.com/JaydenTeoh/Soft-MTP)
+  > 指出标准多token预测（MTP）训练的缺陷：其交叉熵梯度可精确分解为拉动MTP头靠近模型自身NTP分布的KL自蒸馏项（利于投机解码）与信噪比低、掩盖有用信号的残差项，且随规模加剧。提出KL梯度恢复技巧：当两分布共享线性输出头时，可用直通梯度路由组合交叉熵梯度精确恢复KL梯度，无需词表大小的logit矩阵。Soft-MTP仅一行代码改动即可移除噪声残差。
+
+- **Proving and Improving the Platonic Representation Hypothesis with JEPAs** — [2610.39302](https://arxiv.org/abs/2610.39302) | [GitHub](https://github.com/galilai-group/prh-proof)
+  > 将Plato表征假设从猜想变成定理：证明当正样本对是同一场景的良好视角且错位有界时，任意模态独立训练的JEPA表征只相差一个旋转；并指出next-token prediction是视角不佳的JEPA，解释语言模型为何仅靠规模与视觉对齐。实验从14.5万标注扩到9.4亿图文发现对齐scaling law：良好视角样本比NTP少42倍，109M文本JEPA与DINOv2、CLIP的对齐超过参评LM。
+
+- **Training Foundation Models with a Single Algorithm** `[RL]` — [2610.40564](https://arxiv.org/abs/2610.40564) | [GitHub](https://github.com/yudasong/unified-training)
+  > 证明基础模型分阶段训练（预训练、midtraining、SFT、RL）的算法分离并非本质。通过将RL目标推导为对模型生成分布的极大似然拟合，把所有阶段统一为单一似然训练算法，训练生命周期转化为选择数据、比例与时机的决策问题。实现混合静态数据与RL生成样本的单一训练系统，受控与真实实验表明其改善精度-算力权衡与任务覆盖，保持通用能力，并为持续学习提供更强起点。
+
+- **FDSML: Formula-Driven Supervised Metric Learning with Parameter-Aware Triplet Loss** — [2610.39423](https://arxiv.org/abs/2610.39423) | [GitHub](https://github.com/ShineiArakawa/fdsml)
+  > 提出FDSML，将公式驱动监督学习（FDSL）从离散标签分类扩展为利用图像生成参数的连续关系监督：构建类内变化更大的FineFractalDB数据集，并提出参数感知Triplet损失，按迭代函数系统参数空间的距离选正负样本。ResNet-50上Recall@1在SOP从65.6%升至74.0%、Cars从56.2%升至78.4%，同时保持分类竞争力与更强鲁棒性。
+
+- **Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Agents** `[API]` — [2610.34298](https://arxiv.org/abs/2610.34298) | [GitHub](https://github.com/ModalityDance/MICA)
+  > 提出MICA，研究当可执行能力完全匹配时，MCP与CLI接口表征差异是否改变语言agent行为。从同一语义动作契约渲染两种接口并接入同一运行时，跨6个模型3个环境评测发现：接口差异显著影响任务表现与交互成本，并延伸到语义动作选择、失败路径与恢复；94.3%的2004条配对轨迹出现结构化分歧且早期差异沿交互传播，接口设计本身已成为agent决策的一部分。
+
+- **Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities** `[VLM]` — [2610.39301](https://arxiv.org/abs/2610.39301) | [GitHub](https://github.com/TencentCloudADP/youtu-parsing)
+  > 提出Youtu-Parsing-Omni全模态解析器，将文档、图像、音频、视频转为时空grounded记录，作为agent跨模态阅读定位与引证的感知层。核心是一个编码器服务所有模态、一个schema服务所有任务：Youtu-Omni-Encoder在统一时空坐标系共享权重编码各模态，融合层使视频帧关联音频；OmniSchema统一10种任务并用自进化训练OSAD，单一5B模型达多项SOTA。
