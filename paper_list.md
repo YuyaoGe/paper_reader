@@ -6407,3 +6407,20 @@
 
 - **Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities** `[VLM]` — [2610.39301](https://arxiv.org/abs/2610.39301) | [GitHub](https://github.com/TencentCloudADP/youtu-parsing)
   > 提出Youtu-Parsing-Omni全模态解析器，将文档、图像、音频、视频转为时空grounded记录，作为agent跨模态阅读定位与引证的感知层。核心是一个编码器服务所有模态、一个schema服务所有任务：Youtu-Omni-Encoder在统一时空坐标系共享权重编码各模态，融合层使视频帧关联音频；OmniSchema统一10种任务并用自进化训练OSAD，单一5B模型达多项SOTA。
+
+## 2026年11月2日
+
+- **R^2Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop** `[RL]` — [2610.22740](https://arxiv.org/abs/2610.22740) | [GitHub](https://github.com/beita6969/R2Orch)
+  > 提出递归自博弈编排框架R²Orch，通过内外双循环实现智能体编排器的自我改进：内循环在自选题任务上进行自博弈，外循环通过技能撤回持续优化内循环本身。提出递归可学习性目标奖励能持续产生差异化结果的任务提议，并以贝叶斯拔插检验撤回已内化的技能，使编排器逐步收敛到零技能部署。在问答、数学、代码和交互任务的12个数据集上稳定超越基线，开源代码、9B模型与数据集。
+
+- **CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems** `[API]` — [2610.34722](https://arxiv.org/abs/2610.34722) | [GitHub](https://github.com/mlvlab/CEPO)
+  > 提出CEPO框架，将多智能体系统的提示词解耦为共享的协调者提示与智能体专属的执行者提示，按各自角色分别更新：协调规则跨智能体一致精炼，执行指令独立可调。框架提供提示结构与优化引导，可与PE2、OPRO、ProTeGi等现有提示优化器即插即用。在4个领域11个基准上，应用于4种优化器均稳定提升性能，消融与定性分析支持该设计，文档理解多智能体上的受控实验还表明优化预算效率与智能体数量扩展性均得到改善。
+
+- **HALO: Human-Grounded Granular Evaluation of Proactive Agents** `[API]` — [2610.39086](https://arxiv.org/abs/2610.39086) | [GitHub](https://github.com/CedricPei/HALO)
+  > 提出HALO，面向主动式智能体的人工细粒度评估方法。构建HALO-Arena测试场，覆盖依赖、阻塞、风险、机会4类主动需求、10个日常领域与50个个人环境，要求智能体检索证据后再判断是否干预；并发布HALO-8K数据集（10个模型×400场景、20名专家标注）。核心发现：过度主动是主要失效模式，时机过早或强度过量占被拒响应的61.20%；最佳专有与开源模型可接受率分别为72.88%和56.63%。
+
+- **On the Origin and Evolution of Training-Inference Mismatch in LLM Reinforcement Learning** `[RL]` — [2610.40945](https://arxiv.org/abs/2610.40945) | [GitHub](https://github.com/Skylanding/Training-Inference-Mismatch)
+  > 研究LLM强化学习训练-推理不匹配的起源与演化。将采样器与训练器间的不匹配精确分解为推理引擎的数值偏差与异步采样的策略滞后：数值偏差近似恒定，以前缀中心化即可消除其主要偏移；策略滞后则形成自我强化的反馈回路，重要性加权仅在滞后比集中时有效（Qwen3-1.7B上有效样本量跌破一半时失效）。据此提出DLC校正，结合数值中心化、滞后比截断与采样器重同步，统一稳定两类失配来源下的训练。
+
+- **SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World** `[API]` — [2610.37919](https://arxiv.org/abs/2610.37919) | [GitHub](https://github.com/yushengzh/scigame)
+  > 提出SciGame基准，将科学文献转化为结构化科学卡片，为每条定律构建原始与量纲一致的反事实环境对，在经典历史定律集与知识截止后的时新论文集上评估智能体。支持候选引导识别与开放式发现两种任务模式，及仅先验、固定交互、自适应实验三种协议。对5个前沿模型的实验发现：熟悉先验在定律被改动后反成负担；自适应实验仅助强模型却伤弱模型；好的解释可掩盖定量失败，精确符号形式的归纳仍是主要瓶颈。
