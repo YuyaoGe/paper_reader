@@ -6424,3 +6424,38 @@
 
 - **SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World** `[API]` — [2610.37919](https://arxiv.org/abs/2610.37919) | [GitHub](https://github.com/yushengzh/scigame)
   > 提出SciGame基准，将科学文献转化为结构化科学卡片，为每条定律构建原始与量纲一致的反事实环境对，在经典历史定律集与知识截止后的时新论文集上评估智能体。支持候选引导识别与开放式发现两种任务模式，及仅先验、固定交互、自适应实验三种协议。对5个前沿模型的实验发现：熟悉先验在定律被改动后反成负担；自适应实验仅助强模型却伤弱模型；好的解释可掩盖定量失败，精确符号形式的归纳仍是主要瓶颈。
+
+## 2026年11月3日
+
+- **CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements** — [2611.03126](https://arxiv.org/abs/2611.03126) | [GitHub](https://github.com/xlyu0106/CUA-Master)
+  > 提出CUA-Master计算机操作智能体嵌套双循环递归改进框架。系统层外循环通过「世界-数据-模型」飞轮持续引入开放世界语料，利用模型弱点指导下轮数据构建与优化迭代；数据层内循环结合开放世界种子挖掘与自催化传播，从教学视频中挖掘真实工作流并以视觉-语义双路径重建轨迹，合成多样、复杂、可验证的任务。配合反馈引导的快照回滚重试机制，实现高效可靠的轨迹采集与智能体能力持续扩展。
+
+- **CoworkOS:Scaling Agent Coworkers for Real-world Automation** `[API]` — [2611.03178](https://arxiv.org/abs/2611.03178) | [GitHub](https://github.com/RUC-NLPIR/CoworkOS)
+  > 提出CoworkOS通用长程工作执行框架，将任务策略与执行管理分离：模型负责动作决策、任务委派与结果验收，运行时维护状态与反馈闭环。三层架构支持直接执行或同步/异步委派子智能体；共享应用层让人类与智能体查看并修改同一份文档、演示文稿、CAD模型与Blender场景，人类可通过对话或直接修改作品参与协作。引入分层工作区与持久语义记忆，跨智能体、跨会话延续工作文件、关键决策与长任务日志，支撑真实场景的长时程人机协作自动化。
+
+- **PhotoGuider: Composition-Aware Cropping and 360^{circ} View Framing with Explainable Photographic Assessments** `[VLM]` — [2611.02897](https://arxiv.org/abs/2611.02897) | [GitHub](https://github.com/NTUneillee/PhotoGuider)
+  > 提出PhotoGuider「先测量后取景」方法，首次将360度全景的观看方向发现与构图裁切统一处理。利用基础视觉模型与任务专用模型提取共享的构图感知特征，组织为主体、构图、美学、完整性四类摄影token，由紧凑学习打分器完成方向选择与取景，并输出相机参数支持原生重渲染；微调MLLM解释器生成以测量结果为条件的构图解释。在两个标准2D裁切基准上取得最高平均mIoU；120名参与者的盲评中，其在100个全景场景上的排序优于对比方法。
+
+- **LEANGUARD: Lean-Verified Guardrails for Tool-Using Agents** — [2611.02332](https://arxiv.org/abs/2611.02332) | [GitHub](https://github.com/DebarghaG/LeanGuard)
+  > 提出LeanGuard运行时护栏，在工具调用到达环境前以Lean4编写的形式化策略逐次检查每次调用。策略结合状态谓词与作用域过去时序算子，求值默认拒绝，且判定过程经Lean4定理证明与LeanLTL语义等价。被拒调用可通过规则反馈或证明引导修复纠正：后者由Lean元编程自动搜索满足策略且保持用户意图的邻近调用。在Tau-Bench上五个Qwen模型（0.8B-27B）的违规调用降为零且任务成功率无显著变化；在DTap上将直接提示注入成功率从57.9%降至5.9%，良性任务成功率不受影响。
+
+- **DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers** `[无需训练]` — [2610.37826](https://arxiv.org/abs/2610.37826) | [GitHub](https://github.com/Dingyi-Kang/DeFT-RAG)
+  > 提出DeFT-RAG多跳问答RAG框架，针对迭代式RAG需LLM同时承担规划、依赖跟踪、问题重写等多重职责导致准确率受限的问题，改为一次只生成一个自包含子问题，显式命名所问实体，彻底免除规划与重写负担；剩余工作移出LLM，由规则化QA表更新追踪已回答问题及待办状态，已检索答案缓存复用避免重复检索。LLM由此专注单一细粒度推理任务。在多跳问答基准上，DeFT-RAG以更少LLM调用取得优于迭代式RAG方法的准确率，并降低端到端延迟。
+
+- **BYOD: Build Your Own DLM - Efficient Autoregressive-to-Diffusion Language Model Conversion** `[微调]` `[扩散模型]` — [2610.41574](https://arxiv.org/abs/2610.41574) | [GitHub](https://github.com/RuurdKuiper/BYOD)
+  > 提出BYOD，一种仅使用LoRA的高效自回归到扩散语言模型（DLM）转换方法。无需架构特定调参即可在Gemma 2 9B、Llama 3.1 8B、Qwen2.5 7B与Ministral 8B上诱导扩散生成，是首个报道的Mistral系AR转DLM；适配器仅占最终参数4.1-5.8%，基座参数全部冻结，每次转换最多消耗102.4M token，单张Colab GPU上3.1-4.0小时完成。转换后模型可从全掩码序列生成并利用双向上下文。BYOD-Gemma在九任务评测达50.6%平均准确率，逼近LLaDA 8B Instruct的51.9%。
+
+- **Library of Layers (LoL): Adaptively Ordering Transformer Layers at Runtime** — [2611.03526](https://arxiv.org/abs/2611.03526) | [GitHub](https://github.com/arahmani1/library-of-layers)
+  > 提出Library of Layers (LoL）架构，让语言模型像程序员组合计算原语一样，在推理时动态排序Transformer层。仅一个超参数（全局层块库大小）即可在参数复用与稀疏性间连续过渡，统一泛化dense、深度循环与MoE三类架构的参数-FLOPs效率权衡。文本预训练上性能与三类基线相当；在数独与迷宫合成数据上，模型自发用不同层序实现不同解题策略，且可通过干预路由强制指定策略；多语种自然语言场景下也呈现不同的层序选择模式，展现出新的可解释控制能力。
+
+- **SIMIT: Self-Improving Vision-Language Models via Imagination at Test-Time** `[无需训练]` `[VLM]` — [2611.00053](https://arxiv.org/abs/2611.00053) | [GitHub](https://github.com/monurcan/simit_paper)
+  > 提出SIMIT测试时自改进框架：视觉语言模型在回答无标注测试查询前，先自行想象并构造查询特定的训练数据。通过先指定答案再生成图像的方式合成（问题、答案、图像）三元组，即使答不对目标题也能构建有效练习样本，避免多数投票类自奖励强化已有错误；结合原生图像生成与可扩展技能库（文档、图表、结构图等），多阶段验证保证图像与答案一致，难度过滤保留高信息量样本用于测试时更新。在多个多模态评测基准上显著提升VLM的测试时性能，全程无需人工标注或外部模型。
+
+- **DR Pixel: Page-Native Deep Research with Vision-Language Models** `[VLM]` `[微调]` — [2611.03097](https://arxiv.org/abs/2611.03097) | [GitHub](https://github.com/StarTrail-org/DRPixel)
+  > 提出首个开源端到端多模态深度研究智能体DR Pixel，以渲染页面图像作为唯一检索与推理单元，在106万页语料上直接处理表格、图形与公式，克服OCR文本化造成的信息损失。构建DRPixelBench基准，发现免训练的page-native DR已在GPT-5.4、Gemini-3.5-Flash、Qwen3.6-27B等模型上超越OCR基线且工具调用更少。进一步提出反事实信用重加权方法，对教师轨迹细粒度区分关键推理动作与冗余失败尝试，用于智能体监督微调，提升训练效率与最终深度研究性能。
+
+- **Can Coding Agents Sustain Continual Evolution without Forgetting?** `[API]` — [2611.03219](https://arxiv.org/abs/2611.03219) | [GitHub](https://github.com/THU-Agent/continual-harness-evolution)
+  > 首次系统研究编码智能体harness持续自我进化中的灾难性遗忘问题。将三个软件工程任务数据集组织为六个进化方向，对两种代表性harness进化方法开展连续进化实验。结果显示后续任务进化会显著损害既有任务表现：DeepSeek-V4-Flash经Meta-Harness进化后SWE-Bench达94.0%，但继续在FeatureBench等方向进化后性能明显回退，揭示单一任务上的harness自进化结论无法直接推广到多任务场景。工作开源了完整实验框架、meta-harness与种子智能体代码，为多任务智能体持续进化研究提供基础。
+
+- **DAMI: Dual-Axis Memory Initialization for Enhanced Long-Context Retrieval in Gated Linear Attention** `[长文本]` — [2610.41994](https://arxiv.org/abs/2610.41994) | [GitHub](https://github.com/SpeedAI-Lab/DAMI)
+  > 提出DAMI双轴记忆初始化方法，在训练前联合配置门控线性递推的A_log与dt_bias参数，改善有限状态记忆对长上下文检索的限制。沿注意力头维度分配几何时间尺度以覆盖不同检索距离，沿层维度构造低-高-低输入敏感度剖面，仅用少量激活样本校准GDN家族实现，不增加任何可训练参数。在GDN、KDA、GDN2、Mamba-2、RWKV-7五类模型上，RULER风格检索平均准确率较随机初始化基线提升5.29至16.71个百分点，语言建模、常识推理与真实检索任务性能基本持平。
