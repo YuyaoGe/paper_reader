@@ -1,0 +1,157 @@
+[
+  {
+    "date": "2026-11-04",
+    "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+    "arxiv_id": "2611.05275",
+    "github": "https://github.com/InfRec-Cardinal/route-anything",
+    "abstract": "本文提出 Route Anything，一个面向通用 AI 系统的统一模型与策略路由研究框架。作者构建了覆盖语言理解、图像/视频/语音生成、编码与工作智能体、机器人操作等 25 个基准的全模态轨迹矩阵，包含 452 个候选配置的 37 万余次评分运行，并建立了质量-成本权衡下最优路由的理论刻画。实验表明路由信息越充分收益越大，学习路由器的潜力被系统验证。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Words Caught in the Heart: Simulating Person-Specific Expression for Self-Opaque Clients in Psychotherapy",
+    "arxiv_id": "2611.00617",
+    "github": "https://github.com/whunextgen/Pandora",
+    "abstract": "本文提出心理治疗来访者模拟框架 Pandora，针对现有 LLM 模拟器表述过于清晰连贯的问题，显式建模心理状态如何转化为个体化的 situated 表达。框架包含状态更新、主观评估归因、内容策略规划与独立的表达规划器，将决策与客户语言风格结合。在四个咨询数据集 115 个案例上，其表达相似度与披露对齐分数最高，被判为 AI 味的比例仅 7.2%，远低于基线的 43.3%~67.2%。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+    "arxiv_id": "2611.04814",
+    "github": "https://github.com/MuyaoYuan/LoCo",
+    "abstract": "本文提出 LoCo，一种针对推理压缩的局部偏好学习方法。它从模型自身轨迹中检测过度思考状态，冻结推理前缀并从同一状态重新生成更短的验证续写，构造状态条件偏好对用 DPO 训练，教会模型何时继续思考、何时收尾。训练数据完全来自自生成的数学轨迹，数学基准上缩短 41.7%~45.4% 输出长度、代码上缩短 23.4%~36.3%，同时保持甚至提升精度，且纯数学训练可迁移到代码生成。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Axion 1.0: Open Agent Foundation Models, Simplified",
+    "arxiv_id": "2611.03233",
+    "github": "https://github.com/bytedance/axion1_0",
+    "abstract": "字节跳动推出全开源智能体基座模型 Axion 1.0，训练配方极为简洁：仅两阶段轻量 SFT 加一轮强化学习，无需专门的 mid-training、DPO 或 on-policy 蒸馏。第一阶段通过模型感知的数据构造培养自包含推理，第二阶段借助可自动验证的真实数据任务扩展工具依赖推理，RL 进一步强化长程交互。模型在多个智能体基准上表现强劲，部分可与商业旗舰模型竞争，并完整开放数据构造与训练代码。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents",
+    "arxiv_id": "2611.05036",
+    "github": "https://github.com/dongguanting/ToolSpace",
+    "abstract": "本文提出 ToolSpace，一个以工具为中心的长程智能体环境合成框架。它从真实 MCP 服务执行轨迹中用确定性规则挖掘工具间数据、状态与重试依赖并聚类成环境，再以带回滚的状态感知随机游走生成任务，仅保留可重放样本。在七个工具使用基准上，它使 Qwen3.6-35B 平均分从 23.0 提升到 41.0（RL 后 43.2），造出的 Pro 版使前沿模型最多降 38.2 分。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-04",
+    "title": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
+    "arxiv_id": "2611.04418",
+    "github": "https://github.com/LRuca/VidUEU-Agent",
+    "abstract": "本文提出 VidUEU-Agent，一个从原始视频自动合成多模态指令数据的智能体管线，覆盖理解、编辑与统一任务。管线分四阶段：全局感知过滤低质镜头、挖掘关键帧与多模态信号、构建元数据并按元数据路由合成指令样本；其突出特点是能依据下游训练结果自主迭代数据分布，持续优化数据质量、均衡性与训练效果。基于该管线构建的 VidUEU-100K 数据集在多个代表性基准上为基线模型带来显著且一致的性能提升。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+    "arxiv_id": "2611.03634",
+    "github": "https://github.com/aiming-lab/WebHarbor",
+    "abstract": "本文提出 WebHarbor，一套包含 153 个可执行、Docker 化的真实网站重建环境，在确定性控制下还原真实网页服务的界面、内容与功能工作流。环境由任务驱动的人机协作构建并持续演化、人工审计把关，共含 3518 个覆盖多步与登录后流程的任务。在其中做 RL 训练的 Qwen 4B 级 GUI 智能体可泛化到未见任务，四个基准上与领先开源 GUI 网页智能体持平。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
+    "arxiv_id": "2611.02501",
+    "github": "https://github.com/StargazerX0/SpecPilot",
+    "abstract": "本文提出 SpecPilot，一个自主发现推测解码算法与系统优化的智能体闭环。每轮由代价模型定位当前系统与理论上限的差距，并行智能体探索优化方向，token forcing 逐词对照原版输出以检测奖励作弊，结构化记忆迁移已验证机制。它发现了无损 12-bit 权重格式、树验证与多种批处理机制，在四种目标模型、两种 GPU 上将加速比从 4.46 倍提升至 10 倍以上，无需训练、不损质量。",
+    "tags": [
+      "API",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "\"Shall We Approve?\" Consequence-Aware Approval for Autonomous Coding Agents",
+    "arxiv_id": "2610.40753",
+    "github": "https://github.com/wudaoz/Caper",
+    "abstract": "本文提出 Caper，一种面向自主编码智能体的后果感知命令审批机制。它在快照沙箱中预执行每条命令，向独立审批器提供有界的影响报告，允许则提交、拦截则回滚并附带可供智能体行动的原因，突破了现有审批器只看请求与命令文本的局限。在 SABER 上其有害结果率仅 6.7%（其他系统至少 14.8%），在 YoloFS-Ext 上为 7.8%（其他至少 35.3%），且只误拦 1.0% 的安全孪生任务。",
+    "tags": [
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Switch-SWE: Do Coding Agents Hold Focus When Switching Between Unfinished Tasks?",
+    "arxiv_id": "2611.02017",
+    "github": "https://github.com/Miraclecsc/Switch-SWE",
+    "abstract": "本文提出 Switch-SWE，评测编码智能体在穿插多个未完成任务的会话中恢复焦点任务的能力。每个焦点任务在不间断与切换两种匹配会话中对照评测，仅最终焦点补丁计分。基准含 19 个 Python 仓库的 200 个焦点任务、400 个匹配会话。7 个编码智能体的平均解决差距为 11.5 个百分点，轨迹分析揭示跨任务需求混淆与任务状态丢失问题，作者还给出即插即用的上下文管理模块。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Can AI Reviewers See Your Efforts to Improve Your Paper? A Large-Scale Study of Paper Revision Trajectories",
+    "arxiv_id": "2611.02244",
+    "github": "https://github.com/c-steve-wang/PaperTrace",
+    "abstract": "本文基于 PaperTrajectory-2026 数据集（五大 AI 会议 6959 篇论文修订轨迹，沿 14 个维度自动标注变化）研究 AI 审稿人能否感知作者的改进。8 个 AI 审稿人独立评估各版本稿件，结果显示：审稿人对多数重大改进维持原分，分数变化方向一致性弱；修订维度与涨分仅呈审稿人特异的弱关联；一条简短负面用户意见即可抹平评分优势，说明实质性修订未被评分一致反映。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG",
+    "arxiv_id": "2610.36915",
+    "github": "https://github.com/Parv17k/decision-models-conflict-typing",
+    "abstract": "本文研究 RAG 中检索来源冲突类型判定：来源分歧时正确响应取决于分歧原因。作者评估网关上 11 个 decision model（单次前向输出选项概率）与 Gemini 系列在 CONFLICTS 基准的表现。决策模型直接询问准确率 50%~67%，10 个匹配或超过 Gemini 2.5 Flash 且成本低数倍；将最不自信的四分之一查询级联到 Gemini 3.8 Flash 可持平其精度。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Going Deeper With Memories",
+    "arxiv_id": "2611.05255",
+    "github": "https://github.com/akhadangi/deepmem",
+    "abstract": "本文提出 DeepMem，面向字节级语言模型的因果多尺度架构，将语义压缩与精确字节保留分离。可逆子带变换构建更短序列的层级结构，无损载体与细节边带保留字节身份；fast weight 记忆块沿编码器分层工作，注意力超分辨率解码器恢复字节分辨率。DeepMem 在 FineWeb-Edu 与 PG19 上优于同规模字节级 Transformer，瓶颈细化节省约 7600 倍 FLOPs。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-04",
+    "title": "EvoTeam: Multi-Agent Collaboration via Evolving Teams",
+    "arxiv_id": "2610.39813",
+    "github": "https://github.com/DEEP-JLU/EvoTeam",
+    "abstract": "本文提出 EvoTeam，一个以协作为中心的进化框架，联合进化多智能体系统的团队组织、交互规则与个体技能。它维护可复用团队库，按任务选择或组建团队并以团队专属交互规则引导协作，协作经验在兼容团队语境内积累、个体技能跨团队复用，克服了现有方法团队重组受限、交互规则被跨语境复用的问题。在四个基准上的实验验证了 EvoTeam 在异构任务上进化协作的有效性。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Mage-VL-Cowork: A Full Training Recipe to Learn Hybrid Computer Use From Evolved Harnesses",
+    "arxiv_id": "2610.40747",
+    "github": "https://github.com/microsoft/Mage",
+    "abstract": "微软提出 Mage-VL-Cowork，一个 4B 混合计算机使用智能体，在单一策略内结合视觉 GUI 操作与代码、终端执行。模型从通用多模态检查点出发，经跨 midtraining、SFT 与 RL 的五阶段课程训练。配套引擎合成 29 万余任务、覆盖 6915 个技能，并经进化教师 harness 获得高质量轨迹，最终在 OSWorld-Verified 上达 66.0%，为该参数量级最优。",
+    "tags": [
+      "VLM",
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "title": "Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry",
+    "arxiv_id": "2611.03360",
+    "github": "https://github.com/moeinheidari7829/Kev-Bio",
+    "abstract": "本文提出 Kev-Bio，一个用于超声生物测量的视觉语言模型，用临床测量问题引导解剖标志点检测，减少人工卡尺放置的观察者间差异。模型用语言模型的决策表示为每个卡尺端点生成查询，与共享稠密超声特征匹配产生空间概率图，导出标志点坐标与测量值，端到端训练。在九视角 FU/GU Biometry 2026 数据集上，平均径向误差 22.50 像素、测量 MAE 15.38，优于基线。",
+    "tags": [
+      "VLM"
+    ]
+  }
+]
