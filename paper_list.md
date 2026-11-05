@@ -6509,3 +6509,23 @@
 
 - **Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry** `[VLM]` — [2611.03360](https://arxiv.org/abs/2611.03360) | [GitHub](https://github.com/moeinheidari7829/Kev-Bio)
   > 本文提出 Kev-Bio，一个用于超声生物测量的视觉语言模型，用临床测量问题引导解剖标志点检测，减少人工卡尺放置的观察者间差异。模型用语言模型的决策表示为每个卡尺端点生成查询，与共享稠密超声特征匹配产生空间概率图，导出标志点坐标与测量值，端到端训练。在九视角 FU/GU Biometry 2026 数据集上，平均径向误差 22.50 像素、测量 MAE 15.38，优于基线。
+
+## 2026年11月5日
+
+- **What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?** `[RL]` — [2611.06483](https://arxiv.org/abs/2611.06483) | [GitHub](https://github.com/GaryStack/Rethinking-Agent-RL)
+  > 系统剖析多轮 Agentic 强化学习究竟提升了什么。通过 Pass@(K,T) 在采样宽度与交互深度两维评估，发现轨迹级 RL 优势依赖充足轮次预算，预算收紧时收益显著衰减；Agentic RL 也非均匀提升单步决策质量，优势集中在错误恢复与长程韧性。为缓解部署风险，论文讨论过程监督信号的利弊，提出 BudgetMix RL，在训练中动态变化交互预算，实验表明其在多样化执行设定下均取得稳健性能。
+
+- **StreamDuo: A Live Commentator and a Research Agent for Unseen Games** `[VLM]` `[微调]` — [2611.01120](https://arxiv.org/abs/2611.01120) | [GitHub](https://github.com/ZixianGao/StreamDuo-code)
+  > 研究跨游戏流式解说：单个游戏上训练的模型解说未见游戏时，只能迁移解说时机，无法迁移游戏知识。提出 StreamDuo：可训练解说员遇到无法命名的画面即发送当前帧，冻结的检索智能体两秒后返回数条游戏百科条目。仅训练解说员，分两阶段：信息增益标签教会它只在答案有用时提问，自蒸馏教会它利用噪声答案。在十个未见游戏上测试，实体召回从 0.082 升至 0.116，源游戏泄漏从 9.9% 降至 1.0%。
+
+- **NitroFusion2: Bringing Adversarial Loss to the Text Stream of Multimodal Diffusion Transformers** `[扩散模型]` — [2611.05648](https://arxiv.org/abs/2611.05648) | [GitHub](https://github.com/ChenDarYen/NitroFusion2)
+  > 传统对抗扩散蒸馏依赖图像特征做判别，针对多模态扩散 Transformer 重新思考：文本流经联合注意力已读取图像，又与文本条件绑定。提出文本流对抗蒸馏 TSAD，以中间文本 token 状态为新的对抗表示；并提出 ACD，以排版、物体、风格等侧面为判别器条件引导训练。两者整合为 NitroFusion2，将少步蒸馏从 4-8 步降至 1-2 步且质量相当，一步生成即可产出清晰文字与丰富细节。
+
+- **Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents** `[API]` — [2610.41432](https://arxiv.org/abs/2610.41432) | [GitHub](https://github.com/microsoft/Hybrid-Computer-Use)
+  > 指出以截图加键鼠操作为中心的电脑使用界面强加了人类交互先验，模型反复读屏，计算机的语义与编程能力被闲置。提出 HCU，统一三条通道：命令行编程交互、无障碍接口语义交互、GUI 视觉交互。AX 工具返回紧凑观测、批量执行动作并以 diff 报告效果；HCU skill 引导模型组合通道。在 OSWorld 2.0 上取得最高 Partial 与 Binary 分数，各模型效率与成功率均超基线。
+
+- **How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates** `[微调]` — [2610.40516](https://arxiv.org/abs/2610.40516) | [GitHub](https://github.com/swiss-ai/msafetemp)
+  > 针对安全对齐过度聚焦英语、损害低资源语言的问题，提出可扩展的模板化数据增强流程：从有害提示提取安全模板，翻译后以文化真实实体填充槽位，批量生成多语言拒答与良性语料，发布覆盖 60 种语言的 MSafeTemp 语料。实验揭示仅英语评估会误判多语安全性：英语下失败的攻击一旦翻译即成功，文化本地化变体还暴露更多漏洞。模板增强的训练数据多样性更高，显著提升英语之外的安全性能。
+
+- **Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention** `[长文本]` `[无需训练]` — [2611.03768](https://arxiv.org/abs/2611.03768) | [GitHub](https://github.com/ArjunKrishnak/dsa-multi-layer-indexer)
+  > DeepSeek 稀疏注意力每层前需用 indexer 扫描 KV cache 选 top-k token，长上下文 decode 耗时主要在此。相邻层选中 token 高度重合，一层可沿用上一层选择使 indexer 与注意力并发，即 Multi-layer Indexer。免重训练、无新增权重，SGLang 内可运行，在 V3.2 与 GLM-5 上较 IndexCache 提速 14.5%。
