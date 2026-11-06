@@ -6529,3 +6529,29 @@
 
 - **Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention** `[长文本]` `[无需训练]` — [2611.03768](https://arxiv.org/abs/2611.03768) | [GitHub](https://github.com/ArjunKrishnak/dsa-multi-layer-indexer)
   > DeepSeek 稀疏注意力每层前需用 indexer 扫描 KV cache 选 top-k token，长上下文 decode 耗时主要在此。相邻层选中 token 高度重合，一层可沿用上一层选择使 indexer 与注意力并发，即 Multi-layer Indexer。免重训练、无新增权重，SGLang 内可运行，在 V3.2 与 GLM-5 上较 IndexCache 提速 14.5%。
+
+## 2026年11月6日
+
+- **Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training** `[RL]` — [2611.04277](https://arxiv.org/abs/2611.04277) | [GitHub](https://github.com/DeepExperience/Harness-S)
+  > 提出Harness-S智能体训练框架。观察到从同一系统演化出的兄弟harness具有局部性、互补性与非平稳性，方法沿不同修复方向演化出专用兄弟harness组成固定池，仅在基harness全部失败时调用互补救援，用新轨迹替换失败组做强化学习；自适应路由器依据行为画像与多LLM投票选出Top-k变体并随策略刷新。在AppWorld、SWE-Gym、DBBench上，训出的单一策略回到原始harness仍显著优于纯策略训练，复用路由器做Rank-1推理还可提分。
+
+- **TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing** `[扩散模型]` — [2611.06741](https://arxiv.org/abs/2611.06741) | [GitHub](https://github.com/Lyricccco/tailsteer)
+  > 提出TailSteer末段训练框架，解决多轮图像编辑中编辑输出被反复复用、微小偏差累积成严重视觉漂移的问题。核心思想是早期去噪动态与基础模型保持一致，将保真修正集中在去噪轨迹尾部抑制细粒度偏差；修正信号来自编辑模型自身的on-policy去噪rollout，以未改动源内容为参照，无需人工编辑监督对。在FLUX、SenseNova、Qwen三个模型族上，15~20轮编辑累积漂移大幅降低，文生图与单轮编辑性能基本保留，证明长程编辑鲁棒性可由末段训练解锁。
+
+- **EvoMemState: Evolving Memory State for Personal Agents** `[MeM]` `[RL]` — [2611.03743](https://arxiv.org/abs/2611.03743) | [GitHub](https://github.com/XMUDeepLIT/EvoMemState)
+  > 提出EvoMemState状态中心的个人智能体长期记忆框架，弥补事实中心范式忽视事实间更新、约束与冲突的不足。框架包含三个组件：本体引导的记忆状态归纳抽取持久事实并构建关系状态，维护其有效期、适用范围与演化关系；基于强化学习的状态演化将记忆使用经验内化为策略，生成面向当前请求特定推理状态；状态感知推理融合相关事实、关系状态与推理状态指导智能体。在长期对话与记忆使用基准上，一致优于现有记忆系统。
+
+- **Towards Foundation Decision Models: Drex** `[RL]` — [2611.07854](https://arxiv.org/abs/2611.07854) | [GitHub](https://github.com/nace-ai/drex-decision-models)
+  > 提出Drex决策模型家族（8B至27B Max四款），不做自回归解码，直接对给定选项返回概率分布，规避长链推理生产中答案不一致、需解析输出、成本高延迟大的问题。请求由状态（文档、记录、智能体上下文，可含图像）与选择、是非或评分题组成；训练结合SFT、修正反馈强化学习RLAF与视觉微调，一致性损失提升选项顺序鲁棒性。Decision Index上Max以67.52刷新所比决策模型SOTA（Jev为60.70），典型请求仅183ms，GPT-6 Sol约2秒。
+
+- **SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization** — [2611.08089](https://arxiv.org/abs/2611.08089) | [GitHub](https://github.com/ByteDance-Seed/SAE-interprets-MoE)
+  > 用稀疏自编码器SAE研究MoE专家特化机制。在MoE层输出上训练SAE，由于该输出是路由器加权的专家和且编码器为仿射变换，每个隐单元前激活可精确分解到各专家贡献，聚合得到每个专家主导的隐单元集合，刻画贡献而非门控意义上的特化。在Qwen3-30B-A3B第4、30、46层上，贡献远比门控集中，多数隐单元仅一两个主导专家；自动解读揭示细粒度分工，如Java与前端网页、几何与算术各有专属专家。
+
+- **VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding** `[VLM]` — [2611.08449](https://arxiv.org/abs/2611.08449) | [GitHub](https://github.com/NVlabs/Eagle)
+  > 提出VFlash视觉规划快速解码方法。物理AI任务中自回归视觉-语言模型逐坐标token生成点、框、轨迹等基元代价高昂，VFlash利用基元已知结构训练轻量drafter，一次前向联合预测整个基元坐标，布局自适应基元类型、维度与长度；空间精度无需复现自回归token序列，直接接受结构合法预测。在2D/3D机器人轨迹任务上降低预测误差，3D点运动预测约提速25倍；以其规划为条件的世界动作模型在MolmoSpaces四套件上成功率70.2%，超基线62.6%。
+
+- **Decoupled Predictive Decision Making: A Shared Conditional Predictor for Agents** `[无需训练]` — [2611.02075](https://arxiv.org/abs/2611.02075) | [GitHub](https://github.com/StartLuxLabs/StartLux-Decision)
+  > 提出解耦预测式决策架构DPDM，将异构智能体决策统一为共享预训练学习器的条件预测问题。语言模型提供当前与历史记录的语义表示，通用条件预测器从证据中预测任务目标；预训练提供可复用推断能力，部署证据实例化问题特定预测，两个模型神经参数均不更新。工具判断、候选偏好、推理评估等共享证据-查询接口，由决策规则映射为选择。单个冻结LimiX-2预测器服务五类任务，以Qwen3.5-27B为编码器，50个基准平均准确率从few-shot的78.80%提升至84.92%。
+
+- **Identically Trained Language Models Break on Different Jailbreaks** — [2610.34074](https://arxiv.org/abs/2610.34074) | [GitHub](https://github.com/cerulean-works/castor)
+  > 研究越狱脆弱性更多由预训练run还是数据配方决定：对25种数据配方，各取3个预训练种子的1B基座模型，施加相同安全后训练（2个种子），共150个模型，收集其对共享越狱提示的非拒答率并两两关联。同一预训练run的后训练副本相关性高达0.984，换预训练种子降至0.811，换数据配方仅0.779，在全部配方及150M、300M参数上成立；某检查点上最优的91个攻击模板，换新预训练种子后仍最优的仅27%（换后训练种子为67%）。预训练run还留下可识别指纹，75个run可被100%识别。
