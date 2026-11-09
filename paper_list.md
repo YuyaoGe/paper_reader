@@ -6555,3 +6555,17 @@
 
 - **Identically Trained Language Models Break on Different Jailbreaks** — [2610.34074](https://arxiv.org/abs/2610.34074) | [GitHub](https://github.com/cerulean-works/castor)
   > 研究越狱脆弱性更多由预训练run还是数据配方决定：对25种数据配方，各取3个预训练种子的1B基座模型，施加相同安全后训练（2个种子），共150个模型，收集其对共享越狱提示的非拒答率并两两关联。同一预训练run的后训练副本相关性高达0.984，换预训练种子降至0.811，换数据配方仅0.779，在全部配方及150M、300M参数上成立；某检查点上最优的91个攻击模板，换新预训练种子后仍最优的仅27%（换后训练种子为67%）。预训练run还留下可识别指纹，75个run可被100%识别。
+
+## 2026年11月9日
+
+- **LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time** `[长文本]` `[无需训练]` — [2611.07025](https://arxiv.org/abs/2611.07025) | [GitHub](https://github.com/lowram-model/lowram)
+  > 针对KV缓存随上下文线性增长、限制批大小与吞吐的问题，本文发现注意力头内value大都可以由key预测，提出免训练的KV缓存压缩方法LowRAM：测试时为每个头拟合轻量预测器，只存重建误差最大的token残差，实现近无损4倍value压缩，可配元学习初始化降低prefill开销，并叠加跨层低秩key压缩。在Llama、Mistral等三个模型家族上接近无损，4倍压缩下峰值解码吞吐最高提升5倍。
+
+- **Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters** `[RL]` `[微调]` — [2611.09634](https://arxiv.org/abs/2611.09634) | [GitHub](https://github.com/ckarouzos/lambdamix)
+  > 针对部署中需在多目标间灵活切换权衡、而标准后训练只产出固定权重单一策略的问题，本文提出LambdaMix：在冻结基座模型上为每个目标联合训练一个LoRA适配器，用偏好向量同时控制生成响应的适配器混合比例与组相对优势更新中的奖励加权，单次训练即可在推理时免再训练切换偏好。在四个模型的有用性/无害性、数学解题、评论改写等任务上，超体积均超过所有条件化与策略合并基线，且更省训练样本与参数。
+
+- **Where to Connect? Boosting MLLMs via Dynamic Gated Pathways across ALL ViT and LLM Layers** `[VLM]` `[微调]` — [2611.06844](https://arxiv.org/abs/2611.06844) | [GitHub](https://github.com/YingyingYan1/DGP)
+  > 主流MLLM将固定单层视觉特征注入LLM，把所有层视为同质消费者，忽略各层需要不同视觉粒度。本文提出DGP（动态门控通路）：在ViT与LLM每一层间建立全连接路由，每层LLM依据隐状态产生对所有ViT层的路由分布，门控加权融合后残差注入。基于LLaVA-1.5训练，在多个多模态基准上一致超过基线（SQA-I +4.2、MM-Vet +3.3），优于现有多层融合方法；路由分析显示各层按需选择粒度。
+
+- **Sketchpad: certified exact arithmetic with a small vision-language model** `[VLM]` `[微调]` — [2611.04434](https://arxiv.org/abs/2611.04434) | [GitHub](https://github.com/NeoVand/sketchpad)
+  > 语言模型做长算术只能采样估计准确率、无法保证未见输入；调用工具精确但把计算移出网络。本文提出Sketchpad：给Qwen3.5-0.8B加低秩适配器，在渲染的工作表上执行算术，每次前向只读三个单元格，输出数字、进位和下一步操作。若每步只读有界视图，「所有长度上精确」等价于在有限视图集合上精确，作者在Lean中证明了该定理。2446个视图全部验证通过；预注册220题全对，无工作表基座仅答对23道。
