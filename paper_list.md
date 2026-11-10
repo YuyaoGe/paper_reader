@@ -6569,3 +6569,26 @@
 
 - **Sketchpad: certified exact arithmetic with a small vision-language model** `[VLM]` `[微调]` — [2611.04434](https://arxiv.org/abs/2611.04434) | [GitHub](https://github.com/NeoVand/sketchpad)
   > 语言模型做长算术只能采样估计准确率、无法保证未见输入；调用工具精确但把计算移出网络。本文提出Sketchpad：给Qwen3.5-0.8B加低秩适配器，在渲染的工作表上执行算术，每次前向只读三个单元格，输出数字、进位和下一步操作。若每步只读有界视图，「所有长度上精确」等价于在有限视图集合上精确，作者在Lean中证明了该定理。2446个视图全部验证通过；预注册220题全对，无工作表基座仅答对23道。
+
+## 2026年11月10日
+
+- **TRIO: Task Refinement with Individual Optimization for Retrieval-Augmented Generation** `[微调]` — [2611.02810](https://arxiv.org/abs/2611.02810) | [GitHub](https://github.com/yingtaoren/TRIO)
+  > 针对RAG中检索不充分与潜在幻觉问题，提出任务精炼与独立优化框架TRIO。设计三个协同智能体：查询扩展智能体以答案质量提升作为奖励迭代优化扩展策略；一致性投票机制标注扩展查询的充分性以过滤低质检索；并引入文档排序模块提升知识利用效率。三智能体各自优化目标并对齐，形成迭代精炼范式。在多个RAG问答基准上取得优于现有方法的成绩。
+
+- **Training Vision Transformers to Focus: Emergence of Spatial Attention Head Specialization** — [2611.11890](https://arxiv.org/abs/2611.11890) | [GitHub](https://github.com/yuji-nozawa/ReFoCo)
+  > 针对DINO等ViT自监督模型缺乏聚焦机制、感知表示模糊雷同的问题，提出两种视觉聚焦损失函数，建立模型注意力与图像特定区域的对应关系。利用多头注意力机制选择性引导模型关注不同空间位置，无需任何标注即可涌现空间注意力头特化，形成多样且空间聚焦的感知能力。定性与定量实验表明该方法显著增强了特征的空间可分性与聚焦性，开源完整DINOv2改造训练代码。
+
+- **FewStepRL: Fine-tuning Few-step Diffusion Models with Reinforcement Learning** `[RL]` `[扩散模型]` — [2611.08240](https://arxiv.org/abs/2611.08240) | [GitHub](https://github.com/EDAPINENUT/fewsteprl-sd35)
+  > 针对RL目标难以直接用于少步扩散模型的问题，提出三阶段适配框架：将各目标变换到x空间统一表达，把梯度分解为自回归锚定与奖励增强两项，再将锚点适配到平均速度模型，在统一代码库中实现FlowGRPO、AWM、DiffusionNFT、OPSD和ReFL的少步版本。SD3.5与Wan2.1实验表明：奖励可微时reward-gradient方法最有效，否则DiffusionNFT族迭代更少即可达高奖励。
+
+- **FlyHash for LLM Agent Memory: An Empirical Validation and a New Application** `[MeM]` — [2611.05791](https://arxiv.org/abs/2611.05791) | [GitHub](https://github.com/mohanji/flyhash-agent-memory)
+  > 首次将果蝇嗅觉环路启发的FlyHash稀疏哈希应用于LLM智能体记忆检索。在公平的对等活跃比特协议下验证：在GloVe、MiniLM、Digits、MNIST及自建基准五个数据集上，FlyHash在k=16至256各预算下均稳定优于SimHash，10个种子差距均超两倍联合标准差，k=16时领先4~5倍。开源含6000条记忆的标注基准，并指出局限：5000条记录时HNSW质量与延迟更佳。
+
+- **Horizon-Scalable Q-Learning** `[RL]` — [2611.10987](https://arxiv.org/abs/2611.10987) | [GitHub](https://github.com/ryanxhr/hql)
+  > 针对离线长时序中一步TD误差累积与多步TD行为偏差的两难，提出Horizon-Scalable Q-Learning：仅当critic对数据动作的估值不低于行为策略best-of-N采样动作时，才沿其扩展多步TD目标，否则回退一步，自动权衡偏差与方差。方法密度无关、仅含N一个超参，兼容flow与diffusion策略，在OGBench与OCBench上验证，并扩展出分块版Chunked-HQL。
+
+- **Knowledge Graph-based Retrieval-Augmented Generation for Schema Matching** `[无需训练]` `[API]` — [2501.08686](https://arxiv.org/abs/2501.08686) | [GitHub](https://github.com/machuangtao/kg-rag4sm)
+  > 针对传统相似度模式匹配难解复杂领域语义歧义、纯LLM易幻觉的问题，提出KG-RAG4SM：设计LLM、向量、图遍历及混合多种子图检索机制与重排方案，从Wikidata、UMLS等大型知识图谱提取最相关子图增强提示，无需重训练。在cms、mimic等多个数据集上较JENA等LLM SOTA精度提升39.79%、F1提升30.56%，支持GPT与Mistral等开源模型，代码数据完整开源。
+
+- **Energy-Tweedie: Score meets Score, Energy meets Energy** `[扩散模型]` — [2512.23818](https://arxiv.org/abs/2512.23818) | [GitHub](https://github.com/andleb/et)
+  > 将Tweedie公式从高斯噪声推广到Gibbs（能量基）噪声分布族，导出Energy-Tweedie恒等式：由噪声势定义的核评分规则的路径导数可恢复噪声边际的Stein score，建立「Gibbs噪声-完整后验-评分规则」的分布级对应。应用包括后验样本估计score、从损坏数据估计噪声参数、为分布式扩散方法提供score视角。在Eight-Gaussians与MNIST上验证，开源代码与检查点。
