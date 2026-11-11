@@ -6592,3 +6592,26 @@
 
 - **Energy-Tweedie: Score meets Score, Energy meets Energy** `[扩散模型]` — [2512.23818](https://arxiv.org/abs/2512.23818) | [GitHub](https://github.com/andleb/et)
   > 将Tweedie公式从高斯噪声推广到Gibbs（能量基）噪声分布族，导出Energy-Tweedie恒等式：由噪声势定义的核评分规则的路径导数可恢复噪声边际的Stein score，建立「Gibbs噪声-完整后验-评分规则」的分布级对应。应用包括后验样本估计score、从损坏数据估计噪声参数、为分布式扩散方法提供score视角。在Eight-Gaussians与MNIST上验证，开源代码与检查点。
+
+## 2026年11月11日
+
+- **Tree-Ising: Repairing Language Models with Bit-Level Ising Edits** `[无需训练]` — [2611.14210](https://arxiv.org/abs/2611.14210) | [GitHub](https://github.com/TheQuantumGOAT/Tree-Ising)
+  > 将LLM权重修复建模为BF16权重上的稀疏离散优化问题。方法利用前向统计定义目标（削弱循环方向、强化结论方向、保持有效token输出不变），在状态树表示下将可行编辑限制为保持共享组指数和尾数的符号翻转与指数移位，并精确分解为每输出行独立的QUBO（Ising）问题，用模拟退火或模拟分岔在GPU上求解。在Qwen3.5-0.8B两层修复上，MATH-500达54.6%，超过agent编辑的51.7%（基座仅7.9%），且修改权重更少。
+
+- **Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents** `[MeM]` `[API]` — [2611.14320](https://arxiv.org/abs/2611.14320) | [GitHub](https://github.com/yukyeongleee/wikitrace)
+  > 提出证据链式记忆系统WikiTrace，解决LLM agent因遵循错误经验而导致记忆退化的问题。核心思想是将每条经验（insight）链接到其来源轨迹的成功/失败摘要及原始轨迹，agent执行新任务时先获取全部经验，当某条经验缺少细节、与其他经验冲突或来自失败任务时，通过终端工具沿链接回溯原始轨迹进行核查。在ALFWorld、ScienceWorld、AppWorld等8个测试套件上均取得最佳成绩，平均比最优既往记忆方法高8.5分，回归率最低（4.5%）。
+
+- **DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction** `[长文本]` — [2611.03142](https://arxiv.org/abs/2611.03142) | [GitHub](https://github.com/jianke0604/DepthGraft)
+  > NeurIPS 2026论文，重新审视跨层KV共享：除压缩缓存外，每条KV复用边为深层到源KV投影创建直接梯度路径，使KV共享成为隐式的结构正则化器。提出DepthGraft层次化KV共享架构，深层KV由步长对齐的浅-中源层对重建，以可学习通道系数组合，将非局部梯度流分散到各源层，同时保持prefill提前完成。在0.5B到16B的稠密与MoE模型（GQA/MLA）上平均提升最高达+3.61分，KV缓存减少约三分之一，128K上下文下TTFT降低26.8%~28.8%。
+
+- **The Surprising Effectiveness of Deleting Weights in LLM Post-Training** `[RL]` `[微调]` — [2611.10866](https://arxiv.org/abs/2611.10866) | [GitHub](https://github.com/agentic-learning-ai-lab/deleting-weights)
+  > 提出Deletion Tuning：仅对transformer块gate投影学习一个二值掩码并置零少于0.05%的权重，无需其他修改即可在RLVR、SFT和on-policy蒸馏三种后训练范式上媲美全量微调。掩码比对应FFT检查点小数百至数千倍，且灾难性遗忘显著更轻——RL训练下先前任务精度保持在基座水平，而FFT、LoRA和随机稀疏微调最高损失5.4分。通过稳定秩、谱漂移和主权重重叠等几何分析解释掩码有效的原因。开源基于verl的GRPO/SFT/SDFT完整训练与评测代码。
+
+- **Blind Variation, Selective Retention: Improving Creative Idea Generation in AI Scientists** `[API]` — [2611.12184](https://arxiv.org/abs/2611.12184) | [GitHub](https://github.com/zou-group/BVSR)
+  > 受认知科学BVSR框架启发，将信息在科学发现中的两种角色分离：盲变（BV）阶段在故意限制任务信息的条件下生成提案以拓宽探索，选择保留（SR）阶段从同任务上已验证的提案及其结局中学习，筛选出值得昂贵实证评估的候选。在5个提案模型和12个科学任务上，限制任务信息使提案原创性和非显而易见性显著提升；基于成对损失训练的SR选择器丢弃一半候选的同时保留79%~82%的top-5%提案。接入SimpleTES工作流后，以1.6~3.8倍更少的验证提案达到或超过其最终成绩。
+
+- **Are Causal Neuron Circuits Unique and Transferable?** — [2611.13885](https://arxiv.org/abs/2611.13885) | [GitHub](https://github.com/omtekyav/causal-neuron-circuits)
+  > 以Goodfire在Qwen3-32B上的Lion King神经元干预案例为起点，研究因果神经元群干预的必要性、唯一性与可迁移性。对每个选出的12神经元群测量全部4096个子集：双跳关系链任务上，patch第一跳问题的激活可把答案从Scar翻转到Simba（三个开源模型均6/7条链），随机神经元为0/7；模型不自信时常存在不相交的替代神经元群；同一群在同一链的其他表述上高度一致（Spearman 0.98），但跨链几乎无迁移。并给出警示：部分被选神经元激活近乎跨问题恒定，未必携带问题特定内容。
+
+- **Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models** — [2611.14083](https://arxiv.org/abs/2611.14083) | [GitHub](https://github.com/moonmath-ai/Sable)
+  > 提出论证系统Sable及单GPU证明器，可证明承诺权重的整数量化transformer逐bit地由prompt产生给定token序列。方法将取整、归一化、softmax和采样固定为无浮点整数函数F_O，约束在31位KoalaBear素数域上可证不环绕，并将各类查找批量进每域一次sumcheck。RTX PRO 6000 Blackwell单卡上，Qwen2.5-32B的4096 token证明仅需92.5秒，开销为服务时延41~50倍，比zkLLM快40~64倍，CPU单核可验证。
