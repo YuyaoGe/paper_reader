@@ -6615,3 +6615,11 @@
 
 - **Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models** — [2611.14083](https://arxiv.org/abs/2611.14083) | [GitHub](https://github.com/moonmath-ai/Sable)
   > 提出论证系统Sable及单GPU证明器，可证明承诺权重的整数量化transformer逐bit地由prompt产生给定token序列。方法将取整、归一化、softmax和采样固定为无浮点整数函数F_O，约束在31位KoalaBear素数域上可证不环绕，并将各类查找批量进每域一次sumcheck。RTX PRO 6000 Blackwell单卡上，Qwen2.5-32B的4096 token证明仅需92.5秒，开销为服务时延41~50倍，比zkLLM快40~64倍，CPU单核可验证。
+
+## 2026年11月12日
+
+- **Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis** `[VLM]` — [2611.12869](https://arxiv.org/abs/2611.12869) | [GitHub](https://github.com/ExplainableML/prh-closer-look)
+  > 对Plato表征假说（PRH）的系统性再检验：PRH认为不同神经网络正收敛到相似表征空间，语言模型能力越强越与视觉模型对齐，但近期研究对此存疑，且相似度指标易受模型深度与宽度混淆。本文定位单模态模型间对齐出现的层与维度，发现只要caption干净且信息丰富，能力-对齐趋势在新模型上依然成立；并引入基线重估跨模态对齐，显示单模态模型的跨模态对齐可超过显式对齐的VLM，但仍远不及同模态模型间对齐。
+
+- **WMIP: A Working-Memory-Inspired Programmable Probe of Cumulative State Tracking in Large Language Models** `[无需训练]` — [2603.27343](https://arxiv.org/abs/2603.27343) | [GitHub](https://github.com/dengzhe-hou/WMIP)
+  > 提出受人类工作记忆启发的可编程探针WMIP，测试LLM在单prompt内不写中间状态、持续追踪累积状态更新的能力。探针由程序生成标准答案，涵盖3到100次更新及末态、中间态、多目标查询，并在同题上比较输出协议。18个LLM实验显示：单步算术准确率84.9%，三至七次更新后记住一个数的核心题仅31.7%；50次更新后无模型超10%。「写出步骤、答案置于末行」指令使核心准确率升至88.0%，代码开源。
