@@ -6623,3 +6623,32 @@
 
 - **WMIP: A Working-Memory-Inspired Programmable Probe of Cumulative State Tracking in Large Language Models** `[无需训练]` — [2603.27343](https://arxiv.org/abs/2603.27343) | [GitHub](https://github.com/dengzhe-hou/WMIP)
   > 提出受人类工作记忆启发的可编程探针WMIP，测试LLM在单prompt内不写中间状态、持续追踪累积状态更新的能力。探针由程序生成标准答案，涵盖3到100次更新及末态、中间态、多目标查询，并在同题上比较输出协议。18个LLM实验显示：单步算术准确率84.9%，三至七次更新后记住一个数的核心题仅31.7%；50次更新后无模型超10%。「写出步骤、答案置于末行」指令使核心准确率升至88.0%，代码开源。
+
+## 2026年11月13日
+
+- **G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation** — [2611.13004](https://arxiv.org/abs/2611.13004) | [GitHub](https://github.com/DAGroup-PKU/G-STAR)
+  > 针对离散自回归图像生成中序列长度与表示质量的矛盾，基于乘积量化提出空间-组协同缩放原则：固定信息预算下组大小应随压缩率平方增长。据此构建GSTAR框架，实现32倍乃至64倍压缩仍保持重建、理解与生成性能，并设计半自回归解码器兼顾组内依赖建模与推理延迟。1024分辨率下单卡H200仅2.5秒生成一张图像，较前代提速20倍，在GenEval等五个基准上媲美领先模型。
+
+- **Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents** `[RL]` — [2611.17167](https://arxiv.org/abs/2611.17167) | [GitHub](https://github.com/ZJU-REAL/decision-agents)
+  > 研究决策模型在长程智能体中的三种角色：行动者、评判者与教师。核心发现：行动差的模型仍可能是好教师——事后评判能看到行动者须预判的后果。在ALFWorld上对比三个决策模型与三个通用LLM：所有模型作为行动者都会被次目标带偏，而整轨迹评判能正确归因。以JEV为教师经GRPO训练，将Qwen2.5-1.5B在ALFWorld成功率从72.8%提至82.9%，WebShop从56.8%提至71.4%。
+
+- **Open Vision Banana: A Fully Open Recipe for Generative Visual Perception** `[VLM]` `[微调]` — [2611.15844](https://arxiv.org/abs/2611.15844) | [GitHub](https://github.com/OpenVisionBanana/OpenVisionBanana)
+  > 开源复现生成式视觉感知范式，将预训练图像生成器转化为统一多任务感知系统。分析颜色编码、提示设计、参数适配与任务平衡等关键设计的交互，从4B/9B开源基座和数百万公开训练对出发，零样本Cityscapes达73.9 mIoU，超过Vision Banana的69.9，深度估计媲美SOTA。提出legend集成测试时扩展，多颜色图例分割后投票融合，mIoU最高提升8.7点。数据、代码与检查点均开放。
+
+- **TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models** — [2611.17331](https://arxiv.org/abs/2611.17331) | [GitHub](https://github.com/NVlabs/DVSM)
+  > 针对decoder-only大视角合成模型中测试时训练（TTT）层省计算但牺牲质量的问题，提出测试时烘焙（TTB）策略。一是改造TTT的快速权重MLP，从交叉视角注意力的输入输出对中显式学习其映射而非完全替代注意力，保持渲染效率同时显著提升质量；二是将上下文token解耦为相机渲染token与图像真值token，消除预填充与新视角渲染的模态错位。在多个基准上最高23倍渲染加速，质量与SOTA持平。
+
+- **WorldDraft: If Code Builds the World, Can Video Models Just Render It?** `[无需训练]` — [2611.16217](https://arxiv.org/abs/2611.16217) | [GitHub](https://github.com/KevinHuge/WorldDraft)
+  > 探讨代码构建4D世界、视频模型只负责渲染的智能体分工范式。提出生成式渲染器两大标准：世界保持与视觉实现，构建WorldDraft基准，含48个4D世界族的432组配对测试，3×3因子设计交叉草稿粒度与外观对齐。对12个模型的评测揭示：两目标存在张力、精细草稿反损外观保真、冲突线索引发最高64%源泄漏。并提出即插即用的视觉提示策略WorldDraft-Primer，在冻结渲染器上一致改善两项目标。
+
+- **HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents** `[MeM]` `[VLM]` — [2611.12872](https://arxiv.org/abs/2611.12872) | [GitHub](https://github.com/ViktorAxelsen/HiVe-Mem)
+  > 提出多模态智能体记忆框架HiVe-Mem，交织水平记忆扩展与垂直证据组合两个维度。水平方向：以文本与视觉锚点将记忆组织为关系图，对语义检索到的种子记忆扩展相关邻居，找回互补信息；垂直方向：每段记忆保留摘要、caption、定位视觉视图、原始图像等多种证据形式，由轻量可训练选择器按查询自适应组合。在三个多模态记忆基准上稳定提升各类基座模型表现，token消耗较最高效竞品基线降低约90%。
+
+- **Agent-R^2: Scaling Agents for Realistic Productivity Work via Real-Source Data Synthesis** `[RL]` `[微调]` — [2611.08219](https://arxiv.org/abs/2611.08219) | [GitHub](https://github.com/ZJU-REAL/Agent-R2)
+  > 针对生产力智能体缺乏规模化后训练数据的问题，提出真实来源数据合成框架Agent-R^2：全链路 grounded 于真实职业种子、语料工作流证据与网络真实文件，从1万候选蒸馏4千实例，配对真实附件与交付物评分细则。经SFT与细则RL训练出Agent-R^2-4B，仅4千实例即在GDPval 51.0%超过Qwen3-235B的48.0%、OfficeQA 14.8%超过13.8%，并缓解捷径行为。
+
+- **From Large Language Models to Efficient System One Decision Models via Adaptive Computation** — [2611.16321](https://arxiv.org/abs/2611.16321) | [GitHub](https://github.com/minhkks/NestOne)
+  > 研究LLM迁移为System One决策模型所需的计算深度：发现决策信息集中于中间层，最后六层可无损失移除，而独立训练的小模型只是在模仿全模型。据此提出NestOne：联合训练完整模型与共享末层和决策头的前缀子模型，经自蒸馏实现跨深度共享计算；轻量门控读取各出口隐状态决定是否继续加深，单一模型即可在多深度自适应运行。在七个决策基准上各深度均匹配或超过独立训练模型，精度-效率权衡更优。
+
+- **A frontier machine intelligence for human neuroimaging** `[VLM]` `[微调]` — [2611.15094](https://arxiv.org/abs/2611.15094) | [GitHub](https://github.com/MLNeurosurg/neuro-vl)
+  > 提出视觉语言模型Neuro-VL，在近100万例常规临床神经影像上训练，可解读完整影像检查并就结果进行自然语言对话。在内部与国际数据集上，其诊断、定位与描述异常及生成放射报告的能力均优于前沿通用模型与专科医学模型；还能对比历次检查评估疾病进展，且比OpenAI与Google的领先模型更可靠地抵抗误导性临床假设。展示了利用医疗系统集体临床经验构建兼具专科能力与广泛临床交互能力的医学AI的路径。
