@@ -1,0 +1,89 @@
+[
+  {
+    "date": "2026-11-16",
+    "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+    "arxiv_id": "2611.18482",
+    "github": "https://github.com/fscdc/MMFlash",
+    "abstract": "针对扩散式草稿模型在多模态场景接受率低的问题，提出MMFlash投机解码加速框架。作者定义基于KL散度的token级视觉依赖度指标，发现高视觉依赖token接受率仅22%（低依赖组46%）。MMFlash自适应加权草稿模型预测差的视觉依赖token，长视频输入时用稀疏注意力减少冗余计算。多个多模态基准上实现最高3.58倍无损加速，超过EAGLE-3和DFlash分别达195.4%和17.1%。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding",
+    "arxiv_id": "2611.12901",
+    "github": "https://github.com/mdlm-steprefine/mdlm-steprefine",
+    "abstract": "发现多模态扩散语言模型（MDLM）迭代去噪过程中，掩码不确定性整体下降，但少数步骤出现与幻觉密切相关的局部熵峰值。据此提出即插即用的StepRefine解码策略：通过衡量每步与邻近时间窗口的熵偏差识别异常步骤，在熵峰值步骤改用概率加权嵌入保留多种推理假设并进行多轮连续细化，细化控制器监控分布稳定性以减少不必要的循环。在多个MDLM和多模态基准上显著缓解幻觉，无需重新训练。",
+    "tags": [
+      "扩散模型",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "title": "MIRIX-2.0: Multi-Agent Memory System",
+    "arxiv_id": "2611.12068",
+    "github": "https://github.com/Mirix-AI/MIRIX",
+    "abstract": "提出多智能体记忆系统MIRIX-2.0：六个类型化记忆智能体以溯源超图索引情景与语义记录，检索在显式预算下运行、证据量不随历史增长；AutoDream在写路径外合并重复锚点，并将任务会话蒸馏为技能。五个QA基准中四个取得最高准确率：LoCoMo达91.4%，LongMemEval-S达72.6%（领先14.3分）；程序记忆在ALFWorld、WebShop成功率最高。无需微调，兼容开源闭源模型。",
+    "tags": [
+      "MeM",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Loopback Transformer: Towards a Unified View of Residual Looped Transformers",
+    "arxiv_id": "2611.07226",
+    "github": "https://github.com/yancyou/Loopback",
+    "abstract": "从深度-记忆视角统一分析残差循环Transformer：对完整块输出加权会连带重加权输入已携带的历史，单独读取各次更新则可将输入强度、总更新权重与更新间分配解耦。Loopback用几何衰减设定总更新权重并提供近因先验，由注意力学习权重分配。ClimbMix上191M至3B规模仅用标准Transformer 40-75%的参数（不含嵌入与输出头）即获更低验证损失，下游十三项任务均值也更高。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+    "arxiv_id": "2611.13509",
+    "github": "https://github.com/evanly-gh/SLM_Factory",
+    "abstract": "提出Mobile AI Factory智能体系统，为指定任务和手机自动构建微调并量化的小型语言模型。编排器LLM自主选择调超参、挖真实数据或生成合成样本，固定规则回滚损害准确率的改动；从小到大搜索不同基座与量化位宽，并利用目标手机多推理引擎的真实测量。十个任务四款安卓机上，端侧模型在五个任务超过两个五次提示前沿模型（最高0.34分），搜索逼近穷举训练27个变体（差0.03）而GPU时间少19倍。",
+    "tags": [
+      "微调",
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime",
+    "arxiv_id": "2611.14505",
+    "github": "https://github.com/unifyai/continual-arc",
+    "abstract": "提出覆盖工作生涯的技能习得评测流Continual-ARC，基于三个ARC-AGI版本构建终身任务流：相同任务休眠后以新实例回归；学习者可付费购买演示、提交答案或在harness内操作，允许付费重试，按消耗反馈预算比例计分，记忆型与权重型学习者在同一标尺上比较。流结束后冻结测试：已见任务新实例测记忆，未见任务测泛化。多数harness方法学得不如简单缓存演示的基线，权重型学习在未见任务有实质收益。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-16",
+    "title": "AI Reviews Are Biased Towards the Appendix",
+    "arxiv_id": "2611.17811",
+    "github": "https://github.com/cincynlp/review_appendix",
+    "abstract": "研究LLM自动评审实际批评论文的哪些部分。分析ACL、EMNLP、COLM、ICLR四会2000篇论文发现，最新GPT和Claude模型50%以上的评审弱点取自附录，API直调、编程智能体、网页访问三种方式均如此；人类评审仅8.4%弱点来自附录，且围绕呈现与核心思想，LLM则取自附录深处细粒度技术细节。该系统性偏差对日益普及的AI辅助评审有重要警示意义。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Interpreting Coding Agents Through Their Behavioral Trajectories",
+    "arxiv_id": "2611.17440",
+    "github": "https://github.com/SWE-rebench/trajectory-analyzer",
+    "abstract": "突破编程智能体基准只看二元成功率的局限，分析125种智能体配置、117个模型的143,209条执行轨迹。开发规则解析器将原始轨迹映射为仓库搜索、文件编辑、测试执行等高层动作，并在500事件上与六模型共识参考对照审计。发现解决率相近的智能体在探索、修改、验证行为上差异显著；仅用聚合行为画像即可在不用任务结果、token数、工具名时，跨仓库集与语言检索出对应智能体技术栈。开源确定性解析器与分析流水线。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Parsed, Plausible, Wrong: Output Format Controls Silent Errors in Small-Model Semantic Parsing",
+    "arxiv_id": "2611.17169",
+    "github": "https://github.com/UmarGit/coffee-llm",
+    "abstract": "研究输出格式如何控制小型语义解析模型「格式正确但结果错误」的静默失败。在PIZZA基准上用LoRA微调Qwen3.5-0.8B与LFM2.5-350M，比较同一目标树的六种无损编码。300组实验显示：单纯缩短编码从不带来收益，用自然语言单词书写目标才有效——词编码两模型上准确率最高且token少4.1倍，静默错误率降2.3倍，增益主要来自否定词处理改善。",
+    "tags": [
+      "微调"
+    ]
+  }
+]
