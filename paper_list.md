@@ -6681,3 +6681,29 @@
 
 - **Parsed, Plausible, Wrong: Output Format Controls Silent Errors in Small-Model Semantic Parsing** `[微调]` — [2611.17169](https://arxiv.org/abs/2611.17169) | [GitHub](https://github.com/UmarGit/coffee-llm)
   > 研究输出格式如何控制小型语义解析模型「格式正确但结果错误」的静默失败。在PIZZA基准上用LoRA微调Qwen3.5-0.8B与LFM2.5-350M，比较同一目标树的六种无损编码。300组实验显示：单纯缩短编码从不带来收益，用自然语言单词书写目标才有效——词编码两模型上准确率最高且token少4.1倍，静默错误率降2.3倍，增益主要来自否定词处理改善。
+
+## 2026年11月17日
+
+- **SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection** `[无需训练]` — [2611.07222](https://arxiv.org/abs/2611.07222) | [GitHub](https://github.com/saintmachines/spillway)
+  > 针对工具型智能体的提示注入攻击提出确定性运行时防御SPILLWAY：动作目标合法性可从工具类型化返回值读取，注入指令只会以自由文本出现。系统将目标准入与净化分离：准入层做集合查找，仅放行目标来自只读工具类型化字段或固定委托规则的调用；净化层以固定规则移除指令性文本。三个骨干模型、七套任务套件上标准注入攻击成功率均为零，效用高于MELON、Progent、DRIFT，额外模型调用接近零。
+
+- **Calpha: Toward Native Biomolecular Intelligence in a General-Purpose Language Model** `[微调]` — [2611.20986](https://arxiv.org/abs/2611.20986) | [GitHub](https://github.com/yliust/Calpha)
+  > 探索通用语言模型原生具备生物分子智能：Calpha让Qwen3.5-9B读取蛋白序列后输出结构token，经小型前端驱动冻结的SimpleFold-3B流匹配头生成全原子坐标，无需工具调用。两阶段训练：先联合微调语言模型，再冻结后仅训练前端。FoldBench-334与CAMEO风格PDB集上TM-score达0.807/0.900。局限：300残基以上语言模型反降精度，通用能力也有所下降。
+
+- **Latent Feedback Is a Compute and Data Amplifier** — [2611.20404](https://arxiv.org/abs/2611.20404) | [GitHub](https://github.com/ifm-ai/LoRM)
+  > 系统对比潜反馈（将每个token顶层隐状态馈入下一token输入）与多花epoch的vanilla Transformer在同等算力下的效率，覆盖60M到271M参数模型网格。拟合统一缩放定律表明潜反馈等价于参数更多的Transformer，最多节省48%算力或47%唯一数据，且节省随数据重复度增大。定律对留出的778M规模预测误差小于0.3%，说明数据受限时潜反馈是更优的FLOP用法。
+
+- **Termination Lag: Coding Agents Solve Early but Stop Late** `[API]` — [2611.14960](https://arxiv.org/abs/2611.14960) | [GitHub](https://github.com/musacim/termination-lag)
+  > 首次刻画编码智能体的终止延迟现象：记录并测试执行中每个补丁，跨5个模型、2个框架、3个SWE-bench数据集测量首次正确补丁到运行结束的步数。38-82%的成功运行在首次源码编辑时就已得正解，但智能体仍继续工作：Qwen3-Coder成功后35-37%的步骤、Laguna-XS.2达54-60%属于解出后的额外验证与探索；1-8%的情况还会把正确补丁改错，为早停策略提供改进空间。
+
+- **Continuation-Guided LLM Evolution of Program Policies and Goal Compilers in Craftax** `[API]` — [2611.19537](https://arxiv.org/abs/2611.19537) | [GitHub](https://github.com/vicgalle/craftax-program-policies)
+  > 提出编码智能体驱动的程序策略进化框架，合成的代码策略推理时零模型调用。先用反馈级联（从回合回报到分层目标与信念更新，可稠密打分）精炼策略：仅episode级反馈在Craftax停滞于1%到达最终层，级联反馈达50%（28%击败最终Boss）。再将控制器分解为环境解释器与规则程序，训练目标编译器将新任务映射为新程序，仅用短任务训练即可零样本迁移到更长任务。
+
+- **Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or Collapses, and a Closed-Form Fix** `[无需训练]` — [2611.20148](https://arxiv.org/abs/2611.20148) | [GitHub](https://github.com/knoveleng/centered-ablation)
+  > 解释并修复方向消融关闭模型行为时不稳定的问题：末层消融等价于logit偏置，门控从原点测量，而末层状态共享巨大共模，导致共模重叠方向在正常文本误触发、目标行为触发不足。Centered Ablation以闭式解将共模投影出去。跨8个模型：标准配方失效处提升攻击成功率29和46个百分点，Gemma-2-9B崩溃率从50%降至1%，并揭示两个安全评判器对崩溃文本打分相反，可制造46个百分点虚假效果。
+
+- **ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization** `[RL]` `[VLM]` — [2611.21605](https://arxiv.org/abs/2611.21605) | [GitHub](https://github.com/huawei-lin/ViRA)
+  > 针对超高分辨率视觉智能体依赖常识而非读取证据的问题，提出CrossRPO：构造对比集——同一图像仅编辑一小块证据区域使答案不同，只有真读证据才能解出整组，以整组解出为奖励且不强化常识作答。构建21-120兆像素训练集与评测集ViRA-Bench。训练的ViRA-9B/27B集合准确率63.3%超GRPO的59.3%，27B多数基准超过Claude Haiku 5.5与GPT-6-Luna。
+
+- **Reflection Anchors for Propagation-Aware Visual Retention in Long-Chain Multimodal Reasoning** `[RL]` `[VLM]` — [2605.09614](https://arxiv.org/abs/2605.09614) | [GitHub](https://github.com/coder-gx/RAPO)
+  > 从信息论角度研究长链多模态推理中的视觉遗忘，推导出单步干预下游视觉增益的下界，指出两个决定因素：局部分支空间（token熵）与下游视觉传播潜力（相对视觉边缘化参考的后缀散度）。据此提出RAPO：基于GRPO选择高熵反思锚点，优化链掩码有限窗口KL代理增强下游视觉依赖。多个推理与一般域基准、多个LVLM骨干上显著超越强基线，代码基于verl实现。
