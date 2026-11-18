@@ -6707,3 +6707,26 @@
 
 - **Reflection Anchors for Propagation-Aware Visual Retention in Long-Chain Multimodal Reasoning** `[RL]` `[VLM]` — [2605.09614](https://arxiv.org/abs/2605.09614) | [GitHub](https://github.com/coder-gx/RAPO)
   > 从信息论角度研究长链多模态推理中的视觉遗忘，推导出单步干预下游视觉增益的下界，指出两个决定因素：局部分支空间（token熵）与下游视觉传播潜力（相对视觉边缘化参考的后缀散度）。据此提出RAPO：基于GRPO选择高熵反思锚点，优化链掩码有限窗口KL代理增强下游视觉依赖。多个推理与一般域基准、多个LVLM骨干上显著超越强基线，代码基于verl实现。
+
+## 2026年11月18日
+
+- **Weight-Space Programming Doesn't Need Transformers** `[API]` — [2611.22055](https://arxiv.org/abs/2611.22055) | [GitHub](https://github.com/effl-lab/Weight-Space-Programming)
+  > 探讨权重空间编程（WSP）中是否仍需Transformer架构。给定极少标注样本与沙箱，让前沿LLM直接编写模型权重或自行设计架构：三个LLM均自主设计出将纯文本事实编译为稀疏查表的模型，测试准确率达54.4%；LLM自设计的模型比同一LLM编写的最优Transformer准确率更高，且参数量少约1800倍。每个错误答案可定位到具体表行并定向改写。基于查表结构提出的关联记忆模型在GPU上比同规模Transformer快至多17倍。
+
+- **Multi-Branch Transformer** `[长文本]` — [2611.19800](https://arxiv.org/abs/2611.19800) | [GitHub](https://github.com/GaotangLi/Multi-Branch-Transformer)
+  > 提出多分支Transformer（MBT），探索Transformer扩展的并行分支路径：输入经共享初始层后，由多组独立参数化的Transformer块并行执行，再融合输出给共享末尾层。在0.8B~2.1B MoE规模、匹配参数与训练算力的预训练实验中，2分支Wide-Shallow变体一致优于顺序Transformer，Balanced变体随分支数增加仍保持质量。拟合的扩展曲线显示标准Transformer需至多1.26倍训练主体算力才能匹配其验证损失。为提升长上下文推理效率，提出Joint-KV构建跨分支共享KV缓存，至多降低34%全模型KV缓存存储，解码吞吐提升至多51.4%。
+
+- **MedJev: A System One Vision-Language Decision Model for Fast and Effective Medical Image Understanding** `[VLM]` — [2611.20992](https://arxiv.org/abs/2611.20992) | [GitHub](https://github.com/zfkarl/MedJev)
+  > 提出系统一视觉语言决策模型MedJev，将医学图像、问题与候选答案经单次多模态前向传播直接映射为决策，彻底消除自回归生成带来的延迟与解析错误。模型移除上层语言层与生成输出通路、保留完整视觉通路与全部视觉token；在精简骨干上，决策头用预训练查询-键匹配为每个候选打分，再以轻量MLP残差校正分数。基于Qwen3.5-4B的MedJev-4B在四个医学图像分类与VQA基准上准确与速度双赢：绝对准确率提升7.93%，端到端加速6.04倍，在4B~9B通用与医学VLM中达到最优性能与推理速度。
+
+- **MillBill: A Machining Agent with Geometric Feedback** — [2611.22565](https://arxiv.org/abs/2611.22565) | [GitHub](https://github.com/kulibinai/MillBill)
+  > 提出CNC加工智能体MillBill，将加工决策与几何执行验证解耦：给定B-rep零件、毛坯与材料，本地部署的中等规模开源模型（Qwen3.8-27B）提出索引三轴加工的操作与切削参数；几何harness生成刀路、模拟材料去除并返回反馈以迭代优化方案，装夹规划考虑刀具物理可达性而非仅几何可见性。以仿真加工后目标表面处于公差内的面积比例为准评估程序质量，MillBill优于由前沿模型自行构建几何与刀路工作流的方案，且不依赖外部大模型API。
+
+- **Do LLM Agents Still Need to Be Told How to Self-Improve?** `[API]` — [2611.23219](https://arxiv.org/abs/2611.23219) | [GitHub](https://github.com/ssundaram21/self-org)
+  > 研究LLM智能体是否仍需要人类告诉它如何自我改进。提出完全自主的范式：只给冻结LLM智能体（Claude等API模型）一个算力预算、收集经验的工具、编辑文本文档的能力和一个通用自我改进目标，不施加外部循环、真实任务与既定配方，让其在游戏测试床上自行构造面向上下文优化的自学习算法。实验发现足够强的模型确实能自我改进，涌现出与人类自我调节学习经典框架及自生成课程文献一致的策略；学到的文本工件还能迁移到外部基准，在不同游戏时长、机制与3D导航任务上均带来提升。
+
+- **TPHC: Improving Hyper-Connections with Tensor-Parallel Grouped Updates** — [2611.23026](https://arxiv.org/abs/2611.23026) | [GitHub](https://github.com/wuyou2002/TPHC)
+  > 针对流形约束超连接（mHC）流数超过四条后收益饱和的问题提出TPHC：将张量并行（TP）分片与HC流结合，为每个TP分片路由不同的残差流混合，并在写回时保持各分片输出相互独立，使各残差流获得差异化更新，且不给注意力与FFN子层增加任何参数或FLOPs。8B模型四条流下训练时间仅比mHC多9%，流数从四增至十六仅多花19%。1.1B模型训练100B token后，TPHC较同流数mHC验证损失降低0.7~1.0%，六个常识推理基准平均零样本准确率提升0.3~0.7个百分点。
+
+- **Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data** — [2611.08922](https://arxiv.org/abs/2611.08922) | [GitHub](https://github.com/StanfordMIMI/Glyph)
+  > 提出Glyph自动化多阶段框架，利用基础模型与稀疏自编码器从多模态、非结构化临床数据中提取潜在特征，解读为编码化的临床概念，并评估其在临床科学发现中的价值，突破预定义特征集对可发现关联范围的限制。应用于41,628名跨机构患者的腹部CT、放射影像报告与实验室测量数据，识别出397个预测性概念与4,463个Bonferroni显著关联，且多数关联可在不同机构的留出队列中自动复现，展示了基础模型潜空间用于疾病机制研究与早期疾病标志物发现的可行性。
