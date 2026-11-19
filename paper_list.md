@@ -6730,3 +6730,35 @@
 
 - **Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data** — [2611.08922](https://arxiv.org/abs/2611.08922) | [GitHub](https://github.com/StanfordMIMI/Glyph)
   > 提出Glyph自动化多阶段框架，利用基础模型与稀疏自编码器从多模态、非结构化临床数据中提取潜在特征，解读为编码化的临床概念，并评估其在临床科学发现中的价值，突破预定义特征集对可发现关联范围的限制。应用于41,628名跨机构患者的腹部CT、放射影像报告与实验室测量数据，识别出397个预测性概念与4,463个Bonferroni显著关联，且多数关联可在不同机构的留出队列中自动复现，展示了基础模型潜空间用于疾病机制研究与早期疾病标志物发现的可行性。
+
+## 2026年11月19日
+
+- **Jeveration: System One Models Now Generate** `[VLM]` — [2611.24738](https://arxiv.org/abs/2611.24738) | [GitHub](https://github.com/Carol-lyh/Jeveration)
+  > 提出Jeveration，将System One决策模型的单次前向预测范式扩展到图像生成：冻结视觉语言模型（Qwen3.5-4B骨干）作为联合决策整体，通过TA-TiTok tokenizer在单次前向传播（H200上78ms）直接输出512×512完整图像。同一checkpoint支持文生图、图生图（边缘图/深度图转图像、上色、风格迁移）及稠密预测（分割、深度、表面法线）。开源推理代码与模型权重。
+
+- **Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development** `[微调]` `[API]` — [2611.24154](https://arxiv.org/abs/2611.24154) | [GitHub](https://github.com/game2player/Game2Player)
+  > 提出Game2Player框架，通过环境-玩家协同开发规模化生成可验证游戏环境与训练数据：Scout筛选游戏，Builder将网页游戏适配为离线可玩并定义可验证任务，Coding Player与VLM Player互相试玩、报告问题并驱动修复闭环，产出轨迹用于微调视觉agent。在PlayerBench与GameWorld上微调后的Qwen3.5-4B/9B显著超越基座，9B开思考模式成功率从13.5%提升至29.4%。
+
+- **StatePortal: Agentic Checkpoint Synthesis for Testing Deep States in Interactive Software** `[API]` — [2611.23257](https://arxiv.org/abs/2611.23257) | [GitHub](https://github.com/pzy2000/State_Portal)
+  > 提出StatePortal，面向GUI交互软件深度状态测试的agent：读取自然语言测试用例与目标源码，合成可版本化、可重放的checkpoint与迁移规约，由混合oracle（程序化状态校验+VLM视觉校验）双重判定，并为每个应用自动生成hook。配套DeepStateBench含61个任务、10个应用。端到端完成率27.5%（基线10.4%与0%），checkpoint重放一致率98.90%，检出96.25%受控视觉缺陷。
+
+- **Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement** — [2611.24651](https://arxiv.org/abs/2611.24651) | [GitHub](https://github.com/agentscope-ai/Piccolo)
+  > 提出Piccolo系列多模态决策模型（0.8B至27B），通过Agentic数据工程与递归自我改进循环共演化模型能力与训练数据：诊断→选取构造数据→训练评估→更新配方。模型以候选概率输出结构化决策，统一支持工具审查、上下文保留、数据工作流与交互游戏。Piccolo-27B-VL以75.59分登顶Decision Index Vision Full榜单，文本版在JevBench-231达92.21%。开源模型权重与参考推理代码。
+
+- **Late Entry in Looped Language Models** `[无需训练]` — [2611.24576](https://arxiv.org/abs/2611.24576) | [GitHub](https://github.com/Xalp/LateComer)
+  > 研究循环语言模型中的迟到进入解码策略：新token跳过前T-K次循环、直接注入末尾K次循环，同时通过流水线式缓存补全在零额外串行调用内构建精确的全深度KV缓存，并提出Same-GEMM Wake验证机制（τ=0时贪心输出与全深度解码完全一致）。配合两阶段微调解决入口隐藏态范数失配。在Ouro-2.6B与Huginn-3.5B上实现2.8至9.1倍吞吐提升且精度基本无损，K=8时GSM8K上比匹配训练的早退模型高16.9分。
+
+- **Chorus: Shared N-gram Embeddings with Layer-wise Adaptation** — [2611.23386](https://arxiv.org/abs/2611.23386) | [GitHub](https://github.com/dualverse-ai/chorus)
+  > 提出Chorus，一种共享N-gram嵌入表的语言模型架构：token与n-gram嵌入仅查找一次，在各中间层通过逐层适配模块复用同一嵌入表，相比每层独立嵌入表显著降低内存开销，并配合Ember训练策略让各层有效共享表容量。在ClimbMix与FineWeb预训练设置（9层/18层）下验证，共享表在更低内存占用下取得更优的验证bits per byte与22项下游任务平均成绩。开源完整训练、评估与数据处理代码。
+
+- **Out of Sight, Still in Mind: Token Compression for Omni-LLMs** `[无需训练]` `[长文本]` — [2607.21179](https://arxiv.org/abs/2607.21179) | [GitHub](https://github.com/suho-yoo/ReMo)
+  > 提出ReMo，一种面向Omni-LLM的免训练视觉token压缩框架：保留帧与配对音频均无法解释的视频token，将被丢弃物体区域的语义转为放置于原位的文本代理，恢复少量局部细节token并合并随时间不变的token；通过正则化CCA投影对齐音视觉空间。在Qwen2.5-Omni-3B的WorldSense与Daily-Omni推理中大幅削减视觉token且精度基本保持，显著降低长视频输入的推理成本。开源完整推理代码。
+
+- **AVTR: Adaptive Multimodal Reasoning with Visual Imagination** `[RL]` `[VLM]` — [2611.24161](https://arxiv.org/abs/2611.24161) | [GitHub](https://github.com/xiaoqian-shen/AVTR)
+  > 提出AVTR，视觉语言模型的自适应多模态推理框架：引入视觉想象机制，生成问题条件化的视觉线索以弥补纯文本推理在视觉中心问题上的感知短板，并按样本自适应地在直接回答、视觉推理、文本推理与混合推理四条路径间路由。采用重建、视觉反思、SFT三阶段训练，再以RL联合优化grounding与路由。在图像、视频、时序定位共15项基准上，自适应路由以更低开销取得优于纯文本推理的精度。开源训练与推理代码。
+
+- **Thinking Fast, Anywhere: One System-1 for the Decision Points of Any Agent Workflow** `[微调]` — [2611.23751](https://arxiv.org/abs/2611.23751) | [GitHub](https://github.com/middle-chunjie/AnyS1)
+  > 提出AnyS1，将公开SKILL.md程序性技能分解为确定性/可枚举/生成式三类决策点，从1072个技能挖掘17865个决策点并构造25986条共识状态数据（Any-DP），训练单个4B指针模型作为通用System-1，一次前向（22至32ms）完成可枚举决策，置信度不足时回退System-2。在SOPBench、ALFWorld、WebShop三个未见基准上零样本迁移，保持全System-2成功率并节省75%至91%推理成本。
+
+- **PReMind: When Personal Memory Meets Visual Hazards** `[RL]` `[VLM]` `[MeM]` `[微调]` — [2611.23808](https://arxiv.org/abs/2611.23808) | [GitHub](https://github.com/oyt9306/PReMind)
+  > 提出PReMind，面向个性化视觉助手的两阶段强化学习框架：混合按需调用（模型自行决定是否检索记忆）与强制调用（记忆始终检索）两种交互，联合训练视觉危险识别与基于个人记忆（过敏史、疾病、行动限制）的个性化响应。配套诊断基准PReMind-Bench分离评估记忆访问、视觉接地、拒答与危险应对。4B模型在关键联合指标JSR上从12.9%提升至28.6%，危险响应充分性与正确拒答率同步提升，且在未见危险组上保持增益。开源训练与评估代码。
