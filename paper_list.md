@@ -6762,3 +6762,26 @@
 
 - **PReMind: When Personal Memory Meets Visual Hazards** `[RL]` `[VLM]` `[MeM]` `[微调]` — [2611.23808](https://arxiv.org/abs/2611.23808) | [GitHub](https://github.com/oyt9306/PReMind)
   > 提出PReMind，面向个性化视觉助手的两阶段强化学习框架：混合按需调用（模型自行决定是否检索记忆）与强制调用（记忆始终检索）两种交互，联合训练视觉危险识别与基于个人记忆（过敏史、疾病、行动限制）的个性化响应。配套诊断基准PReMind-Bench分离评估记忆访问、视觉接地、拒答与危险应对。4B模型在关键联合指标JSR上从12.9%提升至28.6%，危险响应充分性与正确拒答率同步提升，且在未见危险组上保持增益。开源训练与评估代码。
+
+## 2026年11月20日
+
+- **HiUni: Harmonizing Understanding and Generation in Shared Visual Space** `[VLM]` `[扩散模型]` — [2611.26107](https://arxiv.org/abs/2611.26107) | [GitHub](https://github.com/ernie-research/HiUni)
+  > 提出统一多模态模型HiUni，让预训练VLM在高度共享参数下同时支持视觉理解与生成：复用同一语言对齐ViT与稠密Transformer主干，任务特定计算仅限输出侧，并设计像素扩散头直接优化像素空间生成，辅以轻量HiGate通路补回细粒度空间细节。实验表明，HiUni在保持与预训练VLM相当的理解平均分的同时，图像生成与编辑性能具备竞争力，证明单一稠密主干可同时支撑两种能力。
+
+- **TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs** `[VLM]` `[API]` — [2611.25387](https://arxiv.org/abs/2611.25387) | [GitHub](https://github.com/os-cua-framework/TuringSpace)
+  > 提出TuringSpace合成网页环境：125个交互式验证码任务覆盖五种空间能力，要求多模态模型点击拖拽屏幕完成，任务自带校验器可无限生成实例，兼作训练场。人类完成率94.1%，最强模型GPT-6 Astra仍失败25.9%，最佳开源模型Kimi K3失败68.0%。在训练场微调Qwen3.5-9B成功率从1.6%升至33.1%，并在七个OOD基准（含VSI-Bench +9.9分）上迁移获益。
+
+- **AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher** `[微调]` — [2611.26510](https://arxiv.org/abs/2611.26510) | [GitHub](https://github.com/RUCAIBox/AutoMaster)
+  > 任务成功无法指定后训练应强化哪些行为，成功教师轨迹也可能含无依据假设与浅层验证。提出Skill-FT：用自然语言技能在教师轨迹生成时抑制不良习惯、激发有效行为，再对目标模型微调；AutoMaster系统由LLM agent经轨迹分析、技能设计、数据筛选与rollout反馈自动迭代该过程。在Terminal、搜索与软件工程任务上，4B/9B目标模型较无引导SFT平均提升1.42~8.99个百分点。
+
+- **Twice-Told Critiques: Claim-Level Homogenization of Peer Review in the LLM Era** — [2611.26286](https://arxiv.org/abs/2611.26286) | [GitHub](https://github.com/IlyaGusev/twicetold)
+  > 从主张层面测量同行评审的同质化：ICLR评审重叠度从2026年的12.0%升至2027年的21.3%，NeurIPS、ICML及多个期刊逐年上升；2027年第三篇评审新增问题数降至5.46个。用LLM文本检测器MELD标记全部评审后发现，同一论文中两篇被标记评审的重叠显著高于未标记评审：ICLR近两年高4.5个百分点，五个期刊来源合计高5.4个百分点，表明LLM使用正在侵蚀同行评审意见的多样性。
+
+- **Inhabitant: An Agent Framework for Long-Horizon Human-Scene Interaction with Spatial Control and Quantitative Feedback** `[无需训练]` `[API]` — [2611.25005](https://arxiv.org/abs/2611.25005) | [GitHub](https://github.com/yaozhang182/inhabitant)
+  > 针对人-场景交互长程任务成功率低的问题，提出免训练agent框架Inhabitant：agent以位置、路径和姿态指定动作，度量执行与意图的偏差并修正指令。构建Inhabit评测集：31种布局下75个串联家务任务。Claude Opus 5.5完成率达98.7%，Sonnet 5.5与Gemini 4 Argon分别为93.3%和82.7%；消融表明缺空间控制多数任务失败，缺定量反馈动作精度下降。
+
+- **PlayCraft: Designing Engaging Games from Agent Play Experience** `[API]` `[MeM]` — [2611.26624](https://arxiv.org/abs/2611.26624) | [GitHub](https://github.com/xt4d/PlayCraft)
+  > 提出PlayCraft框架，用视觉agent实际玩游戏并依据详细游玩经验迭代修改游戏以提升趣味性。玩家agent观看画面、操作控制、跨多轮episode追求目标并保留记忆，每轮后报告进度、决策与反思；工匠agent据此估计玩家能力、预测不同熟练度表现并与目标学习曲线对比来诊断缺口。三种智能档位下的全新评测显示，PlayCraft在多数游戏中取得更大学习增益与更陡学习曲线，宏观平均指标均超过基线。
+
+- **System 1 agents: a method for local, reliable and fast agentic AI** — [2611.21053](https://arxiv.org/abs/2611.21053) | [GitHub](https://github.com/eltzanis/SystemOneAgents)
+  > 为解决云端LLM泄露隐私、本地LLM幻觉传播的问题，提出System 1 agent：本地agent调工具不生成文本，确定性编译器把工具schema与请求编译为选择题，由决策模型一次前向作答。在157个生物医学工具1,952次请求上，最优配置97.0%选对工具或正确拒答，优于全部18种本地LLM-agent；6,056个参数值填充准确率97.0%且零幻觉，LLM幻觉率则为5.5%~19.7%。
