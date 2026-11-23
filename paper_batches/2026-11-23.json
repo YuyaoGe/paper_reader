@@ -1,0 +1,63 @@
+[
+  {
+    "date": "2026-11-23",
+    "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
+    "arxiv_id": "2611.27193",
+    "github": "https://github.com/Newiz430/cmHC",
+    "abstract": "研究流形约束超连接（mHC）中残差流的有效混合。作者揭示混合权衡：欠混合时残差矩阵靠近Birkhoff多胞体顶点，超连接退化为近似独立的流；过混合时流彼此难以区分。据此提出cmHC：将多胞体向内部几何收缩的精确双随机方法，浅层适度收缩防过混合，不引入新参数化，并给出可证明的流混合界。在多种参数规模的稠密与MoE模型预训练中验证有效性与可扩展性，昇腾NPU融合算子将执行延迟降低至多44.8%。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-23",
+    "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+    "arxiv_id": "2611.15449",
+    "github": "https://github.com/jasonleex1995/TAISR_needs_Reasoning",
+    "abstract": "探讨文本感知图像超分是否需要推理。构建人工标注基准ReasonText区分「需推理文本」与「可局部恢复文本」，并提出识别式指标GTTCA。评估12个近期超分模型发现其在需推理文本上性能显著下降，存在系统性盲区；而MLLM能通过推理读出退化文本。据此提出免训练插件RTC：用外部MLLM推断退化文本作为条件输入超分模型，一致提升6个受评估模型的表现，说明推理应成为TAISR的核心设计维度。",
+    "tags": [
+      "VLM",
+      "无需训练"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+    "arxiv_id": "2611.27973",
+    "github": "https://github.com/Clare-Nie/MemOnce",
+    "abstract": "提出面向长程持续交互的可扩展记忆架构MemOnce：记忆编码器-解码器仅缓存末层少量隐状态为紧凑记忆，推理时动态解码回注意力层KV cache；记忆稀疏注意力对每个输入自适应检索相关记忆，索引跨层只算一次，实现线性时间复杂度。Qwen3.5-4B适配后在1M上下文下记忆缓存缩小1313倍、prefill延迟降6.9倍，吞吐提升3.5倍、记忆性能提升5.77%，并可零样本迁移到下游表示任务。",
+    "tags": [
+      "长文本",
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+    "arxiv_id": "2611.25773",
+    "github": "https://github.com/cyChen2003/duopra",
+    "abstract": "指出全双工对话模型还需任务主体性：及时调用工具并随用户纠正修订参数，而现有管线多数失败发生在工具执行之前。提出全双工模型Duopra，将后端视为工具，直接调用与后端委派共享统一动作接口；三阶段训练结合协议SFT、奖励及时完整执行的全双工RL及talker条件修复。同一后端下Pass@1从4.7%升至44.7%，换DeepSeek后端达49.3%，证明任务主体性与对话主体性可共存。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+    "arxiv_id": "2611.24077",
+    "github": "https://github.com/starsholic/AeroRSI",
+    "abstract": "针对无人机视觉语言导航中VLA模型闭环飞行频繁失败的问题，提出递归自我改进框架AeroRSI。核心洞察：应由失败策略自己评判修复——让其从修复点继续飞行来验证，采样动作乃至有害的规则化提案都能成为可靠监督。每轮迭代锚定当前策略的失败、验证后蒸馏修复。在TravelUAV上三轮将2B监督策略成功率从46.4%提至67.5%，碰撞减半，较此前最优超出10.6个点，无需额外标注与推理开销。",
+    "tags": [
+      "RL",
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "title": "Intent Contracts: Taking Tools Away from Agents",
+    "arxiv_id": "2611.24025",
+    "github": "https://github.com/zwang-devv/intent-contracts",
+    "abstract": "提出意图契约：工具使用型LLM智能体的授权接口，规划模型不持有任何工具，每步仅提交留痕契约（目标、用户原话引用及作用域字段），由受信任小模型对照用户措辞撰写工具调用。在AmPermBench上评估：契约下每个被改对象均出现在契约目标中；规划器擅自加活时契约27/30次完成用户任务。研究表明契约不减少越权行为，暴露了权限分类器信息边界的局限。",
+    "tags": [
+      "API"
+    ]
+  }
+]
