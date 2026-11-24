@@ -6805,3 +6805,32 @@
 
 - **Intent Contracts: Taking Tools Away from Agents** `[API]` — [2611.24025](https://arxiv.org/abs/2611.24025) | [GitHub](https://github.com/zwang-devv/intent-contracts)
   > 提出意图契约：工具使用型LLM智能体的授权接口，规划模型不持有任何工具，每步仅提交留痕契约（目标、用户原话引用及作用域字段），由受信任小模型对照用户措辞撰写工具调用。在AmPermBench上评估：契约下每个被改对象均出现在契约目标中；规划器擅自加活时契约27/30次完成用户任务。研究表明契约不减少越权行为，暴露了权限分类器信息边界的局限。
+
+## 2026年11月24日
+
+- **WeMM-Ecom: Advancing Multimodal Content Understanding for WeChat E-Commerce** `[VLM]` `[RL]` — [2611.30662](https://arxiv.org/abs/2611.30662) | [GitHub](https://github.com/Tencent/WeMM-Ecom)
+  > 腾讯提出 WeMM-Ecom 多模态大模型家族，覆盖 0.8B 稠密到 35B MoE（3B 激活）五种规模。训练采用两阶段继续预训练逐步提升电商数据比例，后训练结合 on-policy 蒸馏与强化学习支持思考/非思考双模式。35B-A3B 在 28 个电商评测上超越更大的开源旗舰模型，通用评测全面超越同规模 Qwen3.5，已支撑微信数百个生产场景、日均十亿级请求，权重与代码全开源。
+
+- **Let the Fixer Decide: Training a Code Localizer from the Fixer's Likelihood** `[微调]` — [2611.12164](https://arxiv.org/abs/2611.12164) | [GitHub](https://github.com/misraj-ai/locfix)
+  > 针对代码修复中「定位器应预测修复者需要读的代码而非要改的代码」这一错位，提出 Fixer-Guided Localization（FGL）：定位器生成多个候选定位，冻结的修复器按产生正确补丁的似然打分，再用加权 SFT 训练，无需跑测试也无需 RL。基于 Gemma 4 E4B 构建流水线，FGL 在少用 27.5% 代码下保持定位效果，训练后 agent 探索量提升约 3 倍、错误补丁大幅减少。
+
+- **Open Vision Banana: An Open Framework for Unified Visual Perception through Generation in RGB Space** `[扩散模型]` — [2611.28489](https://arxiv.org/abs/2611.28489) | [GitHub](https://github.com/isLinXu/open-vision-banana)
+  > Vision Banana 证明闭源图像生成器经指令微调可成为通用视觉模型，本文用开放框架 Open Vision Banana 验证该路线：将 Qwen-Image-2.1 的 7B 扩散生成器经单个共享 LoRA 适配为统一模型，在 RGB 空间完成深度与语义/实例/指代分割。发现几何结构易学而绝对尺度难学、深度与分割在共享适配器上相互竞争、验证 loss 无法用于选模型。代码与数据全开源。
+
+- **WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming** `[无需训练]` — [2611.25476](https://arxiv.org/abs/2611.25476) | [GitHub](https://github.com/Gen-Verse/WeightCode)
+  > 提出权重空间编程（WSP）新范式：用冻结的语言模型编写可执行的权重程序，直接读取、构造或修改已训练网络的权重，无需梯度训练即可安装新能力，安装后独立于语言模型运行。给定语法或 8 个示例，可将未见过的命令组合从 0% 提升到 99.8% 精确匹配；在 ImageNet 上带来 8.84~17.62 点净增益并超过八种微调方法，且程序可跨独立训练的网络迁移复用。
+
+- **What Makes Good Data for Training Coding Agents? A Systematic Study on SWE-Gym** `[RL]` — [2611.30207](https://arxiv.org/abs/2611.30207) | [GitHub](https://github.com/Arist12/SWE-Gym-Verified)
+  > 研究 RL 训练 coding agent 的任务数据质量，聚焦奖励标签正确性。审计 SWE-Gym 发现 9B 基座从未解决的任务中 74% 存在「拒绝正确修复」的假阴性测试。修复或移除后，同规模同难度下模型在 SWE-bench Verified 和 Pro 上分别提升 2.4 和 2.7 分；另发现约四分之一通过补丁为假阳性。发布含 1087 个审计任务的 SWE-Gym-Verified。
+
+- **ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents** `[API]` `[VLM]` — [2611.31198](https://arxiv.org/abs/2611.31198) | [GitHub](https://github.com/uclanlp/OpenVLHarness)
+  > 多模态搜索 agent 依赖人工打造且冻结的工具库，面对新查询类型和失败模式难以扩展。受人类「用熟悉零件造新工具并跨任务复用」启发，提出 ToolSmith 框架，在精简基础工具库之上自动生长并复用新模块。在 3 个域内与 10 个域外多模态搜索基准上以 VLM-as-a-Judge 评测，ToolSmith 在不同规模 agent 上均稳定超越基础工具库，骨干越大收益越大。代码与数据已开源。
+
+- **Wactorz: Self-Writing LLM Agents That Discover, Repair, and Migrate at the Edge** `[API]` — [2611.29619](https://arxiv.org/abs/2611.29619) | [GitHub](https://github.com/waldiez/wactorz)
+  > 面向家庭、实验室等物理环境的长期运行需求，提出开源运行时Wactorz：LLM 生成的 agent 是长生命周期受监督 actor，planner 将请求编译为 Python 并运行时生成新 actor，崩溃时由 supervisor 单独重启且状态不丢。协调基于 MQTT，agent 可在树莓派等边缘节点间迁移。演示中 4 分钟、0.13 美元成本即完成自动化构建、自修复错误代码并迁移到新节点。
+
+- **Typhoon OCR 2: From Thai Document Transcription to Multilingual, Multi-Task OCR** `[VLM]` `[微调]` `[RL]` — [2611.27494](https://arxiv.org/abs/2611.27494) | [GitHub](https://github.com/srn-source/typhoon-ocr2)
+  > Typhoon OCR 2 将泰语文档转录扩展为单模型多任务 OCR：支持提示驱动信息抽取与整页结构化解析，覆盖泰英中三语。在多语数据上SFT后用GRPO训练出 2B 与 0.8B 模型。2B 在 Thai MDPBench（80.7 对 68.9）与 ThaiOCRBench 上均列开源第一，英文基准持平基座，GRPO 将重复循环页面比例从 3.2% 降至 0.7%。权重与代码全开源。
+
+- **How Complete Must an Environment Be to Train a Capable GUI Agent?** `[VLM]` `[RL]` — [2611.23946](https://arxiv.org/abs/2611.23946) | [GitHub](https://github.com/Hydr0pon1c/Mobilegym-lite)
+  > GUI agent 训练环境成本高，各工作都会裁剪环境但不清楚其影响。将环境构造分解为奖励、数据、特征三维度，在 MobileGym 中逐维调整并训练 Qwen3-VL-4B。发现只奖励单一参考路径降低成功率 10.53 分，删冗余数据也有损害，而裁剪无关特征反而将成功率从 51.61% 提至 56.13%。据此构建的 MobileGym-Lite 以更低成本达 55.48%，优于完整环境。
