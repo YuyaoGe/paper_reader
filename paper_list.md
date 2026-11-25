@@ -6834,3 +6834,50 @@
 
 - **How Complete Must an Environment Be to Train a Capable GUI Agent?** `[VLM]` `[RL]` — [2611.23946](https://arxiv.org/abs/2611.23946) | [GitHub](https://github.com/Hydr0pon1c/Mobilegym-lite)
   > GUI agent 训练环境成本高，各工作都会裁剪环境但不清楚其影响。将环境构造分解为奖励、数据、特征三维度，在 MobileGym 中逐维调整并训练 Qwen3-VL-4B。发现只奖励单一参考路径降低成功率 10.53 分，删冗余数据也有损害，而裁剪无关特征反而将成功率从 51.61% 提至 56.13%。据此构建的 MobileGym-Lite 以更低成本达 55.48%，优于完整环境。
+
+## 2026年11月25日
+
+- **Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe** `[RL]` — [2611.32884](https://arxiv.org/abs/2611.32884) | [GitHub](https://github.com/declare-lab/RLVB)
+  > 指出长任务智能体常在证据不足时过早给出答案（懒惰行为），而结局奖励无法教会其何时提交答案。提出RLVB：训练时由模拟器计算答案后验，当后验仍允许多个答案时奖励继续探索，证据充分时奖励提交，无需评委或奖励模型。在三个基准九个设置上平均提升基线17.1%，优于GRPO/PPO及LLM评委过程奖励，且GPU时耗少1.6倍，证据充分时作答比例大幅上升。
+
+- **Don't Sleep, Keep Watch: Proactive Perception for Computer-Use Agents** `[VLM]` — [2611.28947](https://arxiv.org/abs/2611.28947) | [GitHub](https://github.com/SuJQ0722/NightWatch)
+  > 计算机使用智能体以离散截图感知环境，VLM推理延迟造成感知-行动鸿沟。提出即插即用框架NightWatch：为任意CUA配上自训练的0.8B轻量监测模型流式监控界面状态，不改变原模型、提示与动作空间即可让智能体与环境同步。OSWorld上减少33%非推理耗时与53%浪费时间且成功率不降，DynaCU-Bench成功率从39.5%升至44.2%，效率优于大30倍的决策模型。
+
+- **Rewirable Circuits in Transformers with Loom Attention** — [2611.30634](https://arxiv.org/abs/2611.30634) | [GitHub](https://github.com/Caiyun-AI/LoomFormer)
+  > 提出loom attention：Transformer每个token可动态重构电路，将注意力头对更早头输出的纵向注意力与对token的横向注意力交织，以门控线性注意力高效实现，矩阵记忆充当第二条残差流。LoomFormer双流架构以更少的计算匹配3倍算力训练的Transformer及1.7-2.8倍算力的基线；LoomPythia-2.8B仅增2% FLOPs即追平Pythia-12B。
+
+- **S-Mind: Internalizing Multi-View Geometry for Spatial Intelligence** `[VLM]` — [2611.28649](https://arxiv.org/abs/2611.28649) | [GitHub](https://github.com/KANABOON1/S-Mind)
+  > 探针实验揭示多模态大模型缺乏多视角融合与视点变换两种空间认知能力。提出S-Mind，通过紧凑的空间token在MLLM内化多视角几何：监督token承载融合后的3D场景，并在推理采用的每个视点重新表达该场景。四个空间基准上将Qwen3.5骨干提升最高22.26分，平均精度超过GPT-6-Astra等前沿模型；融合与变换准确率达65.11%和82.17%，远超基线，推理比工具型智能体快百倍。
+
+- **ThinkMorph-SSL: Scaling Interleaved Multimodal Reasoning with Pretext Tasks** `[VLM]` `[微调]` — [2611.32183](https://arxiv.org/abs/2611.32183) | [GitHub](https://github.com/ThinkMorph/ThinkMorph-SSL)
+  > 交错式多模态推理训练依赖难收集的任务演示。提出两阶段训练配方ThinkMorph-SSL，用图像自身作监督来源：第一阶段把上色、去噪等视觉代理任务转为无需指令的交错推理轨迹，模型描述受损图像、生成复原图像并解读结果；第二阶段用自动构建的演示做问题驱动指令微调。同等指令微调预算下优于仅指令微调，完整配方在12个基准上平均提升基线11.33个精度点，证明图像衍生监督可构建交错推理所需视觉技能。
+
+- **Reinforcing Diffusion Models by Instantaneous Trajectory Distribution Matching** `[RL]` `[扩散模型]` — [2611.30986](https://arxiv.org/abs/2611.30986) | [GitHub](https://github.com/Luo-Yihong/iTDM)
+  > 揭示前向扩散RL本质是有符号奖励加权回归，其无偏基线假设在CFG rollout、离线更新等场景下被破坏，注入基线漂移导致训练不稳。提出iTDM：对轨迹分布匹配取无穷小极限，经后验得分恒等式得到锚定在行为速度上的样本级梯度，用在线辅助去噪器精确消除基线漂移。组合生成、文字渲染与偏好对齐实验中取得SOTA；GenEval2上收敛快近3倍并平滑扩展到0.87不崩溃，可扩展至5.6B FLUX.3。
+
+- **VenusOCR2.0: Towards Efficient and Effective Document Parsing** `[VLM]` `[微调]` `[RL]` — [2611.32617](https://arxiv.org/abs/2611.32617) | [GitHub](https://github.com/flow3rdown/VenusOCR)
+  > 提出1B参数视觉语言识别器VenusOCR2.0，用于文本、表格、公式的高吞吐文档解析。数据引擎由多专家共识、VLM视觉验证与因子化合成供给可靠监督；SigLIP2编码器配Qwen3-0.6B解码器，以67M参数PTPv2草稿模块消除自回归瓶颈。OmniDocBench总分96.45、公式CDM 98.57超越Gemini-3-Pro等巨型VLM，PTPv2加速2.96倍且逐token无损。
+
+- **LoopDVR: Looped Transformer for Efficient Dense Visual Recognition** — [2611.32067](https://arxiv.org/abs/2611.32067) | [GitHub](https://github.com/Intellindust-AI-Lab/LoopDVR)
+  > 提出LoopDVR框架，将预训练Transformer密集视觉识别模型转换为参数高效的循环网络：在ViT骨干与解码器中跨层复用block，基于层间表示差异识别共享组并以组末层权重初始化，配合每层独立Loop Adapter保留深度特有变换，再蒸馏视觉表征做任务训练。在密集识别任务上取得最优精度-参数折中：参数减少约28%仍保持竞争力，LoopDet-S以7.0M参数取得50.9 box AP。
+
+- **Distill to Loop: Turning Pretrained Diffusion Transformers into Looped Models with Adjustable Depth** `[扩散模型]` — [2611.31977](https://arxiv.org/abs/2611.31977) | [GitHub](https://github.com/WinterCCC/Distill-to-Loop)
+  > 循环扩散Transformer需从头训练，重复全部预训练成本。提出Distill to Loop（Dooop）：将预训练非循环扩散Transformer蒸馏为块以教师初始化的循环学生，蒸馏建模为朝向教师的定点迭代，深度上可用高阶ODE求解器；测试时可运行任意循环次数无需重训，并构建loop guidance。SD3-medium上以约37%参数的学生在多项指标平均上匹配教师。
+
+- **Measuring Layer-wise Intrinsic Dimensionality of FFNs in LLMs via PCA** — [2611.32782](https://arxiv.org/abs/2611.32782) | [GitHub](https://github.com/naver-ai/lidf)
+  > 用PCA测量FFN下投影输入的层内禀维度（固定余弦相似度下重构激活所需的最少主成分数），扫描14个家族58个0.7B到72B开源LLM。发现稳定的中部偏重剖面：中间层内禀维度高于边缘层，对校准语料（含中英）鲁棒，且后训练微调后基本保持。进一步用该信号指导知识蒸馏学生的宽度剪枝，在同等参数预算下验证其结构意义，为差异化分配FFN容量、设计非均匀层宽提供实证依据。
+
+- **Factorized Context Attention: From Emulated to Native Grid Probing** `[无需训练]` `[长文本]` — [2611.32423](https://arxiv.org/abs/2611.32423) | [GitHub](https://github.com/mohammad2012191/FCA)
+  > 指出grid probing本质是「外部模拟的注意力」，探针重复编码整个输入导致巨大开销。提出FCA：training-free块稀疏注意力，将该模式原生作为模型自身的注意力运行——输入只编码一次进入KV cache，掩码序列一次批量读取所有span。长视频较单次前向提升约10分、长篇小说提升9-14分，可在千帧视频与4倍窗口长度文本中找针，后续问答耗时仅为grid probing的十分之一。
+
+- **Align the Pair, Not the Sample: Representation Alignment for Faster and Better One-Step Generators** `[扩散模型]` — [2611.29547](https://arxiv.org/abs/2611.29547) | [GitHub](https://github.com/Mingxiao-Li/RePrime)
+  > 研究一步生成器的表征对齐问题：对生成路径加对齐损失会在全部17种配置中使召回率崩溃（0.45降至0.15-0.25），而对实例配对的重构路径（冻结DINOv2编码器）加对齐则在所有设置中有效。分析表明：当目标不含输入的实例信息时，最优对齐特征在类内为常数，损失把样本拉向类原型。该发现为Priming等一步生成器的训练路径选择给出明确指导，多种目标构造与损失权重下验证一致。
+
+- **Escriba-OCR: A 1B Vision-Language Model for Error-Preserving Transcription of Handwritten Portuguese Essays** `[VLM]` `[微调]` — [2611.29874](https://arxiv.org/abs/2611.29874) | [GitHub](https://github.com/tardellirs/escriba-ocr)
+  > 教育场景需要保留学生原始错误（拼写、删改、行结构）的手写转写，而VLM倾向改写为正确语言。构建1000篇巴西葡萄牙语手写作文基准，发现22个开源模型最优者CER 5.6%，且把近四成非词典词替换为词典词。微调LightOnOCR-3-1B仅85分钟所得Escriba-OCR-1B达2.06% CER，低于最佳基线3.5个点，97%页面行结构正确，4bit量化可在普通CPU运行。
+
+- **InstructReplay: Replaying Assistant Turns to Preserve General Behavior During Factual Fine-Tuning** `[微调]` — [2611.32918](https://arxiv.org/abs/2611.32918) | [GitHub](https://github.com/xiaofengShi/InstructReplay)
+  > 发现指令微调模型学习新事实时通用能力平均下降35分，且与回答长度坍缩高度相关。提出InstructReplay：初始模型对一组通用指令回答一次，微调时让模型在这些回答上贴近初始模型。在三个模型家族、两个域的六个设置中，将五个通用基准的平均衰退从28.1分降至2.4分，回答长度保持稳定，新事实学习效果与标准微调相当，全面优于七种适配方法；对照实验证明收益来自重放模型自身的回答而非损失形式。
+
+- **RECAP: Training Long-horizon LLM Agents with Context Compaction** `[RL]` — [2611.31258](https://arxiv.org/abs/2611.31258) | [GitHub](https://github.com/eth-medical-ai-lab/recap)
+  > 上下文压缩让LLM智能体在有限上下文内处理长程任务，但联合学习压缩与策略困难。提出RECAP：基于「摘要应保留原始历史所诱导的行为」原则，用行为失真目标度量压缩与原始上下文下智能体行为的散度，梯度分解为摘要失真奖励与动作自蒸馏两个信号。Qwen3.5-4B上BrowseComp-plus与SWE-bench Verified分别提升4.6%和4.3%。
