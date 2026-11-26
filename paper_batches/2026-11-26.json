@@ -1,0 +1,111 @@
+[
+  {
+    "date": "2026-11-26",
+    "title": "Mixture-of-Loops Transformer",
+    "arxiv_id": "2611.34923",
+    "github": "https://github.com/hustvl/MoLT",
+    "abstract": "提出Mixture-of-Loops Transformer（MoLT），重新思考循环Transformer相邻循环间应传递什么：以KV为记忆实现跨深度与循环的选择性复用。MoLT-R保留残差流追求表达力，MoLT-KV从嵌入重启提升效率并支持单遍解码；U-MoLT分离记忆构建与预测读出。400B token预训练中U-MoLT超越OLMo3，实现1.7倍token效率，推理延迟与基线持平。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-26",
+    "title": "DyLoMo-DiT: Dynamic Looped Mixture-of-Experts Diffusion Transformers",
+    "arxiv_id": "2611.30844",
+    "github": "https://github.com/OneBoxCream/DyLoMo-DiT",
+    "abstract": "提出动态循环MoE扩散Transformer DyLoMo-DiT：以权重共享循环复用中间层而非增加参数，稀疏专家在token间分配容量，实现不增参数加深网络；计算量随噪声水平动态分配。ImageNet 256×256上FID较DiT降低11~24%、较DiT-MoE降低36~56%；文生图规模下GenEval达0.714超越FLUX.1的0.673，激活参数不足其十分之一。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "DocSEAM: Bidirectional Cross-Page Encoding for Multi-Page Document Understanding",
+    "arxiv_id": "2611.34420",
+    "github": "https://github.com/mossbee/DocSEAM",
+    "abstract": "针对多页文档VLM逐页独立编码导致的页边界特征断裂问题，提出轻量模块DocSEAM，插入预训练视觉编码器与语言模型之间：以中心页为锚施加掩码自注意力，并通过方向显著性门控从相邻页融合信息，仅返回增强后的中心页token，视觉token数量保持不变。9B模型在五个多页文档VQA基准上达到10B以内开源模型最优，并在受控重分页实验中降低对页边界位置的敏感性，提升跨页理解能力。",
+    "tags": [
+      "VLM"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "Playfulness as Feedback for Agentic Game Development",
+    "arxiv_id": "2611.33457",
+    "github": "https://github.com/showlab/Play2Evolve",
+    "abstract": "提出以「可玩性」为反馈的递归游戏开发框架Play2Evolve，含初始化、精炼与进化三阶段：智能体亲自试玩游戏，从核心功能、视觉表现与玩法丰富度诊断问题，反馈驱动bug修复、素材改进与新玩法目标提出；结合视频生成模型与代码制作动静素材。GameCraft-Bench上达60.05分，显著超过初始化后的50.81与Play2Code的52.46。",
+    "tags": [
+      "API"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "Let Vision-Language Models Generate Images through Their Representations",
+    "arxiv_id": "2611.31237",
+    "github": "https://github.com/the-jb/integral",
+    "abstract": "提出统一多模态模型Integral，将预训练VLM扩展出图像生成能力：Abstraction Fusion聚合冻结视觉编码器的层级表征构建共享视觉token空间，Block-wise MoT引入轻量生成流仅在块边界与VLM交互。基于Qwen3.5-9B，单一框架支持图像理解、文生图与图像编辑，完整保留理解能力的同时实现强生成性能，并提供vLLM推理支持。",
+    "tags": [
+      "VLM",
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "What Is Redundant at High Resolution? Efficient Attention and Feed-Forward Design for All-in-One Image Restoration",
+    "arxiv_id": "2611.33636",
+    "github": "https://github.com/dslisleedh/HiGLR",
+    "abstract": "分析一体化图像复原高分辨率阶段的空间冗余，识别出三类：最细尺度逐query读出、中间阶段相邻query的key路由、ConvFFN的空间混合。据此提出HiGLR：最细尺度用学习到的输入无关卷积核替代自注意力，中间阶段采用块路由混合注意力并跨相邻query共享路由索引，在保持复原质量的同时大幅降低高分辨率处理的计算与显存开销。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-26",
+    "title": "Letting Models Manage Their Own Context: Where We Stand",
+    "arxiv_id": "2611.34147",
+    "github": "https://github.com/nvidia-nemo/labs-OO-Agents",
+    "abstract": "研究由模型自主管理上下文（通过context API自行决定何时压缩、压缩什么）替代harness代管的方案，在NVIDIA开源harness nooa上、8K至512K预算下对比两类任务。有效使用该API的模型准确率更高且输入token更少：GPT-6.1在32K预算下OfficeQA Pro v2从21%升至56%；推理引擎复用未变后缀的KV缓存可将每请求prefill计算最多削减15%。",
+    "tags": [
+      "MeM"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "Speak When You See It: Proactive Task Assistants Should Wait for Evidence, Not the Clock",
+    "arxiv_id": "2611.30895",
+    "github": "https://github.com/bhc6/speak-when-you-see-it",
+    "abstract": "发现主动式任务助手基准很大程度奖励「何时」而非「看到什么」：不看视频的纯计时器在Ego-MC-Bench上错误检测F1达0.373，超过所有已发表结果。作者形式化「视频盲前沿」并提出证据对比训练ECT：用同一录像同一时刻的负样本配对正样本，使经过时间无法区分两者。仅用209个视频约15 GPU小时微调的2B模型在两条基准上越过前沿，零适配迁移依然有效。",
+    "tags": [
+      "VLM",
+      "微调"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "SIA: Selective Image Analogy",
+    "arxiv_id": "2611.33894",
+    "github": "https://github.com/alimohammadiamirhossein/selective-image-analogy",
+    "abstract": "提出选择性图像类比SIA：单个演示对（A, A'）可编码多种编辑，用户在推理时自主选择迁移哪些编辑到查询图像。构建多编辑类比数据集，设计掩码对齐抑制机制：token门控LoRA将适配器更新限制在被抑制编辑的token上，配合概念抑制向量削弱文本嵌入中对应token，无需新演示即可抑制不需要的编辑。大量定量与定性实验验证有效性。",
+    "tags": [
+      "扩散模型"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "Single-Database Rewards Are Hackable: Counterfactual Execution for Trustworthy Text-to-SQL RL",
+    "arxiv_id": "2611.34363",
+    "github": "https://github.com/RishiiGamer2201/counterfactual-sql-rewards",
+    "abstract": "指出text-to-SQL强化学习中单数据库奖励可被「hack」：错误查询可能因数据缺乏暴露bug的行而侥幸匹配。提出反事实数据库奖励，在多个隐藏代码生成的副本上执行最终查询，全部匹配才支付奖励。1302个合成审计问题上，严格形式将buggy查询全额支付比例从29.5%降至16.8%、奖励hack从54.1%降至1.9%；三种子GRPO实验显示单seed比较会误导结论。",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "title": "When Does Reasoning Help Entity Disambiguation? Small LLMs In-Domain and Under Shift",
+    "arxiv_id": "2611.30334",
+    "github": "https://github.com/samyhaff/ed-study",
+    "abstract": "系统研究小LLM何时值得为实体消歧付出推理成本：在经典粗到细pipeline中比较pointwise、listwise与推理式候选选择，覆盖经典、少样本与真零样本设置，推理范式以蒸馏与RL训练。核心发现：推理收益随领域偏移增大，域内可忽略，真零样本下起决定作用；重排序器的不确定性可定位推理何时有帮助，为小模型实体消歧的范式选择提供实践指导。",
+    "tags": [
+      "RL",
+      "微调"
+    ]
+  }
+]
