@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-11-27",
+    "title": "Stable Gated DeltaNet-2: Understanding and Mitigating Recurrent State Instability",
+    "arxiv_id": "2611.34051",
+    "github": "https://github.com/NVlabs/GatedDeltaNet-2",
+    "abstract": "线性注意力以固定大小循环状态实现高效长序列建模，但 Gated DeltaNet-2 在长上下文训练中会出现状态失稳。本文归因于擦除与写入方向不对称产生非正规擦除算子，方向增益跨 token 累积引发状态指数增长，提出对称擦除与衰减调节的残差写入机制，将状态增长上界控制在 O(T)。在约 1.6B 模型上训练稳定，128K RULER 平均分提升 6.80，混合架构九项下游任务平均提升 0.62。",
+    "tags": ["长文本"]
+  },
+  {
+    "date": "2026-11-27",
+    "title": "Revisiting LLMs as Context Engineers",
+    "arxiv_id": "2611.30494",
+    "github": "https://github.com/costa-nus/LCEBench",
+    "abstract": "上下文工程通过构建指令提示让 LLM 无需训练即可适应新任务，但何时有效尚不清晰。本文构建覆盖不同推理模式的评测体系，系统比较 8B 规模下多种上下文工程方法与模型家族，发现没有单一方法在所有任务上占优，性能增益与推理轨迹失败模式的多样性呈负相关（r=-0.5）。进一步分析表明，指令遵循能力提升可解释部分收益，而从多样化失败中提炼有效经验是主要瓶颈，为未来研究提供了指导。",
+    "tags": ["无需训练"]
+  },
+  {
+    "date": "2026-11-27",
+    "title": "When an AI agent makes a mistake in a database, what decides the damage?",
+    "arxiv_id": "2611.30483",
+    "github": "https://github.com/libredb/agent-blast-radius",
+    "abstract": "AI 智能体已直接操作生产数据库，出错时损失由模型、防护层还是引擎本身决定？本文通过两层预注册实验回答：Layer A 用脚本将 22 种典型错误施加于四种关系型引擎并做恢复演练；Layer B 让六个 4B~35B 开源小模型驱动的智能体在九种数据库引擎上执行含危险任务共 9468 次试验。结果显示引擎间差异更多体现在可撤销性而非破坏力，七项预注册假设仅三项成立，为智能体数据库安全提供实证依据。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-27",
+    "title": "Guarding with Judgment: Learning to Intervene for Multimodal Safety",
+    "arxiv_id": "2611.28849",
+    "github": "https://github.com/UPwith-me/Judiact",
+    "abstract": "多模态安全中一刀切拒答常使用户需求得不到解决。本文将防护决策形式化为允许、警告、复核、拒绝四种动作，构建 20126 条审计语料与 JudiBench 基准，提出 JudiAct：先陈述证据、约束与规则适用性，再逐项核验输出处理动作。较 4B 骨干 Macro-F1 提升超 28 个百分点，在九个公开基准超越现有方法，MM-SafetyBench 攻击成功率从 40.78% 降至 25.30%。",
+    "tags": ["VLM", "微调"]
+  },
+  {
+    "date": "2026-11-27",
+    "title": "Generation as Reverse Encoding",
+    "arxiv_id": "2611.34782",
+    "github": "https://github.com/ChengShiest/RevFlow",
+    "abstract": "预训练视觉表征加速生成学习，但表征到像素仍需大解码器。本文提出「生成即逆向编码」的 RevFlow：以冻结编码器的中间表征作为逐级生成目标，先生成深层语义表征再生成浅层表征，最后解码为像素；用共享 DiT 骨干统一各阶段生成。ImageNet 256×256 上 690M 模型仅训 5 个 epoch 达 1.96 FID，1.55B 达 1.74 FID，适配后单步采样达 2.85 FID。",
+    "tags": ["扩散模型"]
+  },
+  {
+    "date": "2026-11-27",
+    "title": "Reading, Not Adapting: Unlocking Frozen Visual Knowledge for AI-Generated Image Detection",
+    "arxiv_id": "2611.34719",
+    "github": "https://github.com/yunncheng/ReMoT",
+    "abstract": "对未知生成器的泛化是 AI 生成图像检测的核心挑战，而适配预训练表征反而损害泛化。本文转向「读取而非适配」：提出 ReMoT，在完全冻结的视觉基础模型内从空间对齐的 RGB 与小波双视角读取互补知识，以分阶段联合注意力实现受控跨视角交互，融合查询沿深度逐层读取证据而不回写。仅以 3074 个可训练参数在八组基准上取得 91.2% 平均准确率，验证了结构化知识读出替代骨干适配的检测范式。",
+    "tags": []
+  },
+  {
+    "date": "2026-11-27",
+    "title": "Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration",
+    "arxiv_id": "2611.32993",
+    "github": "https://github.com/juntaoJianggavin/Radev",
+    "abstract": "从体积 CT 做出结构化临床决策需要解剖学定位与校准的置信度，但现有 3D 医疗多模态模型存在解码未校准与捷径依赖。本文提出决策原生模型 Radev：冻结 3D 编码器提取器官级特征，由查询在预测解剖边界内动态选取 2D 切片特征，语言骨干单次前向即估计候选概率；并提出反事实校准训练校准置信度。在自建 CT-Verdict 基准上，决策准确率与置信度校准均显著超越现有方法。",
+    "tags": ["VLM"]
+  }
+]
